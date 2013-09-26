@@ -10,7 +10,10 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: black url("../../images/vieldrin.png") 20px 95% no-repeat;
+  background-color: black;
+  background-image: url("../../images/vieldrin.png");
+  background-position: 20px 95%;
+  background-repeat: no-repeat;
   background-size: 15%;
   background-color: black; }
 
@@ -171,3 +174,19 @@ section:first-child h2 {
 
 .reveal h4 {
   font-size: 1em; }
+
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 80%; }
+
+.reveal section img.align-center {
+  display: block;
+  margin: 0 auto; }
+
+.reveal section img.align-left {
+  float: left; }
+
+.reveal section img.align-right {
+  float: right; }
