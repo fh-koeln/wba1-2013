@@ -22,13 +22,13 @@ $magenta: #dd1166;
 $backgroundColor: #000;
 
 // Primary/body text
-$mainFont: 'Myriad Pro', serif;
+$headingFont: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;
 $mainFontSize: 30px;
 $mainColor: #fff;
 
 // Headings
 $headingMargin: 0 0 30px 0;
-$headingFont: 'Myriad Pro', serif;
+$headingFont: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;
 $headingColor: $green;
 $headingLineHeight: 0.9em;
 $headingLetterSpacing: 0.02em;
@@ -67,7 +67,7 @@ $selectionColor: #fff;
 
 .reveal section:first-child h1 {
 	text-transform: uppercase;
-	font-size: 2em;
+	font-size: 1.9em;
 	margin-bottom: 0;
 	text-align: center;
 	margin-top: 20px;
