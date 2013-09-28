@@ -40,7 +40,7 @@
 				if ( 'undefined' === typeof( items[currentDate] ) )
 					items[currentDate] = [];
 
-				items[currentDate].push( '<li class="presentation"><a href="files/' + path + '" target="_blank">' + val.title + authors + '</li>');
+				items[currentDate].push( '<li class="presentation"><a href="' + path + '" target="_blank">' + val.title + authors + '</li>');
 			} );
 
 			// Clear screen.
