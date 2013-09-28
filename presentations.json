@@ -2,10 +2,10 @@
 	"presentations":
 	{
 
-		"2013-10-09-introduction-tools/index.html":
+		"2013-10-10-slug/index.html":
 		{
-			"title" : "Git, Github, Presentations & Doku",
-			"authors" : ["Jan Kus"]
+			"title" : "Titel",
+			"authors" : ["Autor 1, Autor 2"]
 		}
 	}
 }
