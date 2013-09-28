@@ -22,8 +22,8 @@ $magenta: #dd1166;
 $backgroundColor: #000;
 
 // Primary/body text
-$headingFont: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;
-$mainFontSize: 30px;
+$mainFont: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;
+$mainFontSize: 28px;
 $mainColor: #fff;
 
 // Headings
@@ -114,6 +114,18 @@ $selectionColor: #fff;
 	font-size: 1em;
 }
 
+.reveal h1.inverse,
+.reveal h2.inverse,
+.reveal h3.inverse,
+.reveal h4.inverse,
+.reveal h5.inverse,
+.reveal h6.inverse, {
+	color: #fff;
+	background: #000;
+	padding: 0.3em;
+	display: inline-block;
+}
+
 .reveal img,
 .reveal video,
 .reveal iframe {
@@ -134,9 +146,10 @@ $selectionColor: #fff;
 	float: right;
 }
 
-.reveal li {
-	margin-bottom: 10px;
-	line-height: 1.2em;
+.reveal li,
+.reveal p {
+	font-size: 0.9em;
+	margin-bottom: 15px;
 }
 
 .reveal blockquote {
