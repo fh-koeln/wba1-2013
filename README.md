@@ -3,12 +3,12 @@
 
 
 **Betreuer:**  
-[Prof. Christian Noss](wiki/Christian-Noss), FH-Köln  
-[M.Sc. Jan Kus](/koos), [Railslove GmbH](http://railslove.com)  
-[B.Sc. Volker Schaefer](/vschaefer), FH-Köln  
-[Martin Baljan](/mbaljan), FH-Köln  
-[Dominik Schilling](/ocean90), FH-Köln  
-[Christoph Jerolimov](/jerolimov), FH-Köln  
+[Prof. Christian Noss](https://github.com/fh-koeln/wba1-2012/wiki/Christian-Noss), FH-Köln  
+[M.Sc. Jan Kus](https://github.com/koos), [Railslove GmbH](http://railslove.com)  
+[B.Sc. Volker Schaefer](https://github.com/vschaefer), FH-Köln  
+[Martin Baljan](https://github.com/mbaljan), FH-Köln  
+[Dominik Schilling](https://github.com/ocean90), FH-Köln  
+[Christoph Jerolimov](https://github.com/jerolimov), FH-Köln  
 
 **Weiterführende Infos:**  
 [WBA1-Screencast für Lesefaule](http://www.youtube.com/watch?v=4KeUaWF3jHQ)  
