@@ -5,7 +5,7 @@
 Lernmaterialien, Ansprechpartner etc. zum Modul "Web-basierte Anwendungen 1": WWW-Technologien.
 
 **Betreuer:**  
-[Prof. Christian Noss](https://github.com/fh-koeln/wba1-2012/wiki/Christian-Noss), FH-Köln  
+[Prof. Christian Noss](https://github.com/fh-koeln/wba1-2013/wiki/Christian-Noss), FH-Köln  
 [M.Sc. Jan Kus](https://github.com/koos), [Railslove GmbH](http://railslove.com)  
 [B.Sc. Volker Schaefer](https://github.com/vschaefer), FH-Köln  
 [Martin Baljan](https://github.com/mbaljan), FH-Köln  
