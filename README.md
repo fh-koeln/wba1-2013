@@ -1,6 +1,8 @@
 ###Web-basierte Anwendungen 1: WWW-Technologien
 ####Wintersemester 2013/2014
 
+[Im Wiki](https://github.com/fh-koeln/wba1-2013/wiki) finden Sie alle relevanten Informationen,
+Lernmaterialien, Ansprechpartner etc. zum Modul "Web-basierte Anwendungen 1": WWW-Technologien.
 
 **Betreuer:**  
 [Prof. Christian Noss](https://github.com/fh-koeln/wba1-2012/wiki/Christian-Noss), FH-Köln  
