@@ -4,7 +4,7 @@
 [Im Wiki](https://github.com/fh-koeln/wba1-2013/wiki) finden Sie alle relevanten Informationen,
 Lernmaterialien, Ansprechpartner etc. zum Modul "Web-basierte Anwendungen 1": WWW-Technologien.
 
-** Bitte beachten sie besonders die Punkte [Ablauf der Veranstaltung](wiki/Ablauf-der-Veranstaltung) und [Das Projekt "die Open Data Task Force"](wiki/das-projekt-die-open-data-taskforce) **
+**Bitte beachten sie besonders die Punkte [Ablauf der Veranstaltung](wiki/Ablauf-der-Veranstaltung) und [Das Projekt "die Open Data Task Force"](wiki/das-projekt-die-open-data-taskforce)**
 
 **Betreuer:**  
 [Prof. Christian Noss](https://github.com/fh-koeln/wba1-2013/wiki/Christian-Noss), FH-Köln  
