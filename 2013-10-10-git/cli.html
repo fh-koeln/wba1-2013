@@ -5,9 +5,9 @@
 		<meta charset="utf-8">
 
 		<!-- Title of presentation -->
-		<title>Git &amp; GitHub - Einführung</title>
+		<title>Git - Einführung Kommandozeile</title>
 		<!-- Short description of presentation -->
-		<meta name="description" content="Git &amp; GitHub - Einführung">
+		<meta name="description" content="Git - Einführung Kommandozeile">
 		<!-- Author of presentation -->
 		<meta name="author" content="Dominik Schilling, Christoph Jerolimov">
 
@@ -51,7 +51,7 @@
 
 				<section>
 					<h1>Web-basierte Anwendungen 1</h1>
-					<h2>Git &amp; GitHub - Einführung</h2>
+					<h2>Git - Einführung Kommandozeile</h2>
 
 					<p>10. Oktober 2013</p>
 
@@ -67,65 +67,65 @@
 				</section>
 
 				<section>
-					<h1>Aufbau der Lerneinheit <strong>Git &amp; GitHub</strong></h1>
-					<p style="font-size: 1em;">
-						Sechs Themen, jeweils
+					<p>
+						Die folgenden Slides bieten eine Einführung in die Git
+						Kommandozeile zum <span class="inverted-pink">Selbststudium</span>.
 					</p>
-					<ul>
-						<li>kurze Theorie</li>
-						<li>kurze Demo</li>
-						<li>Zeit zum ausprobieren</li>
-					</ul>
-
-					<h1 style="margin-top: 1.0em; margin-bottom: 0.5em;">Lernziele</h1>
-					<ul>
-						<li>Grundprinzipen</li>
-						<li>Verständnis der wichtigsten Begriffe</li>
-					</ul>
+					<p>
+						Was ist Git &amp; GitHub?
+						Werf' einen Blick in die <a href="index.html#/2">Einführung</a>
+					</p>
 				</section>
 
 				<section>
-					<h1><strong>0</strong> Warum Git? Was ist GitHub?</h1>
-					<ul>
-						<li class="fragment">Versionierung</li>
-						<li class="fragment">Dezentral</li>
-
-						<li class="fragment">GitHub als zentrale Autorität</li>
-						<li class="fragment">GitHub bietet zudem
-							<ul>
-								<li>Kommentare</li>
-								<li>Issues</li>
-								<li>Wikis</li>
-								<li>Hosting</li>
-								<li>...</li>
-							</ul>
-					</ul>
-				</section>
-
-				<section>
-					<h1><strong>2</strong> Grundlagen</h1>
+					<h1><strong>2</strong> Befehlsübersicht</h1>
 					<ul style="width: 100%;">
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">init</span> &rarr; Unabhängiges lokales Repository erstellen</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">clone</span> &rarr; Entferntes Repository kopieren</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">status <span style="color: white;">&bullet;</span> diff</span> &rarr; Lokale Änderungen anzeigen</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">add <span style="color: white;">&bullet;</span> reset</span> &rarr; Änderungen zum Übernehmen (ent-)markieren</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">commit</span> &rarr; Änderungen dauerhaft übernehmen</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">pull</span> &rarr; Lokales Repository aktualisieren</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">push</span> &rarr; Änderungen an entferntes Repository senden</li>
+						<li><span class="pink" style="display: inline-block; width: 20%;">init</span> &rarr; Unabhängiges lokales Repository erstellen</li>
+						<li><span class="pink" style="display: inline-block; width: 20%;">clone</span> &rarr; Entferntes Repository kopieren</li>
+						<li><span class="pink" style="display: inline-block; width: 20%;">status <span style="color: white;">&bullet;</span> diff</span> &rarr; Lokale Änderungen anzeigen</li>
+						<li><span class="pink" style="display: inline-block; width: 20%;">add <span style="color: white;">&bullet;</span> reset</span> &rarr; Änderungen zum Übernehmen (ent-)markieren</li>
+						<li><span class="pink" style="display: inline-block; width: 20%;">commit</span> &rarr; Änderungen dauerhaft übernehmen</li>
+						<li><span class="pink" style="display: inline-block; width: 20%;">pull</span> &rarr; Lokales Repository aktualisieren</li>
+						<li><span class="pink" style="display: inline-block; width: 20%;">push</span> &rarr; Änderungen an entferntes Repository senden</li>
 					</ul>
+				</section>
+
+				<section>
+					<h1><strong>2</strong> Befehlsübersicht <strong>// Demo</strong></h1>
+
+					<pre><code>
+$ git clone git@github.com:fh-koeln/wba1-2012.git
+$ cd wba1-2012
+
+# Änderungen durchführen
+$ vim demo.txt
+$ git add .
+$ git commit -m "Änderung an der Demo"
+
+# Änderungen veröffentlichen bzw. aktualisieren:
+$ git push
+$ git pull
+					</code></pre>
 				</section>
 
 				<section>
 					<h1><strong>3</strong> Branchen</h1>
+					<p>
+						Grundüberlegung: Der master soll eine stabile,
+						funktionierende Version beinhalten und ist keine „Spielwiese“.
+					</p>
+					<p>
+						Als Lösung werden sogennante
+						<span class="inverted-pink">Branches</span>
+						verwendet:
+					</p>
 					<ul>
-						<li class="fragment"><span class="pink">Problem:</span> Master ist keine Spielwiese</li>
-						<li class="fragment"><span class="pink">Lösung:</span> Eigener, temporärer „Entwicklungszweig“</li>
-						<li class="fragment" style="list-style: none;">&rarr; Lokal und unabhängig</li>
+						<li style="list-style: none;">&rarr; Lokal und unabhängig</li>
 
-						<li class="fragment" style="list-style: none;">&rarr; Pushen prinzipell optional, aber ideal für (Sub-)Teams</li>
-						<li class="fragment" style="list-style: none;">&rarr; <span style="color: #ffffff; background-color: #dd1166;">Umkehrschluss: Nicht alle branches sind lokal verfügbar!</span></li>
+						<li style="list-style: none;">&rarr; Pushen prinzipell optional, aber ideal für (Sub-)Teams</li>
+						<li style="list-style: none;">&rarr; <span class="inverted-pink">Umkehrschluss: Nicht alle branches sind lokal verfügbar!</span></li>
 
-						<li class="fragment" style="list-style: none;">
+						<li style="list-style: none;">
 							&rarr; <a href="https://github.com/fh-koeln/wba1-2012/wiki/Konventionen" target="_blank">WBA1 Namenskonvention</a> beachten
 						</li>
 					</ul>
@@ -155,62 +155,89 @@ $ git push
 				</section>
 
 				<section>
+					<h1><strong>3</strong> Branch pullen <strong>// Demo</strong></h1>
+					<pre><code>
+# Vorhandenen Branch pullen:
+$ git branch git-basics origin/git-basics
+$ git checkout git-basics
+
+# Zwischen Branch wechseln:
+$ git checkout master
+$ git checkout git-basics
+$ ...
+
+# Aktuellen branch kontrollieren:
+$ git branch
+  master
+* git-basics
+					</code></pre>
+				</section>
+
+				<section>
 					<h1><strong>4</strong> Mergen</h1>
 					<p>
 						Immer wenn Ergebnisse zusammengeführt werden.
 					</p>
-					<p class="fragment">
+					<p>
 						Passiert im Idealfall automatisch. :-)
 					</p>
 
 					<ul>
-						<li class="fragment">Bei <span class="pink">parallelen Arbeiten</span> (gleicher Branch)</li>
-						<li class="fragment"><span class="pink">Ergebnisse veröffentlichen</span> (eigener Branch &rarr; Master)</li>
-						<li class="fragment"><span class="pink">Branch aktualisieren</span> (Master &rarr; eigener Branch)</li>
-						<li class="fragment"><span class="pink">Pull Requests</span> &rarr; verschiebt die Verantwortung</li>
+						<li>Bei <span class="pink">parallelen Arbeiten</span> (gleicher Branch)</li>
+						<li><span class="pink">Ergebnisse veröffentlichen</span> (eigener Branch &rarr; Master)</li>
+						<li><span class="pink">Branch aktualisieren</span> (Master &rarr; eigener Branch)</li>
+						<li><span class="pink">Pull Requests</span> &rarr; verschiebt die Verantwortung</li>
 					</ul>
+				</section>
+
+				<section>
+					<h1><strong>4</strong> Mergen <strong>// Demo</strong></h1>
+					<pre><code>
+$ git pull                      # Implizierter Commit bei merges!
+
+# Branches hin- und her mergen, hier git-basics -> master
+$ git branch
+* master
+  git-basics
+
+$ git merge git-basics          # Implizierter Commit bei merges!
+$ git push
+
+# Geht auch umgekehrt:
+$ git checkout git-basics
+$ git pull                      # Implizierter Commit bei merges!
+$ git merge master              # Implizierter Commit bei merges!
+$ git push
+					</code></pre>
 				</section>
 
 				<section>
 					<h1><strong>5</strong> Konflikte</h1>
 					<ul>
-						<li class="fragment">Wann treten Konflikte auf?</li>
-						<li class="fragment" style="list-style: none;">&rarr; Bei Änderungen, die nicht automatisch mergebar sind.</li>
-						<li class="fragment" style="list-style: none;">&rarr; Bei <span class="pink">git pull</span>.</li>
-						<li class="fragment" style="list-style: none;">&rarr; Bei <span class="pink">git merge</span>.</li>
-						<li class="fragment">Kann man das Risko reduzieren?</li>
-						<li class="fragment" style="list-style: none;">&rarr; Häufig(er) pullen und mergen</li>
-						<li class="fragment" style="list-style: none;">&rarr; Umbauarbeiten, wie Formatierungen, zurückhalten oder absprechen</li>
+						<li>Wann treten Konflikte auf?</li>
+						<li style="list-style: none;">&rarr; Bei Änderungen, die nicht automatisch mergebar sind.</li>
+						<li style="list-style: none;">&rarr; Bei <span class="pink">git pull</span>.</li>
+						<li style="list-style: none;">&rarr; Bei <span class="pink">git merge</span>.</li>
+						<li>Kann man das Risko reduzieren?</li>
+						<li style="list-style: none;">&rarr; Häufig(er) pullen und mergen</li>
+						<li style="list-style: none;">&rarr; Umbauarbeiten, wie Formatierungen, zurückhalten oder absprechen</li>
 					</ul>
 				</section>
 
 				<section>
-					<h1><strong>6</strong> GitHub Pages</h1>
+					<h1><strong>5</strong> Konflikte <strong>// Demo</strong></h1>
+					<pre><code>
+alice $ vim demo.txt
+alice $ git commit -am "Alice commit"
+alice $ git push
 
-					<ul>
-						<li class="fragment">Hosting für statischen Content</li>
-						<li class="fragment" style="list-style: none;">&rarr; für <span class="pink">unsere Präsentationen</span></li>
-						<li class="fragment" style="list-style: none;">&rarr; <a href="https://fh-koeln.github.com/wba1-2012/" target="_blank">fh-koeln.github.com/wba1-2012/</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<h1>Präsentation online stellen</h1>
-
-					<ul>
-						<li class="fragment">Import der Präsentationen nur aus dem <span class="pink">master branch!</span></li>
-						<li class="fragment">public.json ergänzen</span></li>
-					</ul>
-					<pre class="fragment"><code contenteditable>{
-	"presentations":
-	{
-		"2012-12-06-git-basics/index.html":
-		{
-			"title" : "Git Basics",
-			"authors" : ["Dominik Schilling", "Christoph Jerolimov"]
-		}
-	}
-}</code></pre>
+bob $ vim demo.txt
+bob $ git commit -am "Bobs commit"
+bob $ git pull                  # KONFLIKT
+bob $ vim demo.txt              # KONFLIKT manuell lösen
+bob $ git commit -am "Solved!"
+bob $ git push
+					</code></pre>
 				</section>
 
 				<section>
