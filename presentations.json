@@ -1,11 +1,10 @@
 {
 	"presentations":
 	{
-
-		"2013-10-10-slug/index.html":
+		"2013-10-10-git/index.html":
 		{
-			"title" : "Titel",
-			"authors" : ["Autor 1, Autor 2"]
+			"title" : "Git &amp; GitHub",
+			"authors" : ["Dominik Schilling", "Christoph Jerolimov"]
 		}
 	}
 }
