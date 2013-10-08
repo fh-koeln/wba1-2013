@@ -1,7 +1,7 @@
 ###Web-basierte Anwendungen 1: WWW-Technologien
 ####Wintersemester 2013/2014
 
-[Im Wiki](https://github.com/fh-koeln/wba1-2013/wiki) finden Sie alle relevanten Informationen,
+**[Im Wiki](https://github.com/fh-koeln/wba1-2013/wiki)** finden Sie alle relevanten Informationen,
 Lernmaterialien, Ansprechpartner etc. zum Modul "Web-basierte Anwendungen 1": WWW-Technologien.
 
 **Bitte beachten sie besonders die Punkte [Ablauf der Veranstaltung](https://github.com/fh-koeln/wba1-2013/wiki/Ablauf-der-Veranstaltung) und [Die Open Data Task Force](https://github.com/fh-koeln/wba1-2013/wiki/Die-Open-Data-Task-Force)**
