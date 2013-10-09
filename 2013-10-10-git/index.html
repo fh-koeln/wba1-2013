@@ -135,59 +135,71 @@
 				</section>
 
 				<section>
-					<h1><strong>2</strong> Grundlagen</h1>
+					<h1><strong>3</strong> Grundbegriffe</h1>
+                    
+                    <h3>Was ist ein Repository?</h3>
 					<ul style="width: 100%;">
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">init</span> &rarr; Unabhängiges lokales Repository erstellen</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">clone</span> &rarr; Entferntes Repository kopieren</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">status <span style="color: white;">&bullet;</span> diff</span> &rarr; Lokale Änderungen anzeigen</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">add <span style="color: white;">&bullet;</span> reset</span> &rarr; Änderungen zum Übernehmen (ent-)markieren</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">commit</span> &rarr; Änderungen dauerhaft übernehmen</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">pull</span> &rarr; Lokales Repository aktualisieren</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">push</span> &rarr; Änderungen an entferntes Repository senden</li>
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">init</span> &rarr; Lokales Repository anlegen</li>
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">clone</span> &rarr; Entferntes Repository kopieren</li>
+					</ul>
+                </section>
+				<section data-transition="none">
+					<h1><strong>3</strong> Grundbegriffe</h1>
+                    
+                    <h3>Was ist ein Repository?</h3>
+                    <h3>Was ist ein Commit?</h3>
+                
+					<ul style="width: 100%;">
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">status <span style="color: white;"> oder „changes“</span></span> &rarr; Änderungen anzeigen</li>
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">commit</span> &rarr; Änderungen versionieren</li>
 					</ul>
 				</section>
-
+				<section data-transition="none">
+					<h1><strong>3</strong> Grundbegriffe</h1>
+                    
+                    <h3>Was ist ein Repository?</h3>
+                    <h3>Was ist ein Commit?</h3>
+                    <h3>Was werden Daten synchonisiert?</h3>
+                
+					<ul style="width: 100%;">
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">pull</span> &rarr; Änderungen runterladen und in lokale Kopie „mergen“</li>
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">push</span> &rarr; Änderungen an entferntes Repository senden</li>
+                		<li class="fragment"><span style="display: inline-block; width: 25%;">„synchronisieren“</span> &rarr; Automatisches runterladen und senden</li>
+					</ul>
+				</section>
+                <section data-transition="none">
+					<h1><strong>3</strong> Grundbegriffe</h1>
+                    
+                    <h3>Was ist ein Repository?</h3>
+                    <h3>Was ist ein Commit?</h3>
+                    <h3>Was werden Daten synchonisiert?</h3>
+                    <h3>Was ist ein Branch?</h3>
+                
+					<ul style="width: 100%;">
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">branch</span> &rarr; Ermöglicht paralleles arbeiten an unterschiedlichen „Features“</li>
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">merge</span> &rarr; Bezeichnet das zusammenführen unterschiedlicher branches</li>
+					</ul>
+				</section>
+                
 				<section>
-					<h1><strong>3</strong> Branchen</h1>
+					<h1><strong>4</strong> GitHub und WBA1</h1>
 					<ul>
-						<li class="fragment"><span class="pink">Problem:</span> Master ist keine Spielwiese</li>
-						<li class="fragment"><span class="pink">Lösung:</span> Eigener, temporärer „Entwicklungszweig“</li>
-						<li class="fragment" style="list-style: none;">&rarr; Lokal und unabhängig</li>
-
-						<li class="fragment" style="list-style: none;">&rarr; Pushen prinzipell optional, aber ideal für (Sub-)Teams</li>
-						<li class="fragment" style="list-style: none;">&rarr; <span style="color: #ffffff; background-color: #dd1166;">Umkehrschluss: Nicht alle branches sind lokal verfügbar!</span></li>
-
-						<li class="fragment" style="list-style: none;">
-							&rarr; <a href="https://github.com/fh-koeln/wba1-2013/wiki/Konventionen" target="_blank">WBA1 Namenskonvention</a> beachten
-						</li>
+						<li class="fragment">
+                            Standardbranch heißt normalerweise
+                            „<code class="pink">master</code>“</li>
+						<li class="fragment">
+                            bei uns aber
+                            „<code class="pink">gh-pages</code>“!?</li>
+						<li class="fragment">
+                            <a href="https://github.com/fh-koeln/wba1-2013/wiki/GitHub-und-WBA1#wiki-konventionen-f%C3%BCr-die-arbeit-am-repository-">Konventionen für die Arbeit am Repository:</a><br/>
+                            
+                            Ordnername und Branchnamen bitte nach dem Schema:<br/>
+                            <code>2013-12-06-html-einstieg-a</code></li>
 					</ul>
 				</section>
 
 				<section>
-					<h1><strong>3</strong> Branch erstellen <strong>// Demo</strong></h1>
-					<pre><code>
-# Neuen Branch erstellen, verwenden und veröffentlichen:
-$ git branch git-basics
-$ git checkout git-basics
-$ git push origin git-basics
-
-# Daten kopieren oder verändern
-$ cp -r yyyy-mm-dd-lehreinheit/ 2013-10-10-git/
-$ git add .
-$ git commit -m "Neuer Branch für Git Basics"
-
-# Vereinfachen fürs pushen:
-$ git branch --set-upstream-to=origin/git
-$ git push
-					</code></pre>
-
-					<a href="https://github.com/fh-koeln/wba1-2012/branches" target="_blank">Branches</a> auf GitHub:
-					<a href="https://github.com/fh-koeln/wba1-2012" target="_blank">master</a>
-					<a href="https://github.com/fh-koeln/wba1-2012/tree/git-basics" target="_blank">git-basics</a>
-				</section>
-
-				<section>
-					<h1><strong>4</strong> Mergen</h1>
+					<h1><strong>5</strong> Mergen</h1>
 					<p>
 						Immer wenn Ergebnisse zusammengeführt werden.
 					</p>
@@ -204,7 +216,7 @@ $ git push
 				</section>
 
 				<section>
-					<h1><strong>5</strong> Konflikte</h1>
+					<h1><strong>6</strong> Konflikte</h1>
 					<ul>
 						<li class="fragment">Wann treten Konflikte auf?</li>
 						<li class="fragment" style="list-style: none;">&rarr; Bei Änderungen, die nicht automatisch mergebar sind.</li>
@@ -217,7 +229,7 @@ $ git push
 				</section>
 
 				<section>
-					<h1><strong>6</strong> GitHub Pages</h1>
+					<h1><strong>7</strong> GitHub Pages</h1>
 
 					<ul>
 						<li class="fragment">Hosting für statischen Content</li>
