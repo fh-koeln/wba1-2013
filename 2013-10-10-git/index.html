@@ -126,7 +126,7 @@
 						<li class="fragment" style="list-style: none;">&rarr; <span style="color: #ffffff; background-color: #dd1166;">Umkehrschluss: Nicht alle branches sind lokal verfügbar!</span></li>
 
 						<li class="fragment" style="list-style: none;">
-							&rarr; <a href="https://github.com/fh-koeln/wba1-2012/wiki/Konventionen" target="_blank">WBA1 Namenskonvention</a> beachten
+							&rarr; <a href="https://github.com/fh-koeln/wba1-2013/wiki/Konventionen" target="_blank">WBA1 Namenskonvention</a> beachten
 						</li>
 					</ul>
 				</section>
@@ -140,12 +140,12 @@ $ git checkout git-basics
 $ git push origin git-basics
 
 # Daten kopieren oder verändern
-$ cp -r yyyy-mm-dd-lehreinheit/ 2012-12-06-git-basics/
+$ cp -r yyyy-mm-dd-lehreinheit/ 2013-10-10-git/
 $ git add .
 $ git commit -m "Neuer Branch für Git Basics"
 
 # Vereinfachen fürs pushen:
-$ git branch --set-upstream-to=origin/git-basics
+$ git branch --set-upstream-to=origin/git
 $ git push
 					</code></pre>
 
@@ -201,16 +201,18 @@ $ git push
 						<li class="fragment">Import der Präsentationen nur aus dem <span class="pink">master branch!</span></li>
 						<li class="fragment">public.json ergänzen</span></li>
 					</ul>
-					<pre class="fragment"><code contenteditable>{
-	"presentations":
-	{
-		"2012-12-06-git-basics/index.html":
-		{
-			"title" : "Git Basics",
-			"authors" : ["Dominik Schilling", "Christoph Jerolimov"]
-		}
-	}
-}</code></pre>
+					<pre class="fragment"><code data-trim>
+{
+    "presentations":
+    {
+        "2013-10-10-git/index.html":
+        {
+            "title" : "Git Basics",
+            "authors" : ["Dominik Schilling", "Christoph Jerolimov"]
+        }
+    }
+}
+					</code></pre>
 				</section>
 
 				<section>

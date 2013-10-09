@@ -1,6 +1,16 @@
 {
 	"presentations":
 	{
+		"2013-10-10-wba1-kickoff/index.html":
+		{
+			"title" : "WBA1 Kickoff",
+			"authors" : ["Volker Schäfer"]
+		},
+		"2013-10-10-brackets-basics/index.html":
+		{
+			"title" : "Brackets - Einführung",
+			"authors" : ["Martin Baljan"]
+		},
 		"2013-10-10-git/index.html":
 		{
 			"title" : "Git &amp; GitHub",
