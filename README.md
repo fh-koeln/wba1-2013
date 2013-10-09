@@ -16,7 +16,7 @@ Lernmaterialien, Ansprechpartner etc. zum Modul "Web-basierte Anwendungen 1": WW
 
 **Weiterführende Infos:**  
 
-[![ScreenShot](https://raw.github.com/fh-koeln/wba1-2013/gh-pages/webpage/images/screencast.png)](http://www.youtube.com/watch?v=4KeUaWF3jHQ)
+[![ScreenShot](https://raw.github.com/fh-koeln/wba1-2013/gh-pages/assets/images/screencast.png)](http://www.youtube.com/watch?v=4KeUaWF3jHQ)
 
 [WBA1-Screencast für Lesefaule](http://www.youtube.com/watch?v=4KeUaWF3jHQ)  
 [Infos auf der Website von Prof. Christian Noss](http://christian-noss.de/blog/mu/blog/2013/09/26/wba1-2013-jetzt-gehts-looooos/)  
