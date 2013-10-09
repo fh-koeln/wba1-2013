@@ -67,139 +67,169 @@
 				</section>
 
 				<section>
-					<h1>Aufbau der Lerneinheit <strong>Git &amp; GitHub</strong></h1>
-					<p style="font-size: 1em;">
-						Sechs Themen, jeweils
-					</p>
+					<h1>
+                        Aufbau der Lerneinheit
+                        <strong>Git</strong> &amp;
+                        <strong>GitHub</strong>
+                    </h1>
 					<ul>
 						<li>kurze Theorie</li>
 						<li>kurze Demo</li>
 						<li>Zeit zum ausprobieren</li>
 					</ul>
 
-					<h1 style="margin-top: 1.0em; margin-bottom: 0.5em;">Lernziele</h1>
+					<h1 style="margin-top: 1.0em; margin-bottom: 0.5em;">Ziele</h1>
 					<ul>
 						<li>Grundprinzipen</li>
 						<li>Verständnis der wichtigsten Begriffe</li>
+                        <li>Erstellen eines ersten Branches</li>
 					</ul>
 				</section>
 
 				<section>
-					<h1><strong>0</strong> Warum Git? Was ist GitHub?</h1>
+					<h1>
+                        <strong>1</strong>
+                        Was ist <strong>Git</strong>?
+                        Und warum nutzen wir es?
+                    </h1>
 					<ul>
-						<li class="fragment">Versionierung</li>
-						<li class="fragment">Dezentral</li>
-
-						<li class="fragment">GitHub als zentrale Autorität</li>
-						<li class="fragment">GitHub bietet zudem
-							<ul>
-								<li>Kommentare</li>
-								<li>Issues</li>
-								<li>Wikis</li>
-								<li>Hosting</li>
-								<li>...</li>
+						<li class="fragment">Ein modernes Versionskontrollsystem, entwickelt von Linus Torvalds</li>
+                        <li class="fragment">Erstmal „nur“ ein Kommandozeilentool</li>
+						<li class="fragment pink">Dezentrale „Repositories“</li>
+                        <li class="fragment">
+                            <p style="font-size: 1em;">Vorteile von Git:</p>
+							<ul class="fragment">
+								<li>Optimiert auf gemeinsames, verteiltes arbeiten</li>
+								<li>Besonders gute Toolunterstützung / <a href="http://www.git-scm.com/downloads/guis">3rd-Party-Apps</a></li>
 							</ul>
+                        </li>
 					</ul>
 				</section>
 
 				<section>
-					<h1><strong>2</strong> Grundlagen</h1>
+					<h1>
+                        <strong>2</strong>
+                        Was ist <strong>GitHub</strong>?
+                        Und warum nutzen wir es?
+                    </h1>
+					<ul>
+						<li class="fragment">
+                            Eine zentrale Infrastruktur für Git (eine „Autorität“)<br/>
+                            <p class="pink">▸ „ein zentrales Repository“</p>
+                        </li>
+						<li class="fragment">
+                            Von der OpenSource-Community und Arbeitgebern akzeptiert<br/>
+                            <p class="pink">▸ „Social Development“</p>
+                        </li>
+						<li class="fragment">
+                            <p style="font-size: 1em;">GitHub bietet zudem optional:</p>
+							<ul>
+								<li>Webinterface für alle wichtigen Funktionen</li>
+								<li>Task-Verwaltung „Issues“</li>
+								<li>Ein Wiki pro Projekt</li>
+								<li>Eine Webseite pro Projekt</li>
+								<li>Hosting...</li>
+							</ul>
+                        </li>
+					</ul>
+				</section>
+
+				<section>
+					<h1><strong>3</strong> Grundbegriffe</h1>
+                    
+                    <h3>Was ist ein Repository?</h3>
 					<ul style="width: 100%;">
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">init</span> &rarr; Unabhängiges lokales Repository erstellen</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">clone</span> &rarr; Entferntes Repository kopieren</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">status <span style="color: white;">&bullet;</span> diff</span> &rarr; Lokale Änderungen anzeigen</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">add <span style="color: white;">&bullet;</span> reset</span> &rarr; Änderungen zum Übernehmen (ent-)markieren</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">commit</span> &rarr; Änderungen dauerhaft übernehmen</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">pull</span> &rarr; Lokales Repository aktualisieren</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">push</span> &rarr; Änderungen an entferntes Repository senden</li>
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">init</span> &rarr; Lokales Repository anlegen</li>
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">clone</span> &rarr; Entferntes Repository kopieren</li>
+					</ul>
+                </section>
+				<section data-transition="none">
+					<h1><strong>3</strong> Grundbegriffe</h1>
+                    
+                    <h3>Was ist ein Repository?</h3>
+                    <h3>Was ist ein Commit?</h3>
+                
+					<ul style="width: 100%;">
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">status <span style="color: white;"> oder „changes“</span></span> &rarr; Änderungen anzeigen</li>
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">commit</span> &rarr; Änderungen versionieren</li>
+					</ul>
+				</section>
+				<section data-transition="none">
+					<h1><strong>3</strong> Grundbegriffe</h1>
+                    
+                    <h3>Was ist ein Repository?</h3>
+                    <h3>Was ist ein Commit?</h3>
+                    <h3>Wie werden Daten synchonisiert?</h3>
+                
+					<ul style="width: 100%;">
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">pull</span> &rarr; Änderungen runterladen und in lokale Kopie „mergen“</li>
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">push</span> &rarr; Änderungen an entferntes Repository senden</li>
+                		<li class="fragment"><span style="display: inline-block; width: 25%;">„synchronisieren“</span> &rarr; Automatisches runterladen und senden</li>
+					</ul>
+				</section>
+                <section data-transition="none">
+					<h1><strong>3</strong> Grundbegriffe</h1>
+                    
+                    <h3>Was ist ein Repository?</h3>
+                    <h3>Was ist ein Commit?</h3>
+                    <h3>Wie werden Daten synchonisiert?</h3>
+                    <h3>Was ist ein Branch?</h3>
+                
+					<ul style="width: 100%;">
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">branch</span> &rarr; Ermöglicht paralleles arbeiten an unterschiedlichen „Features“</li>
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">merge</span> &rarr; Bezeichnet das zusammenführen unterschiedlicher branches</li>
 					</ul>
 				</section>
 
 				<section>
-					<h1><strong>3</strong> Branchen</h1>
-					<ul>
-						<li class="fragment"><span class="pink">Problem:</span> Master ist keine Spielwiese</li>
-						<li class="fragment"><span class="pink">Lösung:</span> Eigener, temporärer „Entwicklungszweig“</li>
-						<li class="fragment" style="list-style: none;">&rarr; Lokal und unabhängig</li>
-
-						<li class="fragment" style="list-style: none;">&rarr; Pushen prinzipell optional, aber ideal für (Sub-)Teams</li>
-						<li class="fragment" style="list-style: none;">&rarr; <span style="color: #ffffff; background-color: #dd1166;">Umkehrschluss: Nicht alle branches sind lokal verfügbar!</span></li>
-
-						<li class="fragment" style="list-style: none;">
-							&rarr; <a href="https://github.com/fh-koeln/wba1-2013/wiki/Konventionen" target="_blank">WBA1 Namenskonvention</a> beachten
-						</li>
-					</ul>
-				</section>
-
-				<section>
-					<h1><strong>3</strong> Branch erstellen <strong>// Demo</strong></h1>
-					<pre><code>
-# Neuen Branch erstellen, verwenden und veröffentlichen:
-$ git branch git-basics
-$ git checkout git-basics
-$ git push origin git-basics
-
-# Daten kopieren oder verändern
-$ cp -r yyyy-mm-dd-lehreinheit/ 2013-10-10-git/
-$ git add .
-$ git commit -m "Neuer Branch für Git Basics"
-
-# Vereinfachen fürs pushen:
-$ git branch --set-upstream-to=origin/git
-$ git push
-					</code></pre>
-
-					<a href="https://github.com/fh-koeln/wba1-2012/branches" target="_blank">Branches</a> auf GitHub:
-					<a href="https://github.com/fh-koeln/wba1-2012" target="_blank">master</a>
-					<a href="https://github.com/fh-koeln/wba1-2012/tree/git-basics" target="_blank">git-basics</a>
-				</section>
-
-				<section>
-					<h1><strong>4</strong> Mergen</h1>
-					<p>
-						Immer wenn Ergebnisse zusammengeführt werden.
-					</p>
-					<p class="fragment">
-						Passiert im Idealfall automatisch. :-)
-					</p>
-
-					<ul>
-						<li class="fragment">Bei <span class="pink">parallelen Arbeiten</span> (gleicher Branch)</li>
-						<li class="fragment"><span class="pink">Ergebnisse veröffentlichen</span> (eigener Branch &rarr; Master)</li>
-						<li class="fragment"><span class="pink">Branch aktualisieren</span> (Master &rarr; eigener Branch)</li>
-						<li class="fragment"><span class="pink">Pull Requests</span> &rarr; verschiebt die Verantwortung</li>
-					</ul>
-				</section>
-
-				<section>
-					<h1><strong>5</strong> Konflikte</h1>
+					<h1><strong>4</strong> Konflikte</h1>
 					<ul>
 						<li class="fragment">Wann treten Konflikte auf?</li>
 						<li class="fragment" style="list-style: none;">&rarr; Bei Änderungen, die nicht automatisch mergebar sind.</li>
-						<li class="fragment" style="list-style: none;">&rarr; Bei <span class="pink">git pull</span>.</li>
-						<li class="fragment" style="list-style: none;">&rarr; Bei <span class="pink">git merge</span>.</li>
+						<li class="fragment" style="list-style: none;">&rarr; Beim synchonisieren (<span class="pink">pull</span> und <span class="pink">mergen</span>)</li>
 						<li class="fragment">Kann man das Risko reduzieren?</li>
-						<li class="fragment" style="list-style: none;">&rarr; Häufig(er) pullen und mergen</li>
-						<li class="fragment" style="list-style: none;">&rarr; Umbauarbeiten, wie Formatierungen, zurückhalten oder absprechen</li>
+						<li class="fragment" style="list-style: none;">&rarr; Häufig(er) synchonisieren</li>
+						<li class="fragment" style="list-style: none;">&rarr; Mit „Umbauarbeiten“ (etwa neu formatieren) zurückhalten</li>
+					</ul>
+				</section>
+                
+				<section>
+					<h1><strong>5</strong> GitHub und <strong>WBA1</strong></h1>
+					<ul>
+						<li class="fragment">
+                            Standardbranch heißt normalerweise
+                            „<code class="pink">master</code>“</li>
+						<li class="fragment">
+                            bei uns aber
+                            „<code class="pink">gh-pages</code>“!?</li>
+						<li class="fragment">
+                            <a href="https://github.com/fh-koeln/wba1-2013/wiki/GitHub-und-WBA1#wiki-konventionen-f%C3%BCr-die-arbeit-am-repository-">Konventionen für die Arbeit am Repository:</a><br/>
+                            
+                            Ordnername und Branchnamen bitte nach dem Schema:<br/>
+                            <code>2013-12-06-html-einstieg-a</code></li>
 					</ul>
 				</section>
 
 				<section>
-					<h1><strong>6</strong> GitHub Pages</h1>
-
-					<ul>
-						<li class="fragment">Hosting für statischen Content</li>
-						<li class="fragment" style="list-style: none;">&rarr; für <span class="pink">unsere Präsentationen</span></li>
-						<li class="fragment" style="list-style: none;">&rarr; <a href="https://fh-koeln.github.com/wba1-2012/" target="_blank">fh-koeln.github.com/wba1-2012/</a></li>
-					</ul>
+					<h1><strong>6</strong> GitHub und <strong>Pull Requests</strong></h1>
+					<p>
+						GitHub zeigt synchonisierte <span class="pink">branches</span>
+                        automatisch auf der Projektseite an.
+					</p>
+					<p>
+                        Einfache und visuelle Möglichkeit zum <span class="pink">mergen</span>.
+					</p>
+					<p>
+						Möglichkeit für Kommentare und Feedback...
+					</p>
 				</section>
 
 				<section>
-					<h1>Präsentation online stellen</h1>
-
+					<h1><strong>7</strong> GitHub <strong>WBA1-2013</strong> Projektseite</h1>
+                    
 					<ul>
-						<li class="fragment">Import der Präsentationen nur aus dem <span class="pink">master branch!</span></li>
-						<li class="fragment">public.json ergänzen</span></li>
+						<li class="fragment"><a href="https://fh-koeln.github.io/wba1-2013/">fh-koeln.github.io/wba1-2013/</a></li>
+						<li class="fragment"><code>public.json</code> ergänzen:</li>
 					</ul>
 					<pre class="fragment"><code data-trim>
 {
@@ -207,21 +237,24 @@ $ git push
     {
         "2013-10-10-git/index.html":
         {
-            "title" : "Git Basics",
+            "title" : "GitHub &amp; Git",
             "authors" : ["Dominik Schilling", "Christoph Jerolimov"]
         }
     }
 }
 					</code></pre>
+                    <ul>
+						<li class="fragment">Datei mit Präsentation in den <code>gh-pages</code> branch mergen!</li>
+                    </ul>
 				</section>
 
 				<section>
 					<h1>Vielen Dank</h1>
 
 					<ul>
-						<li><a href="https://github.com/fh-koeln/wba1-2012/wiki/Git-CheatSheet" target="_blank">Git CheatSheet</a></li>
-						<li><a href="https://github.com/fh-koeln/wba1-2012/wiki/GitHub-Mac-GUI" target="_blank">GitHub Mac GUI</a></li>
-						<li><a href="https://github.com/fh-koeln/wba1-2012/wiki/Git-Windows-GUI" target="_blank">GitHub Windows GUI</a></li>
+						<li><a href="https://github.com/fh-koeln/wba1-2012/wiki/Git-CheatSheet">Git CheatSheet</a></li>
+						<li><a href="https://github.com/fh-koeln/wba1-2012/wiki/GitHub-Mac-GUI">GitHub Mac GUI</a></li>
+						<li><a href="https://github.com/fh-koeln/wba1-2012/wiki/Git-Windows-GUI">GitHub Windows GUI</a></li>
 					</ul>
 				</section>
 				<!-- End of slides container. -->
