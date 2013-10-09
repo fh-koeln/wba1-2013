@@ -159,7 +159,7 @@
                     
                     <h3>Was ist ein Repository?</h3>
                     <h3>Was ist ein Commit?</h3>
-                    <h3>Was werden Daten synchonisiert?</h3>
+                    <h3>Wie werden Daten synchonisiert?</h3>
                 
 					<ul style="width: 100%;">
 						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">pull</span> &rarr; Änderungen runterladen und in lokale Kopie „mergen“</li>
@@ -172,7 +172,7 @@
                     
                     <h3>Was ist ein Repository?</h3>
                     <h3>Was ist ein Commit?</h3>
-                    <h3>Was werden Daten synchonisiert?</h3>
+                    <h3>Wie werden Daten synchonisiert?</h3>
                     <h3>Was ist ein Branch?</h3>
                 
 					<ul style="width: 100%;">
@@ -180,9 +180,21 @@
 						<li class="fragment"><span class="pink" style="display: inline-block; width: 25%;">merge</span> &rarr; Bezeichnet das zusammenführen unterschiedlicher branches</li>
 					</ul>
 				</section>
+
+				<section>
+					<h1><strong>4</strong> Konflikte</h1>
+					<ul>
+						<li class="fragment">Wann treten Konflikte auf?</li>
+						<li class="fragment" style="list-style: none;">&rarr; Bei Änderungen, die nicht automatisch mergebar sind.</li>
+						<li class="fragment" style="list-style: none;">&rarr; Beim synchonisieren (<span class="pink">pull</span> und <span class="pink">mergen</span>)</li>
+						<li class="fragment">Kann man das Risko reduzieren?</li>
+						<li class="fragment" style="list-style: none;">&rarr; Häufig(er) synchonisieren</li>
+						<li class="fragment" style="list-style: none;">&rarr; Mit „Umbauarbeiten“ (etwa neu formatieren) zurückhalten</li>
+					</ul>
+				</section>
                 
 				<section>
-					<h1><strong>4</strong> GitHub und WBA1</h1>
+					<h1><strong>5</strong> GitHub und <strong>WBA1</strong></h1>
 					<ul>
 						<li class="fragment">
                             Standardbranch heißt normalerweise
@@ -199,51 +211,25 @@
 				</section>
 
 				<section>
-					<h1><strong>5</strong> Mergen</h1>
+					<h1><strong>6</strong> GitHub und <strong>Pull Requests</strong></h1>
 					<p>
-						Immer wenn Ergebnisse zusammengeführt werden.
+						GitHub zeigt synchonisierte <span class="pink">branches</span>
+                        automatisch auf der Projektseite an.
 					</p>
-					<p class="fragment">
-						Passiert im Idealfall automatisch. :-)
+					<p>
+                        Einfache und visuelle Möglichkeit zum <span class="pink">mergen</span>.
 					</p>
-
-					<ul>
-						<li class="fragment">Bei <span class="pink">parallelen Arbeiten</span> (gleicher Branch)</li>
-						<li class="fragment"><span class="pink">Ergebnisse veröffentlichen</span> (eigener Branch &rarr; Master)</li>
-						<li class="fragment"><span class="pink">Branch aktualisieren</span> (Master &rarr; eigener Branch)</li>
-						<li class="fragment"><span class="pink">Pull Requests</span> &rarr; verschiebt die Verantwortung</li>
-					</ul>
+					<p>
+						Möglichkeit für Kommentare und Feedback...
+					</p>
 				</section>
 
 				<section>
-					<h1><strong>6</strong> Konflikte</h1>
+					<h1><strong>7</strong> GitHub <strong>WBA1-2013</strong> Projektseite</h1>
+                    
 					<ul>
-						<li class="fragment">Wann treten Konflikte auf?</li>
-						<li class="fragment" style="list-style: none;">&rarr; Bei Änderungen, die nicht automatisch mergebar sind.</li>
-						<li class="fragment" style="list-style: none;">&rarr; Bei <span class="pink">git pull</span>.</li>
-						<li class="fragment" style="list-style: none;">&rarr; Bei <span class="pink">git merge</span>.</li>
-						<li class="fragment">Kann man das Risko reduzieren?</li>
-						<li class="fragment" style="list-style: none;">&rarr; Häufig(er) pullen und mergen</li>
-						<li class="fragment" style="list-style: none;">&rarr; Umbauarbeiten, wie Formatierungen, zurückhalten oder absprechen</li>
-					</ul>
-				</section>
-
-				<section>
-					<h1><strong>7</strong> GitHub Pages</h1>
-
-					<ul>
-						<li class="fragment">Hosting für statischen Content</li>
-						<li class="fragment" style="list-style: none;">&rarr; für <span class="pink">unsere Präsentationen</span></li>
-						<li class="fragment" style="list-style: none;">&rarr; <a href="https://fh-koeln.github.com/wba1-2012/" target="_blank">fh-koeln.github.com/wba1-2012/</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<h1>Präsentation online stellen</h1>
-
-					<ul>
-						<li class="fragment">Import der Präsentationen nur aus dem <span class="pink">master branch!</span></li>
-						<li class="fragment">public.json ergänzen</span></li>
+						<li class="fragment"><a href="https://fh-koeln.github.io/wba1-2013/">fh-koeln.github.io/wba1-2013/</a></li>
+						<li class="fragment"><code>public.json</code> ergänzen:</li>
 					</ul>
 					<pre class="fragment"><code data-trim>
 {
@@ -251,21 +237,24 @@
     {
         "2013-10-10-git/index.html":
         {
-            "title" : "Git Basics",
+            "title" : "GitHub &amp; Git",
             "authors" : ["Dominik Schilling", "Christoph Jerolimov"]
         }
     }
 }
 					</code></pre>
+                    <ul>
+						<li class="fragment">Datei mit Präsentation in den <code>gh-pages</code> branch mergen!</li>
+                    </ul>
 				</section>
 
 				<section>
 					<h1>Vielen Dank</h1>
 
 					<ul>
-						<li><a href="https://github.com/fh-koeln/wba1-2012/wiki/Git-CheatSheet" target="_blank">Git CheatSheet</a></li>
-						<li><a href="https://github.com/fh-koeln/wba1-2012/wiki/GitHub-Mac-GUI" target="_blank">GitHub Mac GUI</a></li>
-						<li><a href="https://github.com/fh-koeln/wba1-2012/wiki/Git-Windows-GUI" target="_blank">GitHub Windows GUI</a></li>
+						<li><a href="https://github.com/fh-koeln/wba1-2012/wiki/Git-CheatSheet">Git CheatSheet</a></li>
+						<li><a href="https://github.com/fh-koeln/wba1-2012/wiki/GitHub-Mac-GUI">GitHub Mac GUI</a></li>
+						<li><a href="https://github.com/fh-koeln/wba1-2012/wiki/Git-Windows-GUI">GitHub Windows GUI</a></li>
 					</ul>
 				</section>
 				<!-- End of slides container. -->
