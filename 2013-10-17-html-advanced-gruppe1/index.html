@@ -68,7 +68,6 @@
 								<li class="fragment">Exkurs HTML5</li>
 							</ul>
 						</p>
-
 				</section>
 				
 				<section> <!-- Tabellen for Beginners Anfang-->
@@ -233,7 +232,7 @@
 							
 						</script>
 					</section>
-						<section data-markdown>
+					<section data-markdown>
 						<script type="text/template">
 							###Formulare - Textelemente
 							####Text Label
@@ -242,8 +241,138 @@
 								
 							<input type="text" name="Ich bekomme einen Namen" value="default-text" /> <input type="password" name="Ja, auch ich" value="versteckt" />
 							
-						</script>
+							
+							####Textfeld
+								<textarea name="Name" cols="50" rows="3">
+									Hier steht ein Text. Aber man kann auch was reinschreiben.
+								</textarea>
+								
+							<textarea name="Name" cols="50" rows="3">
+								Hier steht ein Text. Aber man kann auch was reinschreiben.
+							</textarea>
+							
+						</script>						
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						###Formulare - Einfach oder mehrfach Wählen
+						####Radiobuttons
+							
+							So weit klar? <br>
+							Ja <input type="radio" name="Name" value="Yes" />
+							Nein <input type="radio" name="Name" value="No" />
+							
+						So weit klar? <br>
+						Ja <input type="radio" name="Name" value="Yes" />
+						Nein <input type="radio" name="Name" value="No" />
 						
+						####Checkbox
+							Hier darfst du mehr wählen!
+							Ich <input type="checkbox" checked="check" />
+							Du <input type="checkbox" checked="check" />
+							Wir <input type="checkbox" checked="check" />
+							
+						Hier darfst du mehr wählen! <br>
+						Ich <input type="checkbox" checked="check" /> <br>
+						Du <input type="checkbox" checked="check" /> <br>
+						Wir <input type="checkbox" checked="check" /> <br>
+						</script>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+							###Formulare - Auswahllisen und Dropdownmenüs Definieren
+							####Auswahlliste:
+							
+								<select name="Dropdown" size="3">
+									<option label="Gestern">Gestern</option>
+									<option label="Heute">Heute</option>
+									<option label="Morgen">Morgen</option>
+								</select>
+								
+							<select name="Dropdown" size="3">
+								<option label="Gestern">Gestern</option>
+								<option label="Heute">Heute</option>
+								<option label="Morgen">Morgen</option>
+							</select>
+							
+							####Dropdown
+								...size="1"...
+								
+							<select name="Dropdown" size="1">
+								<option label="Gestern">Gestern</option>
+								<option label="Heute">Heute</option>
+								<option label="Morgen">Morgen</option>
+							</select>
+								
+						</script>						
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						###Formulare - Buttons
+						####Button
+						
+							<input type="button"  name="kann_Nichts" value="Ich kann nichts!" />
+							
+						<input type="button"  name="kann_Nichts" value="Ich kann nichts!" />
+						
+						####Bestätigung ist alles
+						
+							<input type="submit" name="submit_but" value="Okay" />
+							
+						<input type="submit" name="submit_but" value="Okay" />
+						
+						####Reset-Button
+						
+							<input type="reset" name="submit_but" value="Clear" />
+						
+						<form name"test" action"ziel">
+							<textarea name="Name" cols="50" rows="3">
+								Hier schreiben wir einen Text, den wir gleich Löschen.
+							</textarea> <br>
+							<input type="reset" name="submit_but" value="Clear" />
+						</form>
+						</script>						
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						###Formulare - Code
+							
+							<!DOCTYPE html>
+							<html>
+								<head>
+									<meta charset="utf-8">
+									<title>Test</title>
+								</head>
+								<body>
+									<form name="name" action="">
+										<input type="text" name"name" value="Vorname" /> <input type="text" name"name_n" value="Nachname" /><br>
+										<textarea name="Vita" cols="50" rows="3">
+											Schreib etwas über dich!
+										</textarea><br>
+										<input type="submit" name="button_submit" value="Okay"/>
+										<input type="reset" name="delete" value="reset" />
+									</form>
+								</body>
+							</html>
+							
+						</script>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+						###Formulare - Beispiel
+						
+						<form name="name" action="">
+							<input type="text" name"name" value="Vorname" /> <input type="text" name"name_n" value="Nachname" /><br>
+							<textarea name="Vita" cols="50" rows="3">
+								Schreib etwas über dich!
+							</textarea><br>
+							<input type="submit" name="button_submit" value="Okay"/>
+							<input type="reset" name="delete" value="reset" />
+						</form>
+							
+						</script>
 					</section>
 				</section><!-- Formulare Ende -->
 
