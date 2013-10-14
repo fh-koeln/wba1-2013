@@ -1,351 +1,446 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<!-- Title of presentation -->
-		<title>Halloo</title>
-		<!-- Short description of presentation -->
-		<meta name="description" content="Demo of Reveal.js functions and features">
-		<!-- Author of presentation -->
-		<meta name="author" content="Dominik Schilling">
+    <title>WBA1 - HTML Advanced - Gruppe 2</title>
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="description" content="HTML 2">
+    <meta name="author" content="Vsevolod K�ppers, Thomas xxx, Serjcan xxx">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
-		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+    <link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+    <link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="../revealjs-framework/lib/css/solarized_light.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
 
-		<!--[if lt IE 9]>
-		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <!--[if lt IE 9]>
+    <script src="../revealjs-template/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-	<body>
+  <body>
 
-		<div class="reveal">
+    <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
 
-				<section>
-					<h1>Web-basierte Anwendungen 1</h1>
-					<h2>Reveal.js Demo</h2>
+        <section> <!-- Startseite -->
+			<h1>Web-basierte Anwendungen 1</h1>
+			<h2>HTML Advanced</h2>
+			<p>17. Oktober 2013</p>
+			<p>
+			Studiengang Medieninformatik an der Fachhochschule K�ln<br/>
+			Campus Gummersbach
+			</p>
+			<br/>
+			<p>
+			Vsevolod K�ppers<br/>
+			Thomas xxx</br>
+			<strong>//</strong></br>
+			Serjcan xxx<br/>
+			</p>
+        </section>
+        
+        <section> <!-- Inhalt -->
+			<h2>Inhalte</h2>
+			<p>
+				<ul>
+					<li class="fragment">Bilder</li>
+					<li class="fragment">Tabellen
+						<ul>
+							<li class="fragment">einfache Tabellen</li>
+							<li class="fragment">erweiterte Tabellen</li>
+						</ul>
+					</li>
+					<li class="fragment">Formulare</li>
+					<li class="fragment">Strukturelemente HTML5</li>
+						<ul>
+							<li class="fragment">einfache Tabellen</li>
+							<li class="fragment">erweiterte Tabellen</li>
+						</ul>
+				</ul>
+			</p>
+		</section>	
+		
+		<section> <!-- Bilder -->
+			<section data-markdown>
+				<script type="text/template">
+### Bilder 1 - Definition
+#### Einbinden von Bildern
 
-					<p>10. Oktober 2013</p>
+	<img src="(url des Bildes)" />
+	
+#### Weitere Attribute des img-Tags
 
-					<p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
-					Campus Gummersbach</p>
+	<img src="url" alt="text" border="1" width="300px" height="300px" />
+	
+url: URL des Bildes (komplett oder relativ zum aktuellen Verzeichnis)
 
-					<p style="margin-top:10%">Student 1<br>
-					Student 2<br>
-					Student 3</p>
-				</section>
+alt: alternativer Text
 
-				<section>
-					<section>
-						<h2>Backgrounds</h2>
-					</section>
+border: Rand des Bildes
 
-					<section class="center" data-background="#77aabb">
-						<pre><code>&lt;section data-background="#77aabb"&gt;
+width/height: Breite und Höhe des Bildes in Pixeln
+				</script>
+			</section>
+			
+			<section data-markdown>
+				<script type="text/template">
+### Bilder 2 - Beispiel
+#### Bild wird eingebunden und skaliert
 
-&lt;/section&gt;</code></pre>
-					</section>
+	<img src="table2.jpg" alt="Tabellenbeispiel verzerrt" width="800px" height="300px" />
+	
+<img src="table2.jpg" alt="Tabellenbeispiel verzerrt" width="800px" height="300px" />
+				</script>
+			</section>
+		</section>
+		
+		<section> <!-- Aufgabe 1 - Bilder -->
+<h1>Aufgabe 1</h1>
+Erstellen Sie ein neues HTML-Dokument mit dem HTML-Grundgerüst.<br/><br/>
+Fügen Sie ihrem HTML-Dokument das Bild wba_icon.jpg im Format
+200x300px aus dem Quellverzeichnis „wba/bilder“ hinzu.
+		</section>
+		
+		<section> <!-- Einfache Tabellen -->
+		
+			<section data-markdown>
+				<script type="text/template">
+### Einfache Tabellen 1 - Definition
+Tabelle (table)
+	
+	<table>(hier stehen Tabellenzeilen und -spalten)</table>
+	
+Tabellenzeile (table row)
+	
+	<tr>(hier stehen Zellen)</tr>
+	
+Tabellenzelle (table data)
+	
+	<td>(hier steht der Inhalt der Zelle)</td>
+				</script>
+			</section>
+		
+			<section data-markdown>
+				<script type="text/template">
+### Einfache Tabellen 2 - Beispiel
+#### Code
+	<table>
+		<tr>
+			<td>Reihe 1 Zelle 1</td>
+			<td>Reihe 1 Zelle 2</td>
+		</tr>
+		<tr>
+			<td>Reihe 2 Zelle 1</td>
+			<td>Reihe 2 Zelle 2</td>
+		</tr>
+	</table>
+#### Darstellung
+<table>
+<tr>
+<td>Reihe 1 Zelle 1</td>
+<td>Reihe 1 Zelle 2</td>
+</tr>
+<tr>
+<td>Reihe 2 Zelle 1</td>
+<td>Reihe 2 Zelle 2</td>
+</tr>
+</table>
+				</script>
+			</section>
+			
+		</section>
+		
+		<section> <!-- Erweiterte Tabellen -->
+			
+			<section data-markdown>
+				<script type="text/template">
+### Erweiterte Tabellen 1 - Definition
+Rand der Tabelle (border)
+	
+	<table border="(Dicke, z.B. 1)">...</table>
+	
+Oberster Tabellenabschnitt und Tabellenkopf (table head)
+	
+	<thead>...</thead> <!-- definiert Obersten Tabellenabschnitt -->
+	<th>...</th> <!-- definiert eine Zelle als Überschrift -->
+	
+Abschnitt für Tabellenkörper (table body)
+	
+	<tbody>...</tbody>
+	
+Unterster Tabellenabschnitt (table foot)
 
-					<section data-background="#442211">
-						<pre><code>&lt;section data-background="#442211"&gt;
+	<tfoot>...</tfoot>
+				</script>
+			</section>
+		
+			<section data-markdown>
+				<script type="text/template">
+### Erweiterte Tabellen 2 - Beispiel Code
+	<table border="1">
+		<tfoot> <!-- Tabellenfuß -->
+			<tr>
+				<td>Gesamt</td><td>180 €</td>
+			</tr>
+		</tfoot>
+		<tbody> <!-- Tabellenkörper -->
+			<tr>
+				<td>Januar</td><td>100 €</td>
+			</tr>
+			<tr>
+				<td>Februar</td><td>80 €</td>
+			</tr>
+		</tdbody>
+		<thead> <!-- Tabellenkopf -->
+			<tr>
+				<th>Monat</th><th>Ausgaben</th>
+			</tr>
+		</thead>
+	</table>
+				</script>
+			</section>
+			
+			<section data-markdown>
+				<script type="text/template">
+### Erweiterte Tabellen 3 - Beispiel Darstellung
+<center><img src="table2.jpg"/></center>
 
-&lt;/section&gt;</code></pre>
-					</section>
+				</script>
+			</section>
+			
+		</section>
+		
+		<section> <!-- Aufgabe 2 - Tabellen -->
+<h1>Aufgabe 1</h1>
+Erstellen Sie ein neues HTML-Dokument mit dem HTML-Grundgerüst.<br/><br/>
+Fügen Sie ihrem HTML-Dokument das Bild wba_icon.jpg im Format
+200x300px aus dem Quellverzeichnis „wba/bilder“ hinzu.
+		</section>
+		
+		<section> <!-- Formulare -->
+		
+			<section data-markdown>
+				<script type="text/template">
+### Formulare 1 - Was ist ein HTML Formular?
+<center><img src="formular_github.jpg" height="400px"></center>
+				</script>
+			</section>
+		
+			<section data-markdown>
+				<script type="text/template">
+### Formulare 2 - Definition
 
-					<section data-background-image="images/background.jpg">
-						<pre><code>&lt;section data-background="images/background.jpg"&gt;
+#### Formulare definieren
 
-&lt;/section&gt;</code></pre>
-					</section>
+	<form name="name" action="ziel">
+		<!-- hier stehen beliebige Formularelemente -->
+	</form>
+	
+- name: Bezeichnung des Formulares
 
-					<section data-background-image="images/github-mac.png" data-background-position="top center">
-					</section>
+- ziel: Ziel-URL (z.B. "neueseite.html") oder "" für aktuelle URL (Reload)
+				</script>
+			</section>
+			
+			<section data-markdown>
+				<script type="text/template">
+### Formulare 3 - Buttons
+				
+#### Normaler Button
 
-					<section data-background-image="images/github-windows.png" data-background-position="top center">
-					</section>
-				</section>
+	<input type="button" name="button_sinnlos" value="sinnloser Knopf" />
+	
+<input type="button" name="button_sinnlos" value="sinnloser Knopf" />
 
-				<section>
-					<h2>Fragments</h2>
-					<p class="fragment grow">grow</p>
-					<p class="fragment shrink">shrink</p>
-					<p class="fragment roll-in">roll-in</p>
-					<p class="fragment fade-out">fade-out</p>
-					<p class="fragment highlight-red">highlight-red</p>
-					<p class="fragment highlight-green">highlight-green</p>
-					<p class="fragment highlight-blue">highlight-blue</p>
-				</section>
+#### Submit Button (sendet Daten des Formulares an die Ziel-URL)
 
-				<section>
-					<h2>Fragmented <strong>Views</strong></h2>
-					<p>Hit the next arrow...</p>
-					<p class="fragment" data-fragment-index="0">... to step through ...</p>
-					<ol>
-						<li class="fragment" data-fragment-index="1"><code>any type</code></li>
-						<li class="fragment" data-fragment-index="2"><em>of view</em></li>
-						<li class="fragment" data-fragment-index="3"><strong>fragments</strong></li>
-					</ol>
-				</section>
+	<input type="submit" name="button_submit" value="Abschicken" />
+	
+<input type="submit" name="button_submit" value="Abschicken" />
+
+#### Clear/Reset Button (löscht alle Formularfelder)
+
+	<input type="reset" name="button_clear" value="Formular löschen" />
+	
+<input type="reset" name="button_clear" value="Formular löschen" />
+				</script>
+			</section>
+			
+			<section data-markdown>
+				<script type="text/template">
+### Formulare 4 - Checkboxen und Radiobuttons
+
+#### Checkbox
+
+	Alles verstanden? <input type="checkbox" checked="checked" />
+	
+Alles verstanden? <input type="checkbox" checked="checked" />
+
+#### Radiobuttons
+	
+	Alles verstanden?
+	Ja <input type="radio" name="verstanden" value="Ja" />
+	Nein <input type="radio" name="verstanden" value="Nein" />
+	
+Alles verstanden?
+Ja <input type="radio" name="verstanden" value="Ja" checked="checked" />
+Nein <input type="radio" name="verstanden" value="Nein" />
+				</script>
+			</section>
+			
+			<section data-markdown>
+				<script type="text/template">
+### Formulare 5 - Auswahllisten (Dropdownlist)
+#### Auswahlliste (Spezialfall Dropdownlist) definieren
+
+	<select name="auswahl" size="1">
+		<option label="ja">Ja</option>
+		<option label="nein">Nein</option>
+		<option label="worum gehts">Worum gehts?</option>
+	</select>
+
+Alles verstanden?
+	
+<select name="auswahl" size="1">
+<option label="Ja">ja</option>
+<option label="Nein">nein</option>
+<option label="Worum gehts?">keinplan</option>
+</select>
+
+	... size="3" ...
+
+<select name="auswahl" size="3">
+<option label="Ja">ja</option>
+<option label="Nein">nein</option>
+<option label="Worum gehts?">keinplan</option>
+</select>
+
+				</script>
+			</section>
+			
+			<section data-markdown>
+				<script type="text/template">
+### Formulare 6 - Textfelder
+#### Einzeilige Textfelder
+
+	<input type="text" name="name" value="default-text" />
+	<input type="password" name="button_password" value="geheim" />
+	
+<input type="text" name="name" value="default-text" />
+<input type="password" name="button_password" value="geheim" />
+
+#### Mehrzeilige Textfelder (Textarea)
+
+	<textarea name="name" cols="50" rows="3">
+		In dieser Textarea steht ein Text.
+		Ist er nicht komplett
+		sichtbar, erscheint ein Scrollbalken.
+		Das ist der Fall.
+	</textarea>
+	
+<textarea name="name" cols="50" rows="3">
+In dieser Textarea steht ein Text.
+Ist er nicht komplett
+sichtbar, erscheint ein Scrollbalken.
+Das ist der Fall.
+</textarea>
+				</script>
+			</section>
+			
+		</section>
+		
+		<section> <!-- Ausblick XHTML/HTML5 -->
+			<section>
+<h3>Ausblick 1 - XHTML</h3>
+<h4>XHTML (Extensible HyperText Markup Language)</h4>
+
+<ul>
+	<li>XML-gerechtes HTML</li>
+	<li>Definiert durch <strong> XML (Extensible Markup Language)</strong> statt <strong>SGML (Standard Generalized Markup Language)</strong></li>
+- XML-gerechtes HTML
+
+- Definiert durch XML(Extensible Markup Language) statt SGML(Standard Generalized Markup Language)
+
+- Syntaktisch kompatibel zu wichtigen XML-Standardsprachen(SVG, WML, SMIL)
+
+- strikter als HTML(Code muss „sauber“ sein: End-Tags dürfen nicht vergessen werden wie in HTML)
+<!-- HIER FEHLT NOCH EINIGES -->
 
 
-				<section>
-					<h2>Images</h2>
+			</section>
+			
+			<section>
+<h3>Ausblick 2 - HTML5</h3>
+<h4>HTML5 (Nachfolger von HTML 4.01 und XHTML 1.0)</h4>
 
-					<img class="align-center" src="http://octodex.github.com/images/daftpunktocat-thomas.gif">
-				</section>
+<ul>
+	<li>Fortführend von HTML / Ziel: HTML neu erfinden</li>
+	<li>Anleihen/Standards aus XHTML</li>
+	<li>In Entwicklung, soll 2014 laut W3C offiziell verabschiedet werden</li>
+	<li>Viele neue Features, wie z.B. Audio/Video Support (macht Plugins wie Adobe Flash überflüssig)</li>
+</ul>
+			</section>
 
-				<section>
-					<h2>Code syntax highlighting</h2>
+		<section>
+<h3>Ausblick 3 - HTML5 Browsergame "Browserquest"</h3>
+<img src="browserquest.jpg" height="400px" /><br/>
+<a href="http://browserquest.mozilla.org/" target="_blank">browserquest.mozilla.org</a><br/>
+<a href="https://github.com/mozilla/BrowserQuest" target="_blank">github.com/mozilla/BrowserQuest</a>
+		</section>
+		
+		<section>
+<h3>Ausblick 4 - HTML5 CanvasMol</h3>
+<img src="canvasmol.jpg" height="400px" /><br/>
+<a href="http://alteredqualia.com/canvasmol" target="_blank">alteredqualia.com/canvasmol</a>
+		</section>
+			
+		</section>
+		
+      </div>
 
-					<pre><code data-trim>
-&lt;?php
-echo 'Hello World!';
-?&gt;
-					</code></pre>
+    </div>
 
-					<pre><code data-trim>
-$ ruby -e "puts 'Hello world'"
-Hello world
-					</code></pre>
+    <script src="../revealjs-template/lib/js/head.min.js"></script>
+    <script src="../revealjs-template/js/reveal.min.js"></script>
 
-					<pre><code data-trim>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;meta charset=&quot;utf-8&quot;&gt;
-		&lt;title&gt;&lt;/title&gt;
-		&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+    <script>
 
-		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-	&lt;body&gt;
-&lt;/html&gt;
-					</code></pre>
-				</section>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
 
-				<section>
-					<section>
-						<h2>Tables</h2>
-						<table>
-							<tr>
-								<th>Foo</th>
-								<th>Bar</th>
-							</tr>
-							<tr>
-								<td>Zelle 1 1</td>
-								<td>Zelle 1 2</td>
-							</tr>
-							<tr>
-								<td>Zelle 2 1</td>
-								<td>Zelle 2 2</td>
-							</tr>
-						</table>
-					</section>
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
 
-					<section>
-					<h2>Tables <strong>Latin Character Tests</strong></h2>
-						<table>
-							<tbody>
-								<tr>
-									<td>!</td>
-									<td>"</td>
-									<td>#</td>
-									<td>$</td>
-									<td>%</td>
-									<td>&amp;</td>
-									<td>'</td>
-									<td>(</td>
-									<td>)</td>
-									<td>*</td>
-								</tr>
-								<tr>
-									<td>+</td>
-									<td>,</td>
-									<td>-</td>
-									<td>.</td>
-									<td>/</td>
-									<td>0</td>
-									<td>1</td>
-									<td>2</td>
-									<td>3</td>
-									<td>4</td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>6</td>
-									<td>7</td>
-									<td>8</td>
-									<td>9</td>
-									<td>:</td>
-									<td>;</td>
-									<td>&gt;</td>
-									<td>=</td>
-									<td>&lt;</td>
-								</tr>
-								<tr>
-									<td>?</td>
-									<td>@</td>
-									<td>A</td>
-									<td>B</td>
-									<td>C</td>
-									<td>D</td>
-									<td>E</td>
-									<td>F</td>
-									<td>G</td>
-									<td>H</td>
-								</tr>
-								<tr>
-									<td>I</td>
-									<td>J</td>
-									<td>K</td>
-									<td>L</td>
-									<td>M</td>
-									<td>N</td>
-									<td>O</td>
-									<td>P</td>
-									<td>Q</td>
-									<td>R</td>
-								</tr>
-								<tr>
-									<td>S</td>
-									<td>T</td>
-									<td>U</td>
-									<td>V</td>
-									<td>W</td>
-									<td>X</td>
-									<td>Y</td>
-									<td>Z</td>
-									<td>[</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>]</td>
-									<td>^</td>
-									<td>_</td>
-									<td>`</td>
-									<td>a</td>
-									<td>b</td>
-									<td>c</td>
-									<td>d</td>
-									<td>e</td>
-									<td>f</td>
-								</tr>
-								<tr>
-									<td>g</td>
-									<td>h</td>
-									<td>i</td>
-									<td>j</td>
-									<td>k</td>
-									<td>l</td>
-									<td>m</td>
-									<td>n</td>
-									<td>o</td>
-									<td>p</td>
-								</tr>
-								<tr>
-									<td>q</td>
-									<td>r</td>
-									<td>s</td>
-									<td>t</td>
-									<td>u</td>
-									<td>v</td>
-									<td>w</td>
-									<td>x</td>
-									<td>y</td>
-									<td>z</td>
-								</tr>
-								<tr>
-									<td>{</td>
-									<td>|</td>
-									<td>}</td>
-									<td>~</td>
-								</tr>
-								</tbody>
-							</table>
-					</section>
-				</section>
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+          { src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+          { src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+          { src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+        ]
+      });
 
-				<section data-markdown>
-					<script type="text/template">
-					## Markdown Support
+    </script>
 
-					Für die, die Markdown lieben.
-					Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
-					die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
-
-					> This is a blockquote. Lorem ipsum dolor sit amet,
-					> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-					> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-					```
-					## Markdown support
-
-					Für die, die Markdown lieben.
-					Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
-					die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
-
-					> This is a blockquote. Lorem ipsum dolor sit amet,
-					> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-					> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-					```
-					</script>
-				</section>
-
-				<!-- End of slides container. -->
-
-			</div>
-
-		</div>
-
-		<script src="../revealjs-framework/lib/js/head.min.js"></script>
-		<script src="../revealjs-framework/js/reveal.min.js"></script>
-
-		<script>
-
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: false,
-				width: 1000,
-
-				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
-				transitionSpeed: 'fast', // default/fast/slow
-				backgroundTransition: 'none', // default/linear/none
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-		</script>
-
-	</body>
+  </body>
 </html>
