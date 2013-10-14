@@ -76,88 +76,88 @@
 		<section> <!-- Bilder -->
 			<section data-markdown>
 				<script type="text/template">
-### Bilder 1 - Definition
-#### Einbinden von Bildern
+					### Bilder 1 - Definition
+					#### Einbinden von Bildern
 
-	<img src="(url des Bildes)" />
-	
-#### Weitere Attribute des img-Tags
+						<img src="(url des Bildes)" />
+						
+					#### Weitere Attribute des img-Tags
 
-	<img src="url" alt="text" border="1" width="300px" height="300px" />
-	
-url: URL des Bildes (komplett oder relativ zum aktuellen Verzeichnis)
+						<img src="url" alt="text" border="1" width="300px" height="300px" />
+						
+					url: URL des Bildes (komplett oder relativ zum aktuellen Verzeichnis)
 
-alt: alternativer Text
+					alt: alternativer Text
 
-border: Rand des Bildes
+					border: Rand des Bildes
 
-width/height: Breite und Höhe des Bildes in Pixeln
+					width/height: Breite und Höhe des Bildes in Pixeln
 				</script>
 			</section>
 			
 			<section data-markdown>
 				<script type="text/template">
-### Bilder 2 - Beispiel
-#### Bild wird eingebunden und skaliert
+					### Bilder 2 - Beispiel
+					#### Bild wird eingebunden und skaliert
 
-	<img src="table2.jpg" alt="Tabellenbeispiel verzerrt" width="800px" height="300px" />
-	
-<img src="table2.jpg" alt="Tabellenbeispiel verzerrt" width="800px" height="300px" />
+						<img src="table2.jpg" alt="Tabellenbeispiel verzerrt" width="800px" height="300px" />
+						
+					<img src="table2.jpg" alt="Tabellenbeispiel verzerrt" width="800px" height="300px" />
 				</script>
 			</section>
 		</section>
 		
 		<section> <!-- Aufgabe 1 - Bilder -->
-<h1>Aufgabe 1</h1>
-Erstellen Sie ein neues HTML-Dokument mit dem HTML-Grundgerüst.<br/><br/>
-Fügen Sie ihrem HTML-Dokument das Bild wba_icon.jpg im Format
-200x300px aus dem Quellverzeichnis „wba/bilder“ hinzu.
+			<h1>Aufgabe 1</h1>
+			Erstellen Sie ein neues HTML-Dokument mit dem HTML-Grundgerüst.<br/><br/>
+			Fügen Sie ihrem HTML-Dokument das Bild wba_icon.jpg im Format
+			200x300px aus dem Quellverzeichnis „wba/bilder“ hinzu.
 		</section>
 		
 		<section> <!-- Einfache Tabellen -->
 		
 			<section data-markdown>
 				<script type="text/template">
-### Einfache Tabellen 1 - Definition
-Tabelle (table)
-	
-	<table>(hier stehen Tabellenzeilen und -spalten)</table>
-	
-Tabellenzeile (table row)
-	
-	<tr>(hier stehen Zellen)</tr>
-	
-Tabellenzelle (table data)
-	
-	<td>(hier steht der Inhalt der Zelle)</td>
+					### Einfache Tabellen 1 - Definition
+					Tabelle (table)
+						
+						<table>(hier stehen Tabellenzeilen und -spalten)</table>
+						
+					Tabellenzeile (table row)
+						
+						<tr>(hier stehen Zellen)</tr>
+						
+					Tabellenzelle (table data)
+						
+						<td>(hier steht der Inhalt der Zelle)</td>
 				</script>
 			</section>
 		
 			<section data-markdown>
 				<script type="text/template">
-### Einfache Tabellen 2 - Beispiel
-#### Code
-	<table>
-		<tr>
-			<td>Reihe 1 Zelle 1</td>
-			<td>Reihe 1 Zelle 2</td>
-		</tr>
-		<tr>
-			<td>Reihe 2 Zelle 1</td>
-			<td>Reihe 2 Zelle 2</td>
-		</tr>
-	</table>
-#### Darstellung
-<table>
-<tr>
-<td>Reihe 1 Zelle 1</td>
-<td>Reihe 1 Zelle 2</td>
-</tr>
-<tr>
-<td>Reihe 2 Zelle 1</td>
-<td>Reihe 2 Zelle 2</td>
-</tr>
-</table>
+					### Einfache Tabellen 2 - Beispiel
+					#### Code
+						<table>
+							<tr>
+								<td>Reihe 1 Zelle 1</td>
+								<td>Reihe 1 Zelle 2</td>
+							</tr>
+							<tr>
+								<td>Reihe 2 Zelle 1</td>
+								<td>Reihe 2 Zelle 2</td>
+							</tr>
+						</table>
+					#### Darstellung
+						<table>
+						<tr>
+						<td>Reihe 1 Zelle 1</td>
+						<td>Reihe 1 Zelle 2</td>
+						</tr>
+						<tr>
+						<td>Reihe 2 Zelle 1</td>
+						<td>Reihe 2 Zelle 2</td>
+						</tr>
+						</table>
 				</script>
 			</section>
 			
@@ -167,56 +167,53 @@ Tabellenzelle (table data)
 			
 			<section data-markdown>
 				<script type="text/template">
-### Erweiterte Tabellen 1 - Definition
-Rand der Tabelle (border)
+					### Erweiterte Tabellen 1 - Definition
+					Rand der Tabelle (border)
+						
+						<table border="(Dicke, z.B. 1)">...</table>
+						
+					Oberster Tabellenabschnitt und Tabellenkopf (table head)
+					<thead>...</thead> <!-- definiert Obersten Tabellenabschnitt -->
+					<th>...</th> <!-- definiert eine Zelle als Überschrift -->
 	
-	<table border="(Dicke, z.B. 1)">...</table>
-	
-Oberster Tabellenabschnitt und Tabellenkopf (table head)
-	
-	<thead>...</thead> <!-- definiert Obersten Tabellenabschnitt -->
-	<th>...</th> <!-- definiert eine Zelle als Überschrift -->
-	
-Abschnitt für Tabellenkörper (table body)
-	
-	<tbody>...</tbody>
-	
-Unterster Tabellenabschnitt (table foot)
-
-	<tfoot>...</tfoot>
+					Abschnitt für Tabellenkörper (table body)
+					<tbody>...</tbody>
+						
+					Unterster Tabellenabschnitt (table foot)
+					<tfoot>...</tfoot>
 				</script>
 			</section>
 		
 			<section data-markdown>
 				<script type="text/template">
-### Erweiterte Tabellen 2 - Beispiel Code
-	<table border="1">
-		<tfoot> <!-- Tabellenfuß -->
-			<tr>
-				<td>Gesamt</td><td>180 €</td>
-			</tr>
-		</tfoot>
-		<tbody> <!-- Tabellenkörper -->
-			<tr>
-				<td>Januar</td><td>100 €</td>
-			</tr>
-			<tr>
-				<td>Februar</td><td>80 €</td>
-			</tr>
-		</tdbody>
-		<thead> <!-- Tabellenkopf -->
-			<tr>
-				<th>Monat</th><th>Ausgaben</th>
-			</tr>
-		</thead>
-	</table>
+				### Erweiterte Tabellen 2 - Beispiel Code
+					<table border="1">
+						<tfoot> <!-- Tabellenfuß -->
+							<tr>
+								<td>Gesamt</td><td>180 €</td>
+							</tr>
+						</tfoot>
+						<tbody> <!-- Tabellenkörper -->
+							<tr>
+								<td>Januar</td><td>100 €</td>
+							</tr>
+							<tr>
+								<td>Februar</td><td>80 €</td>
+							</tr>
+						</tdbody>
+						<thead> <!-- Tabellenkopf -->
+							<tr>
+								<th>Monat</th><th>Ausgaben</th>
+							</tr>
+						</thead>
+					</table>
 				</script>
 			</section>
 			
 			<section data-markdown>
 				<script type="text/template">
-### Erweiterte Tabellen 3 - Beispiel Darstellung
-<center><img src="table2.jpg"/></center>
+					### Erweiterte Tabellen 3 - Beispiel Darstellung
+					<center><img src="table2.jpg"/></center>
 
 				</script>
 			</section>
@@ -224,139 +221,139 @@ Unterster Tabellenabschnitt (table foot)
 		</section>
 		
 		<section> <!-- Aufgabe 2 - Tabellen -->
-<h1>Aufgabe 1</h1>
-Erstellen Sie ein neues HTML-Dokument mit dem HTML-Grundgerüst.<br/><br/>
-Fügen Sie ihrem HTML-Dokument das Bild wba_icon.jpg im Format
-200x300px aus dem Quellverzeichnis „wba/bilder“ hinzu.
+			<h1>Aufgabe 1</h1>
+			Erstellen Sie ein neues HTML-Dokument mit dem HTML-Grundgerüst.<br/><br/>
+			Fügen Sie ihrem HTML-Dokument das Bild wba_icon.jpg im Format
+			200x300px aus dem Quellverzeichnis „wba/bilder“ hinzu.
 		</section>
 		
 		<section> <!-- Formulare -->
 		
 			<section data-markdown>
 				<script type="text/template">
-### Formulare 1 - Was ist ein HTML Formular?
-<center><img src="formular_github.jpg" height="400px"></center>
+					### Formulare 1 - Was ist ein HTML Formular?
+					<center><img src="formular_github.jpg" height="400px"></center>
 				</script>
 			</section>
 		
 			<section data-markdown>
 				<script type="text/template">
-### Formulare 2 - Definition
+					### Formulare 2 - Definition
 
-#### Formulare definieren
+					#### Formulare definieren
 
-	<form name="name" action="ziel">
-		<!-- hier stehen beliebige Formularelemente -->
-	</form>
-	
-- name: Bezeichnung des Formulares
+						<form name="name" action="ziel">
+							<!-- hier stehen beliebige Formularelemente -->
+						</form>
+						
+					- name: Bezeichnung des Formulares
 
-- ziel: Ziel-URL (z.B. "neueseite.html") oder "" für aktuelle URL (Reload)
+					- ziel: Ziel-URL (z.B. "neueseite.html") oder "" für aktuelle URL (Reload)
 				</script>
 			</section>
 			
 			<section data-markdown>
 				<script type="text/template">
-### Formulare 3 - Buttons
-				
-#### Normaler Button
+					### Formulare 3 - Buttons
+									
+					#### Normaler Button
 
-	<input type="button" name="button_sinnlos" value="sinnloser Knopf" />
-	
-<input type="button" name="button_sinnlos" value="sinnloser Knopf" />
+						<input type="button" name="button_sinnlos" value="sinnloser Knopf" />
+						
+					<input type="button" name="button_sinnlos" value="sinnloser Knopf" />
 
-#### Submit Button (sendet Daten des Formulares an die Ziel-URL)
+					#### Submit Button (sendet Daten des Formulares an die Ziel-URL)
 
-	<input type="submit" name="button_submit" value="Abschicken" />
-	
-<input type="submit" name="button_submit" value="Abschicken" />
+						<input type="submit" name="button_submit" value="Abschicken" />
+						
+					<input type="submit" name="button_submit" value="Abschicken" />
 
-#### Clear/Reset Button (löscht alle Formularfelder)
+					#### Clear/Reset Button (löscht alle Formularfelder)
 
-	<input type="reset" name="button_clear" value="Formular löschen" />
-	
-<input type="reset" name="button_clear" value="Formular löschen" />
+						<input type="reset" name="button_clear" value="Formular löschen" />
+						
+					<input type="reset" name="button_clear" value="Formular löschen" />
 				</script>
 			</section>
 			
 			<section data-markdown>
 				<script type="text/template">
-### Formulare 4 - Checkboxen und Radiobuttons
+					### Formulare 4 - Checkboxen und Radiobuttons
 
-#### Checkbox
+					#### Checkbox
 
-	Alles verstanden? <input type="checkbox" checked="checked" />
-	
-Alles verstanden? <input type="checkbox" checked="checked" />
+						Alles verstanden? <input type="checkbox" checked="checked" />
+						
+					Alles verstanden? <input type="checkbox" checked="checked" />
 
-#### Radiobuttons
-	
-	Alles verstanden?
-	Ja <input type="radio" name="verstanden" value="Ja" />
-	Nein <input type="radio" name="verstanden" value="Nein" />
-	
-Alles verstanden?
-Ja <input type="radio" name="verstanden" value="Ja" checked="checked" />
-Nein <input type="radio" name="verstanden" value="Nein" />
+					#### Radiobuttons
+						
+						Alles verstanden?
+						Ja <input type="radio" name="verstanden" value="Ja" />
+						Nein <input type="radio" name="verstanden" value="Nein" />
+						
+					Alles verstanden?
+					Ja <input type="radio" name="verstanden" value="Ja" checked="checked" />
+					Nein <input type="radio" name="verstanden" value="Nein" />
 				</script>
 			</section>
 			
 			<section data-markdown>
 				<script type="text/template">
-### Formulare 5 - Auswahllisten (Dropdownlist)
-#### Auswahlliste (Spezialfall Dropdownlist) definieren
+					### Formulare 5 - Auswahllisten (Dropdownlist)
+					#### Auswahlliste (Spezialfall Dropdownlist) definieren
 
-	<select name="auswahl" size="1">
-		<option label="ja">Ja</option>
-		<option label="nein">Nein</option>
-		<option label="worum gehts">Worum gehts?</option>
-	</select>
+						<select name="auswahl" size="1">
+							<option label="ja">Ja</option>
+							<option label="nein">Nein</option>
+							<option label="worum gehts">Worum gehts?</option>
+						</select>
 
-Alles verstanden?
-	
-<select name="auswahl" size="1">
-<option label="Ja">ja</option>
-<option label="Nein">nein</option>
-<option label="Worum gehts?">keinplan</option>
-</select>
+					Alles verstanden?
+						
+					<select name="auswahl" size="1">
+					<option label="Ja">ja</option>
+					<option label="Nein">nein</option>
+					<option label="Worum gehts?">keinplan</option>
+					</select>
 
-	... size="3" ...
+					... size="3" ...
 
-<select name="auswahl" size="3">
-<option label="Ja">ja</option>
-<option label="Nein">nein</option>
-<option label="Worum gehts?">keinplan</option>
-</select>
+					<select name="auswahl" size="3">
+					<option label="Ja">ja</option>
+					<option label="Nein">nein</option>
+					<option label="Worum gehts?">keinplan</option>
+					</select>
 
 				</script>
 			</section>
 			
 			<section data-markdown>
 				<script type="text/template">
-### Formulare 6 - Textfelder
-#### Einzeilige Textfelder
+					### Formulare 6 - Textfelder
+					#### Einzeilige Textfelder
 
-	<input type="text" name="name" value="default-text" />
-	<input type="password" name="button_password" value="geheim" />
-	
-<input type="text" name="name" value="default-text" />
-<input type="password" name="button_password" value="geheim" />
+						<input type="text" name="name" value="default-text" />
+						<input type="password" name="button_password" value="geheim" />
+						
+					<input type="text" name="name" value="default-text" />
+					<input type="password" name="button_password" value="geheim" />
 
-#### Mehrzeilige Textfelder (Textarea)
+					#### Mehrzeilige Textfelder (Textarea)
 
-	<textarea name="name" cols="50" rows="3">
-		In dieser Textarea steht ein Text.
-		Ist er nicht komplett
-		sichtbar, erscheint ein Scrollbalken.
-		Das ist der Fall.
-	</textarea>
-	
-<textarea name="name" cols="50" rows="3">
-In dieser Textarea steht ein Text.
-Ist er nicht komplett
-sichtbar, erscheint ein Scrollbalken.
-Das ist der Fall.
-</textarea>
+						<textarea name="name" cols="50" rows="3">
+							In dieser Textarea steht ein Text.
+							Ist er nicht komplett
+							sichtbar, erscheint ein Scrollbalken.
+							Das ist der Fall.
+						</textarea>
+						
+					<textarea name="name" cols="50" rows="3">
+					In dieser Textarea steht ein Text.
+					Ist er nicht komplett
+					sichtbar, erscheint ein Scrollbalken.
+					Das ist der Fall.
+					</textarea>
 				</script>
 			</section>
 			
@@ -364,47 +361,47 @@ Das ist der Fall.
 		
 		<section> <!-- Ausblick XHTML/HTML5 -->
 			<section>
-<h3>Ausblick 1 - XHTML</h3>
-<h4>XHTML (Extensible HyperText Markup Language)</h4>
+				<h3>Ausblick 1 - XHTML</h3>
+				<h4>XHTML (Extensible HyperText Markup Language)</h4>
 
-<ul>
-	<li>XML-gerechtes HTML</li>
-	<li>Definiert durch <strong> XML (Extensible Markup Language)</strong> statt <strong>SGML (Standard Generalized Markup Language)</strong></li>
-- XML-gerechtes HTML
+				<ul>
+					<li>XML-gerechtes HTML</li>
+					<li>Definiert durch <strong> XML (Extensible Markup Language)</strong> statt <strong>SGML (Standard Generalized Markup Language)</strong></li>
+				- XML-gerechtes HTML
 
-- Definiert durch XML(Extensible Markup Language) statt SGML(Standard Generalized Markup Language)
+				- Definiert durch XML(Extensible Markup Language) statt SGML(Standard Generalized Markup Language)
 
-- Syntaktisch kompatibel zu wichtigen XML-Standardsprachen(SVG, WML, SMIL)
+				- Syntaktisch kompatibel zu wichtigen XML-Standardsprachen(SVG, WML, SMIL)
 
-- strikter als HTML(Code muss „sauber“ sein: End-Tags dürfen nicht vergessen werden wie in HTML)
-<!-- HIER FEHLT NOCH EINIGES -->
+				- strikter als HTML(Code muss „sauber“ sein: End-Tags dürfen nicht vergessen werden wie in HTML)
+				<!-- HIER FEHLT NOCH EINIGES -->
 
 
 			</section>
 			
 			<section>
-<h3>Ausblick 2 - HTML5</h3>
-<h4>HTML5 (Nachfolger von HTML 4.01 und XHTML 1.0)</h4>
+				<h3>Ausblick 2 - HTML5</h3>
+				<h4>HTML5 (Nachfolger von HTML 4.01 und XHTML 1.0)</h4>
 
-<ul>
-	<li>Fortführend von HTML / Ziel: HTML neu erfinden</li>
-	<li>Anleihen/Standards aus XHTML</li>
-	<li>In Entwicklung, soll 2014 laut W3C offiziell verabschiedet werden</li>
-	<li>Viele neue Features, wie z.B. Audio/Video Support (macht Plugins wie Adobe Flash überflüssig)</li>
-</ul>
+				<ul>
+					<li>Fortführend von HTML / Ziel: HTML neu erfinden</li>
+					<li>Anleihen/Standards aus XHTML</li>
+					<li>In Entwicklung, soll 2014 laut W3C offiziell verabschiedet werden</li>
+					<li>Viele neue Features, wie z.B. Audio/Video Support (macht Plugins wie Adobe Flash überflüssig)</li>
+				</ul>
 			</section>
 
 		<section>
-<h3>Ausblick 3 - HTML5 Browsergame "Browserquest"</h3>
-<img src="browserquest.jpg" height="400px" /><br/>
-<a href="http://browserquest.mozilla.org/" target="_blank">browserquest.mozilla.org</a><br/>
-<a href="https://github.com/mozilla/BrowserQuest" target="_blank">github.com/mozilla/BrowserQuest</a>
+			<h3>Ausblick 3 - HTML5 Browsergame "Browserquest"</h3>
+			<img src="browserquest.jpg" height="400px" /><br/>
+			<a href="http://browserquest.mozilla.org/" target="_blank">browserquest.mozilla.org</a><br/>
+			<a href="https://github.com/mozilla/BrowserQuest" target="_blank">github.com/mozilla/BrowserQuest</a>
 		</section>
 		
 		<section>
-<h3>Ausblick 4 - HTML5 CanvasMol</h3>
-<img src="canvasmol.jpg" height="400px" /><br/>
-<a href="http://alteredqualia.com/canvasmol" target="_blank">alteredqualia.com/canvasmol</a>
+			<h3>Ausblick 4 - HTML5 CanvasMol</h3>
+			<img src="canvasmol.jpg" height="400px" /><br/>
+			<a href="http://alteredqualia.com/canvasmol" target="_blank">alteredqualia.com/canvasmol</a>
 		</section>
 			
 		</section>
