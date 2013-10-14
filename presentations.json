@@ -1,4 +1,4 @@
-{
+﻿{
 	"presentations":
 	{
 		"2013-10-10-wba1-kickoff/index.html":
@@ -15,6 +15,10 @@
 		{
 			"title" : "Git &amp; GitHub",
 			"authors" : ["Dominik Schilling", "Christoph Jerolimov"]
+		},
+		{
+			"title" : "HTML Basics - Gruppe 13",
+			"authors" : ["Peter Wagner", "Maik Güldenmeister", "Robert xxx"]
 		}
 	}
 }
