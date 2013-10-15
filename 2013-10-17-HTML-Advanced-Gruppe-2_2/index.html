@@ -241,7 +241,286 @@
 						<h2>Formulare</h2>
 						<p>Ein Formular wird definiert durch</p>
 						<pre>&lt;form&gt; Platzhalter &lt;/form&gt;</pre>
-						<p>Als Platzhalter kommen Eingabefelder, Auswahllisten oder Buttons in Frage.</p>
+						<p>Als Platzhalter kommen Eingabefelder, Auswahllisten oder Buttons in Frage.</p></br>
+						<p><strong>Einzeilige Eingabefelder</strong></p>
+						<table>
+							<tr>
+								<td>
+									<label for="feld1"><font size="4">Beispiel 1</font></label>
+									<input name="feld1" size=15 maxlength=15 value="Eingabe 1"/>
+								</td>
+								<td>
+									<label for="feld2"><font size="4">Beispiel 2</font></label>
+									<input type="password" name="feld2" size=15 maxlength=15 value="Eingabe 2"/>
+								</td>
+								<td>
+									<label for="feld3"><font size="4">Beispiel 3</font></label>
+									<input type="file" name="feld3" size=15/>
+								</td>
+							</tr>
+						</table>
+						<pre><code data-trim>1. <input name="feld1" size=15 maxlength=15 value="Eingabe 1"/>
+2. <input type="password" name="feld2" size=15 maxlength=15 value="Eingabe 2"/>
+3. <input type="file" name="feld3" size=15/></code></pre>
+						<table border="0">
+							<tr>
+								<td>name</td>
+								<td>Eindeutiger Name des Eingabefeldes</td>
+							</tr>
+							<tr>
+								<td>size</td>
+								<td>Anzahl der Zeichen die eingetragen werden können</td>
+							</tr>
+							<tr>
+								<td>maxlength</td>
+								<td>Anzahl der Zeichen die max. eingetragen werden können</td>
+							</tr>
+							<tr>
+								<td>value</td>
+								<td>Vorgabewert oder -text</td>
+							</tr>
+							<tr>
+								<td>password</td>
+								<td>Passworteingaben durch ***</td>
+							</tr>
+							<tr>
+								<td>readonly</td>
+								<td>Value kann nur gelesen werden</td>
+							</tr>
+						</table>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Formulare</h2>
+						<p><strong>Mehrzeilige Eingabefelder</strong></p>
+						<table>
+							<tr>
+								<td>
+									<textarea name="area1" rows=5 cols=15>
+										Das ist eine Textbox
+									</textarea>
+								</td>
+							</tr>
+						</table>
+						<pre><code data-trim>
+<textarea name="area1" rows=5 cols=15> 
+   Das ist eine Textbox
+</textarea>
+						</code></pre>
+						<table border="0">
+							<tr>
+								<td>name</td>
+								<td>Eindeutiger Name des Eingabefeldes</td>
+							</tr>
+							<tr>
+								<td>rows</td>
+								<td>Anzahl der Reihen für das Textfeld</td>
+							</tr>
+							<tr>
+								<td>cols</td>
+								<td>Anzahl der Spalten für das Textfeld</td>
+							</tr>
+						</table>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Formulare</h2>
+						<p><strong>Auswahllisten - Dropdown</strong></p>
+						<table>
+							<tr>
+								<td>
+									<label for="dropdown"><font size="4">Beispiel 1</font></label></br>
+									<select name="dropdown">
+										<option>Auswahl 1</option>
+										<option>Auswahl 2</option>
+										<option selected>Auswahl 3</option>
+									</select>
+								</td>
+								<td>
+									<label for="dropdown"><font size="4">Beispiel 2</font></label></br>
+									<select name="dropdown" size=3>
+										<option>Auswahl 1</option>
+										<option>Auswahl 2</option>
+										<option selected>Auswahl 3</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre><code data-trim>
+<select name="dropdown">
+  <option>Auswahl 1</option>
+  <option>Auswahl 2</option>
+  <option selected>Auswahl 3</option>
+</select>
+									</code></pre>
+								</td>
+								<td>
+									<pre><code data-trim>
+<select name="dropdown" size=3>
+  <option>Auswahl 1</option>
+  <option>Auswahl 2</option>
+  <option selected>Auswahl 3</option>
+</select>
+									</code></pre>
+								</td>
+							</tr>
+						</table>
+						<table border="0">
+							<tr>
+								<td>name</td>
+								<td>Eindeutiger Name der Dropdown Box</td>
+							</tr>
+							<tr>
+								<td>option</td>
+								<td>Neue Auswahl hinzufügen</td>
+							</tr>
+							<tr>
+								<td>selected</td>
+								<td>Option vorselektieren</td>
+							</tr>
+							<tr>
+								<td>size</td>
+								<td>Wenn Anzahl der Optionen angegeben, fällt das Dropdown weg</td>
+							</tr>
+						</table>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Formulare</h2>
+						<p><strong>Auswahllisten - Radio Box</strong></p>
+						<table>
+							<tr>
+								<td>
+									<label for="radio"><font size="4">Beispiel 1</font></label></br>
+									<input type=radio name="radio1" value="name1">Auswahl 1</br>
+									<input type=radio name="radio1" value="name2">Auswahl 2</br>
+									<input type=radio name="radio1" value="name3" checked>Auswahl 3
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre><code data-trim>
+<input type=radio name="radio1" value="name1">Auswahl 1</br>
+<input type=radio name="radio1" value="name2">Auswahl 2</br>
+<input type=radio name="radio1" value="name3" checked>Auswahl 3
+									</code></pre>
+								</td>
+							</tr>
+						</table>
+						<table border="0">
+							<tr>
+								<td>name</td>
+								<td>Eindeutiger Name der Auswahl</td>
+							</tr>
+							<tr>
+								<td>radio</td>
+								<td>Es kann nur eine Box ausgewählt werden</td>
+							</tr>
+							<tr>
+								<td>value</td>
+								<td>Wert der übertragen wird</td>
+							</tr>
+							<tr>
+								<td>checked</td>
+								<td>Auswahl vorselektieren</td>
+							</tr>
+						</table>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Formulare</h2>
+						<p><strong>Auswahllisten - Checkbox</strong></p>
+						<table>
+							<tr>
+								<td>
+									<label for="checkbox1"><font size="4">Beispiel 1</font></label></br>
+									<input type=checkbox name="checkbox1" value="name1">Auswahl 1</br>
+									<input type=checkbox name="checkbox1" value="name2">Auswahl 2</br>
+									<input type=checkbox name="checkbox1" value="name3" checked>Auswahl 3
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre><code data-trim>
+<input type=checkbox name="checkbox1" value="name1">Auswahl 1</br>
+<input type=checkbox name="checkbox1" value="name1">Auswahl 2</br>
+<input type=checkbox name="checkbox1" value="name1" checked>Auswahl 3
+									</code></pre>
+								</td>
+							</tr>
+						</table>
+						<table border="0">
+							<tr>
+								<td>name</td>
+								<td>Eindeutiger Name der Auswahl</td>
+							</tr>
+							<tr>
+								<td>checkbox</td>
+								<td>Es können mehrere gewählt werden</td>
+							</tr>
+							<tr>
+								<td>value</td>
+								<td>Wert der übertragen wird</td>
+							</tr>
+							<tr>
+								<td>checked</td>
+								<td>Auswahl vorselektieren</td>
+							</tr>
+						</table>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Formulare</h2>
+						<p><strong>Buttons</strong></p>
+						<table>
+							<tr>
+								<td>
+									<label for="submit"><font size="4">Beispiel 1</font></label></br>
+									<input type=submit name="submit" value="Abschicken"/>
+								</td>
+								<td>
+									<label for="reset"><font size="4">Beispiel 2</font></label></br>
+									<input type=reset name="reset" value="Löschen"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre><code data-trim>
+<input type=submit value="Abschicken"/>
+									</code></pre>
+								</td>
+								<td>
+									<pre><code data-trim>
+<input type=reset value="Löschen"/>
+									</code></pre>
+								</td>
+							</tr>
+						</table>
+						<table border="0">
+							<tr>
+								<td>submit</td>
+								<td>Abschicken des Formulars</td>
+							</tr>
+							<tr>
+								<td>reset</td>
+								<td>Zurücksetzen des Formulars</td>
+							</tr>
+							<tr>
+								<td>value</td>
+								<td>Button Beschriftung</td>
+							</tr>
+						</table>
 					</section>
 				</section>
 				
