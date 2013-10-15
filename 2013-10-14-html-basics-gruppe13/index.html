@@ -152,13 +152,15 @@
 						<h1>Erste Praxiserfahrungen</h1>
 						<h2>Wie baut sich eine HTML Seite auf?</h2>
 						<br>
-						<p>Ein <span class="fragment highlight-red" data-fragment-index="1">HTML Dokument</span> besteht im großen und ganzen aus <span class="fragment highlight-red" data-fragment-index="1">drei</span> verschiedenen <span class="fragment highlight-red" data-fragment-index="1">Tags </span>:</p>
+						<p>Ein <span class="fragment highlight-red" data-fragment-index="1">HTML Dokument</span> besteht im großen und ganzen aus <span class="fragment highlight-red" data-fragment-index="1">fünf</span> verschiedenen <span class="fragment highlight-red" data-fragment-index="1">Einzelteilen </span>:</p>
 						<br>
+						<pre class="fragment roll-in"><code>&lt;!DOCTYPE html&gt;</code></pre>
 						<pre class="fragment roll-in"><code>&lt;html&gt;&lt;/html&gt;</code></pre>
 						<pre class="fragment roll-in"><code>&lt;head&gt;&lt;/head&gt;</code></pre>
+						<pre class="fragment roll-in"><code>&lt;title&gt;&lt;/title&gt;</code></pre>
 						<pre class="fragment roll-in"><code>&lt;body&gt;&lt;/body&gt;</code></pre>
 						<br>
-						<p>Aus diesen Basiselementen ergibt sich das <span class="fragment highlight-green" data-fragment-index="5">Grundgerüst</span> einer HTML-Seite.</p>
+						<p>Aus diesen Basiselementen ergibt sich das <span class="fragment highlight-green" data-fragment-index="7">Grundgerüst</span> einer HTML-Seite.</p>
 
 						
 					</section>
@@ -168,8 +170,9 @@
 						<pre class="fragment roll-in"><code>&lt;html&gt;&lt;/html&gt;</code></pre>
 						<br>
 							<ul>
-							<li class="fragment roll-in">Teilt dem Browser mit, das es sich um ein HTML-Dokument handelt</li>
-							<li class="fragment roll-in">Umgibt alle anderen Tags</li>
+							<li class="fragment roll-in">Teilt dem Browser mit, das es sich um ein HTML-Dokument handelt.</li>
+							<li class="fragment roll-in">Umgibt alle anderen Tags / <span style="color: #77cc00">Wurzelelement.</span></li>
+							<li class="fragment roll-in"><span style="color: #77cc00">Beginnt und beendet </span>das HTML Dokument.</li>
 							</ul>
 					</section>
 					<section>				
@@ -178,9 +181,97 @@
 						<pre class="fragment roll-in"><code>&lt;head&gt;&lt;/head&gt;</code></pre>
 						<br>
 							<ul>
-							<li class="fragment roll-in">Trägt Meta-Informationen an den Browser weiter</li>
-							<li class="fragment roll-in">Text</li>
+							<li class="fragment roll-in">Bietet Platz für sieben weitere HTML-Elemente mit verschiednene Aufgaben.</li>
 							</ul>
+							<br>
+							<br>
+
+<table width="50%" border="0" class="fragment roll-in">
+  <tr>
+    <td>title</td>
+    <td>Titel der Seite</td>
+  </tr>
+  <tr>
+    <td>meta</td>
+    <td>diverse Metainformationen</td>
+  </tr>
+  <tr>
+    <td>base</td>
+    <td>Angabe der Basis-URL</td>
+  </tr>
+  <tr>
+    <td>link</td>
+    <td>Einbindungen von anderen Resourcen, z.B. Stylesheets</td>
+  </tr>
+  <tr>
+    <td>script</td>
+    <td>Einbindung von "fremdem" Code, z.B. JavaScript</td>
+  </tr>
+  <tr>
+    <td>style</td>
+    <td>Stilinformationen / CSS-Deklarationen</td>
+  </tr>
+  <tr>
+    <td>object</td>
+    <td>Einbinden von externen Dateien</td>
+  </tr>
+</table>
+
+					</section>
+					
+					<section>				
+						<h1>Das HEAD-Tag</h1>
+						<br>
+						<pre><code>&lt;head&gt;&lt;/head&gt;</code></pre>
+						<br>
+							<ul>
+							<li>Bietet Platz für sieben weitere HTML-Elemente mit verschiednene Aufgaben.</li>
+							</ul>
+							<br>
+							<br>
+
+						<table width="50%" border="0">
+						  <tr>
+							<td><span style="margin-left: 5px;">title</span></td>
+							<td style="background-color: #77cc00;"><span style="margin-left: 20px;">Titel der Seite</span></td>
+						  </tr>
+						  <tr>
+							<td style="background-color: #dd1166;"><span style="margin-left: 5px;">meta</span></td>
+							<td><span style="margin-left: 20px;">Diverse Metainformationen</span></td>
+						  </tr>
+						  <tr>
+							<td style="background-color: #dd1166;"><span style="margin-left: 5px;">base</span></td>
+							<td><span style="margin-left: 20px;">Angabe einer Basis-URL</span></td>
+						  </tr>
+						  <tr>
+							<td style="background-color: #dd1166;"><span style="margin-left: 5px;">link</span></td>
+							<td><span style="margin-left: 20px;">Einbinden von anderen Ressourcen, z.B. Stylesheets</span></td>
+						  </tr>
+						  <tr>
+							<td style="background-color: #dd1166;"><span style="margin-left: 5px;">script</span></td>
+							<td><span style="margin-left: 20px;">Einbinden von "fremdem" Code, z.B. JavaScript</span></td>
+						  </tr>
+						  <tr>
+							<td style="background-color: #dd1166;"><span style="margin-left: 5px;">style</span></td>
+							<td><span style="margin-left: 20px;">Stilinformationen / CSS-Deklarationen</span></td>
+						  </tr>
+						  <tr>
+							<td style="background-color: #dd1166;"><span style="margin-left: 5px;">object</span></td>
+							<td><span style="margin-left: 20px;">Einbinden von externen Dateien</span></td>
+						  </tr>
+						</table>
+
+					</section>
+					
+					<section>				
+						<h1>Das TITLE-Tag</h1>
+						<br>
+						<pre class="fragment roll-in"><code>&lt;title&gt;&lt;/title&gt;</code></pre>
+						<br>
+							<ul>
+							<li class="fragment roll-in">Befindet sich <span style="color: #77cc00">innerhalb des HEAD-Bereichs</span> der HTML-Datei.</li>
+							<li class="fragment roll-in">Enthält den <span style="color: #77cc00">Pagenamen</span>.</li>
+							<li class="fragment roll-in"><span style="color: #77cc00">Anzeige </span>erfolgt <span style="color: #77cc00"> in </span>einem <span style="color: #77cc00">Browser-Tab</span> oder <span style="color: #77cc00">Titelleiste</span>.</li>
 					</section>
 					<section>				
 						<h1>Das BODY-Tag</h1>
@@ -188,7 +279,7 @@
 						<pre class="fragment roll-in"><code>&lt;body&gt;&lt;/body&gt;</code></pre>
 						<br>
 							<ul>
-							<li class="fragment roll-in">Sichtbarer/dargestellter Teil eines Dokumentes im Browser</li>
+							<li class="fragment roll-in"><span style="color: #77cc00">Sichtbarer</span> / <span style="color: #77cc00">dargestellter Teil</span> eines Dokumentes im Browser.</li>
 							<li class="fragment roll-in">Text</li>
 							</ul>
 					</section>
@@ -196,11 +287,13 @@
 				
 				<section>
 				<h1>Das Grundgerüst</h1>
-					<pre><code data-trim>
+					<pre style="background-color: black;"><code data-trim>
 &lt;html&gt;
 
 	&lt;head&gt;
-	<!-- "Kopf" -->	
+	<!-- "Kopf" mit "Title"-->
+		&lt;title&gt;
+		&lt;title&gt;
 	&lt;/head&gt;	
 	
 	&lt;body&gt;
