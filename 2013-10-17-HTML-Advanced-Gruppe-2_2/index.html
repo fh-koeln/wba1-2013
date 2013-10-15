@@ -58,12 +58,12 @@
 						<h2>Was machen wir?</h2>
 						<ul>
 							<li>Tabellen</li>
-							<ul>
-								<li class="fragment" data-fragment-index="1">Einfache Tabellen</li>
-								<li class="fragment" data-fragment-index="2">Erweiterte Tabellen</li>
+							<ul style="font-size:80%; margin-bottom">
+								<li>Einfache Tabellen</li>
+								<li>Erweiterte Tabellen</li>
 							</ul>
-							<li class="fragment" data-fragment-index="3">Formulare</li>
-							<li class="fragment" data-fragment-index="4">HTML 5 Strukturelemente</li>
+							<li>Formulare</li>
+							<li>HTML 5 Strukturelemente</li>
 						</ul>
 					</section>
 				</section>
@@ -87,30 +87,30 @@
 				<section>
 					<section>
 						<h2>Einfache Tabellen</h2>
-						<p><strong>&lt;table&gt;</strong></p>
+						<p><strong><code>&lt;table&gt;</code></strong></p>
 						<p>Anlegen der Tabelle</p>
-						<pre><code data-trim>
+<pre><code data-trim>
 							&lt;table&gt;
 &lt;/table&gt;
-						</pre></code>
-						<p><strong>&lt;tr&gt; - table row</strong></p>
+</pre></code>
+						<p><strong><code>&lt;tr&gt; - table row</code></strong></p>
 						<p>Anlegen der Tabellenzeile</p>
-						<pre><code data-trim>
+<pre><code data-trim>
 						&lt;table&gt;
    &lt;tr&gt;
    &lt;/tr&gt;
 &lt;/table&gt;
-						</pre></code>
-						<p><strong>&lt;td&gt; - table data</strong></p>
+</pre></code>
+						<p><strong><code>&lt;td&gt; - table data</code></strong></p>
 						<p>Anlegen der Tabellendatenzelle</p>
-						<pre><code data-trim>
+<pre><code data-trim>
 						&lt;table&gt;
    &lt;tr&gt;
       &lt;td&gt;
       &lt;/td&gt;
    &lt;/tr&gt;
 &lt;/table&gt;
-						</pre></code>
+</pre></code>
 					</section>
 				</section>
 				
@@ -118,14 +118,14 @@
 					<section>
 						<h2>Einfache Tabellen</h2>
 						<p><strong>Füllen der Tabelle mit Inhalt</strong></p>
-						<pre><code data-trim>
+<pre><code data-trim>
 						&lt;table border="1"&gt;
    &lt;tr&gt;
       &lt;td&gt; Inhalt 1 &lt;/td&gt;
       &lt;td&gt; Inhalt 2 &lt;/td&gt;
    &lt;/tr&gt;
 &lt;/table&gt;
-						</pre></code>
+</pre></code>
 						<p><i>Beispiel :</i></p>
 						<table border="1">
 							<tr>
@@ -133,9 +133,8 @@
 								<td> Inhalt 2 </td>
 							</tr>
 						</table>
-						
-						<p><br><strong>Füllen der Tabelle mit mehr Inhalt</strong></p>
-						<pre><code data-trim>
+						<p><strong>Füllen der Tabelle mit mehr Inhalt</strong></p>
+<pre><code data-trim>
 						&lt;table border="1"&gt;
    &lt;tr&gt;
       &lt;td&gt; Inhalt 1 &lt;/td&gt;
@@ -146,7 +145,7 @@
       &lt;td&gt; Inhalt 4 &lt;/td&gt;
    &lt;/tr&gt;
 &lt;/table&gt;
-						</pre></code>
+</pre></code>
 						<p><i>Beispiel :</i></p>
 						<table border="1">
 							<tr>
@@ -188,7 +187,7 @@
 							</tr>
 						</tbody>
 						</table>
-						<pre><code data-trim>
+<pre><code data-trim>
 <table border="1">
   <thead>
     <tr>
@@ -212,7 +211,7 @@
     </tr>
   </tbody>
 </table>						
-						</pre></code>
+</pre></code>
 					</section>
 				</section>
 				
@@ -239,8 +238,8 @@
 				<section>
 					<section>
 						<h2>Formulare</h2>
-						<p>Ein Formular wird definiert durch</p>
-						<pre>&lt;form&gt; Platzhalter &lt;/form&gt;</pre>
+						<p>Ein Formular wird definiert durch 
+						<code style="margin-left:20px;">&lt;form&gt; Platzhalter &lt;/form&gt;</code></p>
 						<p>Als Platzhalter kommen Eingabefelder, Auswahllisten oder Buttons in Frage.</p></br>
 						<p><strong>Einzeilige Eingabefelder</strong></p>
 						<table>
@@ -259,9 +258,12 @@
 								</td>
 							</tr>
 						</table>
-						<pre><code data-trim>1. <input name="feld1" size=15 maxlength=15 value="Eingabe 1"/>
+<pre><code data-trim>
+<label for="feld1"><font size="4">Beispiel 1</font></label>
+1. <input name="feld1" size=15 maxlength=15 value="Eingabe 1"/>
 2. <input type="password" name="feld2" size=15 maxlength=15 value="Eingabe 2"/>
-3. <input type="file" name="feld3" size=15/></code></pre>
+3. <input type="file" name="feld3" size=15/>
+</code></pre>
 						<table border="0">
 							<tr>
 								<td>name</td>
@@ -306,11 +308,11 @@
 								</td>
 							</tr>
 						</table>
-						<pre><code data-trim>
+<pre><code data-trim>
 <textarea name="area1" rows=5 cols=15> 
    Das ist eine Textbox
 </textarea>
-						</code></pre>
+</code></pre>
 						<table border="0">
 							<tr>
 								<td>name</td>
@@ -357,22 +359,22 @@
 							</tr>
 							<tr>
 								<td>
-									<pre><code data-trim>
+<pre><code data-trim>
 <select name="dropdown">
   <option>Auswahl 1</option>
   <option>Auswahl 2</option>
   <option selected>Auswahl 3</option>
 </select>
-									</code></pre>
+</code></pre>
 								</td>
 								<td>
-									<pre><code data-trim>
+<pre><code data-trim>
 <select name="dropdown" size=3>
   <option>Auswahl 1</option>
   <option>Auswahl 2</option>
   <option selected>Auswahl 3</option>
 </select>
-									</code></pre>
+</code></pre>
 								</td>
 							</tr>
 						</table>
@@ -414,11 +416,11 @@
 							</tr>
 							<tr>
 								<td>
-									<pre><code data-trim>
+<pre><code data-trim>
 <input type=radio name="radio1" value="name1">Auswahl 1</br>
 <input type=radio name="radio1" value="name2">Auswahl 2</br>
 <input type=radio name="radio1" value="name3" checked>Auswahl 3
-									</code></pre>
+</code></pre>
 								</td>
 							</tr>
 						</table>
@@ -460,11 +462,11 @@
 							</tr>
 							<tr>
 								<td>
-									<pre><code data-trim>
+<pre><code data-trim>
 <input type=checkbox name="checkbox1" value="name1">Auswahl 1</br>
 <input type=checkbox name="checkbox1" value="name1">Auswahl 2</br>
 <input type=checkbox name="checkbox1" value="name1" checked>Auswahl 3
-									</code></pre>
+</code></pre>
 								</td>
 							</tr>
 						</table>
@@ -510,14 +512,14 @@
 							</tr>
 							<tr>
 								<td>
-									<pre><code data-trim>
+<pre><code data-trim>
 <input type=submit value="Abschicken"/>
-									</code></pre>
+</code></pre>
 								</td>
 								<td>
-									<pre><code data-trim>
+<pre><code data-trim>
 <input type=reset value="Löschen"/>
-									</code></pre>
+</code></pre>
 								</td>
 							</tr>
 						</table>
@@ -553,208 +555,21 @@
 								</div>
 							</form>
 						</br><hr>
-						<pre><code data-trim>
+<pre><code data-trim>
 <form id="kontaktformular" name="kontaktformular" action="">
   <div>
+    //Textfeld
     <label for="absender"><font size="4">Ihre E-Mail-Adresse:</font></label>
     <input type="text" id="absender" name="absender" size=28/></br>
+    //Textarea
     <label for="nachricht"><font size="4">Ihre Nachricht:</font></label>
     <textarea style="margin-left:38px" id="nachricht" name="nachricht" cols="22" rows="5"></textarea></br>
+    //Buttons
     <input type="submit" value="Abschicken"/>
     <input type="reset" value="Löschen"/>
   </div>
 </form>
-						</pre></code>
-					</section>
-				</section>
-
-				<section>
-					<h2>Fragmented <strong>Views</strong></h2>
-					<p>Hit the next arrow...</p>
-					<p class="fragment" data-fragment-index="0">... to step through ...</p>
-					<ol>
-						<li class="fragment" data-fragment-index="1"><code>any type</code></li>
-						<li class="fragment" data-fragment-index="2"><em>of view</em></li>
-						<li class="fragment" data-fragment-index="3"><strong>fragments</strong></li>
-					</ol>
-				</section>
-
-
-				<section>
-					<h2>Images</h2>
-
-					<img class="align-center" src="http://octodex.github.com/images/daftpunktocat-thomas.gif">
-				</section>
-
-				<section>
-					<h2>Code syntax highlighting</h2>
-
-					<pre><code data-trim>
-&lt;?php
-echo 'Hello World!';
-?&gt;
-					</code></pre>
-
-					<pre><code data-trim>
-$ ruby -e "puts 'Hello world'"
-Hello world
-					</code></pre>
-
-					<pre><code data-trim>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;meta charset=&quot;utf-8&quot;&gt;
-		&lt;title&gt;&lt;/title&gt;
-		&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
-
-		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-	&lt;body&gt;
-&lt;/html&gt;
-					</code></pre>
-				</section>
-
-				<section>
-					<section>
-						<h2>Tables</h2>
-						<table>
-							<tr>
-								<th>Foo</th>
-								<th>Bar</th>
-							</tr>
-							<tr>
-								<td>Zelle 1 1</td>
-								<td>Zelle 1 2</td>
-							</tr>
-							<tr>
-								<td>Zelle 2 1</td>
-								<td>Zelle 2 2</td>
-							</tr>
-						</table>
-					</section>
-
-					<section>
-					<h2>Tables <strong>Latin Character Tests</strong></h2>
-						<table>
-							<tbody>
-								<tr>
-									<td>!</td>
-									<td>"</td>
-									<td>#</td>
-									<td>$</td>
-									<td>%</td>
-									<td>&amp;</td>
-									<td>'</td>
-									<td>(</td>
-									<td>)</td>
-									<td>*</td>
-								</tr>
-								<tr>
-									<td>+</td>
-									<td>,</td>
-									<td>-</td>
-									<td>.</td>
-									<td>/</td>
-									<td>0</td>
-									<td>1</td>
-									<td>2</td>
-									<td>3</td>
-									<td>4</td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>6</td>
-									<td>7</td>
-									<td>8</td>
-									<td>9</td>
-									<td>:</td>
-									<td>;</td>
-									<td>&gt;</td>
-									<td>=</td>
-									<td>&lt;</td>
-								</tr>
-								<tr>
-									<td>?</td>
-									<td>@</td>
-									<td>A</td>
-									<td>B</td>
-									<td>C</td>
-									<td>D</td>
-									<td>E</td>
-									<td>F</td>
-									<td>G</td>
-									<td>H</td>
-								</tr>
-								<tr>
-									<td>I</td>
-									<td>J</td>
-									<td>K</td>
-									<td>L</td>
-									<td>M</td>
-									<td>N</td>
-									<td>O</td>
-									<td>P</td>
-									<td>Q</td>
-									<td>R</td>
-								</tr>
-								<tr>
-									<td>S</td>
-									<td>T</td>
-									<td>U</td>
-									<td>V</td>
-									<td>W</td>
-									<td>X</td>
-									<td>Y</td>
-									<td>Z</td>
-									<td>[</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>]</td>
-									<td>^</td>
-									<td>_</td>
-									<td>`</td>
-									<td>a</td>
-									<td>b</td>
-									<td>c</td>
-									<td>d</td>
-									<td>e</td>
-									<td>f</td>
-								</tr>
-								<tr>
-									<td>g</td>
-									<td>h</td>
-									<td>i</td>
-									<td>j</td>
-									<td>k</td>
-									<td>l</td>
-									<td>m</td>
-									<td>n</td>
-									<td>o</td>
-									<td>p</td>
-								</tr>
-								<tr>
-									<td>q</td>
-									<td>r</td>
-									<td>s</td>
-									<td>t</td>
-									<td>u</td>
-									<td>v</td>
-									<td>w</td>
-									<td>x</td>
-									<td>y</td>
-									<td>z</td>
-								</tr>
-								<tr>
-									<td>{</td>
-									<td>|</td>
-									<td>}</td>
-									<td>~</td>
-								</tr>
-								</tbody>
-							</table>
+</pre></code>
 					</section>
 				</section>
 
@@ -771,7 +586,7 @@ Hello world
 					> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
 
 					```
-					## Markdown support
+					## Markdown Support
 
 					Für die, die Markdown lieben.
 					Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
