@@ -42,777 +42,109 @@
 
 		<section>
 			<h1>Web-basierte Anwendungen 1</h1>
-			<h2>HTML Advanced & HTML5</h2>
-
-			<p>17. Oktober 2013</p>
-
-			<p>Studiengang Medieninformatik an der Fachhochschule Koeln<br>
-			Campus Gummersbach</p>
-
-			<p style="margin-top:10%">Vsevolod Kueppers <strong>//</strong> Thomas Friesen <strong>//</strong> Sercan Kuecuekkoese<br>
+			<h2>HTML Advanced & HTML5 Uebung</h2>
+			<br><br>
+			<p>Nun duerfen Sie Ihr erlerntes Wissen in praktischen Aufgaben testen. Es gibt insgesamt 9 Aufgaben.
+			Jeweils drei fuer Tabellen, Formulare und HTML5.
+			<br><br><br>
+			Viel Spass ;)</p>
 		</section>
-		<section>
-			<h2>Seminarablauf</h2>
-			<p>
-				<ul>
-					<li class="fragment">Tabellen
-						<ul>
-							<li class="fragment">einfache Tabellen</li>
-							<li class="fragment">erweiterte Tabellen</li>
-						</ul>
-					</li>
-					<li class="fragment">Formulare</li>
-					<li class="fragment">Strukturelemente HTML5</li>
-						<ul>
-							<li class="fragment">header</li>
-							<li class="fragment">nav</li>
-							<li class="fragment">section</li>
-							<li class="fragment">footer</li>
-						</ul>
-				</ul>
-			</p>
-		</section>
-		<section> <!-- Tabellen for Beginners Anfang-->
-			<section data-markdown>
-				<script type="text/template">
-					<h2>Einfache Tabelle - Grundbegriffe</h2>
-					<ul>
-						<li>Tabellen bestehen aus Reihen und Spalten.</li>
-						<li>Fuer eine Tabelle benoetigen wir 3 verschiedene HTML-TAGs.</li>
-					<ul></br>
-					<p class="fragment highlight-red">Tabelle:</p>
-					<code>
-						<ul>
-							<li>&lt;table&gt; &lt;/table&gt; - Grundgeruest</li>
-						</ul>
-					</code></br>
-					
-					<p class="fragment highlight-red">Tabellenzeile:</p>
-					<code>
-						<ul>
-							<li>&lt;tr&gt; &lt;/tr&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Tabellenzeilen</li>
-						</ul>
-					</code></br>
-					
-					<p class="fragment highlight-red">Tabellenzelle:</p>
-					<code>
-						<ul>
-							<li>&lt;td&gt; &lt;/td&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Tabellenzellen</li>
-						</ul>
-					</code>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>Einfache Tabellen - Code</h2>
-					<p><strong>&lt;table&gt;</strong></p>
-					<p>Anlegen der Tabelle</p>
-					<pre><code data-trim>
-					&lt;table&gt;
-					&lt;/table&gt;
-					</pre></code>
-					<p><strong>&lt;tr&gt; - table row</strong></p>
-					<p>Anlegen der Tabellenzeile</p>
-					<pre><code data-trim>
-					&lt;table&gt;
-					   &lt;tr&gt;
-					   &lt;/tr&gt;
-					&lt;/table&gt;
-					</pre></code>
-					<p><strong>&lt;td&gt; - table data</strong></p>
-					<p>Anlegen der Tabellendatenzelle</p>
-					<pre><code data-trim>
-					&lt;table&gt;
-					   &lt;tr&gt;
-						  &lt;td&gt;&lt;/td&gt;
-					   &lt;/tr&gt;
-					&lt;/table&gt;
-					</pre></code>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>Einfache Tabellen - Code</h2>
-					<h3>Fuellen einer Tabelle</h3>
-					<p><i>Beispiel :</i></p>
-					<pre>
-						<code data-trim>
-						&lt;table border="1"&gt;
-					   &lt;tr&gt;
-						  &lt;td&gt; Zeile 1, Spalte 1 &lt;/td&gt;
-						  &lt;td&gt; Zeile 1, Spalte 2 &lt;/td&gt;
-					   &lt;/tr&gt;
-					   &lt;tr&gt;
-						  &lt;td&gt; Zeile 2, Spalte 1 &lt;/td&gt;
-						  &lt;td&gt; Zeile 2, Spalte 2 &lt;/td&gt;
-					   &lt;/tr&gt;
-					&lt;/table&gt;
-						</code>
-					</pre>
-					<p><i>Ergebnis :</i></p>
-					<table border="1">
-						<tr>
-							<td> Zeile 1, Spalte 1 </td>
-							<td> Zeile 1, Spalte 2 </td>
-						</tr>
-						<tr>
-							<td> Zeile 2, Spalte 1 </td>
-							<td> Zeile 2, Spalte 2 </td>
-						</tr>
-					</table>
-				</script>
-			</section>
-		</section> <!-- Tabellen for Beginners ende -->
-		<section> <!-- Tabellen for Advanced Users Anfang-->
-			<section data-markdown>
-				<script type="text/template">
-					<h2>Erweiterte Tabelle - Grundbegriffe</h2>
-						<ul>
-							<li>Es gibt eine Reihe von Modifikatoren einer Tabelle.</li>
-							<li>Fuer eine bessere Uebersicht verwendet wir...</li>
-						<ul></br>
-						<p class="fragment highlight-red">Tabellen Raender:</p>
-						<code>
-							<ul>
-								<li>&lt;table border="2"&gt; &lt;/table&gt;</li>
-							</ul>
-						</code>
-						<p class="fragment highlight-red">Oberste Zeile der Tabelle:</p>
-						<code>
-							<ul>
-								<li>&lt;thead&gt; &lt;/thead&gt;</li>
-							</ul>
-						</code>
-						<p class="fragment highlight-red">Tabellenkopf:</p>
-						<code>
-							<ul>
-								<li>&lt;th&gt; &lt;/th&gt;</li>
-							</ul>
-						</code>
-						<p class="fragment highlight-red">Tabellenkoerper:</p>
-						<code>
-							<ul>
-								<li>&lt;tbody&gt; &lt;/tbody&gt;</li>
-							</ul>
-						</code>
-						<p class="fragment highlight-red">Tabellenfuss:</p>
-						<code>
-							<ul>
-								<li>&lt;tfoot&gt; &lt;/tfoot&gt;</li>
-							</ul>
-						</code></br>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>Erweiterte Tabelle - Code</h2>
-					<p><strong>&lt;thead&gt; und &lt;th&gt; - table head</strong></p>
-					<p>Anlegen der Kopfzeile</p>
-					<pre><code data-trim>
-					&lt;thead&gt;
-						&lt;th&gt;
-						&lt;/th&gt;
-					&lt;/thead&gt;
-					</pre></code>
-					<p><strong>&lt;tbody&gt; - table body</strong></p>
-					<p>Anlegen des Tabellenkoerpers</p>
-					<pre><code data-trim>
-					&lt;tbody&gt;
-					   &lt;tr&gt;
-							&lt;td&gt;&lt;td&gt;
-					   &lt;/tr&gt;
-					&lt;/tbody&gt;
-					</pre></code>
-					<p><strong>&lt;tfoot&gt; - table foot</strong></p>
-					<p>Anlegen des Tabellenfusses</p>
-					<pre><code data-trim>
-					&lt;tfoot&gt;
-					   &lt;tr&gt;
-							&lt;td&gt;&lt;td&gt;
-					   &lt;/tr&gt;
-					&lt;/tfoot&gt;
-					</pre></code>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>Erweiterte Tabellen - Code</h2>
-					<h3>Fuellen einer Tabelle</h3>
-					<p><i>Beispiel :</i></p>
-					<pre><code data-trim>
-					<table border="1">
-					  <thead>
-						<tr>
-						  <th>Studiengang 1</th>
-						  <th>Studiengang 2</th>
-						</tr>
-					  </thead>
-					  <tbody>
-						<tr>
-						  <td>Mi</td>
-						  <td>Ti</td>
-						</tr>
-					  </tbody>
-					  <tfoot>
-						<tr>
-						  <td>600</td>
-						  <td>200</td>
-						</tr>
-					  </tfoot>
-					</table>	
-					</pre></code>
-					<p><i>Ergebnis :</i></p>
-					<table border="1">
-						<thead>
-							<tr>
-								<th>Studiengang 1</th>
-								<th>Studiengang 2</th>
-							</tr>
-						</thead>
-						<tfoot>
-							<tr>
-								<td>1000</td>
-								<td>30</td>
-							</tr>
-						</tfoot>
-						<tbody>
-							<tr>
-								<td>Mi</td>
-								<td>Ti</td>
-							</tr>
-						</tbody>
-					</table>
-				</script>
-			</section>
-		</section> <!-- Tabellen for Advanced Users ende -->
-		<section> <!-- Formulare Anfang -->
-			<section data-markdown>
-				<script type="text/tamplate">
-					<h2>Formulare - Funktionen</h2>
-					<p>In Formularen kann der Anwender...</p>
-					<ul>
-						<li>Eingabefelder ausfuellen</li>
-						<li>in mehrzeiligen Textfeldern Text eingeben</li>
-						<li>aus Listen Eintraege auswaehlen</li>
-						<li>und weitere Elemente einbinden</li>
-					</ul>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>Formulare - Code</h2>
-					<p><strong>&lt;form&gt; - formular</strong></p>
-					<p>Anlegen des Formulars</p>
-					<pre><code data-trim>
-					&lt;form&gt;
-					&lt;/form&gt;
-					</pre></code>
-					<p><strong>&lt;input&gt; - input option</strong></p>
-					<p>Anlegen eines Feldes</p>
-					<pre><code data-trim>
-					&lt;input&gt;&lt;/input&gt;
-					</pre></code>
-					<p><strong>&lt;label&gt; - label fuer input</strong></p>
-					<p>Anlegen eines Labels</p>
-					<pre><code data-trim>
-					&lt;label&gt;&lt;/label&gt;
-					</pre></code>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>Formulare - Code und Attribute</h2>
-					<p><strong>Input-Code und seine Attribute</strong></p>
-					<pre><code data-trim>
-					1. <input name="feld1" size=15 maxlength=15 value="Textfeld"/>
-					2. <input type="password" name="feld2" size=15 maxlength=15 value="password"/>
-					3. <input type="file" name="feld3" size=15/>
-					</code></pre><br>
-					<table>
-						<tr>
-							<td>
-								<label for="feld1"><font size="4">Textfeld</font></label>
-								<input name="feld1" size=15 maxlength=15 value="Textfeld"/>
-							</td>
-							<td>
-								<label for="feld2"><font size="4">Passwort</font></label>
-								<input type="password" name="feld2" size=15 maxlength=15 value="Passwort"/>
-							</td>
-							<td>
-								<label for="feld3"><font size="4">Button</font></label>
-								<input type="file" name="feld3" size=15/>
-							</td>
-						</tr>
-					</table></br>
-					<table border="0">
-						<tr>
-							<td>name</td>
-							<td>Eindeutiger Name des Eingabefeldes</td>
-						</tr>
-						<tr>
-							<td>size</td>
-							<td>Anzahl der Zeichen im Eingabefeld</td>
-						</tr>
-						<tr>
-							<td>maxlength</td>
-							<td>Anzahl der einzutragenen Zeichen im Eingabefeld</td>
-						</tr>
-						<tr>
-							<td>value</td>
-							<td>Vorgabewert oder -text</td>
-						</tr>
-						<tr>
-							<td>password</td>
-							<td>Passwortfeld durch ***</td>
-						</tr>
-						<tr>
-							<td>readonly</td>
-							<td>Inhalt kann nur gelesen werden</td>
-						</tr>
-					</table>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>Formulare - Code und Attribute</h2>
-					<p><strong>Mehrzeilige Eingabefelder</strong></p>
-					<pre><code data-trim>
-			<textarea name="area1" rows=5 cols=15>Das ist eine Textbox</textarea>
-					</code></pre><br>
-					<table>
-					<tr>
-					<td>
-					<textarea name="area1" rows=5 cols=120>
-					Das ist eine Textbox
-					</textarea>
-					</td>
-					</tr>
-					</table></br>
-					<table border="0">
-						<tr>
-							<td>name</td>
-							<td>Eindeutiger Name des Eingabefeldes</td>
-						</tr>
-						<tr>
-							<td>rows</td>
-							<td>Anzahl der Reihen fuer das Textfeld</td>
-						</tr>
-						<tr>
-							<td>cols</td>
-							<td>Anzahl der Spalten fuer das Textfeld</td>
-						</tr>
-					</table>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>Formulare - Code und Attribute</h2>
-					<p><strong>Auswahllisten - Dropdown</strong></p>
-					<table>
-						<tr>
-							<td>
-							<pre><code data-trim>
-						<select name="dropdown">
-						<option>Auswahl 1</option>
-						<option>Auswahl 2</option>
-						<option selected>Auswahl 3</option>
-					</select>
-							</code></pre>
-							</td>
-							<td>
-							<pre><code data-trim>
-						<select name="dropdown" size=3>
-						<option>Auswahl 1</option>
-						<option>Auswahl 2</option>
-						<option selected>Auswahl 3</option>
-					</select>
-							</code></pre>
-							</td>
-						</tr>
-						<tr>
-							<td><label for="dropdown"><font size="4">Beispiel 1</font></label></br>
-								<select name="dropdown">
-									<option>Auswahl 1</option>
-									<option>Auswahl 2</option>
-									<option selected>Auswahl 3</option>
-								</select>
-							</td>
-							<td><label for="dropdown"><font size="4">Beispiel 2</font></label></br>
-								<select name="dropdown" size=3>
-									<option>Auswahl 1</option>
-									<option selected>Auswahl 2</option>
-									<option>Auswahl 3</option>
-								</select>
-							</td>
-						</tr>
-					</table></br>
-					<table border="0">
-						<tr>
-							<td>name</td>
-							<td>Eindeutiger Name der Dropdown Box</td>
-						</tr>
-						<tr>
-							<td>option</td>
-							<td>Neue Auswahl hinzufuegen</td>
-						</tr>
-						<tr>
-							<td>selected</td>
-							<td>Option vorselektieren</td>
-						</tr>
-						<tr>
-							<td>size</td>
-							<td>Wenn Anzahl der Optionen angegeben, fällt das Dropdown weg</td>
-						</tr>
-					</table>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>Formulare - Code und Attribute</h2>
-					<p><strong>Auswahllisten - Radio-Box und Checkbox</strong></p>
-					<table>
-						<tr>
-					<td>
-					<pre><code data-trim>
-					<input type=radio name="radio1" value="name1">Auswahl 1
-					<input type=radio name="radio1" value="name2">Auswahl 2
-					<input type="checkbox" name="checkbox1" value="name1" >Auswahl 3
-					<input type="checkbox" name="checkbox1" value="name1" >Auswahl 4
-					</code></pre>
-					</td>
-						</tr>
-						<tr>
-							<td>
-								<label for="radio"><font size="3">Beispiel 1</font></label></br>
-								<input type=radio name="radio1" value="name1">Auswahl 1</br>
-								<input type=radio name="radio1" value="name2">Auswahl 2</br>
-								<input type="checkbox" name="checkbox1" value="name1" >Auswahl 3<br>
-								<input type="checkbox" name="checkbox1" value="name1" >Auswahl 4
-							</td>
-						</tr>
-					</table></br>
-					<table border="0">
-						<tr>
-							<td>name</td>
-							<td>Eindeutiger Name der Auswahl</td>
-						</tr>
-						<tr>
-							<td>radio</td>
-							<td>Es kann nur eine Radiobutton ausgewaehlt werden</td>
-						</tr>
-						<tr>
-							<td>checkbox</td>
-							<td>Es koennen mehrere Checkboxen ausgewaehlt werden</td>
-						</tr>
-						<tr>
-							<td>value</td>
-							<td>Wert der uebertragen wird</td>
-						</tr>
-						<tr>
-							<td>checked</td>
-							<td>Auswahl vorselektieren</td>
-						</tr>
-					</table>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>Formulare - Code und Attribute</h2>
-					<p><strong>Formular-Buttons</strong></p>
-					<table>
-						<tr>
-							<td>
-							<pre><code data-trim>
-							<input type=submit value="Abschicken"/>
-							</code></pre>
-							</td>
-							<td>
-							<pre><code data-trim>
-							<input type=reset value="Loeschen"/>
-							</code></pre>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<label for="submit"><font size="4">Beispiel 1</font></label></br>
-								<input type=submit name="submit" value="Abschicken"/>
-							</td>
-							<td>
-								<label for="reset"><font size="4">Beispiel 2</font></label></br>
-								<input type=reset name="reset" value="Loeschen"/>
-							</td>
-						</tr>
-					</table></br>
-					<table border="0">
-						<tr>
-							<td>submit</td>
-							<td>Abschicken des Formulars</td>
-						</tr>
-						<tr>
-							<td>reset</td>
-							<td>Zuruecksetzen des Formulars</td>
-						</tr>
-						<tr>
-							<td>value</td>
-							<td>Button Beschriftung</td>
-						</tr>
-					</table>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>Formulare </h2>
-					<p><strong>Beispiel - Kontaktformular</strong></p>
-				<table>
-				<tr>
-				<td>
-				<pre><code data-trim>
-				<form id="kontaktformular" name="kontaktformular" action="">
-	<div>
-		<label for="absender">Ihre E-Mail-Adresse:</label>
-		<input type="text" id="absender" name="absender"/>
-	</div>
-	<div>
-		<label for="nachricht">Ihre Nachricht:</label>
-		<textarea id="nachricht" name="nachricht" cols="22" rows="5"></textarea>
-	</div>
-	<div>
-		<input type="submit" value="Abschicken"/>
-	</div>
-</form>
-				</pre></code>
-				</td>
-				</tr>
-				<tr>
-				<td>
-					<form>
-						<div>
-							<label for="absender">Ihre E-Mail-Adresse:</label>
-							<input type="text" id="absender" name="absender"/>
-						</div>
-						<div>
-							<label for="nachricht">Ihre Nachricht:</label>
-							<textarea id="nachricht" name="nachricht" cols="22" rows="5"></textarea>
-						</div>
-						<div>
-							<input type="submit" value="Abschicken"/>
-						</div>
-					</form>
-					</td>
-				</tr>
-				</table>
-				</script>
-			</section>
-		</section><!-- Formulare Ende -->
-
-		<section><!-- HTML5 Anfang -->
-			<section data-markdown>
-				<script type="text/template">
-					<h2>HTML 5- Strukturelemente</h2>
-					<ul>
-						<li>In HTML 5 gibt es neue HTML-Befehle, um Bereiche einzuteilen.</li>
-						<li>In HTML 5 kann nun direkt mit einem logischen HTML-TAG ausgezeichnet werden.</li>
-					</ul></br></br>
-					<table border="0">
-						<tr>
-							<td>article</td>
-							<td>Auszeichnung von textuell relevanten Dokumenteninhalten</td>
-						</tr>
-						<tr>
-							<td>aside</td>
-							<td>Definiert marginale Informationen zu einem Dokumenteninhalt</td>
-						</tr>
-						<tr>
-							<td>details</td>
-							<td>Beinhaltet zusaetzliche Informationen zu einem Dokumenteninhalt</td>
-						</tr>
-						<tr>
-							<td>doctype</td>
-							<td>Definiert den verwendeten Dokumententyp</td>
-						</tr>
-						<tr>
-							<td>figure</td>
-							<td>Gruppierung von Medieninhalten</td>
-						</tr>
-						<tr>
-							<td><p class="fragment highlight-red">footer</p></td>
-							<td>Definiert die Fusszeile eines Dokumenteninhaltes</td>
-						</tr>
-						<tr>
-							<td><p class="fragment highlight-red">header</p></td>
-							<td>Definiert den Kopfbereich eines Dokumenteninhaltes</td>
-						</tr>
-						<tr>
-							<td><p class="fragment highlight-red">nav</p></td>
-							<td>Element zur Auszeichnung von Navigationen</td>
-						</tr>
-						<tr>
-							<td><p class="fragment highlight-red">section</p></td>
-							<td>Unterteilt einen "article" in unterschiedliche Sektionen</td>
-						</tr>
-					</table>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>HTML5 Strukturelemte </h2>
-					<p><strong>Strukturelemt &lt;header&gt;</strong></p>
-					<p>Für eine verbesserte semantischeInformationBedeutung: semantischeder Bedeutung,
-					dem Sinn entsprechend Strukturierung des Quelltextes wurde das <header.> Element in die HTML5
-					Spezifikation implementiert. Gemäß der Spezifikation ist das <header.> Element eine 
-					Kopfzeile für einen Abschnitt innerhalb des Dokuments und enthält in der Regel 
-					Überschriften des Abschnitts zusammen mit einführenden Informaionen oder 
-					Navigationshilfen. Somit können neben dem Kopfbereich der Webseite auch Elemente 
-					wie beispielsweise <section.> oder <article.> mit einem <header.> versehen werden.<p>
-					</br>
-					<p><strong>Notation</strong></p>
-				<pre><code data-trim>
-				<header [Attribute]>[Elementinhalt]</header>
-				</pre></code>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>HTML5 Strukturelemte </h2>
-					<p><strong>Strukturelemt &lt;nav&gt;</strong></p>
-					<p>Mit Implementierung des &lt;nav&gt; Elements in die HTML5 Spezifikation wurde eine 
-					Möglichkeit geschaffen, eine oder mehrere Navigationsleisten oder auch einen Bereich 
-					für zusätzliche Informationen semantisch korrekt auszuzeichnen. Der Inhalt des 
-					Navigationsbereichs enthält beispielsweise Hyperlinks auf andere Seiten beziehungsweise
-					Verweise auf Inhalte innerhalb der Seite.
-					Gemäß der Spezifikation darf das &lt;nav&gt; Element nicht als nachfolgendes Element 
-					eines &lt;address&gt; Elements verwandt werden. Verweise innerhalb des &lt;footer&gt; Elementes 
-					sollten entsprechend der semantischenInformationBedeutung: semantischender Bedeutung,
-					dem Sinn entsprechend Strukturierung ebenfalls nicht mit dem &lt;nav&gt; Element, sondern 
-					weiterhin mit Hilfe von Listen-Elementen definiert werden.<p>
-					</br>
-					<p><strong>Notation</strong></p>
-				<pre><code data-trim>
-				<nav [Attribute]>[Elementinhalt]</nav>
-				</pre></code>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>HTML5 Strukturelemte </h2>
-					<p><strong>Strukturelemt &lt;section&gt;</strong></p>
-					<p>Entsprechend der Spezifikation des &lt;article&gt; Elements steht für eine weitere 
-					Untergliederung der textuellen Inhalte innerhalb des &lt;article&gt; Elements das  &lt;section&gt; 
-					Element zur Verfügung. Die einzelnen Abschnitte eines Artikels lassen sich somit 
-					semantischInformationBedeutung: semantischder Bedeutung, dem Sinn entsprechend korrekt
-					strukturieren. Gemäß der HTML5 Spezifikation zeichnet das &lt;section&gt; Element grundlegend
-					einen eigenständigen logischen textuellen Inhalt innerhalb eines &lt;article&gt; Elements 
-					aus, das aus logischer Sicht eine Art Unterdokument darstellt. <p>
-					</br>
-					<p><strong>Notation</strong></p>
-				<pre><code data-trim>
-				<section [Attribute]>[Elementinhalt]</section>
-				</pre></code>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>HTML5 Strukturelemte </h2>
-					<p><strong>Strukturelemt &lt;footer&gt;</strong></p>
-					<p>Für eine verbesserte semantischeInformationBedeutung: semantischeder Bedeutung, dem
-					Sinn entsprechend Strukturierung des Quelltextes wurde das &lt;footer&gt; Element in die HTML5
-					Spezifikation implementiert. Gemäß der Spezifikation ist das &lt;footer&gt; Element eine Fußzeile
-					für einen Abschnitt innerhalb des Dokuments und enthält in der Regel Informationen den 
-					Autor, Verweise zu verwandten Dokumenten sowie Urheber-Daten. Somit können neben dem 
-					Fußbereich der Webseite auch Elemente wie beispielsweise &lt;section&gt; oder &lt;article&gt; mit
-					einem &lt;footer&gt; versehen werden. <p>
-					</br>
-					<p><strong>Notation</strong></p>
-				<pre><code data-trim>
-				<footer [Attribute]>[Elementinhalt]</footer>
-				</pre></code>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>HTML5 Beispielseite - Code</h2>
-					<p><strong>&lt;header&gt; - header container</strong></p>
-					<pre><code data-trim>
-				<header>
-						<p>HTML5 Beispielseite</p>
-					</header>
-					</pre></code>
-					<p><strong>&lt;nav&gt; - nav container</strong></p>
-					<pre><code data-trim>
-				<nav>
-	<ul>
-		<li><a href="tabellen.html">Tabellen</a></li>
-		<li><a href="formulare.html">Formulare</a></li>
-		<li><a href="HTML5.html">HTML5</a></li>
-	</ul>
-</nav>
-					</pre></code>
-					<p><strong>&lt;section&gt; - section container</strong></p>
-					<pre><code data-trim>
-				<section>
-	<header>
-		<h1>Ueberschrift</h1>
-	</header>
-	<p>...</p>
-</section>
-					</pre></code>
-					<p><strong>&lt;footer&gt; - footer container</strong></p>
-					<pre><code data-trim>
-				<footer>
-	<ul>
-		<li><a href="impressum.html">Impressum</a></li>
-		<li><a href="kontakt.html">Kontakt</a></li>
-	</ul>
-</footer>
-					</pre></code>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>HTML5 Beispielseite</h2>
-					<html>
-					<head>
-					<title>Website in HTML 5 als direktes Beispiel</title>
-					<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-					<meta charset="UTF-8">
-					</head>
-					<body>
-					<header>
-					  <p>HTML5 Beispielseite</p>
-					</header>
-					<nav>
-					  <ul>
-						<li><a href="#">Startseite</a></li>
-						<li><a href="#">Über uns</a></li>
-					  </ul>
-					</nav>
-					<section>
-					  <h1>Willkommen zur HTML 5 Beispielwebsite</h1>
-					  <p>Diese Website gliedert sich in 4 Bereiche</p>
-					  <ul>
-						<li>Kopfzeile: Hintergrundbild-Download</li>
-						<li>Zeile Steuerung: Hintergrundfarbe ist #ceb98e</li>
-						<li>Uebergang mit Schattenwurf: Download Schattenwurf</li>
-						<li>Inhaltsbereich</li>
-					  </ul>
-					  <p>Um die verschiedenen Bereiche beim Entwickeln am besten Rahmen ziehen, 
-					  damit sofort erkennbar ist, wo welcher Bereiche sitzt :)</p>
-					</section>
-					<footer>
-					  <p>&copy; WBA1 - HTML Advanced</a></p>
-					</footer>
-					</body>
-					</html>
-				</script>
-			</section>
-		</section><!-- HTML5 Ende -->
+		
 		<section>
 			<section>
-			<br><br><br><br><br>
-			<h2>Vielen Dank fuer Ihre Aufmerksamkeit</h2>
-			<p align=right>jetzt gehts weiter zu der Uebung</p>
+			<h1>Aufgabe 1</h1>
+			<h2>Einfache Tabellen</h2>
+			<br><br>
+			<p>xxxxxxxxxx
+			<br><br><br></p>
 			</section>
 		</section>
+		<section>
+			<section>
+			<h1>Aufgabe 2</h1>
+			<h2>Einfache Tabellen</h2>
+			<br><br>
+			<p>xxxxxxxxxx
+			<br><br><br></p>
+			</section>
+		</section>
+		<section>
+			<section>
+			<h1>Aufgabe 3</h1>
+			<h2>Einfache Tabellen</h2>
+			<br><br>
+			<p>xxxxxxxxxx
+			<br><br><br></p>
+			</section>
+		</section>
+		
+		<section>
+			<section>
+			<h1>Aufgabe 4</h1>
+			<h2>Formualare</h2>
+			<br><br>
+			<p>xxxxxxxxxx
+			<br><br><br></p>
+			</section>
+		</section>
+		<section>
+			<section>
+			<h1>Aufgabe 5</h1>
+			<h2>Formualare</h2>
+			<br><br>
+			<p>xxxxxxxxxx
+			<br><br><br></p>
+			</section>
+		</section>
+		<section>
+			<section>
+			<h1>Aufgabe 6</h1>
+			<h2>Formualare</h2>
+			<br><br>
+			<p>xxxxxxxxxx
+			<br><br><br></p>
+			</section>
+		</section>
+		
+		<section>
+			<section>
+			<h1>Aufgabe 7</h1>
+			<h2>HTML 5 - Das Grundgeruest</h2>
+			<br><br>
+			<p>Erstellen Sie das Grundgeruest einer Webseite mit allen (benoetigten) Elementen einschliesslich
+			eines Absatzes (der Tag dafuer ist &lt;p&gt;), der ein wenig Text und ein Bild, das durch den &lt;img&gt;-
+			Tag angezeigt wird, enthaelt.
+			<br><br><br></p>
+			</section>
+		</section>
+		<section>
+			<section>
+			<h1>Aufgabe 8</h1>
+			<h2>HTML 5 - Struktur</h2>
+			<br><br>
+			<p>Verwenden Sie die Webseite aus Uebungsaufgabe 7). Erstellen Sie anstelle des Textabsatzes auf
+			der Seite einen Artikel, der jeweils einen Kopf- und einen Fussbereich besitzt. Fuegen Sie dem 
+			Artikel zwei Textabsaetze hinzu.
+			<br><br>
+			Im ersten Textabsatz sollten Sie noch ein wenig Text mit hervorgehobenen (&lt;em&gt;) Woertern, kursiven (&lt;i&gt;)
+			Ausdruecken und fett (&lt;strong&gt;) dargestellten Zahlen geschrieben werden. Im zweiten Absatz sollten
+			Informationen zum Autor (&lt;address&gt;) und zur letzten Erstellungszeit (&lt;time&gt;) der Seite angezeigt werden.</p>
+			</section>
+		</section>
+		<section>
+			<section>
+			<h1>Aufgabe 9</h1>
+			<h2>HTML 5 - Funktionalitaeten hinzufuegen</h2>
+			<br><br>
+			<p>Ergaenzen Sie nun die Webseite aus Aufgabe 8) um zwei eigenstaendige Sektionen. Diese sollen 
+			jeweils Ueberschriften der zweiten Ebene sowie (beliebige) Randinformationen besitzen.
+			<br><br>
+			Verwenden Sie fuer die Randinformationen der ersten Sektion eine nicht nummerierte Liste (&lt;ul&gt;)
+			mit entsprechenden Eintraegen. Fuer die zweite Sektion sollten Sie eine kleine Tabelle mit drei 
+			Spalten, vier Zeilen und entsprechenden Kopf- und Fusszeilen (&lt;thead&gt; und &lt;tfoot&gt;) einfuegen.</p>
+			</section>
+		</section>		
+
 	</div>
 </div>
 
