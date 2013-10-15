@@ -634,242 +634,50 @@
 
 		<section><!-- HTML5 Anfang -->
 			<section data-markdown>
-				<script type="text/tamplate">
-					###HTML 5 - Was ist anders?
-					####HTML 4.01, die div-Variante:
-
-					<!DOCTYPE html>
-					<html>
-					<head>
-					<title>Vergleich html-html5</title>
-					<meta charset="UTF-8">
-					</head>
-
-					<body>
-						<div id="kopf">
-							<p>Bereich Kopf</p>
-						</div>
-
-						<div id="inhalt">
-							<p>Bereich Inhalt</p>
-						</div>
-
-						<div id="fuss">
-							<p>Bereich Fußzeile</p>
-						</div>
-					</body>
-					</html>
-
-					<html>
-					<head>
-						<title>Vergleich html-html5</title>
-						<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-						<meta charset="UTF-8">
-					</head>
-
-					<body>
-						<div id="kopf">
-							<p>Bereich Kopf</p>
-						</div>
-
-						<div id="inhalt">
-							<p>Bereich Inhalt</p>
-						</div>
-
-						<div id="fuss">
-							<p>Bereich Fußzeile</p>
-						</div>
-					</body>
-					</html>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/tamplate">
-					###HTML 5 - Was ist anders?
-					####HTML 5, logische Elemente:
-
-					<!DOCTYPE html>
-					<html>
-					<head>
-						<title>Vergleich html-html5</title>
-						<meta charset="UTF-8">
-					</head>
-
-					<body>
-						<header>
-							<p>Bereich Kopf</p>
-						</header>
-
-						<section>
-							<p>Bereich Inhalt</p>
-						</section>
-
-						<footer>
-							<p>Bereich Fußzeile</p>
-						</footer>
-					</body>
-					</html>
-
-					<html>
-					<head>
-						<title>Vergleich html-html5</title>
-						<meta charset="UTF-8">
-					</head>
-
-					<body>
-						<header>
-							<p>Bereich Kopf</p>
-						</header>
-
-						<section>
-							<p>Bereich Inhalt</p>
-						</section>
-
-						<footer>
-							<p>Bereich Fußzeile</p>
-						</footer>
-					</body>
-					</html>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/tamplate">
-					###HTML 5 - Strukturelemente
-					####doctype
+				<script type="text/template">
+					<h2>HTML 5- Strukturelemente</h2>
 					<ul>
-						<li>Kürzer als in html 4.01 (leichter zu merken)</li>
-					</ul>
-
-					<!DOCTYPE html>
-					<html>
-					.
-					.
-					</html>
-
-					####header
-					<ul>
-						<li>Bildet die Kopfzeile eines Dokuments</li>
-						<li>Kann auch in anderen Teilbereichen eine Kopfzeile darstellen (section,article)</li>
-					</ul>
-
-					<header>
-						<titel>Header Beispiel</titel>
-						<meta charset="UTF-8">
-					</header>
-
-					####footer
-					<ul>
-						<li>Wie header nur als Fußzeile</li>
-					</ul>
-
-					<footer>
-						<p>Dies ist eine Fußzeile</p>
-					</footer>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/tamplate">
-					###HTML 5 - Strukturelemente
-					####article
-					<ul>
-						<li>Erschafft einen Bereich für Inhalte</li>
-						<li>Unabhängiges und in sich geschlossenes Unterdokument (z.B. Blog-Post)</li>
-						<li>Wird verwendet wenn es viele Einzelbereiche gibt</li>
-					</ul>
-
-					####section
-					<ul>
-						<li>Kann innerhalb eines article´s verwendet werden (quasi eine Stufe tiefer als jenes)</li>
-						<li>Erstellt einen weiteren untergeordneten Bereich (meist mit eigener Headline)</li>
-					</ul>
-
-					<article>
-						<header>
-							<h1>Überschrift</h1>
-						</header>
-
-						<section>
-							<header>
-								<h2>Überschrift</h2>
-							</header>
-
-							<p>Ein super toller Text!!!!!</p>
-						</section>
-					</article>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/tamplate">
-					###HTML 5 - Strukturelemente
-					####nav
-					<ul>
-						<li>Hauptnavigationsleiste einer Seite</li>
-						<li>Verlinkungen zu der jetzigen oder anderen Seiten eines Webauftritts</li>
-					</ul>
-
-					<nav>
-						<a href="#">| Startseite |</a>
-						<a href="#">| HTML 5 |</a>
-						<a href="#">| Impressum |</a>
-					</nav>
-
-					<nav>
-						<a href="#" style="color: deepskyblue; font-size:22px;"><i>| Startseite |</i></a>
-						<a href="#" style="color: deepskyblue; font-size:22px;"><i>| HTML 5 |</i></a>
-						<a href="#" style="color: deepskyblue; font-size:22px;"><i>| Impressum |</i></a>
-					</nav>
-
-					####aside
-					<ul>
-						<li>Benutzt zur Erweiterung bestehender Inhalte (inhaltliche Einschübe)</li>
-						<li>Definitionen, Querverweise, zusätzliche Informationen</li>
-					</ul>
-
-					<p>Irgendein Text der dir gerade einfällt</p>
-					<aside>
-						ein Kommentar hierzu...
-					</aside>
-
-					<p style="color: orange">Das Essen in der Mensa war heute wieder vortrefflich</p>
-					<aside style="text-align:right; font-size:15px;">
-						naja wenn du meinst...
-					</aside>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/tamplate">
-					###HTML 5 - Strukturelemente
-					####figure
-					<ul>
-						<li>Wird verwendet zur Gruppierung von Elementen</li>
-						<li>Meist zusammen verwendet mit figcaption</li>
-					</ul>
-
-					####figcaption
-					<ul>
-						<li>Mithilfe des figure und figcaption können Medien (z.B. Bilder, Videos und Codeausschnitte) mit einer Beschriftung versehen werden</li>
-					</ul>
-
-					<figure>
-						<img src="http://www.gm.fh-koeln.de/~stahl/logo_nightoftheprofs_trans.gif" alt="Night of prof" width="304" height="120">	
-						<figcaption>Ist toll!!!</figcaption>
-					</figure>
-
-					<figure>
-						<img src="http://www.gm.fh-koeln.de/~stahl/logo_nightoftheprofs_trans.gif" alt="Night of prof" width="304" height="120">	
-						<figcaption><p style="font-size:15">Ist toll!!!</p></figcaption>
-					</figure>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/tamplate">
-					###HTML 5 - Strukturelemente
-					####details/summary
-					<ul>
-					<li>Erstellt eine aufklappbare Liste</li>
-					<li>Ermöglicht ohne CSS dynamische Erweiterungen einzubauen</li>
-					<li>Summary befindet sich im sichtbaren- und details im unsichtbaren Bereich der Liste</li>
-					</ul>
+						<li>In HTML 5 gibt es neue HTML-Befehle, um Bereiche einzuteilen.</li>
+						<li>In HTML 5 kann nun direkt mit einem logischen HTML-TAG ausgezeichnet werden.</li>
+					</ul></br></br>
+					<table border="0">
+						<tr>
+							<td>article</td>
+							<td>Auszeichnung von textuell relevanten Dokumenteninhalten</td>
+						</tr>
+						<tr>
+							<td>aside</td>
+							<td>Definiert marginale Informationen zu einem Dokumenteninhalt</td>
+						</tr>
+						<tr>
+							<td>details</td>
+							<td>Beinhaltet zusaetzliche Informationen zu einem Dokumenteninhalt</td>
+						</tr>
+						<tr>
+							<td>doctype</td>
+							<td>Definiert den verwendeten Dokumententyp</td>
+						</tr>
+						<tr>
+							<td>figure</td>
+							<td>Gruppierung von Medieninhalten</td>
+						</tr>
+						<tr>
+							<td>footer</td>
+							<td>Definiert die Fusszeile eines Dokumenteninhaltes</td>
+						</tr>
+						<tr>
+							<td>header</td>
+							<td>Definiert den Kopfbereich eines Dokumenteninhaltes</td>
+						</tr>
+						<tr>
+							<td>nav</td>
+							<td>Element zur Auszeichnung von Navigationen</td>
+						</tr>
+						<tr>
+							<td>section</td>
+							<td>Unterteilt einen "article" in unterschiedliche Sektionen</td>
+						</tr>
+					</table>
 				</script>
 			</section>
 		</section><!-- HTML5 Ende -->
