@@ -62,8 +62,13 @@
 						</ul>
 					</li>
 					<li class="fragment">Formulare</li>
-					<li class="fragment">(X)HTML Preview</li>
-					<li class="fragment">Exkurs HTML5</li>
+					<li class="fragment">Strukturelemente HTML5</li>
+						<ul>
+							<li class="fragment">header</li>
+							<li class="fragment">nav</li>
+							<li class="fragment">section</li>
+							<li class="fragment">footer</li>
+						</ul>
 				</ul>
 			</p>
 		</section>
@@ -171,19 +176,25 @@
 							<ul>
 								<li>&lt;table border="2"&gt; &lt;/table&gt;</li>
 							</ul>
-						</code></br>
-						<p class="fragment highlight-red">Tabellenkopf:</p>
+						</code>
+						<p class="fragment highlight-red">Oberste Zeile der Tabelle:</p>
 						<code>
 							<ul>
 								<li>&lt;thead&gt; &lt;/thead&gt;</li>
 							</ul>
-						</code></br>
+						</code>
+						<p class="fragment highlight-red">Tabellenkopf:</p>
+						<code>
+							<ul>
+								<li>&lt;th&gt; &lt;/th&gt;</li>
+							</ul>
+						</code>
 						<p class="fragment highlight-red">Tabellenkoerper:</p>
 						<code>
 							<ul>
 								<li>&lt;tbody&gt; &lt;/tbody&gt;</li>
 							</ul>
-						</code></br>
+						</code>
 						<p class="fragment highlight-red">Tabellenfuss:</p>
 						<code>
 							<ul>
@@ -260,8 +271,8 @@
 						</thead>
 						<tfoot>
 							<tr>
-								<td>600</td>
-								<td>200</td>
+								<td>1000</td>
+								<td>30</td>
 							</tr>
 						</tfoot>
 						<tbody>
@@ -283,7 +294,7 @@
 						<li>Eingabefelder ausfuellen</li>
 						<li>in mehrzeiligen Textfeldern Text eingeben</li>
 						<li>aus Listen Eintraege auswaehlen</li>
-						<li>usw.</li>
+						<li>und weitere Elemente einbinden</li>
 					</ul>
 				</script>
 			</section>
@@ -313,64 +324,26 @@
 					<h2>Formulare - Code und Attribute</h2>
 					<p><strong>Input-Code und seine Attribute</strong></p>
 					<pre><code data-trim>
-					1. <input name="feld1" size=15 maxlength=15 value="Eingabe 1"/>
-					2. <input type="password" name="feld2" size=15 maxlength=15 value="Eingabe 2"/>
+					1. <input name="feld1" size=15 maxlength=15 value="Textfeld"/>
+					2. <input type="password" name="feld2" size=15 maxlength=15 value="password"/>
 					3. <input type="file" name="feld3" size=15/>
 					</code></pre><br>
 					<table>
 						<tr>
 							<td>
-								<label for="feld1"><font size="4">Beispiel 1</font></label>
-								<input name="feld1" size=15 maxlength=15 value="Eingabe 1"/>
+								<label for="feld1"><font size="4">Textfeld</font></label>
+								<input name="feld1" size=15 maxlength=15 value="Textfeld"/>
 							</td>
 							<td>
-								<label for="feld2"><font size="4">Beispiel 2</font></label>
-								<input type="password" name="feld2" size=15 maxlength=15 value="Eingabe 2"/>
+								<label for="feld2"><font size="4">Passwort</font></label>
+								<input type="password" name="feld2" size=15 maxlength=15 value="Passwort"/>
 							</td>
 							<td>
-								<label for="feld3"><font size="4">Beispiel 3</font></label>
+								<label for="feld3"><font size="4">Button</font></label>
 								<input type="file" name="feld3" size=15/>
 							</td>
 						</tr>
-					</table>
-					<table border="0">
-						<tr>
-							<td>name</td>
-							<td>Eindeutiger Name des Eingabefeldes</td>
-						</tr>
-						<tr>
-							<td>size</td>
-							<td>Anzahl der Zeichen im Eingabefeld</td>
-						</tr>
-						<tr>
-							<td>maxlength</td>
-							<td>Anzahl der einzutragenen Zeichen im Eingabefeld</td>
-						</tr>
-						<tr>
-							<td>value</td>
-							<td>Vorgabewert oder -text</td>
-						</tr>
-						<tr>
-							<td>password</td>
-							<td>Passwortfeld durch ***</td>
-						</tr>
-						<tr>
-							<td>readonly</td>
-							<td>Inhalt kann nur gelesen werden</td>
-						</tr>
-					</table>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					<h2>Formulare - Code und Attribute</h2>
-					<p><strong>Input-Code und seine Attribute</strong></p>
-					<pre><code data-trim>
-					1. <input name="feld1" size=15 maxlength=15 value="Eingabe 1"/>
-					2. <input type="password" name="feld2" size=15 maxlength=15 value="Eingabe 2"/>
-					3. <input type="file" name="feld3" size=15/>
-					</code></pre>
-					</br>
+					</table></br>
 					<table border="0">
 						<tr>
 							<td>name</td>
@@ -414,7 +387,7 @@
 					</textarea>
 					</td>
 					</tr>
-					</table>
+					</table></br>
 					<table border="0">
 						<tr>
 							<td>name</td>
@@ -472,7 +445,7 @@
 								</select>
 							</td>
 						</tr>
-					</table>
+					</table></br>
 					<table border="0">
 						<tr>
 							<td>name</td>
@@ -517,7 +490,7 @@
 								<input type="checkbox" name="checkbox1" value="name1" >Auswahl 4
 							</td>
 						</tr>
-					</table>
+					</table></br>
 					<table border="0">
 						<tr>
 							<td>name</td>
@@ -569,7 +542,7 @@
 								<input type=reset name="reset" value="Loeschen"/>
 							</td>
 						</tr>
-					</table>
+					</table></br>
 					<table border="0">
 						<tr>
 							<td>submit</td>
@@ -662,22 +635,174 @@
 							<td>Gruppierung von Medieninhalten</td>
 						</tr>
 						<tr>
-							<td>footer</td>
+							<td><p class="fragment highlight-red">footer</p></td>
 							<td>Definiert die Fusszeile eines Dokumenteninhaltes</td>
 						</tr>
 						<tr>
-							<td>header</td>
+							<td><p class="fragment highlight-red">header</p></td>
 							<td>Definiert den Kopfbereich eines Dokumenteninhaltes</td>
 						</tr>
 						<tr>
-							<td>nav</td>
+							<td><p class="fragment highlight-red">nav</p></td>
 							<td>Element zur Auszeichnung von Navigationen</td>
 						</tr>
 						<tr>
-							<td>section</td>
+							<td><p class="fragment highlight-red">section</p></td>
 							<td>Unterteilt einen "article" in unterschiedliche Sektionen</td>
 						</tr>
 					</table>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2>HTML5 Strukturelemte </h2>
+					<p><strong>Strukturelemt &lt;header&gt;</strong></p>
+					<p>Für eine verbesserte semantischeInformationBedeutung: semantischeder Bedeutung,
+					dem Sinn entsprechend Strukturierung des Quelltextes wurde das <header.> Element in die HTML5
+					Spezifikation implementiert. Gemäß der Spezifikation ist das <header.> Element eine 
+					Kopfzeile für einen Abschnitt innerhalb des Dokuments und enthält in der Regel 
+					Überschriften des Abschnitts zusammen mit einführenden Informaionen oder 
+					Navigationshilfen. Somit können neben dem Kopfbereich der Webseite auch Elemente 
+					wie beispielsweise <section.> oder <article.> mit einem <header.> versehen werden.<p>
+					</br>
+					<p><strong>Notation</strong></p>
+				<pre><code data-trim>
+				<header [Attribute]>[Elementinhalt]</header>
+				</pre></code>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2>HTML5 Strukturelemte </h2>
+					<p><strong>Strukturelemt &lt;nav&gt;</strong></p>
+					<p>Mit Implementierung des &lt;nav&gt; Elements in die HTML5 Spezifikation wurde eine 
+					Möglichkeit geschaffen, eine oder mehrere Navigationsleisten oder auch einen Bereich 
+					für zusätzliche Informationen semantisch korrekt auszuzeichnen. Der Inhalt des 
+					Navigationsbereichs enthält beispielsweise Hyperlinks auf andere Seiten beziehungsweise
+					Verweise auf Inhalte innerhalb der Seite.
+					Gemäß der Spezifikation darf das &lt;nav&gt; Element nicht als nachfolgendes Element 
+					eines &lt;address&gt; Elements verwandt werden. Verweise innerhalb des &lt;footer&gt; Elementes 
+					sollten entsprechend der semantischenInformationBedeutung: semantischender Bedeutung,
+					dem Sinn entsprechend Strukturierung ebenfalls nicht mit dem &lt;nav&gt; Element, sondern 
+					weiterhin mit Hilfe von Listen-Elementen definiert werden.<p>
+					</br>
+					<p><strong>Notation</strong></p>
+				<pre><code data-trim>
+				<nav [Attribute]>[Elementinhalt]</nav>
+				</pre></code>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2>HTML5 Strukturelemte </h2>
+					<p><strong>Strukturelemt &lt;section&gt;</strong></p>
+					<p>Entsprechend der Spezifikation des &lt;article&gt; Elements steht für eine weitere 
+					Untergliederung der textuellen Inhalte innerhalb des &lt;article&gt; Elements das  &lt;section&gt; 
+					Element zur Verfügung. Die einzelnen Abschnitte eines Artikels lassen sich somit 
+					semantischInformationBedeutung: semantischder Bedeutung, dem Sinn entsprechend korrekt
+					strukturieren. Gemäß der HTML5 Spezifikation zeichnet das &lt;section&gt; Element grundlegend
+					einen eigenständigen logischen textuellen Inhalt innerhalb eines &lt;article&gt; Elements 
+					aus, das aus logischer Sicht eine Art Unterdokument darstellt. <p>
+					</br>
+					<p><strong>Notation</strong></p>
+				<pre><code data-trim>
+				<section [Attribute]>[Elementinhalt]</section>
+				</pre></code>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2>HTML5 Strukturelemte </h2>
+					<p><strong>Strukturelemt &lt;footer&gt;</strong></p>
+					<p>Für eine verbesserte semantischeInformationBedeutung: semantischeder Bedeutung, dem
+					Sinn entsprechend Strukturierung des Quelltextes wurde das &lt;footer&gt; Element in die HTML5
+					Spezifikation implementiert. Gemäß der Spezifikation ist das &lt;footer&gt; Element eine Fußzeile
+					für einen Abschnitt innerhalb des Dokuments und enthält in der Regel Informationen den 
+					Autor, Verweise zu verwandten Dokumenten sowie Urheber-Daten. Somit können neben dem 
+					Fußbereich der Webseite auch Elemente wie beispielsweise &lt;section&gt; oder &lt;article&gt; mit
+					einem &lt;footer&gt; versehen werden. <p>
+					</br>
+					<p><strong>Notation</strong></p>
+				<pre><code data-trim>
+				<footer [Attribute]>[Elementinhalt]</footer>
+				</pre></code>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2>HTML5 Beispielseite - Code</h2>
+					<p><strong>&lt;header&gt; - header container</strong></p>
+					<pre><code data-trim>
+				<header>
+						<p>HTML5 Beispielseite</p>
+					</header>
+					</pre></code>
+					<p><strong>&lt;nav&gt; - nav container</strong></p>
+					<pre><code data-trim>
+				<nav>
+	<ul>
+		<li><a href="tabellen.html">Tabellen</a></li>
+		<li><a href="formulare.html">Formulare</a></li>
+		<li><a href="HTML5.html">HTML5</a></li>
+	</ul>
+</nav>
+					</pre></code>
+					<p><strong>&lt;section&gt; - section container</strong></p>
+					<pre><code data-trim>
+				<section>
+	<header>
+		<h1>Ueberschrift</h1>
+	</header>
+	<p>...</p>
+</section>
+					</pre></code>
+					<p><strong>&lt;footer&gt; - footer container</strong></p>
+					<pre><code data-trim>
+				<footer>
+	<ul>
+		<li><a href="impressum.html">Impressum</a></li>
+		<li><a href="kontakt.html">Kontakt</a></li>
+	</ul>
+</footer>
+					</pre></code>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2>HTML5 Beispielseite</h2>
+					<html>
+					<head>
+					<title>Website in HTML 5 als direktes Beispiel</title>
+					<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+					<meta charset="UTF-8">
+					</head>
+					<body>
+					<header>
+					  <p>HTML5 Beispielseite</p>
+					</header>
+					<nav>
+					  <ul>
+						<li><a href="#">Startseite</a></li>
+						<li><a href="#">Über uns</a></li>
+					  </ul>
+					</nav>
+					<section>
+					  <h1>Willkommen zur HTML 5 Beispielwebsite</h1>
+					  <p>Diese Website gliedert sich in 4 Bereiche</p>
+					  <ul>
+						<li>Kopfzeile: Hintergrundbild-Download</li>
+						<li>Zeile Steuerung: Hintergrundfarbe ist #ceb98e</li>
+						<li>Uebergang mit Schattenwurf: Download Schattenwurf</li>
+						<li>Inhaltsbereich</li>
+					  </ul>
+					  <p>Um die verschiedenen Bereiche beim Entwickeln am besten Rahmen ziehen, 
+					  damit sofort erkennbar ist, wo welcher Bereiche sitzt :)</p>
+					</section>
+					<footer>
+					  <p>&copy; WBA1 - HTML Advanced</a></p>
+					</footer>
+					</body>
+					</html>
 				</script>
 			</section>
 		</section><!-- HTML5 Ende -->
