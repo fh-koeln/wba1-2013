@@ -298,9 +298,11 @@
 						<table>
 							<tr>
 								<td>
+									<div style="margin-left:47px">
 									<textarea name="area1" rows=5 cols=15>
 										Das ist eine Textbox
 									</textarea>
+									</div>
 								</td>
 							</tr>
 						</table>
@@ -333,20 +335,24 @@
 						<table>
 							<tr>
 								<td>
+									<div style="margin-left:22px">
 									<label for="dropdown"><font size="4">Beispiel 1</font></label></br>
 									<select name="dropdown">
 										<option>Auswahl 1</option>
 										<option>Auswahl 2</option>
 										<option selected>Auswahl 3</option>
 									</select>
+									</div>
 								</td>
 								<td>
+									<div style="margin-left:22px">
 									<label for="dropdown"><font size="4">Beispiel 2</font></label></br>
 									<select name="dropdown" size=3>
 										<option>Auswahl 1</option>
 										<option>Auswahl 2</option>
 										<option selected>Auswahl 3</option>
 									</select>
+									</div>
 								</td>
 							</tr>
 							<tr>
@@ -398,10 +404,12 @@
 						<table>
 							<tr>
 								<td>
+									<div style="margin-left:43px">
 									<label for="radio"><font size="4">Beispiel 1</font></label></br>
 									<input type=radio name="radio1" value="name1">Auswahl 1</br>
 									<input type=radio name="radio1" value="name2">Auswahl 2</br>
 									<input type=radio name="radio1" value="name3" checked>Auswahl 3
+									</div>
 								</td>
 							</tr>
 							<tr>
@@ -442,10 +450,12 @@
 						<table>
 							<tr>
 								<td>
+									<div style="margin-left:43px">
 									<label for="checkbox1"><font size="4">Beispiel 1</font></label></br>
 									<input type=checkbox name="checkbox1" value="name1">Auswahl 1</br>
 									<input type=checkbox name="checkbox1" value="name2">Auswahl 2</br>
 									<input type=checkbox name="checkbox1" value="name3" checked>Auswahl 3
+									</div>
 								</td>
 							</tr>
 							<tr>
@@ -486,12 +496,16 @@
 						<table>
 							<tr>
 								<td>
+									<div style="margin-left:23px">
 									<label for="submit"><font size="4">Beispiel 1</font></label></br>
 									<input type=submit name="submit" value="Abschicken"/>
+									</div>
 								</td>
 								<td>
+									<div style="margin-left:21px">
 									<label for="reset"><font size="4">Beispiel 2</font></label></br>
 									<input type=reset name="reset" value="Löschen"/>
+									</div>
 								</td>
 							</tr>
 							<tr>
@@ -530,30 +544,24 @@
 						<p><strong>Beispiel für ein Kontaktformular</strong></p></br>
 							<form>
 								<div>
-									<label for="absender">Ihre E-Mail-Adresse:</label>
-									<input type="text" id="absender" name="absender"/>
-								</div>
-								<div>
-									<label for="nachricht">Ihre Nachricht:</label>
-									<textarea id="nachricht" name="nachricht" cols="22" rows="5"></textarea>
-								</div>
-								<div>
+									<label for="absender"><font size="4">Ihre E-Mail-Adresse:</font></label>
+									<input type="text" id="absender" name="absender" size=28/></br>
+									<label for="nachricht"><font size="4">Ihre Nachricht:</font></label>
+									<textarea style="margin-left:38px" id="nachricht" name="nachricht" cols="22" rows="5"></textarea></br>
 									<input type="submit" value="Abschicken"/>
+									<input type="reset" value="Löschen"/>
 								</div>
 							</form>
-						<hr>
+						</br><hr>
 						<pre><code data-trim>
 <form id="kontaktformular" name="kontaktformular" action="">
   <div>
-    <label for="absender">Ihre E-Mail-Adresse:</label>
-    <input type="text" id="absender" name="absender"/>
-  </div>
-  <div>
-    <label for="nachricht">Ihre Nachricht:</label>
-    <textarea id="nachricht" name="nachricht" cols="22" rows="5"></textarea>
-  </div>
-  <div>
+    <label for="absender"><font size="4">Ihre E-Mail-Adresse:</font></label>
+    <input type="text" id="absender" name="absender" size=28/></br>
+    <label for="nachricht"><font size="4">Ihre Nachricht:</font></label>
+    <textarea style="margin-left:38px" id="nachricht" name="nachricht" cols="22" rows="5"></textarea></br>
     <input type="submit" value="Abschicken"/>
+    <input type="reset" value="Löschen"/>
   </div>
 </form>
 						</pre></code>
