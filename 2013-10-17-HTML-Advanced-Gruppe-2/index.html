@@ -63,12 +63,6 @@
 					</li>
 					<li class="fragment">Formulare</li>
 					<li class="fragment">Strukturelemente HTML5</li>
-						<ul>
-							<li class="fragment">header</li>
-							<li class="fragment">nav</li>
-							<li class="fragment">section</li>
-							<li class="fragment">footer</li>
-						</ul>
 				</ul>
 			</p>
 		</section>
@@ -208,15 +202,6 @@
 						&lt;/th&gt;
 					&lt;/thead&gt;
 					</pre></code>
-					<p><strong>&lt;tbody&gt; - table body</strong></p>
-					<p>Anlegen des Tabellenkoerpers</p>
-					<pre><code data-trim>
-					&lt;tbody&gt;
-					   &lt;tr&gt;
-							&lt;td&gt;&lt;td&gt;
-					   &lt;/tr&gt;
-					&lt;/tbody&gt;
-					</pre></code>
 					<p><strong>&lt;tfoot&gt; - table foot</strong></p>
 					<p>Anlegen des Tabellenfusses</p>
 					<pre><code data-trim>
@@ -225,6 +210,15 @@
 							&lt;td&gt;&lt;td&gt;
 					   &lt;/tr&gt;
 					&lt;/tfoot&gt;
+					</pre></code>
+					<p><strong>&lt;tbody&gt; - table body</strong></p>
+					<p>Anlegen des Tabellenkoerpers</p>
+					<pre><code data-trim>
+					&lt;tbody&gt;
+					   &lt;tr&gt;
+							&lt;td&gt;&lt;td&gt;
+					   &lt;/tr&gt;
+					&lt;/tbody&gt;
 					</pre></code>
 				</script>
 			</section>
@@ -241,18 +235,18 @@
 		  <th>Studiengang 2</th>
 		</tr>
 	  </thead>
-	  <tbody>
-		<tr>
-		  <td>Mi</td>
-		  <td>Ti</td>
-		</tr>
-	  </tbody>
 	  <tfoot>
 		<tr>
 		  <td>600</td>
 		  <td>200</td>
 		</tr>
 	  </tfoot>
+	  <tbody>
+		<tr>
+		  <td>Mi</td>
+		  <td>Ti</td>
+		</tr>
+	  </tbody>
 </table>	
 	</pre></code>
 					<p><i>Ergebnis :</i></p>
@@ -265,8 +259,8 @@
 						</thead>
 						<tfoot>
 							<tr>
-								<td>1000</td>
-								<td>30</td>
+								<td>600</td>
+								<td>200</td>
 							</tr>
 						</tfoot>
 						<tbody>
@@ -668,13 +662,17 @@
 					<ul>
 						<li>Forum Beitrag</li>
 						<li>Blogbeitrag</li>
-						<li>Nachricht</li>
-						<li>Kommentar</li>
+						<li>etc.</li>
 					</ul>
 					</br>
 					<p><strong>Notation</strong></p>
 				<pre><code data-trim>
-				<article [Attribute]>[Elementinhalt]</article>
+			<article>
+	<header>
+		<h1>Ueberschrift</h1>
+	</header>
+	<p>Dies ist ein Beispieltext.</p>
+</article>
 				</pre></code>
 				</script>
 			</section>
@@ -688,7 +686,10 @@
 					</br>
 					<p><strong>Notation</strong></p>
 				<pre><code data-trim>
-				<header [Attribute]>[Elementinhalt]</header>
+		<header>
+	<titel>Header Beispiel</titel>
+	<meta charset="UTF-8">
+</header>
 				</pre></code>
 				</script>
 			</section>
@@ -701,7 +702,12 @@
 					</br>
 					<p><strong>Notation</strong></p>
 				<pre><code data-trim>
-				<nav [Attribute]>[Elementinhalt]</nav>
+				<nav>
+	<ul>
+		<li><a href="#">Startseite</a></li>
+		<li><a href="#">Ueber uns</a></li>
+	</ul>
+</nav>
 				</pre></code>
 				</script>
 			</section>
@@ -710,10 +716,16 @@
 					<h2>HTML5 Strukturelemte </h2>
 					<p><strong>Strukturelemt &lt;section&gt;</strong></p>
 					<p>Der &lt;section&gt; Tag definiert Abschnitte in einem Dokument, wie Kapitel, Kopfzeilen, Fusszeilen oder andere Abschnitte des Dokuments.</p>
+					<p>Erstellt einen weiteren untergeordneten Bereich (hat meistens ein eigene Sub-Headline)</p>
 					</br>
 					<p><strong>Notation</strong></p>
 				<pre><code data-trim>
-				<section [Attribute]>[Elementinhalt]</section>
+				<section>
+	<header>
+		<h1>Ueberschrift</h1>
+	</header>
+	<p>Dies ist ein Beispieltext.</p>
+</section>
 				</pre></code>
 				</script>
 			</section>
@@ -727,7 +739,9 @@
 					</br>
 					<p><strong>Notation</strong></p>
 				<pre><code data-trim>
-				<footer [Attribute]>[Elementinhalt]</footer>
+			<footer>
+		<p>Dies ist eine Fusszeile.</p>
+</footer>
 				</pre></code>
 				</script>
 			</section>
