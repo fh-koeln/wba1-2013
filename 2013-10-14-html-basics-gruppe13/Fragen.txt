@@ -2,34 +2,34 @@
 Fragen MAIK (geschichtliches):
 ###################################
 Frage 1)
-Frage:
-1.
-2.
-3.
+Frage:Wofür steht HTML?
+1.How to meet ladies.
+2.Hypertext Markup Language.
+3.Help tool machine layout.
 
 Frage 2)
-Frage:
-1.
-2.
-3.
+Frage:Wer Entwickelte HTML?
+1.SUN
+2.Microsoft
+3.CERN
 
 Frage 3)
-Frage:
-1.
-2.
-3.
+Frage:Welche dieser Syntax ist korrekt?
+1.<br>TextText</br>
+2.<img>
+3.<p>TextText<p>
 
 Frage 4)
-Frage:
-1.
-2.
-3.
+Frage:Was Kann HTML?
+1.Bilder anzeigen.
+2.Verknüpfungen anzeigen.
+3.Berechnungen ausführen.
 
 Frage 5)
-Frage:
-1.
-2.
-3.
+Frage:Welche Funktion hat der W3C?
+1.Standartiesieren Techniken im Internet.
+2.Überwachen weltweiten Datenverkehr.
+3.Bekämpfen Viren.
 
 ##################################
 Fragen ROBERT (Syntax):
