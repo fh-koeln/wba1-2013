@@ -80,24 +80,24 @@
 						<li>Tabellen bestehen aus Reihen und Spalten.</li>
 						<li>Fuer eine Tabelle benoetigen wir 3 verschiedene HTML-TAGs.</li>
 					<ul></br>
-					<p class="fragment highlight-red">Tabelle:</p>
+					<p class="fragment" >Tabelle:</p>
 					<code>
 						<ul>
-							<li>&lt;table&gt; &lt;/table&gt; - Grundgeruest</li>
+							<li class="fragment">&lt;table&gt; &lt;/table&gt; - Grundgeruest</li>
 						</ul>
 					</code></br>
 					
-					<p class="fragment highlight-red">Tabellenzeile:</p>
+					<p class="fragment">Tabellenzeile:</p>
 					<code>
 						<ul>
-							<li>&lt;tr&gt; &lt;/tr&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Tabellenzeilen</li>
+							<li class="fragment">&lt;tr&gt; &lt;/tr&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Tabellenzeilen</li>
 						</ul>
 					</code></br>
 					
-					<p class="fragment highlight-red">Tabellenzelle:</p>
+					<p class="fragment">Tabellenzelle:</p>
 					<code>
 						<ul>
-							<li>&lt;td&gt; &lt;/td&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Tabellenzellen</li>
+							<li class="fragment">&lt;td&gt; &lt;/td&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Tabellenzellen</li>
 						</ul>
 					</code>
 				</script>
@@ -137,7 +137,7 @@
 					<p><i>Beispiel :</i></p>
 					<pre>
 						<code data-trim>
-						&lt;table border="1"&gt;
+						&lt;table&gt;
 					   &lt;tr&gt;
 						  &lt;td&gt; Zeile 1, Spalte 1 &lt;/td&gt;
 						  &lt;td&gt; Zeile 1, Spalte 2 &lt;/td&gt;
@@ -150,7 +150,7 @@
 						</code>
 					</pre>
 					<p><i>Ergebnis :</i></p>
-					<table border="1">
+					<table>
 						<tr>
 							<td> Zeile 1, Spalte 1 </td>
 							<td> Zeile 1, Spalte 2 </td>
@@ -171,34 +171,28 @@
 							<li>Es gibt eine Reihe von Modifikatoren einer Tabelle.</li>
 							<li>Fuer eine bessere Uebersicht verwendet wir...</li>
 						<ul></br>
-						<p class="fragment highlight-red">Tabellen Raender:</p>
+						<p class="fragment">Oberste Zeilen der Tabelle:</p>
 						<code>
 							<ul>
-								<li>&lt;table border="2"&gt; &lt;/table&gt;</li>
+								<li class="fragment">&lt;thead&gt; &lt;/thead&gt;</li>
 							</ul>
 						</code>
-						<p class="fragment highlight-red">Oberste Zeile der Tabelle:</p>
+						<p class="fragment">Tabellenkopf:</p>
 						<code>
 							<ul>
-								<li>&lt;thead&gt; &lt;/thead&gt;</li>
+								<li class="fragment">&lt;th&gt; &lt;/th&gt;</li>
 							</ul>
 						</code>
-						<p class="fragment highlight-red">Tabellenkopf:</p>
+						<p class="fragment">Tabellenkoerper:</p>
 						<code>
 							<ul>
-								<li>&lt;th&gt; &lt;/th&gt;</li>
+								<li class="fragment">&lt;tbody&gt; &lt;/tbody&gt;</li>
 							</ul>
 						</code>
-						<p class="fragment highlight-red">Tabellenkoerper:</p>
+						<p class="fragment">Tabellenfuss:</p>
 						<code>
 							<ul>
-								<li>&lt;tbody&gt; &lt;/tbody&gt;</li>
-							</ul>
-						</code>
-						<p class="fragment highlight-red">Tabellenfuss:</p>
-						<code>
-							<ul>
-								<li>&lt;tfoot&gt; &lt;/tfoot&gt;</li>
+								<li class="fragment">&lt;tfoot&gt; &lt;/tfoot&gt;</li>
 							</ul>
 						</code></br>
 				</script>
@@ -239,28 +233,28 @@
 					<h2>Erweiterte Tabellen - Code</h2>
 					<h3>Fuellen einer Tabelle</h3>
 					<p><i>Beispiel :</i></p>
-					<pre><code data-trim>
-					<table border="1">
-					  <thead>
-						<tr>
-						  <th>Studiengang 1</th>
-						  <th>Studiengang 2</th>
-						</tr>
-					  </thead>
-					  <tbody>
-						<tr>
-						  <td>Mi</td>
-						  <td>Ti</td>
-						</tr>
-					  </tbody>
-					  <tfoot>
-						<tr>
-						  <td>600</td>
-						  <td>200</td>
-						</tr>
-					  </tfoot>
-					</table>	
-					</pre></code>
+	<pre><code data-trim>
+	<table>
+	  <thead>
+		<tr>
+		  <th>Studiengang 1</th>
+		  <th>Studiengang 2</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td>Mi</td>
+		  <td>Ti</td>
+		</tr>
+	  </tbody>
+	  <tfoot>
+		<tr>
+		  <td>600</td>
+		  <td>200</td>
+		</tr>
+	  </tfoot>
+</table>	
+	</pre></code>
 					<p><i>Ergebnis :</i></p>
 					<table border="1">
 						<thead>
@@ -304,7 +298,7 @@
 					<p><strong>&lt;form&gt; - formular</strong></p>
 					<p>Anlegen des Formulars</p>
 					<pre><code data-trim>
-					&lt;form&gt;
+					&lt;form action=""&gt;
 					&lt;/form&gt;
 					</pre></code>
 					<p><strong>&lt;input&gt; - input option</strong></p>
@@ -476,6 +470,10 @@
 					<pre><code data-trim>
 					<input type=radio name="radio1" value="name1">Auswahl 1
 					<input type=radio name="radio1" value="name2">Auswahl 2
+					</code></pre>
+					</td>
+					<td>
+					<pre><code data-trim>
 					<input type="checkbox" name="checkbox1" value="name1" >Auswahl 3
 					<input type="checkbox" name="checkbox1" value="name1" >Auswahl 4
 					</code></pre>
@@ -485,7 +483,10 @@
 							<td>
 								<label for="radio"><font size="3">Beispiel 1</font></label></br>
 								<input type=radio name="radio1" value="name1">Auswahl 1</br>
-								<input type=radio name="radio1" value="name2">Auswahl 2</br>
+								<input type=radio name="radio1" value="name2">Auswahl 2
+							</td>
+							<td>
+								<label for="radio"><font size="3">Beispiel 2</font></label></br>
 								<input type="checkbox" name="checkbox1" value="name1" >Auswahl 3<br>
 								<input type="checkbox" name="checkbox1" value="name1" >Auswahl 4
 							</td>
@@ -620,7 +621,7 @@
 					</ul></br></br>
 					<table border="0">
 						<tr>
-							<td>article</td>
+							<td><p class="fragment highlight-red">article</p></td>
 							<td>Auszeichnung von textuell relevanten Dokumenteninhalten</td>
 						</tr>
 						<tr>
@@ -661,14 +662,29 @@
 			<section data-markdown>
 				<script type="text/template">
 					<h2>HTML5 Strukturelemte </h2>
+					<p><strong>Strukturelemt &lt;article&gt;</strong></p>
+					<p>Der &lt;article&gt; Tag gibt unabhaengige, in sich geschlossene Inhalte.</p>
+					<p>Moeglicher Einsatz fuer das &lt;article&gt; Element:</p>
+					<ul>
+						<li>Forum Beitrag</li>
+						<li>Blogbeitrag</li>
+						<li>Nachricht</li>
+						<li>Kommentar</li>
+					</ul>
+					</br>
+					<p><strong>Notation</strong></p>
+				<pre><code data-trim>
+				<article [Attribute]>[Elementinhalt]</article>
+				</pre></code>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2>HTML5 Strukturelemte </h2>
 					<p><strong>Strukturelemt &lt;header&gt;</strong></p>
-					<p>Für eine verbesserte semantischeInformationBedeutung: semantischeder Bedeutung,
-					dem Sinn entsprechend Strukturierung des Quelltextes wurde das <header.> Element in die HTML5
-					Spezifikation implementiert. Gemäß der Spezifikation ist das <header.> Element eine 
-					Kopfzeile für einen Abschnitt innerhalb des Dokuments und enthält in der Regel 
-					Überschriften des Abschnitts zusammen mit einführenden Informaionen oder 
-					Navigationshilfen. Somit können neben dem Kopfbereich der Webseite auch Elemente 
-					wie beispielsweise <section.> oder <article.> mit einem <header.> versehen werden.<p>
+					<p>Der &lt;header&gt; Tag gibt einen Kopfbereich fuer ein Dokument oder Abschnitt.</p>
+					<p>Das &lt;header&gt; Element sollte als Container fuer Inhalte oder als einleitender Satz von Navigations-Links verwendet werden.</p>
+					<p>Man kann mehrere Elemente &lt;header&gt; in einem Dokument. </p>
 					</br>
 					<p><strong>Notation</strong></p>
 				<pre><code data-trim>
@@ -680,16 +696,8 @@
 				<script type="text/template">
 					<h2>HTML5 Strukturelemte </h2>
 					<p><strong>Strukturelemt &lt;nav&gt;</strong></p>
-					<p>Mit Implementierung des &lt;nav&gt; Elements in die HTML5 Spezifikation wurde eine 
-					Möglichkeit geschaffen, eine oder mehrere Navigationsleisten oder auch einen Bereich 
-					für zusätzliche Informationen semantisch korrekt auszuzeichnen. Der Inhalt des 
-					Navigationsbereichs enthält beispielsweise Hyperlinks auf andere Seiten beziehungsweise
-					Verweise auf Inhalte innerhalb der Seite.
-					Gemäß der Spezifikation darf das &lt;nav&gt; Element nicht als nachfolgendes Element 
-					eines &lt;address&gt; Elements verwandt werden. Verweise innerhalb des &lt;footer&gt; Elementes 
-					sollten entsprechend der semantischenInformationBedeutung: semantischender Bedeutung,
-					dem Sinn entsprechend Strukturierung ebenfalls nicht mit dem &lt;nav&gt; Element, sondern 
-					weiterhin mit Hilfe von Listen-Elementen definiert werden.<p>
+					<p>Der &lt;nav&gt; Tag definiert eine Reihe von Navigations-Links.</p>
+					<p>Nicht alle Links in einem Dokuments muessen in einem &lt;nav&gt; Element sein. Das &lt;nav&gt; Element wird nur fuer Gruppen von Links definiert (Navigationsleiste).</p>
 					</br>
 					<p><strong>Notation</strong></p>
 				<pre><code data-trim>
@@ -701,13 +709,7 @@
 				<script type="text/template">
 					<h2>HTML5 Strukturelemte </h2>
 					<p><strong>Strukturelemt &lt;section&gt;</strong></p>
-					<p>Entsprechend der Spezifikation des &lt;article&gt; Elements steht für eine weitere 
-					Untergliederung der textuellen Inhalte innerhalb des &lt;article&gt; Elements das  &lt;section&gt; 
-					Element zur Verfügung. Die einzelnen Abschnitte eines Artikels lassen sich somit 
-					semantischInformationBedeutung: semantischder Bedeutung, dem Sinn entsprechend korrekt
-					strukturieren. Gemäß der HTML5 Spezifikation zeichnet das &lt;section&gt; Element grundlegend
-					einen eigenständigen logischen textuellen Inhalt innerhalb eines &lt;article&gt; Elements 
-					aus, das aus logischer Sicht eine Art Unterdokument darstellt. <p>
+					<p>Der &lt;section&gt; Tag definiert Abschnitte in einem Dokument, wie Kapitel, Kopfzeilen, Fusszeilen oder andere Abschnitte des Dokuments.</p>
 					</br>
 					<p><strong>Notation</strong></p>
 				<pre><code data-trim>
@@ -719,13 +721,9 @@
 				<script type="text/template">
 					<h2>HTML5 Strukturelemte </h2>
 					<p><strong>Strukturelemt &lt;footer&gt;</strong></p>
-					<p>Für eine verbesserte semantischeInformationBedeutung: semantischeder Bedeutung, dem
-					Sinn entsprechend Strukturierung des Quelltextes wurde das &lt;footer&gt; Element in die HTML5
-					Spezifikation implementiert. Gemäß der Spezifikation ist das &lt;footer&gt; Element eine Fußzeile
-					für einen Abschnitt innerhalb des Dokuments und enthält in der Regel Informationen den 
-					Autor, Verweise zu verwandten Dokumenten sowie Urheber-Daten. Somit können neben dem 
-					Fußbereich der Webseite auch Elemente wie beispielsweise &lt;section&gt; oder &lt;article&gt; mit
-					einem &lt;footer&gt; versehen werden. <p>
+					<p>Der &lt;footer&gt; Tag definiert eine Fusszeile eines Dokuments oder Abschnitts.</p>
+					<p>Eine Fusszeile enthaelt typischerweise den Autor des Dokuments, Copyright-Informationen, Links den Nutzungsbedingungen, Kontaktinformationen etc.</p>
+					<p>Sie koennen mehrere Elemente &lt;footer&gt; in einem Dokument.</p>
 					</br>
 					<p><strong>Notation</strong></p>
 				<pre><code data-trim>
@@ -736,6 +734,19 @@
 			<section data-markdown>
 				<script type="text/template">
 					<h2>HTML5 Beispielseite - Code</h2>
+					<p><strong>&lt;article&gt; - article container</strong></p>
+					<pre><code data-trim>
+				<article>
+	<header>
+		<h1>Ueberschrift in h1</h1>
+		<p>Texti Text.</p>
+	</header>
+	<p>... Hier steht irgendwas ...</p>
+	<footer>
+		<p>HTML Advanced</p>
+	</footer>
+</article>
+					</pre></code>
 					<p><strong>&lt;header&gt; - header container</strong></p>
 					<pre><code data-trim>
 				<header>
@@ -752,6 +763,11 @@
 	</ul>
 </nav>
 					</pre></code>
+				</script>
+			</section>
+						<section data-markdown>
+				<script type="text/template">
+					<h2>HTML5 Beispielseite - Code</h2>
 					<p><strong>&lt;section&gt; - section container</strong></p>
 					<pre><code data-trim>
 				<section>
@@ -788,7 +804,7 @@
 					<nav>
 					  <ul>
 						<li><a href="#">Startseite</a></li>
-						<li><a href="#">Über uns</a></li>
+						<li><a href="#">Ueber uns</a></li>
 					  </ul>
 					</nav>
 					<section>
