@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Title of presentation -->
+		<title>HTML Advanced</title>
+		<!-- Short description of presentation -->
+		<meta name="description" content="Demo of Reveal.js functions and features">
+		<!-- Author of presentation -->
+		<meta name="author" content="Dominik Schilling">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/solarized_light.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>HTML for advanced Users</h1>
+					<h2>erweiterte Befehle & HTML5</h2>
+
+					<p>17. Oktober 2013</p>
+
+					<p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
+					Campus Gummersbach</p>
+
+					<p style="margin-top:10%">Dennis Dubbert<br>
+					<strong>//</strong><br>
+					Alexander Jan Müller</p>
+				</section>
+
+				<section>
+						<h2>Inhalt</h2>
+						<p>
+							<ul>
+								<li class="fragment">Tabellen
+									<ul>
+										<li class="fragment">einfache Tabellen</li>
+										<li class="fragment">erweiterte Tabellen</li>
+									</ul>
+								</li>
+								<li class="fragment">Formulare</li>
+								<li class="fragment">Exkurs HTML5</li>
+							</ul>
+						</p>
+				</section>
+				
+				<section> <!-- Tabellen for Beginners Anfang-->
+					<section data-markdown>
+						<script type="text/template">
+							###Tabellen for Beginners - Grundbegriffe
+							<p class="fragment highlight-blue">Tabelle:</p>
+							
+								<table>(hier steht Tabellenzeilen und -spalten)</table>
+
+							<p class="fragment highlight-blue">Tabellenzeile:</p>
+							
+								<tr>(hier steht eine Zeile)</tr>
+	
+							<p class="fragment highlight-blue">Tabellenzelle:</p>
+							
+								<td>(hier steht der Inhalt der Zelle)</td>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						###Tabellen for Beginners - Code
+						####Eine Ganze Tabelle:
+						
+							<!DOCTYPE html>
+							<html>
+								<head>
+									<meta charset="utf-8">
+									<title>Test</title>
+								</head>
+	
+								<body>
+									<table> <!-- Tabelle Anfang -->
+									<tr> <!-- Zeilen Anfang tr = Table Row -->
+										<td>Test 1</td> <!-- Tabellenzelle td = Table Data -->
+										<td>Test 2</td>
+										<td>Test 3</td>
+									</tr>
+									<tr>
+										<td>Test 4</td>
+										<td>Test 5</td>
+										<td>Test 6</td>
+									</tr>
+									</table>
+								</body>
+							</html>
+							
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							###Tabellen for Beginners - Beispiel
+							
+							<table> <!-- Tabelle Anfang -->
+								<tr> <!-- Zeilen Anfang tr = Table Row -->
+									<td>Test 1</td> <!-- Tabellenzelle td = Table Data -->
+									<td>Test 2</td>
+									<td>Test 3</td>
+								</tr>
+								<tr>
+									<td>Test 4</td>
+									<td>Test 5</td>
+									<td>Test 6</td>
+								</tr>
+							</table>
+							<img class="align-center" src="https://raw.github.com/fh-koeln/wba1-2013/2013-10-12-HTML-Advanced-Gruppe-1/2013-10-17-html-advanced-gruppe1/images/tabEasy.png">
+							
+						</script>
+					</section>
+				</section> <!-- Tabellen for Beginners ende  -->
+				
+				<section> <!-- Tabellen for Advanced Users Anfang-->
+					<section data-markdown>
+						<script type="text/template">
+							###Tabellen for Advanced User - Grundbegriffe
+							<p class="fragment highlight-blue">Tabellen Ränder</p>
+							
+								<table border="(Breite, z.B. 10)">"Inhalt"</table>
+								
+							<p class="fragment highlight-blue">Oberster Abschnitt einer Tabelle</p>
+								
+								<thead>"Inhalt"</thead>
+								
+							<p class="fragment highlight-blue">Tabellenkopf</p>
+								
+								<th>"Inhalt"</th>
+								
+							<p class="fragment highlight-blue">Tabellenkörper</p>
+								
+								<tbody>"Inhalt"</tbody>
+								
+							<p class="fragment highlight-blue">Tabellenfuß</p>
+								
+								<tfoot>"Inhalt"</tfoot>
+							
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						
+						###Tabellen for Advanced Users - Code
+						####Eine ganze Tabelle:
+						
+							<p>Einnahmen 1. Quartal 2013:</p>
+							<table> <!-- Tabelle Anfang -->
+								<thead>
+									<tr><th>Monat</th><th>Einnahmen</th></tr>
+								</thead>
+								<tbody>
+									<tr><td>Januar</td><td>10.000€</td></tr>
+									<tr><td>Februar</td><td>10.000€</td></tr>
+									<tr><td>März</td><td>10.000€</td></tr>
+								</tbody>					
+								<tfoot>
+									<tr><td>Gesamt</td><td>120.000€</td></tr>
+								</tfoot>
+							</table> <!-- Tabellen ende -->
+						</script>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+						
+						###Tabellen for Advanced Users - Beispiel
+						<p>Einnahmen 1. Quartal 2013:</p>
+							<table color="0000" border="3"> <!-- Tabelle Anfang -->
+								<thead>
+									<tr><th>Monat</th><th>Einnahmen</th></tr>
+								</thead>
+								<tbody>
+									<tr><td>Januar</td><td>10.000€</td></tr>
+									<tr><td>Februar</td><td>10.000€</td></tr>
+									<tr><td>März</td><td>10.000€</td></tr>
+								</tbody>					
+								<tfoot>
+									<tr><td>Gesamt</td><td>120.000€</td></tr>
+								</tfoot>
+							</table> <!-- Tabellen ende -->
+							<img class="align-center" src="https://raw.github.com/fh-koeln/wba1-2013/2013-10-12-HTML-Advanced-Gruppe-1/2013-10-17-html-advanced-gruppe1/images/tabAd.png">
+						
+						</script>
+					</section>
+
+				</section> <!-- Tabellen for Advanced Users ende  -->
+				
+				<section> <!-- Formulare Anfang  -->
+					<section data-markdown>
+						<script type="text/tamplate">
+							###Formulare - Was ist ein Formular?
+							<p class="fragment">
+								<img class="align-center" src="https://raw.github.com/fh-koeln/wba1-2013/2013-10-12-HTML-Advanced-Gruppe-1/2013-10-17-html-advanced-gruppe1/images/formular.png">
+							</p>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							###Formulare - Definieren
+							####Definition
+							
+								<form name="ein Name" action="Ziel angabe">
+									<!-- mit Formular Elementen Auffüllen-->
+								</form>
+							
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							###Formulare - Textelemente
+							####Text Label
+								<input type="text" name="Ich bekomme einen Namen" value="default-text" />
+								<input type="password" name="Ja, auch ich" value="versteckt" />
+								
+							<input type="text" name="Ich bekomme einen Namen" value="default-text" /> <input type="password" name="Ja, auch ich" value="versteckt" />
+							
+							
+							####Textfeld
+								<textarea name="Name" cols="50" rows="3">
+									Hier steht ein Text. Aber man kann auch was reinschreiben.
+								</textarea>
+								
+							<textarea name="Name" cols="50" rows="3">
+								Hier steht ein Text. Aber man kann auch was reinschreiben.
+							</textarea>
+							
+						</script>						
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						###Formulare - Einfach oder mehrfach Wählen
+						####Radiobuttons
+							
+							So weit klar? <br>
+							Ja <input type="radio" name="Name" value="Yes" />
+							Nein <input type="radio" name="Name" value="No" />
+							
+						So weit klar? <br>
+						Ja <input type="radio" name="Name" value="Yes" />
+						Nein <input type="radio" name="Name" value="No" />
+						
+						####Checkbox
+							Hier darfst du mehr wählen!
+							Ich <input type="checkbox" checked="check" />
+							Du <input type="checkbox" checked="check" />
+							Wir <input type="checkbox" checked="check" />
+							
+						Hier darfst du mehr wählen! <br>
+						Ich <input type="checkbox" checked="check" /> <br>
+						Du <input type="checkbox" checked="check" /> <br>
+						Wir <input type="checkbox" checked="check" /> <br>
+						</script>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+							###Formulare - Auswahllisten und Dropdownmenüs Definieren
+							####Auswahlliste:
+							
+								<select name="Dropdown" size="3">
+									<option label="Gestern">Gestern</option>
+									<option label="Heute">Heute</option>
+									<option label="Morgen">Morgen</option>
+								</select>
+								
+							<select name="Dropdown" size="3">
+								<option label="Gestern">Gestern</option>
+								<option label="Heute">Heute</option>
+								<option label="Morgen">Morgen</option>
+							</select>
+							
+							####Dropdown
+								...size="1"...
+								
+							<select name="Dropdown" size="1">
+								<option label="Gestern">Gestern</option>
+								<option label="Heute">Heute</option>
+								<option label="Morgen">Morgen</option>
+							</select>
+								
+						</script>						
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						###Formulare - Buttons
+						####Button
+						
+							<input type="button"  name="kann_Nichts" value="Ich kann nichts!" />
+							
+						<input type="button"  name="kann_Nichts" value="Ich kann nichts!" />
+						
+						####Bestätigung ist alles
+						
+							<input type="submit" name="submit_but" value="Okay" />
+							
+						<input type="submit" name="submit_but" value="Okay" />
+						
+						####Reset-Button
+						
+							<input type="reset" name="submit_but" value="Clear" />
+						
+						<form name"test" action"ziel">
+							<textarea name="Name" cols="50" rows="3">
+								Hier schreiben wir einen Text, den wir gleich Löschen.
+							</textarea> <br>
+							<input type="reset" name="submit_but" value="Clear" />
+						</form>
+						</script>						
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						###Formulare - Code
+							
+							<!DOCTYPE html>
+							<html>
+								<head>
+									<meta charset="utf-8">
+									<title>Test</title>
+								</head>
+								<body>
+									<form name="name" action="">
+										<input type="text" name"name" value="Vorname" /> <input type="text" name"name_n" value="Nachname" /><br>
+										<textarea name="Vita" cols="50" rows="3">
+											Schreib etwas über dich!
+										</textarea><br>
+										<input type="submit" name="button_submit" value="Okay"/>
+										<input type="reset" name="delete" value="reset" />
+									</form>
+								</body>
+							</html>
+							
+						<form name="name" action="">
+							<input type="text" name"name" value="Vorname" /> <input type="text" name"name_n" value="Nachname" /><br>
+							<textarea name="Vita" cols="50" rows="3">
+								Schreib etwas über dich!
+							</textarea><br>
+							<input type="submit" name="button_submit" value="Okay"/>
+							<input type="reset" name="delete" value="reset" />
+						</form>
+							
+						</script>
+					</section>
+				</section><!-- Formulare Ende -->
+				
+				<section><!-- HTML5 Anfang -->
+					<section data-markdown>
+						<script type="text/tamplate">
+						###HTML 5 - Was ist anders?
+						####HTML 4.01, die div-Variante:
+							
+							<!DOCTYPE html>
+							<html>
+								<head>
+									<title>Vergleich html-html5</title>
+									<meta charset="UTF-8">
+								</head>
+								
+								<body>
+									<div id="kopf">
+										<p>Bereich Kopf</p>
+									</div>
+										
+									<div id="inhalt">
+										<p>Bereich Inhalt</p>
+									</div>
+											
+									<div id="fuss">
+										<p>Bereich Fußzeile</p>
+									</div>
+								</body>
+							</html>
+							
+						<html>
+							<head>
+								<title>Vergleich html-html5</title>
+								<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+								<meta charset="UTF-8">
+							</head>
+							
+							<body>
+								<div id="kopf">
+									<p>Bereich Kopf</p>
+								</div>
+										
+								<div id="inhalt">
+									<p>Bereich Inhalt</p>
+								</div>
+											
+								<div id="fuss">
+									<p>Bereich Fußzeile</p>
+								</div>
+							</body>
+						</html>
+						</script>
+						
+					</section>
+					
+					<section data-markdown>
+						<script type="text/tamplate">
+						###HTML 5 - Was ist anders?
+						####HTML 5, logische Elemente:
+							
+							<!DOCTYPE html>
+							<html>
+								<head>
+									<title>Vergleich html-html5</title>
+									<meta charset="UTF-8">
+								</head>
+								
+								<body>
+									<header>
+										<p>Bereich Kopf</p>
+									</header>
+										
+									<section>
+										<p>Bereich Inhalt</p>
+									</section>
+											
+									<footer>
+										<p>Bereich Fußzeile</p>
+									</footer>
+								</body>
+							</html>
+							
+						<html>
+							<head>
+								<title>Vergleich html-html5</title>
+								<meta charset="UTF-8">
+							</head>
+							
+							<body>
+								<header>
+									<p>Bereich Kopf</p>
+								</header>
+										
+								<section>
+									<p>Bereich Inhalt</p>
+								</section>
+											
+								<footer>
+									<p>Bereich Fußzeile</p>
+								</footer>
+							</body>
+						</html>
+						</script>
+						
+					</section>
+					
+					<section data-markdown>
+						<script type="text/tamplate">
+						###HTML 5 - Strukturelemente
+						####doctype
+						<ul>
+							<li>Kürzer als in html 4.01 (leichter zu merken)</li>
+						</ul>
+						
+							<!DOCTYPE html>
+							<html>
+							.
+							.
+							</html>
+
+						####header
+						<ul>
+							<li>Bildet die Kopfzeile eines Dokuments</li>
+							<li>Kann auch in anderen Teilbereichen eine Kopfzeile darstellen (section,article)</li>
+						</ul>
+						
+							<header>
+								<titel>Header Beispiel</titel>
+								<meta charset="UTF-8">
+							</header>
+							
+						####footer
+						<ul>
+							<li>Wie header nur als Fußzeile</li>
+						</ul>
+						
+							<footer>
+								<p>Dies ist eine Fußzeile</p>
+							</footer>
+											
+						</script>
+						
+					</section>
+					
+					<section data-markdown>
+						<script type="text/tamplate">
+						###HTML 5 - Strukturelemente
+						####article
+						<ul>
+							<li>Erschafft einen Bereich für Inhalte</li>
+							<li>Unabhängiges und in sich geschlossenes Unterdokument (z.B. Blog-Post)</li>
+						</ul>
+						
+						####section
+						<ul>
+							<li>Kann innerhalb eines article´s verwendet werden</li>
+							<li>Erstellt einen weiteren untergeordneten Bereich (meist mit eigener Headline)</li>
+						</ul>
+						
+							<article>
+								<header>
+									<h1>Überschrift</h1>
+								</header>
+								
+								<section>
+									<header>
+										<h2>Überschrift</h2>
+									</header>
+									
+									<p>Ein super toller Text!!!!!</p>
+								</section>
+							</article>
+							
+						</script>
+						
+					</section>
+					
+					<section data-markdown>
+						<script type="text/tamplate">
+						###HTML 5 - Strukturelemente
+						####nav
+						<ul>
+							<li>Hauptnavigationsleiste einer Seite</li>
+							<li>Verlinkungen zu der jetzigen oder anderen Seiten eines Webauftritts</li>
+						</ul>
+						
+							<nav>
+								<a href="#">| Startseite |</a>
+								<a href="#">| HTML 5 |</a>
+								<a href="#">| Impressum |</a>
+							</nav>
+							
+						<nav>
+							<a href="#" style="color: deepskyblue; font-size:22px;"><i>| Startseite |</i></a>
+							<a href="#" style="color: deepskyblue; font-size:22px;"><i>| HTML 5 |</i></a>
+							<a href="#" style="color: deepskyblue; font-size:22px;"><i>| Impressum |</i></a>
+						</nav>
+							
+						####aside
+						<ul>
+							<li>Benutzt zur Erweiterung bestehender Inhalte (inhaltliche Einschübe)</li>
+							<li>Definitionen, Querverweise, zusätzliche Informationen, side-bars</li>
+						</ul>
+						
+							<p>Irgendein Text der dir gerade einfällt</p>
+							<aside>
+								ein Kommentar hierzu...
+							</aside>
+						
+						<p style="color: orange">Das Essen in der Mensa war heute wieder vortrefflich</p>
+						<aside style="text-align:right; font-size:15px;">
+							naja wenn du meinst...
+						</aside>
+						</script>
+						
+					</section>
+					
+					<section data-markdown>
+						<script type="text/tamplate">
+						###HTML 5 - Strukturelemente
+						####figure
+						<ul>
+							<li>Wird verwendet zur Gruppierung von Elementen</li>
+							<li>Meist zusammen verwendet mit figcaption</li>
+						</ul>
+						
+						####figcaption
+						<ul>
+							<li>Mithilfe des figure und figcaption können Medien (z.B. Bilder, Videos und Codeausschnitte) mit einer Beschriftung versehen werden</li>
+						</ul>
+						
+							<figure>
+								<img src="http://www.gm.fh-koeln.de/~stahl/logo_nightoftheprofs_trans.gif" alt="Night of prof" width="304" height="120">	
+								<figcaption>Ist toll!!!</figcaption>
+							</figure>
+							
+						<img class="align-center" src="https://raw.github.com/fh-koeln/wba1-2013/2013-10-12-HTML-Advanced-Gruppe-1/2013-10-17-html-advanced-gruppe1/images/figure.png">
+						</script>
+						
+					</section>
+				
+					<section data-markdown>
+						<script type="text/tamplate">
+						###HTML 5 - Strukturelemente
+						####<a href="http://webdesign.tepelmann.com/HTML5_Layout_und_Struktur.html">Beispiel</a>
+						</script>
+				
+					</section>
+									
+				</section><!-- HTML5 Ende -->
+				<section>
+					<h1>Aufgabe</h1>
+					<a href="http://bit.ly/1gLtY3g">http://bit.ly/1gLtY3g</a>
+				</section>
+				
+			</div>
+
+		</div>
+
+		<script src="../revealjs-framework/lib/js/head.min.js"></script>
+		<script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				width: 1000,
+
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'fast', // default/fast/slow
+				backgroundTransition: 'none', // default/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
