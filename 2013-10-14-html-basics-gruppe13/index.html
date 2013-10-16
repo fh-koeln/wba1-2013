@@ -371,89 +371,167 @@
 				<!-- ENDE PETE -->
 				
 				<!-- ANFANG ROBERTO -->
-				<section>
+				<section>			
 					<section>
-						<h1>Die Tools & Kräfte</h1>
-						<h2>Tag! You're it!</h2>
-						<h3 style="margin-top:10%"> <font color="#77cc00">Tags, Elements & Attributes</font></h4>
-						<h4 class="fragment roll-in"> <font color="#DD1166">Element:</font> <font color="white">Attribute 1.. Attribute n</font></h4>
-						<h4 class="fragment roll-in"> <font color="#DD1166"> Syntax: </font></h3>
-						<pre class="fragment roll-in"><code> <element attribute="value"> </code></pre>
-						<pre class="fragment roll-in"><code> <element attribute1="value" attribute2="value" attribute-n="value"> </element> </pre></code>
+						<h1>Die HTML Syntax</h1>
+						<h2>Elemente & Attribute</h2>
+						<br />
+						<br />
+						<div class="fragment roll-in"> 
+						<h4><font color="#DD1166">Elemente:</font> <font color="#77cc00"> Typen oder Komponente eines HTML Dokumentes </font></h4>
+						<h4><font color="#DD1166">Attribute:</font> <font color="#77cc00"> Modifikatoren der Elemente: </font> </h4> </div>
+						<ul class="fragment roll-in">	
+						<li>Attribute brauchen einen Wert</li>
+						<li>Beispiel: Grösse, Richtung, Farbe</li>
+						</ul>
+						<h1><pre class="fragment roll-in"><code style="background-color:#2E2E2E; text-align:center;"> <element attribute="value"> </code></pre></h1>
 					</section>
 					</section>
 			
 					<section>
-			
 					<section>
 						<h1>Basi-X</h1>
 						<h3><font color="#DD1166">Headings</font></h3>
 						<ul>
-						<li>tag: <pre><code><h#> </h#></pre></code></li>
 						<li>6 Niveaus: h1.. h6</li>
-						<li>Font wird immer kleiner</li>
+						<li>Struktur & Wichtigkeit</li>
 						</ul>
-						<h4><font color="#DD1166"> Syntax:</font></h4>
-						<pre><code> <h1> text </h1> </pre></code>
+						<div class="fragment roll-in">
+						<strong><pre><code style="background-color:#2E2E2E; text-align:center; font-size:25px"><h1> </h1></code></pre></strong>
+						<p style="text-align:center; font-size:20px"><font color="white">.<br />.<br /></font></p>
+						<strong><pre><code style="background-color:#2E2E2E; text-align:center; font-size:25px"><h6> </h6></code></pre></strong>
+						</div> 
+						<div><img src="images/Head.png" class="fragment roll-in"></div>
 					</section>
-				
-					<section>
-						<h1 align="center">This is big</h1>
-						<h2 align="center" class="fragment roll-in">This is still big</h2>
-						<h3 align="center" class="fragment roll-in"> <font color="#77cc00">Yes, yes, smaller</font></h3> 
-						<h4 align="center" class="fragment roll-in">This is going well</h4>
-						<h5 align="center" class="fragment roll-in">Uh la la</h5>
-						<h6 align="center" class="fragment roll-in">Frodo</h6>  
 					</section>
-						
+			
 					<section>
 						<h3><font color="#DD1166">Paragraph & Break </font></h3>
+						<h1><pre><code style="background-color:#2E2E2E; text-align:center;"><p> </p> & <br> </pre></code></h1>
 						<ul>
-						<li>tags: <pre><code><p> </p> & <br> </pre></code></li>
-						<li>Einfache Textformatierung</li>
-						<li>Paragraph: immer eine freie Zeile</li>
-						<li>Break: springt zur nächsten Zeile</li>
+						<li>Einfache Textformatierung: Absätze & Zeilenumbrüche</li>
 						</ul>
-						<h4><font color="#DD1166"> Syntax:</font></h4>
-						<pre><code> <p> text1 <br> text2 </p> </pre></code>
+						<div class="fragment roll-in">
+						<h3><pre><code style="background-color:#2E2E2E;"><p> Der Text.</p>Dieser Text.</code></pre></h3> 
+						<h4>Ausgabe:</h4><p>Der Text.</p>Dieser Text. </div>
+						<div class="fragment roll-in"> 
+						<h3><pre><code style="background-color:#2E2E2E;"><p> Der Text enthält ei<br />nen Bruch.</p></code></pre></h3>
+						<h4>Ausgabe:</h4>
+						<p> Der Text enthält ei<br />nen Bruch.</p>
+						</div>
 					</section>
 
 					<section>
 						<h3><font color="#DD1166">List</font></h3>
+						<h3><pre><code data-trim style="background-color:#2E2E2E; text-align:center;"> &lt;ul&gt; & &lt;ol&gt; </pre></code></h3>
 						<ul>
-						<li>tags: <pre><code> <ul> </ul> & <ol> </ol> + <li> </li> </pre></code></li>
 						<li>Typen: Geordnet & Ungeordnet (mit Zahlen & Pünktchen)</li>
 						<li>Jedes Listelement kriegt nun einen tag!</li>
 						</ul>
-						<h4><font color="#DD1166"> Syntax:</font></h4>
-						<pre><code> <ul> <li> text1 </li> <li> text2 </li> </ul> </pre></code>
-					</section>
+						<h3><pre><code data-trim style="background-color:#2E2E2E; text-align:center;"> &lt;li&gt; element &lt;/li&gt; </pre></code></h3>
+						<div class="fragment roll-in">
+						<h4>Beispiel:</h4>
+						<h3><pre><code data-trim style="background-color:#2E2E2E;">
 						
+&lt;ul&gt;
+
+	&lt;li&gt;Typen: Geordnet & Ungeordnet (mit Zahlen & Pünktchen&lt;/li&gt;
+	&lt;li&gt;Jedes Listeelement kriegnt nun einen tag!&lt;/li&gt;
+	
+&lt;/ul&gt;	
+					</code></pre></h3></div>
+					</section>
+					
 					<section>
-						<h3><font color="#DD1166">Division & Span</font></h3>
-						<ul>
-						<li> tags: <pre><code> <div> </div> & <span> </span> </pre></code> </li>
-						<li>Sogeannten div container und span container</li>
-						<li>div: eine rechteckige Maske</li>
-						<li>span: highlights</li>
-						</ul>
-						<h4><font color="#DD1166"> Beispiel</font></h4>
-						<div style="background-color:#77cc00; width:60px;"><font size="20px"><font color="black">div</font><span style="color:#DD1166">span</span> </font> </div> 
+					<h3><font color="#DD1166">Block & Inline Elemente</font></h3>
+					<h4>Block Elemente</h4>
+					<p><ul> 
+					<li> Erzeugen immer einen neuen Absatz </li>
+					<li> Können weitere HTML Elemente beinhalten</li>
+					<li> Beipiel: Headings, Paragraph, Division (div)
+					</ul> </p>
+					<h4>Inline Elemente</h4>
+					<p><ul> 
+					<li> Erzeugen <span color="#DD1166"> keine </span> neue Absätze </li>
+					<li> Können nur andere Inline Elemente beinhalten</li>
+					<li> Beipiel: Strong, Span, Break
+					</ul> </p>
+					</section>
+					
+					<section>
+					<h3>Div Block</h3>
+					<strong><pre><code data-trim style="background-color:#2E2E2E; text-align:center; font-size:20px">&lt;div&gt; element &lt;/div&gt; </pre></code></strong>
+					<ul>
+					<li>Behälter (container)</li>
+					<li>Struktur & Manipulation</li>
+					</ul>
+					<div class="fragment roll-in">
+					<h4> Beispiel: </h4>
+					<strong><pre><code data-trim style="background-color:#2E2E2E; font-size:20px"> 
+&lt;div&gt;
+		
+	&lt;p&gt; Paragraph 1 &lt;/p&gt;
+	&lt;p&gt; Paragraph 2 &lt;/p&gt;
+					
+&lt;/div&gt;
+					</pre></code> </div></strong>
+				
+					<strong><pre><code data-trim style="background-color:#2E2E2E; font-size:20px" class="fragment roll-in"> 
+&lt;div align="right"&gt;
+		
+	&lt;p&gt; Paragraph 1 &lt;/p&gt;
+	&lt;p&gt; Paragraph 2 &lt;/p&gt;
+					
+&lt;/div&gt;
+					</pre></code> </strong>
+					<div class="fragment roll-in">
+					<h4>Ausgabe: </h4>
+					<div align="right">
+					<p>Paragraph 1 </p>
+					<p>Paragraph 2 </p>
+					</div>
+					</div>
 					</section>
 					
 					<section>
 						<h3><font color="#DD1166">Images & Anchor points</font></h3>
+						<h4>Images</h4>
+						<strong><pre><code data-trim style="background-color:#2E2E2E; text-align:center; font-size:20px"> &lt;img src="wo das Bild ist"&gt; </pre></code></strong>
 						<ul>
-						<li>tags: <pre><code><img> & <a> </a> </pre></code></li>
-						<li>Verknüpfung von Bilder: Attribute nötig: source (src) </li>
-						<li>Verlinkung: Attribute nötig: referenzierte Seite (href) oder/+ email (mailto) </li>
+						<li>Verknüpfung von Bilder</li>
+						<li>Source Attribut immer nötig: <font color="DD1166"> src </font>
 						</ul>
-						<h4><font color="#DD1166"> Syntax:</font></h4>
-						<pre><code><img src="dateiname.extension"> & <img src="http://www.bildlink.de"></pre></code> 
-						<pre><code><a href="http://www.seite.com"> text </a> & <a href="mailto:adresse@irgendwo.de"> text </a> </pre></code>
-						
+						<div class="fragment roll-in"> 
+						<h4> Beispiel: </h4>
+						<h3><pre><code data-trim style="background-color:#2E2E2E; font-size:20px"> 
+&lt;img src="images/Cookie.gif"&gt;
+						</pre></code><h3>
+						</div>
+						<img src="images/Cookie.gif" width="210px" height="200px" class="fragment roll-in"> 
 					</section>		
-					</section>
+					
+					<section>
+						<h4>Anchor points</h4>
+						<strong><pre><code data-trim style="background-color:#2E2E2E; text-align:center; font-size:20px"> &lt;a href="link"&gt; &lt;/a&gt; </pre></code></strong>
+						<ul>
+						<li>Verlinkung zu Webseiten, Dokumente, Teile der aktuellen Seite, E-mails</li>
+						<li>Referenz Attribut immer nötig: <font color="DD1166"> href </font>
+						</ul>
+						<div class="fragment roll-in"> 
+						<h4> Beispiel: </h4>
+						<h3><pre><code data-trim style="background-color:#2E2E2E; font-size:20px"> 
+&lt;a href="http://www.seite.de"&gt; Meine Seite &lt;/a&gt;
+						</pre></code><h3>
+						</div>
+						<a href="http://www.google.com" class="fragment roll-in"> <font color="#DD1166"> Meine Seite </font> </a> <br />
+						<br />
+						<div class="fragment roll-in">
+						<h4>Oder E-mailadresse mit Attribut: <font color="DD1166"> mailto </font></h4>
+						<h3><pre><code data-trim style="background-color:#2E2E2E; font-size:20px">
+&lt;a href="mailto:meineAdresse@irgendwo.de"&gt; Meine E-mail &lt;/a&gt;
+</pre></code> </div>
+						<a href="mailto:meineAdresse@irgendwo.de" class="fragment roll-in"><font color="DD1166"> Meine E-mail </font> </a>
+					</section>		
 			
 					<section>
 						<h1 align="center">Was nun?</h1>
@@ -461,7 +539,6 @@
 						<h3 align="center" class="fragment roll-in"> <p> Wir bedanken uns für eure Aufmerksamkeit! </p> </h3>
 						<h3 align="center" class="fragment roll-in"> <p> Fragen lieber jetzt stellen!</p> </h3>	
 					</section>
-					
 				<!-- ENDE ROBERTO -->
 				
 				
