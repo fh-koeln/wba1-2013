@@ -1,7 +1,7 @@
 <    >
 
 <head> 
-<    >HTML Übung</titel>
+<    >HTML Übung</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@ Lauf bitte und kaufe die Sachen die ich oben gelistet habe. <  >
 Kaufe am bessten 6 Eier und guck,ob sie Äpfel haben. Wenn sie Äpfel haben, kauf 10. < r>
 Bitte komme nicht mit 10 Eier zurück. <  >
 Ich füg dazu ein Bild mit der Art von Äpfel die ich möchte: <  >
-<     ="apflel.png"> 
+<          ="apflel.png"> 
 
 Ich wiederholhe: <  >Bitte komme nicht mit 10 Eier zurück! </  >  </
 <br>
@@ -30,4 +30,7 @@ Ich wiederholhe: <  >Bitte komme nicht mit 10 Eier zurück! </  >  </
 <h4>Liebe Grüße,< h4>
 <h5>Tanya</ >
 
+
+
+</body>
 </html>
