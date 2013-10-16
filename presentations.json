@@ -16,15 +16,20 @@
 			"title" : "Git & GitHub",
 			"authors" : ["Dominik Schilling", "Christoph Jerolimov"]
 		},
+		"2013-10-17-html-advanced-gruppe1/index.html":
+		{
+			"title" : "HTML for advanced Users - erweiterte Befehle &amp; HTML5",
+			"authors" : ["Dennis Dubbert", "Alexander Jan Müller"]
+		},
+		"2013-10-17-HTML-Advanced-Gruppe-2/index.html":
+		{
+			"title" : "HTML Advanced &amp; HTML5",
+			"authors" : ["Vsevolod Küppers", "Thomas Friesen", "Sercan Kücükköse"]
+		},
 		"2013-10-17-html-uebungen/index.html":
 		{
 			"title" : "HTML Übungen",
 			"authors" : ["Dominik Schilling", "Christoph Jerolimov"]
-		},
-		"2013-10-17-HTML-Advanced-Gruppe-2/index.html":
-		{
-			"title" : "Git &amp; GitHub",
-			"authors" : ["Vsevolod Küppers", "Thomas Friesen", "Sercan Kücükköse]
 		}
 	}
 }
