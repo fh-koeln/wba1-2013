@@ -1,5 +1,0 @@
-Bauer noss braucht neues Futter für seine Tiere und möchte dieses online erwerben. Erstelle mithilfe der Vorgabe eine Einkaufstabelle indem du jeden kommentierten Abschnitt mit dem richtigen Code ausfüllst. 
-Anbei sind dir grundlegende HTML Elemente sowie ein Bild vom fertigen Produkt gegeben.
-
-Die rohdatei erhältst du hier:
-Downloadlink
