@@ -13,7 +13,12 @@
 		},
 		"2013-10-10-git/index.html":
 		{
-			"title" : "Git &amp; GitHub",
+			"title" : "Git & GitHub",
+			"authors" : ["Dominik Schilling", "Christoph Jerolimov"]
+		},
+		"2013-10-17-html-uebungen/index.html":
+		{
+			"title" : "HTML Übungen",
 			"authors" : ["Dominik Schilling", "Christoph Jerolimov"]
 		}
 	}
