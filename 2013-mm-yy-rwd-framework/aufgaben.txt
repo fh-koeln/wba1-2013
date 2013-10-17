@@ -3,6 +3,7 @@ Frameworks welche gibt es?
 Vorgefertigte Elemente grob erläutern
 Grundlagen erklären (siehe Info.txt)
 Vorteile/Nachteile
+Doku
 
 > Eduard
 Umsetzung mit Bootstrap
@@ -12,7 +13,7 @@ Umsetzung mit Bootstrap
 Bilder einfügen und skalieren
 Umsetzung in der Praxis mit Hilfe von Aptana Studio v3
 Glyphicons, buttons...
-
+Doku
 
 
 > Marc
@@ -21,3 +22,4 @@ Was ist das Ziel von Bootstrap ist eine gute Frage?!
 Wie erstelle man respositive Menüs mit Bootstrap
 Übungen erstellen 
 Klausuraufgaben erstellen
+Doku
