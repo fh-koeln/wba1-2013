@@ -1,0 +1,12 @@
+header, nav, section, footer {
+    display: block;
+}
+header {
+    background-color: red;
+}
+nav {
+    background-color: orange;
+}
+footer {
+    background-color: deepskyblue;
+}
