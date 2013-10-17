@@ -1,0 +1,23 @@
+﻿> Stefania
+Frameworks welche gibt es?
+Vorgefertigte Elemente grob erläutern
+Grundlagen erklären (siehe Info.txt)
+Vorteile/Nachteile
+
+> Eduard
+Umsetzung mit Bootstrap
+- container
+- columns 
+- etc...
+Bilder einfügen und skalieren
+Umsetzung in der Praxis mit Hilfe von Aptana Studio v3
+Glyphicons, buttons...
+
+
+
+> Marc
+Geschichte bzw Einleitung zu Bootstrap
+Was ist das Ziel von Bootstrap ist eine gute Frage?!
+Wie erstelle man respositive Menüs mit Bootstrap
+Übungen erstellen 
+Klausuraufgaben erstellen
