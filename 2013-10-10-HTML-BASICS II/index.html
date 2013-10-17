@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>HTML Basics</title>
+
+		<meta name="description" content="HTML Basics">
+		<meta name="author" content="Manuel Sorg">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/solarized_light.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+      
+      		<style>
+			#headline-test h1,
+			#headline-test h2,
+			#headline-test h3,
+			#headline-test h4,
+			#headline-test h5,
+			#headline-test h6 {
+				color: #fff;
+				margin: 0;
+				padding: 10px;
+			}
+			#headline-test h1 {
+				font-size: 20px;
+			}
+			#headline-test h2 {
+				font-size: 18px;
+			}
+			#headline-test h3 {
+				font-size: 16px;
+			}
+			#headline-test h4 {
+				font-size: 14px;
+			}
+			#headline-test h5 {
+				font-size: 12px;
+			}
+			#headline-test h6 {
+				font-size: 10px;
+			}
+			pre {
+				-moz-tab-size: 4;
+				-o-tab-size:   4;
+				tab-size:      4;
+			}
+			.reveal pre.smart-tag {
+				text-align: left;
+				font-size: 1em;
+			}
+			.green {
+				color: #77cc00;
+			}
+		</style>
+	</head>
+
+	<body>
+            <div class="reveal">
+                <!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+                    <section> <!--Start-->
+			<h1>Web-basierte Anwendungen 1</h1>
+                        <h2>HTML Basics</h2>
+                        <p>17. Oktober 2013</p>
+                        <p>Studiengang Medieninformatik an der Fachhochschule K&ouml;ln<br>Campus Gummersbach</p>
+                        <p style="margin-top:10%">Muhamed Fazlic<br>Minh Duc Bui<br>Manuel Sorg</p>
+                    </section>
+                
+                    <section><!--Gliederung-->
+                        <section>
+                            <h2>Gliederung</h2>
+                            <p>
+                                <ol>
+                                    <li class="fragment roll-in">Was ist HTML?</li>
+                                    <li class="fragment roll-in">Historie</li>
+                                    <li class="fragment roll-in">Aufbau einer Seite</li>
+                                    <li class="fragment roll-in">Typografie</li>
+                                    <li class="fragment roll-in">Listen</li>
+                                    <li class="fragment roll-in">Verweise</li>
+                                    <li class="fragment roll-in">Validit&auml;t</li>
+                                </ol>
+                        </section>
+                    </section>
+                
+                    <section><!--Was ist HTML?-->
+                        <section>
+                            <h2>1. Was ist HTML?</h2>
+                            <p>
+                                <ul>
+                                    <li class="fragment roll-in"><span style="color: green;">H</span>yper<br></li>
+                                    <li class="fragment roll-in"><span style="color: green;">T</span>ext<br></li>
+                                    <li class="fragment roll-in"><span style="color: green;">M</span>arkup<br></li>
+                                    <li class="fragment roll-in"><p><span style="color: green;">L</span>anguage</p><br></li>
+                                    <li class="fragment roll-in"><span style="color: red;">keine</span> Programmiersprache<br></li>
+                                    <li class="fragment roll-in">Beschreibung von Strukturen, Inhalte und das Verhalten eines Dokuments<br></li>
+                                    <li class="fragment roll-in">optische Umsetzung durch Browser<br></li>    
+                                    <li class="fragment roll-in">Aktuell: HTML5<br></li>
+                                </ul>
+                        </section>
+                    </section>
+                
+                    <section><!--Historie-->
+                        <section>
+                            <h2>2. Historie</h2>
+                            <p>
+                                <ul>
+                                    <li class="fragment roll-in">Erfindung in CERN von Tim Beners-Lee (1990)<br></li>
+                                    <li class="fragment roll-in">HTML 1.0 Darstellung von Grafiken, &Uuml;berschriften, Dokumente und Verweise (z.B. Links)<br></li>
+                                    <li class="fragment roll-in">HTML 2 Sonderzeichen, sonst keine gro&szlig;artigen Neuerungen (1995)<br></li>
+                                    <li class="fragment roll-in">HTML 3.2 Tabellen und Container (1997)<br></li>
+                                    <li class="fragment roll-in">HTML 4 & 4.01 Optische Gestaltung auf CSS verlegt (1998)<br></li>
+                                    <li class="fragment roll-in">HTML5 Release (2014)<br></li>
+                                </ul>
+                        </section>
+                    </section>    
+                
+                    <section><!--3-Aufbau-->
+                        <section>
+                            <h2>3. Aufbau</h2>
+                            <p><pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+       "http://www.w3.org/TR/html4/loose.dtd">
+&lt;html>
+    &lt;head>
+        &lt;title>&lt;/title>
+    &lt;/head>
+    &lt;body>
+    &lt;/body>
+&lt;/html></code></pre>
+                        </section>    
+                    
+                        <section>
+                            <h3>Tags</h3>
+                            <p>
+                                <ul>
+                                    <li class="fragment roll-in">HTML-Elemente<br></li>
+                                    <li class="fragment roll-in">Markierung<br></li>
+                                    <li class="fragment roll-in"<pre><code contenteditable>&lt;tagname> text &lt;/tagname></code></pre></li>
+                                    <li class="fragment roll-in">Einleitendes Tag / Abschlie&szlig;endes Tag<br></li>
+                                    <li class="fragment roll-in">spitze Klammern<br></li>
+                                </ul>
+                            </p>
+                        </section>
+                    
+                        <section>
+                            <h3>Doctype</h3>
+                            <p><pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+       "http://www.w3.org/TR/html4/loose.dtd"></code></pre>
+                        </section>
+                    
+                        <section>
+                            <h3>&lt;html>   &lt;/html></h3>
+                            <p><pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+       "http://www.w3.org/TR/html4/loose.dtd">
+&lt;html>
+    
+    
+    
+    
+    
+    
+&lt;/html></code></pre>
+                            <ul> 
+                                <li class="fragment roll-in">Die Wurzel des HTML-Dokuments</li>
+                                <li class="fragment roll-in">Anfang und Ende</li>
+                            </ul>
+                        </section>
+                        
+                        <section>
+                            <h3>&lt;head>   &lt;/head></h3>
+                            <p><pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+       "http://www.w3.org/TR/html4/loose.dtd">
+&lt;html>
+    &lt;head>
+    
+    &lt;/head>    
+    
+    
+&lt;/html></code></pre>
+                            <ul>
+                                <li class="fragment roll-in">Metadaten (z.B. Autor)</li>
+                            </ul>
+                        </section>
+                        
+                        <section>
+                            <h3>&lt;titel>   &lt;/titel></h3>
+                            <p><pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+       "http://www.w3.org/TR/html4/loose.dtd">
+&lt;html>
+    &lt;head>
+        &lt;title>This is title&lt;/title>
+    &lt;/head>    
+    
+    
+&lt;/html></code></pre>
+                            <ul> 
+                                <li class="fragment roll-in">Festlegung des Browsernamens</li>
+                                <li class="fragment roll-in">Lesezeichen</li>
+                            </ul>
+                        </section>
+                        
+                        <section>
+                            <h3>&lt;body>   &lt;/body></h3>
+                            <pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+       "http://www.w3.org/TR/html4/loose.dtd">
+&lt;html>
+    &lt;head>
+        &lt;title>This is title&lt;/title>
+    &lt;/head>    
+    &lt;body>
+        Hello world
+    &lt;/body>
+&lt;/html></code></pre>
+                            <p>
+                            <ul>
+                                <li class="fragment roll-in">Container f&uuml;r den anzeigbaren Inhalt des HTML-Dokuments</li>
+                            </ul>
+                            <p align="center" class="fragment roll-in"><img src="http://www.mkyong.com/wp-content/uploads/2008/05/html-tutorial-hello-world-view-it.jpg" height="333"></p>
+                        </section>
+                    </section>
+                    <!--Duc-->
+                                
+                                <!--Manuel-->  
+				<section> <!--Typografie -->
+					<section> <!--†berschrift -->
+						<h2>4. Typografie</h2>
+                                                <div>
+                                                    <h3>Überschriften</h3>
+                                                </div>
+                                                <div>
+                                                    <pre class="fragment smart-tag" style="text-align:left"><code>&lt;h1&gt;Überschriften&lt;/h1&gt; &lt;!-- WICHTIG!! -->
+&lt;h2&gt;Überschriften&lt;/h2&gt;
+&lt;h3&gt;Überschriften&lt;/h3&gt;
+&lt;h4&gt;Überschriften&lt;/h4&gt;
+&lt;h5&gt;Überschriften&lt;/h5&gt;
+&lt;h6&gt;Überschriften&lt;/h6&gt; &lt;!-- UNWICHTIG!! --></code>
+                                                </div>   
+                                                <div class="fragment" id="headline-test">
+                                                    <h1 style="text-align: left";>Überschriften</h1>
+                                                    <h2 style="background-color: black; text-align: left;">Überschriften</h2>
+                                                    <h3>Überschriften</h3>
+                                                    <h4>Überschriften</h4>
+                                                    <h5>Überschriften</h5>
+                                                    <h6>Überschriften</h6>
+                                                </div>
+                                        </section>
+                                        
+                                        <section> <!--Schriftstil -->
+                                            <h3>Schriftstile</h3>
+                                            <div class="fragment roll-in"><b>Fett: <</span>strong></b></br></br></div>
+                                            <div class="fragment roll-in"><i>Kursiv: <</span>em></i></br></br></div>
+                                            <div class="fragment roll-in"><u>Unterstrichen: <</span>u></u></br></div>
+                                        </section>
+                                        
+                                        <section>
+                                            <h3>Textformatierung</h3>
+                                            </br>
+                                            </br>
+                                            </br>
+                                            <div align="center" class="fragment roll-in">
+                                            <</span>p> Tag zum erstellen eines Absatzes <</span>/p></b></br></br></br></br></br>
+                                            </div>
+                                            <div align="center" class="fragment roll-in">
+                                                <code>&lt;/br></code></br></br>
+                                                Erzwingt einen Zeilenumbruch</span></b></br>
+                                                Hat keinen schlieÃŸenden Tag, schliesst sich selbst!</span></b></br>
+                                            </div>
+                                        </section>
+				</section>
+                                
+				<section> <!--5. Listen-->
+                                    <section><!--Ungeordnete Liste-->
+                                        <h2>5. Listen</h2>
+                                        <h3>Ungeordnete Liste</h3></span>
+                                        <pre class="fragment smart-tag" style="text-align:left"><code class="">&lt;ul> &lt;!-- einleiten der nummerierten Liste -->
+	&lt;li> Lorem ipsum &lt;/li> &lt;!-- einleiten einer Definitionsliste -->
+	&lt;li> Lorem ipsum &lt;/li> 
+&lt;/ul></code></pre></br></br>
+                                        <ul class="fragment roll-in">
+                                            <li> Lorem ipsum </li>
+                                            <li> Lorem ipsum </li> 
+                                        </ul>
+                                    </section>
+                                    <section>
+                                    <h3>Geordnete Liste</h3>
+                                    <pre class="fragment smart-tag" style="text-align:left"><code>&lt;ol> &lt;!-- einleiten einer Aufz&auml;hlungsliste -->
+    &lt;li> Lorem ipsum &lt;/li> &lt;!-- einleiten einer Definitionsliste -->
+    &lt;li> Lorem ipsum &lt;/li> 
+&lt;/ol></code></pre></br></br>
+                                    <ol class="fragment roll-in">
+                                        <li> Lorem ipsum </li>
+                                        <li> Lorem ipsum </li>
+                                    </ol>
+                                    </section>
+                                    <section>
+                                        <h3>Definierte Liste</h3>
+                                        <pre class="fragment smart-tag" style="text-align:left"><code>&lt;dl>  &lt;!-- einleiten einer Definitionsliste -->
+    &lt;dt> AVM &lt;/dt> &lt;!-- einleiten eines definiertem Ausdruck -->
+    &lt;dd> Audio Visuelles Medienprojekt &lt;/dd> &lt;!-- neuer Punkt innerhalb der Liste -->
+    &lt;dt> WBA &lt;/dt>
+    &lt;dd> Web-basierte Anwendungen &lt;/dd>
+&lt;/dl></code></pre></br>
+                                        <div class="fragment roll-in"><dl>
+                                                <dt>AVM</dt>
+                                                <dd>Audio Visuelles Medienprojekt</dd>
+                                                <dt>AAE</dt>
+                                                <dd>Allgemeine Anschalte-Erlaubnis</dd>
+                                                <dt>WBA</dt>
+                                                <dd>Web-basierte Anwendungen</dd>
+                                            </dl>
+                                            </div>
+                                    </section>
+				</section>
+                                <!-- Manuel -->
+                                
+                                <!-- Muhamed -->
+                                <section><!-- 6.Verweis -->
+                                    <section><!-- Verweis zum Link -->
+                                        <h2>6. Verweise</h2>
+                                        <h3> Verweis zu einem Link</h3>
+                                        <pre class="fragment smart-tag"><code>&lt;a href="https://google.de"> Google &lt;/a></code></pre>
+                                        <a href="https://google.de"><div class="fragment roll-in" style="text-align: center; color:white">Google</div></a>
+                                        <pre class="fragment smart-tag"><code>&lt;a href="seite.html" title="Besuche mich"> Seite &lt;/a></code></pre>
+                                        <a href="seite.html" title="Besuche mich"><div class="fragment roll-in" style="text-align: center; color:white"> Seite</div></a>
+                                        <pre class="fragment smart-tag"><code>&lt;a href="#anker"> Zum Inhalt springen &lt;/a></code></pre>
+                                        <a href="#anker"><div class="fragment roll-in" style="text-align: center; color:white">Zum Inhalt springen</div> </a>
+                                    </section>
+                                
+                                    <section><!-- Verweis zum E-mail -->
+                                        <h3>Verweis zu E-Mail-Adresse</h3>
+                                        <pre class="fragment smart-tag"><code><a href="mailto: EMAIL-ADRESSE"> Mail </a></code></pre>
+                                        <a href="mailto: EMAIL-ADRESSE"><div class="fragment roll-in" style="text-align: center; color:white">Mail</div></a></br>
+                                        <pre class="fragment smart-tag"><code ><a href="mailto:muhamedfazlic1234@gmail.com">Muhamed F.</a></code></pre>
+                                        <a href="mailto:muhamedfazlic1234@gmail.com"><div class="fragment roll-in" style="text-align: center; color:white">Muhamed F.</div></a>
+                                    </section>
+				</section>
+                                
+                                <section><!-- 7. ValiditŠt -->
+                                        <section>
+                                        <h2 style="text-align:center; text-color:white; background-color:#dd1166">7. Validit&auml;t</h2>
+                                        <ul>
+                                            <li class="fragment roll-in">Auch in HTML k&ouml;nnen Fehler gemacht werden</li>
+                                            <li class="fragment roll-in">Auf valides HTML achten</li>
+                                            <li class="fragment roll-in">Browserkompatibilit&auml;t ist gegeben</li>
+                                            <li class="fragment roll-in"><a href="http://validator.w3.org/#validate_by_input" target="_blank" class="roll"><span data-title="validator.w3.org">validator.w3.org</span></a></li>
+                                        </ul>
+                                        </section>
+				</section>
+                                <!--Muhamed-->
+                                    
+                                <!--Manuel-->   
+                                <section>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    <h2 style="color:white" align="center">Vielen Dank f&uuml;r eure Aufmerksamkeit!</h2>
+                                    <h2 style="color:white" align="center">Und viel Spa&szlig; beim HTML lernen!</h2>
+                                    <h2 style="color:white" align="center">Wir hatten ihn :-)</h2>
+                                </section>
+                                <!--Manuel-->
+                                      
+
+				<!-- End of slides container. -->
+			</div>
+
+		</div>
+
+		<script src="../revealjs-framework/lib/js/head.min.js"></script>
+		<script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				width: 1000,
+
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'fast', // default/fast/slow
+				backgroundTransition: 'none', // default/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
