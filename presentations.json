@@ -1,4 +1,4 @@
-{
+﻿{
 	"presentations":
 	{
 		"2013-10-10-wba1-kickoff/index.html":
@@ -13,13 +13,33 @@
 		},
 		"2013-10-10-git/index.html":
 		{
-			"title" : "Git &amp; GitHub",
+			"title" : "Git & GitHub",
 			"authors" : ["Dominik Schilling", "Christoph Jerolimov"]
+		},
+		"2013-10-17-html-basics-gruppe13/index.html":
+		{
+			"title" : "HTML Basics - Gruppe 13",
+			"authors" : ["Peter Wagner", "Maik Güldenmeister", "Robert xxx"]
+		},
+		"2013-10-17-html-basics-gruppe2/index.html":
+		{
+			"title" : "HTML Basics - Gruppe 2",
+			"authors" : ["Muhamed Fazlic", "Minh Duc Bui", "Manuel Sorg"]
+		},
+		"2013-10-17-html-advanced-gruppe1/index.html":
+		{
+			"title" : "HTML for advanced Users - erweiterte Befehle & HTML5",
+			"authors" : ["Dennis Dubbert", "Alexander Jan Müller"]
 		},
 		"2013-10-17-HTML-Advanced-Gruppe-2/index.html":
 		{
-			"title" : "Git &amp; GitHub",
-			"authors" : ["Vsevolod Küppers", "Thomas Friesen", "Sercan Kücükköse]
+			"title" : "HTML Advanced & HTML5",
+			"authors" : ["Vsevolod Küppers", "Thomas Friesen", "Sercan Kücükköse"]
+		},
+		"2013-10-17-html-uebungen/index.html":
+		{
+			"title" : "HTML Übungen",
+			"authors" : ["Dominik Schilling", "Christoph Jerolimov"]
 		}
 	}
 }
