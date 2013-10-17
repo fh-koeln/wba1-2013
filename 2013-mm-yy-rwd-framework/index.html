@@ -1,323 +1,358 @@
-<!doctype html>
-<html lang="en">
-
-	<head>
+<!DOCTYPE html>
+<!-- saved from url=(0095)http://fh-koeln.github.io/wba1-2012/files/2013-01-17-Responsive-Design-Frameworks/index.html#/1 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
 
-		<!-- Title of presentation -->
-		<title>Reveal.js Demo</title>
-		<!-- Short description of presentation -->
-		<meta name="description" content="Demo of Reveal.js functions and features">
-		<!-- Author of presentation -->
-		<meta name="author" content="Dominik Schilling">
+		<title>WBA1</title>
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="description" content="Responsive Design Framework">
+		<meta name="author" content="Christian Hahn , Thimo Stange">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+ 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
-		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+		<link rel="stylesheet" href="http://fh-koeln.github.io/wba1-2012/files/revealjs-template/css/reveal.css">
+		<link rel="stylesheet" href="http://fh-koeln.github.io/wba1-2012/files/revealjs-template/css/theme/wba.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="../revealjs-framework/lib/css/solarized_light.css">
+		<link rel="stylesheet" href="http://fh-koeln.github.io/wba1-2012/files/revealjs-template/lib/css/zenburn.css">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
-			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script><style type="text/css"></style><link rel="stylesheet" href="./WBA1_files/paper.css" type="text/css" media="print">
 
 		<!--[if lt IE 9]>
-		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
 		<![endif]-->
-	</head>
+	<style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style></head>
 
-	<body>
+	<body style="-webkit-transition: -webkit-transform 0.8s ease; transition: -webkit-transform 0.8s ease;">
 
-		<div class="reveal">
+		<div class="reveal linear">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-				<section>
-					<h1>XXX Web-basierte Anwendungen 1</h1>
-					<h2>Reveal.js Demo</h2>
 
-					<p>10. Oktober 2013</p>
+				<section class="past" style="display: block;">
+					<h1>WBA1</h1>
+					<h2>Medieninformatik</h2>
+					<p>17 Januar 2013</p>
+					<p>
+						Studiengang Medieninformatik an der Fachhochschule Köln<br>
+						Campus Gummersbach
+					</p>
+					<p>
+						Christian Hahn <br>
+						<a href="https://github.com/christianh92" class="roll"><span data-title="github@christianh92">github@christianh92</span></a>
+					</p>
+					<p>
+						Thimo Stange <br>
+						<a href="https://github.com/Ravershawn" class="roll"><span data-title="github@Ravershawn">github@Ravershawn</span></a>
+					</p>
 
-					<p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
-					Campus Gummersbach</p>
-
-					<p style="margin-top:10%">Student 1<br>
-					Student 2<br>
-					Student 3</p>
 				</section>
 
-				<section>
+<!-- Inhaltsverzeichnis -->
+
+				<section class="present" style="display: block;">
+					<h2>Responsive Design Framework</h2>
+					<p>
+						</p><ul>
+							<li>Grundgedanke</li>
+							<li>Grid-System</li>
+							<li>Frameworks</li>
+							<li>Vorgefertigte Elemente</li>
+							<li>Vorteile/Nachteile</li>
+							<li>Beispiel zur Umsetzung mit Skeleton</li>
+					<p></p>
+
+				</ul></section>
+
+<!-- Grundgedanke -->
+
+				<section class="future" style="display: block;">
+					<h2>Grundgedanke</h2>
+					<p>
+						</p><ul>
+							<li>Dynamische Webseiten für verschiedene Endgeräte</li>
+							<li>Ansammlung von CSS-Klassen</li>
+							<li>Mobile Endgeräte sind die Zukunft</li>
+								<ul>
+									<li><strong>Optimierung unumgänglich</strong></li>
+						</ul>
+						</ul>
+					<p></p>
+
+				</section>
+
+<!-- Grid-System -->
+
+				<section class="future" style="display: block;">
+					<h2>Grid-System</h2>
+					<p>
+						"herunterbrechen" auf jeweiliges Endgerät<br>
+						</p><ul>
+							<li>Spalten</li>
+							<li>Drittel</li>
+							<li>Zwei Hälften</li>
+						</ul>
+					<p></p>
+
+				</section>
+
+<!-- Frameworks -->
+				<section class="future" style="display: block;">
+					<h2>Frameworks</h2>
+					<p>
+						</p><ul>
+							<li>Skeleton</li>
+							<li>Twitter Bootstrap</li>
+							<li>Foundation 3</li>
+							<li>Responsive Grid System</li>
+							<li>...</li>
+					<p></p>
+				</ul></section>
+
+<!-- Vorgefertigte Elemente -->
+
+				<section class="future" style="display: none;">
+					<h2>Vorgefertigte Elemente</h2>
+					<p>
+						</p><ul>
+							<li>Grundelemente in der Optik und Reaktion</li>
+							<li>Vorteile: Basis für Responsive Design</li>
+							<li>Nachteile: Komplexe Designs = extra Anpassung</li>
+						</ul>
+					<p></p>
+				</section>
+
+<!-- Vorteile/Nachteile -->
+
+				<section class="future" style="display: none;">
+						<h2>Vorteile RWD</h2>
+						<p>
+							</p><ul>
+								<li>Anpassung der Website an jedes Gerät</li>
+								<li>Information steht im Vordergrund</li>
+                                <li>Frameworks optimiert an alle gängigen Browser</li>
+								<li>zukunftsorientiert</li>
+							</ul>
+						<p></p>
+                </section>
+
+					<section class="future" style="display: none;">
+						<h2>Nachteile RWD</h2>
+							<p>
+								</p><ul>
+									<li>Manche Gestaltungselemente werden nicht unterstützt</li>
+									<li>Komplexe Gestaltungen schwer umsetzbar</li>
+									<li>Mehr Arbeit als herkömmliche Website</li>
+								</ul>
+							<p></p>
+					</section>
+				
+
+<!-- Beispiel zur Umsetung mit Skeleton -->
+
+				<section class="stack future" style="display: none;">
 					<section>
-						<h2>Backgrounds</h2>
-					</section>
-
-					<section class="center" data-background="#77aabb">
-						<pre><code>&lt;section data-background="#77aabb"&gt;
-
-&lt;/section&gt;</code></pre>
-					</section>
-
-					<section data-background="#442211">
-						<pre><code>&lt;section data-background="#442211"&gt;
-
-&lt;/section&gt;</code></pre>
-					</section>
-
-					<section data-background-image="images/background.jpg">
-						<pre><code>&lt;section data-background="images/background.jpg"&gt;
-
-&lt;/section&gt;</code></pre>
-					</section>
-
-					<section data-background-image="images/github-mac.png" data-background-position="top center">
-					</section>
-
-					<section data-background-image="images/github-windows.png" data-background-position="top center">
-					</section>
-				</section>
-
-				<section>
-					<h2>Fragments</h2>
-					<p class="fragment grow">grow</p>
-					<p class="fragment shrink">shrink</p>
-					<p class="fragment roll-in">roll-in</p>
-					<p class="fragment fade-out">fade-out</p>
-					<p class="fragment highlight-red">highlight-red</p>
-					<p class="fragment highlight-green">highlight-green</p>
-					<p class="fragment highlight-blue">highlight-blue</p>
-				</section>
-
-				<section>
-					<h2>Fragmented <strong>Views</strong></h2>
-					<p>Hit the next arrow...</p>
-					<p class="fragment" data-fragment-index="0">... to step through ...</p>
-					<ol>
-						<li class="fragment" data-fragment-index="1"><code>any type</code></li>
-						<li class="fragment" data-fragment-index="2"><em>of view</em></li>
-						<li class="fragment" data-fragment-index="3"><strong>fragments</strong></li>
-					</ol>
-				</section>
-
-
-				<section>
-					<h2>Images</h2>
-
-					<img class="align-center" src="http://octodex.github.com/images/daftpunktocat-thomas.gif">
-				</section>
-
-				<section>
-					<h2>Code syntax highlighting</h2>
-
-					<pre><code data-trim>
-&lt;?php
-echo 'Hello World!';
-?&gt;
-					</code></pre>
-
-					<pre><code data-trim>
-$ ruby -e "puts 'Hello world'"
-Hello world
-					</code></pre>
-
-					<pre><code data-trim>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;meta charset=&quot;utf-8&quot;&gt;
-		&lt;title&gt;&lt;/title&gt;
-		&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
-
-		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-	&lt;body&gt;
-&lt;/html&gt;
-					</code></pre>
-				</section>
-
-				<section>
-					<section>
-						<h2>Tables</h2>
-						<table>
-							<tr>
-								<th>Foo</th>
-								<th>Bar</th>
-							</tr>
-							<tr>
-								<td>Zelle 1 1</td>
-								<td>Zelle 1 2</td>
-							</tr>
-							<tr>
-								<td>Zelle 2 1</td>
-								<td>Zelle 2 2</td>
-							</tr>
-						</table>
+					<h2>Umsetzung mit Skeleton</h2>
+					<p>
+						</p><ul>
+							<li>"container"</li>
+							<li>"columns" bzw. "column"</li>
+							<li>960px Webseitenbreite</li>
+						</ul>
+					<p></p>
 					</section>
 
 					<section>
-					<h2>Tables <strong>Latin Character Tests</strong></h2>
-						<table>
-							<tbody>
-								<tr>
-									<td>!</td>
-									<td>"</td>
-									<td>#</td>
-									<td>$</td>
-									<td>%</td>
-									<td>&amp;</td>
-									<td>'</td>
-									<td>(</td>
-									<td>)</td>
-									<td>*</td>
-								</tr>
-								<tr>
-									<td>+</td>
-									<td>,</td>
-									<td>-</td>
-									<td>.</td>
-									<td>/</td>
-									<td>0</td>
-									<td>1</td>
-									<td>2</td>
-									<td>3</td>
-									<td>4</td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>6</td>
-									<td>7</td>
-									<td>8</td>
-									<td>9</td>
-									<td>:</td>
-									<td>;</td>
-									<td>&gt;</td>
-									<td>=</td>
-									<td>&lt;</td>
-								</tr>
-								<tr>
-									<td>?</td>
-									<td>@</td>
-									<td>A</td>
-									<td>B</td>
-									<td>C</td>
-									<td>D</td>
-									<td>E</td>
-									<td>F</td>
-									<td>G</td>
-									<td>H</td>
-								</tr>
-								<tr>
-									<td>I</td>
-									<td>J</td>
-									<td>K</td>
-									<td>L</td>
-									<td>M</td>
-									<td>N</td>
-									<td>O</td>
-									<td>P</td>
-									<td>Q</td>
-									<td>R</td>
-								</tr>
-								<tr>
-									<td>S</td>
-									<td>T</td>
-									<td>U</td>
-									<td>V</td>
-									<td>W</td>
-									<td>X</td>
-									<td>Y</td>
-									<td>Z</td>
-									<td>[</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>]</td>
-									<td>^</td>
-									<td>_</td>
-									<td>`</td>
-									<td>a</td>
-									<td>b</td>
-									<td>c</td>
-									<td>d</td>
-									<td>e</td>
-									<td>f</td>
-								</tr>
-								<tr>
-									<td>g</td>
-									<td>h</td>
-									<td>i</td>
-									<td>j</td>
-									<td>k</td>
-									<td>l</td>
-									<td>m</td>
-									<td>n</td>
-									<td>o</td>
-									<td>p</td>
-								</tr>
-								<tr>
-									<td>q</td>
-									<td>r</td>
-									<td>s</td>
-									<td>t</td>
-									<td>u</td>
-									<td>v</td>
-									<td>w</td>
-									<td>x</td>
-									<td>y</td>
-									<td>z</td>
-								</tr>
-								<tr>
-									<td>{</td>
-									<td>|</td>
-									<td>}</td>
-									<td>~</td>
-								</tr>
-								</tbody>
-							</table>
-					</section>
+						<h2>Dateisystem</h2>
+							<p>
+							index.html
+							</p><ul>
+								<li>Frei bearbeitbar</li>
+								<li>Enthält Beispielcode und vorgegebene Einsatzmöglichkeiten</li>
+							</ul>
+							<p></p>
+							<p>
+							base.css
+							</p><ul>
+								<li>Basis für das Framework</li>
+								<li>Grundlegende Styles definiert</li>
+							</ul>
+							<p></p>
+						</section>
+						<section>
+                            <h2>Dateisystem</h2>
+							<p>
+							skeleton.css
+							</p><ul>
+								<li>Definition : 960er Grid</li>
+							</ul>
+							<p></p>
+							<p>
+							layout.css
+							</p><ul>
+								<li>Eigendefinition der Styles</li>
+								<li>Vordefinierte Media-Queries</li>
+							</ul>
+							<p></p>
+						</section>
+
+					<section>
+						<h2>Breitenangabe der Spalten</h2>
+					<p>
+						</p><pre><code class="undefined">
+	.container .one.column,
+	.container .one.columns
+	.container .two.columns
+	.container .three.columns
+      	...
+	.container .fourteen.columns
+	.container .fifteen.columns
+	.container .sixteen.columns
+
+	.container .one-third.column
+	.container .two-thirds.column
+						</code></pre>
+					<p></p>
 				</section>
 
-				<section data-markdown>
-					<script type="text/template">
-					## Markdown Support
-
-					Für die, die Markdown lieben.
-					Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
-					die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
-
-					> This is a blockquote. Lorem ipsum dolor sit amet,
-					> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-					> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-					```
-					## Markdown support
-
-					Für die, die Markdown lieben.
-					Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
-					die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
-
-					> This is a blockquote. Lorem ipsum dolor sit amet,
-					> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-					> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-					```
-					</script>
+				<section>
+					<h2>Abstände</h2>
+					<p>
+						</p><pre><code class="undefined">
+	.container .offset-by-one
+	.container .offset-by-two
+	.container .offset-by-three
+	.container .offset-by-four
+        ...
+	.container .offset-by-thirteen
+	.container .offset-by-fourteen
+	.container .offset-by-fifteen
+						</code></pre>
+					<p></p>
 				</section>
 
-				<!-- End of slides container. -->
+				<section>
+					<h2>Klassenaufbau</h2>
+					<p>
+						</p><pre><code class="xml">
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"four columns"</span>&gt;</span>Spalte 1<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"four columns"</span>&gt;</span>Spalte 2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"four columns"</span>&gt;</span>Spalte 3<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"four columns"</span>&gt;</span>Spalte 4<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+						</code></pre>
+					<p></p>
+				</section>
+
+				<section>
+					<h2>Media-Queries</h2>
+					<p>
+						</p><pre><code class="css">
+<span class="comment">/* Smaller than standard 960 (devices and browsers) */</span>
+<span class="at_rule">@<span class="keyword">media</span> only screen and (max-width: <span class="number">959</span>px) </span>{}
+
+<span class="comment">/* Tablet Portrait size to standard 960 (devices and browsers) */</span>
+<span class="at_rule">@<span class="keyword">media</span> only screen and (min-width: <span class="number">768</span>px) and (max-width: <span class="number">959</span>px) </span>{}
+
+<span class="comment">/* All Mobile Sizes (devices and browser) */</span>
+<span class="at_rule">@<span class="keyword">media</span> only screen and (max-width: <span class="number">767</span>px) </span>{}
+
+<span class="comment">/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */</span>
+<span class="at_rule">@<span class="keyword">media</span> only screen and (min-width: <span class="number">480</span>px) and (max-width: <span class="number">767</span>px) </span>{}
+
+<span class="comment">/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */</span>
+<span class="at_rule">@<span class="keyword">media</span> only screen and (max-width: <span class="number">479</span>px) </span>{}
+						</code></pre>
+					<p></p>
+				</section>
+
+				<section>
+					<h2>Spezialfall Menü</h2>
+					<p>
+						</p><pre><code class="xml">
+<span class="tag">&lt;<span class="title">select</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"#"</span>&gt;</span>Home<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"#rekord"</span>&gt;</span>Über den Rekord<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"#orga"</span>&gt;</span>Organisatorisch<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"#location"</span>&gt;</span>Location<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"#contact"</span>&gt;</span>Kontakt<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"#link"</span>&gt;</span>Weiterer Link<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">select</span>&gt;</span>
+						</code></pre>
+					<p></p>
+					<p>
+						</p><pre><code class="javascript">
+$(<span class="string">'select'</span>).change(<span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+	window.location = $(<span class="keyword">this</span>).find(<span class="string">'option:selected'</span>).val();
+});
+						</code></pre>
+					<p></p>
+				</section>
+
+			</section>
+
+			<section class="future" style="display: none;">
+				<h2>Übung 01</h2>
+				<p>
+					Ziel: Responsive Menü
+				</p>
+				<p>
+					Datei: index.html
+				</p>
+				<p>
+					<a href="https://www.dropbox.com/s/3l4azfkxdukujcl/Responsive%20Design%20Frameworks.zip" target="_blank" class="roll"><span data-title="Download">Download</span></a> oder Github
+				</p>
+				<p>
+					</p><ul><li>Das oben (Zeile 54-61) dargestellte Menü soll für mobile Endgeräte optimiert werden. Überführen sie das
+Menü in ein Dropdownmenü. Beachten Sie dabei die bereits vorhandenen Verlinkungen.</li></ul>
+				<p></p>
+			</section>
+
+			<section class="future" style="display: block;">
+				<h2>Übung 02</h2>
+				<p>
+					Ziel: Verständnis Grundsyntax
+				</p>
+				<p>
+					Datei: index.html
+				</p>
+				<p>
+					<a href="https://www.dropbox.com/s/3l4azfkxdukujcl/Responsive%20Design%20Frameworks.zip" target="_blank" class="roll"><span data-title="Download">Download</span></a> oder Github
+				</p>
+				<p>
+					</p><ul><li>Die vier Artikel unterhalb des Teaserbildes sollen innerhalb des 16-Spalten-Rasters nebeneinander und in gleicher Breite dargestellt werden.</li></ul>
+				<p></p>
+			</section>
+
+			<section class="future" style="display: block;">
+				<h2>Übung 03</h2>
+				<p>
+					Ziel: Media Queries verstehen
+				</p>
+				<p>
+					Datei: stylesheets/layout.css
+				</p>
+				<p>
+					<a href="https://www.dropbox.com/s/3l4azfkxdukujcl/Responsive%20Design%20Frameworks.zip" target="_blank" class="roll"><span data-title="Download">Download</span></a> oder Github
+				</p>
+				<p>
+					</p><ul><li>Auf ALLEN mobilen Endgeräten soll das Logo im Headerbereich (.logo img) halb so groß (70*44px) dargestellt werden. Wählen Sie den passenden Media-Query und fügen Sie die passenden CSS-Eigenschaften hinzu.</li></ul>
+				<p></p>
+			</section>
 
 			</div>
 
-		</div>
+		<div class="progress" style="display: block;"><span style="width: 61.36363636363637px;"></span></div><aside class="controls" style="display: block;"><a class="left enabled" href="http://fh-koeln.github.io/wba1-2012/files/2013-01-17-Responsive-Design-Frameworks/index.html#">◄</a><a class="right enabled" href="http://fh-koeln.github.io/wba1-2012/files/2013-01-17-Responsive-Design-Frameworks/index.html#">►</a><a class="up" href="http://fh-koeln.github.io/wba1-2012/files/2013-01-17-Responsive-Design-Frameworks/index.html#">▲</a><a class="down" href="http://fh-koeln.github.io/wba1-2012/files/2013-01-17-Responsive-Design-Frameworks/index.html#">▼</a></aside><div class="state-background"></div><div class="pause-overlay"></div></div>
 
-		<script src="../revealjs-framework/lib/js/head.min.js"></script>
-		<script src="../revealjs-framework/js/reveal.min.js"></script>
+		<script src="./WBA1_files/head.min.js"></script>
+		<script src="./WBA1_files/reveal.min.js"></script>
 
 		<script>
 
@@ -327,25 +362,24 @@ Hello world
 				controls: true,
 				progress: true,
 				history: true,
-				center: false,
-				width: 1000,
 
-				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
-				transitionSpeed: 'fast', // default/fast/slow
-				backgroundTransition: 'none', // default/linear/none
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
-					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } }
+					//{ src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					//{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
 				]
 			});
 
-		</script>
+		</script><script type="text/javascript" src="./WBA1_files/zoom.js"></script>
 
-	</body>
-</html>
+	
+
+<script type="text/javascript" src="./WBA1_files/highlight.js"></script></body></html>
