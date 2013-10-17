@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 
 	<!-- Title of presentation -->
-	<title>HTML Advanced</title>
+	<title>HTML Advanced - Seminar</title>
 	<!-- Short description of presentation -->
 	<meta name="description" content="Demo of Reveal.js functions and features">
 	<!-- Author of presentation -->
@@ -41,18 +41,18 @@
 	<div class="slides">
 
 		<section>
-			<h1>HTML advanced</h1>
-			<h2>erweiterte Befehle & HTML5 Exkurs</h2>
+			<h1>Web-basierte Anwendungen 1</h1>
+			<h2>HTML Advanced & HTML5</h2>
 
 			<p>17. Oktober 2013</p>
 
-			<p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
+			<p>Studiengang Medieninformatik an der Fachhochschule Koeln<br>
 			Campus Gummersbach</p>
 
-			<p style="margin-top:10%">Vsevolod Kueppers <strong>//</strong> Thomas xxx <strong>//</strong> Serjcan xxx<br>
+			<p style="margin-top:10%">Vsevolod Kueppers <strong>//</strong> Thomas Friesen <strong>//</strong> Sercan Kuecuekkoese<br>
 		</section>
 		<section>
-			<h2>Inhalt</h2>
+			<h2>Seminarablauf</h2>
 			<p>
 				<ul>
 					<li class="fragment">Tabellen
@@ -62,47 +62,96 @@
 						</ul>
 					</li>
 					<li class="fragment">Formulare</li>
-					<li class="fragment">(X)HTML Preview</li>
-					<li class="fragment">Exkurs HTML5</li>
+					<li class="fragment">Strukturelemente HTML5</li>
 				</ul>
 			</p>
 		</section>
 		<section> <!-- Tabellen for Beginners Anfang-->
 			<section data-markdown>
 				<script type="text/template">
-				###Tabellen for Beginners - Grundbegriffe
-				<p class="fragment highlight-blue">Tabelle:</p>
-				<table>Dazwischen stehen Tabellenzeilen und -spalten</table></br>
-				
-				<p class="fragment highlight-blue">Tabellenzeile:</p>
-				<tr>hier steht eine Zeile</tr></br>
-				
-				</br><p class="fragment highlight-blue">Tabellenzelle:</p>
-				<td>hier steht der Inhalt der Zelle</td>
+					<h2>Einfache Tabelle - Grundbegriffe</h2>
+					<ul>
+						<li>Tabellen bestehen aus Reihen und Spalten.</li>
+						<li>Fuer eine Tabelle benoetigen wir 3 verschiedene HTML-TAGs.</li>
+					<ul></br>
+					<p class="fragment" >Tabelle:</p>
+					<code>
+						<ul>
+							<li class="fragment">&lt;table&gt; &lt;/table&gt; - Grundgeruest</li>
+						</ul>
+					</code></br>
+					
+					<p class="fragment">Tabellenzeile:</p>
+					<code>
+						<ul>
+							<li class="fragment">&lt;tr&gt; &lt;/tr&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Tabellenzeilen</li>
+						</ul>
+					</code></br>
+					
+					<p class="fragment">Tabellenzelle:</p>
+					<code>
+						<ul>
+							<li class="fragment">&lt;td&gt; &lt;/td&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Tabellenzellen</li>
+						</ul>
+					</code>
 				</script>
 			</section>
 			<section data-markdown>
 				<script type="text/template">
-					###Tabellen for Beginners - Code
-					####Einfache Tabelle:
-
-					<img class="align-center" src="https://raw.github.com/fh-koeln/wba1-2013/2013-10-17-HTML-Advanced-Gruppe-2/images/table.png">
+					<h2>Einfache Tabellen - Code</h2>
+					<p><strong>&lt;table&gt;</strong></p>
+					<p>Anlegen der Tabelle</p>
+					<pre><code data-trim>
+					&lt;table&gt;
+					&lt;/table&gt;
+					</pre></code>
+					<p><strong>&lt;tr&gt; - table row</strong></p>
+					<p>Anlegen der Tabellenzeile</p>
+					<pre><code data-trim>
+					&lt;table&gt;
+					   &lt;tr&gt;
+					   &lt;/tr&gt;
+					&lt;/table&gt;
+					</pre></code>
+					<p><strong>&lt;td&gt; - table data</strong></p>
+					<p>Anlegen der Tabellendatenzelle</p>
+					<pre><code data-trim>
+					&lt;table&gt;
+					   &lt;tr&gt;
+						  &lt;td&gt;&lt;/td&gt;
+					   &lt;/tr&gt;
+					&lt;/table&gt;
+					</pre></code>
 				</script>
 			</section>
 			<section data-markdown>
 				<script type="text/template">
-					###Tabellen for Beginners - Beispiel
-
-					<table> <!-- Tabelle Anfang -->
-						<tr> <!-- Zeilen Anfang tr = Table Row -->
-							<td>Zeile 1. Spalte 1</td> <!-- Tabellenzelle td = Table Data -->
-							<td>Zeile 1. Spalte 2</td>
-							<td>Zeile 1. Spalte 3</td>
+					<h2>Einfache Tabellen - Code</h2>
+					<h3>Fuellen einer Tabelle</h3>
+					<p><i>Beispiel :</i></p>
+					<pre>
+						<code data-trim>
+						&lt;table&gt;
+					   &lt;tr&gt;
+						  &lt;td&gt; Zeile 1, Spalte 1 &lt;/td&gt;
+						  &lt;td&gt; Zeile 1, Spalte 2 &lt;/td&gt;
+					   &lt;/tr&gt;
+					   &lt;tr&gt;
+						  &lt;td&gt; Zeile 2, Spalte 1 &lt;/td&gt;
+						  &lt;td&gt; Zeile 2, Spalte 2 &lt;/td&gt;
+					   &lt;/tr&gt;
+					&lt;/table&gt;
+						</code>
+					</pre>
+					<p><i>Ergebnis :</i></p>
+					<table>
+						<tr>
+							<td> Zeile 1, Spalte 1 </td>
+							<td> Zeile 1, Spalte 2 </td>
 						</tr>
 						<tr>
-							<td>Zeile 2. Spalte 1</td>
-							<td>Zeile 2. Spalte 2</td>
-							<td>Zeile 2. Spalte 3</td>
+							<td> Zeile 2, Spalte 1 </td>
+							<td> Zeile 2, Spalte 2 </td>
 						</tr>
 					</table>
 				</script>
@@ -111,458 +160,696 @@
 		<section> <!-- Tabellen for Advanced Users Anfang-->
 			<section data-markdown>
 				<script type="text/template">
-					###Tabellen for Advanced User - Grundbegriffe
-					<p class="fragment highlight-blue">Tabellen Ränder</p>
-					<table border="(Breite, z.B. 10)">"Inhalt"</table>
-
-					<p class="fragment highlight-blue">Oberster Abschnitt einer Tabelle</p>
-					<thead>"Inhalt"</thead>
-
-					<p class="fragment highlight-blue">Tabellenkopf</p>
-					<th>"Inhalt"</th>
-
-					<p class="fragment highlight-blue">Tabellenkörper</p>
-					<tbody>"Inhalt"</tbody>
-					
-					<p class="fragment highlight-blue">Tabellenfuss</p>
-					<tfoot>"Inhalt"</tfoot>
+					<h2>Erweiterte Tabelle - Grundbegriffe</h2>
+						<ul>
+							<li>Es gibt eine Reihe von Modifikatoren einer Tabelle.</li>
+							<li>Fuer eine bessere Uebersicht verwendet wir...</li>
+						<ul></br>
+						<p class="fragment">Oberste Zeilen der Tabelle:</p>
+						<code>
+							<ul>
+								<li class="fragment">&lt;thead&gt; &lt;/thead&gt;</li>
+							</ul>
+						</code>
+						<p class="fragment">Tabellenkopf:</p>
+						<code>
+							<ul>
+								<li class="fragment">&lt;th&gt; &lt;/th&gt;</li>
+							</ul>
+						</code>
+						<p class="fragment">Tabellenkoerper:</p>
+						<code>
+							<ul>
+								<li class="fragment">&lt;tbody&gt; &lt;/tbody&gt;</li>
+							</ul>
+						</code>
+						<p class="fragment">Tabellenfuss:</p>
+						<code>
+							<ul>
+								<li class="fragment">&lt;tfoot&gt; &lt;/tfoot&gt;</li>
+							</ul>
+						</code></br>
 				</script>
 			</section>
 			<section data-markdown>
 				<script type="text/template">
-					###Tabellen for Advanced Users - Code
-					####Eine ganze Tabelle:
-
-					<p>Einnahmen 1. Quartal 2013:</p>
-					<table> <!-- Tabelle Anfang -->
-						<thead>
-							<tr><th>Nummer</th><th>Name</th></tr>
-						</thead>
-						<tbody>
-							<tr><td>1</td><td>Musterfrau</td></tr>
-							<tr><td>2</td><td>Mustermann</td></tr>
-							<tr><td>3</td><td>Supermann</td></tr>
-						</tbody>
-						<tfoot>
-						<tr><td>Anzahl</td><td>3</td></tr>
-						</tfoot>
-					</table> <!-- Tabellen ende -->
+					<h2>Erweiterte Tabelle - Code</h2>
+					<p><strong>&lt;thead&gt; und &lt;th&gt; - table head</strong></p>
+					<p>Anlegen der Kopfzeile</p>
+					<pre><code data-trim>
+					&lt;thead&gt;
+						&lt;th&gt;
+						&lt;/th&gt;
+					&lt;/thead&gt;
+					</pre></code>
+					<p><strong>&lt;tfoot&gt; - table foot</strong></p>
+					<p>Anlegen des Tabellenfusses</p>
+					<pre><code data-trim>
+					&lt;tfoot&gt;
+					   &lt;tr&gt;
+							&lt;td&gt;&lt;td&gt;
+					   &lt;/tr&gt;
+					&lt;/tfoot&gt;
+					</pre></code>
+					<p><strong>&lt;tbody&gt; - table body</strong></p>
+					<p>Anlegen des Tabellenkoerpers</p>
+					<pre><code data-trim>
+					&lt;tbody&gt;
+					   &lt;tr&gt;
+							&lt;td&gt;&lt;td&gt;
+					   &lt;/tr&gt;
+					&lt;/tbody&gt;
+					</pre></code>
 				</script>
 			</section>
 			<section data-markdown>
 				<script type="text/template">
-					###Tabellen for Advanced Users - Code
-					####Eine ganze Tabelle:
-
-					<p>Einnahmen 1. Quartal 2013:</p>
-					<table> <!-- Tabelle Anfang -->
+					<h2>Erweiterte Tabellen - Code</h2>
+					<h3>Fuellen einer Tabelle</h3>
+					<p><i>Beispiel :</i></p>
+	<pre><code data-trim>
+	<table>
+	  <thead>
+		<tr>
+		  <th>Studiengang 1</th>
+		  <th>Studiengang 2</th>
+		</tr>
+	  </thead>
+	  <tfoot>
+		<tr>
+		  <td>600</td>
+		  <td>200</td>
+		</tr>
+	  </tfoot>
+	  <tbody>
+		<tr>
+		  <td>Mi</td>
+		  <td>Ti</td>
+		</tr>
+	  </tbody>
+</table>	
+	</pre></code>
+					<p><i>Ergebnis :</i></p>
+					<table border="1">
 						<thead>
-							<tr><th>Nummer</th><th>Name</th></tr>
+							<tr>
+								<th>Studiengang 1</th>
+								<th>Studiengang 2</th>
+							</tr>
 						</thead>
-						<tbody>
-							<tr><td>1</td><td>Musterfrau</td></tr>
-							<tr><td>2</td><td>Mustermann</td></tr>
-							<tr><td>3</td><td>Supermann</td></tr>
-						</tbody>
 						<tfoot>
-						<tr><td>Anzahl</td><td>3</td></tr>
+							<tr>
+								<td>600</td>
+								<td>200</td>
+							</tr>
 						</tfoot>
-					</table> <!-- Tabellen ende -->
+						<tbody>
+							<tr>
+								<td>Mi</td>
+								<td>Ti</td>
+							</tr>
+						</tbody>
+					</table>
 				</script>
 			</section>
 		</section> <!-- Tabellen for Advanced Users ende -->
 		<section> <!-- Formulare Anfang -->
 			<section data-markdown>
 				<script type="text/tamplate">
-					###Formulare - Was ist ein Formular?
-					<p class="fragment">
-						<img class="align-center" src="https://raw.github.com/fh-koeln/wba1-2013/2013-10-17-HTML-Advanced-Gruppe-2/images/formular.png">
-					</p>
+					<h2>Formulare - Funktionen</h2>
+					<p>In Formularen kann der Anwender...</p>
+					<ul>
+						<li>Eingabefelder ausfuellen</li>
+						<li>in mehrzeiligen Textfeldern Text eingeben</li>
+						<li>aus Listen Eintraege auswaehlen</li>
+						<li>und weitere Elemente einbinden</li>
+					</ul>
 				</script>
 			</section>
 			<section data-markdown>
 				<script type="text/template">
-					###Formulare - Definieren
-					####Definition
-
-					<form name="Formularname" action="Aktion ausführen">
-					<!-- mit Formular Elementen Auffüllen-->
-					</form>
+					<h2>Formulare - Code</h2>
+					<p><strong>&lt;form&gt; - formular</strong></p>
+					<p>Anlegen des Formulars</p>
+					<pre><code data-trim>
+					&lt;form action=""&gt;
+					&lt;/form&gt;
+					</pre></code>
+					<p><strong>&lt;input&gt; - input option</strong></p>
+					<p>Anlegen eines Feldes</p>
+					<pre><code data-trim>
+					&lt;input&gt;&lt;/input&gt;
+					</pre></code>
+					<p><strong>&lt;label&gt; - label fuer input</strong></p>
+					<p>Anlegen eines Labels</p>
+					<pre><code data-trim>
+					&lt;label&gt;&lt;/label&gt;
+					</pre></code>
 				</script>
 			</section>
 			<section data-markdown>
 				<script type="text/template">
-					###Formulare - Textelemente
-					####Text Label
-					<input type="text" name="Einfügezeile" value="default-text" />
-					<input type="password" name="Passwortzeile" value="versteckt" />
-
-					####Textfeld
-					<textarea name="Name" cols="50" rows="3">
-						Das ist ein Textfeld. Hier kann reingeschrieben werden.
+					<h2>Formulare - Code und Attribute</h2>
+					<p><strong>Input-Code und seine Attribute</strong></p>
+					<pre><code data-trim>
+					1. <input name="feld1" size=15 maxlength=15 value="Textfeld"/>
+					2. <input type="password" name="feld2" size=15 maxlength=15 value="password"/>
+					3. <input type="file" name="feld3" size=15/>
+					</code></pre><br>
+					<table>
+						<tr>
+							<td>
+								<label for="feld1"><font size="4">Textfeld</font></label>
+								<input name="feld1" size=15 maxlength=15 value="Textfeld"/>
+							</td>
+							<td>
+								<label for="feld2"><font size="4">Passwort</font></label>
+								<input type="password" name="feld2" size=15 maxlength=15 value="Passwort"/>
+							</td>
+							<td>
+								<label for="feld3"><font size="4">Button</font></label>
+								<input type="file" name="feld3" size=15/>
+							</td>
+						</tr>
+					</table></br>
+					<table border="0">
+						<tr>
+							<td>name</td>
+							<td>Eindeutiger Name des Eingabefeldes</td>
+						</tr>
+						<tr>
+							<td>size</td>
+							<td>Anzahl der Zeichen im Eingabefeld</td>
+						</tr>
+						<tr>
+							<td>maxlength</td>
+							<td>Anzahl der einzutragenen Zeichen im Eingabefeld</td>
+						</tr>
+						<tr>
+							<td>value</td>
+							<td>Vorgabewert oder -text</td>
+						</tr>
+						<tr>
+							<td>password</td>
+							<td>Passwortfeld durch ***</td>
+						</tr>
+						<tr>
+							<td>readonly</td>
+							<td>Inhalt kann nur gelesen werden</td>
+						</tr>
+					</table>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2>Formulare - Code und Attribute</h2>
+					<p><strong>Mehrzeilige Eingabefelder</strong></p>
+					<pre><code data-trim>
+			<textarea name="area1" rows=5 cols=15>Das ist eine Textbox</textarea>
+					</code></pre><br>
+					<table>
+					<tr>
+					<td>
+					<textarea name="area1" rows=5 cols=120>
+					Das ist eine Textbox
 					</textarea>
-				</script>	
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					###Formulare - Einfach oder mehrfach Wählen
-					####Radiobuttons
-
-					So weit klar? <br>
-					Ja <input type="radio" name="Name" value="Yes" />
-					Nein <input type="radio" name="Name" value="No" />
-
-					So weit klar? <br>
-					Ja <input type="radio" name="Name" value="Yes" />
-					Nein <input type="radio" name="Name" value="No" />
-
-					####Checkbox
-					Hier darfst du mehr wählen!
-					Ich <input type="checkbox" checked="check" />
-					Du <input type="checkbox" checked="check" />
-					Wir <input type="checkbox" checked="check" />
-
-					Hier darfst du mehr wählen! <br>
-					Ich <input type="checkbox" checked="check" /> <br>
-					Du <input type="checkbox" checked="check" /> <br>
-					Wir <input type="checkbox" checked="check" /> <br>
+					</td>
+					</tr>
+					</table></br>
+					<table border="0">
+						<tr>
+							<td>name</td>
+							<td>Eindeutiger Name des Eingabefeldes</td>
+						</tr>
+						<tr>
+							<td>rows</td>
+							<td>Anzahl der Reihen fuer das Textfeld</td>
+						</tr>
+						<tr>
+							<td>cols</td>
+							<td>Anzahl der Spalten fuer das Textfeld</td>
+						</tr>
+					</table>
 				</script>
 			</section>
 			<section data-markdown>
 				<script type="text/template">
-					###Formulare - Auswahllisten und Dropdownmenüs Definieren
-					####Auswahlliste:
-
-					<select name="Dropdown" size="3">
-					<option label="Gestern">Gestern</option>
-					<option label="Heute">Heute</option>
-					<option label="Morgen">Morgen</option>
+					<h2>Formulare - Code und Attribute</h2>
+					<p><strong>Auswahllisten - Dropdown</strong></p>
+					<table>
+						<tr>
+							<td>
+							<pre><code data-trim>
+						<select name="dropdown">
+						<option>Auswahl 1</option>
+						<option>Auswahl 2</option>
+						<option selected>Auswahl 3</option>
 					</select>
-
-					<select name="Dropdown" size="3">
-					<option label="Gestern">Gestern</option>
-					<option label="Heute">Heute</option>
-					<option label="Morgen">Morgen</option>
+							</code></pre>
+							</td>
+							<td>
+							<pre><code data-trim>
+						<select name="dropdown" size=3>
+						<option>Auswahl 1</option>
+						<option>Auswahl 2</option>
+						<option selected>Auswahl 3</option>
 					</select>
-
-					####Dropdown
-					...size="1"...
-
-					<select name="Dropdown" size="1">
-					<option label="Gestern">Gestern</option>
-					<option label="Heute">Heute</option>
-					<option label="Morgen">Morgen</option>
-					</select>
-				</script>	
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					###Formulare - Buttons
-					####Button
-
-					<input type="button" name="kann_Nichts" value="Ich kann nichts!" />
-
-					<input type="button" name="kann_Nichts" value="Ich kann nichts!" />
-
-					####Bestätigung ist alles
-
-					<input type="submit" name="submit_but" value="Okay" />
-
-					<input type="submit" name="submit_but" value="Okay" />
-
-					####Reset-Button
-
-					<input type="reset" name="submit_but" value="Clear" />
-
-					<form name"test" action"ziel">
-					<textarea name="Name" cols="50" rows="3">
-					Hier schreiben wir einen Text, den wir gleich Löschen.
-					</textarea> <br>
-					<input type="reset" name="submit_but" value="Clear" />
-					</form>
-				</script>	
-			</section>
-			<section data-markdown>
-				<script type="text/template">
-					###Formulare - Code
-
-					<!DOCTYPE html>
-					<html>
-					<head>
-					<meta charset="utf-8">
-					<title>Test</title>
-					</head>
-					<body>
-						<form name="name" action="">
-							<input type="text" name"name" value="Vorname" /> <input type="text" name"name_n" value="Nachname" /><br>
-							<textarea name="Vita" cols="50" rows="3">
-							Schreib etwas über dich!
-							</textarea><br>
-							<input type="submit" name="button_submit" value="Okay"/>
-							<input type="reset" name="delete" value="reset" />
-						</form>
-					</body>
-					</html>
+							</code></pre>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="dropdown"><font size="4">Beispiel 1</font></label></br>
+								<select name="dropdown">
+									<option>Auswahl 1</option>
+									<option>Auswahl 2</option>
+									<option selected>Auswahl 3</option>
+								</select>
+							</td>
+							<td><label for="dropdown"><font size="4">Beispiel 2</font></label></br>
+								<select name="dropdown" size=3>
+									<option>Auswahl 1</option>
+									<option selected>Auswahl 2</option>
+									<option>Auswahl 3</option>
+								</select>
+							</td>
+						</tr>
+					</table></br>
+					<table border="0">
+						<tr>
+							<td>name</td>
+							<td>Eindeutiger Name der Dropdown Box</td>
+						</tr>
+						<tr>
+							<td>option</td>
+							<td>Neue Auswahl hinzufuegen</td>
+						</tr>
+						<tr>
+							<td>selected</td>
+							<td>Option vorselektieren</td>
+						</tr>
+						<tr>
+							<td>size</td>
+							<td>Wenn Anzahl der Optionen angegeben, fällt das Dropdown weg</td>
+						</tr>
+					</table>
 				</script>
 			</section>
 			<section data-markdown>
 				<script type="text/template">
-					###Formulare - Beispiel
-
-					<form name="name" action="">
-					<input type="text" name"name" value="Vorname" /> <input type="text" name"name_n" value="Nachname" /><br>
-					<textarea name="Vita" cols="50" rows="3">
-					Schreib etwas über dich!
-					</textarea><br>
-					<input type="submit" name="button_submit" value="Okay"/>
-					<input type="reset" name="delete" value="reset" />
+					<h2>Formulare - Code und Attribute</h2>
+					<p><strong>Auswahllisten - Radio-Box und Checkbox</strong></p>
+					<table>
+						<tr>
+					<td>
+					<pre><code data-trim>
+					<input type=radio name="radio1" value="name1">Auswahl 1
+					<input type=radio name="radio1" value="name2">Auswahl 2
+					</code></pre>
+					</td>
+					<td>
+					<pre><code data-trim>
+					<input type="checkbox" name="checkbox1" value="name1" >Auswahl 3
+					<input type="checkbox" name="checkbox1" value="name1" >Auswahl 4
+					</code></pre>
+					</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="radio"><font size="3">Beispiel 1</font></label></br>
+								<input type=radio name="radio1" value="name1">Auswahl 1</br>
+								<input type=radio name="radio1" value="name2">Auswahl 2
+							</td>
+							<td>
+								<label for="radio"><font size="3">Beispiel 2</font></label></br>
+								<input type="checkbox" name="checkbox1" value="name1" >Auswahl 3<br>
+								<input type="checkbox" name="checkbox1" value="name1" >Auswahl 4
+							</td>
+						</tr>
+					</table></br>
+					<table border="0">
+						<tr>
+							<td>name</td>
+							<td>Eindeutiger Name der Auswahl</td>
+						</tr>
+						<tr>
+							<td>radio</td>
+							<td>Es kann nur eine Radiobutton ausgewaehlt werden</td>
+						</tr>
+						<tr>
+							<td>checkbox</td>
+							<td>Es koennen mehrere Checkboxen ausgewaehlt werden</td>
+						</tr>
+						<tr>
+							<td>value</td>
+							<td>Wert der uebertragen wird</td>
+						</tr>
+						<tr>
+							<td>checked</td>
+							<td>Auswahl vorselektieren</td>
+						</tr>
+					</table>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2>Formulare - Code und Attribute</h2>
+					<p><strong>Formular-Buttons</strong></p>
+					<table>
+						<tr>
+							<td>
+							<pre><code data-trim>
+							<input type=submit value="Abschicken"/>
+							</code></pre>
+							</td>
+							<td>
+							<pre><code data-trim>
+							<input type=reset value="Loeschen"/>
+							</code></pre>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="submit"><font size="4">Beispiel 1</font></label></br>
+								<input type=submit name="submit" value="Abschicken"/>
+							</td>
+							<td>
+								<label for="reset"><font size="4">Beispiel 2</font></label></br>
+								<input type=reset name="reset" value="Loeschen"/>
+							</td>
+						</tr>
+					</table></br>
+					<table border="0">
+						<tr>
+							<td>submit</td>
+							<td>Abschicken des Formulars</td>
+						</tr>
+						<tr>
+							<td>reset</td>
+							<td>Zuruecksetzen des Formulars</td>
+						</tr>
+						<tr>
+							<td>value</td>
+							<td>Button Beschriftung</td>
+						</tr>
+					</table>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2>Formulare </h2>
+					<p><strong>Beispiel - Kontaktformular</strong></p>
+				<table>
+				<tr>
+				<td>
+				<pre><code data-trim>
+				<form id="kontaktformular" name="kontaktformular" action="">
+	<div>
+		<label for="absender">Ihre E-Mail-Adresse:</label>
+		<input type="text" id="absender" name="absender"/>
+	</div>
+	<div>
+		<label for="nachricht">Ihre Nachricht:</label>
+		<textarea id="nachricht" name="nachricht" cols="22" rows="5"></textarea>
+	</div>
+	<div>
+		<input type="submit" value="Abschicken"/>
+		<input type="reset" value="Loeschen"/>
+	</div>
+</form>
+				</pre></code>
+				</td>
+				</tr>
+				<tr>
+				<td>
+					<form>
+						<div>
+							<label for="absender">Ihre E-Mail-Adresse:</label>
+							<input type="text" id="absender" name="absender"/>
+						</div>
+						<div>
+							<label for="nachricht">Ihre Nachricht:</label>
+							<textarea id="nachricht" name="nachricht" cols="22" rows="5"></textarea>
+						</div>
+						<div>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="submit" value="Abschicken"/>
+							<input type="reset" value="Loeschen"/>
+						</div>
 					</form>
+					</td>
+				</tr>
+				</table>
 				</script>
 			</section>
 		</section><!-- Formulare Ende -->
 
 		<section><!-- HTML5 Anfang -->
 			<section data-markdown>
-				<script type="text/tamplate">
-					###HTML 5 - Was ist anders?
-					####HTML 4.01, die div-Variante:
-
-					<!DOCTYPE html>
+				<script type="text/template">
+					<h2>HTML 5- Strukturelemente</h2>
+					<ul>
+						<li>In HTML 5 gibt es neue HTML-Befehle, um Bereiche einzuteilen.</li>
+						<li>In HTML 5 kann nun direkt mit einem logischen HTML-TAG ausgezeichnet werden.</li>
+					</ul></br></br>
+					<table border="0">
+						<tr>
+							<td><p class="fragment highlight-red">article</p></td>
+							<td>Auszeichnung von textuell relevanten Dokumenteninhalten</td>
+						</tr>
+						<tr>
+							<td>aside</td>
+							<td>Definiert marginale Informationen zu einem Dokumenteninhalt</td>
+						</tr>
+						<tr>
+							<td>details</td>
+							<td>Beinhaltet zusaetzliche Informationen zu einem Dokumenteninhalt</td>
+						</tr>
+						<tr>
+							<td>doctype</td>
+							<td>Definiert den verwendeten Dokumententyp</td>
+						</tr>
+						<tr>
+							<td>figure</td>
+							<td>Gruppierung von Medieninhalten</td>
+						</tr>
+						<tr>
+							<td><p class="fragment highlight-red">footer</p></td>
+							<td>Definiert die Fusszeile eines Dokumenteninhaltes</td>
+						</tr>
+						<tr>
+							<td><p class="fragment highlight-red">header</p></td>
+							<td>Definiert den Kopfbereich eines Dokumenteninhaltes</td>
+						</tr>
+						<tr>
+							<td><p class="fragment highlight-red">nav</p></td>
+							<td>Element zur Auszeichnung von Navigationen</td>
+						</tr>
+						<tr>
+							<td><p class="fragment highlight-red">section</p></td>
+							<td>Unterteilt einen "article" in unterschiedliche Sektionen</td>
+						</tr>
+					</table>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2>HTML5 Strukturelemte </h2>
+					<p><strong>Strukturelemt &lt;article&gt;</strong></p>
+					<p>Der &lt;article&gt; Tag gibt unabhaengige, in sich geschlossene Inhalte.</p>
+					<p>Moeglicher Einsatz fuer das &lt;article&gt; Element:</p>
+					<ul>
+						<li>Forum Beitrag</li>
+						<li>Blogbeitrag</li>
+						<li>etc.</li>
+					</ul>
+					</br>
+					<p><strong>Notation</strong></p>
+				<pre><code data-trim>
+			<article>
+	<header>
+		<h1>Ueberschrift</h1>
+	</header>
+	<p>Dies ist ein Beispieltext.</p>
+</article>
+				</pre></code>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2>HTML5 Strukturelemte </h2>
+					<p><strong>Strukturelemt &lt;header&gt;</strong></p>
+					<p>Der &lt;header&gt; Tag gibt einen Kopfbereich fuer ein Dokument oder Abschnitt.</p>
+					<p>Das &lt;header&gt; Element sollte als Container fuer Inhalte oder als einleitender Satz von Navigations-Links verwendet werden.</p>
+					<p>Man kann mehrere Elemente &lt;header&gt; in einem Dokument. </p>
+					</br>
+					<p><strong>Notation</strong></p>
+				<pre><code data-trim>
+		<header>
+	<titel>Header Beispiel</titel>
+	<meta charset="UTF-8">
+</header>
+				</pre></code>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2>HTML5 Strukturelemte </h2>
+					<p><strong>Strukturelemt &lt;nav&gt;</strong></p>
+					<p>Der &lt;nav&gt; Tag definiert eine Reihe von Navigations-Links.</p>
+					<p>Nicht alle Links in einem Dokuments muessen in einem &lt;nav&gt; Element sein. Das &lt;nav&gt; Element wird nur fuer Gruppen von Links definiert (Navigationsleiste).</p>
+					</br>
+					<p><strong>Notation</strong></p>
+				<pre><code data-trim>
+				<nav>
+	<ul>
+		<li><a href="#">Startseite</a></li>
+		<li><a href="#">Ueber uns</a></li>
+	</ul>
+</nav>
+				</pre></code>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2>HTML5 Strukturelemte </h2>
+					<p><strong>Strukturelemt &lt;section&gt;</strong></p>
+					<p>Der &lt;section&gt; Tag definiert Abschnitte in einem Dokument, wie Kapitel, Kopfzeilen, Fusszeilen oder andere Abschnitte des Dokuments.</p>
+					<p>Erstellt einen weiteren untergeordneten Bereich (hat meistens ein eigene Sub-Headline)</p>
+					</br>
+					<p><strong>Notation</strong></p>
+				<pre><code data-trim>
+				<section>
+	<header>
+		<h1>Ueberschrift</h1>
+	</header>
+	<p>Dies ist ein Beispieltext.</p>
+</section>
+				</pre></code>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2>HTML5 Strukturelemte </h2>
+					<p><strong>Strukturelemt &lt;footer&gt;</strong></p>
+					<p>Der &lt;footer&gt; Tag definiert eine Fusszeile eines Dokuments oder Abschnitts.</p>
+					<p>Eine Fusszeile enthaelt typischerweise den Autor des Dokuments, Copyright-Informationen, Links den Nutzungsbedingungen, Kontaktinformationen etc.</p>
+					<p>Sie koennen mehrere Elemente &lt;footer&gt; in einem Dokument.</p>
+					</br>
+					<p><strong>Notation</strong></p>
+				<pre><code data-trim>
+			<footer>
+		<p>Dies ist eine Fusszeile.</p>
+</footer>
+				</pre></code>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2>HTML5 Beispielseite - Code</h2>
+					<p><strong>&lt;article&gt; - article container</strong></p>
+					<pre><code data-trim>
+				<article>
+	<header>
+		<h1>Ueberschrift in h1</h1>
+		<p>Texti Text.</p>
+	</header>
+	<p>... Hier steht irgendwas ...</p>
+	<footer>
+		<p>HTML Advanced</p>
+	</footer>
+</article>
+					</pre></code>
+					<p><strong>&lt;header&gt; - header container</strong></p>
+					<pre><code data-trim>
+				<header>
+						<p>HTML5 Beispielseite</p>
+					</header>
+					</pre></code>
+					<p><strong>&lt;nav&gt; - nav container</strong></p>
+					<pre><code data-trim>
+				<nav>
+	<ul>
+		<li><a href="tabellen.html">Tabellen</a></li>
+		<li><a href="formulare.html">Formulare</a></li>
+		<li><a href="HTML5.html">HTML5</a></li>
+	</ul>
+</nav>
+					</pre></code>
+				</script>
+			</section>
+						<section data-markdown>
+				<script type="text/template">
+					<h2>HTML5 Beispielseite - Code</h2>
+					<p><strong>&lt;section&gt; - section container</strong></p>
+					<pre><code data-trim>
+				<section>
+	<header>
+		<h1>Ueberschrift</h1>
+	</header>
+	<p>...</p>
+</section>
+					</pre></code>
+					<p><strong>&lt;footer&gt; - footer container</strong></p>
+					<pre><code data-trim>
+				<footer>
+	<ul>
+		<li><a href="impressum.html">Impressum</a></li>
+		<li><a href="kontakt.html">Kontakt</a></li>
+	</ul>
+</footer>
+					</pre></code>
+				</script>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					<h2>HTML5 Beispielseite</h2>
 					<html>
 					<head>
-					<title>Vergleich html-html5</title>
+					<title>Website in HTML 5 als direktes Beispiel</title>
+					<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
 					<meta charset="UTF-8">
 					</head>
-
 					<body>
-						<div id="kopf">
-							<p>Bereich Kopf</p>
-						</div>
-
-						<div id="inhalt">
-							<p>Bereich Inhalt</p>
-						</div>
-
-						<div id="fuss">
-							<p>Bereich Fußzeile</p>
-						</div>
-					</body>
-					</html>
-
-					<html>
-					<head>
-						<title>Vergleich html-html5</title>
-						<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-						<meta charset="UTF-8">
-					</head>
-
-					<body>
-						<div id="kopf">
-							<p>Bereich Kopf</p>
-						</div>
-
-						<div id="inhalt">
-							<p>Bereich Inhalt</p>
-						</div>
-
-						<div id="fuss">
-							<p>Bereich Fußzeile</p>
-						</div>
-					</body>
-					</html>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/tamplate">
-					###HTML 5 - Was ist anders?
-					####HTML 5, logische Elemente:
-
-					<!DOCTYPE html>
-					<html>
-					<head>
-						<title>Vergleich html-html5</title>
-						<meta charset="UTF-8">
-					</head>
-
-					<body>
-						<header>
-							<p>Bereich Kopf</p>
-						</header>
-
-						<section>
-							<p>Bereich Inhalt</p>
-						</section>
-
-						<footer>
-							<p>Bereich Fußzeile</p>
-						</footer>
-					</body>
-					</html>
-
-					<html>
-					<head>
-						<title>Vergleich html-html5</title>
-						<meta charset="UTF-8">
-					</head>
-
-					<body>
-						<header>
-							<p>Bereich Kopf</p>
-						</header>
-
-						<section>
-							<p>Bereich Inhalt</p>
-						</section>
-
-						<footer>
-							<p>Bereich Fußzeile</p>
-						</footer>
-					</body>
-					</html>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/tamplate">
-					###HTML 5 - Strukturelemente
-					####doctype
-					<ul>
-						<li>Kürzer als in html 4.01 (leichter zu merken)</li>
-					</ul>
-
-					<!DOCTYPE html>
-					<html>
-					.
-					.
-					</html>
-
-					####header
-					<ul>
-						<li>Bildet die Kopfzeile eines Dokuments</li>
-						<li>Kann auch in anderen Teilbereichen eine Kopfzeile darstellen (section,article)</li>
-					</ul>
-
-					<header>
-						<titel>Header Beispiel</titel>
-						<meta charset="UTF-8">
-					</header>
-
-					####footer
-					<ul>
-						<li>Wie header nur als Fußzeile</li>
-					</ul>
-
-					<footer>
-						<p>Dies ist eine Fußzeile</p>
-					</footer>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/tamplate">
-					###HTML 5 - Strukturelemente
-					####article
-					<ul>
-						<li>Erschafft einen Bereich für Inhalte</li>
-						<li>Unabhängiges und in sich geschlossenes Unterdokument (z.B. Blog-Post)</li>
-						<li>Wird verwendet wenn es viele Einzelbereiche gibt</li>
-					</ul>
-
-					####section
-					<ul>
-						<li>Kann innerhalb eines article´s verwendet werden (quasi eine Stufe tiefer als jenes)</li>
-						<li>Erstellt einen weiteren untergeordneten Bereich (meist mit eigener Headline)</li>
-					</ul>
-
 					<article>
 						<header>
-							<h1>Überschrift</h1>
+						  <p>HTML5 Beispielseite</p>
 						</header>
-
+						<nav>
+						  <ul>
+							<li><a href="#">Startseite</a></li>
+							<li><a href="#">Ueber uns</a></li>
+						  </ul>
+						</nav>
 						<section>
-							<header>
-								<h2>Überschrift</h2>
-							</header>
-
-							<p>Ein super toller Text!!!!!</p>
+						  <h1>Willkommen zur HTML 5 Beispielwebsite</h1>
+						  <p>Diese Website gliedert sich in 4 Bereiche</p>
+						  <ul>
+							<li>Kopfzeile: Hintergrundbild-Download</li>
+							<li>Zeile Steuerung: Hintergrundfarbe ist #ceb98e</li>
+							<li>Uebergang mit Schattenwurf: Download Schattenwurf</li>
+							<li>Inhaltsbereich</li>
+						  </ul>
+						  <p>Um die verschiedenen Bereiche beim Entwickeln am besten Rahmen ziehen, 
+						  damit sofort erkennbar ist, wo welcher Bereiche sitzt :)</p>
 						</section>
+						<footer>
+						  <p>&copy; WBA1 - HTML Advanced</a></p>
+						</footer>
 					</article>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/tamplate">
-					###HTML 5 - Strukturelemente
-					####nav
-					<ul>
-						<li>Hauptnavigationsleiste einer Seite</li>
-						<li>Verlinkungen zu der jetzigen oder anderen Seiten eines Webauftritts</li>
-					</ul>
-
-					<nav>
-						<a href="#">| Startseite |</a>
-						<a href="#">| HTML 5 |</a>
-						<a href="#">| Impressum |</a>
-					</nav>
-
-					<nav>
-						<a href="#" style="color: deepskyblue; font-size:22px;"><i>| Startseite |</i></a>
-						<a href="#" style="color: deepskyblue; font-size:22px;"><i>| HTML 5 |</i></a>
-						<a href="#" style="color: deepskyblue; font-size:22px;"><i>| Impressum |</i></a>
-					</nav>
-
-					####aside
-					<ul>
-						<li>Benutzt zur Erweiterung bestehender Inhalte (inhaltliche Einschübe)</li>
-						<li>Definitionen, Querverweise, zusätzliche Informationen</li>
-					</ul>
-
-					<p>Irgendein Text der dir gerade einfällt</p>
-					<aside>
-						ein Kommentar hierzu...
-					</aside>
-
-					<p style="color: orange">Das Essen in der Mensa war heute wieder vortrefflich</p>
-					<aside style="text-align:right; font-size:15px;">
-						naja wenn du meinst...
-					</aside>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/tamplate">
-					###HTML 5 - Strukturelemente
-					####figure
-					<ul>
-						<li>Wird verwendet zur Gruppierung von Elementen</li>
-						<li>Meist zusammen verwendet mit figcaption</li>
-					</ul>
-
-					####figcaption
-					<ul>
-						<li>Mithilfe des figure und figcaption können Medien (z.B. Bilder, Videos und Codeausschnitte) mit einer Beschriftung versehen werden</li>
-					</ul>
-
-					<figure>
-						<img src="http://www.gm.fh-koeln.de/~stahl/logo_nightoftheprofs_trans.gif" alt="Night of prof" width="304" height="120">	
-						<figcaption>Ist toll!!!</figcaption>
-					</figure>
-
-					<figure>
-						<img src="http://www.gm.fh-koeln.de/~stahl/logo_nightoftheprofs_trans.gif" alt="Night of prof" width="304" height="120">	
-						<figcaption><p style="font-size:15">Ist toll!!!</p></figcaption>
-					</figure>
-				</script>
-			</section>
-			<section data-markdown>
-				<script type="text/tamplate">
-					###HTML 5 - Strukturelemente
-					####details/summary
-					<ul>
-					<li>Erstellt eine aufklappbare Liste</li>
-					<li>Ermöglicht ohne CSS dynamische Erweiterungen einzubauen</li>
-					<li>Summary befindet sich im sichtbaren- und details im unsichtbaren Bereich der Liste</li>
-					</ul>
+					</body>
+					</html>
 				</script>
 			</section>
 		</section><!-- HTML5 Ende -->
-
+		<section>
+			<section>
+			<br><br><br><br><br>
+			<h2>Vielen Dank fuer Ihre Aufmerksamkeit</h2>
+			<p align=right>jetzt gehts weiter zu der <a href="uebung.html">Uebung</a></p>
+			</section>
+		</section>
 	</div>
 </div>
 
