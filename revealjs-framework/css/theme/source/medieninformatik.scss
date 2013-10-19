@@ -23,7 +23,7 @@ $backgroundColor: #000;
 
 // Primary/body text
 $mainFont: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;
-$mainFontSize: 30px;
+$mainFontSize: 29px;
 $mainColor: #fff;
 
 // Headings
@@ -248,11 +248,11 @@ $selectionColor: #fff;
 }
 
 .reveal pre {
-	font-size: .6em;
+	font-size: .58em;
 	tab-size: 4;
 	width: 100%;
 }
 
 .reveal pre code {
-	padding: .5em;
+	padding: .2em .4em;
 }

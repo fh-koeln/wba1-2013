@@ -19,7 +19,7 @@ body {
 
 .reveal {
   font-family: "Myriad Pro", Arial, Helvetica, Tahoma, sans-serif;
-  font-size: 30px;
+  font-size: 29px;
   font-weight: 200;
   letter-spacing: -0.02em;
   color: white; }
@@ -291,9 +291,9 @@ body {
   padding: 6px 10px 6px 0; }
 
 .reveal pre {
-  font-size: .6em;
+  font-size: .58em;
   tab-size: 4;
   width: 100%; }
 
 .reveal pre code {
-  padding: .5em; }
+  padding: .2em .4em; }
