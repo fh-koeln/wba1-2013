@@ -4,16 +4,16 @@
 		"2013-10-10-wba1-kickoff/index.html":
 		{
 			"title" : "WBA1 Kickoff",
-			"authors" : ["Volker Schäfer"]
+			"authors" : ["Prof. Christian Noss", "Volker Schäfer"]
 		},
 		"2013-10-10-brackets-basics/index.html":
 		{
-			"title" : "Brackets - Einführung",
+			"title" : "Einführung: Brackets",
 			"authors" : ["Martin Baljan"]
 		},
 		"2013-10-10-git/index.html":
 		{
-			"title" : "Git & GitHub",
+			"title" : "Einführung: Git & GitHub",
 			"authors" : ["Dominik Schilling", "Christoph Jerolimov"]
 		},
 		"2013-10-17-html-basics-gruppe13/index.html":
