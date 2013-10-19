@@ -356,14 +356,11 @@ ul li:before {
 
 /* line 44, ../scss/_text.scss */
 pre {
-  background-color: #272822;
-  padding: 10px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  font-size: .7em;
+  font-family: monospace;
 }
 
-/* line 50, ../scss/_text.scss */
+/* line 49, ../scss/_text.scss */
 blockquote {
   margin: 40px 0;
   background-color: #dd1166;
@@ -375,7 +372,7 @@ blockquote {
   -o-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 57, ../scss/_text.scss */
+/* line 56, ../scss/_text.scss */
 blockquote:after {
   content: '';
   position: absolute;
@@ -464,6 +461,17 @@ blockquote:after {
 .slide {
   height: 768px;
   border: 1px solid #4d4d4d;
+}
+
+/* line 24, ../scss/_step.scss */
+#overview {
+  display: none;
+}
+
+/* line 28, ../scss/_step.scss */
+.impress-on-overview .step {
+  opacity: 1;
+  cursor: pointer;
 }
 
 /* line 1, ../scss/_headings.scss */
