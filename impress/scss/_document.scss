@@ -17,6 +17,11 @@ body {
 	}
 }
 
+@include selection {
+	background-color: rgba($green, .99); // alpha .99 quickfix for chrome forcing semi-transparent background
+	color: black;
+}
+
 .fallback-message {
 	position: absolute;
 	top: 20px;
