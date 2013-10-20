@@ -1,15 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 
 	<head>
 		<meta charset="utf-8">
-
+		
 		<!-- Title of presentation -->
-		<title>Responsive Webdesign Frameworks</title>
+		<title>WBA1 - Responsive Webdesign Frameworks</title>
+		
 		<!-- Short description of presentation -->
-		<meta name="description" content="Demo of Reveal.js functions and features">
+		<meta name="description" content="Responsive Webdesign Frameworks">
+		
 		<!-- Author of presentation -->
-		<meta name="author" content="Dominik Schilling">
+		<meta name="author" content="Eduard König, Marc Philipp Marcinkowski, Stefania Ciola">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -33,9 +35,7 @@
 	</head>
 
 	<body>
-
 		<div class="reveal">
-
 
 <!-- Startseite -->
 			<div class="slides">
@@ -44,311 +44,195 @@
 					<h1>Web-basierte Anwendungen 1</h1>
 					<h2>Responsive Webdesign Frameworks</h2>
 
-					<p>10. Oktober 2013</p>
+					<p>XX. Oktober 2013</p>
 
 					<p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
 					Campus Gummersbach</p>
-
-					<p style="margin-top:10%">Eduard König<br>
-					Marc Philipp Marcinkowski<br>
-					Stefania Ciola</p>
+					
+					<p style="margin-top:10%">Eduard König <br>
+					<a href="https://github.com/bigded" class="roll"><span data-title="github@bigded">github@bigded</span></a><br><br>
+					Marc Philipp Marcinkowski <br>
+					<a href="https://github.com/XXX" class="roll"><span data-title="github@XXX">github@XXX</span></a><br><br>
+					Stefania Ciola <br>
+					<a href="https://github.com/XXX" class="roll"><span data-title="github@XXX">github@XXX</span></a><br><br>
+					</p>					
 				</section>
                 
 <!-- Inhaltsverzeichnis -->                
-
 				<section class="present" style="display: block;">
-					<h2>Responsive Webdesign Frameworks</h2>
-					<p>
-						</p><ul>
-							<li>Grundgedanke</li>
-							<li>Grid-System</li>
+				<section>
+					<h1>Responsive Webdesign Frameworks</h1>
+					<p><br>
+						<ul>
+							<li>Grundlagen</li>
+							<li>Technik</li>
 							<li>Frameworks</li>
-							<li>Vorgefertigte Elemente</li>
-							<li>Vorteile/Nachteile</li>
-							<li>Beispiel zur Umsetzung mit Skeleton</li>
-					<p></p>
+							<li>Vor- und Nachteile</li>
+							<li>Beispiel zur Umsetzung mit Bootstrap</li>					
+						</ul>
+					</p>
+					</section>
+				</section>
 
-				</ul></section>
-
-<!-- Grundgedanke -->
-
+<!-- Grundlagen -->
 				<section class="future" style="display: block;">
-					<h2>Grundgedanke</h2>
+					<h1>Grundlagen</h1>
 					<p>
-						</p><ul>
-							<li>Dynamische Webseiten für verschiedene Endgeräte</li>
-							<li>Ansammlung von CSS-Klassen</li>
-							<li>Mobile Endgeräte sind die Zukunft</li>
-								<ul>
-									<li><strong>Optimierung unumgänglich</strong></li>
+					<ul>
+						<li>Größe und Auflösung des Displays variieren</li>
+						<li>Unterschiedlichen Anforderungen an die Endgeräte</li>
+					</ul>
+					<br><br>
+					<ul><h3>Ziel:</h3>
+						<li>möglichst von allen Geräten (Computer, Tablet, Smartphone) erkannt zu werden</li>
+						<li>übersichtlich und benutzerfreundlich wie möglich präsentieren</li>
+					</ul>
+					</p>
+				</section>
+				
+<!-- Technik -->
+				<section class="future" style="display: block;">
+					<h1>Technik</h1>
+					<p>
+						Media Queries, Eigenschaftsspezifische Stylesheets
+						<ul>
+							<li>Gitter-System im Spalten aufgebaut</li>
+							<li>Stille sind vorgegeben, flexibles System</li>
+							<li>Arbeitet mit HTML5, CSS3 und JavaScript</li>
+							<li>Icons als Glyphicons (als Schritzeichen in Bootstrap)</li>
 						</ul>
+							<br><br>
+							<h3>Eigenschaften:</h3>
+						<ul>
+							<li>Größe des Gerätes, Bildschirmauflösung</li>
+							<li>Orientierung (Hoch- oder Querformat)</li>
+							<li>Eingabemöglichkeiten (Tastatur, Touch, Sprache)</li>
 						</ul>
-					<p></p>
-
-				</section>
-
-
-				<section>
+					</p>
+				</section>		
+				
+<!-- Frameworks -->
+				<section class="future" style="display: block;">
+					<h1>Frameworks</h1> 
+					<section> 
+						<img class="align-right" src="images/vogel.png" alt="Twitter">
+						sind vorgefertigte dynamische Gestaltungselemente<br><br>
+						<p>
+						Die Komponente:<br>
+						- Responsive Bilder <br>
+						- Responsive Typography <br>
+						- Die Navigation <br>
+						- Tabellen, Formulare und mehr<br>
+						<br>
+						Einige Webdesign Frameworks
+							<ul>
+							<a href="http://getbootstrap.com/" target="_blank"> Bootstrap 3 </a><br>
+							<a href="http://foundation.zurb.com/" target="_blank"> Foundation 4</a><br>
+							<a href="http://www.yaml.de/"  target="_blank"> YAML 4</a><br>
+							<a href="http://gumbyframework.com/" target="_blank"> Gumby 2</a><br>
+							<a href="http://imperavi.com/kube/" target="_blank"> Kube</a><br>
+							<a href="http://groundwork.sidereel.com/" target="_blank"> GroundworkCSS</a><br>
+							<a href="http://matthewhartman.github.io/base/" target="_blank"> BASE</a><br>
+							</ul>
+						</p>
+					</section>	
+				
+<!-- Vorteile/Nachteile -->	
 					<section>
-						<h2>Backgrounds</h2>
-					</section>
-
-					<section class="center" data-background="#77aabb">
-						<pre><code>&lt;section data-background="#77aabb"&gt;
-
-&lt;/section&gt;</code></pre>
-					</section>
-
-					<section data-background="#442211">
-						<pre><code>&lt;section data-background="#442211"&gt;
-
-&lt;/section&gt;</code></pre>
-					</section>
-
-					<section data-background-image="images/background.jpg">
-						<pre><code>&lt;section data-background="images/background.jpg"&gt;
-
-&lt;/section&gt;</code></pre>
-					</section>
-
-					<section data-background-image="images/github-mac.png" data-background-position="top center">
-					</section>
-
-					<section data-background-image="images/github-windows.png" data-background-position="top center">
-					</section>
-				</section>
-
-				<section>
-					<h2>Fragments</h2>
-					<p class="fragment grow">grow</p>
-					<p class="fragment shrink">shrink</p>
-					<p class="fragment roll-in">roll-in</p>
-					<p class="fragment fade-out">fade-out</p>
-					<p class="fragment highlight-red">highlight-red</p>
-					<p class="fragment highlight-green">highlight-green</p>
-					<p class="fragment highlight-blue">highlight-blue</p>
-				</section>
-
-				<section>
-					<h2>Fragmented <strong>Views</strong></h2>
-					<p>Hit the next arrow...</p>
-					<p class="fragment" data-fragment-index="0">... to step through ...</p>
-					<ol>
-						<li class="fragment" data-fragment-index="1"><code>any type</code></li>
-						<li class="fragment" data-fragment-index="2"><em>of view</em></li>
-						<li class="fragment" data-fragment-index="3"><strong>fragments</strong></li>
-					</ol>
-				</section>
-
-
-				<section>
-					<h2>Images</h2>
-
-					<img class="align-center" src="http://octodex.github.com/images/daftpunktocat-thomas.gif">
-				</section>
-
-				<section>
-					<h2>Code syntax highlighting</h2>
-
-					<pre><code data-trim>
-&lt;?php
-echo 'Hello World!';
-?&gt;
-					</code></pre>
-
-					<pre><code data-trim>
-$ ruby -e "puts 'Hello world'"
-Hello world
-					</code></pre>
-
-					<pre><code data-trim>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;meta charset=&quot;utf-8&quot;&gt;
-		&lt;title&gt;&lt;/title&gt;
-		&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
-
-		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-	&lt;body&gt;
-&lt;/html&gt;
-					</code></pre>
-				</section>
-
-				<section>
-					<section>
-						<h2>Tables</h2>
+						<h2>Vorteile / Nachteile</h2>
 						<table>
 							<tr>
-								<th>Foo</th>
-								<th>Bar</th>
+								<th>Vorteile</th>
+								<th>Nachteile</th>
 							</tr>
 							<tr>
-								<td>Zelle 1 1</td>
-								<td>Zelle 1 2</td>
+								<td>Anpassung der Webseite</td>
+								<td>Mehr Arbeit als normale Webseite</td>
 							</tr>
 							<tr>
-								<td>Zelle 2 1</td>
-								<td>Zelle 2 2</td>
+								<td>Geräteunabhängiges arbeiten, <br>sehr flexibel</td>
+								<td>Inhalt und Code wird oft miteinader vermischt</td>
+							</tr>
+							<tr>
+								<td>Regelmäßige Updates verfügbar</td>
+								<td>Komplexe Gestaltungen schwerer umsetzbar </td>
+							</tr>
+							<tr>
+								<td>Wiederverwertbar für zukünftige Webseiten</td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>Schnellere Mock-Up Prozesse</td>
+								<td> </td>
 							</tr>
 						</table>
-					</section>
-
+					</section></section>
+				</section>
+				
+<!-- Beispiel zur Umsetzung mit Bootstrap -->	
+				<section class="future" style="display: block;">
+					<h1>Beispiel zur Umsetzung mit Bootstrap</h1>
 					<section>
-					<h2>Tables <strong>Latin Character Tests</strong></h2>
-						<table>
-							<tbody>
-								<tr>
-									<td>!</td>
-									<td>"</td>
-									<td>#</td>
-									<td>$</td>
-									<td>%</td>
-									<td>&amp;</td>
-									<td>'</td>
-									<td>(</td>
-									<td>)</td>
-									<td>*</td>
-								</tr>
-								<tr>
-									<td>+</td>
-									<td>,</td>
-									<td>-</td>
-									<td>.</td>
-									<td>/</td>
-									<td>0</td>
-									<td>1</td>
-									<td>2</td>
-									<td>3</td>
-									<td>4</td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>6</td>
-									<td>7</td>
-									<td>8</td>
-									<td>9</td>
-									<td>:</td>
-									<td>;</td>
-									<td>&gt;</td>
-									<td>=</td>
-									<td>&lt;</td>
-								</tr>
-								<tr>
-									<td>?</td>
-									<td>@</td>
-									<td>A</td>
-									<td>B</td>
-									<td>C</td>
-									<td>D</td>
-									<td>E</td>
-									<td>F</td>
-									<td>G</td>
-									<td>H</td>
-								</tr>
-								<tr>
-									<td>I</td>
-									<td>J</td>
-									<td>K</td>
-									<td>L</td>
-									<td>M</td>
-									<td>N</td>
-									<td>O</td>
-									<td>P</td>
-									<td>Q</td>
-									<td>R</td>
-								</tr>
-								<tr>
-									<td>S</td>
-									<td>T</td>
-									<td>U</td>
-									<td>V</td>
-									<td>W</td>
-									<td>X</td>
-									<td>Y</td>
-									<td>Z</td>
-									<td>[</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>]</td>
-									<td>^</td>
-									<td>_</td>
-									<td>`</td>
-									<td>a</td>
-									<td>b</td>
-									<td>c</td>
-									<td>d</td>
-									<td>e</td>
-									<td>f</td>
-								</tr>
-								<tr>
-									<td>g</td>
-									<td>h</td>
-									<td>i</td>
-									<td>j</td>
-									<td>k</td>
-									<td>l</td>
-									<td>m</td>
-									<td>n</td>
-									<td>o</td>
-									<td>p</td>
-								</tr>
-								<tr>
-									<td>q</td>
-									<td>r</td>
-									<td>s</td>
-									<td>t</td>
-									<td>u</td>
-									<td>v</td>
-									<td>w</td>
-									<td>x</td>
-									<td>y</td>
-									<td>z</td>
-								</tr>
-								<tr>
-									<td>{</td>
-									<td>|</td>
-									<td>}</td>
-									<td>~</td>
-								</tr>
-								</tbody>
-							</table>
+						<h1>Spalten</h2>
+					<!-- Spaltencode -->
+						<pre><code data-trim>
+						<div class="container">		
+							<section class="row">
+								<aside class="col col-md-3">
+								<h2>Nebenspalte</h2>
+								<p>	Überall dieselbe alte Leier. Das Layout ist fertig [...]</p>
+							</aside> 
+							<article class="col col-md-9">
+								<h2>Hauptspalte</h2>
+								<p>	Überall dieselbe alte Leier. Das Layout ist fertig [...]</p>
+							</article>
+						</section>	<!-- row ende -->
+						<section class="row">
+							<aside class="col col-md-3">
+								<h2>Nebenspalte</h2>
+								<p>	Überall dieselbe alte Leier. Das Layout ist fertig [...]</p>
+							</aside>
+							<article class="col-md-4">
+								<h2>Hauptteil 1</h2>
+								<p>Überall dieselbe alte Leier. Das Layout ist fertig [...]</p>
+							</article>
+							<article class="col col-md5">
+								<h2>Hauptteil 2</h2>
+								<p>Überall dieselbe alte Leier. Das Layout ist fertig [...]</p>
+							</article>
+						</section>  <!-- row ende -->
+					</div>	<!-- container ende -->
+					</pre></code data-trim>
+						
 					</section>
+<!-- Beispiel zur Umsetzung mit Bootstrap -->	
+					<section>
+						<h1>Bilder</h2>
+					</section>
+<!-- Beispiel zur Umsetzung mit Bootstrap -->			
+					<section>
+						<h1>Typography</h2>
+					</section>
+<!-- Beispiel zur Umsetzung mit Bootstrap -->
+					<section>
+						<h1>Navigation</h2>
+					</section>
+<!-- Beispiel zur Umsetzung mit Bootstrap -->
+					<section>
+						<h1>Tabellen, Formulare und mehr</h2>
+					</section>
+					
+				</section>		
+
+<!-- Übungen -->	
+				<section class="future" style="display: block;">
+					<h1>Übungen</h1>				
 				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-					## Markdown Support
-
-					Für die, die Markdown lieben.
-					Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
-					die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
-
-					> This is a blockquote. Lorem ipsum dolor sit amet,
-					> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-					> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-					```
-					## Markdown support
-
-					Für die, die Markdown lieben.
-					Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
-					die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
-
-					> This is a blockquote. Lorem ipsum dolor sit amet,
-					> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-					> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-					```
-					</script>
-				</section>
-
+				
+				
 				<!-- End of slides container. -->
 
 			</div>
-
 		</div>
 
 		<script src="../revealjs-framework/lib/js/head.min.js"></script>

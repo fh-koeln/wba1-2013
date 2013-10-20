@@ -1,0 +1,10 @@
+Installing via Eclipse
+
+Please copy the following Update Site URL to your clipboard and then follow the steps listed below to add this URL to your Available Software Sites list. Attempting to access this URL using your web browser will return an Access Denied error.
+http://download.aptana.com/studio3/plugin/install  
+From the Help menu, select Install New Software... to open the Install New Software dialog.
+Paste the URL for the update site into the Work With text box, and hit the Enter (or Return) key.
+In the populated table below, check the box next to the name of the plug-in, and then click the Next button.
+Click the Next button to go to the license page.
+Choose the option to accept the terms of the license agreement, and click the Finish button.
+You may need to restart Eclipse to continue.
