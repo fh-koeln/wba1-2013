@@ -173,19 +173,30 @@
                     <section>
                         <h2>Was sind Element-Selektoren</h2>
                         <ul>
-                        <br> Element-Selektoren Test
+                        <p class="fragment"> Tag-Namen wie z.B. p, div oder body kann man damit direkt ansprechen.</p>
+                        <p class="fragment"> p { color: red; } sorgt dafür, dass alle p-Tags eine rote Schriftfarbe haben.</p>
                         </ul>
                      </section>
                      <section>
                         <h2>Klasse</h2>
                         <ul>
-                        <br> Text Text Text
+                        <p class="fragment"> Möchte man jedoch nicht alle Tags ansprechen, kann man diesen Klassen zuweisen.</p>
+                        <p class="fragment"> <code data-trim>< p class="inhalt">Text< /p></code></p>
+                        <p class="fragment"> Diese Klasse ruft man dann mit einem Punkt in der CSS auf</p>
+                        <p class="fragment"> .inhalt{color: red;}</p>
+                        <p class="fragment"> Wenn man aber mehrere tags mit dem selben Klassen-Namen hat</p>
+                        <p class="fragment"> p.inhalt{color: red;}</p>
+                        <p class="fragment"> Man kann auch mehrere Klassen definieren und gleichzeitig verwenden</p>
+                        <p class="fragment"> < p class="inhalt schriftfarbe schriftart">Text< /p>
                         </ul>
                     </section>
                     <section>
                         <h2>ID</h2>
                         <ul>
-                        <br> Text Text Text
+                        <p class="fragment"> Das ganze Funktioniert auch mit IDs. </p>
+                        <p class="fragment"> < h2 id="inhalt">Text2< /h2></p>
+                        <p class="fragment"> Diese werden durch Rauten im CSS angesprochen </p>
+                        <p class="fragment"> #inhalt{color: red;}</p>
                         </ul>
                     </section>
                  </section>
@@ -225,11 +236,26 @@
                 		 </section>
                 		<section>
 							<h2>Box-Modell</h2>
-							<div style="text-align: center;">
-							<img src="img/Box01_833x490.jpg" width="833px" height="490px" style="margin: 20px auto;  display: block;">
-                            Quelle: <a href="http://www.galileocomputing.de/katalog/buecher/titel/gp/titelID-2556">Galileo Computing - "CSS - Das umfassende Handbuch"</a> (S. 61)
-							</div>
-                		</section>
+                        <ul>
+						<p class="fragment"><img width="1000px" height="800px" src="box_modell.png"></p>
+						</ul>
+                    </section>
+                        <section>
+                            <ul>
+                            <h4>Padding</h4>
+                            <p style="width:200px; padding:0px; border:10px solid #fff"> Text</p>
+                            <p style="width:200px; padding:20px; border:10px solid #fff"> Text</p>
+                            </ul>
+                        </section>
+                       <section>
+                            <ul>
+                            <h4>Margin</h4>
+                            <br>Text    
+                            <p style="width:200px; Margin:0px; border:2px solid #fff"> Ohne Margin</p>
+                            <br>Text    
+                            <p style="width:200px; Margin:30px; border:2px solid #fff"> 30px Margin</p>
+                                
+                            </ul>
                    </section>
              
 				<section>
