@@ -100,7 +100,7 @@
                          <br>- mehr Möglichkeiten der Gestaltung<br>
                             <font style="text-indent:1em;">   Bsp.: Schriftgestaltung, Rahmen, Innen- und Außenabstände, ...</font><p></p><br>
                         <font class="fragment" data-fragment-index="5"> - bessere Aktualisierbarkeit</font><p></p>
-                         <font class="fragment" data-fragment-index="6">- Accessibility/Barrierefreiheit<br></font>
+                         <font class="fragment" data-fragment-index="6">- Accessibility / Barrierefreiheit<br></font>
                         </ul>
                     </section>
                     <section>
@@ -173,29 +173,31 @@
                     <section>
                         <h2>Was sind Element-Selektoren</h2>
                         <ul>
-                        <p class="fragment"> Tag-Namen wie z.B. p, div oder body kann man damit direkt ansprechen.</p>
-                        <p class="fragment"> p { color: red; } sorgt dafür, dass alle p-Tags eine rote Schriftfarbe haben.</p>
+                        <br><p class="fragment"> Tag-Namen wie z.B. p, div oder body kann man damit direkt ansprechen.</p></ul>
+                        <ul>
+                        <br><p class="fragment"> p { color: red; } sorgt dafür, dass alle p-Tags eine rote Schriftfarbe haben.</p>
                         </ul>
                      </section>
                      <section>
                         <h2>Klasse</h2>
                         <ul>
-                        <p class="fragment"> Möchte man jedoch nicht alle Tags ansprechen, kann man diesen Klassen zuweisen.</p>
+                        <br><p class="fragment"> Möchte man jedoch nicht alle Tags ansprechen, kann man diesen Klassen zuweisen.</p>
                         <p class="fragment"> <code data-trim>< p class="inhalt">Text< /p></code></p>
-                        <p class="fragment"> Diese Klasse ruft man dann mit einem Punkt in der CSS auf</p>
+                        <br><p class="fragment"> Diese Klasse ruft man dann mit einem Punkt in der CSS auf</p>
                         <p class="fragment"> .inhalt{color: red;}</p>
-                        <p class="fragment"> Wenn man aber mehrere tags mit dem selben Klassen-Namen hat</p>
+                        <br><p class="fragment"> Wenn man aber mehrere tags mit dem selben Klassen-Namen hat</p>
                         <p class="fragment"> p.inhalt{color: red;}</p>
-                        <p class="fragment"> Man kann auch mehrere Klassen definieren und gleichzeitig verwenden</p>
+                        <br><p class="fragment"> Man kann auch mehrere Klassen definieren und gleichzeitig verwenden</p>
                         <p class="fragment"> < p class="inhalt schriftfarbe schriftart">Text< /p>
                         </ul>
                     </section>
+
                     <section>
                         <h2>ID</h2>
                         <ul>
-                        <p class="fragment"> Das ganze Funktioniert auch mit IDs. </p>
+                        <br><p class="fragment"> Das ganze Funktioniert auch mit IDs. </p>
                         <p class="fragment"> < h2 id="inhalt">Text2< /h2></p>
-                        <p class="fragment"> Diese werden durch Rauten im CSS angesprochen </p>
+                        <br><p class="fragment"> Diese werden durch Rauten im CSS angesprochen </p>
                         <p class="fragment"> #inhalt{color: red;}</p>
                         </ul>
                     </section>
@@ -211,11 +213,18 @@
                     <section>
                         <h2>internes Einbinden</h2>
                         <ul>
-                        <br> Text Text Text
+                        <br> Das interne Einbinden von CSS-Dateien in vorhandene HTML-Elemente kann zum einen   <strong>in der Header-Datei</strong> der jeweiligen Website, zum anderen  <strong>im Attribut selbst</strong>  erfolgen.
+                        <br> 
+                        <br> Beispiel Header:
+                        <br>
+                        <br> 
+                        <br>
+                        <br> 
+                        <br> Beispiel Attribut: 
                         </ul>
                      </section>
                      <section>
-                        <h2>externen Einbinden</h2>
+                        <h2>externes Einbinden</h2>
                         <ul>
                         <br> Text Text Text
                         </ul>
