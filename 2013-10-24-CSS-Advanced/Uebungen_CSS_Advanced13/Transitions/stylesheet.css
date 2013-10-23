@@ -1,0 +1,57 @@
+body{
+    background-color: black;
+}
+
+div {
+    position: absolute;
+    margin: -100px 0 0 -100px;
+    top:50%;
+    left:50%;
+}
+
+.big {
+    height: 200px;
+    width: 200px;
+}
+
+.green {
+    border: 5px ridge #008d36;
+    background-color: #009640;
+}
+
+.green:hover {
+    border: 5px ridge darkred;
+    background-color: crimson;
+    
+    /*border-radius: 50%;*/
+    
+    /*-webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);*/
+    
+    /*-webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);*/
+}
+
+/*  TODO
+    Transitions ermöglichen es, die Änderung eines Elements von einem Style
+    zum anderem zu steuern.
+    Solch eine Änderung geschieht beispielsweise beim :hover über ein Element.
+    Wie du siehst haben wir der Klasse "green" eine Änderung der Farben beim
+    Mousehover zugewiesen.
+    
+    Das Skellet für die Transition liegt bereits vor.
+    Versuche ein Gefühl dafür zu bekommen was die verschiedenen Eigenschaften
+    bewirken.
+
+    Achja, wenn du willst kannst du anderen Eigenschaften beim Selektor .green:hover
+    auch auskommentieren.
+*/
+
+.green {
+    transition-property: width; /* none, all, anzusprechende Eigenschaft z.B. background-color */
+    transition-duration: 0s; /* Dauer der Transitions in Sekunden */
+    transition-timing-function: linear; /* linear, ease, ease-in, ease-out, ease-in-out */
+    transition-delay: 0s; /* Verzögerung der Transition in Sekunden */
+}

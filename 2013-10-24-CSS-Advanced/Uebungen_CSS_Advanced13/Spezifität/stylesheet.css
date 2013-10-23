@@ -1,0 +1,31 @@
+
+#intro {
+	font-weight: bold;
+	color: red;
+}
+
+p {
+	font-family: Garamond, serif;
+}
+
+div p {
+	font-size: 1.5em;
+}
+
+li p {
+	color: blue;
+}
+
+.list_item {
+	font-weight: bold;
+}
+
+#summary {
+	font-size: 20px;
+	color: green;
+}
+/***************************************************
+* 
+*
+*
+***************************************************/
