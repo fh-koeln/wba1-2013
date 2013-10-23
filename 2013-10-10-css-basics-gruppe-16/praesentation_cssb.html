@@ -253,21 +253,27 @@ background-color:#000;
                         <h2>internes Einbinden</h2>
                         <ul>
                         <br> Das interne Einbinden von CSS-Dateien in vorhandene HTML-Elemente kann zum einen   <strong>in der Header-Datei</strong> der jeweiligen Website, zum anderen  <strong>im Attribut selbst</strong>  erfolgen.
-                        <br> 
-                        <br> Beispiel Header:
+                        <br>
                         <pre><code data-trim  class="fragment" data-fragment-index="2">
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<style type="text/css">
-h1 {
-    color: red;
-    background-color: black;
-}
-</style>
-</head>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Beispiel für Das Einbinden in die Header-Datei&lt;/title&gt;
+		&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+        &lt;style&gt;
+        h1 {
+        color: red;
+        background-color: black;
+        }
+        &lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	&lt;body&gt;
+&lt;/html&gt;
+
 <body>
-<h1>jetzt HTML lernen mit CSS</h1>
+<h1>Einbindung der CSS-Datei im Kopf-Bereich</h1>
 </body>
 </html>
 </code></pre>
@@ -278,6 +284,7 @@ h1 {
                         <h2>internes Einbinden</h2>
                         <ul>
                         <br>Beispiel Attribut: 
+                        <br>
                         <pre><code data-trim  class="fragment" data-fragment-index="8">
 <h1 style="color:red;">Überschrift</h1>
 </code></pre>
@@ -289,21 +296,28 @@ h1 {
                         <br>
                         <font class="fragment" data-fragment-index="1">Auslagern in eine externe Datei z.B. meindesign.css<br></font><p></p>
                         <font class="fragment" data-fragment-index="2">Der Verweis in der HTML Datei sieht dann so aus:<br></font>
-                            <pre><code data-trim  class="fragment" data-fragment-index="3">
-<link href="meindesign.css" type="text/css" rel="stylesheet">
-</code></pre>
+                            <br><pre><code data-trim  class="fragment" data-fragment-index="3">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+	  &lt;meta charset=&quot;utf-8&quot;&gt;
+	  &lt;title&gt;Einbinden einer externen CSS-Datei im Head-Bereich&lt;/title&gt;
+	  &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+      &lt; href="meindesign.css" type="text/css" rel="stylesheet"&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	&lt;body&gt;
+&lt;/html&gt;</code></pre>
                         </ul>
                     </section>
                    </section>
                    <section>
 				   		<section>
 							<h2>Box-Modell</h2>
-                        <ul>
-						<p class="fragment"><img width="1000px" height="800px" src="images/box_modell.png"></p>
-						<p class="fragment"><a href = "GitHub/wba1-2013/2013-10-10-css-basics-gruppe-16/images/"><img width="1000px" height="800px" src="http://de.selfhtml.org/css/formate/anzeige/box_modell.png"></a></p>
->>>>>>> feinheiten
-						</ul>
-                    </section>
+                            <ul>
+						    <p class="fragment"><img width="1000px" height="800px" src="images/box_modell.png"></p>
+						    <p class="fragment"><a href = "GitHub/wba1-2013/2013-10-10-css-basics-gruppe-16/images/"></a></p></ul>
+                        </section>
                         <section>
 							<h2>Box-Modell</h2>
                         <ul>
