@@ -60,8 +60,6 @@
                     <p class="fragment roll-in">Bilder</p>
                     <p class="fragment roll-in">Musik</p>
                     <p class="fragment roll-in">Videos</p>
-                    <p class="fragment roll-in">Einbettung in HTML5</p>
-                    <p class="fragment roll-in">Browserkompatiblität</p>
                     <p class="fragment roll-in">Übungen</p>
                 </section>
                 
@@ -103,39 +101,146 @@
                 <section>
                     <section>
                         <h1><p class="fragment highlight-blue">Videos</p></h1>
-                        <p>Formate:</p>
-                        <p>xxx</p>
+                        <h2>Allgemein</h2>
+                        <table>
+							<tr>
+								<th>Jedes Video muss vorbereitet werden</th>
+							</tr>
+							<tr>
+								<td>Parameter:</td>
+							</tr>
+							<tr>
+								<td>
+                                    <ul>
+                                        <li>Speicherformat</li>
+                                        <li>Codecs</li>
+                                        <li>Auflösung</li>
+                                        <li>Bitrate</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                    <td>Vorab:</td>
+                            </tr>
+                            <tr>
+                                    <td>Kein bestes Videoformat --> Anpassung an Browser und Internetverbindung</td>
+                            </tr>
+						</table>
                     </section>
                     
                     <section>
-                        <h1><p class="fragment highlight-blue">Format xxx</p></h1>
-                        <p>Formate xxx</p>
-                        <p>Beschreibung</p>
-                    </section>
-                </section>
-                
-                <section>
-                    <h2>Einbettung in HTML5</h2>
-                    <p>Code:</p>
-                    <pre><code data-trim>
-                        <html>
-                        Test bla
-                        </html>
-					</code></pre>
-                </section>
-                
-                <section>
-                    <section>
-                        <h1>Browserkompatiblität</h1>
-                        <p>Mozilla Firefox</p>
-                        <p>Google Chrome</p>
-                        <p>Internet Explorer</p>
-                        <p>Safari</p>
-                        <p>Opera</p>
+                        <h2><p class="fragment highlight-blue">Speicherformat</p></h2>
+                        <img class="align-center" src="images/container-fuer-video-bilder-pdf-schema.png">
+                        <br/>
+                        <table>
+                            <tr>
+                                <td>Videos bestehen aus Video-Track, Audio Track und evtl Meta-Daten wie dem Titel verpackt in einem Container</td>
+                            </tr>
+                            <tr>
+                                <th>Container:</th>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>FLV Flash Video von Adobe Systems</li>
+                                        <li>MP4 MPEG-4-Dateiformat</li>
+                                        <li>OGV</li>
+                                        <li>webM</li>
+                                        <li>AVI Audio Video Interleave</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
                     </section>
                     
                     <section>
-                        <h1>Unterschiede bei den Browsern</h1>
+                        <h2><p class="fragment highlight-blue">Codecs</p></h2>
+                        <table>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>Unkomprimierte Videos zu große Datenmengen</li>
+                                        <li>Speichern keine Einzelbilder, nur die Unterschiede zwischen einzelnen Bildern</li>
+                                        <li>Unterschied zwischen Einzelbildern meist gering, daher kleine Dateigrößen</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Codecs:</th>
+                                <th>Container:</th>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>H.264</li>
+                                        <li>Theora OGG</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>mp4, FLV</li>
+                                        <li>OGV</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                
+                    <section>
+                        <h2><p class="fragment highlight-blue">Auflösung und Bitrate</p></h2>
+                        <table>
+                            <tr>
+                                <th>Auslösung</th>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>Videomaterial kommt in immer höherer Auflösung</li>
+                                        <li>Smartphones bereits Videos in Full-HD Auflösung</li>
+                                        
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Bitrate</th>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>Wenn man davon ausgeht, dass heute alle eine schnelle DSL-Anbindung zur Verfügung haben:</li>
+                                        <li>1-5 MBit/s, bei HD-Videos besser 2-5 Mbits</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                    
+                    <section>
+                        <h2><p class="fragment highlight-blue">Fazit</p></h2>
+                        <img class="align-center" src="images/video-container-formate.png">
+                        <br/>
+                        <table> 
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>moderne Brwoser kein Flash-Plugin mehr</li>
+                                        <li>dafür ohne Plugin in bestimmten Formaten</li>
+                                        <li>alte Internet Explorer Versionen erkennen HTML5-Video-Tag nicht</li>
+                                        <li>meist ein Flash-Plugin installiert</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                    
+                    <section>
+                        <h2><p class="fragment highlight-blue">Video in HTML-Seite einbetten</p></h2>
+                            <pre><code data-trim>
+<object data="videos/movie.mp4" width="538" height="330" type="video/mp4">
+</object>
+					       </code></pre>
+                        <object data="videos/movie.mp4" width="538" height="330" type="video/mp4">
+                        </object>
                     </section>
                 </section>
                 
