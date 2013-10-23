@@ -41,12 +41,20 @@
 			"title" : "HTML Übungen",
 			"authors" : ["Martin Baljan", "Dominik Schilling", "Christoph Jerolimov"]
 		},
-		
 		"2013-10-24-web-basics/index.html":
 		{
 			"title" : "Web-Basics",
 			"authors" : ["Prof. Christian Noss", "Volker Schaefer"]
+		},
+		"2013-10-24-css-basics-gruppe-16/praesentation_cssb.html":
+		{
+			"title" : "CSS Basics",
+			"authors" : ["Jana Bürker", "Muhammed Cakir", "Andreas Schneider", "Vanakh Chea", "Sven Breidbach", "Remzi-Can Battal"]
+		},
+		"2013-10-24-CSS-Advanced/index.html":
+		{
+			"title" : "CSS Advanced",
+			"authors" : ["Harun Sevinc", "Arthur Kremsier", "Marina Schoop", "Anja Wijayaganthan", "Burcu Öz", "Kevin Apitz"]
 		}
-
 	}
 }
