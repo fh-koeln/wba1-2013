@@ -42,9 +42,8 @@ ul {
 }
 
 pre {
-	background-color: #272822;
-	padding: 10px;
-	@include box-sizing(border-box);
+	font-size: .7em;
+	font-family: monospace;
 }
 
 blockquote {
