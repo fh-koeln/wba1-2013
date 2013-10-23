@@ -41,5 +41,12 @@
 			"title" : "HTML Übungen",
 			"authors" : ["Martin Baljan", "Dominik Schilling", "Christoph Jerolimov"]
 		}
+		
+		"2013-10-24-web-basics/index.html":
+		{
+			"title" : "Web-Basics",
+			"authors" : ["Prof. Christian Noss", "Volker Schaefer"]
+		}
+
 	}
 }
