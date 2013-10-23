@@ -1,0 +1,8 @@
+__HTML__
+http://validator.w3.org/
+
+__JAVASCRIPT__
+http://qunitjs.com/
+
+__SPEED__
+http://www.hpl.hp.com/research/linux/httperf/
