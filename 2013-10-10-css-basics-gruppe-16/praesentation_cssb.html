@@ -63,7 +63,7 @@
                         <ul>
 						<li><p>Einführung</p></li>
 						<li><p class="fragment roll-in">Aufbau</p></li>
-						<li><p class="fragment roll-in">Element-Selektoren</p></li>
+						<li><p class="fragment roll-in">Einfache Selektoren</p></li>
 						<li><p class="fragment roll-in">Einbindung</p></li>
                         <li><p class="fragment roll-in">Boxmodell</p></li>
 					    </ul>
@@ -141,7 +141,7 @@
                         </ul>
 					</section>
                     <section>
-                        <h2>Was is ein Befehl?</h2>
+                        <h2>Was ist ein Befehl?</h2>
                         <ul>
                          <br> - In CSS wird mit Befehlen gesagt, <font class="fragment highlight-red" data-fragment-index="0">was</font> in einem speziellen Bereich getan wird.<p></p><br>
                             CSS-Befehl Bespiele:<br><br>
@@ -199,15 +199,15 @@ background-color:#000;
                  </section>
                  <section>
 				   <section>
-			            <h2>Element-Selektoren</h2>
+			            <h2>Einfache Selektoren</h2>
                         <ul>
-						<li><p>Was sind Element-Selektoren</p></li>
+						<li><p>Was sind Einfache Selektoren</p></li>
                         <li><p class="fragment roll-in">Klasse</p></li>
 						<li><p class="fragment roll-in">ID</p></li>
 						</ul>
 					</section>
                     <section>
-                        <h2>Was sind Element-Selektoren</h2>
+                        <h2>Was sind Einfache Selektoren</h2>
                         <ul>
                         <br>
                         <p class="fragment"> - Tag-Namen wie z.B. p, div oder body kann man damit direkt ansprechen.</p>
@@ -220,13 +220,13 @@ background-color:#000;
                         <ul>
                         <br>
                         <p class="fragment"> Möchte man jedoch nicht alle Tags ansprechen, kann man diesen Klassen zuweisen.</p>
-                        <pre><code data-trim class="fragment">< p class="inhalt">Text< /p></code></pre>
+                        <pre><code data-trim class="fragment"><p class="inhalt">Text</p></code></pre>
                         <br><p class="fragment"> Diese Klasse ruft man dann mit einem Punkt in der CSS auf</p>
                         <pre><code data-trim class="fragment"> .inhalt{color: red;}</code></pre>
                         <br><p class="fragment"> Wenn man aber mehrere tags mit dem selben Klassen-Namen hat</p>
                         <pre><code data-trim class="fragment"> p.inhalt{color: red;}</code></pre>
                         <br><p class="fragment"> Man kann auch mehrere Klassen definieren und gleichzeitig verwenden</p>
-                        <pre><code data-trim class="fragment"> < p class="inhalt schriftfarbe schriftart">Text</code></pre>
+                        <pre><code data-trim class="fragment"> <p class="inhalt schriftfarbe schriftart"></p>Text</code></pre>
                         </ul>
                     </section>
 
@@ -235,9 +235,10 @@ background-color:#000;
                         <ul>
                         <br> 
                         <p class="fragment"> Das ganze Funktioniert auch mit IDs. </p>
-                        <pre><code data-trim class="fragment"> < h2 id="inhalt">Text2< /h2></code></pre>
+                        <pre><code data-trim class="fragment"> <h2 id="inhalt">Text2</h2></code></pre>
                         <br><p class="fragment"> Diese werden durch Rauten im CSS angesprochen </p>
-                        <pre><code data-trim class="fragment"> #inhalt{color: red;}</code></pre>
+                        <pre><code data-trim class="fragment"> #inhalt{color: red;}</code></pre><br>
+                        <p class="fragment"> ID´s müssen eindeutig sein => <font class="fragment highlight-red" data-fragment-index="0">dürfen nur jeweils einmal im Dokument vorhanden sein</font></p>
                         </ul>
                     </section>
                  </section>
@@ -303,7 +304,7 @@ background-color:#000;
 	  &lt;meta charset=&quot;utf-8&quot;&gt;
 	  &lt;title&gt;Einbinden einer externen CSS-Datei im Head-Bereich&lt;/title&gt;
 	  &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
-      &lt; href="meindesign.css" type="text/css" rel="stylesheet"&gt;
+      &lt;link rel="stylesheet" type="text/css" href="meindesign.css"&gt;
 	&lt;/head&gt;
 	&lt;body&gt;
 	&lt;body&gt;
