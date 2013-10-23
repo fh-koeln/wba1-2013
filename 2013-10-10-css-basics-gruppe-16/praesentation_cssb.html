@@ -100,12 +100,11 @@
                          <br>- mehr Möglichkeiten der Gestaltung<br>
                             <font style="text-indent:1em;">   Bsp.: Schriftgestaltung, Rahmen, Innen- und Außenabstände, ...</font><p></p><br>
                         <font class="fragment" data-fragment-index="5"> - bessere Aktualisierbarkeit</font><p></p>
-<<<<<<< HEAD
                          <font class="fragment" data-fragment-index="6">- Accessibility / Barrierefreiheit<br></font>
-=======
-                         <font class="fragment" data-fragment-index="6">- Accessibility/Barrierefreiheit<br></font><p></p>
+
+                         <p></p>
                             <font class="fragment" data-fragment-index="7">- Corporate Design<br></font>
->>>>>>> c527c8d45d985c625c303f1fa4967a2fe26a2d88
+
                         </ul>
                     </section>
                     <section>
@@ -178,56 +177,35 @@
                     <section>
                         <h2>Was sind Element-Selektoren</h2>
                         <ul>
-<<<<<<< HEAD
-                        <br><p class="fragment"> Tag-Namen wie z.B. p, div oder body kann man damit direkt ansprechen.</p></ul>
-                        <ul>
-                        <br><p class="fragment"> p { color: red; } sorgt dafür, dass alle p-Tags eine rote Schriftfarbe haben.</p>
-=======
+                        <br>
                         <p class="fragment"> - Tag-Namen wie z.B. p, div oder body kann man damit direkt ansprechen.</p>
                         <pre><code data-trim class="fragment"> p { color: red; } </code> </pre>
                         <p class="fragment" style="text-indent:1em;"> -> sorgt dafür, dass alle p-Tags eine rote Schriftfarbe haben.</p>
->>>>>>> c527c8d45d985c625c303f1fa4967a2fe26a2d88
                         </ul>
                      </section>
                      <section>
-                       <h2>Klasse</h2>
+                         <h2>Klasse</h2>
                         <ul>
-<<<<<<< HEAD
-                        <br><p class="fragment"> Möchte man jedoch nicht alle Tags ansprechen, kann man diesen Klassen zuweisen.</p>
-                        <p class="fragment"> <code data-trim>< p class="inhalt">Text< /p></code></p>
+                        <br>
+                        <p class="fragment"> Möchte man jedoch nicht alle Tags ansprechen, kann man diesen Klassen zuweisen.</p>
+                        <pre><code data-trim class="fragment">< p class="inhalt">Text< /p></code></pre>
                         <br><p class="fragment"> Diese Klasse ruft man dann mit einem Punkt in der CSS auf</p>
-                        <p class="fragment"> .inhalt{color: red;}</p>
+                        <pre><code data-trim class="fragment"> .inhalt{color: red;}</code></pre>
                         <br><p class="fragment"> Wenn man aber mehrere tags mit dem selben Klassen-Namen hat</p>
-                        <p class="fragment"> p.inhalt{color: red;}</p>
+                        <pre><code data-trim class="fragment"> p.inhalt{color: red;}</code></pre>
                         <br><p class="fragment"> Man kann auch mehrere Klassen definieren und gleichzeitig verwenden</p>
-                        <p class="fragment"> < p class="inhalt schriftfarbe schriftart">Text< /p>
-=======
-                        <p> Möchte man jedoch nicht alle Tags ansprechen, kann man diesen Klassen zuweisen.</p>
-                        <p class="fragment" data-fragment-index="1"> <pre><code data-trim class="fragment"><p class="inhalt">Text</p></code></pre>
-                        <p class="fragment" data-fragment-index="2"> Diese Klasse ruft man dann mit einem Punkt in der CSS auf</p>
-                        <p class="fragment"> <pre><code data-trim class="fragment" data-fragment-index="3">.inhalt{color: red;}</code></pre>
-                        <p class="fragment" data-fragment-index="4"> Wenn man aber mehrere tags mit dem selben Klassen-Namen hat</p>
-                        <p class="fragment"> <pre><code data-trim class="fragment" data-fragment-index="5">p.inhalt{color: red;}</code></pre>
-                        <p class="fragment" data-fragment-index="6"> Man kann auch mehrere Klassen definieren und gleichzeitig verwenden</p>
-                        <p class="fragment"> <pre><code data-trim class="fragment" data-fragment-index="7"><p class="inhalt schriftfarbe schriftart">Text</p></code></pre>
->>>>>>> c527c8d45d985c625c303f1fa4967a2fe26a2d88
+                        <pre><code data-trim class="fragment"> < p class="inhalt schriftfarbe schriftart">Text</code></pre>
                         </ul>
                     </section>
 
                     <section>
                         <h2>ID</h2>
                         <ul>
-<<<<<<< HEAD
-                        <br><p class="fragment"> Das ganze Funktioniert auch mit IDs. </p>
-                        <p class="fragment"> < h2 id="inhalt">Text2< /h2></p>
+                        <br> 
+                        <p class="fragment"> Das ganze Funktioniert auch mit IDs. </p>
+                        <pre><code data-trim class="fragment"> < h2 id="inhalt">Text2< /h2></code></pre>
                         <br><p class="fragment"> Diese werden durch Rauten im CSS angesprochen </p>
-                        <p class="fragment"> #inhalt{color: red;}</p>
-=======
-                        <p> Das ganze Funktioniert auch mit IDs. </p>
-                        <p class="fragment" data-fragment-index="1"> <pre><code data-trim class="fragment"><h2 id="inhalt">Text2</h2></code></pre>
-                        <p class="fragment" data-fragment-index="2"> Diese werden durch Rauten im CSS angesprochen </p>
-                        <p class="fragment"> <pre><code data-trim class="fragment"  data-fragment-index="3">#inhalt{color: red;}</code></pre>
->>>>>>> c527c8d45d985c625c303f1fa4967a2fe26a2d88
+                        <pre><code data-trim class="fragment"> #inhalt{color: red;}</code></pre>
                         </ul>
                     </section>
                  </section>
@@ -242,32 +220,10 @@
                     <section>
                         <h2>internes Einbinden</h2>
                         <ul>
-<<<<<<< HEAD
                         <br> Das interne Einbinden von CSS-Dateien in vorhandene HTML-Elemente kann zum einen   <strong>in der Header-Datei</strong> der jeweiligen Website, zum anderen  <strong>im Attribut selbst</strong>  erfolgen.
                         <br> 
                         <br> Beispiel Header:
-                        <br>
-                        <br> 
-                        <br>
-                        <br> 
-                        <br> Beispiel Attribut: 
-                        </ul>
-                     </section>
-                     <section>
-                        <h2>externes Einbinden</h2>
-=======
-                        <font class="fragment" data-fragment-index="7">Direktes Einbinden in den HTML Code<br></font>
-                            <pre><code data-trim  class="fragment" data-fragment-index="8">
-<h1 style="color:red;">Überschrift</h1>
-</code></pre>
-                        <font class="fragment" data-fragment-index="9">Widerspricht dem Grundprinzip von HTML, Struktur und Gestaltung zu trennen.<br></font>
-                        </ul>
-                     </section>
-                     <section>
-                            <h2>internes Einbinden</h2>
-                            <ul>
-                                <font class="fragment" data-fragment-index="1">Im Kopfbereich der HTML-Datei<br></font>
-                                <pre><code data-trim  class="fragment" data-fragment-index="2">
+                        <pre><code data-trim  class="fragment" data-fragment-index="2">
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -283,13 +239,22 @@ h1 {
 </body>
 </html>
 </code></pre>
-                            <font class="fragment" data-fragment-index="3">wirkt sich auf das ganze HTML-Dokument aus<br></font>    
-                            </ul>
+                            <font class="fragment" data-fragment-index="3"><br>wirkt sich auf das ganze HTML-Dokument aus<br></font>
+                        </ul>
                      </section>
                      <section>
-                        <h2>externen Einbinden</h2>
->>>>>>> c527c8d45d985c625c303f1fa4967a2fe26a2d88
+                        <h2>internes Einbinden</h2>
                         <ul>
+                        <br>Beispiel Attribut: 
+                        <pre><code data-trim  class="fragment" data-fragment-index="8">
+<h1 style="color:red;">Überschrift</h1>
+</code></pre>
+                        <font class="fragment" data-fragment-index="9"><br>Widerspricht dem Grundprinzip von HTML, Struktur und Gestaltung zu trennen.<br></font>
+             </ul></section>
+                     <section>
+                        <h2>externes Einbinden</h2>
+                        <ul>
+                        <br>
                         <font class="fragment" data-fragment-index="1">Auslagern in eine externe Datei z.B. meindesign.css<br></font><p></p>
                         <font class="fragment" data-fragment-index="2">Der Verweis in der HTML Datei sieht dann so aus:<br></font>
                             <pre><code data-trim  class="fragment" data-fragment-index="3">
@@ -302,9 +267,7 @@ h1 {
 				   		<section>
 							<h2>Box-Modell</h2>
                         <ul>
-<<<<<<< HEAD
 						<p class="fragment"><img width="1000px" height="800px" src="images/box_modell.png"></p>
-=======
 						<p class="fragment"><a href = "GitHub/wba1-2013/2013-10-10-css-basics-gruppe-16/images/"><img width="1000px" height="800px" src="http://de.selfhtml.org/css/formate/anzeige/box_modell.png"></a></p>
 >>>>>>> feinheiten
 						</ul>
