@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style type="text/css">
+			@import"libary/css/body.css";
+		</style>
+		<script type="text/javascript">
+			/* 1. TODO - ANFANG
+			 *------Schreiben Sie eine Funktion, welche die Bilder VERGRÖSSERT.---------------------*
+			 *------Die Funktion soll in der Lage sein mehrere Bilder d.h. mit verschiedenen IDs zu
+			 *      akzeptieren---------------------------------------------------------------------*/
+			 
+			 //Funktionskopf:
+			  	function gross(e){
+					
+					/*------------------BREITE und HÖHE---------------------------------------------*
+					 *--------Das Bild soll vergrössert werden. Berücksichtigen Sie die Angaben:
+					 *-----------Breite = 250px (width = "250px")
+					 *-----------Höhe = 200px (height = "200px")
+					 *------------------------------------------------------------------------------*/
+						document.getElementById(e).style.width = "250px";
+						document.getElementById(e).style.height = "200px";
+					/*------------------------------------------------------------------------------*/
+					
+					/*------------------TRANSPARENZ und HERVORHEBUNG--------------------------------*
+					 *-----Die Transparenz auf 100% setzen und das Bild auf der Z-Achse hervorheben:
+					 *--------Transparenz = 100% (opacity = "1")
+					 *--------Auf der Z-Achse hervorheben (zindex = "1")
+					 *------------------------------------------------------------------------------*/
+						document.getElementById(e).style.opacity = "1";
+						document.getElementById(e).style.zIndex = "1";
+					/*------------------------------------------------------------------------------*/
+					
+					/*------------------RAHMEN------------------------------------------------------*
+					 *-----Zeichnen Sie eine Rahmen um das Bild:
+					 *--------Der Rahemn soll "5px" dick sein
+					 *--------Die Farbe soll "#00c6ff" sein
+					 *--------Es soll ein normaler Strich sein (Hilfe: solid)
+					 *------------------------------------------------------------------------------*/
+						document.getElementById(e).style.border = "solid 5px #00c6ff";
+					/*------------------------------------------------------------------------------*/
+			/* 1. TODO - ENDE */
+			/* Wenn Sie alles erledigt haben, entfernen Sie die //-Zeichen bei den 4 untenstehen-
+			 * den Befehlen und fügen Sie diese der Funktion hinzu.---------------------------------*/
+					
+					document.getElementById(e).style.marginTop = "-55px";	
+					document.getElementById(e).style.marginBottom = "-55px";
+					document.getElementById(e).style.marginLeft = "-55px";
+					document.getElementById(e).style.marginRight = "-55px";
+					document.getElementById(e).style.position = "relative";
+				}
+		
+			/* 2. TODO - ANFANG
+			*------Schreiben Sie eine Funktion, welche die Bilder VERKLEINERT.----------------------*/
+			
+			//Funktionskopf:
+				function klein(e){
+					
+					/*------------------BREITE und HÖHE---------------------------------------------*
+					 *--------Das Bild soll verkleinert werden. Berücksichtigen Sie die Angaben:
+					 *-----------Breite = 150px (width = "150px")
+					 *-----------Höhe = 100px (height = "100px")
+					 *------------------------------------------------------------------------------*/
+						document.getElementById(e).style.width = "150px";
+						document.getElementById(e).style.height = "100px";
+					/*------------------------------------------------------------------------------*/
+					
+					/*------------------TRANSPARENZ und HERVORHEBUNG--------------------------------*
+					 *-----Die Transparenz auf 50% setzen und die Hervorhebung aufheben:
+					 *--------Transparenz = 25% (opacity = "0.25")
+					 *--------Hervorhebung aufheben (zindex = "0")
+					 *------------------------------------------------------------------------------*/
+						document.getElementById(e).style.opacity = "0.25";
+						document.getElementById(e).style.zIndex = "0";
+					/*------------------------------------------------------------------------------*/
+					
+					/*------------------RAHMEN------------------------------------------------------*
+					 *-----Entfernen Sie den Rahmen um den Bild:
+					 *--------Rahmen entfernen (Hilfe: border = "0px"
+					 *------------------------------------------------------------------------------*/
+						document.getElementById(e).style.border = "0px";
+						document.getElementById(e).style.marginTop = "0px";
+					/*------------------------------------------------------------------------------*/
+			/* 2. TODO - ENDE */
+			/* Wenn Sie alles erledigt haben, entfernen Sie die //-Zeichen bei den 4 untenstehen-
+			 * den Befehlen und fügen Sie diese der Funktion hinzu.---------------------------------*/
+					
+					document.getElementById(e).style.marginBottom = "0px";
+					document.getElementById(e).style.marginLeft = "0px";
+					document.getElementById(e).style.marginRight = "0px";
+					document.getElementById(e).style.position = "static";
+				}
+				
+			/*3. TODO - ANFANG
+			*------Schreiben Sie eine Funktion, welche den Inhalt einer/mehrer Textboxen in
+			* einem Textarea anzeigt.---------------------------------------------------------------*/
+			
+			//Funktionskopf:
+				function eingabe(){
+					
+					/* 1. Die Eingaben aus den zwei Textboxen, die mit der ID = vorname bzw. nachname
+					 * ------versehen sind, sollen der Textarea übergegeben werden. 
+					 * 2. Außerdem soll geprüft werden, ob alle oder eine Textbox leer ist. Wenn dies 
+					 * ------zutrifft, soll ein Hinweis/Fehlermeldung in der Textarea angezeigt werden.
+					 * 3. Wenn die Angaben erfolgreich übergegeben wurden, sollen die Textboxen geleert 
+					 * ------werden-----------------------------------------------------------------*/ 
+					var vorname = document.getElementById("vorname").value;
+					var nachname = document.getElementById("nachname").value;
+					if(vorname != '' && nachname != ''){
+						document.getElementById("ausgabe").innerHTML = vorname+" "+nachname;
+						document.getElementById("vorname").value = "";
+						document.getElementById("nachname").value = "";
+					}
+					else{
+						document.getElementById("ausgabe").innerHTML = "...fühlen Sie alle Textboxen aus!";
+					}
+				}
+			/*3. TODO - ENDE */
+				
+				function button(e){
+					if(e == "ac"){
+						document.getElementById("senden").style.backgroundColor = "#00c6ff";
+						document.getElementById("senden").style.color = "#FFF";
+					}
+					else{
+						document.getElementById("senden").style.backgroundColor = "#FFF";
+						document.getElementById("senden").style.color = "#00c6ff";
+					}	
+				}
+		</script>
+		<title>JavaScript - BASIC</title>
+	</head>
+	<body>
+		<section>
+        	<img src="images/logo_gl.png" id="logo"><br>
+            <img src="images/Image_002.jpg" id="bild1" onMouseOver="gross('bild1')" onMouseOut="klein('bild1')">
+            <img src="images/Image_006.jpg" id="bild2" onMouseOver="gross('bild2')" onMouseOut="klein('bild2')">
+            <img src="images/Image_008.jpg" id="bild3" onMouseOver="gross('bild3')" onMouseOut="klein('bild3')">
+            <img src="images/Image_012.jpg" id="bild4" onMouseOver="gross('bild4')" onMouseOut="klein('bild4')"></br>
+            <img src="images/Image_015.jpg" id="bild5" onMouseOver="gross('bild5')" onMouseOut="klein('bild5')">
+            <img src="images/Image_016.jpg" id="bild6" onMouseOver="gross('bild6')" onMouseOut="klein('bild6')">
+            <img src="images/Image_017.jpg" id="bild7" onMouseOver="gross('bild7')" onMouseOut="klein('bild7')">
+            <img src="images/Image_041.jpg" id="bild8" onMouseOver="gross('bild8')" onMouseOut="klein('bild8')"></br>
+            <img src="images/Image_046.jpg" id="bild9" onMouseOver="gross('bild9')" onMouseOut="klein('bild9')">
+            <img src="images/Image_050.jpg" id="bild10" onMouseOver="gross('bild10')" onMouseOut="klein('bild10')">
+            <img src="images/Image_052.jpg" id="bild11" onMouseOver="gross('bild11')" onMouseOut="klein('bild11')">
+            <img src="images/Image_054.jpg" id="bild12" onMouseOver="gross('bild12')" onMouseOut="klein('bild12')"></br>
+            <img src="images/Image_059.jpg" id="bild13" onMouseOver="gross('bild13')" onMouseOut="klein('bild13')">
+            <img src="images/Image_061.jpg" id="bild14" onMouseOver="gross('bild14')" onMouseOut="klein('bild14')">
+            <img src="images/Image_068.jpg" id="bild15" onMouseOver="gross('bild15')" onMouseOut="klein('bild15')">
+            <img src="images/Image_070.jpg" id="bild16" onMouseOver="gross('bild16')" onMouseOut="klein('bild16')"></br>
+        </section>
+        <section>
+         	<img src="images/logo_fr.png" id="logo"><br>
+            <table>  
+            	<tr>
+                	<td><a id="vorname_text">vorname:</a></td>
+                	<td><input type="text" id="vorname"></td>
+                </tr>
+                <tr>
+                   	<td><a id="nachname_text">nachname:</a></td>
+                    <td><input type="text"id="nachname"></td>
+                </tr>
+                <tr>
+                  	<td></td>
+                    <td><input type="submit" value="Absenden" id="senden" onMouseOver="button('ac')" onMouseOut="button('deac')" onClick="eingabe()"></td>
+                </tr>
+            </table>
+            <textarea id="ausgabe"></textarea>
+        </section>        
+    </body>
+</html>
