@@ -131,7 +131,7 @@
 
 					<pre class="fragment">
 						<code style="width:100%" data-trim>
-&lt;div style="text-align:center;"&gt;
+&lt;div&gt;
 	&lt;button type="button" onclick="alert('Willkommen zu Javascript Basics!')"&gt;Klick Mich!&lt;/button&gt;
 &lt;/div&gt;
 						</code>
@@ -206,8 +206,10 @@
 							<li class="fragment">DOM Spezifikation schreibt Zugriffsmethoden vor</li>
 							<li class="fragment">
 								<span>als Beispiel </span><strong>getElementById()</strong>
+                                </li>
+                                </ul>
 									<pre class="fragment">
-										<code style="width:100%;">
+										<code>
 &lt;html>
 	&lt;head>&lt;/head>
 	&lt;body>
@@ -219,12 +221,10 @@
 										</code>
 									</pre>
 								<pre class="fragment">
-									<code style="overflow: hidden;" style="width:100%;">
+									<code>
 var paragraph_1 = document.getElementById('paragraph_1');
 									</code>
 								</pre>
-							</li>
-						</ul>
 						<!--<div class="fragment" style="position: absolute; border: 2px solid #DD1166; width: 410px; height: 27px; top: 309px; left: 160px; z-index: 999;"></div>-->
 					</section>
 
@@ -234,21 +234,22 @@ var paragraph_1 = document.getElementById('paragraph_1');
 							<!--<li class="fragment">DOM-Elemente bzw. Knoten haben ihrem Typ entsprechende Eigenschaften</li>-->
 							<li class="fragment">Zugriff auf die Eigenschaften bzw. Attribute des Elements</li>
 							<li class="fragment" style="list-style-type: none;">
-								<pre><code style="width:100%;">
+                             </li>
+                                </ul>
+								<pre class="fragment"><code>
+                               
 &lt;body>
 	&lt;p>
 		&lt;a id="ein_link" href="http://www.google.de">Google&lt;/a>
 	&lt;/p>
 &lt;/body>
 								</code></pre>
-								<pre class="fragment"><code style="width:100%;">
+								<pre class="fragment"><code>
 var link_element = document.getElementById('ein_link');
 
 link_element.href = "http://www.medieninformatik.fh-koeln.de/";
 link_element.innerHTML = "Zur Medieninformatikseite der FH-Köln";
 								</code></pre>
-							</li>
-						</ul>
 						<!--<div class="fragment" style="position: absolute; border: 2px solid #DD1166; width: 700px; height: 27px; top: 215px; left: 120px; z-index: 999;"></div>-->
 					</section>
 
@@ -259,8 +260,8 @@ link_element.innerHTML = "Zur Medieninformatikseite der FH-Köln";
 						<pre class="fragment">
 							<code style="width:100%;">
 &lt;body>
-	&lt;form>
-		&lt;input type="text" id="text_feld" value="Peter">
+	&lt;form name="formular_name">
+		&lt;input type="text" value="Peter">
 	&lt;/form>
 &lt;/body>
 							</code>
@@ -268,7 +269,8 @@ link_element.innerHTML = "Zur Medieninformatikseite der FH-Köln";
 
 						<pre class="fragment" style="margin-top: 50px;">
 							<code style="width:100%;">
-var text_element = document.getElementById('text_feld');
+var form = document.formular_name;
+var text_element = form.getElementsByTagName('text')[0];
 
 var x = text_element.value;
 text_element.value = "Hallo, " + x;
