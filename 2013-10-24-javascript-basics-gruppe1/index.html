@@ -5,9 +5,9 @@
 		<meta charset="utf-8">
 
 		<!-- Title of presentation -->
-		<title>Reveal.js Demo</title>
+		<title>Javascript Basics</title>
 		<!-- Short description of presentation -->
-		<meta name="description" content="Demo of Reveal.js functions and features">
+		<meta name="description" content="blablaaaa">
 		<!-- Author of presentation -->
 		<meta name="author" content="Dominik Schilling">
 
@@ -27,11 +27,48 @@
 			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
 
+		<style type="text/css">
+            li.title { 
+                font-size: 20px; 
+                font-weight: lighter; 
+                padding: 15px; 
+                counter-increment: ordem; 
+            }
+            .foo { 
+                counter-reset: foo; 
+                padding-left: 15px; 
+            }
+            .foo li { 
+                list-style-type: none; 
+            }
+            .foo li:before { 
+                counter-increment: foo; 
+                content: counter(ordem) "." counter(foo) " "; 
+            }
+        </style>
+		
 		<!--[if lt IE 9]>
 		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 
+	<!--
+	
+	0. Deckblatt
+	1. Inhalt
+	2. Einführung
+	3. Einsatzbereiche
+	4. DOM
+	5. Wie? Einbindung
+	6. 
+		6.1 Variablen
+		6.2 Funktionen
+		6.3 Datentypen
+		6.4 Events
+	7. Übung
+	
+	-->
+	
 	<body>
 
 		<div class="reveal">
@@ -39,51 +76,435 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
+				<!--Deckblatt-->
 				<section>
 					<h1>Web-basierte Anwendungen 1</h1>
-					<h2>Reveal.js Demo</h2>
+					<h2>Javascript Basics</h2>
 
-					<p>10. Oktober 2013</p>
+					<p>24. Oktober 2013</p>
 
 					<p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
 					Campus Gummersbach</p>
 
-					<p style="margin-top:10%">Student 1<br>
-					Student 2<br>
-					Student 3</p>
+					<p style="margin-top:10%">Marcel Göbel<br>
+					Rebecca Uebachs<br>
+					Hayal Süer</p>
 				</section>
-
+				
+				<!--Inhalt-->
 				<section>
+					<h1>Inhalt</h1>
+					<ul>
+						<li class="fragment roll-in">Einführung</li>
+						<li class="fragment roll-in">Einsatzbereiche</li>
+						<li class="fragment roll-in">DOM</li>
+						<li class="fragment roll-in">Einbindung
+							<ul>
+								<li class="fragment roll-in">Datentypen</li>
+								<li class="fragment roll-in">Variablen</li>
+								<li class="fragment roll-in">Funktionen</li>
+								<li class="fragment roll-in">Events</li>
+							</ul>
+						</li>
+						<li class="fragment roll-in">Übung</li>
+					</ul>
+				</section>
+				
+				<!--Einführung-->
+				<section>
+					<h1>Willkommen zu JavaScript</h1>
+					<p>JavaScript (kurz JS) ist eine Skriptsprache, die...</p>
+					<ul>
+						<li class="fragment roll-in">ursprünglich für dynamisches HTML in Web-Browsern entwickelt wurde</li>
+						<li class="fragment roll-in">Benutzerinteraktionen auswertet</li>
+						<li class="fragment roll-in">Inhalte verändert, nachlädt oder generiert (Clientseitig)</li>
+						<li class="fragment roll-in">die Möglichkeiten von HTML und CSS erweitert</li>
+					</ul>
+					<br>
+					<br>
+					<div class="fragment" style="text-align:center;">
+						<button type="button" style="width:50%; height:50px;" onclick="alert('Willkommen zu Javascript Basics :)')">Klick Mich!</button>
+					</div>
+					
+					<pre class="fragment">
+						<code style="width:100%" data-trim>
+&lt;div style="text-align:center;"&gt;
+	&lt;button type="button" onclick="alert('Willkommen zu Javascript Basics!')"&gt;Klick Mich!&lt;/button&gt;
+&lt;/div&gt;
+						</code>
+					</pre>
+				</section>
+				
+				<!--Einsatzbereiche-->
+				<section>
+					<h1>Einsatzbereiche</h1>
+					<p>JavaScript bietet viele Einsatzmöglichkeiten.</p>
+					<ol>
+						<li class="fragment roll-in">Pop-up Fenster<button type="button" style="float:right; margin-left:300px;" onclick="alert('Ich bin ein Pop-up Fenster! =)')">Pop-up</button></li>
+						<li class="fragment roll-in">Events<button type="button" style="float:right;" onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='red'">Mouseover-Event</button></li>
+						<li class="fragment roll-in">Tooltip<button type="button" style="float:right;" title="Ich bin ein Tooltip! =)">Tooltip</button></li>
+						<li class="fragment roll-in">Formulareingaben überprüfen</li>
+						<li class="fragment roll-in">Visuelle Effekte</li>
+						<li class="fragment roll-in">Werbebanner oder Laufschriften</li>
+						<li class="fragment roll-in"><strong>Missbrauch</strong></li>
+					</ol>
+				</section>
+				
+				<!--DOM-->
+				<section>
+					<section>
+						<h1>DOM (Document Object Model)</h1>
+						<br>
+						<p>Was ist DOM eigentlich?</p>
+						<br>
+						<ol>
+							<li class="fragment roll-in">Schnittstelle für den Zugriff auf HTML- oder XML- Dokumente</li>
+							<li class="fragment roll-in">DOM ist keine eigene Programmiersprache</li>
+							<li class="fragment roll-in">DOM ist nicht auf HTML beschränkt</li>
+							<li class="fragment roll-in">Definiert Objekte, Eigenschaften und Methoden, die eine
+								Programmiersprache umsetzen soll</li>
+							<li class="fragment roll-in">Dom wird von allen gängigen Browsern verwendet</li>
+						</ol>
+					</section>
+					
+					<!--<section>
+						<h1>Modell</h1>
+						
+						<div style="text-align:center;">
+							<img style="width:80%;" src="http://www.w3schools.com/js/pic_htmltree.gif"></img>
+						</div>
+					</section>-->
+					
+					<section>
+						<h1>Was ist das DOM?</h1>
+						<div class="fragment" style="float:left; width: 450px;">
+							<p>HTML-Dokumentenstruktur</p>
+							<pre><code style="margin-top:30px;" class="xml">
+&lt;html>
+	&lt;head>
+		&lt;title>My title&lt;/title>
+	&lt;/head>
+	&lt;body>
+		&lt;a href="">My link&lt;/a>
+		&lt;h1>My header&lt;/h1>
+	&lt;/body>
+&lt;/html>
+						</code></pre>
+						</div>
+						<div class="fragment" style="float:right;">
+							<p>DOM-Baum</p>
+							<img style="width:250%;" src="http://www.w3schools.com/js/pic_htmltree.gif"></img>
+						</div>
+					</section>
+					
+					<section>
+						<h1>Zugriff auf das DOM</h1>
+						<ul>
+							<li class="fragment">DOM Spezifikation schreibt Zugriffsmethoden vor</li>
+							<li class="fragment">
+								<span>als Beispiel </span><strong>getElementById()</strong>
+									<pre class="fragment">
+										<code style="width:100%;">
+&lt;html>
+	&lt;head>&lt;/head>
+	&lt;body>
+		&lt;div>
+			&lt;p id="paragraph_1">Test&lt;/p>
+		&lt;/div>
+	&lt;/body>
+&lt;/html>
+										</code>
+									</pre>
+								<pre class="fragment">
+									<code style="overflow: hidden;" style="width:100%;">
+var paragraph_1 = document.getElementById('paragraph_1');
+									</code>
+								</pre>
+							</li>
+						</ul>
+						<!--<div class="fragment" style="position: absolute; border: 2px solid #DD1166; width: 410px; height: 27px; top: 309px; left: 160px; z-index: 999;"></div>-->
+					</section>
+					
+					<section>
+						<h1>Zugriff auf das DOM</h1>
+						<ul>
+							<!--<li class="fragment">DOM-Elemente bzw. Knoten haben ihrem Typ entsprechende Eigenschaften</li>-->
+							<li class="fragment">Zugriff auf die Eigenschaften bzw. Attribute des Elements</li>
+							<li class="fragment" style="list-style-type: none;">
+								<pre><code style="width:100%;">
+&lt;body>
+	&lt;p>
+		&lt;a id="ein_link" href="http://www.google.de">Google&lt;/a>
+	&lt;/p>
+&lt;/body>
+								</code></pre>
+								<pre class="fragment"><code style="width:100%;">
+var link_element = document.getElementById('ein_link');
+
+link_element.href = "http://www.medieninformatik.fh-koeln.de/";
+link_element.innerHTML = "Zur Medieninformatikseite der FH-Köln";
+								</code></pre>
+							</li>
+						</ul>
+						<!--<div class="fragment" style="position: absolute; border: 2px solid #DD1166; width: 700px; height: 27px; top: 215px; left: 120px; z-index: 999;"></div>-->
+					</section>
+					
+					<section>
+						<h1>Zugriff auf das DOM</h1>
+						<p>als weiteres Beispiel das <strong>&lt;input></strong> Element</p>
+						
+						<pre class="fragment">
+							<code style="width:100%;">
+&lt;body>
+	&lt;form>
+		&lt;input type="text" id="text_feld" value="Peter">
+	&lt;/form>
+&lt;/body>
+							</code>
+						</pre>
+						
+						<pre class="fragment" style="margin-top: 50px;">
+							<code style="width:100%;">
+var text_element = document.getElementById('text_feld');
+
+var x = text_element.value;
+text_element.value = "Hallo, " + x;
+							</code>
+						</pre>
+					</section>
+				</section>
+				
+				<section>
+					<!--Einbindung-->
+					<section>
+						<h1>Wie bindet man Javascript ein?</h1>
+						<br>
+						<p>Es gibt <strong>zwei</strong> Arten, um JavaScript in HTML einzubinden.</p>
+						<br>
+						<ul>
+							<li>direkt in HTML-Datei schreiben</li>
+							<pre>
+								<code>
+<script type="text/javascript">
+	// der JavaScript Code
+</script>
+								</code>
+							</pre>
+							<p>Der script-Tag muss nicht im head der Seite stehen, sondern kann auch irgendwo im body liegen.</p>
+							<br>
+							<li>Über eine externe Datei</li>
+							<pre>
+								<code>
+<script type="text/javascript" src="./der/pfad/zu/der/datei.js"></script>
+								</code>
+							</pre>
+						</ul>
+					</section>
+					
+					<!--Datentypen-->
+					<section> 
+						<h1>Datentypen in JavaScript</h1>
+						<p>In JavaScript gibt es, wie in Java, mehrere Datentypen.</p>
+						<p>Um eine Variable zu deklarieren, benötigt man nur das Schlüsselwort <strong>var</strong>.</p>
+						<p>Hier sind die in JavaScript zulässigen Datentypen aufgelistet:</p>
+						<br>
+						<ul>
+							<li><strong>Number</strong></li>
+							<li><strong>String</strong></li>
+							<li><strong>Boolean</strong></li>
+							<li><strong>Object</strong></li>
+							<li><strong>Function</strong></li>
+							<li><strong>Undefined</strong></li>
+						</ul>
+					</section>
+					
+					<!--Variablen-->
+					<section> 
+						<h1>Variablen in JavaScript</h1>
+						<p id="test">bla</p>
+						<script>
+							var x = 5;
+							var y = 2;
+							var z = x + y;
+							var abc = "<strong>var</strong> x = " + x + "; <br> <strong>var</strong> y = " + y + "; <br> <strong>var</strong> z = x + y; <br> z = " + z;
+							document.getElementById("test").innerHTML = abc;
+						</script>
+						<pre>
+							<code data-trim>
+&lt;script&gt
+	var x = 5;
+	var y = 2;
+	var z = x + y;
+	z  = 7;
+&lt/script&gt;
+							</code>
+						</pre>
+						<p id="test2">bla</p>
+						<script>
+							var abc = "<strong>var</strong> x = 'Peter'; <br> <strong>var</strong> y = false; <br> <strong>var</strong> z = document.getElementById(<strong>'button_3'</strong>).innerHTML;";
+							document.getElementById("test2").innerHTML = abc;
+						</script>
+					</section>
+					
+					<!--Funktionen-->
+					<section> 
+						<h1>Funktionen in JavaScript</h1>
+						<ul>
+							<li>sind wichtige Bausteine von Javascript</li>
+							<li>ein Block von Anweisungen mit einem Namen</li>
+							<li>Der Funktionsblock wird einmal definiert</li>
+							<li>Das Zusammenfassen von Befehlen in einer Funktion verbessert die Lesbarkeit des Scripts</li>
+						</ul>
+						<pre>
+							<code data-trim>
+function groesseVeraendern(obj){
+	document.getElementById(obj).style.width = "250px";
+	document.getElementById(obj).style.height = "200px";
+}
+							</code>
+						</pre>
+						<ul>
+							<li><strong>Schlüsselwort:</strong> function</li>
+							<li><strong>Name:</strong> groesseVeraendern</li>
+							<li><strong>Parameter:</strong> (obj)</li>
+							<li><strong>Funktionskörper:</strong> { Anweisungen }</li>
+						</ul>
+						<!--Schlüsselwort function
+							Name: button
+							Parameter:(obj)
+							Funktionskörper:{Anweisungen}-->
+					</section>
+					
+					<!--Events-->
+					<section>
+						<h1>Events in JavaScript</h1>
+						<p>Events definieren eine Reaktion des Javascripts auf eine Aktion des Benutzers.</p>
+						<p>Verschiedene Events sind beispielsweise:</p>
+						<ul>
+							<li><strong>OnMouseOver</strong></li>
+								<p id="Test" onmouseover="this.innerHTML = 'Sehen Sie?'" onmouseout="this.innerHTML = 'Ich bin dynamisch'">Ich bin dynamisch</p>
+							<li><strong>OnMouseDown/Up</strong></li>
+								<button type="button" onmousedown="this.innerHTML = 'Button wurde angeklickt!'" onmouseup="this.innerHTML = 'Maustaste wurde losgelassen!'">Klick Mich!</button>
+							<li><strong>OnClick</strong></li>							
+								<button type="button" onclick="alert('OnClick')">Klick Mich!</button>
+						</ul>
+						<br>
+						<br>
+						<p>Eine Liste mit weiteren Events und deren Definitionen findet ihr <a href="http://www.w3schools.com/js/default.asp">hier!</a></p>
+					</section>
+					
+					<!--<section data-markdown> 
+						<h1>Events in JavaScript</h1>
+						<script type="text/template">
+							## Events in JavaScript
+
+							> test
+							> ddddddd
+							> was los
+							fgffgf
+						</script>
+					</section>-->
+				</section>
+				
+				<!--Ende-->
+				<!--<section>
+					<h2>Images</h2>
+					<img class="align-center" src="http://octodex.github.com/images/daftpunktocat-thomas.gif">
+				</section>-->
+				
+				<!--Übung-->
+				<section>
+					<h1>..nun kommt die Übung!</h1>
+					<a href="uebung_lsg/index.html" target="_blank">--> Übung</a>
+				</section>
+				
+				<!--Uhrzeit-->
+				<!--<section>
+					<script>
+						var myTime;
+						function startTimer()
+						{
+							myTime = setInterval(function(){displayDate()}, 1000);
+						}
+						function stopTimer()
+						{
+							clearInterval(myTime);
+						}
+						function displayDate()
+						{
+							var today = new Date();
+							var dd = today.getDate();
+							var mm = today.getMonth() + 1; //January is 0!
+							var yyyy = today.getFullYear();
+							var hh = today.getHours();
+							var min = today.getMinutes();
+							var sec = today.getSeconds();
+							
+							if(dd < 10)
+							{
+								dd = '0' + dd
+							}
+							if(mm < 10)
+							{
+								mm = '0' + mm
+							}
+							if(min < 10)
+							{
+								min = '0' + min
+							}
+							if(sec < 10)
+							{
+								sec = '0' + sec
+							}
+							
+							today = dd + '.' + mm + '.' + yyyy + ' ' + hh + ':' + min + ':' + sec;
+							document.getElementById("demo").innerHTML = today;
+						}
+						
+						//document.getElementById("btnTimer").visible = false;
+						
+					</script>
+					<h1>Uhrzeit mit JavaScript</h1>
+					<h3 id="demo"></h3>
+					<button type="button" onclick="startTimer()">Start Date</button>
+					<button type="button" onclick="stopTimer()">Stop Date</button>
+				</section>-->
+				
+				<!--<section>
 					<section>
 						<h2>Backgrounds</h2>
 					</section>
 
 					<section class="center" data-background="#77aabb">
-						<pre><code>&lt;section data-background="#77aabb"&gt;
-
-&lt;/section&gt;</code></pre>
+						<pre>
+							<code>
+								&lt;section data-background="#77aabb"&gt;
+								&lt;/section&gt;
+							</code>
+						</pre>
 					</section>
 
 					<section data-background="#442211">
-						<pre><code>&lt;section data-background="#442211"&gt;
-
-&lt;/section&gt;</code></pre>
+						<pre>
+							<code>
+								&lt;section data-background="#442211"&gt;
+								&lt;/section&gt;
+							</code>
+						</pre>
 					</section>
 
 					<section data-background-image="images/background.jpg">
-						<pre><code>&lt;section data-background="images/background.jpg"&gt;
-
-&lt;/section&gt;</code></pre>
+						<pre>
+							<code>
+								&lt;section data-background="images/background.jpg"&gt;
+								&lt;/section&gt;
+							</code>
+						</pre>
 					</section>
 
-					<section data-background-image="images/github-mac.png" data-background-position="top center">
-					</section>
+				</section>-->
 
-					<section data-background-image="images/github-windows.png" data-background-position="top center">
-					</section>
-				</section>
-
-				<section>
+				<!--<section>
 					<h2>Fragments</h2>
 					<p class="fragment grow">grow</p>
 					<p class="fragment shrink">shrink</p>
@@ -92,9 +513,9 @@
 					<p class="fragment highlight-red">highlight-red</p>
 					<p class="fragment highlight-green">highlight-green</p>
 					<p class="fragment highlight-blue">highlight-blue</p>
-				</section>
+				</section>-->
 
-				<section>
+				<!--<section>
 					<h2>Fragmented <strong>Views</strong></h2>
 					<p>Hit the next arrow...</p>
 					<p class="fragment" data-fragment-index="0">... to step through ...</p>
@@ -103,27 +524,20 @@
 						<li class="fragment" data-fragment-index="2"><em>of view</em></li>
 						<li class="fragment" data-fragment-index="3"><strong>fragments</strong></li>
 					</ol>
-				</section>
+				</section>-->
 
-
-				<section>
-					<h2>Images</h2>
-
-					<img class="align-center" src="http://octodex.github.com/images/daftpunktocat-thomas.gif">
-				</section>
-
-				<section>
+				<!--<section>
 					<h2>Code syntax highlighting</h2>
 
 					<pre><code data-trim>
-&lt;?php
-echo 'Hello World!';
-?&gt;
+						&lt;?php
+						echo 'Hello World!';
+						?&gt;
 					</code></pre>
 
 					<pre><code data-trim>
-$ ruby -e "puts 'Hello world'"
-Hello world
+						$ ruby -e "puts 'Hello world'"
+						Hello world
 					</code></pre>
 
 					<pre><code data-trim>
@@ -140,9 +554,9 @@ Hello world
 	&lt;body&gt;
 &lt;/html&gt;
 					</code></pre>
-				</section>
+				</section>-->
 
-				<section>
+				<!--<section>
 					<section>
 						<h2>Tables</h2>
 						<table>
@@ -282,9 +696,9 @@ Hello world
 								</tbody>
 							</table>
 					</section>
-				</section>
+				</section>-->
 
-				<section data-markdown>
+				<!--<section data-markdown>
 					<script type="text/template">
 					## Markdown Support
 
@@ -308,7 +722,7 @@ Hello world
 					> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
 					```
 					</script>
-				</section>
+				</section>-->
 
 				<!-- End of slides container. -->
 
