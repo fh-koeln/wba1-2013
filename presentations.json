@@ -55,6 +55,12 @@
 		{
 			"title" : "CSS Advanced",
 			"authors" : ["Harun Sevinc", "Arthur Kremsier", "Marina Schoop", "Anja Wijayaganthan", "Burcu Öz", "Kevin Apitz"]
+		},
+		"2013-10-24-javascript-basic/index.html":
+		{
+			"title" : "Javascript",
+			"authors" : ["Nikita Stumpf", "Dominik Schliewowski", "Daniel Röger", "Rebecca Uebachs", "Marcel Göbel", "Hayal Sueer"]
 		}
+
 	}
 }
