@@ -6,27 +6,9 @@
     <title>How to make stuff</title>
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet'>
     <link href="css/impress-mi.css" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.png">
+    <link href="css/highlight.zenburn.css" rel="stylesheet">
+    <link href="favicon.png" rel="shortcut icon">
 </head>
-
-<!--
-    
-    Body element is used by impress.js to set some useful class names, that will allow you to detect
-    the support and state of the presentation in CSS or other scripts.
-    
-    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
-    support features required by impress.js, so you should apply some fallback styles in your CSS.
-    It's not necessary to add it manually on this element. If the script detects that browser is not
-    good enough it will add this class, but keeping it in HTML means that users without JavaScript
-    will also get fallback styles.
-    
-    When impress.js script detects that browser supports all required features, this class name will
-    be removed.
-    
-    The class name on body element also depends on currently active presentation step. More details about
-    it can be found later, when `hint` element is being described.
-    
--->
 
 <body class="impress-not-supported">
     <div class="fallback-message">
@@ -59,6 +41,7 @@
             <li>Sie besitzt eine feste Breite und Höhe.</li>
             <li>Der Inhalt ist nicht vertikal mittig ausgerichtet.</li>
             <li>Sie besitzt einen grauen Rahmen.</li>
+        </ul>
     </div>
 
     <div class="step" data-x="1100" data-y="100" data-rotate="90">
@@ -83,7 +66,7 @@
         <p>…, bzw. der margin-bottom wird durch die Klasse <code>margin-bottom</code> erzeugt.</p>
         <p class="small">(Ja, der Name dafür ist tatsächlich sehr kreativ gewählt.)</p>
     </div>
-    <div class="step" data-x="-2550" data-y="250" data-z="-1000" data-rotate-x="25" data-rotate-y="-20">
+    <div class="step" data-x="-2550" data-y="0" data-z="200" data-rotate-x="25" data-rotate-y="20">
         <h2 class="margin-bottom">Farben</h2>
         <p>Im Text kann man auch <span class="green">fa</span><span class="blue">rb</span><span class="pink">ig</span> schreiben.<br>
         Das machen die Klassen <code class="pink">pink</code>, <code class="green">green</code>, <code class="brown">brown</code> und <code class="blue">blue</code>.</p>
@@ -91,12 +74,15 @@
         <p class="small">Man sollte beachten, dass Verlinkungen standardmäßig auch pink hinterlegt werden.</p>
     </div>
 
-    <div class="step" data-x="-1550" data-y="150" data-z="-650" data-rotate-x="25" data-rotate-y="-20">
-        <p>Manchmal möchte man vielleicht Code schreiben. Dafür kann man das <code>&lt;pre&gt;</code>-Element verwenden.</p>
-<pre><span class="pink">def</span> <span class="green">display_my_syntax</span>(<span class="blue">awesome</span>)
-    <span class="pink">return</span> <span class="blue">true</span>
-<span class="pink">end</span></pre>
-        <p class="small">Syntax Highlighting leider nicht unterstützt.</p>
+    <div class="step" data-x="-1350" data-y="200" data-z="200" data-rotate-x="25" data-rotate-y="20">
+        <p>Manchmal möchte man vielleicht Code schreiben. Dafür verwendet man <code>&lt;pre&gt;</code> in Verbindung mit <code>&lt;code&gt;</code>.</p>
+<pre><code>&lt;pre&gt;&lt;code&gt;
+    &lt;!-- Code hier einfügen --&gt;
+&lt;/code&gt;&lt;/pre&gt;</code></pre>
+<pre><code>def display_my_syntax(awesome)
+    return true
+end</code></pre>
+        <p class="small">Syntax Highlighting wird durch <a href="http://github.com/isagalaev/highlight.js">highlight.js</a> unterstützt.</p>
     </div>
 
     <div class="step" data-x="-1250" data-y="-300" data-z="2000" data-rotate="180">
@@ -111,7 +97,10 @@
 
 
 <script src="js/impress.js"></script>
-<script>impress().init();</script>
+<script src="js/highlight.pack.js"></script>
+<script>
+    impress().init();
+    hljs.initHighlightingOnLoad();
+</script>
 </body>
 </html>
-

@@ -35,7 +35,6 @@ pre .number,
 pre .command,
 pre .string,
 pre .tag .value,
-pre .rules .value,
 pre .phpdoc,
 pre .tex .formula,
 pre .regexp,
@@ -50,8 +49,7 @@ pre .decorator,
 pre .built_in,
 pre .identifier,
 pre .vhdl .literal,
-pre .id,
-pre .css .function {
+pre .id {
   color: #268bd2;
 }
 
@@ -77,8 +75,7 @@ pre .attr_selector,
 pre .important,
 pre .subst,
 pre .cdata,
-pre .clojure .title,
-pre .css .pseudo {
+pre .clojure .title {
   color: #cb4b16;
 }
 
