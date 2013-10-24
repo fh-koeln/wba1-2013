@@ -20,7 +20,7 @@
 		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="../revealjs-framework/lib/css/solarized_light.css">
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
@@ -28,47 +28,47 @@
 		</script>
 
 		<style type="text/css">
-            li.title { 
-                font-size: 20px; 
-                font-weight: lighter; 
-                padding: 15px; 
-                counter-increment: ordem; 
+            li.title {
+                font-size: 20px;
+                font-weight: lighter;
+                padding: 15px;
+                counter-increment: ordem;
             }
-            .foo { 
-                counter-reset: foo; 
-                padding-left: 15px; 
+            .foo {
+                counter-reset: foo;
+                padding-left: 15px;
             }
-            .foo li { 
-                list-style-type: none; 
+            .foo li {
+                list-style-type: none;
             }
-            .foo li:before { 
-                counter-increment: foo; 
-                content: counter(ordem) "." counter(foo) " "; 
+            .foo li:before {
+                counter-increment: foo;
+                content: counter(ordem) "." counter(foo) " ";
             }
         </style>
-		
+
 		<!--[if lt IE 9]>
 		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 
 	<!--
-	
+
 	0. Deckblatt
 	1. Inhalt
 	2. Einführung
 	3. Einsatzbereiche
 	4. DOM
 	5. Wie? Einbindung
-	6. 
+	6.
 		6.1 Variablen
 		6.2 Funktionen
 		6.3 Datentypen
 		6.4 Events
 	7. Übung
-	
+
 	-->
-	
+
 	<body>
 
 		<div class="reveal">
@@ -93,7 +93,7 @@
                     Rebecca Uebachs<br>
                     Hayal Sueer<br></p>
 				</section>
-				
+
 				<!--Inhalt-->
 				<section>
 					<h1>Inhalt</h1>
@@ -112,7 +112,7 @@
 						<li class="fragment roll-in">Übung</li>
 					</ul>
 				</section>
-				
+
 				<!--Einführung-->
 				<section>
 					<h1>Willkommen zu JavaScript</h1>
@@ -128,7 +128,7 @@
 					<div class="fragment" style="text-align:center;">
 						<button type="button" style="width:50%; height:50px;" onClick="alert('Willkommen zu Javascript Basics :)')">Klick Mich!</button>
 					</div>
-					
+
 					<pre class="fragment">
 						<code style="width:100%" data-trim>
 &lt;div style="text-align:center;"&gt;
@@ -137,7 +137,7 @@
 						</code>
 					</pre>
 				</section>
-				
+
 				<!--Einsatzbereiche-->
 				<section>
 					<h1>Einsatzbereiche</h1>
@@ -152,7 +152,7 @@
 						<li class="fragment roll-in"><strong>Missbrauch</strong></li>
 					</ol>
 				</section>
-				
+
 				<!--DOM-->
 				<section>
 					<section>
@@ -169,15 +169,15 @@
 							<li class="fragment roll-in">Dom wird von allen gängigen Browsern verwendet</li>
 						</ol>
 					</section>
-					
+
 					<!--<section>
 						<h1>Modell</h1>
-						
+
 						<div style="text-align:center;">
 							<img style="width:80%;" src="http://www.w3schools.com/js/pic_htmltree.gif"></img>
 						</div>
 					</section>-->
-					
+
 					<section>
 						<h1>Was ist das DOM?</h1>
 						<div class="fragment" style="float:left; width: 450px;">
@@ -199,7 +199,7 @@
 							<img style="width:250%;" src="http://www.w3schools.com/js/pic_htmltree.gif"></img>
 						</div>
 					</section>
-					
+
 					<section>
 						<h1>Zugriff auf das DOM</h1>
 						<ul>
@@ -227,7 +227,7 @@ var paragraph_1 = document.getElementById('paragraph_1');
 						</ul>
 						<!--<div class="fragment" style="position: absolute; border: 2px solid #DD1166; width: 410px; height: 27px; top: 309px; left: 160px; z-index: 999;"></div>-->
 					</section>
-					
+
 					<section>
 						<h1>Zugriff auf das DOM</h1>
 						<ul>
@@ -251,11 +251,11 @@ link_element.innerHTML = "Zur Medieninformatikseite der FH-Köln";
 						</ul>
 						<!--<div class="fragment" style="position: absolute; border: 2px solid #DD1166; width: 700px; height: 27px; top: 215px; left: 120px; z-index: 999;"></div>-->
 					</section>
-					
+
 					<section>
 						<h1>Zugriff auf das DOM</h1>
 						<p>als weiteres Beispiel das <strong>&lt;input></strong> Element</p>
-						
+
 						<pre class="fragment">
 							<code style="width:100%;">
 &lt;body>
@@ -265,7 +265,7 @@ link_element.innerHTML = "Zur Medieninformatikseite der FH-Köln";
 &lt;/body>
 							</code>
 						</pre>
-						
+
 						<pre class="fragment" style="margin-top: 50px;">
 							<code style="width:100%;">
 var text_element = document.getElementById('text_feld');
@@ -276,7 +276,7 @@ text_element.value = "Hallo, " + x;
 						</pre>
 					</section>
 				</section>
-				
+
 				<section>
 					<!--Einbindung-->
 					<section>
@@ -303,9 +303,9 @@ text_element.value = "Hallo, " + x;
 							</pre>
 						</ul>
 					</section>
-					
+
 					<!--Datentypen-->
-					<section> 
+					<section>
 						<h1>Datentypen in JavaScript</h1>
 						<p>In JavaScript gibt es, wie in Java, mehrere Datentypen.</p>
 						<p>Um eine Variable zu deklarieren, benötigt man nur das Schlüsselwort <strong>var</strong>.</p>
@@ -320,9 +320,9 @@ text_element.value = "Hallo, " + x;
 							<li><strong>Undefined</strong></li>
 						</ul>
 					</section>
-					
+
 					<!--Variablen-->
-					<section> 
+					<section>
 						<h1>Variablen in JavaScript</h1>
 						<p id="test">bla</p>
 						<script>
@@ -348,9 +348,9 @@ text_element.value = "Hallo, " + x;
 							document.getElementById("test2").innerHTML = abc;
 						</script>
 					</section>
-					
+
 					<!--Funktionen-->
-					<section> 
+					<section>
 						<h1>Funktionen in JavaScript</h1>
 						<ul>
 							<li>sind wichtige Bausteine von Javascript</li>
@@ -377,7 +377,7 @@ function groesseVeraendern(obj){
 							Parameter:(obj)
 							Funktionskörper:{Anweisungen}-->
 					</section>
-					
+
 					<!--Events-->
 					<section>
 						<h1>Events in JavaScript</h1>
@@ -388,15 +388,15 @@ function groesseVeraendern(obj){
 								<p id="Test" onMouseOver="this.innerHTML = 'Sehen Sie?'" onMouseOut="this.innerHTML = 'Ich bin dynamisch'">Ich bin dynamisch</p>
 							<li><strong>OnMouseDown/Up</strong></li>
 								<button type="button" onMouseDown="this.innerHTML = 'Button wurde angeklickt!'" onMouseUp="this.innerHTML = 'Maustaste wurde losgelassen!'">Klick Mich!</button>
-							<li><strong>OnClick</strong></li>							
+							<li><strong>OnClick</strong></li>
 								<button type="button" onClick="alert('OnClick')">Klick Mich!</button>
 						</ul>
 						<br>
 						<br>
 						<p>Eine Liste mit weiteren Events und deren Definitionen findet ihr <a href="http://www.w3schools.com/js/default.asp">hier!</a></p>
 					</section>
-					
-					<!--<section data-markdown> 
+
+					<!--<section data-markdown>
 						<h1>Events in JavaScript</h1>
 						<script type="text/template">
 							## Events in JavaScript
@@ -408,19 +408,19 @@ function groesseVeraendern(obj){
 						</script>
 					</section>-->
 				</section>
-				
+
 				<!--Ende-->
 				<!--<section>
 					<h2>Images</h2>
 					<img class="align-center" src="http://octodex.github.com/images/daftpunktocat-thomas.gif">
 				</section>-->
-				
+
 				<!--Übung-->
 				<section>
 					<h1>..nun kommt die Übung!</h1>
 					<a href="uebung_lsg/index.html" target="_blank">--> Übung</a>
 				</section>
-				
+
 				<!--Uhrzeit-->
 				<!--<section>
 					<script>
@@ -442,7 +442,7 @@ function groesseVeraendern(obj){
 							var hh = today.getHours();
 							var min = today.getMinutes();
 							var sec = today.getSeconds();
-							
+
 							if(dd < 10)
 							{
 								dd = '0' + dd
@@ -459,20 +459,20 @@ function groesseVeraendern(obj){
 							{
 								sec = '0' + sec
 							}
-							
+
 							today = dd + '.' + mm + '.' + yyyy + ' ' + hh + ':' + min + ':' + sec;
 							document.getElementById("demo").innerHTML = today;
 						}
-						
+
 						//document.getElementById("btnTimer").visible = false;
-						
+
 					</script>
 					<h1>Uhrzeit mit JavaScript</h1>
 					<h3 id="demo"></h3>
 					<button type="button" onclick="startTimer()">Start Date</button>
 					<button type="button" onclick="stopTimer()">Stop Date</button>
 				</section>-->
-				
+
 				<!--<section>
 					<section>
 						<h2>Backgrounds</h2>
