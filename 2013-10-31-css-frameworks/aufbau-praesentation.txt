@@ -1,0 +1,8 @@
+1. Einleitung in Frameworks
+- Was sind CSS-Frameworks (wie erweitert es css nutzen für anwender)
+- Begriffe erklären (Nesting, etc.)
+- Welche CSS-Frameworks gibt es
+2. Spezialisierung auf SCSS
+- SCSS baut auf SASS auf 
+- SCSS ist das aktuellere
+- 
