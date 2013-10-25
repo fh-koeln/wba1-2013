@@ -1,0 +1,75 @@
+    Gruppenleite: Johannes Kutsch
+
+    Ergebnisse Feedbackgespräche: 
+	
+    17.10:
+
+    Dokumentation:
+    =>	zusammenfassen
+    =>	besser strukturieren
+    =>	aktuelle Beispiele einbinden (siehe Markenrecht, Verschiedene Fälle)
+
+    Vortrag:
+    =>	erst die Übung dann der Vortrag
+    =>	Wir sind nach dem Vortrag von ... dran, also nicht die Rechtslage erklären und mehr 
+	mit Beispielen arbeiten.
+    =>	aktuelle Fälle austeilen und durcharbeiten lassen, danach auflösen
+
+
+    24.10:
+
+    Allgemein:
+    =>	Gruppenleiter: Johannes Kutsch
+
+    Dokumentation:
+    => 	Opensource Teil evtl. ignorieren und Datenschutzteil hinzufügen, Rest überarbeiten
+
+    Klausurfragen:
+    =>	Fragen wie "Das Bild eines Artikels aus deinem Onlineshop wird auf Ebay benutzt, 
+	was kannst du machen und wieso? Ist es sinnvoll den Benutzer zu verklagen? Begründe!" 
+	sind inordnung.
+
+	
+	
+    Notizen:
+
+
+    Idee Vortrag (von Philipp):
+    =>  Vortrag wie eine "Fragerunde". Leute in 4er Gruppen aufteilen. Wir stellen einen Fall vor und geben mehrere
+	Lösungsansätze. Danach die Gruppe beraten lassen und Karte mit der Antwort hochhalten, evtl jeder kurz begründen.
+	Wir lösen auf. Das ganze dann mehrmals (3 mal je 20 min oder 4 mal je 15, erstes würde sich besser aufteilen lassen).
+
+
+    Hier mal meine (Johannes) Ansätze was wir tun sollten:
+
+    Doku:
+
+    => 	geht meiner Meinung nach zu weit ins Detail.
+    => 	z.B. Beerware, Pizzaware & Co raus tun (gibt sicher noch vieles 
+	mehr aber das ist mir als erstes ins Auge gefallen)
+    =>	Geschichtsseile streichen? (siehe Open Source Einleitung)
+    =>	wirkt immoement wie ein "Nachschlagewert", beabsichtigt?
+    =>	mehr Verlinkungen (z.B. Copyleft in Free software, einfach nach 
+	den Kapitalüberschriften suchen und die alle Verlinken, wirkt 
+	momentan so als ob nur innerhalb des eigenen Kapitels verlinkt wurde)
+    =>	Softwarelizenzen: erst Text dann Grafik, würde einmal tauschen?
+    => 	Lizenzen nach hinten schieben (erst die Lizenzen von z.B. Open Source 
+	und danach die Erklärung wirkt für mich falsch herum)
+    =>	Patentrecht: aktuelle Mitgliedstaaten + Vertragsstaaten löschen
+
+
+    Neue Einträge:
+
+    =>	Welche Lizenzen man wofür benutzen sollte? (Max will Code veröffentlichen, 
+	worauf sollte er bei der Auswahl einer Lizenz achten...)
+    =>	selbes für wenn er ein Patent anmelden möchte, evtl auch an wen er sich wenden muss
+    =>	und das selbe für das erstellen einer Marke
+    =>	mehr so Beispiele wie unter Markenrecht => Verschiedene Fälle
+
+
+    Klausurfragen:
+
+    =>	Fragen wie 3, 5 + 6 = nicht so geil
+    =>	Ich fände es besser wenn mehrere Fragen zuerst ein Szenario beschreiben und dann fragen wie und wieso das so geregelt ist (z.B. Das Bild eines Artikels aus deinem Onlineshop wird auf Ebay benutzt, was kannst du machen und wieso? Ist es sinnvoll den Benutzer zu verklagen? Begründe!)
+
+
