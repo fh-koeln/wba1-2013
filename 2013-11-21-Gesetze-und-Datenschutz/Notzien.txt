@@ -70,6 +70,8 @@
     Klausurfragen:
 
     =>	Fragen wie 3, 5 + 6 = nicht so geil
-    =>	Ich fände es besser wenn mehrere Fragen zuerst ein Szenario beschreiben und dann fragen wie und wieso das so geregelt ist (z.B. Das Bild eines Artikels aus deinem Onlineshop wird auf Ebay benutzt, was kannst du machen und wieso? Ist es sinnvoll den Benutzer zu verklagen? Begründe!)
+    =>	Ich fände es besser wenn mehrere Fragen zuerst ein Szenario beschreiben und dann fragen
+		wie und wieso das so geregelt ist (z.B. Das Bild eines Artikels aus deinem Onlineshop wird 
+		auf Ebay benutzt, was kannst du machen und wieso? Ist es sinnvoll den Benutzer zu verklagen? Begründe!)
 
 
