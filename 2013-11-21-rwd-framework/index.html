@@ -23,7 +23,7 @@
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="../revealjs-framework/lib/css/solarized_light.css">
-
+		/*href="../revealjs-framework/lib/css/solarized_light.css"> 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
 			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
@@ -58,26 +58,21 @@
 					</p>					
 				</section>
                 
-<!-- Inhaltsverzeichnis -->                
+<!-- Inhalt -->                
 				<section class="present" style="display: block;">
-				<section>
-					<h1>Responsive Webdesign Frameworks</h1>
-					<p><br>
-						<ul>
-							<li>Grundlagen</li>
-							<li>Technik</li>
-							<li>Frameworks</li>
-							<li>Vor- und Nachteile</li>
-							<li>Beispiel zur Umsetzung mit Bootstrap</li>					
-						</ul>
-					</p>
-					</section>
+					<h1>Inhalt</h1>
+					<ul>
+                        <li>Grundlagen</li>
+                        <li>Technik</li>
+                        <li>Frameworks</li>
+                        <li>Vor- und Nachteile</li>
+                        <li>Beispiel zur Umsetzung mit Bootstrap</li>					
+                    </ul>
 				</section>
 
 <!-- Grundlagen -->
 				<section class="future" style="display: block;">
-					<h1>Grundlagen</h1>
-					<p>
+					<h1>Grundlagen</h1>                    
 					<ul>
 						<li>Größe und Auflösung des Displays variieren</li>
 						<li>Unterschiedlichen Anforderungen an die Endgeräte</li>
@@ -86,18 +81,17 @@
 					<ul><h3>Ziel:</h3>
 						<li>möglichst von allen Geräten (Computer, Tablet, Smartphone) erkannt zu werden</li>
 						<li>übersichtlich und benutzerfreundlich wie möglich präsentieren</li>
-					</ul>
-					</p>
+					</ul><br><br>
+                    <img class="align-right" src="http://upload.wikimedia.org/wikipedia/commons/e/e2/Responsive_Web_Design.png" alt="RWD">
 				</section>
 				
 <!-- Technik -->
 				<section class="future" style="display: block;">
 					<h1>Technik</h1>
-					<p>
-						Media Queries, Eigenschaftsspezifische Stylesheets
+					<p>Media Queries, Eigenschaftsspezifische Stylesheets</p>
 						<ul>
 							<li>Gitter-System im Spalten aufgebaut</li>
-							<li>Stille sind vorgegeben, flexibles System</li>
+							<li>Flexibles System</li>
 							<li>Arbeitet mit HTML5, CSS3 und JavaScript</li>
 							<li>Icons als Glyphicons (als Schritzeichen in Bootstrap)</li>
 						</ul>
@@ -107,44 +101,50 @@
 							<li>Größe des Gerätes, Bildschirmauflösung</li>
 							<li>Orientierung (Hoch- oder Querformat)</li>
 							<li>Eingabemöglichkeiten (Tastatur, Touch, Sprache)</li>
-						</ul>
-					</p>
+						</ul>				
 				</section>		
-				
+                
+<!-- Mobile first -->
+                    <section>
+                        <h1>Mobile first</h1>
+                        <p> Text kommt...</p>
+                    </section>      
+                
 <!-- Frameworks -->
 				<section class="future" style="display: block;">
 					<h1>Frameworks</h1> 
 					<section> 
-						<img class="align-right" src="images/vogel.png" alt="Twitter">
-						sind vorgefertigte dynamische Gestaltungselemente<br><br>
-						<p>
-						Die Komponente:<br>
-						- Mobile first
-						- Responsive Bilder <br>
-						- Responsive Typography und Links<br>
-						- Die Navigation <br>
-						- Tabellen, Formulare und mehr<br>
-						<br>
-						Einige Webdesign Frameworks:
-							<ul>
-							<a href="http://getbootstrap.com/" target="_blank"> Bootstrap 3 </a><br>
-							<a href="http://foundation.zurb.com/" target="_blank"> Foundation 4</a><br>
-							<a href="http://www.yaml.de/"  target="_blank"> YAML 4</a><br>
-							<a href="http://gumbyframework.com/" target="_blank"> Gumby 2</a><br>
-							<a href="http://imperavi.com/kube/" target="_blank"> Kube</a><br>
-							<a href="http://groundwork.sidereel.com/" target="_blank"> GroundworkCSS</a><br>
-							<a href="http://matthewhartman.github.io/base/" target="_blank"> BASE</a><br>
-							</ul>
-						</p>
+						sind vorgefertigte dynamische Gestaltungselemente.<br><br>
+						<h3>Die Komponente:</h3>
+                            <ul>
+                                <li>Responsive Grafiken</li>
+                                <li>Responsive Typography und Links</li>
+                                <li>Eingabefelder und Navigation</li>
+                                <li>Tabellen, Formulare und mehr</li>
+						</ul>
 					</section>	
-				
+                    
+<!-- Einige Webdesign Frameworks -->
+                    <section>
+						<h3>Einige Webdesign Frameworks:</h3>
+                        <img class="align-right" src="images/vogel.png" alt="Twitter">
+							<ul>
+                                <li><a href="http://getbootstrap.com/" target="_blank"> Bootstrap 3</a> - OpenSource</li>
+                                <li><a href="http://foundation.zurb.com/" target="_blank"> Foundation 4</a></li>
+                                <li><a href="http://www.yaml.de/"  target="_blank"> YAML 4</a></li>
+                                <li><a href="http://gumbyframework.com/" target="_blank"> Gumby 2</a></li>
+                                <li><a href="http://imperavi.com/kube/" target="_blank"> Kube</a></li>
+                                <li><a href="http://groundwork.sidereel.com/" target="_blank"> GroundworkCSS</a></li>
+                                <li><a href="http://matthewhartman.github.io/base/" target="_blank"> BASE</a></li>
+							</ul>
+                     </section>
+                    
 <!-- Vorteile/Nachteile -->	
 					<section>
-						<h2>Vorteile / Nachteile</h2>
 						<table>
 							<tr>
-								<th>Vorteile</th>
-								<th>Nachteile</th>
+								<th><h3>Vorteile</h3></th>
+								<th><h3>Nachteile</h3></th>
 							</tr>
 							<tr>
 								<td>Anpassung der Webseite</td>
@@ -168,175 +168,132 @@
 							</tr>
 						</table>
 					</section>
-				</section>
+                </section>
 				
 <!-- Beispiel zur Umsetzung mit Bootstrap -->	
 				<section class="future" style="display: block;">
 					<h1>Beispiel zur Umsetzung mit Bootstrap</h1>
-					
-<!-- v -->			
+                    
 					<section>
 					    <h3>Horizontale Stappelung</h3>
-						<p>Mit Hilfe des Tags in den Klassen <code>.col-md-*</code> kann man die Grundraster anpassen.  
-						<img src="images/grid.png" alt="Gitter-System">
-						</p>							
+                        <p>Mit Hilfe des Tags in den Klassen <code>.col-md-*</code> kann man die Grundraster anpassen. <br> 
+						<img src="images/grid.png" alt="Gitter-System"></p>
 					</section>
 	
 					<section>
 						<h3>Horizontale Stappelung</h3>
-<pre><code data-trim>
-<div class="row">
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-</div>
-<div class="row">
-  <div class="col-md-8">.col-md-8</div>
-  <div class="col-md-4">.col-md-4</div>
-</div>
-<div class="row">
-  <div class="col-md-4">.col-md-4</div>
-  <div class="col-md-4">.col-md-4</div>
-  <div class="col-md-4">.col-md-4</div>
-</div>
-<div class="row">
-  <div class="col-md-6">.col-md-6</div>
-  <div class="col-md-6">.col-md-6</div>
-</div>
-</pre></code>
-					</section>
+                        <pre><code data-trim style="margin: 10px 400px 0px -50px" class="xml">
+&lt;div class="row"&gt;
+    &nbsp; &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &nbsp; &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &nbsp; &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &nbsp; &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &nbsp; &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &nbsp; &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &nbsp; &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &nbsp; &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &nbsp; &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &nbsp; &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &nbsp; &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &nbsp; &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+    &nbsp; &lt;div class="col-md-8"&gt;.col-md-8&lt;/div&gt;
+    &nbsp; &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+    &nbsp; &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+    &nbsp; &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+    &nbsp; &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+    &nbsp; &lt;div class="col-md-6"&gt;.col-md-6&lt;/div&gt;
+    &nbsp; &lt;div class="col-md-6"&gt;.col-md-6&lt;/div&gt;
+&lt;/div&gt;
+                        </code> </pre> 
+                    </section>
 					
 <!-- Typography -->
 					<section>
 						<h3>Typography</h3>
-						<p>Alle HTML-Überschriften, von h1 bis h6 stehen zur Verfügung.</p>
-						<table>
-						  <tr>
-							<td><h1>h1. Bootstrap heading</h1></td>
-							<td>Semibold 36px</td>
-						  </tr>
-						  <tr>
-							<td><h2>h2. Bootstrap heading</h2></td>
-							<td>Semibold 30px</td>
-						  </tr>
-						  <tr>
-							<td><h3>h3. Bootstrap heading</h3></td>
-							<td>Semibold 24px</td>
-						  </tr>
-						  <tr>
-							<td><h4>h4. Bootstrap heading</h4></td>
-							<td>Semibold 18px</td>
-						  </tr>
-						  <tr>
-							<td><h5>h5. Bootstrap heading</h5></td>
-							<td>Semibold 14px</td>
-						  </tr>
-						  <tr>
-							<td><h6>h6. Bootstrap heading</h6></td>
-							<td>Semibold 12px</td>
-						  </tr>
-						</table>
-					</section>
-					
-					<section>
-					<h3>Typography</h3>
-<pre><code>&lt;h1&gt;...&lt;/h1&gt;
+						<p>Alle HTML-Überschriften, von <code>&lt;h1&gt;</code> bis <code>&lt;h6&gt;</code> stehen zur Verfügung.</p>
+						<img src="images/typography.png" alt="Typography">
+                        <pre><code data-trim style="margin: 10px 800px 0px -50px" class="xml">
+&lt;h1&gt;...&lt;/h1&gt;
 &lt;h2&gt;...&lt;/h2&gt;
 &lt;h3&gt;...&lt;/h3&gt;
 &lt;h4&gt;...&lt;/h4&gt;
 &lt;h5&gt;...&lt;/h5&gt;
 &lt;h6&gt;...&lt;/h6&gt;
-</pre></code>
-
+                        </code></pre>
 					</section>
 					
-<!-- Beispiel zur Umsetzung mit Bootstrap -->
+<!-- Formulare -->
 					<section>
 						<h3>Formulare</h3>
-						<p>Individual form controls automatically receive some global styling. 
-						All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to <code>width: 100%;</code> by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.
-						<img src="images/forms.png" alt="Formular">
-						</p>
-					</section>
-					
+                        <p>Auch die Eingabefelder sind durch die Klasse <code>form-control</code> responsiv.</p>
+                        <img src="images/forms.png" alt="Formular">
+                        <pre><code data-trim style="margin: 10px 370px 0px -50px" class="xml">
+&lt;div class="container"&gt;
+	&lt;div class="four columns"&gt;Spalte 1&lt;/div&gt;
+	&lt;div class="four columns"&gt;Spalte 2&lt;/div&gt;
+	&lt;div class="four columns"&gt;Spalte 3&lt;/div&gt;
+	&lt;div class="four columns"&gt;Spalte 4&lt;/div&gt;
+&lt;/div&gt;
+						</code></pre>
+                    </section>
+                    
+<!-- Schaltflächen -->					
 					<section>
-						<h3>Formulare</h3>
-<pre><code data-trim>
-<form role="form">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
-    <p class="help-block">Example block-level help text here.</p>
-  </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox"> Check me out
-    </label>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
-</pre></code>
+                        <h3>Schaltflächen</h3>
+                        <p>Verwende eine der Klassen <code>btn btn-*</code> um schnell einige Schaltflächen zu definieren.</p>
+					    <img src="images/buttons.png" alt="Schaltflächen">
+                        <pre><code data-trim style="margin: 10px 370px 0px -50px" class="xml">
+&lt;button type="button" class="btn btn-default"&gt;Default&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;
+                        </code></pre> 
 					</section>
-					
+                    
+<!-- Bilder -->
 					<section>
-					<h3>Schaltflächen</h3>
-					<p>
-					<img src="images/buttons.png" alt="Schaltflächen">
-<pre><code data-trim>
-<button type="button" class="btn btn-default">Default</button>
+                        <h3>Bilder</h3>
+                        <p>Die Bilder werden mit dem <code>&lt;img&gt; src="..."</code>-Tag eingebunden.<br>
+                        Verwende die Klasse <code>img-*</code> um die Grafiken entsprechen anzupassen.</p>
+                        <img src="images/images.png" alt="Bilder">
+                        <pre><code data-trim style="margin: 10px 370px 0px -50px" class="xml">	
+<!-- Achtung: nicht responsive -->
+<img src="..." alt="..." class="img-rounded"> 
+<img src="..." alt="..." class="img-circle"> 
 
-<button type="button" class="btn btn-primary">Primary</button>
-
-<button type="button" class="btn btn-success">Success</button>
-
-<button type="button" class="btn btn-info">Info</button>
-
-<button type="button" class="btn btn-warning">Warning</button>
-
-<button type="button" class="btn btn-danger">Danger</button>
-
-<button type="button" class="btn btn-link">Link</button>
-</pre></code>
-					</p>
-					</section>
-					
-					<section>
-					<h3>Bilder</h3>
-					<p>Die Bilder werden mit dem <code>&lt;img&gt;</code> Tag eingebunden.<br>
-					<img src="images/images.png" alt="Bilder">
-<pre><code data-trim>				
-<img src="..." alt="..." class="img-rounded">
-<img src="..." alt="..." class="img-circle">
+<!-- ist responsive -->
 <img src="..." alt="..." class="img-thumbnail">
-</pre></code>
-					</p>
+                        </code></pre>
 					</section>
 					
 					<section>
-					<h3>Responsive Bilder</h3>
-					<img src="images/resp_images.png" alt="Responsive Bilder">
-<pre><code data-trim>	
+					   <h3>Responsive Bilder</h3>
+                        <p>Responsive Grafiken werdne mit der Klasse <code>img-responsive</code> eingeleitet.</p>
+					   <img src="images/resp_img.png" alt="Responsives Bild">
+                        <pre><code data-trim style="margin: 10px 300px 0px -50px" class="xml">
+<!-- Responsives Bild -->
 <img src="images/loewenzahn.png" class="img-responsive" alt="responsive">
-</pre></code>
+
+
+                        </code></pre>
 					</section>
-					
+                    
+<!-- Menüleiste -->	
 					<section>
 					<h3>Menüleiste</h3>
 					<p>Navbars are responsive meta components that serve as navigation headers for your 
@@ -349,145 +306,79 @@
 					
 					<section>
 					<h3>Menüleiste</h3>			
-<pre><code data-trim>	
-<nav class="navbar navbar-default" role="navigation">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#">Home</a>
-  </div>
-
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown-Menü <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Aktion 1</a></li>
-          <li><a href="#">Aktion 1</a></li>
-          <li><a href="#">Aktion 1</a></li>
-          <li><a href="#">Aktion 1</a></li>
-          <li><a href="#">Aktion 1</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div><!-- /.navbar-collapse -->
-</nav>					
-</pre></code>		</section>				
-				</section>		
+                    </section>	
+                    
+<!-- Glyphicons -->	                   
+                    <section>
+					   <h3>Glyphicons</h3>		
+                        <p>In Bootstrap sind 180 Glyphicons sogenannte Schriftzeichen erhältlich. 
+                            Diese wurden kostenlos zur Verfügung gestellt von <a href="http://glyphicons.com/" target="_blank">Jan Kovařík</a>. Weitere Schriftzeichen unter der Verwendung von Bootstrap findet man <a href="http://getbootstrap.com/components/#glyphicons" target="_blank">hier</a>.
+                        <br></p>
+                        <img src="images/glyphicons.png" alt="Glyphicons">
+                        <pre><code data-trim style="margin: 10px 370px 0px -50px" class="xml">	                                 
+<!-- Verwendung mit einer Schaltfläche -->
+<button type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-star"></span> Star
+</button>
+</code></pre>
+                    </section>	
+                    
+                </section>
 
 <!-- Übungen -->	
 				<section class="future" style="display: block;">
+                    <h1>Übungen</h1>
 					<section>
-					<h2>Übungen</h2>
-					<p>
-						Ziel: Responsive Menü
-					</p>
-					<p>
-						Datei: index.html
-					</p>
-					<p>
-						<a href="" target="_blank" class="roll"><span data-title="Download">Download</span></a> oder Github
-					</p>
-					<p>
-					
-					<pre><code data-trim>
-<div class="container">		
-	<section class="row">
-		<aside class="col col-md-3">
-			<h2>Nebenspalte</h2>
-			<p>Überall dieselbe alte Leier. Das Layout ist fertig [...]</p>
-		</aside> 
-		<article class="col col-md-9">
-			<h2>Hauptspalte</h2>
-			<p>Überall dieselbe alte Leier. Das Layout ist fertig [...]</p>
-		</article>
-		</section>	<!-- row ende -->
-		<section class="row">
-		<aside class="col col-md-3">
-			<h2>Nebenspalte</h2>
-			<p>Überall dieselbe alte Leier. Das Layout ist fertig [...]</p>
-		</aside>
-		<article class="col-md-4">
-			<h2>Hauptteil 1</h2>
-			<p>Überall dieselbe alte Leier. Das Layout ist fertig [...]</p>
-		</article>
-		<article class="col col-md5">
-			<h2>Hauptteil 2</h2>
-			<p>Überall dieselbe alte Leier. Das Layout ist fertig [...]</p>
-		</article>
-	</section>  <!-- row ende -->
-</div>	<!-- container ende -->
-</pre></code data-trim>
-					
-					</p>				
+                        <h3>Downloadlink</h3>
+                        <p><a href="#" target="_blank">DOWNLOAD</a> &nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp; Rohmaterial für die Übungen. 
+                        </p>			
 					</section>
+                    
 				<!-- Übung 1 -->	
 					<section>
-					<h2>Übung 1</h2>
-					<p>
-						Ziel: Verständnis des Gridsystems
-					</p>
-					<p>
-						Datei: index.html
-					</p>
-					<p>
-						<a href="" target="_blank" class="roll"><span data-title="Download">Download</span></a> oder Github
-					</p>
-					<p>Erweitern sie die index.html mit hilfe des Gridsystems um folgende Zeilen und füllen sie diese mit einem Blindtext:
-					</p>
-					<p> 1. Zeile : Spalte Länge: 3 Bezeichnung "Nebenspalte , Spalte Länge: 9 Bezeichnung: "Hauptspalte"
-					</p>				
-					<p> 2. Zeile : 3 Spalten der Länge: 4 Bezeichnung: "Hauptspalte 1-3"
-					</p>
-					<p> 3. Zeile : Spalte Länge: 3 Offset: 4 Bezeichnung: "Nebenspalte", Spalte Länge: 5 Bezeichnung: "Hauptspalte"
-					</p>
-					<p> 4. Zeile : Spalte mit der Bezeichnung: "Hauptspalte", die 5 nach rechts versetzt ist und eine Länge von 4 besitzt
-					</p>
+					   <h3>Übung 1</h3>
+                        <p>Ziel: Responsives Gridsystem</p>	
+                        <p>Erweitern sie die index.html mit hilfe des Gridsystems um folgende Zeilen und füllen sie diese mit einem Blindtext:<br><br>
+                        1. Zeile : Spalte Länge: 3 Bezeichnung "Nebenspalte , Spalte Länge: 9 Bezeichnung: "Hauptspalte"<br><br>
+                        2. Zeile : 3 Spalten der Länge: 4 Bezeichnung: "Hauptspalte 1-3" <br><br>
+                        3. Zeile : Spalte Länge: 3 Offset: 4 Bezeichnung: "Nebenspalte", Spalte Länge: 5 Bezeichnung: "Hauptspalte"<br><br>
+                       4. Zeile : Spalte mit der Bezeichnung: "Hauptspalte", die 5 nach rechts versetzt ist und eine Länge von 4 besitzt<br><br>
+                        </p>
 					</section>
+                    
 				<!-- Übung 2 -->	
 					<section>
 					<h2>Übung 2</h2>
-					<p>
-						Ziel: Verständnis Grundsyntax
-					</p>
-					<p>
-						Datei: index.html
-					</p>
-					<p>
-						<a href="" target="_blank" class="roll"><span data-title="Download">Download</span></a> oder Github
-					</p>
-					<p>Die vier Artikel unterhalb des Teaserbildes sollen innerhalb des 16-Spalten-Rasters 
-					nebeneinander und in gleicher Breite dargestellt werden.
+					<p>Text hier...
 					</p>				
 					</section>
+                    
 				<!-- Übung 3 -->	
 					<section>
 					<h2>Übung 3</h2>
-					<p>
-						Ziel: Media Queries verstehen
-					</p>
-					<p>
-						Datei: stylesheets/ CSS
-					</p>
-					<p>
-						<a href="" target="_blank" class="roll"><span data-title="Download">Download</span></a> oder Github
-					</p>
-					<p>Auf ALLEN mobilen Endgeräten soll das Logo im Headerbereich (.logo img) halb so 
-					groß (70*44px) dargestellt werden. Wählen Sie den passenden Media-Query und fügen Sie die passenden CSS-Eigenschaften hinzu.
-
-					</p>				
+					<p>Text hier...
+					</p>			
 					</section>
-
-	
-				<!-- End of slides container. -->
+                </section>
+                
+<!-- Qullen -->
+                <section class="future" style="display: block;">
+                        <h1>Quellen:</h1>
+                        <ul>
+                            <li><a href="http://getbootstrap.com/" target="_blank">Bootstrap - Homepage</a></li>  
+                            <li><a href="https://dev.twitter.com/blog/bootstrap-twitter" target="_blank">Bootstrap from Twitter</a></li>
+                            <li><a href="http://blog.getbootstrap.com/" target="_blank">Bootstrap - Blog</a></li>
+                        <br>
+                            <h3>Weiterführende Links:</h3>
+                            <li><a href="http://de.wikipedia.org/wiki/Bootstrap_(Framework)" target="_blank">Wikipedia - Bootstrap (Framework)</a></li>
+                            <li><a href="http://www.golem.de/news/bootstrap-3-0-grosser-erfolg-eines-kleinen-nebenprojekts-1308-101111.html" target="_blank">Großer Erfolg eines kleinen Nebenprojekts</a></li>
+                            <li><a href="http://de.wikipedia.org/wiki/Bootstrapping_(Informatik)" target="_blank">Bootstrapping</a></li>
+                            <li><a href="http://de.wikipedia.org/wiki/Twitter" target="_blank">Wikipedia - Twitter</a></li> 
+                            <li><a href="Bootstrap 3 – Crashkurs" target="_blank">Bootstrap 3 – Crashkurs</a></li>
+                        </ul>
+                </section>
+                
+                <!-- End of slides container. -->
 
 			</div>
 		</div>
