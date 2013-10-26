@@ -7,4 +7,7 @@
 http://thesassway.com/articles/sass-vs-scss-which-syntax-is-better)
 - SCSS wird auch das neue CSS genannt
 3. Wie sieht SCSS aus?
-- e
+- Variablen: $varname : value; aufgerufen durch $varname
+--> vereinfacht das veraendern von grobal gleichbleibenden variablen
+- Nesting: 
+--> man muss nichtmehr fuer jedes element in einem anderen neu deklarieren (siehe nesting.txt)
