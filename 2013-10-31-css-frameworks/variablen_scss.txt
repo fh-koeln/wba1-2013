@@ -1,0 +1,49 @@
+$border : 5px;
+$big : 280px;
+$small : 50px;
+$edge : ridge;
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: black;
+}
+
+.big {
+    height: $big;
+    width: $big;
+}
+
+.little {
+    height: $small;
+    width: $small;
+}
+
+.red {
+    border: $border $edge #be1622;
+    background-color: #e6332a;
+}
+
+.blue {
+    border: $border $edge #1d71b8;
+    background-color: #36a9e1;
+}
+
+.green {
+    border: $border $edge #008d36;
+    background-color: #009640;
+}
+
+.yellow {
+    border: $border $edge #e94e1b;
+    background-color: #f39200;
+}
+.flexibel {
+    
+    position:absolute;
+    left: 50%;
+    
+}

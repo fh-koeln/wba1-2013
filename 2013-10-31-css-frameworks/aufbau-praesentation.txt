@@ -3,6 +3,8 @@
 - Begriffe erklären (Nesting, etc.)
 - Welche CSS-Frameworks gibt es
 2. Spezialisierung auf SCSS
-- SCSS baut auf SASS auf 
-- SCSS ist das aktuellere
-- 
+- SCSS baut auf SASS auf (hat selbe features aber simpleres syntax,
+http://thesassway.com/articles/sass-vs-scss-which-syntax-is-better)
+- SCSS wird auch das neue CSS genannt
+3. Wie sieht SCSS aus?
+- e
