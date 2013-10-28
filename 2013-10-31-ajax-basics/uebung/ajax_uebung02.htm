@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-    
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Ajax Tutorial</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <script>
             var searchText = 'modern architecture'
-            var pageId = 1;
-
             
-            // lädt bilder über die flickr-api 
+            // '&per_page=5' teilt bei der Anfrage an die Flickr-Api die Ergebnisse in Seiten auf
+            // '&page=1' gibt dann an welche Ergebnisseite zurückgegeben werden soll 
+            var pageId = 1
+            
+            // Lädt Bilder über die flickr-api 
             function loadImages() {
                 var requestURL = 'http://api.flickr.com/services/rest/' +
                     '?&method=flickr.photos.search' +
@@ -22,36 +23,28 @@
                     '&format=json' +
                     '&nojsoncallback=1';
 
-                //initialisiert das AJAX-Objekt (Browser Check)
-                var ajaxObject;
                 
+                var ajaxObject;
                 /*** TODO
-                *    ajaxObject abhängig von den verschiedenen Browser-Versionen intialisieren
+                *    ajaxObject abhängig von den verschiedenen Browser-Versionen instanzieren
                 ***/
 
-                // [STATUS] nach jeder Änderung der ajaxObject.readyState Variablen wird die Funktion ajaxObject.onreadystate aufgerufen  
+                // Bei jeder Änderung der .readyState Variablen wird 
+                // die Funktion .onREADYSTATEchange aufgerufen  
                 ajaxObject.onreadystatechange = function() {
                     
-                    //wenn anfrage erfolgreich verarbeitet und daten zurückgesendet worden sind
-                    if(/*** TODO : bei erfolgreicher anfrage ***/ ){
-                        
+                    if(/*** TODO : erfolgreiche anfrage ***/ ){
                         
                         /*** TODO
-                        *    responseText beinhaltet den String 
-                        *    der von der Anfrage zurückgesendet wird
+                        *    responseText in JSON-Objekt umwandeln
                         ***/
-                        var responseText;
+                        var json
 
-                        
-                        //wandelt den String responseText in ein JSON-Object um
-                        var json = formatResponseDataToJSON(responseText);
-
-                        //Setze für jedes Foto die URL aus den Daten zusammen
+                        // Setzt für jedes Foto die URL aus den Daten zusammen
                         for (var i = 0; i < json.photos.photo.length; i++) {
                             var item = json.photos.photo[i];
                             var photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg';
-                            
-                            var imgageElement = '<img src="' + photoURL + '">';
+                            var imageElement = '<img src="' + photoURL + '">';
                             
                             /*** TODO :
                                 Hier mit document.getElementById("id").innerHTML = "text"
@@ -59,12 +52,13 @@
                             ***/
                         }
 
-                        // .children[0] von ID-Controls ist <input type="button" ... > 
+                        // .children verweist auf den Array der Elemente innerhalb eines Elements
+                        // In diesem Fall verweist .children[0] auf das Element <input ... >
                         document.getElementById("controls").children[0].removeAttribute("disabled");
                         document.getElementById("status").innerHTML = "Fertig geladen";
                     }
 
-                    //wenn verbindung initialisiert wird
+                    // Wenn die Verbindung initialisiert wird
                     if (ajaxObject.readyState == 1) {
                         document.getElementById("controls").children[0].disabled = "disabled";
                         document.getElementById("status").innerHTML = "Lade...";

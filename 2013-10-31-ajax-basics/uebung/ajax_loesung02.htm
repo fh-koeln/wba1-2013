@@ -33,7 +33,6 @@
                     ajaxObject = new ActiveXObject("Microsoft.ajaxObject");
                 }
 
-                // (EventHandler) 
                 // Bei jeder Änderung der .readyState Variablen wird 
                 // die Funktion .onREADYSTATEchange aufgerufen  
                 ajaxObject.onreadystatechange = function() {
@@ -55,10 +54,8 @@
                             document.getElementById("container").innerHTML += imageElement;
                         }
                         
-                        /*** HINT 
-                        * .children verweist auf den Array der Elemente innerhalb eines Elements
-                        * In diesem Fall verweist .children[0] auf das Element <input ... >
-                        ***/
+                        // .children verweist auf den Array der Elemente innerhalb eines Elements
+                        // In diesem Fall verweist .children[0] auf das Element <input ... >
                         document.getElementById("controls").children[0].removeAttribute("disabled");
                         document.getElementById("status").innerHTML = "Fertig geladen";
                     } 
