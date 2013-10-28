@@ -6,49 +6,8 @@
     <title>Ajax Tutorial</title>
     <link rel="stylesheet" type="text/css" href="u.css">
     
-
-    
-<!--
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(function() {
-
-            //assign your api key equal to a variable
-            var apiKey = '4ef2fe2affcdd6e13218f5ddd0e2500d';
-            var searchText = 'modern architecture'
-
-            //json request to flickr
-            $.getJSON('http://api.flickr.com/services/rest/?&method=flickr.photos.search&api_key=' + apiKey + '&text=' + searchText + '&sort=relevance&per_page=55&format=json&jsoncallback=?',
-                function(data) {
-                    $.each(data.photos.photo, function(i, item) {
-
-                        //build the url of the photo in order to link to it
-                        var photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg';
-
-                        //turn the photo id into a variable
-                        var photoID = item.id;
-
-                        var imgCont = '<img class="image-container" src="' + photoURL + '">';
-
-
-                        //append the 'imgCont' variable to the document
-                        $(imgCont).appendTo('#container');
-
-
-                    });
-                });
-
-            jQuery('#loader').remove();
-
-        });
-    </script>
-
---->
     <script>
-        var apiKey = '4ef2fe2affcdd6e13218f5ddd0e2500d';
-        var searchText = 'modern architecture'
-        var pageId = 1;
-        
+        //wandelt den Response Text in ein JSON-Object um
         function formatResponseDataToJSON(data){
             var json
             try {
@@ -59,32 +18,42 @@
             }
             return json;
         }
+        
+        
+        var searchText = 'modern architecture'
+        var pageId = 1;
+        
+        //lädt bilder über die flickr-api 
+        function loadImages() {
+            var requestURL = 'http://api.flickr.com/services/rest/' +
+                '?&method=flickr.photos.search' + 
+                '&api_key=4ef2fe2affcdd6e13218f5ddd0e2500d' + 
+                '&text=' + searchText + 
+                '&page=' + pageId + 
+                '&sort=relevance&per_page=5&format=json&jsoncallback=?';
 
-        function loadXMLDoc() {
-            var requestURL = 'http://api.flickr.com/services/rest/?&method=flickr.photos.search&api_key=' + apiKey + '&text=' + searchText + '&page=' + pageId + '&sort=relevance&per_page=5&format=json&jsoncallback=?';
-
-            
-            
-            var xmlhttp;
+            //initialisiert das AJAX-Objekt
+            var ajaxObject;
             if (window.XMLHttpRequest) { 
-                // code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp = new XMLHttpRequest();
-            } else { 
-                // code for IE6, IE5
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                // variante für IE7+, Firefox, Chrome, Opera, Safari
+                ajaxObject = new XMLHttpRequest();
+            } else {  
+                // variante für IE6, IE5
+                ajaxObject = new ActiveXObject("Microsoft.ajaxObject");
             }
-            xmlhttp.onreadystatechange = function() {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    pageId++;
+            
+            //nach jeder Änderung der ajaxObject.readyState Variablen wird die Funktion ajaxObject.onreadystate aufgerufen  
+            ajaxObject.onreadystatechange = function() {
+                if (ajaxObject.readyState == 4 && ajaxObject.status == 200) {
+                   pageId++;
                     
-                    var data = xmlhttp.responseText;
+                    //ajaxObject.responseText beinhaltet den String der von der Anfrage zurückgesendet wird
+                    var data = ajaxObject.responseText;
                     
+                    //wandelt den String data in ein JSON-Object um
                     var json = formatResponseDataToJSON(data);
 
-                   // alert("success");
-                    //alert(json.photos.photo.length);
-
-                    
+                    //Setze für jedes Photo die URL aus dem Daten zusammen
                     for (var i = 0; i < json.photos.photo.length; i++) {
                         var item = json.photos.photo[i];
                         var photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg';
@@ -92,23 +61,24 @@
 
                         
                         document.getElementById("container").innerHTML += imgCont;
-                        
                     }
                     
                     document.getElementById("controls").children[0].removeAttribute("disabled");
                     document.getElementById("status").innerHTML = "Fertig geladen";
-                    
                 }
                 
-                if(xmlhttp.readyState == 1){
-                    
+                if(ajaxObject.readyState == 0){
+                    //document.getElementById("controls").children[0].removeAttribute("disabled");
+                }
+                
+                if(ajaxObject.readyState == 1){
                     document.getElementById("controls").children[0].disabled="disabled";
                     document.getElementById("status").innerHTML = "Lade...";
                 }
                 
             }
-            xmlhttp.open("GET", requestURL, true);
-            xmlhttp.send();
+            ajaxObject.open("GET", requestURL, true);
+            ajaxObject.send();
         }
     </script>
 </head>
@@ -118,7 +88,7 @@
         <!-- HIER DIE BILDER REINLADEN -->
     </div>
     <div id="controls">
-        <input type="button" value="Mehr Bilder" onClick="loadXMLDoc();" />
+        <input type="button" value="Mehr Bilder" onClick="loadImages();" />
         <div id="status"></div>
     </div>
 </body>
