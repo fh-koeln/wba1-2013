@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Ajax Tutorial</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            var searchText = 'modern architecture'
+            
+            // '&per_page=5' teilt bei der Anfrage an die Flickr-Api die Ergebnisse in Seiten auf
+            // '&page=1' gibt dann an welche Ergebnisseite zurückgegeben werden soll 
+            var pageId = 1
+            
+            // Lädt Bilder über die flickr-api 
+            function loadImages(text) {
+                if(text == undefined || text == ""){
+                    alert("Suchtext darf nicht leer sein");
+                    return;
+                }
+                
+                var requestURL = 'http://api.flickr.com/services/rest/' +
+                    '?&method=flickr.photos.search' +
+                    '&api_key=4ef2fe2affcdd6e13218f5ddd0e2500d' +
+                    '&text=' + text +
+                    '&page=' + pageId +
+                    '&per_page=5' + 
+                    '&sort=relevance' +
+                    '&format=json' +
+                    '&nojsoncallback=1';
+
+                // Instanziert das AJAX-Objekt (Browser Check)
+                var ajaxObject;
+                if (window.XMLHttpRequest) {
+                    // Variante für IE7+, Firefox, Chrome, Opera, Safari
+                    ajaxObject = new XMLHttpRequest();
+                } else {
+                    // Variante für IE6, IE5
+                    ajaxObject = new ActiveXObject("Microsoft.ajaxObject");
+                }
+
+                // Bei jeder Änderung der .readyState Variablen wird 
+                // die Funktion .onREADYSTATEchange aufgerufen  
+                ajaxObject.onreadystatechange = function() {
+                    
+                    // Wenn die Anfrage erfolgreich verarbeitet und Daten zurückgesendet worden sind          
+                    if (ajaxObject.readyState == 4 && ajaxObject.status == 200) {
+                        pageId++;
+
+                        // Wandelt den ResponseText in ein JSON-Objekt um
+                        var json = JSON.parse(ajaxObject.responseText);
+
+                        // Setzt für jedes Foto die URL aus den Daten zusammen
+                        for (var i = 0; i < json.photos.photo.length; i++) {
+                            var item = json.photos.photo[i];
+                            var photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg';
+                            var imageElement = '<img src="' + photoURL + '">';
+
+                            // Fügt jedes Foto an den Inhalt des <div> Elements mit der ID Container an
+                            document.getElementById("container").innerHTML += imageElement;
+                        }
+                        
+                        // .children verweist auf den Array der Elemente innerhalb eines Elements
+                        // In diesem Fall verweist .children[0] auf das Element <input ... >
+                        document.getElementById("controls").children[0].removeAttribute("disabled");
+                        document.getElementById("status").innerHTML = "Fertig geladen";
+                    } 
+
+                    // Wenn die Verbindung initialisiert wird
+                    if (ajaxObject.readyState == 1) {
+                        document.getElementById("controls").children[0].disabled = "disabled";
+                        document.getElementById("status").innerHTML = "Lade...";
+                    }
+                }
+                ajaxObject.open("GET", requestURL, true);
+                ajaxObject.send();
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div id="container">
+            <!-- HIER DIE BILDER REINLADEN -->
+        </div>
+        <div id="controls">
+            <form name="myform" action="javascript:loadImages(this.form.searchtext.value);">
+                <input type="text" name="searchtext" value="">
+                <input type="submit" name="button" value="Mehr Bilder" onClick="loadImages(this.form.searchtext.value);">
+            </form>
+            <div id="status"></div>
+        </div>
+    </body>
+
+</html>
