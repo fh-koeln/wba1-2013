@@ -4,24 +4,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Ajax Tutorial</title>
-        <link rel="stylesheet" type="text/css" href="u.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <script>
-            // [INHALT] wandelt den Response Text in ein JSON-Object um
-            function formatResponseresponseTextToJSON(responseText) {
-                var json
-                try {
-                    responseText = responseText.substring(
-                        responseText.indexOf('(') + 1, 
-                        responseText.lastIndexOf(')')
-                    );
-                    json = JSON && JSON.parse(responseText);
-                } catch (e) {
-                    alert("Parsing error:" + e);
-                }
-                return json;
-            }
-
-
             var searchText = 'modern architecture'
             var pageId = 1;
 
@@ -33,7 +17,10 @@
                     '&api_key=4ef2fe2affcdd6e13218f5ddd0e2500d' +
                     '&text=' + searchText +
                     '&page=' + pageId +
-                    '&sort=relevance&per_page=5&format=json&jsoncallback=?';
+                    '&per_page=5' + 
+                    '&sort=relevance' +
+                    '&format=json' +
+                    '&nojsoncallback=1';
 
                 //initialisiert das AJAX-Objekt (Browser Check)
                 var ajaxObject;
@@ -59,7 +46,7 @@
                         //wandelt den String responseText in ein JSON-Object um
                         var json = formatResponseDataToJSON(responseText);
 
-                        //Setze für jedes Photo die URL aus dem Daten zusammen
+                        //Setze für jedes Foto die URL aus den Daten zusammen
                         for (var i = 0; i < json.photos.photo.length; i++) {
                             var item = json.photos.photo[i];
                             var photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg';
