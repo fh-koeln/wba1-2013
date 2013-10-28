@@ -1,100 +1,95 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Ajax Tutorial</title>
-    <link rel="stylesheet" type="text/css" href="u.css">
     
-    <script>
-
-// [INHALT] wandelt den Response Text in ein JSON-Object um
-        function formatResponseDataToJSON(data){
-            var json
-            try {
-                data = data.substring(data.indexOf('(') + 1, data.lastIndexOf(')'));
-                json = JSON && JSON.parse(data);
-            } catch (e) {
-                alert("Parsing error:" + e);
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Ajax Tutorial</title>
+        <link rel="stylesheet" type="text/css" href="u.css">
+        <script>
+            // [INHALT] wandelt den Response Text in ein JSON-Object um
+            function formatResponseDataToJSON(data) {
+                var json
+                try {
+                    data = data.substring(data.indexOf('(') + 1, data.lastIndexOf(')'));
+                    json = JSON && JSON.parse(data);
+                } catch (e) {
+                    alert("Parsing error:" + e);
+                }
+                return json;
             }
-            return json;
-        }
-        
-        
-        var searchText = 'modern architecture'
-        var pageId = 1;
-        
-// lädt bilder über die flickr-api 
-        function loadImages() {
-            var requestURL = 'http://api.flickr.com/services/rest/' +
-                '?&method=flickr.photos.search' + 
-                '&api_key=4ef2fe2affcdd6e13218f5ddd0e2500d' + 
-                '&text=' + searchText + 
-                '&page=' + pageId + 
-                '&sort=relevance&per_page=5&format=json&jsoncallback=?';
 
-//initialisiert das AJAX-Objekt (Browser Check)
-            var ajaxObject;
-            if (window.XMLHttpRequest) { 
-                // variante für IE7+, Firefox, Chrome, Opera, Safari
-                ajaxObject = new XMLHttpRequest();
-            } else {  
-                // variante für IE6, IE5
-                ajaxObject = new ActiveXObject("Microsoft.ajaxObject");
-            }
+
+            var searchText = 'modern architecture'
+            var pageId = 1;
+
             
-// [STATUS] nach jeder Änderung der ajaxObject.readyState Variablen wird die Funktion ajaxObject.onreadystate aufgerufen  
-            ajaxObject.onreadystatechange = function() {
-    //Wenn erledigt            
-        if (ajaxObject.readyState == 4 && ajaxObject.status == 200) {
-                   pageId++;
-                    
-                    //ajaxObject.responseText beinhaltet den String der von der Anfrage zurückgesendet wird
-                    var data = ajaxObject.responseText;
-                    
-                    //wandelt den String data in ein JSON-Object um
-                    var json = formatResponseDataToJSON(data);
+            // lädt bilder über die flickr-api 
+            function loadImages() {
+                var requestURL = 'http://api.flickr.com/services/rest/' +
+                    '?&method=flickr.photos.search' +
+                    '&api_key=4ef2fe2affcdd6e13218f5ddd0e2500d' +
+                    '&text=' + searchText +
+                    '&page=' + pageId +
+                    '&sort=relevance&per_page=5&format=json&jsoncallback=?';
 
-                    //Setze für jedes Photo die URL aus dem Daten zusammen
-                    for (var i = 0; i < json.photos.photo.length; i++) {
-                        var item = json.photos.photo[i];
-                        var photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg';
-                        var imgCont = '<img src="' + photoURL + '">';
+                //initialisiert das AJAX-Objekt (Browser Check)
+                var ajaxObject;
+                if (window.XMLHttpRequest) {
+                    // variante für IE7+, Firefox, Chrome, Opera, Safari
+                    ajaxObject = new XMLHttpRequest();
+                } else {
+                    // variante für IE6, IE5
+                    ajaxObject = new ActiveXObject("Microsoft.ajaxObject");
+                }
 
-                        
-                        document.getElementById("container").innerHTML += imgCont;
+                // [STATUS] nach jeder Änderung der ajaxObject.readyState Variablen wird die Funktion ajaxObject.onreadystate aufgerufen  
+                ajaxObject.onreadystatechange = function() {
+                    
+                    //wenn anfrage erfolgreich verarbeitet und daten zurückgesendet worden sind          
+                    if (ajaxObject.readyState == 4 && ajaxObject.status == 200) {
+                        pageId++;
+
+                        //ajaxObject.responseText beinhaltet den String der von der Anfrage zurückgesendet wird
+                        var data = ajaxObject.responseText;
+
+                        //wandelt den String data in ein JSON-Object um
+                        var json = formatResponseDataToJSON(data);
+
+                        //Setze für jedes Photo die URL aus dem Daten zusammen
+                        for (var i = 0; i < json.photos.photo.length; i++) {
+                            var item = json.photos.photo[i];
+                            var photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg';
+                            var imgCont = '<img src="' + photoURL + '">';
+
+
+                            document.getElementById("container").innerHTML += imgCont;
+                        }
+
+                        // .children[0] von ID-Controls ist <input type="button" ... > 
+                        document.getElementById("controls").children[0].removeAttribute("disabled");
+                        document.getElementById("status").innerHTML = "Fertig geladen";
+                    } 
+
+                    //wenn verbindung initialisiert wird
+                    if (ajaxObject.readyState == 1) {
+                        document.getElementById("controls").children[0].disabled = "disabled";
+                        document.getElementById("status").innerHTML = "Lade...";
                     }
-                    
-    // Children 0 von ID-Controls ist <input type="button" ... > 
-                    document.getElementById("controls").children[0].removeAttribute("disabled");
-                    document.getElementById("status").innerHTML = "Fertig geladen";
                 }
-                
-                if(ajaxObject.readyState == 0){
-                    //document.getElementById("controls").children[0].removeAttribute("disabled");
-                }
-                
-                if(ajaxObject.readyState == 1){
-                    document.getElementById("controls").children[0].disabled="disabled";
-                    document.getElementById("status").innerHTML = "Lade...";
-                }
-                
+                ajaxObject.open("GET", requestURL, true);
+                ajaxObject.send();
             }
-            ajaxObject.open("GET", requestURL, true);
-            ajaxObject.send();
-        }
-    </script>
-</head>
-
-<body>
-    <div id="container">
-        <!-- HIER DIE BILDER REINLADEN -->
-    </div>
-    <div id="controls">
-        <input type="button" value="Mehr Bilder" onClick="loadImages();" />
-        <div id="status"></div>
-    </div>
-</body>
-
+        </script>
+    </head>
+    
+    <body>
+        <div id="container">
+            <!-- HIER DIE BILDER REINLADEN -->
+        </div>
+        <div id="controls">
+            <input type="button" value="Mehr Bilder" onClick="loadImages();" />
+            <div id="status"></div>
+        </div>
+    </body>
 
 </html>
