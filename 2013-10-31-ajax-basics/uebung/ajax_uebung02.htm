@@ -7,11 +7,14 @@
         <link rel="stylesheet" type="text/css" href="u.css">
         <script>
             // [INHALT] wandelt den Response Text in ein JSON-Object um
-            function formatResponseDataToJSON(data) {
+            function formatResponseresponseTextToJSON(responseText) {
                 var json
                 try {
-                    data = data.substring(data.indexOf('(') + 1, data.lastIndexOf(')'));
-                    json = JSON && JSON.parse(data);
+                    responseText = responseText.substring(
+                        responseText.indexOf('(') + 1, 
+                        responseText.lastIndexOf(')')
+                    );
+                    json = JSON && JSON.parse(responseText);
                 } catch (e) {
                     alert("Parsing error:" + e);
                 }
@@ -34,41 +37,45 @@
 
                 //initialisiert das AJAX-Objekt (Browser Check)
                 var ajaxObject;
-                if (window.XMLHttpRequest) {
-                    // variante für IE7+, Firefox, Chrome, Opera, Safari
-                    ajaxObject = new XMLHttpRequest();
-                } else {
-                    // variante für IE6, IE5
-                    ajaxObject = new ActiveXObject("Microsoft.ajaxObject");
-                }
+                
+                /*** TODO
+                *    ajaxObject abhängig von den verschiedenen Browser-Versionen intialisieren
+                ***/
 
                 // [STATUS] nach jeder Änderung der ajaxObject.readyState Variablen wird die Funktion ajaxObject.onreadystate aufgerufen  
                 ajaxObject.onreadystatechange = function() {
                     
-                    //wenn anfrage erfolgreich verarbeitet und daten zurückgesendet worden sind          
-                    if (ajaxObject.readyState == 4 && ajaxObject.status == 200) {
-                        pageId++;
+                    //wenn anfrage erfolgreich verarbeitet und daten zurückgesendet worden sind
+                    if(/*** TODO : bei erfolgreicher anfrage ***/ ){
+                        
+                        
+                        /*** TODO
+                        *    responseText beinhaltet den String 
+                        *    der von der Anfrage zurückgesendet wird
+                        ***/
+                        var responseText;
 
-                        //ajaxObject.responseText beinhaltet den String der von der Anfrage zurückgesendet wird
-                        var data = ajaxObject.responseText;
-
-                        //wandelt den String data in ein JSON-Object um
-                        var json = formatResponseDataToJSON(data);
+                        
+                        //wandelt den String responseText in ein JSON-Object um
+                        var json = formatResponseDataToJSON(responseText);
 
                         //Setze für jedes Photo die URL aus dem Daten zusammen
                         for (var i = 0; i < json.photos.photo.length; i++) {
                             var item = json.photos.photo[i];
                             var photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg';
-                            var imgCont = '<img src="' + photoURL + '">';
-
-
-                            document.getElementById("container").innerHTML += imgCont;
+                            
+                            var imgageElement = '<img src="' + photoURL + '">';
+                            
+                            /*** TODO :
+                                Hier mit document.getElementById("id").innerHTML = "text"
+                                die Bilder ins <div> element mit der Id container einfügen
+                            ***/
                         }
 
                         // .children[0] von ID-Controls ist <input type="button" ... > 
                         document.getElementById("controls").children[0].removeAttribute("disabled");
                         document.getElementById("status").innerHTML = "Fertig geladen";
-                    } 
+                    }
 
                     //wenn verbindung initialisiert wird
                     if (ajaxObject.readyState == 1) {
@@ -76,7 +83,10 @@
                         document.getElementById("status").innerHTML = "Lade...";
                     }
                 }
-                ajaxObject.open("GET", requestURL, true);
+                
+                /*** TODO
+                * Art der Anfrage festlegen
+                ***/
                 ajaxObject.send();
             }
         </script>
