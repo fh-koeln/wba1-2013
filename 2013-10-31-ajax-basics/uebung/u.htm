@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" href="u.css">
     
     <script>
-        //wandelt den Response Text in ein JSON-Object um
+
+// [INHALT] wandelt den Response Text in ein JSON-Object um
         function formatResponseDataToJSON(data){
             var json
             try {
@@ -23,7 +24,7 @@
         var searchText = 'modern architecture'
         var pageId = 1;
         
-        //lädt bilder über die flickr-api 
+// lädt bilder über die flickr-api 
         function loadImages() {
             var requestURL = 'http://api.flickr.com/services/rest/' +
                 '?&method=flickr.photos.search' + 
@@ -32,7 +33,7 @@
                 '&page=' + pageId + 
                 '&sort=relevance&per_page=5&format=json&jsoncallback=?';
 
-            //initialisiert das AJAX-Objekt
+//initialisiert das AJAX-Objekt (Browser Check)
             var ajaxObject;
             if (window.XMLHttpRequest) { 
                 // variante für IE7+, Firefox, Chrome, Opera, Safari
@@ -42,9 +43,10 @@
                 ajaxObject = new ActiveXObject("Microsoft.ajaxObject");
             }
             
-            //nach jeder Änderung der ajaxObject.readyState Variablen wird die Funktion ajaxObject.onreadystate aufgerufen  
+// [STATUS] nach jeder Änderung der ajaxObject.readyState Variablen wird die Funktion ajaxObject.onreadystate aufgerufen  
             ajaxObject.onreadystatechange = function() {
-                if (ajaxObject.readyState == 4 && ajaxObject.status == 200) {
+    //Wenn erledigt            
+        if (ajaxObject.readyState == 4 && ajaxObject.status == 200) {
                    pageId++;
                     
                     //ajaxObject.responseText beinhaltet den String der von der Anfrage zurückgesendet wird
@@ -63,6 +65,7 @@
                         document.getElementById("container").innerHTML += imgCont;
                     }
                     
+    // Children 0 von ID-Controls ist <input type="button" ... > 
                     document.getElementById("controls").children[0].removeAttribute("disabled");
                     document.getElementById("status").innerHTML = "Fertig geladen";
                 }
