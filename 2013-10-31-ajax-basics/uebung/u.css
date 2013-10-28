@@ -1,0 +1,31 @@
+body,
+html, input {
+    font:12px arial;
+    color: #fff;
+    background: #000;
+}
+
+#container img {
+    height: 100px;
+    width: 150px;
+    margin: 10px;
+    background-color: #666;
+    border: 2px solid #fff;
+}
+
+#controls {
+    text-align:center;
+}
+
+#status {
+    margin-top:5px;
+}
+
+input {
+    background-color:#333;
+    border : 1px solid #fff;
+}
+
+input:disabled {
+    color: #777;
+}
