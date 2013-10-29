@@ -106,10 +106,10 @@
 				    <section>
                         <h1>Was sind <strong>Frameworks?</strong></h1>
                         <blockquote class="fragment">
-                            Standardisierte Codebibliothek von zusammengefassten Pakets mit Files und Ordnern</blockquote>
+                            Standardisierte Codebibliothek von zusammengefassten Packets mit Files und Ordnern</blockquote>
 
                             <li class="fragment">Fundament für <strong>Enwicklung und Gestaltung</strong> einer Website</li>
-                            <li class="fragment">Sollen eine einheitliche Struktur für Developers bilden</li>
+                            <li class="fragment">Sollen eine einheitliche Struktur für Entwickler bilden</li>
                             <li class="fragment">Man muss nicht komplett neuanfangen</li>
                             <li class="fragment">Somit kann man immer wieder auf Codes zurückgreifen</li>
                         
@@ -194,186 +194,258 @@
                     </section>
                     
                     <section>
-                        <h2>Unterschiede <strong>und</strong> Benutzung</h2>
-                        <p>blaaablablaaa</p>
-                        <p style="font-size: 25px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S<strong>A</strong>SS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>S</strong>CSS</p>
+                        <h2>Unterschiede <strong>in der</strong> Benutzung</h2>
+                        <div style="float: left; width: 45%">
+                            <p style="font-size: 25px">S<strong>A</strong>SS</p>
                         
-                        <pre><code>
-                                                        $listet: green;
-                                                        $inline: blue;
-                                                        $noNav: yellow;
-                                                        $unlistet: red;
-                                                        $white: white;
-                                                        $black: black;
+                        <pre><code style="height: 500px">$big: 280px
+$small: 50px
 
+*
+    margin: 0px
+    padding: 0px
 
-* {                                                     * { 
-  margin: 0px;                                              margin: 0px;
-  padding: 0px;                                             padding: 0px;
-}                                                       }
-                                                        
-body {                                                  body{                                 
-  background-color: black;                                  background-color: $black;
-  color: yellow;                                            color: $noNav;
-}                                                       }
-                                                        
-nav {                                                   nav {
-  margin-top: 50px;                                         margin-top: 50px;
-  background-color: white;                                  background-color: $white;
-  color: red;                                               color: $unlisted;
-}                                                           
-                                                            ul {
-nav ul {                                                        color:$listet;
-  color: green;                                             }
+body
+    background-color: black
+
+.big
+    height: $big
+    width: $big
+
+.little
+    height: $small
+    width: $small
+                    </code></pre></div>
+                        <div style="margin-left: 70px; float: left; width: 45%">
+                            <p style="font-size: 25px"><strong>S</strong>CSS</p>
+                        
+                        <pre><code style="height: 500px">$big : 280px;
+$small : 50px;
+
+*{
+    margin: 0px;
+    padding: 0px;
 }
-nav li {                                                    li {
-  color: blue;                                                  color:$inline;
-  display: inline;                                              display: inline;
-}                                                           }
-                                                        }
-                    </code></pre>     
-                    <p>textextext</p>
+
+body{
+    background-color: black;
+}
+
+.big {
+    height: $big;
+    width: $big;
+}
+
+.little {
+    height: $small;
+    width: $small;
+}
+                    </code></pre></div>
                         
                     </section>
                 </section>
                 
-<!--------------------- SASS / SCSS Benutzung ------------------->                
-            <section>
+<!--------------------- SASS / SCSS Benutzung ------------------->
+<!--------------------- Variablen ------------------->                 
+            <section><section>
                 <h2>Variablen</h2>
-                    <p>Vereinfacht das Verändern von z.B. Farben, Font-Styles oder anderen CSS Werten. Mit dem <code>$-Zeichen</code> wird eine Variable deklariert und aufgerufen.</p>
-                        <h3 style="font-size: 25px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CSS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>S</strong>CSS</h3>
-                <pre><code>
-                                                        $edge : ridge;
-                                                        
-                                                        *{
-                                                            margin: 0px;
-                                                            padding: 0px;
-                                                        }
-                                                        
-                                                        body{
-                                                            background-color: black;
-                                                        }
-                                                        
-                                                        .big {
-                                                            height: $big;
-                                                            width: $big;
-                                                        }
-                                                        
-                                                        .little {
-                                                            height: $small;
-                                                            width: $small;
-                                                        }
-                                                        
-                                                        .red {
-                                                            border: $border $edge #be1622;
-                                                            background-color: #e6332a;
-                                                        }
-                                                        
-                                                        .blue {
-                                                            border: $border $edge #1d71b8;
-                                                            background-color: #36a9e1;
-                                                        }
-                                                        
-                                                        .green {
-                                                            border: $border $edge #008d36;
-                                                            background-color: #009640;
-                                                        }
-                                                        
-                                                        .yellow {
-                                                            border: $border $edge #e94e1b;
-                                                            background-color: #f39200;
-                                                        }
-                                                        .flexibel {
-                                                            
-                                                            position:absolute;
-                                                            left: 50%;
-                                                            
-                                                        }
-          </code></pre>
-                    <p>textextext</p>
+                    <p>Vereinfacht das Verändern von z.B. Farben, Font-Styles oder anderen CSS Werten.<br>
+                        Mit dem <code>$-Zeichen</code> wird eine Variable deklariert und aufgerufen.</p>
+                                                <div style="float: left; width: 45%">
+                            <p style="font-size: 25px"><strong>CSS</strong></p>
+                        
+                        <pre><code style="height: 500px">* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: black;
+}
+
+.big {
+  height: 280px;
+  width: 280px;
+}
+
+.little {
+  height: 50px;
+  width: 50px;
+}
+
+.red {
+  border: 5px ridge #be1622;
+  background-color: #e6332a;
+}
+
+.blue {
+  border: 5px ridge #1d71b8;
+  background-color: #36a9e1;
+}
+
+.green {
+  border: 5px ridge #008d36;
+  background-color: #009640;
+}
+
+.yellow {
+  border: 5px ridge #e94e1b;
+  background-color: #f39200;
+}
+
+.flexibel {
+  position: absolute;
+  left: 50%;
+}
+                    </code></pre></div>
+                        <div style="margin-left: 70px; float: left; width: 45%">
+                            <p style="font-size: 25px"><strong>S</strong>CSS</p>
+                        
+                        <pre><code style="height: 500px">$border : 5px;
+$big : 280px;
+$small : 50px;
+$edge : ridge;
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: black;
+}
+
+.big {
+    height: $big;
+    width: $big;
+}
+
+.little {
+    height: $small;
+    width: $small;
+}
+
+.red {
+    border: $border $edge #be1622;
+    background-color: #e6332a;
+}
+
+.blue {
+    border: $border $edge #1d71b8;
+    background-color: #36a9e1;
+}
+
+.green {
+    border: $border $edge #008d36;
+    background-color: #009640;
+}
+
+.yellow {
+    border: $border $edge #e94e1b;
+    background-color: #f39200;
+}
+.flexibel {
+    
+    position:absolute;
+    left: 50%;
+    
+}
+                    </code></pre></div>
              </section>
-            
-            <section>
+               <section>
+                <img src="images/variablen.png">                   
+                </section></section>
+<!--------------------- Nesting ------------------->             
+            <section><section>
                 <h2>Nesting</h2>
-                    <p>Nesting ermöglicht es eine visuelle Hierarchie ähnlich wie bei HTML in CSS zu erstellen. Es erleichtert das Lesen und Organisieren der eigenen CSS.</p>
-                                                    <h3 style="font-size: 25px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CSS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>S</strong>CSS</h3>
-                <pre><code>
-                                                        $listet: green;
-                                                        $inline: blue;
-                                                        $noNav: yellow;
-                                                        $unlistet: red;
-                                                        $white: white;
-                                                        $black: black;
-
-
-* {                                                     * { 
-  margin: 0px;                                              margin: 0px;
-  padding: 0px;                                             padding: 0px;
-}                                                       }
-                                                        
-body {                                                  body{                                 
-  background-color: black;                                  background-color: $black;
-  color: yellow;                                            color: $noNav;
-}                                                       }
-                                                        
-nav {                                                   nav {
-  margin-top: 50px;                                         margin-top: 50px;
-  background-color: white;                                  background-color: $white;
-  color: red;                                               color: $unlisted;
-}                                                           
-                                                            ul {
-nav ul {                                                        color:$listet;
-  color: green;                                             }
+                    <p>Nesting ermöglicht es eine visuelle Hierarchie ähnlich wie bei HTML in CSS zu erstellen.<br>
+                        Es erleichtert das Lesen und Organisieren der eigenen CSS.</p>
+                <div style="float: left; width: 45%">
+                            <p style="font-size: 25px"><strong>CSS</strong></p>
+                        
+                        <pre><code style="height: 500px">* {
+  margin: 0px;
+  padding: 0px;
 }
-nav li {                                                    li {
-  color: blue;                                                  color:$inline;
-  display: inline;                                              display: inline;
-}                                                           }
-                                                        }
-                    </code></pre>     
-                    <p>textextext</p>
+
+body {
+  background-color: black;
+  color: yellow;
+}
+
+nav {
+  margin-top: 50px;
+  background-color: white;
+  color: red;
+}
+nav ul {
+  color: green;
+}
+nav li {
+  color: blue;
+  display: inline;
+}
+</code></pre></div>
+                        <div style="margin-left: 70px; float: left; width: 45%">
+                            <p style="font-size: 25px"><strong>S</strong>CSS</p>
+                        
+                        <pre><code style="height: 500px">$listet: green;
+$inline: blue;
+$noNav: yellow;
+$unlistet: red;
+$white: white;
+$black: black;
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: $black;
+    color: $noNav;
+    }
+nav {
+    margin-top: 50px;
+    background-color: $white;
+    color: $unlistet;
+  ul {
+      color:$listet;
+  }
+
+  li { 
+      color:$inline;
+      display: inline;
+}
+}
+</code></pre></div>
+             </section>
+               <section>
+                <img src="images/nesting.png">                   
                 </section>
-                 
+                </section>
+<!--------------------- Mixins ------------------->                  
             
-            <section>
+            <section><section>
                 <h2>Mixin</h2>
-                <p>Mit Mixin kann man eigene Vorlagen definieren und später in der eigenen Datei beliebig oft aufrufen, ohne sie jedes mal einzeln zu ändern.</p>
-                                                                    <h3 style="font-size: 25px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CSS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>S</strong>CSS</h3>
-                <pre><code>
-                                                        $listet: green;
-                                                        $inline: blue;
-                                                        $noNav: yellow;
-                                                        $unlistet: red;
-                                                        $white: white;
-                                                        $black: black;
-
-
-* {                                                     * { 
-  margin: 0px;                                              margin: 0px;
-  padding: 0px;                                             padding: 0px;
-}                                                       }
-                                                        
-body {                                                  body{                                 
-  background-color: black;                                  background-color: $black;
-  color: yellow;                                            color: $noNav;
-}                                                       }
-                                                        
-nav {                                                   nav {
-  margin-top: 50px;                                         margin-top: 50px;
-  background-color: white;                                  background-color: $white;
-  color: red;                                               color: $unlisted;
-}                                                           
-                                                            ul {
-nav ul {                                                        color:$listet;
-  color: green;                                             }
-}
-nav li {                                                    li {
-  color: blue;                                                  color:$inline;
-  display: inline;                                              display: inline;
-}                                                           }
-                                                        }
-                    </code></pre>     
-                    <p>textextext</p>
+                <p>Mit Mixin kann man eigene Vorlagen definieren und später in der eigenen Datei<br>
+                    beliebig oft aufrufen, ohne sie jedes mal einzeln zu ändern.</p>
+                <div style="float: left; width: 45%">
+                            <p style="font-size: 25px"><strong>CSS</strong></p>
+                        
+                        <pre><code style="height: 500px">
+                    </code></pre></div>
+                        <div style="margin-left: 70px; float: left; width: 45%">
+                            <p style="font-size: 25px"><strong>S</strong>CSS</p>
+                        
+                        <pre><code style="height: 500px">
+                    </code></pre></div>
+             </section>
+               <section>
+                <img src="images/variablen.png">                   
+                </section>
              </section>
                 
 <!--------------------- Ende der Präsentation ------------------->
