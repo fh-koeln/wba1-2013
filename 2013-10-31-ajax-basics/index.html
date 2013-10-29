@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
 
     <!-- For syntax highlighting -->
-    <link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+    <link rel="stylesheet" href="../revealjs-framework/lib/css/monokai.css">
 
     <!-- If the query includes 'print-pdf', use the PDF print sheet -->
     <script>
@@ -30,6 +30,8 @@
     <!--[if lt IE 9]>
 		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
 		<![endif]-->
+    <style>
+    </style>
 </head>
 
 <body>
@@ -115,8 +117,7 @@
             <section>
                 <!-- Manipulation /-Positionierung -->
                 <section>
-                    <h2>
-                        <strong>2.</strong> Beispiele</h2>
+                    <h2><strong>2.</strong> Beispiele</h2>
                    
                     <a href="http://www.google.de"><h4>Google AutoComplete</h4></a>
                     <img src="bilder/google.jpg">
@@ -137,114 +138,129 @@
             <section>
                 <!-- Pseudoklassen -->
                 <section>
-                    <h2>3.
-                        <strong>Pseudoklassen</strong>&
-                        <strong>Pseudoelemente</strong>
+                    <h2>3. XMLHttpRequest API
                     </h2>
+                    <h3><strong>Objekt-Instanzierung</strong></h3>
                     <ul>
-                        <li class="fragment">beschreiben den Zustand oder eine Eigenschaft eines Elements</li>
-                        <br>
-                        <li class="fragment">Syntax für Pseudoklassen
+                        <li>Einleitungsblub</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>
+                        <strong>3.1</strong> Objekt-Instanzierung</h2>
+                     <ul>
+                        <li class="fragment">Instanzierung für alle modernen Browser
                             <pre>
-                                <code>selektor:pseudoklasse { ... }
-                                </code>
+                                <code>var ajaxObject = new XMLHttpRequest();</code>
                             </pre>
                         </li>
-                        <li class="fragment">Syntax für Pseudoelemente
+                        <br>
+                        <li class="fragment">Instanzierung unter Internet Explorer 5 und 6
                             <pre>
-                                <code>selektor::pseudoelement { ... }
-                                </code>
+                                <code>var ajaxObject = new ActiveXObject("Microsoft.XMLHTTP");</code>
                             </pre>
                         </li>
                         <br>
-                        <h3 class="fragment">Wozu braucht man Pseudoklassen
-                            <strong>&</strong>-elemente nun?</h3>
-                    </ul>
-
-
-                </section>
-                <section>
-                    <h2>
-                        <strong>3.1</strong>Pseudoelemente</h2>
-                    <ul>
-                        <li class="fragment">dienen der Stilisierung der im Markup enthaltenen Elemente durch
-                            <strong>"Pseudoelemente"</strong>
+                        <li class="fragment">Überprüfen ob das XMLHttpRequest Objekt existiert
+                            
+<pre>
+<code>var ajaxObject;
+if (window.XMLHttpRequest) {
+    ajaxObject = new XMLHttpRequest();
+} else {
+    ajaxObject = new ActiveXObject("Microsoft.XMLHTTP");
+}
+</code>
+</pre>
                         </li>
-                        <li class="fragment">
-                            <strong>::first-line</strong>
-                            <br>erste Textzeile des Elements erhält CSS-Eigenschaften</li>
-                        <li class="fragment">
-                            <strong>::first-letter</strong>
-                            <br>erstes Zeichen des Textes erhält CSS-Eigenschaften</li>
-                        <li class="fragment">
-                            <strong>::before</strong>
-                            <br>fügt Inhalt vor Element ein</li>
-                        <li class="fragment">
-                            <strong>::after</strong>
-                            <br>fügt Inhalt nach Element ein</li>
                     </ul>
                 </section>
+                
+                
+                    
                 <section>
                     <h2>
-                        <strong>3.2</strong>Pseudoklassen für Verweise
-                        <br>
-                        <span class="fragment">
-                            <strong>aber auch andere Elemente</strong>
-                        </span>
+                        <strong>3.2</strong> Das Event
+                        
                     </h2>
+                    <h3 class="fragment"><strong>.readyState</strong></h3>
                     <ul>
-                        <li class="fragment">
-                            <strong>:link</strong>
-                            <br>Für Verweise zu noch nicht besuchten Seiten</li>
-                        <li class="fragment">
-                            <strong>:visited</strong>
-                            <br>Für Verweise zu bereits besuchten Seiten</li>
-                        <li class="fragment">
-                            <strong>:focus</strong>
-                            <br>Für Elemente, die den Fokus erhalten, z.B. durch "Durchsteppen" mit der Tabulator-Taste</li>
-                        <li class="fragment">
-                            <strong>:hover</strong>
-                            <br>Für Elemente, während der Anwender mit der Maus darüber fährt</li>
-                        <li class="fragment">
-                            <strong>:active</strong>
-                            <br>Für gerade angeklickte Elemente</li>
+                        <li class="fragment"> 
+                            
+                        </li>
+                    </ul>
+                    
+                </section>
+                
+                
+                                <section>
+                    <h2>
+                        <strong>3.3</strong> Der EventHandler
+                        
+                    </h2>
+                    <h3 class="fragment"><strong>.onReadyStateChange = function(){ ... }</strong></h3>
+                    <ul>
+                        <li class="fragment"> 
+                            <strong>method</strong> - HTTP-Methode mit der die Anfrage gesendet wird
+                            <br>wichtigsten Möglichkeiten sind <strong>"GET"</strong> oder <strong>"POST"</strong>
+                        </li>
+                    </ul>
+                    <br><br>
+
+                </section>
+                
+                
+                <section>
+                    <h2>
+                        <strong>3.4</strong> Anfrage initialisieren
+                        
+                    </h2>
+                    <h3 class="fragment"><strong>.open(</strong>method, url, <strong>[async, username, password])</strong></h3>
+                    <ul>
+                        <li class="fragment"> 
+                            <strong>method</strong> - HTTP-Methode mit der die Anfrage gesendet wird
+                            <br>wichtigsten Möglichkeiten sind <strong>"GET"</strong> oder <strong>"POST"</strong>
+                        </li>
                         <br>
-                        <a href="http://de.selfhtml.org/css/eigenschaften/anzeige/pseudo_links.htm">Beispiel</a>
+                        <li class="fragment"> 
+                            <strong>url</strong> - Adresse an die die Anfrage gesendet wird
+                            <br>kann auch relativ auf den selben Server verweisen
+                        </li>
+                        <br>
+                        <li class="fragment"> 
+                            <strong>asnyc</strong> - Gibt an ob die Anfrage asynchron oder nicht durchgeführt wird
+                            <br>Standardwert ist <strong>true</strong> 
+                        </li>
                     </ul>
+                    <br><br>
+                    <h3 class="fragment"><strong>Beispiel</strong></h3>
+                    <pre class="fragment">
+<code>ajaxObject.open("GET", "zuLadendeDatei.htm", true);
+</code>
+                    </pre>
+                    
                 </section>
+                
+                                
                 <section>
                     <h2>
-                        <strong>3.3</strong>weitere
-                        <strong>wichtige</strong>Pseudoklassen</h2>
-                    <ul>
-                        <li class="fragment">
-                            <strong>:</strong>f
-                            <strong>irst-child</strong>
-                            <br>spricht das
-                            <strong>erste</strong>Element an</li>
-                        <li class="fragment">
-                            <strong>:last-chil</strong>d
-                            <br>spricht das
-                            <strong>letzte</strong>Element an</li>
-                        <li class="fragment">
-                            <strong>:n</strong>t
-                            <strong>h-child(</strong>n-te(s) Element(e)
-                            <strong>)</strong>
-                            <br>spricht n-te(s) Element(e) an</li>
+                        <strong>3.5</strong> Anfrage absenden
+                        
+                    </h2>
+                    <h3 class="fragment"><strong>.send()</strong></h3>
+                    <ul>    
+                        <li class="fragment"> 
+                            Wenn die Anfrage <strong>synchron</strong> initialisiert wird (asnyc==false)
+                            <br>führt Javascript den auf diese Methode <strong>folgenden Befehl</strong> erst dann aus,
+                            <br>wenn die Anfrage komplett abgearbeitet worden ist.  
+                        </li>
+
                     </ul>
-                    <br>
-                    <img src="images\first_child.jpg" alt="first_child" width="30%">
-                    <img src="images\last_child.jpg" alt="last_child" width="30%">
-                    <img src="images\nth_child.jpg" alt="nth_child" width="30%">
                 </section>
-                <section>
-                    <h2>
-                        <strong>3.4</strong>Weitere Pseudoklassen</h2>
-                    <p>
-                        Link:
-                        <a href="http://reference.sitepoint.com/css/css3psuedoclasses">Weitere Pseudoklassen, insbesondere von CSS3</a>
-                    </p>
-                </section>
+                
+                
+                
             </section>
 
             <!------------------------------------------------------------------------------------------------------------------------------------>

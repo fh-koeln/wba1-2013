@@ -56,6 +56,13 @@ XMLHttpRequest
 
 
 
+XMLHttpRequest Objekt
+
+- 
+
+
+
+
 Nachteile
 
 - JavaScript notwendig
