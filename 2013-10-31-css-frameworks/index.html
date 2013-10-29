@@ -51,10 +51,10 @@
 
 					<p style="margin-top:10%">Hannah Schinz<br>
 					Nico Sebastian Schoeneberg<br>
-					Marija </p>
+					Marija Kandic</p>
 				</section>
 
-				<section>
+				<!--<section>
 					<section>
 						<h2>Backgrounds</h2>
 					</section>
@@ -77,235 +77,225 @@
 &lt;/section&gt;</code></pre>
 					</section>
 
-				</section>
+				</section>-->
 
-				<section>
-					<h2>Fragments</h2>
-					<p class="fragment grow">grow</p>
+<!--------------------- Inhaltsangabe -------------------->
+                
+                <section>
+                    <h2>Aufbau der <strong>Präsentation</strong></h2>
+                    <ul style="float:left">
+                    <li>Was sind Frameworks?</li>
+                    <li>Welche Frameworks gibt es?</li>
+                    <li>Vor- und Nachteile</li>
+                    <li>Das Framework <strong>SASS / SCSS</strong></li>
+                        <ul>
+                        <li>Benutzung / Unterschiede</li>
+                        <li>Variablen</li>
+                        <li>Nesting</li>
+                        <li>Mixin</li>
+                        </ul>
+                    <li>Weitere Hilfen und Links</li>
+                    <li>Übung</li>
+                    </ul>
+                    
+                </section>
+                
+<!--------------------- Framework Erklärung -------------------->
+                
+                <section>
+				    <section>
+                        <h1>Was sind <strong>Frameworks?</strong></h1>
+                        <blockquote class="fragment">
+                            Standardisierte Codebibliothek von zusammengefassten Pakets mit Files und Ordnern</blockquote>
+
+                            <li class="fragment">Fundament für <strong>Enwicklung und Gestaltung</strong> einer Website</li>
+                            <li class="fragment">Sollen eine einheitliche Struktur für Developers bilden</li>
+                            <li class="fragment">Man muss nicht komplett neuanfangen</li>
+                            <li class="fragment">Somit kann man immer wieder auf Codes zurückgreifen</li>
+                        
+                        <br>
+                        <h4 class = "fragment roll-in">Typische Komponenten sind:</h4>
+                            <ul class="fragment">
+                                <li>Standard <strong>CSS-Klassen</strong> auf denen aufgebaut werden kann</li>
+                                <li>Für alle HTML-Elemente definierte <strong>Typographie</strong></li>
+                                <li>javaScript Bibliotheken</li>
+                                <li><strong>Gridsystem</strong> auf Basis von CSS</li>
+                                <li>Browserkompabilität für aktuellen und älteren Versionen</li>
+                            </ul>
+                    </section>
+
+                    <section data-markdown>
+                    <script type="text/template">
+                        <h2>Welche <strong>Frameworks</strong> gibt es?</h2>
+                            <p class ="fragment">Einige Beispiele von einer großen Anzahl an Frameworks:</p>
+                                <ul class="fragment"><li><a href="http://sass-lang.com/">SASS/SCSS</a></li>
+                                <li><a href="http://www.yaml.de/">YAML 4</a></li>
+                                <li><a href="http://960.gs/">960 Grid System</a></li>
+                                <li><a href="http://www.blueprintcss.org/">Blueprint</a></li>
+                           </ul>
+                           <br>
+                    
+                        <h2 class="fragment roll-in">Welches <strong>Framework</strong> ist das richtige für mich?</h2>
+                                <li class="fragment">text</li>
+                                <li class="fragment">text</li>
+                                <li class="fragment">text</li>
+                                
+				    </script>
+                    </section>
+                    
+                    <section data-markdown>
+                    <script type="text/template">
+                        <h2>Vor<strong>teile</strong></h2>
+                            <ul class="fragment">
+                                <li>blubb</li>
+                                <li>blubb</li>
+                                <li>blubb</li>
+                                <li>blubb</li>
+                            </ul>
+                            <br>
+                            
+                        <h2>Nach<strong>teile</strong></h2>
+                            <ul class="fragment">
+                                <li>blubb</li>
+                                <li>blubb</li>
+                                <li>blubb</li>
+                                <li>blubb</li>
+                            </ul>
+                    </script>
+                    </section>
+                </section>
+                   
+					<!--<p class="fragment grow">grow</p>
 					<p class="fragment shrink">shrink</p>
 					<p class="fragment roll-in">roll-in</p>
 					<p class="fragment fade-out">fade-out</p>
 					<p class="fragment highlight-red">highlight-red</p>
 					<p class="fragment highlight-green">highlight-green</p>
-					<p class="fragment highlight-blue">highlight-blue</p>
-				</section>
+					<p class="fragment highlight-blue">highlight-blue</p>-->
 
+<!--------------------- SASS / SCSS -------------------->
+                
 				<section>
-					<h2>Fragmented <strong>Views</strong></h2>
-					<p>Hit the next arrow...</p>
-					<p class="fragment" data-fragment-index="0">... to step through ...</p>
-					<ol>
-						<li class="fragment" data-fragment-index="1"><code>any type</code></li>
-						<li class="fragment" data-fragment-index="2"><em>of view</em></li>
-						<li class="fragment" data-fragment-index="3"><strong>fragments</strong></li>
-					</ol>
-				</section>
-
-
-				<section>
-					<h2>Images</h2>
-
-					<img class="align-center" src="http://octodex.github.com/images/daftpunktocat-thomas.gif">
-				</section>
-
-				<section>
-					<h2>Code syntax highlighting</h2>
-
-					<pre><code data-trim>
+                    <section>
+                    <h1>Das Framework <strong>SASS / SCSS</strong></h1>
+                        <blockquote class="fragment">Auf Ruby basierende Stylesheet-Sprache, welche in CSS interpretiert wird.
+                            <br>
+                            Von Hampton Catlin und Nathan Weizenbaum entwickelt.</blockquote>
+                        <br>
+                        <p class="fragment">Es gibt <strong>zwei</strong> Syntaxen:</p>
+                        <ul class="fragment roll-in" style="font-size: 32px">SASS - <strong>S</strong>yntactically <strong>A</strong>wesome <strong>S</strong>tyle<strong>s</strong>heet
+                        <br>
+                        SCSS - <strong>S</strong>assy <strong>C</strong>ascading <strong>S</strong>tyle<strong>s</strong>heet</ul>
+                        <br>
+                        <br>
+                        <li class="fragment">Ruby muss installiert sein</li>
+                        <li class="fragment">Es ist möglich eine abgespeckte Online-Variante zu benutzten (nur für Testzwecke empfehlenswert!)</li>
+                        <li class="fragment">blubb</li>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        <h2>Unterschiede und Benutzung</h2>
+                            <p>blaaablablaaa</p>
+                            <p style="font-size: 30px">S<strong>A</strong>SS<pre><code data-trim>
 &lt;?php
 echo 'Hello World!';
 ?&gt;
 					</code></pre>
-
-					<pre><code data-trim>
-$ ruby -e "puts 'Hello world'"
-Hello world
+                    <p>textextext</p>
+                    <br>
+                    <p style="font-size: 30px">S<strong>C</strong>SS<pre><code data-trim>
+&lt;?php
+echo 'Hello World!';
+?&gt;
 					</code></pre>
-
-					<pre><code data-trim>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;meta charset=&quot;utf-8&quot;&gt;
-		&lt;title&gt;&lt;/title&gt;
-		&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
-
-		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-	&lt;body&gt;
-&lt;/html&gt;
+                    <p>textextext</p>
+                        </script>
+                    </section>
+                </section>
+                
+<!--------------------- SASS / SCSS Benutzung ------------------->                
+            <section>
+                <h2>Variablen</h2>
+                    <p>Das Verändern von global gleichbleibenden Variablen wird in SASS / SCSS vereinfacht</p>
+                            <p style="font-size: 30px">S<strong>A</strong>SS<pre><code data-trim>
+&lt;?php
+echo 'Hello World!';
+?&gt;
 					</code></pre>
-				</section>
+                    <p>textextext</p>
+                    <br>
+                    <p style="font-size: 30px">S<strong>C</strong>SS<pre><code data-trim>
+&lt;?php
+echo 'Hello World!';
+?&gt;
+					</code></pre>
+                    <p>textextext</p>
+             </section>
+            
+            <section>
+                <h2>Nesting</h2>
+                    <p>Es ist nicht mehr nötig jedes Element neu zu deklarieren (Hier muss mehr Info hin)</p>
+                            <p style="font-size: 30px">S<strong>A</strong>SS<pre><code data-trim>
+&lt;?php
+echo 'Hello World!';
+?&gt;
+					</code></pre>
+                    <p>textextext</p>
+                    <br>
+                    <p style="font-size: 30px">S<strong>C</strong>SS<pre><code data-trim>
+&lt;?php
+echo 'Hello World!';
+?&gt;
+					</code></pre>
+                    <p>textextext</p>
+            </section>            
+            
+            <section>
+                <h2>Mixin</h2>
+                <p>whoopwhoop</p>
+                            <p style="font-size: 30px">S<strong>A</strong>SS<pre><code data-trim>
+&lt;?php
+echo 'Hello World!';
+?&gt;
+					</code></pre>
+                        <p>textextext</p>
+                    <br>
+                    <p style="font-size: 30px">S<strong>C</strong>SS<pre><code data-trim>
+&lt;?php
+echo 'Hello World!';
+?&gt;
+					</code></pre>
+                    <p>textextext</p>
+             </section>
+                
+<!--------------------- Ende der Präsentation ------------------->
+                
+                <section>
+                <h2>Weitere <strong>Hilfen</strong> und <strong>Links</strong></h2>
+                        <ul><li><a href="http://sass-lang.com/guide">Offizieller SASS Guide</a></li>
+                            <li><a href="">Link</a></li>
+                            <li><a href="">Link</a></li>
+                            <li><a href="">Link</a></li>
 
-				<section>
-					<section>
-						<h2>Tables</h2>
-						<table>
-							<tr>
-								<th>Foo</th>
-								<th>Bar</th>
-							</tr>
-							<tr>
-								<td>Zelle 1 1</td>
-								<td>Zelle 1 2</td>
-							</tr>
-							<tr>
-								<td>Zelle 2 1</td>
-								<td>Zelle 2 2</td>
-							</tr>
-						</table>
-					</section>
-
-					<section>
-					<h2>Tables <strong>Latin Character Tests</strong></h2>
-						<table>
-							<tbody>
-								<tr>
-									<td>!</td>
-									<td>"</td>
-									<td>#</td>
-									<td>$</td>
-									<td>%</td>
-									<td>&amp;</td>
-									<td>'</td>
-									<td>(</td>
-									<td>)</td>
-									<td>*</td>
-								</tr>
-								<tr>
-									<td>+</td>
-									<td>,</td>
-									<td>-</td>
-									<td>.</td>
-									<td>/</td>
-									<td>0</td>
-									<td>1</td>
-									<td>2</td>
-									<td>3</td>
-									<td>4</td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>6</td>
-									<td>7</td>
-									<td>8</td>
-									<td>9</td>
-									<td>:</td>
-									<td>;</td>
-									<td>&gt;</td>
-									<td>=</td>
-									<td>&lt;</td>
-								</tr>
-								<tr>
-									<td>?</td>
-									<td>@</td>
-									<td>A</td>
-									<td>B</td>
-									<td>C</td>
-									<td>D</td>
-									<td>E</td>
-									<td>F</td>
-									<td>G</td>
-									<td>H</td>
-								</tr>
-								<tr>
-									<td>I</td>
-									<td>J</td>
-									<td>K</td>
-									<td>L</td>
-									<td>M</td>
-									<td>N</td>
-									<td>O</td>
-									<td>P</td>
-									<td>Q</td>
-									<td>R</td>
-								</tr>
-								<tr>
-									<td>S</td>
-									<td>T</td>
-									<td>U</td>
-									<td>V</td>
-									<td>W</td>
-									<td>X</td>
-									<td>Y</td>
-									<td>Z</td>
-									<td>[</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>]</td>
-									<td>^</td>
-									<td>_</td>
-									<td>`</td>
-									<td>a</td>
-									<td>b</td>
-									<td>c</td>
-									<td>d</td>
-									<td>e</td>
-									<td>f</td>
-								</tr>
-								<tr>
-									<td>g</td>
-									<td>h</td>
-									<td>i</td>
-									<td>j</td>
-									<td>k</td>
-									<td>l</td>
-									<td>m</td>
-									<td>n</td>
-									<td>o</td>
-									<td>p</td>
-								</tr>
-								<tr>
-									<td>q</td>
-									<td>r</td>
-									<td>s</td>
-									<td>t</td>
-									<td>u</td>
-									<td>v</td>
-									<td>w</td>
-									<td>x</td>
-									<td>y</td>
-									<td>z</td>
-								</tr>
-								<tr>
-									<td>{</td>
-									<td>|</td>
-									<td>}</td>
-									<td>~</td>
-								</tr>
-								</tbody>
-							</table>
-					</section>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-					## Markdown Support
-
-					Für die, die Markdown lieben.
-					Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
-					die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
-
-					> This is a blockquote. Lorem ipsum dolor sit amet,
-					> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-					> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-					```
-					## Markdown support
-
-					Für die, die Markdown lieben.
-					Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
-					die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
-
-					> This is a blockquote. Lorem ipsum dolor sit amet,
-					> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-					> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-					```
-					</script>
-				</section>
-
+                       </ul>
+                   <br>
+             </section>                
+                
+                <section>
+                    <section>
+                <h1>Zur <strong>Übung</strong></h1>
+                        <br>
+                        <div>
+                        <p>lalalalalalaaa</p>
+                        </div>
+                        <ul><li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                       </ul>
+                    </section>
+             </section>
+                
 				<!-- End of slides container. -->
 
 			</div>

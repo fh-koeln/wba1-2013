@@ -1,13 +1,20 @@
 1. Einleitung in Frameworks
 - Was sind CSS-Frameworks (wie erweitert es css nutzen für anwender)
-- Begriffe erklären (Nesting, etc.)
-- Welche CSS-Frameworks gibt es
+- Typische Komponente eines Frameworks
+- Begriffe erklären (Nesting, etc.) ---> Besser in Spezialisierung packen?
+- Welche CSS-Frameworks gibt es (Inwiefern unterscheiden sie sich voneinander)
+
 2. Spezialisierung auf SCSS
+- Namensbedeutung + Entwickler
+- Was ist SASS / SCSS und warum gerade SASS?
 - SCSS baut auf SASS auf (hat selbe features aber simpleres syntax,
 http://thesassway.com/articles/sass-vs-scss-which-syntax-is-better)
 - SCSS wird auch das neue CSS genannt
+
 3. Wie sieht SCSS aus?
 - Variablen: $varname : value; aufgerufen durch $varname
 --> vereinfacht das veraendern von grobal gleichbleibenden variablen
 - Nesting: 
 --> man muss nichtmehr fuer jedes element in einem anderen neu deklarieren (siehe nesting.txt)
+- Mixin:
+-->
