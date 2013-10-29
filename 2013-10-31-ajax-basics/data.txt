@@ -1,0 +1,85 @@
+Übersicht
+
+- Einleitung
+
+- Beispiele
+
+- XMLHttpRequest
+
+- Framework
+
+- JSON??
+
+- Nachteile
+
+- Vorteile
+
+
+
+einleitung
+
+- Asynchronous Java Script and XML
+
+- lädt einzelne Elemente einer Seite nach, ohne komplette Seite zu aktualisieren
+
+- asynchrone Verbindung zwischen Server und Client
+
+- Webanwendung mit hoher Funktionalität
+
+
+
+Bsp
+
+- Google AutoComplete
+
+- Facebook
+
+- Webmail (Gmail, Yahoo)
+
+- Virtuelle Map (Google Maps, OpenStreetMap)
+
+- Flickr
+
+- Warenkorb
+
+
+
+XMLHttpRequest
+
+- Object als Schnittstelle zur Verbindung von Server und Client
+
+- arbeitet asynchron
+
+- Übertragung über normale synchrone HTTP-Anfragen
+
+- Browserunterschiede
+
+
+
+Nachteile
+
+- JavaScript notwendig
+
+- Zurück-Button, Lesezeichen funktionieren nur über Umwege
+
+- Überbrückung der Latenzzeit übernimmt nicht der Browser
+
+- SEO aufwendig
+
+- nicht barrierefrei (Hook-Ansatz: alternative Seite)
+
+- Polling-Problem (Ajax-Client muss ständig Anfragen senden, da Server nicht asynchron arbeiten
+
+
+
+Vorteile
+
+- User kann beim Nachladen die Seite nutzen
+
+- Einsparung von Daten, da statische Daten nur einmal geladen werden
+
+- Plattformunabhängig
+
+- Anwendungen haben gute Usability, ersetzen so Desktopanwendungen
+
+
