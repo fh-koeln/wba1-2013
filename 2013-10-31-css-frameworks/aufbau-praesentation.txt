@@ -13,8 +13,10 @@ http://thesassway.com/articles/sass-vs-scss-which-syntax-is-better)
 
 3. Wie sieht SCSS aus?
 - Variablen: $varname : value; aufgerufen durch $varname
---> vereinfacht das veraendern von grobal gleichbleibenden variablen
+--> vereinfacht das Verändern von z.B. Farben, Font-Styles oder anderen CSS Werten. Mit dem $ wird eine Variable deklariert und aufgerufen.
+
 - Nesting: 
---> man muss nichtmehr fuer jedes element in einem anderen neu deklarieren (siehe nesting.txt)
+--> Nesting ermöglicht es eine visuelle Hierarchie ähnlich wie bei HTML in CSS zu erstellen. Es erleichtert das Lesen und Organisieren der eigenen CSS.
+
 - Mixin:
--->
+--> Mit Mixin kann man eigene Vorlagen definieren und nutzen.
