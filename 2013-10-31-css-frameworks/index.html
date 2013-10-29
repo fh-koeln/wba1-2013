@@ -193,79 +193,186 @@
                         <li class="fragment">blubb</li>
                     </section>
                     
-                    <section data-markdown>
-                        <script type="text/template">
-                        <h2>Unterschiede und Benutzung</h2>
-                            <p>blaaablablaaa</p>
-                            <p style="font-size: 30px">S<strong>A</strong>SS<pre><code data-trim>
-&lt;?php
-echo 'Hello World!';
-?&gt;
-					</code></pre>
+                    <section>
+                        <h2>Unterschiede <strong>und</strong> Benutzung</h2>
+                        <p>blaaablablaaa</p>
+                        <p style="font-size: 25px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S<strong>A</strong>SS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>S</strong>CSS</p>
+                        
+                        <pre><code>
+                                                        $listet: green;
+                                                        $inline: blue;
+                                                        $noNav: yellow;
+                                                        $unlistet: red;
+                                                        $white: white;
+                                                        $black: black;
+
+
+* {                                                     * { 
+  margin: 0px;                                              margin: 0px;
+  padding: 0px;                                             padding: 0px;
+}                                                       }
+                                                        
+body {                                                  body{                                 
+  background-color: black;                                  background-color: $black;
+  color: yellow;                                            color: $noNav;
+}                                                       }
+                                                        
+nav {                                                   nav {
+  margin-top: 50px;                                         margin-top: 50px;
+  background-color: white;                                  background-color: $white;
+  color: red;                                               color: $unlisted;
+}                                                           
+                                                            ul {
+nav ul {                                                        color:$listet;
+  color: green;                                             }
+}
+nav li {                                                    li {
+  color: blue;                                                  color:$inline;
+  display: inline;                                              display: inline;
+}                                                           }
+                                                        }
+                    </code></pre>     
                     <p>textextext</p>
-                    <br>
-                    <p style="font-size: 30px">S<strong>C</strong>SS<pre><code data-trim>
-&lt;?php
-echo 'Hello World!';
-?&gt;
-					</code></pre>
-                    <p>textextext</p>
-                        </script>
+                        
                     </section>
                 </section>
                 
 <!--------------------- SASS / SCSS Benutzung ------------------->                
             <section>
                 <h2>Variablen</h2>
-                    <p>Das Verändern von global gleichbleibenden Variablen wird in SASS / SCSS vereinfacht</p>
-                            <p style="font-size: 30px">S<strong>A</strong>SS<pre><code data-trim>
-&lt;?php
-echo 'Hello World!';
-?&gt;
-					</code></pre>
-                    <p>textextext</p>
-                    <br>
-                    <p style="font-size: 30px">S<strong>C</strong>SS<pre><code data-trim>
-&lt;?php
-echo 'Hello World!';
-?&gt;
-					</code></pre>
+                    <p>Vereinfacht das Verändern von z.B. Farben, Font-Styles oder anderen CSS Werten. Mit dem <code>$-Zeichen</code> wird eine Variable deklariert und aufgerufen.</p>
+                        <h3 style="font-size: 25px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CSS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>S</strong>CSS</h3>
+                <pre><code>
+                                                        $edge : ridge;
+                                                        
+                                                        *{
+                                                            margin: 0px;
+                                                            padding: 0px;
+                                                        }
+                                                        
+                                                        body{
+                                                            background-color: black;
+                                                        }
+                                                        
+                                                        .big {
+                                                            height: $big;
+                                                            width: $big;
+                                                        }
+                                                        
+                                                        .little {
+                                                            height: $small;
+                                                            width: $small;
+                                                        }
+                                                        
+                                                        .red {
+                                                            border: $border $edge #be1622;
+                                                            background-color: #e6332a;
+                                                        }
+                                                        
+                                                        .blue {
+                                                            border: $border $edge #1d71b8;
+                                                            background-color: #36a9e1;
+                                                        }
+                                                        
+                                                        .green {
+                                                            border: $border $edge #008d36;
+                                                            background-color: #009640;
+                                                        }
+                                                        
+                                                        .yellow {
+                                                            border: $border $edge #e94e1b;
+                                                            background-color: #f39200;
+                                                        }
+                                                        .flexibel {
+                                                            
+                                                            position:absolute;
+                                                            left: 50%;
+                                                            
+                                                        }
+          </code></pre>
                     <p>textextext</p>
              </section>
             
             <section>
                 <h2>Nesting</h2>
-                    <p>Es ist nicht mehr nötig jedes Element neu zu deklarieren (Hier muss mehr Info hin)</p>
-                            <p style="font-size: 30px">S<strong>A</strong>SS<pre><code data-trim>
-&lt;?php
-echo 'Hello World!';
-?&gt;
-					</code></pre>
+                    <p>Nesting ermöglicht es eine visuelle Hierarchie ähnlich wie bei HTML in CSS zu erstellen. Es erleichtert das Lesen und Organisieren der eigenen CSS.</p>
+                                                    <h3 style="font-size: 25px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CSS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>S</strong>CSS</h3>
+                <pre><code>
+                                                        $listet: green;
+                                                        $inline: blue;
+                                                        $noNav: yellow;
+                                                        $unlistet: red;
+                                                        $white: white;
+                                                        $black: black;
+
+
+* {                                                     * { 
+  margin: 0px;                                              margin: 0px;
+  padding: 0px;                                             padding: 0px;
+}                                                       }
+                                                        
+body {                                                  body{                                 
+  background-color: black;                                  background-color: $black;
+  color: yellow;                                            color: $noNav;
+}                                                       }
+                                                        
+nav {                                                   nav {
+  margin-top: 50px;                                         margin-top: 50px;
+  background-color: white;                                  background-color: $white;
+  color: red;                                               color: $unlisted;
+}                                                           
+                                                            ul {
+nav ul {                                                        color:$listet;
+  color: green;                                             }
+}
+nav li {                                                    li {
+  color: blue;                                                  color:$inline;
+  display: inline;                                              display: inline;
+}                                                           }
+                                                        }
+                    </code></pre>     
                     <p>textextext</p>
-                    <br>
-                    <p style="font-size: 30px">S<strong>C</strong>SS<pre><code data-trim>
-&lt;?php
-echo 'Hello World!';
-?&gt;
-					</code></pre>
-                    <p>textextext</p>
-            </section>            
+                </section>
+                 
             
             <section>
                 <h2>Mixin</h2>
-                <p>whoopwhoop</p>
-                            <p style="font-size: 30px">S<strong>A</strong>SS<pre><code data-trim>
-&lt;?php
-echo 'Hello World!';
-?&gt;
-					</code></pre>
-                        <p>textextext</p>
-                    <br>
-                    <p style="font-size: 30px">S<strong>C</strong>SS<pre><code data-trim>
-&lt;?php
-echo 'Hello World!';
-?&gt;
-					</code></pre>
+                <p>Mit Mixin kann man eigene Vorlagen definieren und später in der eigenen Datei beliebig oft aufrufen, ohne sie jedes mal einzeln zu ändern.</p>
+                                                                    <h3 style="font-size: 25px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CSS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>S</strong>CSS</h3>
+                <pre><code>
+                                                        $listet: green;
+                                                        $inline: blue;
+                                                        $noNav: yellow;
+                                                        $unlistet: red;
+                                                        $white: white;
+                                                        $black: black;
+
+
+* {                                                     * { 
+  margin: 0px;                                              margin: 0px;
+  padding: 0px;                                             padding: 0px;
+}                                                       }
+                                                        
+body {                                                  body{                                 
+  background-color: black;                                  background-color: $black;
+  color: yellow;                                            color: $noNav;
+}                                                       }
+                                                        
+nav {                                                   nav {
+  margin-top: 50px;                                         margin-top: 50px;
+  background-color: white;                                  background-color: $white;
+  color: red;                                               color: $unlisted;
+}                                                           
+                                                            ul {
+nav ul {                                                        color:$listet;
+  color: green;                                             }
+}
+nav li {                                                    li {
+  color: blue;                                                  color:$inline;
+  display: inline;                                              display: inline;
+}                                                           }
+                                                        }
+                    </code></pre>     
                     <p>textextext</p>
              </section>
                 
