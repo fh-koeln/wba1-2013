@@ -174,7 +174,7 @@ if (window.XMLHttpRequest) {
                 <!--Section 5.2 Event-->
                 <section>
                     <h2>
-                        <strong>3.2</strong> Das Status-Event
+                        <strong>3.2</strong> Das Event
                         
                     </h2>
                     <h3 ><strong>.readyState</strong></h3>
@@ -214,11 +214,21 @@ if (window.XMLHttpRequest) {
                             <br><strong>jeder Änderung der Variablen .readyState aufgerufen</strong>
                         </li>
                         <li>
-                            Man muss selbst definieren was bei jedem Status
+                            Wir definieren selber was bei welchem Status passieren soll
                         </li>
                     </ul>
                     <br><br>
-
+                    <h3 ><strong>Beispiel</strong></h3>
+                    <pre>
+<code>
+ajaxObject.onReadyStateChange = function() {
+    // Bei erfolgreicher Anfrage an den Server
+    if(ajaxObject.readyState == 4 && ajaxObject.status == 200){
+        alert(ajaxObject.responseText);
+    }
+};
+</code>
+                    </pre>
                 </section>
                 
                 
