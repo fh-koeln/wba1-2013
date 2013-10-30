@@ -1,0 +1,12 @@
+@mixin box($size:40px) {
+	width: $size;
+	height: $size;
+
+}
+
+
+.box {
+	@include box(100px);
+	background: #fc0;
+
+}
