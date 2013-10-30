@@ -318,95 +318,115 @@ ajaxObject.send();
 			
             <!----------------------------------------------------------------------------------------------------------------------------->
             <!--Section 6 Bourne-->
-          <section>
+            <section>
                 <section>
-                    <h2>4. Javascript Object Notation (JSON) </h2>
+                    <h2>4. Javascript Object Notation (JSON)</h2>
                     <br>
                     <li>Datenformat zum Informationsaustausch zwischen Server und Client</li>
-					<li>Speichert Variabeln, Arrays und Objecte</li>
+                    <li>Speichert Variabeln, Arrays und Objecte</li>
+            
                 </section>
-				
-				
-				<!--Section 6.1 Aufbau-->
+
+
+                <!--Section 6.1 Aufbau-->
                 <section>
-                    <h2>
-                        <strong>3.1</strong> Aufbau - Einfache Variabeln</h2>
-                     <ul>
-                             <pre>
-                                <code class="fragment" >{
-										"Stadt": "Gummersbach",
-										"Postleitzahl": 51643,
-									   }</code>
+                    
+                        <h2>
+                            <strong>4.1</strong>Aufbau - Einfache Variabeln</h2>
+                        <ul>
+                            <pre>
+                                <code class="fragment">{ 
+  "Stadt": "Gummersbach", 
+  "Postleitzahl": 51643,
+}</code>
                             </pre>
-							<li class="fragment"> Zugriff über: <strong>x.Stadt</strong> </li>
-				</section>
-							
-							
-				<!--Section 6.2 Array-->
+                            <li class="fragment">Zugriff über:
+                                <strong>x.Stadt;</strong>
+                            </li>
+                        </ul>
+                    
+                </section>
+
+                <!--Section 6.2 Array-->
                 <section>
-                    <h2>
-                        <strong>3.2</strong> Aufbau - Arrays</h2>
-                     <ul>
-                             <pre>
+                    
+                        <h2>
+                            <strong>4.2</strong>Aufbau - Arrays</h2>
+                        <ul>
+                            <pre>
                                 <code class="fragment">{
-										"Stadt": "Gummersbach",
-										"Schulen": ["FH", "Berufsschule"],
-									   }</code>
+  "Stadt": "Gummersbach", 
+  "Schulen": [FH, Berufkolleg],
+}</code>
+
                             </pre>
-							<li class="fragment"> Zugriff über: <strong>x.Schulen[0];</strong> </li>
-				</section>
-				
-				
-				<!--Section 6.2 Objecte-->
+                            <li class="fragment">Zugriff über:
+                                <strong>x.Schulen[0];</strong>
+                            </li>
+                        </ul>
+                    
+                </section>
+
+
+                <!--Section 6.3 Objecte-->
                 <section>
-                    <h2>
-                        <strong>3.3</strong> Aufbau - Objecte</h2>
-                     <ul>
-                             <pre>
-                                <code class="fragment" >{
-										"Stadt": "Gummersbach",
-										"Bürgermeister": {
-											"Name":"Helmenstein",
-											"Vorname": Frank",
-											}
-									   }</code>
+                    
+                        <h2>
+                            <strong>4.3</strong>Aufbau - Object</h2>
+                        <ul>
+                            <pre>
+                                <code class="fragment">{ 
+  "Stadt": "Gummersbach", 
+  "Bürgermeister": {
+                     "Name":"Helmenstein", 
+                     "Vorname": "Frank", 
+                   }
+}</code>
                             </pre>
 							<li class="fragment"> Zugriff über: <strong>x.Bürgermeister.Name;</strong> </li>
-							<li>Auch innerhalb Objecte können Arrays vorkommen</li>
-				</section>
-						
-						
-			  </section>
-                    <!--
-			{
-	"Stadt": "Gummersbach",
-	"Postleitzahl": 51643,
-}
-Zugriff über: x.Stadt
+                        </ul>
+                    
+                </section>
+                
+                
+                <!--Section 6.4 Arrays in Objecte-->
+                <section>
+                    
+                        <h2>
+                            <strong>4.4</strong>Arrays in Objecte</h2>
+                        <ul>
+                            <pre>
+                                <code class="fragment">{ 
+  "Stadt": "Gummersbach", 
+  "Bürgermeister": {
+                     "Name":"Helmenstein", 
+                     "Vorname": "Frank", 
+                     "Autos":[Dienstwagen, Privatwagen];
+                   }
+}</code>
+                            </pre>
+                            <li class="fragment">Zugriff über:
+                                <strong>x.Bürgermeister.Autos[0];</strong></li>
+                        </ul>
+                    
+                </section>
 
-5.2 Arrays
-{
-	"Stadt": "Gummersbach",
-	"Schulen": ["FH", "Berufsschule"],
-}
-Zugriff über: x.Schulen[0];
 
-5.3 Objecte
-{
-	"Stadt": "Gummersbach",
-	"Bürgermeister": {
-		"Name":"Helmenstein",
-		"Vorname": Frank",
-		}
-}
-Zugriff über: x.Bürgermeister.Name;
-Auch innerhalb Objecte können Arrays vorkommen
+                <!--Section 6.5 Parser-->
+                <section>
+                    
+                        <h2>
+                            <strong>4.5</strong>Aufbau - Parser</h2>
+                        <ul>
+                            <pre>
+                                <code class="fragment">var json = JSON.parse(Object.bsp);</code>
+                            </pre>
+                            <li class="fragment">Wandelt passende Daten in eine JSON-Variable um</li>
+                        </ul>
+                    
+                </section>
 
-5.4 Parser
-var json = JSON.parse(Object.bsp)
-
-Wandelt passende Daten in eine JSON-Variable um
-			-->
+            </section>
 			<!----------------------------------------------------------------------------------------------------------------------------->
             <!--Section 7 Cops-->
           <section>
@@ -489,14 +509,14 @@ Wandelt passende Daten in eine JSON-Variable um
 			  
 			<!----------------------------------------------------------------------------------------------------------------------------->
             <!--Section 9 Vorteile -->
-			<section>
+            <section>
                 <section>
-                    <h2>7. Vorteile </h2>
+                    <h2>7. Vorteile</h2>
                     <br>
-                    <li>User kann beim Nachladen die Seite nutzen</li>
-					<li>Einsparung von Daten, da statische Daten nur einmal geladen werden</li>
-					<li>Plattformunabhängig</li>
-					<li>Anwendungen haben gute Usability, ersetzen so Desktopanwendungen</li>
+                    <li>Funktionen der Seite bleiben beim Nachladen erhalten</li>
+                    <li>Einsparung von Daten, da statische Daten nur einmal geladen werden</li>
+                    <li>Plattformunabhängig</li>
+                    <li>Anwendungen haben gute Usability, ersetzen so Desktopanwendungen</li>
                 </section>
             </section>
 			
