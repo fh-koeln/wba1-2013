@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Ajax Flickr Uebung</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            var searchText = 'modern architecture'
+            
+            // '&per_page=5' teilt bei der Anfrage an die Flickr-Api die Ergebnisse in Seiten auf
+            // '&page=1' gibt dann an welche Ergebnisseite zurückgegeben werden soll 
+            var pageId = 1
+            
+            // Lädt Bilder über die flickr-api 
+            function loadImages() {
+                var requestURL = 'http://api.flickr.com/services/rest/' +
+                    '?&method=flickr.photos.search' +
+                    '&api_key=4ef2fe2affcdd6e13218f5ddd0e2500d' +
+                    '&text=' + searchText +
+                    '&page=' + pageId +
+                    '&per_page=5' + 
+                    '&sort=relevance' +
+                    '&format=json' +
+                    '&nojsoncallback=1';
+
+                
+                var ajaxObject;
+                /************ 
+                *  TODO :
+                *  ajaxObject abhängig von den verschiedenen Browser-Versionen instanzieren
+                *************/
+
+                // Bei jeder Änderung der .readyState Variablen wird 
+                // die Funktion .onREADYSTATEchange aufgerufen  
+                ajaxObject.onreadystatechange = function() {
+                    
+                    if(/***  TODO : erfolgreiche anfrage  ***/ ){
+                        
+                        /************ 
+                        *  TODO: 
+                        *  responseText in JSON-Objekt umwandeln
+                        *************/
+                        var json
+
+                        // Setzt für jedes Foto die URL aus den Daten zusammen
+                        for (var i = 0; i < json.photos.photo.length; i++) {
+                            var item = json.photos.photo[i];
+                            var photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg';
+                            var imageElement = '<img src="' + photoURL + '">';
+                            
+                            /************ 
+                            *   TODO :
+                            *   Hier mit document.getElementById("id").innerHTML = "text"
+                            *   die Bilder ins <div> element mit der Id container einfügen
+                            *************/
+                        }
+
+                        // .children verweist auf den Array der Elemente innerhalb eines Elements
+                        // In diesem Fall verweist .children[0] auf das Element <input ... >
+                        document.getElementById("controls").children[0].removeAttribute("disabled");
+                        document.getElementById("status").innerHTML = "Fertig geladen";
+                    }
+
+                    // Wenn die Verbindung initialisiert wird
+                    /************ 
+                    *  TODO :
+                    *  Wenn die Serververbindung hergestellt wird
+                    *  disable den button in #controls
+                    *  und setze den Text 
+                    *************/
+                    if (ajaxObject.readyState == 1) {
+                        document.getElementById("controls").children[0].disabled = "disabled";
+                        document.getElementById("status").innerHTML = "Lade...";
+                    }
+                }
+                
+                /************ 
+                *  TODO : 
+                *  Art der Anfrage festlegen
+                *************/
+                ajaxObject.send();
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div id="container">
+            <!-- HIER DIE BILDER REINLADEN -->
+        </div>
+        <div id="controls">
+            <input type="button" value="Mehr Bilder" onClick="loadImages();" />
+            <div id="status"></div>
+        </div>
+    </body>
+    
+    <script>
+        /************ 
+        *  AUFGABE 01
+        *
+        *  Erledige alle TODOs
+        *  und korrigiere das Dokument so wie 
+        ***/
+    
+        
+        /************ 
+        *  AUFGABE 02
+        * 
+        *  Erstelle ein Textfeld 
+        *  und lade neue Bilder abhängig von den eingegebenen Wert rein.
+        *
+        *  hints: form, input, submit, parameter, this
+        ***/
+        
+        
+        /************ 
+        *  BONUS AUFGABE:
+        *
+        *  Erstelle ein Menü mit dem man durch die einzelnen Seiten der Suchergebnisse navigieren kann.
+        *  
+        *  hints: 
+        ***/
+    </script>
+</html>
+
