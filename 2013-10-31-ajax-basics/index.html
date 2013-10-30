@@ -7,9 +7,11 @@
     <!-- Title of presentation -->
     <title>Ajax Basics</title>
     <!-- Short description of presentation -->
-    <meta name="description" content="Demo of Reveal.js functions and features">
+    <meta name="description" content="Ajax Basics">
     <!-- Author of presentation -->
-    <meta name="author" content="Dominik Schilling">
+    <meta name="author" content="Aziz Kilic">
+	<meta name="author" content="Tim Kurtz">
+	<meta name="author" content="Dominik Scharf">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -43,8 +45,7 @@
 
             <!------------------------------------------------------------------------------------------------------------------------->
             <!------------------------------------------Beginn der Präsentation-------------------------------------------------------->
-            <!------------------------------------------------------------------------------------------------------------------------->
-            <!---------------------------------------------------Intro----------------------------------------------------------------->
+            <!--Startseite-->
             <section>
                 <h1>Web-basierte Anwendungen 1</h1>
                 <h2>AJAX Basics</h2>
@@ -63,9 +64,8 @@
                 </p>
             </section>
 
-
+			<!----------------------------------------------------------------------------------------------------------------------------->
             <!-- Section 2.0 Inhalt & Ablauf-->
-
             <section>
                 <h1>Übersicht</h1>
                 <p>
@@ -94,13 +94,9 @@
                 </ul>
             </section>
 
-            <!-----Section 4.0 -------------------------------------------------------------------------------------------------------------------->
-
-            
-                <!-- Dokumentenfluss -->
-
-                <!--Section 4.2-->
-          <section>
+				<!----------------------------------------------------------------------------------------------------------------------------->
+                <!--Section 3.0 Erklärung-->
+			<section>
                 <section>
                     <h2>1. Was ist Ajax  ? </h2>
                     <br>
@@ -109,13 +105,11 @@
                     <li>asynchrone Verbindung zwischen Server und Client</li>
                     <li>Webanwendung mit hoher Funktionalität</li>
                 </section>
-              </section>
-
+            </section>
          
-
-            <!-- Section 5.0 -->
-            <section>
-                <!-- Manipulation /-Positionierung -->
+			<!----------------------------------------------------------------------------------------------------------------------------->
+            <!-- Section 4.0 Bsp. -->
+			<section>
                 <section>
                     <h2><strong>2.</strong> Beispiele</h2>
                    
@@ -129,23 +123,22 @@
                     <img src="bilder/googlemail.jpg">
                 
                 </section>
-               </section>
+             </section>
                     
-        
-
-            <!-------------------------------------------------------------------------------------------------------------------------------->
-            <!--Section 6.0-->
+            <!-----------------------------------------------------------------------------------------------------------------------------> 
+			<!--Section 5.0 XMLHttpRequest -->
             <section>
-                <!-- Pseudoklassen -->
                 <section>
-                    <h2>3. XMLHttpRequest API
-                    </h2>
-                    <h3><strong>Objekt-Instanzierung</strong></h3>
-                    <ul>
-                        <li>Einleitungsblub</li>
-                    </ul>
+                    <h2>3. XMLHttpRequest API </h2>
+					<br>
+                    <li>Object als Schnittstelle zur Verbindung von Server und Client</li>  
+                    <li>arbeitet asynchron</li>
+                    <li>Übertragung über normale synchrone HTTP-Anfragen</li>
+                    <li>Browserunterschiede</li>
                 </section>
                 
+				
+				<!--Section 5.1 Objekt-Instanzierung -->
                 <section>
                     <h2>
                         <strong>3.1</strong> Objekt-Instanzierung</h2>
@@ -178,7 +171,7 @@ if (window.XMLHttpRequest) {
                 </section>
                 
                 
-                    
+                <!--Section 5.2 Event-->
                 <section>
                     <h2>
                         <strong>3.2</strong> Das Event
@@ -193,8 +186,8 @@ if (window.XMLHttpRequest) {
                     
                 </section>
                 
-                
-                                <section>
+                <!--Section 5.3 EventHandler-->
+                <section>
                     <h2>
                         <strong>3.3</strong> Der EventHandler
                         
@@ -211,6 +204,7 @@ if (window.XMLHttpRequest) {
                 </section>
                 
                 
+				<!--Section 5.$ Anfrage initialisieren-->
                 <section>
                     <h2>
                         <strong>3.4</strong> Anfrage initialisieren
@@ -242,7 +236,8 @@ if (window.XMLHttpRequest) {
                     
                 </section>
                 
-                                
+                
+				<!--Section 5.5 Anfrage ansenden-->	
                 <section>
                     <h2>
                         <strong>3.5</strong> Anfrage absenden
@@ -258,277 +253,71 @@ if (window.XMLHttpRequest) {
 
                     </ul>
                 </section>
-                
-                
-                
             </section>
 
-            <!------------------------------------------------------------------------------------------------------------------------------------>
-            <section>
-                <!-- Kombinatoren -->
+			
+            <!----------------------------------------------------------------------------------------------------------------------------->
+            <!--Section 6 Bourne-->
+          <section>
                 <section>
-                    <h2>
-                        <strong>4.</strong>Kombinatoren</h2>
-                    <ul>
-                        <li class="fragment">Elemente stehen zueinander in verwandtschaftlicher Beziehung</li>
-                        <pre class="fragment">
-                            <code>Bedingungsselektor Zielselektor { ... }
-                            </code>
-                        </pre>
-                        <li class="fragment">Bedingung erfüllt wenn Verwandtschaftsbeziehung zum Zielselektor zutreffend</li>
-                    </ul>
+                    <h2>4. Javascript Object Notation (JSON) </h2>
+                    <br>
+                    <li>blub  
                 </section>
-
+              </section>
+			
+			
+			<!----------------------------------------------------------------------------------------------------------------------------->
+            <!--Section 7 Cops-->
+          <section>
                 <section>
-                    <h2>
-                        <strong>4.1</strong>Arten von
-                        <strong>Kombinatoren</strong>
-                    </h2>
-                    <ul>
-                        <li>
-                            <strong>Nachfahren</strong>-Kombinator</li>
-                        <ul class="fragment">
-                            <li>wählt
-                                <strong>alle direkten</strong>&
-                                <strong>indirekten Nachfahren</strong>des Bedingungsselektors aus, die dem Zielselektor entsprechen</li>
-                            <pre class="fragment">
-                                <code>Bedingungsselektor Zielselektor { ... }
-                                </code>
-                            </pre>
-                        </ul>
-                        <li>
-                            <strong>Kind</strong>-Kombinator</li>
-                        <ul class="fragment">
-                            <li>wählt
-                                <strong>alle direkten Nachfahren</strong>des Bedingungsselektors aus, die dem Zielselektor entsprechen</li>
-                            <pre class="fragment">
-                                <code>Bedingungsselektor > Zielselektor { ... }
-                                </code>
-                            </pre>
-                        </ul>
-                    </ul>
+                    <h2>5. Cross-Origin Resource Sharing (CORS) </h2>
+                    <br>
+                    <li> nochmal blub  
                 </section>
+              </section>
+			
+			
+			<!----------------------------------------------------------------------------------------------------------------------------->
+            <!--Section 8 Nachteile -->
+          <section>
                 <section>
-                    <h2>
-                        <strong>4.2</strong>Arten von
-                        <strong>Kombinatoren</strong>
-                    </h2>
-                    <ul>
-                        <li>
-                            <strong>Nachbar</strong>-Kombinator</li>
-                        <ul class="fragment">
-                            <li>wählt
-                                <strong>alle direkten Nachbaren</strong>des Bedingungsselektors aus, die dem Zielselektor entsprechen</li>
-                            <pre class="fragment">
-                                <code>Bedingungsselektor + Zielselektor { ... }
-                                </code>
-                            </pre>
-                        </ul>
-                        <li>
-                            <strong>Geschwister</strong>-Kombinator</li>
-                        <ul class="fragment">
-                            <li>wählt
-                                <strong>alle direkten</strong>&
-                                <strong>indirekten folgenden Nachbaren</strong>des Bedingungsselektors aus, die dem Zielselektor entsprechen</li>
-                            <pre class="fragment">
-                                <code>Bedingungsselektor ~ Zielselektor { ... }
-                                </code>
-                            </pre>
-                        </ul>
-                    </ul>
+                    <h2>6. Nachteile </h2>
+                    <br>
+                    <li>JavaScript notwendig</li>
+					<li>Zurück-Button, Lesezeichen funktionieren nur über Umwege</li>
+					<li>Überbrückung der Latenzzeit übernimmt nicht der Browser</li>
+					<li>SEO aufwendig</li>
+					<li>nicht barrierefrei (Hook-Ansatz: alternative Seite)</li>
+					<li>Polling-Problem (Ajax-Client muss ständig Anfragen senden, da Server nicht asynchron arbeiten</li>
+                </section>
+              </section>
+			  
+			  
+			<!----------------------------------------------------------------------------------------------------------------------------->
+            <!--Section 9 Vorteile -->
+			<section>
+                <section>
+                    <h2>7. Vorteile </h2>
+                    <br>
+                    <li>User kann beim Nachladen die Seite nutzen</li>
+					<li>Einsparung von Daten, da statische Daten nur einmal geladen werden</li>
+					<li>Plattformunabhängig</li>
+					<li>Anwendungen haben gute Usability, ersetzen so Desktopanwendungen</li>
                 </section>
             </section>
-            <!-- Attribut Selektoren -->
-            <section>
+			
+			
+			<!----------------------------------------------------------------------------------------------------------------------------->
+            <!--Section 10 Das Ende-->
+			<section>
                 <section>
-                    <h1>
-                        <strong>5.</strong>Attribut-Selektoren</h1>
-                    <br>
-                    <blockquote>"Immer wieder soll ein HTML-Element mit CSS-Stilen gezielt ausgewählt und geändert werden. Wenn es eine CSS-Klasse oder ein ID-Attribut gibt, ist das Ansteuern eines HTML-Tags mit CSS einfach."
-                    </blockquote>
-                    <br>
-                    <h3 style="text-align: center" class="fragment">
-                        <strong>Aber wie steht es mit einem Element mitten in einer Liste?</strong>
-                    </h3>
-                    <div class="fragment">
-                        <pre>
-                            <code>a.blue { ... }
-                            </code>
-                        </pre>
-                        <p>
-                            <strong>entspricht</strong>
-                            <p>
-                                <pre>
-                                    <code>a[class~="blue"] { ... }
-                                    </code>
-                                </pre>
-                    </div>
-                </section>
-                <section>
-                    <h1>
-                        <strong>5.1</strong>Attribut-Selektoren</h1>
-                    <table>
-                        <tr>
-                            <td style="width:200px">
-                                <pre>
-                                    <code>a[title]</code>
-                                </pre>
-                            </td>
-                            <td>Passt auf Element a mit Attribut title.</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <pre>
-                                    <code>a[title="red"]</code>
-                                </pre>
-                            </td>
-                            <td>Passt auf Element a mit Attribut title und exakten Wert
-                                <span style="color:red">red</span>.</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <pre>
-                                    <code>a[title~="red"]</code>
-                                </pre>
-                            </td>
-                            <td>Passt auf Element a mit Attribut title, dessen durch Leerzeichen getrennte Liste von Werten
-                                <span style="color:red">red</span>enthält. Auch auf Attribut-Wert "
-                                <span style="color:red">red</span>little flexible" zutreffend.</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <pre>
-                                    <code>a[title|="red"]</code>
-                                </pre>
-                            </td>
-                            <td>Passt auf Element a mit Attribut title, dessen durch Trennstriche (-) getrennte Liste von Werten
-                                <span style="color:red">red</span>enthält.</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <pre>
-                                    <code>a[title^="red"]</code>
-                                </pre>
-                            </td>
-                            <td>Passt auf Element a mit Attribut title, dessen Wert mit
-                                <span style="color:red">red</span>beginnt. Auch auf Attribut-Wert
-                                <span class="brown">reddish</span>zutreffend.</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <pre>
-                                    <code>a[title$="red"]</code>
-                                </pre>
-                            </td>
-                            <td>Passt auf Element a mit Attribut title, dessen Wert mit
-                                <span style="color:red">red</span>endet. Auch auf Attribut-Wert
-                                <span style="color:rosybrown">rosered</span>zutreffend.</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <pre>
-                                    <code>a[title*="red"]</code>
-                                </pre>
-                            </td>
-                            <td>Passt auf Element a mit Attribut title, dessen Wert
-                                <span style="color:red">red</span>an beliebiger Stelle in Zeichenkette enthält</td>
-                        </tr>
-                    </table>
-                </section>
-            </section>
-            <section>
-                <section>
-                    <h3 class="green" style="font-size: 1.5em;">6. Spezifität</h3>
-                    <blockquote class="fragment">"Sobald Stylesheets ein bisschen länger werden, gibt es früher oder später für ein HTML-Element mehrere CSS-Regeln, die sich zum Teil widersprechen. Die Frage ist, wie der Browser in solchen Konfliktfällen entscheidet."</blockquote>
-                    <br>
-                    <br>
-                    <h1 class="fragment">
-                        <strong>Ganz Einfach!</strong>
-                    </h1>
-                </section>
-                <section>
-                    <h2>6.1 Spezifität</h2>
-                    <p>Der Browser berechnet anhand eines einfachen Punktesystems, welcher Selektor der wichtigste ist</p>
-                    <br>
-                    <br>
-                    <table class="fragment">
-                        <tr>
-                            <td>einfacher Typ-Selektor</td>
-                            <td>p</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td>Klasse</td>
-                            <td>.infobox</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>Pseudoklasse</td>
-                            <td>:visited</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>ID</td>
-                            <td>#navibereich</td>
-                            <td>100</td>
-                        </tr>
-                        <tr>
-                            <td>Attribut style = " "</td>
-                            <td>style="color: red;"</td>
-                            <td>1000</td>
-                        </tr>
-                    </table>
-                </section>
-                <section>
-                    <h2>6.2 Specifity
-                        <strong>||</strong>Spezifität
-                        <strong>||</strong>Spezifizität</h2>
-                    <p>Weitere Beispiele
-                        <strong>&</strong>detailierte Erklärungen findet ihr unter:</p>
-                    <br>
-                    <a href="http://little-boxes.de/lb1/6.5-spezifitaet-punktesystem-fuer-selektoren.html">Spezifität: das Punktesystem für Selektoren</a>
-                    <br>
-                    <p>und/oder</p>
-                    <a href="http://thestyleworks.de/basics/specificity.shtml">Berechnung der Spezifizität mittels Matrizenverfahren
-                        <strong style="font-size:0.7em">(╯°□°）╯︵┻━┻</strong>
-                    </a>
-                </section>
-            </section>
-            <!-- Transitions -->
-            <section>
-                <section>
-                    <h2>7. Transitions</h2>
-                    <ul>
-                        <li>ermöglichen es, Änderung eines Elements
-                            <strong>von einem Style zum anderem</strong>zu steuern
-                            <br>
-                        </li>
-                        <li>Solch eine Änderung geschieht beispielsweise beim :hover über ein Element.</li>
-                    </ul>
-                    <pre>
-                        <code style="overflow:hidden">div { transition-property: width; /*Property, auf das transition anzuwenden ist (all=alle Properties)*/ transition-duration: 1s; /*Dauer der Transition-Animation */ transition-timing-function: linear; /*Timing-Funktion gibt zeitl. Verlauf der Animation vor*/ transition-delay: 2s; /*Delay bevor Transition einzusetzen hat*/ }
-                        </code>
-                    </pre>
-                    <br>
-                    <div style="text-align: center" class="fragment shrink">
-                        <strong>--> transition!
-                            <--</strong>
-                    </div>
-                </section>
-            </section>
-            <section>
-                <section>
-                    <h1>Lauter
-                        <strong>Theorie</strong>!
-                        <br>Wo bleibt die
-                        <strong>Praxis</strong>?!
-                        <br>
-                        <br>
-                        <br>
-                    </h1>
-                    <h2>weiter zu den Übungen... ;D</h2>
-                </section>
-            </section>
+                    <h2>8.Übung</h2>
+					<br>
+                    <a href="http://www.gidf.de"><h4>Lernen durch Übung!</h4></a>
+				</section>
+			</section>
+                
 
             <!------------------------------------------------------------------------------------------------------------------------Ende der Präsentation->
 <!------------------------------------------------------------------------------------------------------------------------->
