@@ -132,7 +132,7 @@
                     <h2>3. XMLHttpRequest API </h2>
 					<br>
                     <li>Objekt als Schnittstelle zur Verbindung von Server und Client</li>  
-                    <li>arbeitet snychron oder asynchron</li>
+                    <li>arbeitet synchron oder asynchron</li>
                     <li>Übertragung über normale HTTP-Anfragen</li>
                     <li>Browser-Abwärtskompatibilität zu IE5, IE6 mit ActiveXObject</li>
                 </section>
@@ -177,23 +177,23 @@ if (window.XMLHttpRequest) {
                         <strong>3.2</strong> Die Anfrage 
                         
                     </h2>
-                    <h3 class="fragment"><strong>.open(</strong>method, url, <strong>[async, username, password])</strong></h3>
+                    <h3><strong>.open(</strong>method, url, <strong>[async, username, password])</strong></h3>
                     <ul>
                         <li class="fragment">Initialisiert die Anfrage</li>
                         <li class="fragment"> 
-                            <strong>method</strong> - HTTP-Methode mit der die Anfrage gesendet wird
-                            <br>wichtigsten Möglichkeiten sind <strong>"GET"</strong> oder <strong>"POST"</strong>
+                            <strong>method</strong> - HTTP-Methode, mit der die Anfrage gesendet wird.
+                            <br>Wichtigsten Möglichkeiten sind: <strong>"GET"</strong> oder <strong>"POST"</strong>
                         </li>
                         <li class="fragment"> 
-                            <strong>url</strong> - Adresse an die die Anfrage gesendet wird
+                            <strong>url</strong> - Adresse
                         </li>
                         <li class="fragment"> 
-                            <strong>asnyc</strong> - Gibt an ob die Anfrage asynchron oder nicht durchgeführt wird
+                            <strong>asnyc</strong> - Gibt an, ob die Anfrage asynchron ist oder nicht durchgeführt wird
                             <br>Standardwert ist <strong>true</strong> 
                         </li>
                     </ul>
                     <br><br>
-                    <h3 class="fragment"><strong>.send()</strong></h3>
+                    <h3><strong>.send()</strong></h3>
                     <ul>
                         <li class="fragment">Sendet die Anfrage ab</li>
                     </ul>
@@ -210,7 +210,7 @@ if (window.XMLHttpRequest) {
                         <strong>3.2</strong> Die Anfrage
                         
                     </h2>
-                    <h3 class="fragment"><strong>Beispiel</strong></h3>
+                    <h3><strong>Beispiel</strong></h3>
                     <ul>    
                         <li class="fragment"> 
                             Wenn .open(...) <strong>synchron</strong> initialisiert wird (asnyc==false)
@@ -233,18 +233,18 @@ ajaxObject.send();
                         <strong>3.3</strong> Antwort
                         
                     </h2>
-                    <h3 class="fragment"><strong>.responseText</strong> oder <strong>.responseXML</strong></h3>
+                    <h3 class=><strong>.responseText</strong> oder <strong>.responseXML</strong></h3>
                     <ul>    
                         <li class="fragment"> 
-                            beinhaltet bei erfolgreicher Durchführung die Antwort des Servers 
+                            beinhaltet, bei erfolgreicher Durchführung, die Antwort des Servers 
                         </li>
                         <br>
                         <li class="fragment">
-                            wenn die Antwort des Servers im XML geliefert wird - .responseXML verwenden
+                            wenn, die Antwort des Servers im XML geliefert wird:<strong> .responseXML </strong> verwenden
                         </li>
                         <br>
                         <li class="fragment">
-                            .responseText liefert die Antwort als String
+                           <strong>  .responseText </strong>  liefert die Antwort als String
                         </li>
                     </ul>
                     
@@ -259,7 +259,7 @@ ajaxObject.send();
                     </h2>
                     <h3 ><strong>.readyState</strong></h3>
                     <ul>
-                        <li > 
+                        <li class="fragment" > 
                             Die Variable <strong>.readyState</strong> durchläuft <strong>nacheinander fünf Zustände</strong>,
                             <br>die den <strong>aktuellen Status</strong> der Anfrage mit folgenden Werten repräsentieren:
                             <br><strong>0</strong>: Anfrage nicht initalisiert
@@ -272,7 +272,7 @@ ajaxObject.send();
                     
                     <h3 ><strong>.status</strong></h3>
                     <ul>
-                        <li > 
+                        <li class="fragment" > 
                             Gibt nach Verarbeitung der Anfrage den <strong>HTTP-Statuscode</strong> an.
                             <br>Die zwei wichtigstens Statuscodes sind:
                             <br><strong>200</strong>: Anfrage wurde erfolgreich bearbeitet
@@ -288,8 +288,8 @@ ajaxObject.send();
                         
                     </h2>
                     <h3><strong>.onReadyStateChange = function(){ ... }</strong></h3>
-                    <ul>
-                        <li> 
+                    <ul class="fragment">
+                        <li > 
                             Die .onReadyStateChange Funktion wird wie der Funktionsname schon sagt bei 
                             <br><strong>jeder Änderung der Variablen .readyState aufgerufen</strong>
                         </li>
@@ -299,8 +299,8 @@ ajaxObject.send();
                     </ul>
                     <br><br>
                     <h3 ><strong>Beispiel</strong></h3>
-                    <pre>
-<code>ajaxObject.onReadyStateChange = function() {
+                    <pre class="fragment">
+<code>ajaxObject.onReadyStateChange = functi    on() {
     // Bei erfolgreicher Anfrage an den Server
     if(ajaxObject.readyState == 4 && ajaxObject.status == 200){
         alert(ajaxObject.responseText);
@@ -332,50 +332,50 @@ ajaxObject.send();
                 <section>
                     
                         <h2>
-                            <strong>4.1</strong>Aufbau - Einfache Variabeln</h2>
+                            <strong>4.1</strong> Aufbau - Einfache Variabeln</h2>
                         <ul>
                             <pre>
-                                <code class="fragment">{ 
+                                <code>{ 
   "Stadt": "Gummersbach", 
   "Postleitzahl": 51643,
-}</code>
-                            </pre>
-                            <li class="fragment">Zugriff über:
-                                <strong>x.Stadt;</strong>
-                            </li>
+}</code>    </pre>
+                            <spawn class="fragment">Zugriff über:
+                                <strong>.Stadt;</strong> 
+                            </spawn>
                         </ul>
                     
-                </section>
+            
 
                 <!--Section 6.2 Array-->
-                <section>
-                    
+               
+                    <br><br>
                         <h2>
-                            <strong>4.2</strong>Aufbau - Arrays</h2>
+                            <strong>4.2</strong> Aufbau - Arrays</h2>
                         <ul>
                             <pre>
-                                <code class="fragment">{
+                                <code>{
   "Stadt": "Gummersbach", 
   "Schulen": [FH, Berufkolleg],
 }</code>
-
                             </pre>
-                            <li class="fragment">Zugriff über:
-                                <strong>x.Schulen[0];</strong>
-                            </li>
+                            
+                            <spawn class="fragment">Zugriff über:
+                                <strong>.Schulen[0];</strong>
+                            </spawn>
                         </ul>
                     
                 </section>
 
 
-                <!--Section 6.3 Objecte-->
+                <!--Section 6.3 Object-->
                 <section>
                     
                         <h2>
-                            <strong>4.3</strong>Aufbau - Object</h2>
+                            <strong>4.3</strong> Aufbau - Object</h2>
                         <ul>
-                            <pre>
-                                <code class="fragment">{ 
+                            <spawn class="fragment">
+                                <pre>
+                                    <code >{ 
   "Stadt": "Gummersbach", 
   "Bürgermeister": {
                      "Name":"Helmenstein", 
@@ -383,20 +383,20 @@ ajaxObject.send();
                    }
 }</code>
                             </pre>
-							<li class="fragment"> Zugriff über: <strong>x.Bürgermeister.Name;</strong> </li>
+							 Zugriff über: <strong>.Bürgermeister.Name;</strong>
+                            </spawn>
                         </ul>
-                    
                 </section>
                 
                 
-                <!--Section 6.4 Arrays in Objecte-->
+                <!--Section 6.4 Arrays in Object-->
                 <section>
                     
                         <h2>
-                            <strong>4.4</strong>Arrays in Objecte</h2>
+                            <strong>4.4</strong> Arrays in Object</h2>
                         <ul>
                             <pre>
-                                <code class="fragment">{ 
+                                <code >{ 
   "Stadt": "Gummersbach", 
   "Bürgermeister": {
                      "Name":"Helmenstein", 
@@ -405,8 +405,10 @@ ajaxObject.send();
                    }
 }</code>
                             </pre>
-                            <li class="fragment">Zugriff über:
-                                <strong>x.Bürgermeister.Autos[0];</strong></li>
+                        <spawn class="fragment">
+                           Zugriff über:
+                                <strong>.Bürgermeister.Autos[0];</strong>
+                            </spawn>
                         </ul>
                     
                 </section>
@@ -416,12 +418,12 @@ ajaxObject.send();
                 <section>
                     
                         <h2>
-                            <strong>4.5</strong>Aufbau - Parser</h2>
+                            <strong>4.5</strong> Aufbau - Parser</h2>
                         <ul>
                             <pre>
-                                <code class="fragment">var json = JSON.parse(Object.bsp);</code>
+                                <code>var json = JSON.parse(stringVariable);</code>
                             </pre>
-                            <li class="fragment">Wandelt passende Daten in eine JSON-Variable um</li>
+                            <spawn class="fragment">Wandelt einen String mit    passende Daten in eine JSON-Variable um</spawn>
                         </ul>
                     
                 </section>
@@ -433,10 +435,10 @@ ajaxObject.send();
                 <section>
                     <h2>5. Same-Origin-Policy (SOP) </h2>
                     <br>
-                    <li> Ist ein Schutzmechanismus im Browser der <strong>verbietet</strong>, dass clientseitige Skripte auf <strong>Ressourcen von fremden Seiten</strong> zugreifen können.
+                    <li> Ist ein <strong>Schutzmechanismus</strong> im Browser der <strong>verbietet</strong>, dass clientseitige Skripte auf <strong>Ressourcen von fremden Seiten</strong> zugreifen können.
                     </li>
                     <br>
-                    <li>Die Regel wird dann angewendet wenn sich die URL auf die zugegriffen wird von der aktuellen <strong>URL im Port, Hostnamen, oder Protokoll unterscheidet</strong>
+                    <li>Die Regel wird dann angewendet, wenn sich die URL, von der aktuellen <strong>URL <br> im Port, Hostnamen, oder Protokoll <u>unterscheidet</u></strong>
                     </li>
                     <br>
                     <li>
@@ -458,7 +460,7 @@ ajaxObject.send();
                         </li>
                         <br>
                         <li>
-                            Gibt Servern die Möglichkeit einzustellen von welcher URL mit Skripten auf lokale Ressourcen zugegriffen werden kann.
+                            Der Serveradmin kann dadurch einstellen, von welcher URL, <br> mit Skripten auf lokale Ressourcen zugegriffen werden kann. 
                         </li><br>
                         <li>
                             <strong>Access-Control-Allow-Origin: *</strong> - Erlaubt allen Seiten Zugriff
@@ -478,7 +480,7 @@ ajaxObject.send();
                         
                         <ul>
                             <li> 
-                                <strong>JSONP</strong> nutzt die Möglichkeit aus dass der <strong>&lt;script&gt;</strong> Tag nicht von der Same-Origin-Policy betroffen ist
+                                <strong>JSONP</strong> nutzt die Möglichkeit aus, <br> dass der <strong>&lt;script&gt;</strong> Tag  <u>nicht</u> von der Same-Origin-Policy betroffen ist
                             </li>
                             <li>
                                 Man kann im Gegensatz zu <strong>CORS</strong> allerdings nur GET-Anfragen senden
@@ -498,11 +500,11 @@ ajaxObject.send();
                     <h2>6. Nachteile </h2>
                     <br>
                     <li>JavaScript notwendig</li>
-					<li>Zurück-Button, Lesezeichen funktionieren nur über Umwege</li>
-					<li>Überbrückung der Latenzzeit übernimmt nicht der Browser</li>
+					<li>Zurück-Button und Lesezeichen funktionieren nur über Umwege</li>
+					<li>Überbrückung der Latenzzeit übernimmt nicht der Browser (Lade-Indikator fehlt)</li>
 					<li>SEO aufwendig</li>
-					<li>nicht barrierefrei (Hook-Ansatz: alternative Seite)</li>
-					<li>Polling-Problem (Ajax-Client muss ständig Anfragen senden, da Server nicht asynchron arbeiten</li>
+					<li>nicht barrierefrei (Hook-Ansatz: zusätzliche Javascriptfreie Seite)</li>
+					<li>Polling-Problem (Ajax-Client muss ständig Anfragen senden, da Server nicht immer asynchron arbeiten)</li>
                 </section>
               </section>
 			  
@@ -513,10 +515,10 @@ ajaxObject.send();
                 <section>
                     <h2>7. Vorteile</h2>
                     <br>
-                    <li>Funktionen der Seite bleiben beim Nachladen erhalten</li>
-                    <li>Einsparung von Daten, da statische Daten nur einmal geladen werden</li>
+                   <li>Einsparung von Daten, da statische Daten nur einmal geladen werden</li>
+                    <li>Funktionen der Seite bleiben beim Nachladen erhalten und nutzbar</li>
                     <li>Plattformunabhängig</li>
-                    <li>Anwendungen haben gute Usability, ersetzen so Desktopanwendungen</li>
+                    <li>Ajax-Anwendungen haben gute Usability und können so Desktop-Anwendungen ersetzen (Beispiel: Office-Anwendungen)</li>
                 </section>
             </section>
 			

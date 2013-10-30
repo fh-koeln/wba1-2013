@@ -25,19 +25,21 @@
 
                 
                 var ajaxObject;
-                /*** TODO
-                *    ajaxObject abhängig von den verschiedenen Browser-Versionen instanzieren
-                ***/
+                /************ 
+                *  TODO :
+                *  ajaxObject abhängig von den verschiedenen Browser-Versionen instanzieren
+                *************/
 
                 // Bei jeder Änderung der .readyState Variablen wird 
                 // die Funktion .onREADYSTATEchange aufgerufen  
                 ajaxObject.onreadystatechange = function() {
                     
-                    if(/*** TODO : erfolgreiche anfrage ***/ ){
+                    if(/***  TODO : erfolgreiche anfrage  ***/ ){
                         
-                        /*** TODO
-                        *    responseText in JSON-Objekt umwandeln
-                        ***/
+                        /************ 
+                        *  TODO: 
+                        *  responseText in JSON-Objekt umwandeln
+                        *************/
                         var json
 
                         // Setzt für jedes Foto die URL aus den Daten zusammen
@@ -46,10 +48,11 @@
                             var photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg';
                             var imageElement = '<img src="' + photoURL + '">';
                             
-                            /*** TODO :
-                                Hier mit document.getElementById("id").innerHTML = "text"
-                                die Bilder ins <div> element mit der Id container einfügen
-                            ***/
+                            /************ 
+                            *   TODO :
+                            *   Hier mit document.getElementById("id").innerHTML = "text"
+                            *   die Bilder ins <div> element mit der Id container einfügen
+                            *************/
                         }
 
                         // .children verweist auf den Array der Elemente innerhalb eines Elements
@@ -59,15 +62,22 @@
                     }
 
                     // Wenn die Verbindung initialisiert wird
+                    /************ 
+                    *  TODO :
+                    *  Wenn die Serververbindung hergestellt wird
+                    *  disable den button in #controls
+                    *  und setze den Text 
+                    *************/
                     if (ajaxObject.readyState == 1) {
                         document.getElementById("controls").children[0].disabled = "disabled";
                         document.getElementById("status").innerHTML = "Lade...";
                     }
                 }
                 
-                /*** TODO
-                * Art der Anfrage festlegen
-                ***/
+                /************ 
+                *  TODO : 
+                *  Art der Anfrage festlegen
+                *************/
                 ajaxObject.send();
             }
         </script>
@@ -82,13 +92,31 @@
             <div id="status"></div>
         </div>
     </body>
+    
+    /************ 
+    *  AUFGABE 01
+    *
+    *  Erledige alle TODOs
+    *  und korrigiere das Dokument so wie 
+    ***/
 
     
-    /*** BONUS AUFGABE
-    * Erstelle ein Textfeld und 
-    * lade neue Bilder abhängig von den eingegebenen Wert rein.
+    /************ 
+    *  AUFGABE 02
+    * 
+    *  Erstelle ein Textfeld 
+    *  und lade neue Bilder abhängig von den eingegebenen Wert rein.
     *
-    * hint: form, input, parameter, this
+    *  hints: form, input, parameter, this
+    ***/
+    
+    
+    /************ 
+    *  BONUS AUFGABE:
+    *
+    *  Erstelle ein Menü mit dem man durch die einzelnen Seiten der Suchergebnisse navigieren kann.
+    *
+    *  hints: 
     ***/
     
 </html>
