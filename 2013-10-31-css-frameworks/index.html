@@ -218,7 +218,7 @@ body
 .little
     height: $small
     width: $small
-                    </code></pre></div>
+</code></pre></div>
                         <div style="margin-left: 70px; float: left; width: 45%">
                             <p style="font-size: 30px"><strong>S</strong>CSS</p>
                             <p style="font-size: 20px">Neuere Variante</p>
@@ -246,7 +246,7 @@ body{
     height: $small;
     width: $small;
 }
-                    </code></pre></div>
+</code></pre></div>
                         
                     </section>
                 </section>
@@ -302,7 +302,7 @@ body {
   position: absolute;
   left: 50%;
 }
-                    </code></pre></div>
+</code></pre></div>
                         <div style="margin-left: 70px; float: left; width: 45%">
                             <p style="font-size: 30px"><strong>S</strong>CSS</p>
                         <pre><code style="height: 500px">$border : 5px;
@@ -354,7 +354,7 @@ body{
     left: 50%;
     
 }
-                    </code></pre></div>
+</code></pre></div>
              </section>
                <section>
                 <img src="images/variablen.png">                   
@@ -363,16 +363,39 @@ body{
             
             <section><section>
                 <h2>Funktionen</h2>
-                <p>Funktionen können ein und den selben Ablauf an einer zentralen Stelle definieren.<br>
-                Dieser kann dann mit Übergabeparametern mehrfach im Code aufgerufen werden.</p>
+                <p>Funktionen können eingegebene Werte verarbeiten und wieder ausgeben.</p>
                 <div style="float: left; width: 45%">
                             <p style="font-size: 25px"><strong>CSS</strong></p>
                         
-                        <pre><code style="height: 500px"></code></pre></div>
+                        <pre><code style="height: 500px">.someSpan {
+  background: black;
+  width: 720px;
+  height: 200px;
+}
+.someSpan .left {
+  background: blue;
+  width: 445px;
+}
+</code></pre></div>
                         <div style="margin-left: 70px; float: left; width: 45%">
                             <p style="font-size: 25px"><strong>S</strong>CSS</p>
                         
-                        <pre><code style="height: 500px"></code></pre></div>
+                        <pre><code style="height: 500px">@function golden($size) {
+    @return ceil($size * 0.618);
+}
+
+$div_size: 720px;
+
+.someSpan {
+    background: black;
+    width: $div_size;
+    height: 200px;
+    .left{
+        background:blue;
+        width: golden($div_size);
+    }
+}
+</code></pre></div>
              </section>
                <section>
                 <img src="images/funktionen.png">                   
