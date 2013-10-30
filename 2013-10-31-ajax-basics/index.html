@@ -170,11 +170,96 @@ if (window.XMLHttpRequest) {
                     </ul>
                 </section>
                 
+                    
+				<!--Section 5.$ Anfrage-->
+                <section>
+                    <h2>
+                        <strong>3.2</strong> Die Anfrage 
+                        
+                    </h2>
+                    <h3 class="fragment"><strong>.open(</strong>method, url, <strong>[async, username, password])</strong></h3>
+                    <ul>
+                        <li class="fragment">Initialisiert die Anfrage</li>
+                        <li class="fragment"> 
+                            <strong>method</strong> - HTTP-Methode mit der die Anfrage gesendet wird
+                            <br>wichtigsten Möglichkeiten sind <strong>"GET"</strong> oder <strong>"POST"</strong>
+                        </li>
+                        <li class="fragment"> 
+                            <strong>url</strong> - Adresse an die die Anfrage gesendet wird
+                        </li>
+                        <li class="fragment"> 
+                            <strong>asnyc</strong> - Gibt an ob die Anfrage asynchron oder nicht durchgeführt wird
+                            <br>Standardwert ist <strong>true</strong> 
+                        </li>
+                    </ul>
+                    <br><br>
+                    <h3 class="fragment"><strong>.send()</strong></h3>
+                    <ul>
+                        <li class="fragment">Sendet die Anfrage ab</li>
+                    </ul>
+                    
+                    
+
+                    
+                </section>
                 
+                
+				<!--Section 5.5 Anfrage ansenden-->	
+                <section>
+                    <h2>
+                        <strong>3.2</strong> Die Anfrage
+                        
+                    </h2>
+                    <h3 class="fragment"><strong>Beispiel</strong></h3>
+                    <ul>    
+                        <li class="fragment"> 
+                            Wenn .open(...) <strong>synchron</strong> initialisiert wird (asnyc==false)
+                            <br>führt Javascript den auf .send() <strong>folgenden Befehl</strong> erst dann aus,
+                            <br>wenn die Anfrage komplett abgearbeitet worden ist.  
+                        </li>
+
+                    </ul>
+                    
+                    <pre class="fragment">
+<code>ajaxObject.open("GET", "zuLadendeDatei.htm", true);
+ajaxObject.send();
+</code>
+                    </pre>
+                </section>
+           
+           
+                <section>
+                    <h2>
+                        <strong>3.3</strong> Antwort
+                        
+                    </h2>
+                    <h3 class="fragment"><strong>.responseText</strong> oder <strong>.responseXML</strong></h3>
+                    <ul>    
+                        <li class="fragment"> 
+                            beinhaltet bei erfolgreicher Durchführung die Antwort des Servers 
+                        </li>
+                        <br>
+                        <li class="fragment">
+                            wenn die Antwort des Servers im XML geliefert wird .responseXML verwenden
+                        </li>
+                        <br>
+                        <li class="fragment">
+                            .responseText liefert die Antwort als String
+                        </li>
+                    </ul>
+                    
+                    <pre class="fragment">
+<code>ajaxObject.open("GET", "zuLadendeDatei.htm", true);
+ajaxObject.send();
+</code>
+                    </pre>
+                </section>
+           
+           
                 <!--Section 5.2 Event-->
                 <section>
                     <h2>
-                        <strong>3.2</strong> Das Event
+                        <strong>3.4</strong> Das Event
                         
                     </h2>
                     <h3 ><strong>.readyState</strong></h3>
@@ -204,7 +289,7 @@ if (window.XMLHttpRequest) {
                 <!--Section 5.3 EventHandler-->
                 <section>
                     <h2>
-                        <strong>3.3</strong> Der EventHandler
+                        <strong>3.5</strong> Der EventHandler
                         
                     </h2>
                     <h3><strong>.onReadyStateChange = function(){ ... }</strong></h3>
@@ -220,65 +305,19 @@ if (window.XMLHttpRequest) {
                     <br><br>
                     <h3 ><strong>Beispiel</strong></h3>
                     <pre>
-<code>
-ajaxObject.onReadyStateChange = function() {
+<code>ajaxObject.onReadyStateChange = function() {
     // Bei erfolgreicher Anfrage an den Server
     if(ajaxObject.readyState == 4 && ajaxObject.status == 200){
         alert(ajaxObject.responseText);
     }
 };
+ajaxObject.open("GET", "http://meineDomain.de/datei.txt", true);
+ajaxObject.send();
 </code>
                     </pre>
                 </section>
                 
-                
-				<!--Section 5.$ Anfrage-->
-                <section>
-                    <h2>
-                        <strong>3.4</strong> Anfrage initialisieren
-                        
-                    </h2>
-                    <h3 class="fragment"><strong>.open(</strong>method, url, <strong>[async, username, password])</strong></h3>
-                    <ul>
-                        <li class="fragment"> 
-                            <strong>method</strong> - HTTP-Methode mit der die Anfrage gesendet wird
-                            <br>wichtigsten Möglichkeiten sind <strong>"GET"</strong> oder <strong>"POST"</strong>
-                        </li>
-                        <li class="fragment"> 
-                            <strong>url</strong> - Adresse an die die Anfrage gesendet wird
-                            <br>kann auch relativ auf den selben Server verweisen
-                        </li>
-                        <li class="fragment"> 
-                            <strong>asnyc</strong> - Gibt an ob die Anfrage asynchron oder nicht durchgeführt wird
-                            <br>Standardwert ist <strong>true</strong> 
-                        </li>
-                    </ul>
-                    <br><br>
-                    <h3 class="fragment"><strong>Beispiel</strong></h3>
-                    <pre class="fragment">
-<code>ajaxObject.open("GET", "zuLadendeDatei.htm", true);
-</code>
-                    </pre>
-                    
-                </section>
-                
-                
-				<!--Section 5.5 Anfrage ansenden-->	
-                <section>
-                    <h2>
-                        <strong>3.5</strong> Anfrage absenden
-                        
-                    </h2>
-                    <h3 class="fragment"><strong>.send()</strong></h3>
-                    <ul>    
-                        <li class="fragment"> 
-                            Wenn die Anfrage <strong>synchron</strong> initialisiert wird (asnyc==false)
-                            <br>führt Javascript den auf diese Methode <strong>folgenden Befehl</strong> erst dann aus,
-                            <br>wenn die Anfrage komplett abgearbeitet worden ist.  
-                        </li>
-
-                    </ul>
-                </section>
+            
             </section>
 
 			
