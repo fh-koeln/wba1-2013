@@ -43,7 +43,7 @@
                     
                     // Wenn die Anfrage erfolgreich verarbeitet und Daten zurückgesendet worden sind          
                     if (ajaxObject.readyState == 4 && ajaxObject.status == 200) {
-                        pageId++;
+
 
                         // Wandelt den ResponseText in ein JSON-Objekt um
                         var json = JSON.parse(ajaxObject.responseText);
@@ -55,7 +55,7 @@
                             var imageElement = '<img src="' + photoURL + '">';
 
                             // Fügt jedes Foto an den Inhalt des <div> Elements mit der ID Container an
-                            document.getElementById("container").innerHTML += imageElement;
+                            document.getElementById("container").innerHTML = imageElement;
                         }
                         
                         // .children verweist auf den Array der Elemente innerhalb eines Elements
