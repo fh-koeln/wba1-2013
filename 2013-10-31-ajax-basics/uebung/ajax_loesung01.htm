@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Ajax Tutorial</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            
+            function getDate() {
+                if (window.XMLHttpRequest) {
+                    myAjax = new XMLHttpRequest();
+                } else {
+                    //Dieser Code wird als Fallback für den IE5 und IE6 benötigt, da diese die obrige Schreibweise nicht unterstützen.
+                    myAjax = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+
+                myAjax.onreadystatechange = function() {
+                    alert(myAjax.readyState + " " + myAjax.status);
+                    if (myAjax.readyState == 4 && myAjax.status == 200) {
+                        alert(myAjax.responseText);
+                        //document.getElementById("container").innerHTML = myAjax.responseText;
+                    }
+                };
+
+                myAjax.open("GET", "http://timeapi.org/utc/now.json", true);
+                myAjax.send();
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div id="container">
+            <!-- HIER DIE BILDER REINLADEN -->
+        </div>
+        <div id="controls">
+            <input type="button" value="Mehr Bilder" onClick="getDate();" />
+            <div id="status"></div>
+        </div>
+    </body>
+
+</html>
