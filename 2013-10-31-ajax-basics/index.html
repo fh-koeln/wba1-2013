@@ -127,14 +127,14 @@
                     
             <!-----------------------------------------------------------------------------------------------------------------------------> 
 			<!--Section 5.0 XMLHttpRequest -->
-            <section>
+       <section>
                 <section>
                     <h2>3. XMLHttpRequest API </h2>
 					<br>
-                    <li>Object als Schnittstelle zur Verbindung von Server und Client</li>  
-                    <li>arbeitet asynchron</li>
-                    <li>Übertragung über normale synchrone HTTP-Anfragen</li>
-                    <li>Browserunterschiede</li>
+                    <li>Objekt als Schnittstelle zur Verbindung von Server und Client</li>  
+                    <li>arbeitet snychron oder asynchron</li>
+                    <li>Übertragung über normale HTTP-Anfragen</li>
+                    <li>Browser-Abwärtskompatibilität zu IE5, IE6 mit ActiveXObject</li>
                 </section>
                 
 				
@@ -174,16 +174,31 @@ if (window.XMLHttpRequest) {
                 <!--Section 5.2 Event-->
                 <section>
                     <h2>
-                        <strong>3.2</strong> Das Event
+                        <strong>3.2</strong> Das Status-Event
                         
                     </h2>
-                    <h3 class="fragment"><strong>.readyState</strong></h3>
+                    <h3 ><strong>.readyState</strong></h3>
                     <ul>
-                        <li class="fragment"> 
-                            
-                        </li>
+                        <li > 
+                            Die Variable <strong>.readyState</strong> durchläuft <strong>nacheinander fünf Zustände</strong>,
+                            <br>die den <strong>aktuellen Status</strong> der Anfrage mit folgenden Werten repräsentieren:
+                            <br><strong>0</strong>: Anfrage nicht initalisiert
+                            <br><strong>1</strong>: Serververbindung hergestellt
+                            <br><strong>2</strong>: Anfrage erhalten
+                            <br><strong>3</strong>: Verarbeite Anfrage
+                            <br><strong>4</strong>: Anfrage verarbeitet und Antwort erhalten
+                        </li>          
                     </ul>
                     
+                    <h3 ><strong>.status</strong></h3>
+                    <ul>
+                        <li > 
+                            Gibt nach Verarbeitung der Anfrage den <strong>HTTP-Statuscode</strong> an.
+                            Die zwei wichtigstens Statuscodes sind:
+                            <br><strong>200</strong>: Anfrage wurde erfolgreich bearbeitet
+                            <br><strong>404</strong>: Angeforderte Ressource wurde nicht gefunden
+                        </li>          
+                    </ul>
                 </section>
                 
                 <!--Section 5.3 EventHandler-->
@@ -192,11 +207,14 @@ if (window.XMLHttpRequest) {
                         <strong>3.3</strong> Der EventHandler
                         
                     </h2>
-                    <h3 class="fragment"><strong>.onReadyStateChange = function(){ ... }</strong></h3>
+                    <h3><strong>.onReadyStateChange = function(){ ... }</strong></h3>
                     <ul>
-                        <li class="fragment"> 
-                            <strong>method</strong> - HTTP-Methode mit der die Anfrage gesendet wird
-                            <br>wichtigsten Möglichkeiten sind <strong>"GET"</strong> oder <strong>"POST"</strong>
+                        <li> 
+                            Die .onReadyStateChange Funktion wird wie der Funktionsname schon sagt bei 
+                            <br><strong>jeder Änderung der Variablen .readyState aufgerufen</strong>
+                        </li>
+                        <li>
+                            Man muss selbst definieren was bei jedem Status
                         </li>
                     </ul>
                     <br><br>
@@ -204,7 +222,7 @@ if (window.XMLHttpRequest) {
                 </section>
                 
                 
-				<!--Section 5.$ Anfrage initialisieren-->
+				<!--Section 5.$ Anfrage-->
                 <section>
                     <h2>
                         <strong>3.4</strong> Anfrage initialisieren
@@ -216,12 +234,10 @@ if (window.XMLHttpRequest) {
                             <strong>method</strong> - HTTP-Methode mit der die Anfrage gesendet wird
                             <br>wichtigsten Möglichkeiten sind <strong>"GET"</strong> oder <strong>"POST"</strong>
                         </li>
-                        <br>
                         <li class="fragment"> 
                             <strong>url</strong> - Adresse an die die Anfrage gesendet wird
                             <br>kann auch relativ auf den selben Server verweisen
                         </li>
-                        <br>
                         <li class="fragment"> 
                             <strong>asnyc</strong> - Gibt an ob die Anfrage asynchron oder nicht durchgeführt wird
                             <br>Standardwert ist <strong>true</strong> 
@@ -317,6 +333,7 @@ if (window.XMLHttpRequest) {
 						
 						
 			  </section>
+                    <!--
 			{
 	"Stadt": "Gummersbach",
 	"Postleitzahl": 51643,
@@ -345,7 +362,7 @@ Auch innerhalb Objecte können Arrays vorkommen
 var json = JSON.parse(Object.bsp)
 
 Wandelt passende Daten in eine JSON-Variable um
-			
+			-->
 			<!----------------------------------------------------------------------------------------------------------------------------->
             <!--Section 7 Cops-->
           <section>
