@@ -29,3 +29,21 @@ input {
 input:disabled {
     color: #777;
 }
+
+#paging a {
+    border: 1px solid #fff;
+    background-color:#333;   
+    color:#fff;
+    text-decoration:none;
+    padding:1px 2px;
+    margin:0 2px;
+}
+
+#paging a:hover {
+    background-color:#333;   
+    color:#fff;
+}
+
+#paging a:active, #controls a:visited {
+    color:#fff;
+}
