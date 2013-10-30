@@ -420,7 +420,11 @@ Wandelt passende Daten in eine JSON-Variable um
                     </li>
                     <br>
                     <li>
-                        Verhindert viele Angriffe die sonst mit Skripten wie Javascript möglich wären
+                        <strong>Verhindert viele Angriffe</strong> die sonst mit Skripten wie Javascript möglich wären
+                    </li>
+                    <br>
+                    <li>
+                        Erschwert allerdings auch die <strong>Umsetzung</strong> von <strong>AJAX</strong>
                     </li>
                 </section>
               
@@ -428,17 +432,41 @@ Wandelt passende Daten in eine JSON-Variable um
                 <section>
                     <h2><strong>5.1</strong> Regel umgehen mit <br><strong>C</strong>ross-<strong>O</strong>rigin <strong>R</strong>esource <strong>S</strong>haring <strong>(CORS)</strong> </h2>
                     <br>
-                    
-                    <li> 
-                    </li>
+                    <ul>
+                        <li>
+                            Mit CORS wird der Standard des HTTP-Headers erweitert
+                        </li>
+                        <br>
+                        <li>
+                            Gibt Servern die Möglichkeit einzustellen von welcher URL mit Skripten auf lokale Ressourcen zugegriffen werden kann.
+                        </li><br>
+                        <li>
+                            <strong>Access-Control-Allow-Origin: *</strong> - Erlaubt allen Seiten Zugriff
+                        </li><br>
+                        <li>
+                            <strong>Access-Control-Allow-Origin: null</strong> - Erlaubt keiner Seite Zugriff
+                        </li><br>
+                        <li>
+                            <strong>Access-Control-Allow-Origin: example.com</strong> - Erlaubt nur einigen Seiten Zugriff
+                        </li>
+                    </ul>
                 </section>
               
                    <section>
-                        <h2><strong>5.1</strong> Regel umgehen mit </h2>
+                        <h2><strong>5.2</strong> Regel umgehen mit <br><strong>JSON with Padding (JSONP)</strong></h2>
                         <br>
                         
-                        <li> 
-                        </li>
+                        <ul>
+                            <li> 
+                                <strong>JSONP</strong> nutzt die Möglichkeit aus dass der <strong>&lt;script&gt;</strong> Tag nicht von der Same-Origin-Policy betroffen ist
+                            </li>
+                            <li>
+                                Man kann im Gegensatz zu <strong>CORS</strong> allerdings nur GET-Anfragen senden
+                            </li>
+                            <li>
+                                Der AJAX-Anteil fällt mit dieser Methode komplett weg 
+                            </li>
+                        </ul>
                     </section>
               </section>
 			
