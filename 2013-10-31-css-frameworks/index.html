@@ -124,8 +124,8 @@
                             </ul>
                     </section>
 
-                    <section data-markdown>
-                    <script type="text/template">
+                    <section>
+                   
                         <h2>Welche <strong>Frameworks</strong> gibt es?</h2>
                             <p class ="fragment">Einige Beispiele von einer großen Anzahl an Frameworks:</p>
                                 <ul class="fragment"><li><a href="http://sass-lang.com/">SASS/SCSS</a></li>
@@ -134,45 +134,41 @@
                                 <li><a href="http://www.blueprintcss.org/">Blueprint</a></li>
                            </ul>
                            <br>
+                        <br>
                     
                         <h2 class="fragment roll-in">Welches <strong>Framework</strong> ist das richtige für mich?</h2>
-                                <li class="fragment">text</li>
-                                <li class="fragment">text</li>
-                                <li class="fragment">text</li>
+                                <p class="fragment">Die Frameworks sind im Grundumfang und Funktionalität sehr ähnlich, d.h. für einen:
+                                <li class="fragment">Persönliche Vorliebe</li>
+                                <li class="fragment">Aktualität</li>
+                                <li class="fragment">Wiederverwertbarkeit</li>
+                                <li class="fragment">Community&Support</li>
+                                <li class="fragment">"Automatische" oder "Manuelle" Erstellung</li>
                                 
-				    </script>
+				    
                     </section>
                     
-                    <section data-markdown>
-                    <script type="text/template">
+                    <section>
                         <h2>Vor<strong>teile</strong></h2>
                             <ul class="fragment">
-                                <li>blubb</li>
-                                <li>blubb</li>
-                                <li>blubb</li>
-                                <li>blubb</li>
+                                <li>Zugriff auf eine große Codebibliothek und somit schnellere Webentwicklung</li>
+                                <li>Für zukünftige Webseiten wiederverwendbar</li>
+                                <li>Sauberes und übersichtliches Layout</li>
+                                <li>Übergreifende Browserkompabilitäten</li>
+                                <li>Regelmäßige Updates</li>
+                                <li>Zahlreiche Communities und Foren für Austausch von Erfahrungsberichten und Hilfen</li>
                             </ul>
                             <br>
-                            
+                            <br>
                         <h2>Nach<strong>teile</strong></h2>
                             <ul class="fragment">
-                                <li>blubb</li>
-                                <li>blubb</li>
-                                <li>blubb</li>
-                                <li>blubb</li>
+                                <li>Flache Lernkurve für CSS-Anfänger</li>
+                                <li>Überflüssige extra Codes, die wahrscheinlich nicht gebraucht werden und den Quelltext unübersichtlicher machen</li>
+                                <li>Können fehlerhafte Codes von den Entwicklern enthalten</li>
+                                <li>Gezwungen die Framework Semantik zu lernen</li>
                             </ul>
-                    </script>
                     </section>
                 </section>
-                   
-					<!--<p class="fragment grow">grow</p>
-					<p class="fragment shrink">shrink</p>
-					<p class="fragment roll-in">roll-in</p>
-					<p class="fragment fade-out">fade-out</p>
-					<p class="fragment highlight-red">highlight-red</p>
-					<p class="fragment highlight-green">highlight-green</p>
-					<p class="fragment highlight-blue">highlight-blue</p>-->
-
+                
 <!--------------------- SASS / SCSS -------------------->
                 
 				<section>
@@ -188,15 +184,22 @@
                         SCSS - <strong>S</strong>assy <strong>C</strong>ascading <strong>S</strong>tyle<strong>s</strong>heet</ul>
                         <br>
                         <br>
-                        <li class="fragment">Ruby muss installiert sein</li>
-                        <li class="fragment">Es ist möglich eine abgespeckte Online-Variante zu benutzten (nur für Testzwecke empfehlenswert!)</li>
-                        <li class="fragment">blubb</li>
+                        <li class="fragment">Für Gebrauch am eigenen Rechner muss Ruby installiert sein</li>
+                        <br>
+                    <h4 class="fragment roll-in" style="font-size: 33px">Wie setze ich <strong style="color: white">SASS / SCSS</strong> ein?</h4>
+                        
+                        <li class="fragment">Über das Terminal</li>
+                        <li class="fragment">Mittels der App <a href="http://mhs.github.io/scout-app/">Scout</a></li>
+                        <li class="fragment">Abgespeckte Online-Varianten</li>
                     </section>
                     
                     <section>
                         <h2>Unterschiede <strong>in der</strong> Benutzung</h2>
                         <div style="float: left; width: 45%">
-                            <p style="font-size: 25px">S<strong>A</strong>SS</p>
+                            <p style="font-size: 30px">S<strong>A</strong>SS</p>
+                            <p style="font-size: 20px">Ältere Variante</p>
+                            <p style="font-size: 20px">Einrückungsschema als Semantik</p>
+                            <p style="font-size: 20px">Dateiendung: .sass</p>
                         
                         <pre><code style="height: 500px">$big: 280px
 $small: 50px
@@ -217,7 +220,10 @@ body
     width: $small
                     </code></pre></div>
                         <div style="margin-left: 70px; float: left; width: 45%">
-                            <p style="font-size: 25px"><strong>S</strong>CSS</p>
+                            <p style="font-size: 30px"><strong>S</strong>CSS</p>
+                            <p style="font-size: 20px">Neuere Variante</p>
+                            <p style="font-size: 20px">Geschweifte Klammern als Semantik</p>
+                            <p style="font-size: 20px">Dateiendung: .scss</p>
                         
                         <pre><code style="height: 500px">$big : 280px;
 $small : 50px;
@@ -252,8 +258,7 @@ body{
                     <p>Vereinfacht das Verändern von z.B. Farben, Font-Styles oder anderen CSS Werten.<br>
                         Mit dem <code>$-Zeichen</code> wird eine Variable deklariert und aufgerufen.</p>
                                                 <div style="float: left; width: 45%">
-                            <p style="font-size: 25px"><strong>CSS</strong></p>
-                        
+                            <p style="font-size: 30px"><strong>CSS</strong></p>
                         <pre><code style="height: 500px">* {
   margin: 0px;
   padding: 0px;
@@ -299,8 +304,7 @@ body {
 }
                     </code></pre></div>
                         <div style="margin-left: 70px; float: left; width: 45%">
-                            <p style="font-size: 25px"><strong>S</strong>CSS</p>
-                        
+                            <p style="font-size: 30px"><strong>S</strong>CSS</p>
                         <pre><code style="height: 500px">$border : 5px;
 $big : 280px;
 $small : 50px;
