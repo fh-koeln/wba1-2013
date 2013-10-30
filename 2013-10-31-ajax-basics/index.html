@@ -262,10 +262,89 @@ if (window.XMLHttpRequest) {
                 <section>
                     <h2>4. Javascript Object Notation (JSON) </h2>
                     <br>
-                    <li>blub  
+                    <li>Datenformat zum Informationsaustausch zwischen Server und Client</li>
+					<li>Speichert Variabeln, Arrays und Objecte</li>
                 </section>
-              </section>
-			
+				
+				
+				<!--Section 6.1 Aufbau-->
+                <section>
+                    <h2>
+                        <strong>3.1</strong> Aufbau - Einfache Variabeln</h2>
+                     <ul>
+                             <pre>
+                                <code class="fragment" >{
+										"Stadt": "Gummersbach",
+										"Postleitzahl": 51643,
+									   }</code>
+                            </pre>
+							<li class="fragment"> Zugriff über: <strong>x.Stadt</strong> </li>
+				</section>
+							
+							
+				<!--Section 6.2 Array-->
+                <section>
+                    <h2>
+                        <strong>3.2</strong> Aufbau - Arrays</h2>
+                     <ul>
+                             <pre>
+                                <code class="fragment">{
+										"Stadt": "Gummersbach",
+										"Schulen": ["FH", "Berufsschule"],
+									   }</code>
+                            </pre>
+							<li class="fragment"> Zugriff über: <strong>x.Schulen[0];</strong> </li>
+				</section>
+				
+				
+				<!--Section 6.2 Objecte-->
+                <section>
+                    <h2>
+                        <strong>3.3</strong> Aufbau - Objecte</h2>
+                     <ul>
+                             <pre>
+                                <code class="fragment" >{
+										"Stadt": "Gummersbach",
+										"Bürgermeister": {
+											"Name":"Helmenstein",
+											"Vorname": Frank",
+											}
+									   }</code>
+                            </pre>
+							<li class="fragment"> Zugriff über: <strong>x.Bürgermeister.Name;</strong> </li>
+							<li>Auch innerhalb Objecte können Arrays vorkommen</li>
+				</section>
+						
+						
+			  </section>
+			{
+	"Stadt": "Gummersbach",
+	"Postleitzahl": 51643,
+}
+Zugriff über: x.Stadt
+
+5.2 Arrays
+{
+	"Stadt": "Gummersbach",
+	"Schulen": ["FH", "Berufsschule"],
+}
+Zugriff über: x.Schulen[0];
+
+5.3 Objecte
+{
+	"Stadt": "Gummersbach",
+	"Bürgermeister": {
+		"Name":"Helmenstein",
+		"Vorname": Frank",
+		}
+}
+Zugriff über: x.Bürgermeister.Name;
+Auch innerhalb Objecte können Arrays vorkommen
+
+5.4 Parser
+var json = JSON.parse(Object.bsp)
+
+Wandelt passende Daten in eine JSON-Variable um
 			
 			<!----------------------------------------------------------------------------------------------------------------------------->
             <!--Section 7 Cops-->
