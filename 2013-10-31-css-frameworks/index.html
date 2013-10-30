@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Title of presentation -->
+		<title>CSS Frameworks</title>
+		<!-- Short description of presentation -->
+		<meta name="description" content="Demo of Reveal.js functions and features">
+		<!-- Author of presentation -->
+		<meta name="author" content="Dominik Schilling">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- Can be monokai, solarized_dark, solarized_light, sunburst, tomorrow-night-bright, zenburn -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Web-basierte Anwendungen 1</h1>
+					<h2>CSS Frameworks</h2>
+
+					<p>31. Oktober 2013</p>
+
+					<p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
+					Campus Gummersbach</p>
+
+					<p style="margin-top:10%">Hannah Schinz<br>
+					Nico Sebastian Schoenenberg<br>
+					Marija Kandic</p>
+				</section>
+
+				<!--<section>
+					<section>
+						<h2>Backgrounds</h2>
+					</section>
+
+					<section class="center" data-background="#77aabb">
+						<pre><code>&lt;section data-background="#77aabb"&gt;
+
+&lt;/section&gt;</code></pre>
+					</section>
+
+					<section data-background="#442211">
+						<pre><code>&lt;section data-background="#442211"&gt;
+
+&lt;/section&gt;</code></pre>
+					</section>
+
+					<section data-background-image="images/github-mac.png" data-background-position="top center">
+						<pre><code>&lt;section data-background="images/background.jpg" data-background-position="top center"&gt;
+
+&lt;/section&gt;</code></pre>
+					</section>
+
+				</section>-->
+
+<!--------------------- Inhaltsangabe -------------------->
+                
+                <section>
+                    <h2>Aufbau der <strong>Präsentation</strong></h2>
+                    <ul style="float:left">
+                    <li>Was sind Frameworks?</li>
+                    <li>Welche Frameworks gibt es?</li>
+                    <li>Vor- und Nachteile</li>
+                    <li>Das Framework <strong>SASS / SCSS</strong></li>
+                        <ul>
+                        <li>Benutzung / Unterschiede</li>
+                        <li>Variablen</li>
+                        <li>Funktionen</li>
+                        <li>Mixin</li>
+                        <li>Nesting</li>
+                        </ul>
+                    <li>Weitere Hilfen und Links</li>
+                    <li>Übung</li>
+                    </ul>
+                    
+                </section>
+                
+<!--------------------- Framework Erklärung -------------------->
+                
+                <section>
+				    <section>
+                        <h1>Was sind <strong>Frameworks?</strong></h1>
+                        <blockquote class="fragment">
+                            Standardisierte Codebibliothek von zusammengefassten Packets mit Files und Ordnern</blockquote>
+
+                            <li class="fragment">Fundament für <strong>Enwicklung und Gestaltung</strong> einer Website</li>
+                            <li class="fragment">Sollen eine einheitliche Struktur für Entwickler bilden</li>
+                            <li class="fragment">Man muss nicht komplett neuanfangen</li>
+                            <li class="fragment">Somit kann man immer wieder auf Codes zurückgreifen</li>
+                        
+                        <br>
+                        <h4 class = "fragment roll-in">Typische Komponenten sind:</h4>
+                            <ul class="fragment">
+                                <li>Standard <strong>CSS-Klassen</strong> auf denen aufgebaut werden kann</li>
+                                <li>Für alle HTML-Elemente definierte <strong>Typographie</strong></li>
+                                <li>javaScript Bibliotheken</li>
+                                <li><strong>Gridsystem</strong> auf Basis von CSS</li>
+                                <li>Browserkompabilität für aktuellen und älteren Versionen</li>
+                            </ul>
+                    </section>
+
+                    <section>
+                   
+                        <h2>Welche <strong>Frameworks</strong> gibt es?</h2>
+                            <p class ="fragment">Einige Beispiele von einer großen Anzahl an Frameworks:</p>
+                                <ul class="fragment"><li><a href="http://sass-lang.com/">SASS/SCSS</a></li>
+                                <li><a href="http://www.yaml.de/">YAML 4</a></li>
+                                <li><a href="http://960.gs/">960 Grid System</a></li>
+                                <li><a href="http://www.blueprintcss.org/">Blueprint</a></li>
+                           </ul>
+                           <br>
+                        <br>
+                    
+                        <h2 class="fragment roll-in">Welches <strong>Framework</strong> ist das richtige für mich?</h2>
+                                <p class="fragment">Die Frameworks sind im Grundumfang und Funktionalität sehr ähnlich, d.h. für einen:
+                                <li class="fragment">Persönliche Vorliebe</li>
+                                <li class="fragment">Aktualität</li>
+                                <li class="fragment">Wiederverwertbarkeit</li>
+                                <li class="fragment">Community&Support</li>
+                                <li class="fragment">"Automatische" oder "Manuelle" Erstellung</li>
+                                
+				    
+                    </section>
+                    
+                    <section>
+                        <h2>Vor<strong>teile</strong></h2>
+                            <ul class="fragment">
+                                <li>Zugriff auf eine große Codebibliothek und somit schnellere Webentwicklung</li>
+                                <li>Für zukünftige Webseiten wiederverwendbar</li>
+                                <li>Sauberes und übersichtliches Layout</li>
+                                <li>Übergreifende Browserkompabilitäten</li>
+                                <li>Regelmäßige Updates</li>
+                                <li>Zahlreiche Communities und Foren für Austausch von Erfahrungsberichten und Hilfen</li>
+                            </ul>
+                            <br>
+                            <br>
+                        <h2>Nach<strong>teile</strong></h2>
+                            <ul class="fragment">
+                                <li>Flache Lernkurve für CSS-Anfänger</li>
+                                <li>Überflüssiger extra Code, welcher wahrscheinlich nicht gebraucht wird und den Quelltext unübersichtlicher macht</li>
+                                <li>Kann fehlerhaften Code von den Entwicklern enthalten</li>
+                                <li>Gezwungen die Framework Semantik zu lernen</li>
+                            </ul>
+                    </section>
+                </section>
+                
+<!--------------------- SASS / SCSS -------------------->
+                
+				<section>
+                    <section>
+                    <h1>Das Framework <strong>SASS / SCSS</strong></h1>
+                        <blockquote class="fragment">Auf Ruby basierende Stylesheet-Sprache, welche in CSS interpretiert wird.
+                            <br>
+                            Von Hampton Catlin und Nathan Weizenbaum entwickelt.</blockquote>
+                        <br>
+                        <p class="fragment">Es gibt <strong>zwei</strong> Syntaxen:</p>
+                        <ul class="fragment roll-in" style="font-size: 32px">SASS - <strong>S</strong>yntactically <strong>A</strong>wesome <strong>S</strong>tyle<strong>s</strong>heet
+                        <br>
+                        SCSS - <strong>S</strong>assy <strong>C</strong>ascading <strong>S</strong>tyle<strong>s</strong>heet</ul>
+                        <br>
+                        <br>
+                        <li class="fragment">Für Gebrauch am eigenen Rechner muss Ruby installiert sein</li>
+                        <br>
+                    <h4 class="fragment roll-in" style="font-size: 33px">Wie setze ich <strong style="color: white">SASS / SCSS</strong> ein?</h4>
+                        
+                        <li class="fragment">Über das Terminal</li>
+                        <li class="fragment">Mittels der App <a href="http://mhs.github.io/scout-app/">Scout</a></li>
+                        <li class="fragment">Abgespeckte Online-Varianten</li>
+                    </section>
+                    
+                    <section>
+                        <h2>Unterschiede <strong>in der</strong> Benutzung</h2>
+                        <div style="float: left; width: 45%">
+                            <p style="font-size: 30px">S<strong>A</strong>SS</p>
+                            <p style="font-size: 20px">Ältere Variante</p>
+                            <p style="font-size: 20px">Einrückungsschema als Semantik</p>
+                            <p style="font-size: 20px">Dateiendung: .sass</p>
+                        
+                        <pre><code style="height: 500px">$big: 280px
+$small: 50px
+
+*
+    margin: 0px
+    padding: 0px
+
+body
+    background-color: black
+
+.big
+    height: $big
+    width: $big
+
+.little
+    height: $small
+    width: $small
+</code></pre></div>
+                        <div style="margin-left: 70px; float: left; width: 45%">
+                            <p style="font-size: 30px"><strong>S</strong>CSS</p>
+                            <p style="font-size: 20px">Neuere Variante</p>
+                            <p style="font-size: 20px">Geschweifte Klammern als Semantik</p>
+                            <p style="font-size: 20px">Dateiendung: .scss</p>
+                        
+                        <pre><code style="height: 500px">$big : 280px;
+$small : 50px;
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: black;
+}
+
+.big {
+    height: $big;
+    width: $big;
+}
+
+.little {
+    height: $small;
+    width: $small;
+}
+</code></pre></div>
+                        
+                    </section>
+                </section>
+                
+<!--------------------- SASS / SCSS Benutzung ------------------->
+<!--------------------- Variablen ------------------->                 
+            <section><section>
+                <h2>Variablen</h2>
+                    <p>Vereinfacht das Verändern von z.B. Farben, Font-Styles oder anderen CSS Werten.<br>
+                        Mit dem <code>$-Zeichen</code> wird eine Variable deklariert und aufgerufen.</p>
+                                                <div style="float: left; width: 45%">
+                            <p style="font-size: 30px"><strong>CSS</strong></p>
+                        <pre><code style="height: 500px">* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: black;
+}
+
+.big {
+  height: 280px;
+  width: 280px;
+}
+
+.little {
+  height: 50px;
+  width: 50px;
+}
+
+.red {
+  border: 5px ridge #be1622;
+  background-color: #e6332a;
+}
+
+.blue {
+  border: 5px ridge #1d71b8;
+  background-color: #36a9e1;
+}
+
+.green {
+  border: 5px ridge #008d36;
+  background-color: #009640;
+}
+
+.yellow {
+  border: 5px ridge #e94e1b;
+  background-color: #f39200;
+}
+
+.flexibel {
+  position: absolute;
+  left: 50%;
+}
+</code></pre></div>
+                        <div style="margin-left: 70px; float: left; width: 45%">
+                            <p style="font-size: 30px"><strong>S</strong>CSS</p>
+                        <pre><code style="height: 500px">$border : 5px;
+$big : 280px;
+$small : 50px;
+$edge : ridge;
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: black;
+}
+
+.big {
+    height: $big;
+    width: $big;
+}
+
+.little {
+    height: $small;
+    width: $small;
+}
+
+.red {
+    border: $border $edge #be1622;
+    background-color: #e6332a;
+}
+
+.blue {
+    border: $border $edge #1d71b8;
+    background-color: #36a9e1;
+}
+
+.green {
+    border: $border $edge #008d36;
+    background-color: #009640;
+}
+
+.yellow {
+    border: $border $edge #e94e1b;
+    background-color: #f39200;
+}
+.flexibel {
+    
+    position:absolute;
+    left: 50%;
+    
+}
+</code></pre></div>
+             </section>
+               <section>
+                <img src="images/variablen.png">                   
+                </section></section>
+<!--------------------- Funktionen ------------------->                  
+            
+            <section><section>
+                <h2>Funktionen</h2>
+                <p>Funktionen können eingegebene Werte verarbeiten und wieder ausgeben.</p>
+                <div style="float: left; width: 45%">
+                            <p style="font-size: 25px"><strong>CSS</strong></p>
+                        
+                        <pre><code style="height: 500px">.someSpan {
+  background: black;
+  width: 720px;
+  height: 200px;
+}
+.someSpan .left {
+  background: blue;
+  width: 445px;
+}
+</code></pre></div>
+                        <div style="margin-left: 70px; float: left; width: 45%">
+                            <p style="font-size: 25px"><strong>S</strong>CSS</p>
+                        
+                        <pre><code style="height: 500px">@function golden($size) {
+    @return ceil($size * 0.618);
+}
+
+$div_size: 720px;
+
+.someSpan {
+    background: black;
+    width: $div_size;
+    height: 200px;
+    .left{
+        background:blue;
+        width: golden($div_size);
+    }
+}
+</code></pre></div>
+             </section>
+               <section>
+                <img src="images/funktionen.png">                   
+                </section>
+             </section>
+<!--------------------- Mixins ------------------->                  
+            
+            <section><section>
+                <h2>Mixin</h2>
+                <p>Mit Mixin kann man eigene Vorlagen definieren und später in der eigenen Datei<br>
+                    beliebig oft aufrufen, ohne sie jedes mal einzeln zu ändern.</p>
+                <div style="float: left; width: 45%">
+                            <p style="font-size: 25px"><strong>CSS</strong></p>
+                        
+                        <pre><code style="height: 500px">@mixin box($size:40px) {
+	width: $size;
+	height: $size;
+}
+.box {
+	@include box(100px);
+	background: #fc0;
+}
+</code></pre></div>
+                        <div style="margin-left: 70px; float: left; width: 45%">
+                            <p style="font-size: 25px"><strong>S</strong>CSS</p>
+                        
+                        <pre><code style="height: 500px">.box {
+  width: 100px;
+  height: 100px;
+  background: #fc0;
+}
+                    </code></pre></div>
+             </section>
+               <section>
+                <img src="images/mixins.png">                   
+                </section>
+             </section>
+<!--------------------- Nesting ------------------->             
+            <section><section>
+                <h2>Nesting</h2>
+                    <p>Nesting ermöglicht es eine visuelle Hierarchie ähnlich wie bei HTML in CSS zu erstellen.<br>
+                        Es erleichtert das Lesen und Organisieren der eigenen CSS.</p>
+                <div style="float: left; width: 45%">
+                            <p style="font-size: 25px"><strong>CSS</strong></p>
+                        
+                        <pre><code style="height: 500px">* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: black;
+  color: yellow;
+}
+
+nav {
+  margin-top: 50px;
+  background-color: white;
+  color: red;
+}
+nav ul {
+  color: green;
+}
+nav li {
+  color: blue;
+  display: inline;
+}
+</code></pre></div>
+                        <div style="margin-left: 70px; float: left; width: 45%">
+                            <p style="font-size: 25px"><strong>S</strong>CSS</p>
+                        
+                        <pre><code style="height: 500px">$listet: green;
+$inline: blue;
+$noNav: yellow;
+$unlistet: red;
+$white: white;
+$black: black;
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: $black;
+    color: $noNav;
+    }
+nav {
+    margin-top: 50px;
+    background-color: $white;
+    color: $unlistet;
+  ul {
+      color:$listet;
+  }
+
+  li { 
+      color:$inline;
+      display: inline;
+}
+}
+</code></pre></div>
+             </section>
+               <section>
+                <img src="images/nesting.png">                   
+                </section>
+                </section>
+                
+<!--------------------- Ende der Präsentation ------------------->
+                
+                <section>
+                <h2>Weitere <strong>Hilfen</strong> und <strong>Links</strong></h2>
+                        <ul><li><a href="http://sass-lang.com/guide">Offizieller Sass Guide</a></li>
+                        <li><a href="http://thesassway.com/guides">The Sass Way</a></li>
+                            <li><a href="http://webkrauts.de/artikel/2011/effiziente-css-entwicklung-mit-sass-und-compass-teil-1">CSS-Entwicklung mit Sass und Compass</a></li>
+                            <li><a href="http://www.youtube.com/playlist?list=PL2CB1F80266E986EA">Video-Tutorial #1 zu Sass</a></li>
+                            <li><a href="http://net.tutsplus.com/tutorials/other/mastering-sass-lesson-1/">Video-Tutorial #2 zu Sass</a></li>
+
+                       </ul>
+                   <br>
+             </section>                
+                
+                <section>
+                    <section>
+                <h1>Zur <strong>Übung</strong></h1>
+                        <br>
+                        <div>
+                        <p style="font-size: 30px">Online Übungstool</p>
+                        </div>
+                        <a>http://sassmeister.com/</a>
+                    </section>
+             </section>
+                
+				<!-- End of slides container. -->
+
+			</div>
+
+		</div>
+
+		<script src="../revealjs-framework/lib/js/head.min.js"></script>
+		<script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				width: 1000,
+
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'fast', // default/fast/slow
+				backgroundTransition: 'none', // default/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
