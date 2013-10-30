@@ -77,7 +77,7 @@
                     <li>Beispiele</li>
                     <li>XMLHttpRequest</li>
                     <li>Javascript Object Notation (JSON)</li>
-                    <li>Cross-Origin Resource Sharing (CORS)</li>
+                    <li>Same-Origin-Policy (SOP)</li>
                     <li>Nachteile</li>
                     <li>Vorteile</li>
                 </ol>
@@ -240,7 +240,7 @@ ajaxObject.send();
                         </li>
                         <br>
                         <li class="fragment">
-                            wenn die Antwort des Servers im XML geliefert wird .responseXML verwenden
+                            wenn die Antwort des Servers im XML geliefert wird - .responseXML verwenden
                         </li>
                         <br>
                         <li class="fragment">
@@ -248,11 +248,6 @@ ajaxObject.send();
                         </li>
                     </ul>
                     
-                    <pre class="fragment">
-<code>ajaxObject.open("GET", "zuLadendeDatei.htm", true);
-ajaxObject.send();
-</code>
-                    </pre>
                 </section>
            
            
@@ -279,7 +274,7 @@ ajaxObject.send();
                     <ul>
                         <li > 
                             Gibt nach Verarbeitung der Anfrage den <strong>HTTP-Statuscode</strong> an.
-                            Die zwei wichtigstens Statuscodes sind:
+                            <br>Die zwei wichtigstens Statuscodes sind:
                             <br><strong>200</strong>: Anfrage wurde erfolgreich bearbeitet
                             <br><strong>404</strong>: Angeforderte Ressource wurde nicht gefunden
                         </li>          
@@ -416,10 +411,35 @@ Wandelt passende Daten in eine JSON-Variable um
             <!--Section 7 Cops-->
           <section>
                 <section>
-                    <h2>5. Cross-Origin Resource Sharing (CORS) </h2>
+                    <h2>5. Same-Origin-Policy (SOP) </h2>
                     <br>
-                    <li> nochmal blub  
+                    <li> Ist ein Schutzmechanismus im Browser der <strong>verbietet</strong>, dass clientseitige Skripte auf <strong>Ressourcen von fremden Seiten</strong> zugreifen können.
+                    </li>
+                    <br>
+                    <li>Die Regel wird dann angewendet wenn sich die URL auf die zugegriffen wird von der aktuellen <strong>URL im Port, Hostnamen, oder Protokoll unterscheidet</strong>
+                    </li>
+                    <br>
+                    <li>
+                        Verhindert viele Angriffe die sonst mit Skripten wie Javascript möglich wären
+                    </li>
                 </section>
+              
+              
+                <section>
+                    <h2><strong>5.1</strong> Regel umgehen mit <br><strong>C</strong>ross-<strong>O</strong>rigin <strong>R</strong>esource <strong>S</strong>haring <strong>(CORS)</strong> </h2>
+                    <br>
+                    
+                    <li> 
+                    </li>
+                </section>
+              
+                   <section>
+                        <h2><strong>5.1</strong> Regel umgehen mit </h2>
+                        <br>
+                        
+                        <li> 
+                        </li>
+                    </section>
               </section>
 			
 			
