@@ -9,7 +9,7 @@
 		<!-- Short description of presentation -->
 		<meta name="description" content="Präsentation Medienformate">
 		<!-- Author of presentation -->
-		<meta name="author" content="Kai Dippel", "Christian Grevenstein", "Aysenur Cavusoglu">
+		<meta name="author" content="Kai Dippel">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -43,7 +43,7 @@
 					<h1>Web-basierte Anwendungen 1</h1>
 					<h2>Medienformate</h2>
 
-					<p>xx. Oktober 2013</p>
+					<p>7. November 2013</p>
 
 					<p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
 					Campus Gummersbach</p>
@@ -56,11 +56,18 @@
 
 				<section>
                     <h2>Gliederung</h2>
-                    <p class="fragment roll-in">Medienformate</p>
-                    <p class="fragment roll-in">Bilder</p>
-                    <p class="fragment roll-in">Musik</p>
-                    <p class="fragment roll-in">Videos</p>
-                    <p class="fragment roll-in">Übungen</p>
+                    <ul>
+                        <li>Medienformate Allgemein</li>
+                        <li>Bilder</li>
+                        <li>Musik</li>
+                        <li>Videos</li>
+                            <ul>
+                                <li>Allgemeines</li>
+                                <li>Einbettung</li>
+                            </ul>
+                        <li>SVG Grafiken</li>
+                        <li>Übungen</li>
+                    </ul>
                 </section>
                 
                 <section>
@@ -72,13 +79,13 @@
                 
                 <section>
                     <section>
-                        <h1><p class="fragment highlight-red">Bilder</p></h1>
+                        <h1>Bilder</h1>
                         <p>Formate:</p>
                         <p>xxx</p>
                     </section>
                     
                     <section>
-                        <h1><p class="fragment highlight-red">Format xxx</p></h1>
+                        <h1>Format xxx</h1>
                         <p>Formate xxx</p>
                         <p>Beschreibung</p>
                     </section>
@@ -86,13 +93,13 @@
                 
                 <section>
                     <section>
-                        <h1><p class="fragment highlight-green">Musik</p></h1>
+                        <h1>Musik</h1>
                         <p>Formate:</p>
                         <p>xxx</p>
                     </section>
                     
                     <section>
-                        <h1><p class="fragment highlight-green">Format xxx</p></h1>
+                        <h1>Format xxx</h1>
                         <p>Formate xxx</p>
                         <p>Beschreibung</p>
                     </section>
@@ -100,7 +107,7 @@
                 
                 <section>
                     <section>
-                        <h1><p class="fragment highlight-blue">Videos</p></h1>
+                        <h1>Videos</h1>
                         <h2>Allgemein</h2>
                         <table>
 							<tr>
@@ -129,9 +136,9 @@
                     </section>
                     
                     <section>
-                        <h2><p class="fragment highlight-blue">Speicherformat</p></h2>
-                        <img class="align-center" src="images/container-fuer-video-bilder-pdf-schema.png">
-                        <br/>
+                        <h2>Speicherformat</h2>
+                        <img class="align-center" src="images/container-fuer-video-bilder-pdf-schema.png" alt="Container">
+                        <br>
                         <table>
                             <tr>
                                 <td>Videos bestehen aus Video-Track, Audio Track und evtl Meta-Daten wie dem Titel verpackt in einem Container</td>
@@ -154,7 +161,7 @@
                     </section>
                     
                     <section>
-                        <h2><p class="fragment highlight-blue">Codecs</p></h2>
+                        <h2>Codecs</h2>
                         <table>
                             <tr>
                                 <td>
@@ -187,7 +194,7 @@
                     </section>
                 
                     <section>
-                        <h2><p class="fragment highlight-blue">Auflösung und Bitrate</p></h2>
+                        <h2>Auflösung und Bitrate</h2>
                         <table>
                             <tr>
                                 <th>Auslösung</th>
@@ -216,9 +223,9 @@
                     </section>
                     
                     <section>
-                        <h2><p class="fragment highlight-blue">Fazit</p></h2>
-                        <img class="align-center" src="images/video-container-formate.png">
-                        <br/>
+                        <h2>Fazit</h2>
+                        <img class="align-center" src="images/video-container-formate.png" alt="Container">
+                        <br>
                         <table> 
                             <tr>
                                 <td>
@@ -234,28 +241,53 @@
                     </section>
                     
                     <section>
-                        <h2><p class="fragment highlight-blue">Video in HTML-Seite einbetten</p></h2>
+                        <h2>Video in HTML-Seite einbetten</h2>
                             <pre><code data-trim>
-<object data="videos/movie.mp4" width="538" height="330" type="video/mp4">
-</object>
+&lt;object data="videos/movie.mp4" width="538" height="330" type="video/mp4"&gt;
+&lt;/object&gt;
 					       </code></pre>
                         <object data="videos/movie.mp4" width="538" height="330" type="video/mp4">
                         </object>
                     </section>
+                    
+                    <section>
+                        <h2>Video von externen Quellen einbetten</h2>
+                            <pre><code data-trim>
+&lt;iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/4KeUaWF3jHQ" frameborder="0" allowfullscreen&gt;
+&lt;/iframe&gt;
+                            </code></pre>
+                        <iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/4KeUaWF3jHQ" frameborder="0" allowfullscreen >
+                        </iframe>
+                    </section>
                 </section>
                 
                 <section>
-                    <section>
-                        <h1>Übung 1</h1>
-                        <p>Multiple Choice Test</p>
-                        <p>Fragen zu den Formaten, Vor-/Nachteile</p>
-                    </section>
+                    <h2>SVG Grafiken mit Raphaël</h2>
+                    <p>Wie funktioniert Raphaël? Ganz einfach: Raphaël fügt in das div-Element, das ihm als Bühne übergeben wurde, SVG-Code ein und veranlasst den Browser, die Seite neu zu rendern. Das Hello-Word-Beispiel funktioniert bei SVG-fähigen Browsern auch vollkommen ohne JavaScript- und Raphaël.</p>
                     
-                    <section>
-                        <h1>Übung 2</h1>
-                        <p>Programmieren</p>
-                        <p>Einbettung in HTML5</p>
-                    </section>
+                    <pre><code data-trim>
+&lt;div id="d_canvas"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative;"&gt;
+        &lt;text style="text-anchor: start; font: bold 20px 'Times New Roman',Times,serif;" x="5" y="13" &gt;
+            Hallo Welt!
+        &lt;/text&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;
+                    </code></pre>
+                    
+                        <div id="d_canvas">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative;">
+                                <text style="text-anchor: start; font: bold 20px 'Times New Roman',Times,serif;" x="5" y="13" >
+                                    Hallo Welt!
+                                </text>
+                            </svg>
+                        </div>
+                    
+                </section>
+                
+                <section>
+                        <h1>Übungen</h1>
+                        <p>Hier geht es zu den <a href="uebungen.html">Übungen</a>.</p>
                 </section>
 
                 
