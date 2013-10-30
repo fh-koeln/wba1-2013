@@ -61,13 +61,20 @@
 			"title" : "Javascript",
 			"authors" : ["Nikita Stumpf", "Dominik Schliewowski", "Daniel Röger", "Rebecca Uebachs", "Marcel Göbel", "Hayal Sueer"]
 		},
-		
+		"2013-10-31-ajax-basics/index.html":
+		{
+			"title" : "AJAX",
+			"authors" : ["Aziz Kili", "Tim Kurtz", "Dominik Scharf"]
+		},
+		"2013-10-31-css-frameworks/index.html":
+		{
+			"title" : "CSS Frameworks: SCSS &amp; SASS",
+			"authors" : ["Hannah Schinz", "Nico Sebastian Schoenenberg", "Marija Kandic"]
+		},
 		"2013-10-31-javascript-training/index.html":
 		{
 			"title" : "Javascript-Training",
 			"authors" : ["Volker Schaefer"]
 		}
-		
-
 	}
 }
