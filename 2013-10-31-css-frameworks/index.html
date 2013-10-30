@@ -359,6 +359,57 @@ body{
                <section>
                 <img src="images/variablen.png">                   
                 </section></section>
+<!--------------------- Funktionen ------------------->                  
+            
+            <section><section>
+                <h2>Funktionen</h2>
+                <p>Funktionen können ein und den selben Ablauf an einer zentralen Stelle definieren.<br>
+                Dieser kann dann mit Übergabeparametern mehrfach im Code aufgerufen werden.</p>
+                <div style="float: left; width: 45%">
+                            <p style="font-size: 25px"><strong>CSS</strong></p>
+                        
+                        <pre><code style="height: 500px"></code></pre></div>
+                        <div style="margin-left: 70px; float: left; width: 45%">
+                            <p style="font-size: 25px"><strong>S</strong>CSS</p>
+                        
+                        <pre><code style="height: 500px"></code></pre></div>
+             </section>
+               <section>
+                <img src="images/funktionen.png">                   
+                </section>
+             </section>
+<!--------------------- Mixins ------------------->                  
+            
+            <section><section>
+                <h2>Mixin</h2>
+                <p>Mit Mixin kann man eigene Vorlagen definieren und später in der eigenen Datei<br>
+                    beliebig oft aufrufen, ohne sie jedes mal einzeln zu ändern.</p>
+                <div style="float: left; width: 45%">
+                            <p style="font-size: 25px"><strong>CSS</strong></p>
+                        
+                        <pre><code style="height: 500px">@mixin box($size:40px) {
+	width: $size;
+	height: $size;
+}
+.box {
+	@include box(100px);
+	background: #fc0;
+}
+</code></pre></div>
+                        <div style="margin-left: 70px; float: left; width: 45%">
+                            <p style="font-size: 25px"><strong>S</strong>CSS</p>
+                        
+                        <pre><code style="height: 500px">.box {
+  width: 100px;
+  height: 100px;
+  background: #fc0;
+}
+                    </code></pre></div>
+             </section>
+               <section>
+                <img src="images/mixins.png">                   
+                </section>
+             </section>
 <!--------------------- Nesting ------------------->             
             <section><section>
                 <h2>Nesting</h2>
@@ -430,27 +481,6 @@ nav {
                 <img src="images/nesting.png">                   
                 </section>
                 </section>
-<!--------------------- Mixins ------------------->                  
-            
-            <section><section>
-                <h2>Mixin</h2>
-                <p>Mit Mixin kann man eigene Vorlagen definieren und später in der eigenen Datei<br>
-                    beliebig oft aufrufen, ohne sie jedes mal einzeln zu ändern.</p>
-                <div style="float: left; width: 45%">
-                            <p style="font-size: 25px"><strong>CSS</strong></p>
-                        
-                        <pre><code style="height: 500px">
-                    </code></pre></div>
-                        <div style="margin-left: 70px; float: left; width: 45%">
-                            <p style="font-size: 25px"><strong>S</strong>CSS</p>
-                        
-                        <pre><code style="height: 500px">
-                    </code></pre></div>
-             </section>
-               <section>
-                <img src="images/variablen.png">                   
-                </section>
-             </section>
                 
 <!--------------------- Ende der Präsentation ------------------->
                 
