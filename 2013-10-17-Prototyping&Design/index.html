@@ -1,351 +1,459 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+        <head>
+                <meta charset="utf-8">
 
-		<!-- Title of presentation -->
-		<title>Reveal.js Demo</title>
-		<!-- Short description of presentation -->
-		<meta name="description" content="Demo of Reveal.js functions and features">
-		<!-- Author of presentation -->
-		<meta name="author" content="Dominik Schilling">
+                <title>Prototyping & Design</title>
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+                <meta name="description" content="Introduction to Accessibility">
+                <meta name="author" content="Cecilia Adu,Theresa Jux, Robert Röder">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
-		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+                <link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+                <link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="../revealjs-framework/lib/css/solarized_light.css">
+                <!-- For syntax highlighting -->
+                <link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+                <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+                <script>
+                        document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+                </script>
 
-		<!--[if lt IE 9]>
-		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+                <!--[if lt IE 9]>
+                <script src="../revealjs-template/lib/js/html5shiv.js"></script>
+                <![endif]-->
+        </head>
 
-	<body>
+        <body>
 
-		<div class="reveal">
+                <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+                        <!-- Any section element inside of this container is displayed as a slide -->
+                        <div class="slides">
 
-				<section>
-					<h1>Web-basierte Anwendungen 1</h1>
-					<h2>Reveal.js Demo</h2>
+                                <section>
+                                        <h1> Prototyping & Design </h1>
+                                        <h2>Medieninformatik</h2>
+                                        <p>07. November 2013</p>
+                                        <p>
+                                                Studiengang Medieninformatik an der Fachhochschule Köln<br/>
+                                                Campus Gummersbach
+                                        </p>
+                                        <p>
+                                                Cecilia Adu<br /
+                                                Theresa Jux<br/>
+                                                Robert Röder</b><br>
+                                            
+                                        </p>
+                                </section>
 
-					<p>10. Oktober 2013</p>
+                                <section>
+                                        <h2>Inhalt</h2>
+                                        <p>
+                                                <ul>
+                                                        <li>Was ist Barrierefreiheit?</li>
+                                                        <li>Richtlinien und Gesetze</li>
+                                                        <li>Entwicklung barrierefreier Lösungen</li>
+                                                        <li>Die Sieben Säulen</li>
+                                                        <li>Aufgabe</li>
+                                                </ul>
+                                        </p>
+                                </section>
 
-					<p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
-					Campus Gummersbach</p>
+                                <section>
+                                        <h2>Was ist Barrierefreiheit?</h2>
+                                        <p>
+                                                <ul>
+                                                        <li>Englisch: Accessibility</li>
+                                                        <li>Ursprung: Bauwesen</li>
+                                                        <li>Gebäude sollen so gestaltet werden, dass jeder (auch Menschen mit Behinderungen) sie nutzen kann</li>
+                                                </ul>
+                                        </p>
+                                </section>
 
-					<p style="margin-top:10%">Student 1<br>
-					Student 2<br>
-					Student 3</p>
-				</section>
+                <section>
+                                        <h2>Barrierefreiheit im Web</h2>
+                                        <p>
+                                                <ul>
+                                                        <li>Begriff im deutschen Raum geprägt durch: DoBuS (1993)</li>
+                                                        <li>Webinhalte sollen für alle zugänglich sein.</li>
+                                                </ul>
+                                        </p>
+                                        <p>
+                                                <header><strong>Nutzer...</strong></header>
+                                                <ul>
+                                                        <li class="fragment">wie du und ich</li>
+                                                        <li class="fragment">mit körperlichen oder geistlichen Einschränkungen</li>
+                                                        <li class="fragment">mit alternativer Hardware oder Software (z.B. Mobilgeräte, ältere Browser)</li>
+                                                </ul>
+                                        </p>
+                                </section>
+                <section>
+                                        <h2>Richtlinien und Gesetze</h2>
+                                        <p>
+                                                <header><strong>Web Accessibility Initiative (WAI)</strong></header>
+                                                <ul>
+                                                        <li class="fragment">gegründet 1997</li>
+                                                        <li class="fragment">gehört zu W3C</li>
+                                                </ul>
+                                                <header><strong>Web Content Accessibility Guidelines (WCAG)</strong></header>
+                                                <ul>
+                                                        <li class="fragment">Richtlinien für barrierefreie Webinhalte</li>
+                                                        <li class="fragment">Version 1.0 seit Mai 1999</li>
+                                                        <li class="fragment">Version 2.0 seit Dezember 2008</li>
+                                                </ul>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>Richtlinien und Gesetze</h2>
+                                        <p>
+                                                <header><strong>Barrierefreie Informationstechnikverordnung (BITV)</strong></header>
+                                                <ul>
+                                                        <li class="fragment">seit April 2002</li>
+                                                        <li class="fragment">Version 2.0 seit September 2011</li>
+                                                        <li class="fragment">nur in Deutschland</li>
+                                                        <li class="fragment">verpfichtet Behörden staatliche Websiten barrierefrei zu gestalten</li>
+                                                </ul>
+                                        </p>
+                                </section>
+                <section>
+                                        <h2>Entwicklung barrierefreier Lösungen</h2>
+                                        <p>
+                                                <ul>
+                                                        <li>Sehschwäche</li>
+                                                        <li>Hörschwäche</li>
+                                                        <li>Motorische Schwäche</li>
+                                                        <li>Kognitive Schwäche</li>        <br>
+                                                        <li>Zudem technische Hindernisse</li>
+                                                </ul>
+                                        </p>
+                                </section>
 
-				<section>
-					<section>
-						<h2>Backgrounds</h2>
-					</section>
+                                <section>
+                                        <h2>Sehschwäche</h2>
+                                        <header><strong>Mögliche Problemfelder</strong></header>
+                                        <p>
+                                        <ul>
+                                                <li>Grafiken</li>
+                                                <li>Farb- und Kontrastfehlsichtigkeit <font color= "#111111">(Wer kann diesen Satz lesen?)</font></li>
+                                                <li>Skalierbarkeit <font size= "1">(Oder den hier?)</font></li>
+                                                <li>Tabellen</li>
+                                                <li>Schriftbilderkennung</li>
+                                        </ul>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>Sehschwäche</h2>
+                                        <header>Das Alt-Attribut</header>
+                                        <p>
+                                                <pre><code>
+&lt;!-- Falsch: --&gt;
+&lt;img src="img/katze.png"&gt;
+&lt;!-- Richtig: --&gt;
+&lt;img src="img/katze.png" alt="Bild einer schwarzen Hauskatze."&gt;
+                                                </code></pre>
+                                        </p>
+                                        <header>relative Schriftgröße</header>
+                                        <p>
+                                                <pre><code>
+h1
+{
+ font-size: 2em;
+}
+                                                </code></pre>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>Sehschwäche</h2>
+                                        <header>Tabellen für Screenreader darstellen</header>
+                                        <p>
+                                                <pre><code>
+&lt;table summary="Wichtigsten Informationen, die man der Tabelle entnehmen kann."&gt;
+    &lt;caption&gt;Beispieltabelle&lt;/caption&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;th&gt;Überschrift 1&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Überschrift 2&lt;/th&gt;
+        &lt;td&gt;Inhalt A&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Überschrift 3&lt;/th&gt;
+        &lt;td&gt;Inhalt B&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+                                                </code></pre>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>Hörschwäche</h2>
+                                        <p>
+                                                <header><strong>Medieninhalte (Video- und Audiodaten)</strong></header>
+                                                <ul>
+                                                        <li>Videodaten</li>
+                                                        <li>Audiodaten</li>
+                                                </ul>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>Hörschwäche</h2>
+                                        <header><strong>Lösungen</strong></header>
+                                        <p>
+                                                <ul>
+                                                        <li>Bearbeitung der Audiospur (Filterung von Störgeräuschen)</li>
+                                                        <li>Untertitel </li>
+                                                        <li>Gebärdensprache </li>
+                                                </ul>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>motorische Schwächen</h2>
+                                        <header><strong>Probleme</strong></header>
+                                        <p>
+                                                <ul>
+                                                        <li> zitternde Hand </li>
+                                                        <li> Verlust oder Lähmung von Körperteilen </li>
+                                                </ul>
+                                        </p>
 
-					<section class="center" data-background="#77aabb">
-						<pre><code>&lt;section data-background="#77aabb"&gt;
 
-&lt;/section&gt;</code></pre>
-					</section>
+                                </section>
+                                <section>
+                                        <h2>Motorische Schwäche</h2>
+                                        <header>Accesskeys</header>
+                                        <p>
+                                                <pre><code>
+&lt;a href="#navigation" accesskey="1"&gt;Zur Navigation&lt;/a&gt;
+&lt;a href="#content" accesskey="2"&gt;Zum Inhalt&lt;/a&gt;
+                                                </code></pre>
+                                        </p>
+                                        <header>Sprunglinks</header>
+                                        <p>
+                                                <pre><code>
+&lt;!-- Können mit Tabulator angesteuert werden --&gt;
+&lt;h2&gt;&lt;a id="top"&gt;beliebiger Sprungpunkt&lt;/a&gt;&lt;/h2&gt;
+&lt;a href="#top">zum Sprungpunkt&lt;/a&gt;
+                                                </code></pre>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>kognitive Schwächen</h2>
+                                        <header><strong>Nutzer</strong></header>
+                                        <p>
+                                                <ul>
+                                                        <li>leicht abzulenken</li>
+                                                        <li>längere Bearbeitungszeit von Formularen</li>
+                                                        <li>Verständnisprobleme bei komplexen Inhalten</li>
+                                                </ul>
+                                        </p>
+                                </section>
+                                <section>
+                                <h2>kognitive Schwächen</h2>
+                                        <header><strong>Lösungen</strong></header>
+                                        <p>
+                                                <ul>
+                                                        <li>keine blinkende Texte, Animationen</li>
+                                                        <li>keine Time-outs, oder zumindest angemessen lange Zeitintervalle (Sessions)</li>
+                                                        <li>Alternativ "Leichte Sprache" anbieten</li>
+                                                </ul>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>technische Hindernisse</h2>
+                                        <header><strong>Problemfelder</strong></header>
+                                        <p>
+                                                <ul>
+                                                        <li>ältere Browser</li>
+                                                        <li>Kein Java Script, Flash, o.ä. </li>
+                                                        <li>mobile Endgeräte</li>
+                                                <ul>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>technische Hindernisse</h2>
+                                        <p>
+                                                <img src="images/mobile.png">
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>technische Hindernisse</h2>
+                                        <header><strong>Lösungen</strong></header>
+                                        <p>
+                                                <ul>
+                                                        <li>Fallback- und browserspezifische Lösungen</li>
+                                                        <li>alternative Webseite (Reduktion)</li>
+                                                        <li>relative Größen</li>
+                                                <ul>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>Die 7 Säulen</h2>
+                                        <p>
+                                                <header><strong>Textorientierung</strong></header>
+                                                <ul>
+                                                        <li class="fragment">Besitzt die Seite ohne Grafiken die gleiche Funktionalität?</li>
+                                                        <li class="fragment">Werden Medieninhalte ausreichend beschrieben?</li>
+                                                </ul>
+                                                <header><strong>Kontraste und Farben</strong></header>
+                                                <ul>
+                                                        <li class="fragment">Sind alle Elemente deutlich unterscheidbar?</li>
+                                                        <li class="fragment">Funktioniert das Layout auch mit alternativen Farbeinstellungen?</li>
+                                                </ul>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>Die 7 Säulen</h2>
+                                        <p>
+                                                <header><strong>Skalierbarkeit</strong></header>
+                                                <ul>
+                                                        <li class="fragment">Sind sämtliche Textgrößen (auch in Textfeldern) veränderbar?</li>
+                                                        <li class="fragment">Passt sich das Layout der Auflösung und eigestellten Textgröße an?</li>
+                                                        <li class="fragment">Muss bei Veränderung der Auflösung/Textgröße gescrollt werden?</li>
+                                                </ul>
+                                                <header><strong>Linearisierbarkeit</strong></header>
+                                                <ul>
+                                                        <li class="fragment">Ist eine Seite bei ausgeschalteten Layout nachvollziehbar?</li>
+                                                        <li class="fragment">Gibt es eine strukturelle Navigation(Sprunglinks,Accesskeys)?</li>
+                                                </ul>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>Die 7 Säulen</h2>
+                                        <p>
+                                                <header><strong>Geräteunabhängigkeit und Dynamik</strong></header>
+                                                <ul>
+                                                        <li class="fragment">Ist die Seite ohne JavaScript, Flash, etc. uneingeschränkt nutzbar?</li>
+                                                        <li class="fragment">Können Inhalte der Seite (z.B. Formulare) mit der Tastatur angesteuert werden? </li>
+                                                        <li class="fragment">Sind die Medieninhalte der Seite auch barrierefrei?</li>
+                                                </ul>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>Die 7 Säulen</h2>
+                                        <p>
+                                                <header><strong>Verständlichkeit, Navigation und Orientierung</strong></header>
+                                                <ul>
+                                                        <li class="fragment">Sind die Texte verständlich formuliert?</li>
+                                                        <li class="fragment">Gibt es "Leichte Sprache" und Gebärdensprache als Alternative?</li>
+                                                        <li class="fragment">Wird richtig angegeben, in welcher Sprache Text und Fremdwörter vorliegen?</li>
+                                                        <li class="fragment">Werden auch phonetische Suchanfragen bearbeitet?</li>
+                                                        <li class="fragment">Gibt es Fehlerkorrekturen, -angaben bei Formularen?</li>
+                                                </ul>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>Die 7 Säulen</h2>
+                                        <p>
+                                                <header><strong>Strukturierte Inhalte</strong></header>
+                                                <ul>
+                                                        <li class="fragment">Ist die HTML Semantik durchgängig richtig und vollständig?</li>
+                                                        <li class="fragment">Haben alle Formularelemente geeignete Beschriftungen? </li>
+                                                </ul>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>Aufgabe</h2>
+                                        <p>
+                                         Gehen Sie auf die Seite <a href="http://www.gm.fh-koeln.de">www.gm.fh-koeln.de</a> und beurteilen Sie diese mit Hilfe der Sieben Säulen für barrierefreie Websiten.
+                                         Sehen Sie sich auch den Quellcode an und überprüfen Sie diesen auf die Nutzung von Alt-Attribut etc.
+                                        </p>
+                                        <br>
+                                        <p>
+                                         <a href="sieben_saeulen_barrierefreiheit.pdf">Übersicht der Sieben Säulen (pdf)</a>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>Lösung</h2>
+                                        <p>
+                                                <header><strong>Textorientierung</strong></header>
+                                                <ul>
+                                                        <li>Alt-Attribut wird (wenn überhaupt) an falscher Stelle eingesetzt</li>
+                                                </ul>
+                                                <header><strong>Kontraste und Farben</strong></header>
+                                                <ul>
+                                                        <li>Die Links der Navigation bilden einen Block, Einzelelemente nur beim genauen Hinsehen zu identifizieren</li>
+                                                        <li>Festes Farblayout (kritisch bei besuchten Links wegen Kontrast)</li>
+                                                </ul>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>Lösung</h2>
+                                        <p>
+                                                <header><strong>Skalierbarkeit</strong></header>
+                                                <ul>
+                                                        <li>Textgrößen sind nicht veränderbar</li>
+                                                        <li>Keine (gute) Layoutanpassung</li>
+                                                        <li>Es muss (teilweise unnötig) gescrollt werden?</li>
+                                                </ul>
+                                                <header><strong>Linearisierbarkeit</strong></header>
+                                                <ul>
+                                                        <li>Sprunglinks vorhanden, jedoch schlecht umgesetzt</li>
+                                                </ul>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>Lösung</h2>
+                                        <p>
+                                                <header><strong>Geräteunabhängigkeit und Dynamik</strong></header>
+                                                <ul>
+                                                        <li>Medieninhalte sind nicht barrierefrei</li>
+                                                </ul>
+                                                <header><strong>Verständlichkeit, Navigation und Orientierung</strong></header>
+                                                <ul>
+                                                        <li>Es gibt keine "Leichte Sprache" oder Gebärdensprache für die Website</li>
+                                                </ul>
+                                                <header><strong>Strukturierte Inhalte</strong></header>
+                                                <ul>
+                                                        <li>Falsche HTML Semantik: Tabellen für das Layout, Benutzung von "Blank"-Grafiken</li>
+                                                </ul>
+                                        </p>
+                                </section>
+                                <section>
+                                        <h2>Links</h2>
+                                        <p>
+                                                <ul>
+                                                        <li><a href="http://www.menschenundrechte.de/index_ls.php">Beispiel für eine barrierefreie Seite</a></li>
+                                                        <li><a href="http://www.einfach-barrierefrei.net/downloads/poster_barrierefreiheit.pdf">Ein Poster über das Thema Barrierefreiheit im Web</a></li>
+                                                        <li><a href="http://www.w3.org/Translations/WCAG20-de/">WCAG 2.0 (deutsche Version)</a></li>
+                                                </ul>
+                                        </p>
+                                </section>
+                        </div>
+                </div>
 
-					<section data-background="#442211">
-						<pre><code>&lt;section data-background="#442211"&gt;
+                <script src="../revealjs-template/lib/js/head.min.js"></script>
+                <script src="../revealjs-template/js/reveal.min.js"></script>
+                <script src="../revealjs-template/js/wba.js"></script>
+                <script>
 
-&lt;/section&gt;</code></pre>
-					</section>
+                        // Full list of configuration options available here:
+                        // https://github.com/hakimel/reveal.js#configuration
+                        Reveal.initialize({
+                                controls: true,
+                                progress: true,
+                                history: true,
 
-					<section data-background-image="images/background.jpg">
-						<pre><code>&lt;section data-background="images/background.jpg"&gt;
+                                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                                transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
 
-&lt;/section&gt;</code></pre>
-					</section>
+                                // Optional libraries used to extend on reveal.js
+                                dependencies: [
+                                        { src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+                                        { src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                                        { src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                        { src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                        { src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+                                        { src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+                                        { src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+                                ]
+                        });
 
-					<section data-background-image="images/github-mac.png" data-background-position="top center">
-					</section>
+                </script>
 
-					<section data-background-image="images/github-windows.png" data-background-position="top center">
-					</section>
-				</section>
-
-				<section>
-					<h2>Fragments</h2>
-					<p class="fragment grow">grow</p>
-					<p class="fragment shrink">shrink</p>
-					<p class="fragment roll-in">roll-in</p>
-					<p class="fragment fade-out">fade-out</p>
-					<p class="fragment highlight-red">highlight-red</p>
-					<p class="fragment highlight-green">highlight-green</p>
-					<p class="fragment highlight-blue">highlight-blue</p>
-				</section>
-
-				<section>
-					<h2>Fragmented <strong>Views</strong></h2>
-					<p>Hit the next arrow...</p>
-					<p class="fragment" data-fragment-index="0">... to step through ...</p>
-					<ol>
-						<li class="fragment" data-fragment-index="1"><code>any type</code></li>
-						<li class="fragment" data-fragment-index="2"><em>of view</em></li>
-						<li class="fragment" data-fragment-index="3"><strong>fragments</strong></li>
-					</ol>
-				</section>
-
-
-				<section>
-					<h2>Images</h2>
-
-					<img class="align-center" src="http://octodex.github.com/images/daftpunktocat-thomas.gif">
-				</section>
-
-				<section>
-					<h2>Code syntax highlighting</h2>
-
-					<pre><code data-trim>
-&lt;?php
-echo 'Hello World!';
-?&gt;
-					</code></pre>
-
-					<pre><code data-trim>
-$ ruby -e "puts 'Hello world'"
-Hello world
-					</code></pre>
-
-					<pre><code data-trim>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;meta charset=&quot;utf-8&quot;&gt;
-		&lt;title&gt;&lt;/title&gt;
-		&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
-
-		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-	&lt;body&gt;
-&lt;/html&gt;
-					</code></pre>
-				</section>
-
-				<section>
-					<section>
-						<h2>Tables</h2>
-						<table>
-							<tr>
-								<th>Foo</th>
-								<th>Bar</th>
-							</tr>
-							<tr>
-								<td>Zelle 1 1</td>
-								<td>Zelle 1 2</td>
-							</tr>
-							<tr>
-								<td>Zelle 2 1</td>
-								<td>Zelle 2 2</td>
-							</tr>
-						</table>
-					</section>
-
-					<section>
-					<h2>Tables <strong>Latin Character Tests</strong></h2>
-						<table>
-							<tbody>
-								<tr>
-									<td>!</td>
-									<td>"</td>
-									<td>#</td>
-									<td>$</td>
-									<td>%</td>
-									<td>&amp;</td>
-									<td>'</td>
-									<td>(</td>
-									<td>)</td>
-									<td>*</td>
-								</tr>
-								<tr>
-									<td>+</td>
-									<td>,</td>
-									<td>-</td>
-									<td>.</td>
-									<td>/</td>
-									<td>0</td>
-									<td>1</td>
-									<td>2</td>
-									<td>3</td>
-									<td>4</td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>6</td>
-									<td>7</td>
-									<td>8</td>
-									<td>9</td>
-									<td>:</td>
-									<td>;</td>
-									<td>&gt;</td>
-									<td>=</td>
-									<td>&lt;</td>
-								</tr>
-								<tr>
-									<td>?</td>
-									<td>@</td>
-									<td>A</td>
-									<td>B</td>
-									<td>C</td>
-									<td>D</td>
-									<td>E</td>
-									<td>F</td>
-									<td>G</td>
-									<td>H</td>
-								</tr>
-								<tr>
-									<td>I</td>
-									<td>J</td>
-									<td>K</td>
-									<td>L</td>
-									<td>M</td>
-									<td>N</td>
-									<td>O</td>
-									<td>P</td>
-									<td>Q</td>
-									<td>R</td>
-								</tr>
-								<tr>
-									<td>S</td>
-									<td>T</td>
-									<td>U</td>
-									<td>V</td>
-									<td>W</td>
-									<td>X</td>
-									<td>Y</td>
-									<td>Z</td>
-									<td>[</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>]</td>
-									<td>^</td>
-									<td>_</td>
-									<td>`</td>
-									<td>a</td>
-									<td>b</td>
-									<td>c</td>
-									<td>d</td>
-									<td>e</td>
-									<td>f</td>
-								</tr>
-								<tr>
-									<td>g</td>
-									<td>h</td>
-									<td>i</td>
-									<td>j</td>
-									<td>k</td>
-									<td>l</td>
-									<td>m</td>
-									<td>n</td>
-									<td>o</td>
-									<td>p</td>
-								</tr>
-								<tr>
-									<td>q</td>
-									<td>r</td>
-									<td>s</td>
-									<td>t</td>
-									<td>u</td>
-									<td>v</td>
-									<td>w</td>
-									<td>x</td>
-									<td>y</td>
-									<td>z</td>
-								</tr>
-								<tr>
-									<td>{</td>
-									<td>|</td>
-									<td>}</td>
-									<td>~</td>
-								</tr>
-								</tbody>
-							</table>
-					</section>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-					## Markdown Support
-
-					Für die, die Markdown lieben.
-					Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
-					die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
-
-					> This is a blockquote. Lorem ipsum dolor sit amet,
-					> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-					> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-					```
-					## Markdown support
-
-					Für die, die Markdown lieben.
-					Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
-					die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
-
-					> This is a blockquote. Lorem ipsum dolor sit amet,
-					> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-					> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-					```
-					</script>
-				</section>
-
-				<!-- End of slides container. -->
-
-			</div>
-
-		</div>
-
-		<script src="../revealjs-framework/lib/js/head.min.js"></script>
-		<script src="../revealjs-framework/js/reveal.min.js"></script>
-
-		<script>
-
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: false,
-				width: 1000,
-
-				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
-				transitionSpeed: 'fast', // default/fast/slow
-				backgroundTransition: 'none', // default/linear/none
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-		</script>
-
-	</body>
+        </body>
 </html>
