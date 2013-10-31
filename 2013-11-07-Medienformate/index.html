@@ -59,6 +59,10 @@
                     <ul>
                         <li>Medienformate Allgemein</li>
                         <li>Bilder</li>
+                        <ul>
+                                <li>Formate</li>
+                                <li>Einbettung</li>
+                            </ul>
                         <li>Musik</li>
                         <li>Videos</li>
                             <ul>
@@ -72,22 +76,104 @@
                 
                 <section>
                     <h2>Medienformate</h2>
-                    <p class="fragment highlight-red">Bilder</p>
-                    <p class="fragment highlight-green">Musik</p>
-                    <p class="fragment highlight-blue">Videos</p>
+                    <ul>
+                        <li>Bilder</li>
+                        <li>Musik</li>
+                        <li>Videos</li>
+                    </ul>
                 </section>
                 
                 <section>
                     <section>
                         <h1>Bilder</h1>
-                        <p>Formate:</p>
-                        <p>xxx</p>
+                        <h2>Formate:</h2>
+                        <ul>
+                            <li>GIF</li>
+                            <li>JPG</li>
+                            <li>PNG</li>
+                        </ul>
                     </section>
                     
                     <section>
-                        <h1>Format xxx</h1>
-                        <p>Formate xxx</p>
-                        <p>Beschreibung</p>
+                        <h1>GIF</h1>
+                        <h2>Graphics Interchange Format</h2>
+                        <table border="1">
+                            <tr>
+                                <th>Vorteile</th>
+                                <th>Nachteile</th>
+                            </tr>
+                            <tr>
+                                <td>verlustfreie Kompression</td>
+                                <td>nur 256 Farben</td>
+                            </tr>
+                        </table>
+                    </section>
+                    
+                    <section>
+                        <h1>JPG</h1>
+                        <h2>Joint Photographic Experts Group</h2>
+                        <table border="1">
+                            <tr>
+                                <th>Vorteile</th>
+                                <th>Nachteile</th>
+                            </tr>
+                            <tr>
+                                <td>16,7 Mio Farben</td>
+                                <td>Qualitätsverlust durch Kompression</td>
+                            </tr>
+                            <tr>
+                                <td>Dateigröße gering</td>
+                                <td>Transparenz und Animation nicht möglich</td>
+                            </tr>
+                        </table>
+                    </section>
+                    
+                    <section>
+                        <h1>PNG</h1>
+                        <h2>Portable Network Graphics</h2>
+                        <table border="1">
+                            <tr>
+                                <th>Vorteile</th>
+                                <th>Nachteile</th>
+                            </tr>
+                            <tr>
+                                <td>Verlustfreie Kompression</td>
+                                <td>keine Animation möglich</td>
+                            </tr>
+                            <tr>
+                                <td>Transparenz möglich</td>
+                                <td>große Dateien</td>
+                            </tr>
+                            <tr>
+                                <td>16,7 Mio Farben</td>
+                            </tr>
+                            <tr>
+                                <td>Effektivere Kompression als GIF</td>
+                            </tr>
+                        </table>
+                    </section>
+                    
+                    <section>
+                        <h1>Kompatiblität</h1>
+                        <ul>
+                            <li>Alle wichtigen Browser unterstützen alle wichtigen Bildformate</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h1>Implementierung lokaler Bilder</h1>
+                        <pre><code data-trim>
+&lt;p&gt;&lt;img src="test.png" alt="test"&gt;&lt;/p&gt;
+					       </code></pre>
+                        <p><img src="images/github-mac.png"></p>
+                    </section>
+                    
+                    <section>
+                        <h1>Implementierung externer Quellen</h1>
+                        <pre><code data-trim>
+&lt;p&gt;&lt;img src="Link-Adresse des Bildes" alt="test"&gt;&lt;/p&gt;
+					       </code></pre>
+                        <p><img src="http://1.2.3.12/bmi/www.medieninformatik.fh-koeln.de/website/bachelor/general/startseite_72/de/images/aktion_72_74_startseite_index_5_2.jpg"></p>
                     </section>
                 </section>
                 
@@ -263,6 +349,7 @@
                 
                 <section>
                     <h2>SVG Grafiken mit Raphaël</h2>
+                    <h3>Scalable Vector Graphics</h3>
                     <p>Wie funktioniert Raphaël? Ganz einfach: Raphaël fügt in das div-Element, das ihm als Bühne übergeben wurde, SVG-Code ein und veranlasst den Browser, die Seite neu zu rendern. Das Hello-Word-Beispiel funktioniert bei SVG-fähigen Browsern auch vollkommen ohne JavaScript- und Raphaël.</p>
                     
                     <pre><code data-trim>
@@ -276,12 +363,20 @@
                     </code></pre>
                     
                         <div id="d_canvas">
-                            <svg xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative;">
-                                <text style="text-anchor: start; font: bold 20px 'Times New Roman',Times,serif;" x="5" y="13" >
-                                    Hallo Welt!
-                                </text>
-                            </svg>
-                        </div>
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        style="overflow: hidden; position: relative;"
+      >
+        <desc>
+        </desc>
+        <text 
+          style="text-anchor: start; font: bold 20px 'Times New Roman',Times,serif;"
+          x="5" y="13" 
+        >
+          Hallo Welt!
+        </text>
+      </svg>
+    </div>
                     
                 </section>
                 
