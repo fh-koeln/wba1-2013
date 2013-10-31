@@ -339,8 +339,7 @@ ajaxObject.send();
   "Stadt": "Gummersbach", 
   "Postleitzahl": 51643,
 }</code>    </pre>
-                            <spawn class="fragment">Zugriff über:
-                                <strong>.Stadt;</strong> 
+                            <spawn class="fragment">Zugriff über:&nbsp;&nbsp;<strong>.Stadt;</strong> 
                             </spawn>
                         </ul>
                     
@@ -359,8 +358,7 @@ ajaxObject.send();
 }</code>
                             </pre>
                             
-                            <spawn class="fragment">Zugriff über:
-                                <strong>.Schulen[0];</strong>
+                            <spawn class="fragment">Zugriff über:&nbsp;&nbsp;<strong>.Schulen[0];</strong>
                             </spawn>
                         </ul>
                     
@@ -383,7 +381,9 @@ ajaxObject.send();
                    }
 }</code>
                             </pre>
-							 Zugriff über: <strong>Buergermeister.Name;</strong>
+							 Zugriff über:&nbsp;&nbsp;<strong>.Buergermeister.Name;</strong>
+                            <br><br>
+                             Bei Leerzeichen oder Umlauten:&nbsp;&nbsp;<strong>variable["Bürgermeister"].Name</strong>
                             </spawn>
                         </ul>
                 </section>
@@ -398,7 +398,7 @@ ajaxObject.send();
                             <pre>
                                 <code >{ 
   "Stadt": "Gummersbach", 
-  "Bürgermeister": {
+  "Buergermeister": {
                      "Name":"Helmenstein", 
                      "Vorname": "Frank", 
                      "Autos":["Dienstwagen", "Privatwagen"];
@@ -406,8 +406,7 @@ ajaxObject.send();
 }</code>
                             </pre>
                         <spawn class="fragment">
-                           Zugriff über:
-                                <strong>variable["Bürgermeister"].Autos[0];</strong>
+                           Zugriff über:&nbsp;&nbsp;<strong>.Buergermeister.Autos[0];</strong>
                             </spawn>
                         </ul>
                     
