@@ -61,6 +61,11 @@
 			"title" : "Javascript",
 			"authors" : ["Nikita Stumpf", "Dominik Schliewowski", "Daniel Röger", "Rebecca Uebachs", "Marcel Göbel", "Hayal Sueer"]
 		},
+		"2013-10-31-barrierefreiheit/index.html":
+		{
+			"title" : "Barrierefreiheit im Internet",
+			"authors" : ["Carina Kessel", "Ernestine Wassermann", "Sebastian Zeitz"]
+		},
 		"2013-10-31-ajax-basics/index.html":
 		{
 			"title" : "AJAX",
