@@ -85,6 +85,11 @@
 		{
 			"title" : "Javascript-Training",
 			"authors" : ["Volker Schaefer"]
+		},
+		"2013-10-31-fallbeispiel-csm/index.html":
+		{
+			"title" : "Fallbeispiel: CMS",
+			"authors" : ["Dominik Schilling"]
 		}
 	}
 }
