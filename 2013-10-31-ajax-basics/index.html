@@ -188,7 +188,7 @@ if (window.XMLHttpRequest) {
                             <strong>url</strong> - Adresse
                         </li>
                         <li class="fragment"> 
-                            <strong>asnyc</strong> - Gibt an, ob die Anfrage asynchron ist oder nicht durchgeführt wird
+                            <strong>async</strong> - Gibt an, ob die Anfrage asynchron ist oder nicht durchgeführt wird
                             <br>Standardwert ist <strong>true</strong> 
                         </li>
                     </ul>
@@ -300,7 +300,7 @@ ajaxObject.send();
                     <br><br>
                     <h3 ><strong>Beispiel</strong></h3>
                     <pre class="fragment">
-<code>ajaxObject.onReadyStateChange = functi    on() {
+<code>ajaxObject.onReadyStateChange = function() {
     // Bei erfolgreicher Anfrage an den Server
     if(ajaxObject.readyState == 4 && ajaxObject.status == 200){
         alert(ajaxObject.responseText);
@@ -355,7 +355,7 @@ ajaxObject.send();
                             <pre>
                                 <code>{
   "Stadt": "Gummersbach", 
-  "Schulen": [FH, Berufkolleg],
+  "Schulen": ["FH", "Berufkolleg"],
 }</code>
                             </pre>
                             
@@ -377,13 +377,13 @@ ajaxObject.send();
                                 <pre>
                                     <code >{ 
   "Stadt": "Gummersbach", 
-  "Bürgermeister": {
+  "Buergermeister": {
                      "Name":"Helmenstein", 
                      "Vorname": "Frank", 
                    }
 }</code>
                             </pre>
-							 Zugriff über: <strong>.Bürgermeister.Name;</strong>
+							 Zugriff über: <strong>Buergermeister.Name;</strong>
                             </spawn>
                         </ul>
                 </section>
@@ -401,13 +401,13 @@ ajaxObject.send();
   "Bürgermeister": {
                      "Name":"Helmenstein", 
                      "Vorname": "Frank", 
-                     "Autos":[Dienstwagen, Privatwagen];
+                     "Autos":["Dienstwagen", "Privatwagen"];
                    }
 }</code>
                             </pre>
                         <spawn class="fragment">
                            Zugriff über:
-                                <strong>.Bürgermeister.Autos[0];</strong>
+                                <strong>variable["Bürgermeister"].Autos[0];</strong>
                             </spawn>
                         </ul>
                     
@@ -460,7 +460,7 @@ ajaxObject.send();
                         </li>
                         <br>
                         <li>
-                            Der Serveradmin kann dadurch einstellen, von welcher URL, <br> mit Skripten auf lokale Ressourcen zugegriffen werden kann. 
+                            Der Serveradmin kann dadurch einstellen, von welcher URL, <br> mit Skripten auf Ressourcen zugegriffen werden kann. 
                         </li><br>
                         <li>
                             <strong>Access-Control-Allow-Origin: *</strong> - Erlaubt allen Seiten Zugriff
@@ -529,7 +529,7 @@ ajaxObject.send();
                 <section>
                     <h2>8.Übung</h2>
 					<br>
-                    <a href="http://www.gidf.de"><h4>Lernen durch Übung!</h4></a>
+                    <a href="https://github.com/fh-koeln/wba1-2013/tree/gh-pages/2013-10-31-ajax-basics/uebung" target="_blank"><h4>Lernen durch Übung!</h4></a>
 				</section>
 			</section>
                 
