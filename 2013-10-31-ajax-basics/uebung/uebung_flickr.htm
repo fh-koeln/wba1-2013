@@ -5,11 +5,11 @@
         <title>Ajax Flickr Uebung</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <script>
-            var searchText = 'modern architecture'
+            var searchText = 'modern architecture';
             
             // '&per_page=5' teilt bei der Anfrage an die Flickr-Api die Ergebnisse in Seiten auf
             // '&page=1' gibt dann an welche Ergebnisseite zurückgegeben werden soll 
-            var pageId = 1
+            var pageId = 1;
             
             // Lädt Bilder über die flickr-api 
             function loadImages() {
@@ -38,11 +38,11 @@
                         
                         /************ 
                         *  TODO: 
-                        *  responseText in JSON-Objekt umwandeln
+                        *  .responseText in ein JSON-Objekt umwandeln
                         *************/
-                        var json
+                        var json;
 
-                        // Setzt für jedes Foto die URL aus den Daten zusammen
+                        // Setzt für jedes Foto die URL aus den geladenen Daten zusammen
                         for (var i = 0; i < json.photos.photo.length; i++) {
                             var item = json.photos.photo[i];
                             var photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg';
@@ -62,12 +62,6 @@
                     }
 
                     // Wenn die Verbindung initialisiert wird
-                    /************ 
-                    *  TODO :
-                    *  Wenn die Serververbindung hergestellt wird
-                    *  disable den button in #controls
-                    *  und setze den Text 
-                    *************/
                     if (ajaxObject.readyState == 1) {
                         document.getElementById("controls").children[0].disabled = "disabled";
                         document.getElementById("status").innerHTML = "Lade...";
@@ -76,7 +70,7 @@
                 
                 /************ 
                 *  TODO : 
-                *  Art der Anfrage festlegen
+                *  Anfrage initialisieren
                 *************/
                 ajaxObject.send();
             }
@@ -98,7 +92,7 @@
         *  AUFGABE 01
         *
         *  Erledige alle TODOs
-        *  und korrigiere das Dokument so wie 
+        *  und verändere das Dokument so, dass es wie loesung_flickr_1.htm funktioniert. 
         ***/
     
         
@@ -106,7 +100,7 @@
         *  AUFGABE 02
         * 
         *  Erstelle ein Textfeld 
-        *  und lade neue Bilder abhängig von den eingegebenen Wert rein.
+        *  und lade neue Bilder abhängig von dem eingegebenen Wert.
         *
         *  hints: form, input, submit, parameter, this
         ***/
@@ -115,9 +109,8 @@
         /************ 
         *  BONUS AUFGABE:
         *
-        *  Erstelle ein Menü mit dem man durch die einzelnen Seiten der Suchergebnisse navigieren kann.
-        *  
-        *  hints: 
+        *  Erstelle ein Menü, 
+        *  mit dem man durch die einzelnen Seiten der Suchergebnisse navigieren kann.
         ***/
     </script>
 </html>
