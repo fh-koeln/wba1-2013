@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kontaktformular</title>
+    <style type="text/css">
+        form {
+            background-color: #EEE;
+            padding: 10px 15px;
+            margin: auto;
+            width: 350px;
+        }
+        
+        input, textarea {
+            display: block;
+            width: 300px;
+            margin: 0 0 10px 0;
+        }
+        
+        textarea {
+            height: 100px;
+        }
+        
+        fieldset {
+            margin: 0 0 10px;
+        }
+        
+        h1 {
+            margin: 0 0 20px 0;
+            padding: 0;
+        }
+        
+        input[type="submit"] {
+            width: 150px;
+            
+        }
+        
+        .error {
+            background-color: #ffd1d1;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/parsley.js"></script>
+            
+   
+
+</head>
+<body>
+    <form action="http://google.de" data-validate="parsley" method="get" name="formular">
+        <h1>Kontaktformuler</h1>
+        <fieldset>
+            <legend>Kontaktdaten</legend>
+            <label for="vorname" id="labelVorname">Vorname:</label>
+            <input type="text" id="vorname">
+            <label for="nachname" class="pflichtfeld" id="labelNachname">Nachname: </label>
+            <input type="text" id="nachname"  data-required="true" data-error-message="Bitte geben Sie ihren Nachnamen ein">
+            <label for="email" id="labelEmail">E-Mail-Adresse:</label>
+            <input type="text" id="email" data-type="email"  data-required="true" data-error-message="Bitte geben Sie eine gültige E-Mail-Adresse ein">
+        </fieldset>
+        <fieldset>
+            <legend>Nachricht</legend>
+            <label for="betreff" id="labelBetreff">Betreff:</label>
+            <input type="text" id="betreff">
+            <label for="nachricht" id="labelNachricht">Ihre Nachricht:</label>
+            <textarea class="pflichtfeld" id="nachricht"  data-required="true" data-error-message="Bitte geben Sie eine Nachricht ein"></textarea>
+        </fieldset>
+        <input type="submit" value="Nachricht abschicken"> 
+    </form>
+</body>
+</html>
