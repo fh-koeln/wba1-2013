@@ -1,20 +1,95 @@
-{
+﻿{
 	"presentations":
 	{
 		"2013-10-10-wba1-kickoff/index.html":
 		{
 			"title" : "WBA1 Kickoff",
-			"authors" : ["Volker Schäfer"]
+			"authors" : ["Prof. Christian Noss", "Volker Schäfer"]
 		},
 		"2013-10-10-brackets-basics/index.html":
 		{
-			"title" : "Brackets - Einführung",
+			"title" : "Einführung: Brackets",
 			"authors" : ["Martin Baljan"]
 		},
 		"2013-10-10-git/index.html":
 		{
-			"title" : "Git &amp; GitHub",
+			"title" : "Einführung: Git & GitHub",
 			"authors" : ["Dominik Schilling", "Christoph Jerolimov"]
+		},
+		"2013-10-17-html-basics-gruppe13/index.html":
+		{
+			"title" : "HTML Basics (1)",
+			"authors" : ["Peter Wagner", "Maik Güldenmeister", "Robert xxx"]
+		},
+		"2013-10-17-html-basics-gruppe2/index.html":
+		{
+			"title" : "HTML Basics (2)",
+			"authors" : ["Muhamed Fazlic", "Minh Duc Bui", "Manuel Sorg"]
+		},
+		"2013-10-17-html-advanced-gruppe1/index.html":
+		{
+			"title" : "HTML Advanced & HTML5 (1)",
+			"authors" : ["Dennis Dubbert", "Alexander Jan Müller"]
+		},
+		"2013-10-17-HTML-Advanced-Gruppe-2/index.html":
+		{
+			"title" : "HTML Advanced & HTML5 (2)",
+			"authors" : ["Vsevolod Küppers", "Thomas Friesen", "Sercan Kücükköse"]
+		},
+		"2013-10-17-html-uebungen/index.html":
+		{
+			"title" : "HTML Übungen",
+			"authors" : ["Martin Baljan", "Dominik Schilling", "Christoph Jerolimov"]
+		},
+		"2013-10-24-web-basics/index.html":
+		{
+			"title" : "Web-Basics",
+			"authors" : ["Prof. Christian Noss", "Volker Schaefer"]
+		},
+		"2013-10-24-css-basics-gruppe-16/praesentation_cssb.html":
+		{
+			"title" : "CSS Basics",
+			"authors" : ["Jana Bürker", "Muhammed Cakir", "Andreas Schneider", "Vanakh Chea", "Sven Breidbach", "Remzi-Can Battal"]
+		},
+		"2013-10-24-CSS-Advanced/index.html":
+		{
+			"title" : "CSS Advanced",
+			"authors" : ["Harun Sevinc", "Arthur Kremsier", "Marina Schoop", "Anja Wijayaganthan", "Burcu Öz", "Kevin Apitz"]
+		},
+		"2013-10-24-javascript-basic/index.html":
+		{
+			"title" : "Javascript",
+			"authors" : ["Nikita Stumpf", "Dominik Schliewowski", "Daniel Röger", "Rebecca Uebachs", "Marcel Göbel", "Hayal Sueer"]
+		},
+		"2013-10-31-barrierefreiheit/index.html":
+		{
+			"title" : "Barrierefreiheit im Internet",
+			"authors" : ["Carina Kessel", "Ernestine Wassermann", "Sebastian Zeitz"]
+		},
+		"2013-10-31-ajax-basics/index.html":
+		{
+			"title" : "AJAX",
+			"authors" : ["Aziz Kilic", "Tim Kurtz", "Dominik Scharf"]
+		},
+		"2013-10-31-css-frameworks/index.html":
+		{
+			"title" : "CSS Frameworks: SCSS &amp; SASS",
+			"authors" : ["Hannah Schinz", "Nico Sebastian Schoenenberg", "Marija Kandic"]
+		},
+		"2013-10-31-cms/index.html":
+		{
+			"title" : "CMS",
+			"authors" : ["Alexander Miske", "Lewis Geruhn", "Daniela Reschke"]
+		},
+		"2013-10-31-javascript-training/index.html":
+		{
+			"title" : "Javascript-Training",
+			"authors" : ["Volker Schaefer"]
+		},
+		"2013-10-31-fallbeispiel-cms/index.html":
+		{
+			"title" : "Fallbeispiel: CMS",
+			"authors" : ["Dominik Schilling"]
 		},
         "2013-11-07-medienformate/index.html":
         {

@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Title of presentation -->
+		<title>CSS Advanced</title>
+		<!-- Short description of presentation -->
+		<meta name="description" content="Demo of Reveal.js functions and features">
+		<!-- Author of presentation -->
+		<meta name="author" content="Dominik Schilling">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+<!------------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------Beginn der Präsentation-------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------Intro----------------------------------------------------------------->
+				<section>
+					<h1>Web-basierte Anwendungen 1</h1>
+					<h2>CSS Advanced</h2>
+
+					<p>24. Oktober 2013</p>
+
+					<p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
+					Campus Gummersbach</p>
+
+
+					<p style="margin-top:10%">Harun Sevinc<br>
+				        Arthur Kremsier<br>
+                        Marina Schoop<br>
+                        Anja Wijayaganthan<br>
+                        Burcu Öz<br>
+                        Kevin Apitz<br>
+                    </p>
+				</section>
+
+
+<!-- Section 2.0 Inhalt & Ablauf-->
+
+                <section>
+                    <h1>Inhalte und Ablauf</h1>
+                    <p><strong>Vortrag und Beispiele zu:</strong></p>
+                    <ol>
+                        <li class="fragment">Normal Flow</li>
+                        <li class="fragment">Positionierung</li>
+                        <li class="fragment">Pseudoklassen</li>
+                        <li class="fragment">Kombinatoren</li>
+                        <li class="fragment">Attribut-Selektoren</li>
+                        <li class="fragment">Spezifität</li>
+                        <li class="fragment">Transitionen</li>
+                    </ol>
+                    <br>
+                    <br>
+                    <br>
+                    <p style="font-size: 1em;" class="fragment"><strong>Anschließend</strong></p>
+                    <ul>
+                        <li class="fragment">
+                            Lernen durch Übungen
+                        </li>
+                     </ul>
+                </section>
+
+<!-----Section 4.0 -------------------------------------------------------------------------------------------------------------------->
+
+                <section> <!-- Dokumentenfluss -->
+
+<!--Section 4.2-->	<section>
+						<h1>1. <strong>Bleibe im Fluss -</strong> Normal Flow </h1>
+                                                <br>
+                                                <blockquote>„Elemente im normal flow stehen im Zusammenhang mit Formatierungen:
+                                                    können Block- oder Inline-Elemente sein, allerdings nie beides gleichzeitig.
+                                                    Mit <i>block</i>ausgezeichnete Elemente sind Teil des mit <i>block</i> formatierten Umfeldes.
+                                                    Mit <i>inline</i> ausgezeichnete Elemente sind Teil des mit <i>inline</i> formatierten Umfeldes. „</blockquote>
+                                                <br>
+						<h1 class="fragment"><strong>Was heißt das?</strong></h1>
+			</section>
+<!--Section 4.3-->	<section>
+						<h2><strong>1.1</strong> Von Bauklötzen und Schwerkraft</h2>
+                                                <div style="float:left" class="fragment">
+                                                    <p>Realität</p>
+                                                    <img src="images\Bauklotzturm.jpg" alt="Bauklotzturm">
+                                                </div>
+                                                <div style="float:right" class="fragment">
+                                                    <p>Markup</p>
+                                                    <img src="images\Bauklotzturm180.jpg" alt="Bauklotzturm180°">
+                                                </div>
+
+
+
+			</section>
+		</section>
+
+<!-- Section 5.0 -->
+		<section> <!-- Manipulation /-Positionierung -->
+                        <section>
+                            <h2><strong>2.</strong> Positionierung</h2>
+
+                             <h3 class="fragment green"><strong>4</strong> Arten der Positionierung</h3>
+                            <ul>
+                                <li style="width:500px;" class="fragment"><pre><code>position: static;</pre></code></li>
+                                <li style="width:500px;" class="fragment"><pre><code>position: relative;</pre></code></li>
+                                <li style="width:500px;" class="fragment"><pre><code>position: absolute;</pre></code></li>
+                                <li style="width:500px;" class="fragment"><pre><code>position: fixed;</pre></code></li>
+                            </ul>
+                    </section>
+
+                    <section>
+                        <h2><strong>2.1</strong> position:<strong>static</strong> - Hier bleibt alles beim alten</h2>
+
+                        <ul style="floaft:left">
+                            <li class="fragment">Default für Attribut <strong>position</strong></li>
+                            <li class="fragment">Statisch, d.h. nicht mittels Versatzeigenschaften positionierbar</li>
+                            <li class="fragment">Inhalte erscheinen in Reihenfolge,<br>in der sie im HTML-Quelltext vorliegen.</li>
+			</ul>
+                        <img class="fragment" style="float:right" src="images\block_static.png" alt="block_static">
+                        <br><br>
+                        <div class="fragment" style="floaft:left; width:450px;"><pre style="width:450px"><code>selektor {
+    position: static;
+    bottom: 20px; /*Das würde nichts bewirken*/
+    left: 15%;    /*Auch überflüssig*/
+}                       </code></pre></div>
+                    </section>
+                    <section>
+                        <h2><strong>2.2</strong> position:<strong>relative</strong> - Versteckte Kräfte</h2>
+                                                <ul style="floaft:left">
+							<li class="fragment">Verhält sich wie static</li>
+							<li class="fragment">Versatzeigenschaften <strong>top</strong>,<strong>right</strong>,<strong>bottom</strong>,<strong>left</strong> verfügbar</li>
+							<li class="fragment">Koordinatensystem orientiert sich an statischer Position</li>
+                                                        <li class="fragment">Versatz beinflusst Position umliegender Elemente nicht</li>
+                                                </ul>
+                                                <img class="fragment" style="float:right" src="images\block_relative.png" alt="block_relative">
+                                                <br><br>
+                                                <div class="fragment"style="floaft:left; width:450px;"><pre style="width:450px"><code>selektor {
+    position: relative;
+    bottom: 20px;
+    left: 15%;
+}                       </code></pre></div>
+                                        </section>
+                                        <section>
+                                            <h2><strong>2.3</strong> position:<strong>absolute</strong> - Überall, jederzeit</h2>
+                                                <ul style="float:left; width:550px">
+                                                        <li class="fragment">wird aus <strong>normal flow</strong> entfernt, d.h. die Position:</li>
+                                                        <ul class="fragment">
+                                                                <li>wird nicht durch andere Elemente beeinflusst</li>
+                                                                <li>beeinflusst andere Elemente nicht</li>
+                                                        </ul>
+                                                        <li class="fragment">Koordinatensystem orientiert sich am nächsthöheren Elternelement
+                                                            <strong>=/</strong> position:static im Markup</li>
+                                                        <li class="fragment">Versatzeigenschaften <strong>top</strong>,<strong>right</strong>,<strong>bottom</strong>,<strong>left</strong> verfügbar</li>
+                                                        <div class="fragment"style="floaft:left; width:450px;"><pre style="width:450px"><code>selektor {
+    position: absolute;
+    bottom: 20px;
+    left: 15%;
+}                       </code></pre></div>
+                                                </ul>
+                                                <img class="fragment" style="float:right" src="images\block_absolute.png" alt="block_absolute">
+                                                <br><br>
+
+                                        </section>
+                                        <section>
+                                            <h2><strong>2.4</strong> position:<strong>fixed</strong> - Immer genau da</h2>
+                                                <ul>
+							<li class="fragment"><strong>Fast</strong> alles wie bei absoluter Positionierung</li>
+                                                        <li class="fragment">Koordinatensystem jedoch immer gemessen am "Viewport" (Browserfenster, Bildschirm mobiler Geräte)</li>
+                                                        <ul>
+                                                            <li class="fragment">d.h  es bewegt sich nicht mit, wenn gescrollt wird</li>
+                                                        </ul>
+                                                </ul>
+                                                <br><br>
+                                                <div class="fragment"style="floaft:left; width:450px;"><pre style="width:450px"><code>selektor {
+    position: fixed;
+    bottom: 20px;
+    left: 15%;
+}                       </code></pre></div>
+
+                                        </section>
+                    <section>
+                        <h2>2.5 Weitere nützliche Positionierungs-Attribute</h2>
+                        <ul class="fragment">
+                            <li>float <strong>&</strong> clear</li>
+                            <li class="fragment">Bsp.:</li>
+                        </ul>
+                        <pre class="fragment"><code>selektor {
+    float:left;
+}</code></pre>
+                        <br>
+                        <br>
+                        <ul class="fragment">
+                            <li><h3>mehr hierzu <strong>in der Übung</strong></h3></li>
+                        </ul>
+                    </section>
+                                        <section>
+                                                <h2><strong>2.6 </strong>Der <strong>z-index</strong></h2>
+                                                <h3>Was wenn Elemente übereinander liegen?</h3>
+                                                <ul>
+                                                        <li class="fragment">Zuletz genanntes Element im HTML Code liegt vorne</li>
+                                                        <li class="fragment">konfigurierbar über <strong>Bsp.:</strong></li>
+                                                </ul>
+                                                <img class="fragment" style="float:right" src="images\block_overlap.png" alt="block_overlap">
+                                                <div class="fragment"style="floaft:left; width:350px;"><pre><code>rot {
+    z-index: 2;
+}
+
+blau {
+    z-index: 3;
+}
+
+gruen {
+    z-index: 4;
+}</code></pre></li></div>
+                                                <ul>
+                                                    <li class="fragment">Element mit höherem z-index überdeckt Elemente mit niedrigerem z-index</li>
+                                                </ul>
+                                        </section>
+                                </section>
+
+<!-------------------------------------------------------------------------------------------------------------------------------->
+<!--Section 6.0-->  <section> <!-- Pseudoklassen -->
+                        <section>
+                            <h2>3. <strong>Pseudoklassen</strong> & <strong>Pseudoelemente</strong></h2>
+                                <ul>
+                                    <li class="fragment">beschreiben den Zustand oder eine Eigenschaft eines Elements</li>
+                                    <br>
+                                    <li class="fragment">Syntax für Pseudoklassen
+                                    <pre><code>selektor:pseudoklasse {
+    ...
+}</code></pre>
+                                    </li>
+                                    <li class="fragment">Syntax für Pseudoelemente
+                                    <pre><code>selektor::pseudoelement {
+    ...
+}</code></pre>
+                                    </li>
+                                    <br>
+                                    <h3 class="fragment">Wozu braucht man Pseudoklassen <strong>&</strong> -elemente nun?</h3>
+				</ul>
+
+
+                        </section>
+			<section>
+                           <h2><strong>3.1</strong> Pseudoelemente</h2>
+                            <ul>
+                                <li class="fragment">dienen der Stilisierung der im Markup enthaltenen Elemente durch <strong>"Pseudoelemente"</strong></li>
+                                <li class="fragment"><strong>::first-line</strong><br>erste Textzeile des Elements erhält CSS-Eigenschaften</li>
+				<li class="fragment"><strong>::first-letter</strong><br>erstes Zeichen des Textes erhält CSS-Eigenschaften</li>
+                                <li class="fragment"><strong>::before</strong><br>fügt Inhalt vor Element ein</li>
+                                <li class="fragment"><strong>::after</strong><br>fügt Inhalt nach Element ein</li>
+                            </ul>
+			</section>
+			<section>
+                            <h2><strong>3.2</strong> Pseudoklassen für Verweise <br><span class="fragment"><strong>           aber auch andere Elemente</strong></span></h2>
+                            <ul>
+                                <li class="fragment"><strong>:link</strong><br>Für Verweise zu noch nicht besuchten Seiten</li>
+				<li class="fragment"><strong>:visited</strong><br>Für Verweise zu bereits besuchten Seiten</li>
+				<li class="fragment"><strong>:focus</strong><br>Für Elemente, die den Fokus erhalten, z.B. durch "Durchsteppen" mit der Tabulator-Taste</li>
+				<li class="fragment"><strong>:hover</strong><br>Für Elemente, während der Anwender mit der Maus darüber fährt</li>
+				<li class="fragment"><strong>:active</strong><br>Für gerade angeklickte Elemente</li>
+				<br>
+				<a href="http://de.selfhtml.org/css/eigenschaften/anzeige/pseudo_links.htm">Beispiel</a>
+                            </ul>
+			</section>
+			<section>
+                            <h2><strong>3.3</strong> weitere <strong>wichtige</strong> Pseudoklassen</h2>
+                            <ul>
+                                <li class="fragment"><strong>:</strong>f<strong>irst-child</strong><br>spricht das <strong>erste</strong> Element an</li>
+                                <li class="fragment"><strong>:last-chil</strong>d<br>spricht das <strong>letzte</strong> Element an</li>
+				<li class="fragment"><strong>:n</strong>t<strong>h-child(</strong>n-te(s) Element(e)<strong>)</strong><br>spricht n-te(s) Element(e) an</li>
+                            </ul>
+							<br>
+							<img src="images\first_child.jpg" alt="first_child" width="30%">
+							<img src="images\last_child.jpg" alt="last_child" width="30%">
+							<img src="images\nth_child.jpg" alt="nth_child" width="30%">
+                        </section>
+                        <section>
+                            <h2><strong>3.4</strong> Weitere Pseudoklassen</h2>
+							<p>
+                                Link: <a href="http://reference.sitepoint.com/css/css3psuedoclasses">Weitere Pseudoklassen, insbesondere von CSS3</a>
+							</p>
+			</section>
+                    </section>
+
+<!------------------------------------------------------------------------------------------------------------------------------------>
+                                <section> <!-- Kombinatoren -->
+                                        <section>
+                                            <h2><strong>4.</strong> Kombinatoren</h2>
+                                                <ul>
+                                                    <li class="fragment">Elemente stehen zueinander in verwandtschaftlicher Beziehung</li>
+                                                    <pre class="fragment"><code>Bedingungsselektor Zielselektor {
+    ...
+}</code></pre>
+                                                    <li class="fragment">Bedingung erfüllt wenn Verwandtschaftsbeziehung zum Zielselektor zutreffend</li>
+                                                </ul>
+                                        </section>
+
+                                        <section>
+                                                <h2><strong>4.1</strong> Arten von <strong>Kombinatoren</strong></h2>
+                                                <ul>
+                                                    <li><strong>Nachfahren</strong>-Kombinator</li>
+                                                    <ul class="fragment">
+                                                        <li>wählt <strong>alle direkten </strong>&<strong> indirekten Nachfahren</strong> des Bedingungsselektors aus, die dem Zielselektor entsprechen</li>
+                                                        <pre class="fragment"><code>Bedingungsselektor Zielselektor {
+    ...
+}</code></pre>
+                                                    </ul>
+                                                    <li><strong>Kind</strong>-Kombinator</li>
+                                                    <ul class="fragment">
+                                                        <li>wählt <strong>alle direkten Nachfahren</strong> des Bedingungsselektors aus, die dem Zielselektor entsprechen</li>
+                                                        <pre class="fragment"><code>Bedingungsselektor > Zielselektor {
+    ...
+}</code></pre>
+                                                    </ul>
+                                                </ul>
+                                        </section>
+                                        <section>
+                                                <h2><strong>4.2</strong> Arten von <strong>Kombinatoren</strong></h2>
+                                                <ul>
+                                                    <li><strong>Nachbar</strong>-Kombinator</li>
+                                                    <ul class="fragment">
+                                                        <li>wählt <strong>alle direkten Nachbaren</strong> des Bedingungsselektors aus, die dem Zielselektor entsprechen</li>
+                                                        <pre class="fragment"><code>Bedingungsselektor + Zielselektor {
+    ...
+}</code></pre>
+                                                    </ul>
+                                                    <li><strong>Geschwister</strong>-Kombinator</li>
+                                                    <ul class="fragment">
+                                                        <li>wählt <strong>alle direkten </strong>&<strong> indirekten folgenden Nachbaren</strong> des Bedingungsselektors aus, die dem Zielselektor entsprechen</li>
+                                                        <pre class="fragment"><code>Bedingungsselektor ~ Zielselektor {
+    ...
+}</code></pre>
+                                                    </ul>
+                                                </ul>
+                                        </section>
+                                </section>
+<!-- Attribut Selektoren -->
+                                <section>
+                                    <section>
+                                        <h1><strong>5.</strong> Attribut-Selektoren</h1>
+                                        <br>
+                                        <blockquote>"Immer wieder soll ein HTML-Element mit CSS-Stilen gezielt ausgewählt und geändert werden.
+                                            Wenn es eine CSS-Klasse oder ein ID-Attribut gibt, ist das Ansteuern eines HTML-Tags mit CSS einfach."
+                                        </blockquote>
+                                        <br>
+                                        <h3 style="text-align: center" class="fragment"><strong>Aber wie steht es mit einem Element mitten in einer Liste?</strong></h3>
+                                        <div class="fragment">
+                                        <pre><code>a.blue {
+    ...
+}</code></pre>
+                                        <p><strong>entspricht</strong><p>
+                                        <pre><code>a[class~="blue"] {
+    ...
+}</code></pre>
+                                        </div>
+                                    </section>
+                                    <section>
+                                        <h1><strong>5.1</strong> Attribut-Selektoren</h1>
+                                        <table>
+                                            <tr>
+                                                <td style="width:200px"><pre><code>a[title]</code></pre></td>
+                                                <td>Passt auf Element a mit Attribut title.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><pre><code>a[title="red"]</code></pre></td>
+                                                <td>Passt auf Element a mit Attribut title und exakten Wert <span style="color:red">red</span>.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><pre><code>a[title~="red"]</code></pre></td>
+                                                <td>Passt auf Element a mit Attribut title, dessen durch Leerzeichen getrennte Liste von Werten <span style="color:red">red</span> enthält. Auch auf Attribut-Wert "<span style="color:red">red</span> little flexible" zutreffend.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><pre><code>a[title|="red"]</code></pre></td>
+                                                <td>Passt auf Element a mit Attribut title, dessen durch Trennstriche (-) getrennte Liste von Werten <span style="color:red">red</span> enthält.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><pre><code>a[title^="red"]</code></pre></td>
+                                                <td>Passt auf Element a mit Attribut title, dessen Wert mit <span style="color:red">red</span> beginnt. Auch auf Attribut-Wert <span class="brown">reddish</span> zutreffend.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><pre><code>a[title$="red"]</code></pre></td>
+                                                <td>Passt auf Element a mit Attribut title, dessen Wert mit <span style="color:red">red</span> endet. Auch auf Attribut-Wert <span style="color:rosybrown">rosered</span> zutreffend.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><pre><code>a[title*="red"]</code></pre></td>
+                                                <td>Passt auf Element a mit Attribut title, dessen Wert <span style="color:red">red</span> an beliebiger Stelle in Zeichenkette enthält</td>
+                                            </tr>
+                                        </table>
+                                    </section>
+                                </section>
+                                <section>
+                                <section>
+                                       <h3 class="green" style="font-size: 1.5em;">6. Spezifität </h3>
+                                       <blockquote class="fragment">"Sobald Stylesheets ein bisschen länger werden, gibt es früher oder später für ein HTML-Element mehrere CSS-Regeln, die sich zum Teil widersprechen. Die Frage ist, wie der Browser in solchen Konfliktfällen entscheidet."</blockquote>
+                                       <br>
+                                       <br>
+                                       <h1 class="fragment"><strong>Ganz Einfach!</strong></h1>
+                                </section>
+                                <section>
+                                       <h2>6.1 Spezifität</h2>
+                                       <p>Der Browser berechnet anhand eines einfachen Punktesystems, welcher Selektor der wichtigste ist</p>
+                                       <br>
+                                       <br>
+                                       <table class="fragment">
+                                           <tr>
+                                               <td>einfacher Typ-Selektor</td>
+                                               <td>p</td>
+                                               <td>1</td>
+                                           </tr>
+                                           <tr>
+                                               <td>Klasse</td>
+                                               <td>.infobox</td>
+                                               <td>10</td>
+                                           </tr>
+                                           <tr>
+                                               <td>Pseudoklasse</td>
+                                               <td>:visited</td>
+                                               <td>10</td>
+                                           </tr>
+                                           <tr>
+                                               <td>ID</td>
+                                               <td>#navibereich</td>
+                                               <td>100</td>
+                                           </tr>
+                                           <tr>
+                                               <td>Attribut style = " "</td>
+                                               <td>style="color: red;"</td>
+                                               <td>1000</td>
+                                           </tr>
+                                       </table>
+                                </section>
+                                <section>
+                                       <h2>6.2 Specifity <strong>||</strong> Spezifität <strong>||</strong> Spezifizität</h2>
+                                       <p>Weitere Beispiele <strong>&</strong> detailierte Erklärungen findet ihr unter:</p>
+                                       <br>
+                                       <a href="http://little-boxes.de/lb1/6.5-spezifitaet-punktesystem-fuer-selektoren.html">Spezifität: das Punktesystem für Selektoren</a>
+                                       <br>
+                                       <p>und/oder</p>
+                                       <a href="http://thestyleworks.de/basics/specificity.shtml">Berechnung der Spezifizität mittels Matrizenverfahren <strong style="font-size:0.7em">(╯°□°）╯︵┻━┻</strong></a>
+                                </section>
+                             </section>
+<!-- Transitions -->
+                                <section>
+                                    <section>
+                                        <h2>7. Transitions</h2>
+                                        <ul>
+                                            <li>ermöglichen es, Änderung eines Elements <strong>von einem Style zum anderem</strong> zu steuern<br></li>
+                                            <li>Solch eine Änderung geschieht beispielsweise beim :hover über ein Element.</li>
+                                        </ul>
+                                        <pre ><code style="overflow:hidden">div {
+    transition-property: width; /*Property, auf das transition anzuwenden ist (all=alle Properties)*/
+    transition-duration: 1s; /*Dauer der Transition-Animation */
+    transition-timing-function: linear; /*Timing-Funktion gibt zeitl. Verlauf der Animation vor*/
+    transition-delay: 2s; /*Delay bevor Transition einzusetzen hat*/
+}</code></pre>
+                                        <br>
+                                        <div style="text-align: center" class="fragment shrink"><strong>--> transition! <--</strong></div>
+                                    </section>
+                                </section>
+                                <section>
+                                    <section>
+                                        <h1>Lauter <strong>Theorie</strong>!<br>Wo bleibt die <strong>Praxis</strong>?!<br><br><br></h1>
+                                        <h2>weiter zu den Übungen... ;D</h2>
+                                    </section>
+                                </section>
+
+<!------------------------------------------------------------------------------------------------------------------------Ende der Präsentation->
+<!------------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------------->
+				<!-- End of slides container. -->
+
+			</div>
+
+		</div>
+
+		<script src="../revealjs-framework/lib/js/head.min.js"></script>
+		<script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				width: 1000,
+
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'fast', // default/fast/slow
+				backgroundTransition: 'none', // default/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Ajax Tutorial</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            var ajax;
+            
+            if (window.XMLHttpRequest) {
+                    // Variante für IE7+, Firefox, Chrome, Opera, Safari
+                    ajax = new XMLHttpRequest();
+                } else {
+                    // Variante für IE6, IE5
+                    ajax = new ActiveXObject("Microsoft.ajaxObject");
+                }
+            
+            ajax.onreadystatechange = function(){
+                if(ajax.readyState == 4 && ajax.status == 200){
+                    alert(ajax.responseText);
+                }
+            }
+            
+            ajax.open("GET", "http://cors-test.herokuapp.com/", true);
+            ajax.send();
+        </script>
+    </head>
+</html>

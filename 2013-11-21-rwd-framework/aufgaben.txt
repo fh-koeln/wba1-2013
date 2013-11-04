@@ -1,0 +1,24 @@
+﻿> Stefania
+Frameworks welche gibt es? OpenSource oder nicht?
+Grundlagen erklären (siehe Info.txt)
+Vorteile/Nachteile
+Übungen erstellen (Blätter)
+Doku
+
+> Eduard
+Vorgefertigte Elemente grob erläutern
+Umsetzung mit Bootstrap
+- container
+- columns 
+- etc...
+Bilder einfügen und skalieren
+Glyphicons, buttons...
+Wie erstelle man respositive Menüs mit Bootstrap
+
+
+> Marc
+Geschichte bzw Einleitung zu Bootstrap
+Was ist das Ziel von Bootstrap ist eine gute Frage?!
+Übungen erstellen (live)
+Klausuraufgaben erstellen
+Doku
