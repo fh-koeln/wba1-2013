@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		
+		<!-- Title of presentation -->
+		<title>WBA1 - Responsive Design Frameworks</title>
+
+		<meta name="description" content="Responsive Design Frameworks">
+		<meta name="author" content="Christian Hahn , Thimo Stange">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+		
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/solarized_light.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		
+		<div class="reveal linear">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+
+				<section class="past" style="display: block;">
+					<h1>WBA1</h1>
+					<h2>Medieninformatik</h2>
+					<p>XX Oktober 2013</p>
+					<p>
+						Studiengang Medieninformatik an der Fachhochschule Köln<br>
+						Campus Gummersbach
+					</p>
+					<p>
+						Christian Hahn <br>
+						<a href="https://github.com/christianh92" class="roll"><span data-title="github@christianh92">github@christianh92</span></a>
+					</p>
+					<p>
+						Thimo Stange <br>
+						<a href="https://github.com/Ravershawn" class="roll"><span data-title="github@Ravershawn">github@Ravershawn</span></a>
+					</p>
+
+				</section>
+
+<!-- Inhaltsverzeichnis -->
+
+				<section class="present" style="display: block;">
+					<h2>Responsive Design Framework</h2>
+					<p>
+						</p><ul>
+							<li>Grundgedanke</li>
+							<li>Grid-System</li>
+							<li>Frameworks</li>
+							<li>Vorgefertigte Elemente</li>
+							<li>Vorteile/Nachteile</li>
+							<li>Beispiel zur Umsetzung mit Skeleton</li>
+					<p></p>
+
+				</ul></section>
+
+<!-- Grundgedanke -->
+
+				<section class="future" style="display: block;">
+					<h2>Grundgedanke</h2>
+					<p>
+						</p><ul>
+							<li>Dynamische Webseiten für verschiedene Endgeräte</li>
+							<li>Ansammlung von CSS-Klassen</li>
+							<li>Mobile Endgeräte sind die Zukunft</li>
+								<ul>
+									<li><strong>Optimierung unumgänglich</strong></li>
+						</ul>
+						</ul>
+					<p></p>
+
+				</section>
+
+<!-- Grid-System -->
+
+				<section class="future" style="display: block;">
+					<h2>Grid-System</h2>
+					<p>
+						"herunterbrechen" auf jeweiliges Endgerät<br>
+						</p><ul>
+							<li>Spalten</li>
+							<li>Drittel</li>
+							<li>Zwei Hälften</li>
+						</ul>
+					<p></p>
+
+				</section>
+
+<!-- Frameworks -->
+				<section class="future" style="display: block;">
+					<h2>Frameworks</h2>
+					
+					<p>
+						</p><ul>
+							<li>Skeleton</li>
+							<li>Twitter Bootstrap</li>
+							<li>Foundation 3</li>
+							<li>Responsive Grid System</li>
+							<li>...</li>
+					<p></p>
+				</ul></section>
+
+<!-- Vorgefertigte Elemente -->
+
+				<section class="future" style="display: none;">
+					<h2>Vorgefertigte Elemente</h2>
+					<p>
+						</p><ul>
+							<li>Grundelemente in der Optik und Reaktion</li>
+							<li>Vorteile: Basis für Responsive Design</li>
+							<li>Nachteile: Komplexe Designs = extra Anpassung</li>
+						</ul>
+					<p></p>
+				</section>
+
+<!-- Vorteile/Nachteile -->
+
+				<section class="future" style="display: none;">
+						<h2>Vorteile RWD</h2>
+						<p>
+							</p><ul>
+								<li>Anpassung der Website an jedes Gerät</li>
+								<li>Information steht im Vordergrund</li>
+                                <li>Frameworks optimiert an alle gängigen Browser</li>
+								<li>zukunftsorientiert</li>
+							</ul>
+						<p></p>
+                </section>
+
+					<section class="future" style="display: none;">
+						<h2>Nachteile RWD</h2>
+							<p>
+								</p><ul>
+									<li>Manche Gestaltungselemente werden nicht unterstützt</li>
+									<li>Komplexe Gestaltungen schwer umsetzbar</li>
+									<li>Mehr Arbeit als herkömmliche Website</li>
+								</ul>
+							<p></p>
+					</section>
+				
+
+<!-- Beispiel zur Umsetung mit Skeleton -->
+
+				<section class="stack future" style="display: none;">
+					<section>
+					<h2>Umsetzung mit Skeleton</h2>
+					<p>
+						</p><ul>
+							<li>"container"</li>
+							<li>"columns" bzw. "column"</li>
+							<li>960px Webseitenbreite</li>
+						</ul>
+					<p></p>
+					</section>
+
+					<section>
+						<h2>Dateisystem</h2>
+							<p>
+							index.html
+							</p><ul>
+								<li>Frei bearbeitbar</li>
+								<li>Enthält Beispielcode und vorgegebene Einsatzmöglichkeiten</li>
+							</ul>
+							<p></p>
+							<p>
+							base.css
+							</p><ul>
+								<li>Basis für das Framework</li>
+								<li>Grundlegende Styles definiert</li>
+							</ul>
+							<p></p>
+						</section>
+						<section>
+                            <h2>Dateisystem</h2>
+							<p>
+							skeleton.css
+							</p><ul>
+								<li>Definition : 960er Grid</li>
+							</ul>
+							<p></p>
+							<p>
+							layout.css
+							</p><ul>
+								<li>Eigendefinition der Styles</li>
+								<li>Vordefinierte Media-Queries</li>
+							</ul>
+							<p></p>
+						</section>
+
+					<section>
+						<h2>Breitenangabe der Spalten</h2>
+					<p>
+						</p><pre><code class="undefined">
+	.container .one.column,
+	.container .one.columns
+	.container .two.columns
+	.container .three.columns
+      	...
+	.container .fourteen.columns
+	.container .fifteen.columns
+	.container .sixteen.columns
+
+	.container .one-third.column
+	.container .two-thirds.column
+						</code></pre>
+					<p></p>
+				</section>
+
+				<section>
+					<h2>Abstände</h2>
+					<p>
+						</p><pre><code class="undefined">
+	.container .offset-by-one
+	.container .offset-by-two
+	.container .offset-by-three
+	.container .offset-by-four
+        ...
+	.container .offset-by-thirteen
+	.container .offset-by-fourteen
+	.container .offset-by-fifteen
+						</code></pre>
+					<p></p>
+				</section>
+
+				<section>
+					<h2>Klassenaufbau</h2>
+					<p>
+						</p><pre><code class="xml">
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"four columns"</span>&gt;</span>Spalte 1<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"four columns"</span>&gt;</span>Spalte 2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"four columns"</span>&gt;</span>Spalte 3<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"four columns"</span>&gt;</span>Spalte 4<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+						</code></pre>
+					<p></p>
+				</section>
+
+				<section>
+					<h2>Media-Queries</h2>
+					<p>
+						</p><pre><code class="css">
+<span class="comment">/* Smaller than standard 960 (devices and browsers) */</span>
+<span class="at_rule">@<span class="keyword">media</span> only screen and (max-width: <span class="number">959</span>px) </span>{}
+
+<span class="comment">/* Tablet Portrait size to standard 960 (devices and browsers) */</span>
+<span class="at_rule">@<span class="keyword">media</span> only screen and (min-width: <span class="number">768</span>px) and (max-width: <span class="number">959</span>px) </span>{}
+
+<span class="comment">/* All Mobile Sizes (devices and browser) */</span>
+<span class="at_rule">@<span class="keyword">media</span> only screen and (max-width: <span class="number">767</span>px) </span>{}
+
+<span class="comment">/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */</span>
+<span class="at_rule">@<span class="keyword">media</span> only screen and (min-width: <span class="number">480</span>px) and (max-width: <span class="number">767</span>px) </span>{}
+
+<span class="comment">/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */</span>
+<span class="at_rule">@<span class="keyword">media</span> only screen and (max-width: <span class="number">479</span>px) </span>{}
+						</code></pre>
+					<p></p>
+				</section>
+
+				<section>
+					<h2>Spezialfall Menü</h2>
+					<p>
+						</p><pre><code class="xml">
+<span class="tag">&lt;<span class="title">select</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"#"</span>&gt;</span>Home<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"#rekord"</span>&gt;</span>Über den Rekord<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"#orga"</span>&gt;</span>Organisatorisch<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"#location"</span>&gt;</span>Location<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"#contact"</span>&gt;</span>Kontakt<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"#link"</span>&gt;</span>Weiterer Link<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">select</span>&gt;</span>
+						</code></pre>
+					<p></p>
+					<p>
+						</p><pre><code class="javascript">
+$(<span class="string">'select'</span>).change(<span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+	window.location = $(<span class="keyword">this</span>).find(<span class="string">'option:selected'</span>).val();
+});
+						</code></pre>
+					<p></p>
+				</section>
+
+			</section>
+
+			<section class="future" style="display: none;">
+				<h2>Übung 01</h2>
+				<p>
+					Ziel: Responsive Menü
+				</p>
+				<p>
+					Datei: index.html
+				</p>
+				<p>
+					<a href="https://www.dropbox.com/s/3l4azfkxdukujcl/Responsive%20Design%20Frameworks.zip" target="_blank" class="roll"><span data-title="Download">Download</span></a> oder Github
+				</p>
+				<p>
+					</p><ul><li>Das oben (Zeile 54-61) dargestellte Menü soll für mobile Endgeräte optimiert werden. Überführen sie das
+Menü in ein Dropdownmenü. Beachten Sie dabei die bereits vorhandenen Verlinkungen.</li></ul>
+				<p></p>
+			</section>
+
+			<section class="future" style="display: block;">
+				<h2>Übung 02</h2>
+				<p>
+					Ziel: Verständnis Grundsyntax
+				</p>
+				<p>
+					Datei: index.html
+				</p>
+				<p>
+					<a href="https://www.dropbox.com/s/3l4azfkxdukujcl/Responsive%20Design%20Frameworks.zip" target="_blank" class="roll"><span data-title="Download">Download</span></a> oder Github
+				</p>
+				<p>
+					</p><ul><li>Die vier Artikel unterhalb des Teaserbildes sollen innerhalb des 16-Spalten-Rasters nebeneinander und in gleicher Breite dargestellt werden.</li></ul>
+				<p></p>
+			</section>
+
+			<section class="future" style="display: block;">
+				<h2>Übung 03</h2>
+				<p>
+					Ziel: Media Queries verstehen
+				</p>
+				<p>
+					Datei: stylesheets/layout.css
+				</p>
+				<p>
+					<a href="https://www.dropbox.com/s/3l4azfkxdukujcl/Responsive%20Design%20Frameworks.zip" target="_blank" class="roll"><span data-title="Download">Download</span></a> oder Github
+				</p>
+				<p>
+					</p><ul><li>Auf ALLEN mobilen Endgeräten soll das Logo im Headerbereich (.logo img) halb so groß (70*44px) dargestellt werden. Wählen Sie den passenden Media-Query und fügen Sie die passenden CSS-Eigenschaften hinzu.</li></ul>
+				<p></p>
+			</section>
+
+			</div>
+
+		<div class="progress" style="display: block;"><span style="width: 61.36363636363637px;"></span></div><aside class="controls" style="display: block;"><a class="left enabled" href="http://fh-koeln.github.io/wba1-2012/files/2013-01-17-Responsive-Design-Frameworks/index.html#">◄</a><a class="right enabled" href="http://fh-koeln.github.io/wba1-2012/files/2013-01-17-Responsive-Design-Frameworks/index.html#">►</a><a class="up" href="http://fh-koeln.github.io/wba1-2012/files/2013-01-17-Responsive-Design-Frameworks/index.html#">▲</a><a class="down" href="http://fh-koeln.github.io/wba1-2012/files/2013-01-17-Responsive-Design-Frameworks/index.html#">▼</a></aside><div class="state-background"></div><div class="pause-overlay"></div></div>
+
+		<script src="./WBA1_files/head.min.js"></script>
+		<script src="./WBA1_files/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } }
+					//{ src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					//{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+				]
+			});
+
+		</script><script type="text/javascript" src="./WBA1_files/zoom.js"></script>
+<script type="text/javascript" src="./WBA1_files/highlight.js"></script></body></html>

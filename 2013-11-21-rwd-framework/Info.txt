@@ -1,0 +1,62 @@
+Responsive Webdesighn mit dem Framework
+=======================================
+
+
+Was ist Bootstrap?
+- Es ist ein sehr ituitiv zu bedindendes Framework von Twitter
+- Ziel ist möglichst von allen Geräten (Computer, Tablet, Smartphone) erkannt zu werden
+- Es ist vollkommen Responsive Webdesign Konzept
+- D.h. es kann sowohl von übergroßen Bildschirm gelesen werden als auch von Smartphone
+
+Grudlage
+- Grid-System also zu deut. Gitter-System im Spalten aufgebaut
+- Flexibles System
+- Arbeitet mit HTML, CSS, und man kann Java-Skript (Vorteil JQuery) einbinden
+- Bereich der Typographie ist auch sehr viel gearbeitet worden zb. .leads
+- CSS-Eigenschaften sind voreigerichtet und man kann sofort arbeiten!!
+- Stille sind vorgegeben, Icons als Glyphicons (als Schritzeichen)
+
+Aufbau
+- http://builtwithbootstrap.com/
+- Bsp: http://shirkdesigns.com/
+
+Programmierung
+- Einfache einbindung mit Hilfe von Aptana Studio v3 (IDE-Umgebung)
+- Einrichtung von XAMPP als Webserver
+- File -> New -> Web Project >> Default Project <<
+- Kurze Version disk kopieren 
+- index.html: New -> File
+--> dafault index.html: http://getbootstrap.com/getting-started/#template
+- Testindex-Datei von Bootstrap-Website unter "Getting Started" -> "Basic template"
+- Anbindung an CSS unter Quellcode zu sehen
+- Dreamweaver auch kein Problem
+- Bootstrap arbeitet in Spaltensystem http://getbootstrap.com/css/#grid (wie die Printmedien)
+- Vorteile: Geräteunabhängiges arbeiten, sehr flexibel, 
+  die Karusselgröße wandert mit, Optimale Ausgabe für die einzelnen Geräte
+- Bsp: Bootstrap grid examples auf der Webseite
+- Wie viel Platz man für ein Element auf der Webseite haben will, wird bestimmt du diese Spalten
+
+Praxis
+- in Aptana Studio
+- Spalten.html einfach kopieren
+- div mit vogegebenen Klasse "container"
+- Hinweise machen für den Überblick
+- wieder div und spezielle Klasse "row" dt. Reihe
+- schmale und lange Spalte bauen "col col-md-3"
+- Überschrift + Blindtext http://www.blindtextgenerator.de/ (100 Wörter)
+- Word Wrap fuer die Übersichtlichkeit
+- Codierungsstile ändern <meta charset="UTF-8"/>
+- Noch mehr Spalten
+- HTML 5 section, innerhalt Seitenteil und Hauptteil
+--> symantisch korrekte Aufteilung, ziel von HTML5
+- Positinierungen der Spalten und Offset, Unterspalten
+- initial-scale=1.0 --> no, Inhalte die Sinnhaftigeit verlieren würden
+
+Neues Projekt
+- Strucktur
+- Images, img-responsive
+- CSS
+- ... 
+
+
+
