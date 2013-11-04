@@ -691,9 +691,35 @@
                 </section>
                 
                 <section>
-                    <h2>SVG</h2>
-                    <h3>Scalable Vector Graphics</h3>
-                    
+                    <section>
+                        <h1>SVG</h1>
+                        <h2>Scalable Vector Graphics</h2>
+                        <ul>
+                            <li>normal immer Bild bearbeiten, exportieren und in Webseite einbinden</li>
+                            <li>bei Änderungen immer die Originaldatei bearbeiten und wieder exportieren und einbinden</li>
+                            <li>SVG-Grafiken sind flexibler</li>
+                            <li>können dynamisch erzeugt werden (Statistiken, Graphen)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h1>Einbindung img-Tag</h1>
+                        <pre><code data-trim>
+&lt;img src="images/sonnenblumen.svg" alt="Sonnenblumen"&gt;
+                            </code></pre>
+                        <img src="images/sonnenblumen.svg" alt="">
+                    </section>
+                    <section>
+                    <h1>Einbindung object-Tag</h1>
+                        <pre><code data-trim>
+&lt;object data="sonnenblumen.svg" type="image/svg+xml"&gt;&lt;/object&gt;
+                            </code></pre>
+                        <p>Vorteile object-Tag:</p>
+                        <ul>
+                            <li>JavaScript verfügbar (Mouseover)</li>
+                            <li>Links verfügbar</li>
+                        </ul>
+                        <object data="images/sonnenblumen.svg" type="image/svg+xml"></object>
+                    </section>
                 </section>
                 
                 <section>
