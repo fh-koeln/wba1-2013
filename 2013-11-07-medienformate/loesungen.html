@@ -40,7 +40,7 @@
 			<div class="slides">
                 
                 <section>
-					<h1>Übungen</h1>
+					<h1>Lösungen</h1>
 					<h2>Medienformate</h2>
 
 					<p>7. November 2013</p>
@@ -56,75 +56,75 @@
                 
                 <section>
                     <section>
-                        <h1>Übung 1</h1>
+                        <h1>Lösung 1</h1>
                         <h2>Fragen</h2>
                     </section>
                     <section>
                         <h2>Bilder</h2>
-                        <a href="PDF/wba1_uebungsaufgaben_bilder.pdf">Übung Bilder</a>
+                        <a href="PDF/wba1_loesungen_bilder.pdf">Lösung Bilder</a>
                     </section>
                     <section>
                         <h2>Musik</h2>
-                        <a href="PDF/wba1_uebungsaufgaben_musik.pdf">Übung Musik</a>
+                        <a href="PDF/wba1_loesungen_musik.pdf">Lösung Musik</a>
                     </section>
                     <section>
                         <h2>Videos</h2>
-                        <a href="PDF/wba1_uebungsaufgaben_videos.pdf">Übung Videos</a>
+                        <a href="PDF/wba1_loesungen_videos.pdf">Lösung Videos</a>
                     </section>
                 </section>
                 
                 <section>
                     <section>
-                        <h1>Übung 2</h1>
+                        <h1>Lösung 2</h1>
                         <h2>Einbindung</h2>
                     </section>
                     
                     <section>
                         <h1>Bilder</h1>
-                        <ol>
-                            <li>Erstellen Sie ein neues HTML-Dokument mit dem HTML-Grundgerüst und binden Sie eine Bilddatei ein.<br><br>
-                                Benutzen sie einen aussagekräftigen alt-Tag.
-                            </li>
-                        </ol>
+                            <pre><code data-trim>
+&lt;p&gt;&lt;img src="test.png" alt="Dies ist ein Test-Bild"&gt;&lt;/p&gt;
+					       </code></pre>
                     </section>
                     
                     <section>
                         <h1>Musik</h1>
-                        <ol>
-                            <li>Erstellen Sie ein neues HTML-Dokument mit dem HTML-Grundgerüst und binden Sie eine Audiodatei ein, die sofort gestartet wird.<br>
-                                Nutzen sie dabei folgende Elemente:<br><br>
-                                    <ul>
-                                        <li>&lt;audio&gt;</li>
-                                        <li>controls</li>
-                                        <li>autoplay</li>
-                                        <li>&lt;source&gt;</li>
-                                        <li>type</li>
-                                    </ul>
-                            </li>
-                        </ol>
+                        <pre><code data-trim>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=”de”&gt;
+&lt;head>&lt;/head&gt;
+&lt;body&gt;
+    &lt;section id=”audio”&gt;
+        &lt;audio controls autoplay&gt;
+            &lt;source src=”Test.mp3” type=”audio/mp3”&gt;
+        &lt;/audio&gt;
+    &lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+					       </code></pre>
                     </section>
                     
                     <section>
                         <h1>Videos</h1>
-                        <ol>
-                            <li>Erstellen Sie ein neues HTML-Dokument mit dem HTML-Grundgerüst und binden Sie eine Videodatei ein, die sofort gestartet wird.<br>
-                                Nutzen sie dabei folgende Elemente:<br><br>
-                                    <ul>
-                                        <li>&lt;video&gt;</li>
-                                        <li>controls</li>
-                                        <li>autoplay</li>
-                                        <li>&lt;source&gt;</li>
-                                        <li>type</li>
-                                    </ul>
-                            </li>
-                        </ol>
+                        <pre><code data-trim>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=”de”&gt;
+&lt;head>&lt;/head&gt;
+&lt;body&gt;
+    &lt;section id=”video”&gt;
+        &lt;video controls autoplay&gt;
+            &lt;source src=”Test.mp4” type=”audio/mp4”&gt;
+        &lt;/audio&gt;
+    &lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+					       </code></pre>
                     </section>
                 </section>
                 
                 <section>
                     <h1>Links</h1>
                     <p>Hier geht es zurück zur <a href="index.html">Präsentation</a>.</p>
-                    <p>Hier geht es zu den <a href="loesungen.html">Lösungen</a>.</p>
+                    <p>Hier geht es zu den <a href="uebungen.html">Übungen</a>.</p>
                 </section>
                 
                 <!-- End of slides container. -->
