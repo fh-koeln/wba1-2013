@@ -90,6 +90,11 @@
 		{
 			"title" : "Fallbeispiel: CMS",
 			"authors" : ["Dominik Schilling"]
-		}
+		},
+        "2013-11-07-medienformate/index.html":
+        {
+            "title" : "Medienformate",
+            "authors" : ["Kai Dippel", "Christian Grevenstein", "Aysenur Cavusoglu"]
+        }
 	}
 }

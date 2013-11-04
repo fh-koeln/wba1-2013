@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Title of presentation -->
+		<title>Medienformate</title>
+		<!-- Short description of presentation -->
+		<meta name="description" content="Präsentation Medienformate">
+		<!-- Author of presentation -->
+		<meta name="author" content="Kai Dippel">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/solarized_light.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Web-basierte Anwendungen 1</h1>
+					<h2>Medienformate</h2>
+
+					<p>7. November 2013</p>
+
+					<p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
+					Campus Gummersbach</p>
+
+					<p style="margin-top:10%">Aysenur Cavusoglu<br>
+                    Kai Dippel<br>
+					Christian Grevenstein<br>
+					</p>
+				</section>
+
+				<section>
+                    <h2>Gliederung</h2>
+                    <ul>
+                        <li>Medienformate Allgemein</li>
+                        <li>Bilder</li>
+                            <ul>
+                                <li>Formate</li>
+                                <li>Einbettung</li>
+                            </ul>
+                        <li>Musik</li>
+                            <ul>
+                                <li>Formate</li>
+                                <li>Einbettung</li>
+                            </ul>
+                        <li>Videos</li>
+                            <ul>
+                                <li>Allgemeines</li>
+                                <li>Einbettung</li>
+                            </ul>
+                        <li>SVG Grafiken</li>
+                        <li>Übungen</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Medienformate</h2>
+                        <h3>Bilder</h3>
+                        <h3>Musik</h3>
+                        <h3>Videos</h3>
+                </section>
+                
+                <section>
+                    <section>
+                        <h1>Bilder</h1>
+                        <h2>Formate:</h2>
+                        <ul>
+                            <li>GIF</li>
+                            <li>JPG</li>
+                            <li>PNG</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h1>GIF</h1>
+                        <h2>Graphics Interchange Format</h2>
+                        <table border="1">
+                            <tr>
+                                <th>Vorteile</th>
+                                <th>Nachteile</th>
+                            </tr>
+                            <tr>
+                                <td>verlustfreie Kompression</td>
+                                <td>nur 256 Farben</td>
+                            </tr>
+                             <tr>
+                                <td>Transparenz und Animation möglich</td>
+                                 <td></td>
+                            </tr>
+                        </table>
+                        <ul>
+                            <li>Verwendung: Für alle Animationen für die Flash/HTML5 ungeeignet sind</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h1>JPG</h1>
+                        <h2>Joint Photographic Experts Group</h2>
+                        <table border="1">
+                            <tr>
+                                <th>Vorteile</th>
+                                <th>Nachteile</th>
+                            </tr>
+                            <tr>
+                                <td>16,7 Mio Farben</td>
+                                <td>Qualitätsverlust durch Kompression</td>
+                            </tr>
+                            <tr>
+                                <td>Dateigröße gering</td>
+                                <td>Transparenz und Animation nicht möglich</td>
+                            </tr>
+                        </table>
+                        <ul>
+                            <li>Verwendung: Nahezu alle Fotos im Internet, welche keine Transparenz oder absolut perfekte Qualität benötigen,  sind JPEG Dateien</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h1>PNG</h1>
+                        <h2>Portable Network Graphics</h2>
+                        <table border="1">
+                            <tr>
+                                <th>Vorteile</th>
+                                <th>Nachteile</th>
+                            </tr>
+                            <tr>
+                                <td>Verlustfreie Kompression</td>
+                                <td>keine Animation möglich</td>
+                            </tr>
+                            <tr>
+                                <td>Transparenz möglich</td>
+                                <td>große Dateien</td>
+                            </tr>
+                            <tr>
+                                <td>16,7 Mio Farben</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Effektivere Kompression als GIF</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <ul>
+                            <li>Verwendung: Für Icons und Grafiken oder auch Fotos mit transparenten Bereichen</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h1>Kompatiblität</h1>
+                        <ul>
+                            <li>Alle wichtigen Browser unterstützen alle wichtigen Bildformate</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h1>Implementierung lokaler Bilder</h1>
+                        <pre><code data-trim>
+&lt;p&gt;&lt;img src="test.png" alt="test"&gt;&lt;/p&gt;
+					       </code></pre>
+                        <p><img src="images/github-mac.png"></p>
+                        <p>alt-Tag soll das Bild beschreiben, falls es nicht dargestellt werden kann</p>
+                    </section>
+                    
+                    <section>
+                        <h1>Implementierung externer Quellen</h1>
+                        <pre><code data-trim>
+&lt;p&gt;&lt;img src="http://www.medieninformatik.fh-koeln.de/website/bachelor/general/startseite_72/de/images/aktion_72_74_startseite_index_5_2.jpg" alt="test"&gt;&lt;/p&gt;
+					       </code></pre>
+                        <p><img src="http://www.medieninformatik.fh-koeln.de/website/bachelor/general/startseite_72/de/images/aktion_72_74_startseite_index_5_2.jpg"></p>
+                    </section>
+                </section>
+                
+                <section>
+                    <section>
+                        <h1>Musik</h1>
+                        <h2>Verlustfreie Audioformate:</h2>
+                        <ul>
+                            <li>WAV</li>
+                        </ul>
+                        
+                        <h2>Verlustbehaftete Audioformate:</h2>
+                        <ul>
+                            <li>Ogg Vorbis</li>
+                            <li>mp3</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h1>WAV</h1>
+                        <h2>Waveform Audio File Format</h2>
+                        <table border="1">
+                            <tr>
+                                <th>Vorteile</th>
+                                <th>Nachteile</th>
+                            </tr>
+                            <tr>
+                                <td>Beste Klangqualität</td>
+                                <td>Verschwendung von Speicherplatz für Frequenzen<br>
+                                    die für das menschliche Gehör nicht wahrnehmbar sind
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ohne Codecs lesbar</td>
+                                <td>große Datenmengen</td>
+                            </tr>
+                        </table>
+                        <ul>
+                            <li>Verwendung: WAVs sollten nur sparsam eingesetzt werden, wenn es nötig ist. Besteht die Möglichkeit, auf MP3 oder OGG auszuweichen, sollte diese unbedingt genutzt werden.</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h1>Ogg Vorbis</h1>
+                        <table border="1">
+                            <tr>
+                                <th>Vorteile</th>
+                                <th>Nachteile</th>
+                            </tr>
+                            <tr>
+                                <td>sehr gute Software-Unterstützung</td>
+                                <td>höherer Energieverbrauch als MP3 bei Hardware-Playern</td>
+                            </tr>
+                            <tr>
+                                <td>nicht patentiert, Hersteller zahlen keine Lizenzgebühren</td>
+                                <td>wenig Weiterentwicklung von offizieller Seite, dafür von Drittentwicklern</td>
+                            </tr>
+                        </table>
+                        <ul>
+                            <li>Verwendung: Das Format ist streaming- und mehrkanalfähig, daher z.B. Internetradio</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h1>mp3</h1>
+                        <h2>MPEG Audio Layer III</h2>
+                        <table border="1">
+                            <tr>
+                                <th>Vorteile</th>
+                                <th>Nachteile</th>
+                            </tr>
+                            <tr>
+                                <td>Gute Komprimierung verkleinert die abgespielten Stücke merklich ohne merkliche Qualitätseinbußen</td>
+                                <td>Zu stark komprimierte MP3 klingen blechern</td>
+                            </tr>
+                            <tr>
+                                <td>Instrumentierung unbeschränkt</td>                                
+                                <td>Herstellung eigener Musikstücke ist komplizierter</td>
+                            </tr>
+                            <tr>
+                                
+                                <td>Klang ist unabhängig vom Rechner</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <ul>
+                            <li>Verwendung: MP3 ist ein beliebtes proprietäres Format zur sinnvollen Kompression von Audiodaten.</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h1>Kompatiblität</h1>
+                        <table border="1">
+                            <tr>
+                                <th>Format</th>
+                                <th>Browser</th>
+                            </tr>
+                            <tr>
+                                <td>Firefox</td>
+                                <td>ogg, wav</td>
+                            </tr>
+                            <tr>
+                                <td>Opera</td>
+                                <td>ogg, wav</td>
+                            </tr>
+                            <tr>
+                                <td>Internet Explorer</td>
+                                <td>mp3</td>
+                            </tr>
+                            <tr>
+                                <td>Chrome</td>
+                                <td>ogg, wav, mp3</td>
+                            </tr>
+                            <tr>
+                                <td>Safari</td>
+                                <td>wav, mp3</td>
+                            </tr>
+                        </table>
+                    </section>
+                    
+                    <section>
+                        <h1>Implementierung lokaler Musik</h1>
+                        <pre><code data-trim>
+&lt;audio controls autoplay&gt;
+    &lt;source src="beispieltrack.ogg" type="audio/ogg"&gt;
+    &lt;source src="beispieltrack.mp3" type="audio/mp3"&gt;
+&lt;/audio&gt;
+					       </code></pre>
+                        <audio controls autoplay>
+                            <source src="beispieltrack.ogg" type="audio/ogg">
+                            <source src="beispieltrack.mp3" type="audio/mp3">
+                        </audio>
+                    </section>
+                    
+                    <section>
+                        <h1>Einbettung externer Quellen</h1>
+                        <pre><code data-trim>
+&lt;audio controls autoplay&gt;
+    &lt;source src="www.beispielmusik.de/test.ogg" type="audio/ogg"&gt;
+&lt;/audio&gt;
+					       </code></pre>
+                        <audio controls autoplay>
+                            <source src="www.beispielmusik.de/test.ogg" type="audio/ogg">
+                        </audio>
+                    </section>
+                </section>
+                
+                <section>
+                    <section>
+                        <h1>Videos</h1>
+                        <h2>Allgemein</h2>
+                        <table>
+							<tr>
+								<th>Jedes Video muss für das Abspielen im Internet vorbereitet werden</th>
+							</tr>
+							<tr>
+								<td>Parameter:</td>
+							</tr>
+							<tr>
+								<td>
+                                    <ul>
+                                        <li>Speicherformat</li>
+                                        <li>Codecs</li>
+                                        <li>Auflösung</li>
+                                        <li>Bitrate</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                    <th>Vorab:</th>
+                            </tr>
+                            <tr>
+                                    <td>Kein bestes Videoformat --> Anpassung an Browser und Internetverbindung</td>
+                            </tr>
+						</table>
+                    </section>
+                    
+                    <section>
+                        <h2>Speicherformat</h2>
+                        <img class="align-center" src="images/container-fuer-video-bilder-pdf-schema.png" alt="Container">
+                        <br>
+                        <table>
+                            <tr>
+                                <td>Videos bestehen aus Video-Track, Audio Track und evtl Meta-Daten wie dem Titel verpackt in einem Container</td>
+                            </tr>
+                            <tr>
+                                <th>Container:</th>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>FLV Flash</li>
+                                        <li>MP4 MPEG-4-Dateiformat</li>
+                                        <li>OGV</li>
+                                        <li>webM</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                    
+                    <section>
+                        <h2>Codecs</h2>
+                        <table>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>Unkomprimierte Videos zu große Datenmengen</li>
+                                        <li>Speichern keine Einzelbilder, nur die Unterschiede zwischen einzelnen Bildern</li>
+                                        <li>Unterschied zwischen Einzelbildern meist gering, daher kleine Dateigrößen</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Codecs:</th>
+                                <th>Container:</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>H.264</li>
+                                        <li>Theora OGG</li>
+                                        <li>VP8</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>mp4, FLV</li>
+                                        <li>OGV</li>
+                                        <li>webM</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                
+                    <section>
+                        <h2>Auflösung und Bitrate</h2>
+                        <table>
+                            <tr>
+                                <th>Auflösung</th>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>Videomaterial kommt in immer höherer Auflösung</li>
+                                        <li>Viel zu große Datenmengen für eine Website</li>
+                                        <li>Smartphones machen bereits Videos in Full-HD Auflösung</li>
+                                        
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Bitrate</th>
+                            </tr> 
+                            <p>Je höher die Bitrate, desto besser ist die Qualität, desto größer ist auch die Datei</p>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>Wenn man davon ausgeht, dass heute alle eine schnelle DSL-Anbindung zur Verfügung haben:</li>
+                                        <li>1-5 MBit/s, bei HD-Videos besser 2-5 Mbits</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                    
+                    <section>
+                        <h2>Mobile Verbindungen</h2>
+                        <table>
+                            <tr>
+                                <th>Verbindungstyp (Praxis)</th>
+                                <th>Bitrate</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>GMS</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>14,4 Kbit/s</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>GPRS</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>53,6 Kbit/s</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>EDGE</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>217,6 Kbit/s</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>UMTS</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>384 Kbit/s</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>HSDPA</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>7,2 Mbit/s</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>LTE</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>100 MBit/s</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                    
+                    <section>
+						<h2>Browserunterstützung</h2>
+						<h3>Desktop-Browser</h3>
+							<table>
+								<tr style="font-weight:bold;">
+									<td style="width:100px;"></td><td style="width:230px;">Internet Explorer</td><td style="width:230px;">Firefox</td><td style="width:230px;">Chrome</td><td style="width:230px;">Safari</td><td style="width:230px;">Opera</td>
+								</tr>
+								<tr>
+									<td style="font-weight:bold;">mp4</td><td><img src="images/haken.png" alt="JA"></td><td></td><td><img src="images/haken.png" alt="JA"></td><td><img src="images/haken.png" alt="JA"></td><td></td>
+								</tr>
+								<tr>
+									<td style="font-weight:bold;">WebM</td><td></td><td><img src="images/haken.png" alt="JA"></td><td><img src="images/haken.png" alt="JA"></td><td></td><td><img src="images/haken.png" alt="JA"></td>
+								</tr>
+								<tr>
+									<td style="font-weight:bold;">OGV</td><td></td><td><img src="images/haken.png" alt="JA"></td><td><img src="images/haken.png" alt="JA"></td><td></td><td><img src="images/haken.png" alt="JA"></td>
+								</tr>
+							</table>
+					</section>
+					<section>
+						<h3>Mobile-Browser</h3>
+							<table>
+								<tr>
+								    <td style="width:100px;"></td><td style="width:230px;">Internet Explorer</td><td style="width:230px;">Firefox</td><td style="width:230px;">Chrome</td><td style="width:230px;">Safari</td>
+								</tr>
+								<tr>
+								    <td>mp4</th><td><img src="images/haken.png" alt="JA"></td><td><img src="images/haken.png" alt="JA"></td><td><img src="images/haken.png" alt="JA"></td><td><img src="images/haken.png" alt="JA"></td>
+								</tr>
+								<tr>
+									<td>WebM</th><td></td><td><img src="images/haken.png" alt="JA"></td><td><img src="images/haken.png" alt="JA"></td><td></td>
+								</tr>
+								<tr>
+								    <td>OGV</th><td></td><td><img src="images/haken.png" alt="JA"></td><td><img src="images/haken.png" alt="JA"></td><td></td>
+								</tr>
+							</table>
+					</section>
+                    
+                    <section>
+                        <h2>Fazit</h2>
+                        <h3>Desktop</h3>
+                            <table> 
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>moderne Brwoser haben kein Flash-Plugin mehr vorinstalliert</li>
+                                            <li>dafür spielen sie Videos ohne Plugin in bestimmten Formaten ab (HTML5-Video-Tag)</li>
+                                            <li>alte Internet Explorer Versionen erkennen HTML5-Video-Tag nicht, haben dafür meist ein Flash-Plugin installiert</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        
+                        <h3>Mobil</h3>
+                            <table> 
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Smartphones spielen kein Flash mehr ab</li>
+                                            <li>Nicht jeder Browser spielt jedes Format ab</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <h3>Um wirklich allen Besuchern die Videos anbieten zu können muss man mehrere Formate benutzen.</h3>
+                    </section>
+        
+                    <section>
+                        <h2>Warum wird Flash abeglöst?</h2>
+                        <h3>Nachteile Flash</h3>
+                        <ul>
+                            <li>hohe Prozessorlast, hoher Akkuverbrauch</li>
+                            <li>Browser-Plug-In erforderlich</li>
+                            <li>Sicherheitslücken durch Plugin</li>
+                            <li>Suchmaschinenunfreundlich</li>
+                        </ul>
+                        
+                        <h3>Vorteile HTML5-Video-Tag</h3>
+                        <ul>
+                            <li>direkte Einbettung in HTML</li>
+                            <li>kein Browser-Plug-In erforderlich</li>
+                            <li>Suchmaschinenfreundlich über Metadaten</li>
+                        </ul>
+                    </section>
+                
+                    <section>
+                        <h2>Video in HTML-Seite einbetten</h2>
+                        <h3>HTML5-Video-Tag</h3>
+                            <pre><code data-trim>
+&lt;video src="videos/movie.mp4" type="video/mp4" width="538" height="330" controls&gt;
+					       </code></pre>
+                        <video src="videos/movie.mp4" type="video/mp4" width="538" height="330" controls>
+                    </section>
+                        
+                    <section>
+                        <h2>Video in HTML-Seite einbetten</h2>
+                        <h3>HTML5-Video-Tag</h3>
+                        <h3>Fallback</h3>
+                        
+                        <p>Um allen Benutzern das Video anbieten zu können werden mehrere Formate benutzt:</p>
+                        
+                        <pre><code data-trim>
+&lt;video controls width="400"  height="240"&gt;
+	&lt;source src="movie.mp4" type="video/mp4" /&gt;
+	&lt;source src="movie.webm" type="video/webm" /&gt;
+	&lt;img src="movie.jpg" alt"Videostandbild" /&gt;
+	&lt;p>Ihr Browser unterstützt kein HTML5-Video&lt;/p&gt;
+&lt;/video&gt;
+					       </code></pre>
+                    </section>
+                        
+                    <section>
+                        <h2>Attribute des Video-Tags</h2>
+                        <br>
+                        <table> 
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>autoplay</li>
+                                        <li>controls</li>
+                                        <li>loop</li>
+                                        <li>muted</li>
+                                        <li>poster="standbild.jpg"</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>startet Wiedergabe automatisch</li>
+                                        <li>zeigt Steuerelemente an</li>
+                                        <li>spielt das Video in Schleife ab</li>
+                                        <li>schaltet das Video stumm</li>
+                                        <li>wird gezeigt, wenn das Video pausiert</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                        
+                    <section>
+                        <h2>Video von externen Quellen einbetten</h2>
+                        <h3>Beispiel Youtube-Video</h3>
+                            <pre><code data-trim>
+&lt;iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/4KeUaWF3jHQ" frameborder="0" allowfullscreen&gt;
+&lt;/iframe&gt;
+                            </code></pre>
+                        <iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/4KeUaWF3jHQ" frameborder="0" allowfullscreen >
+                        </iframe>
+                    </section>
+                </section>
+                
+                <section>
+                    <section>
+                        <h1>SVG</h1>
+                        <h2>Scalable Vector Graphics</h2>
+                        <ul>
+                            <li>normal immer Bild bearbeiten, exportieren und in Webseite einbinden</li>
+                            <li>bei Änderungen immer die Originaldatei bearbeiten und wieder exportieren und einbinden</li>
+                            <li>SVG-Grafiken sind flexibler</li>
+                            <li>können dynamisch erzeugt werden (Statistiken, Graphen)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h1>Einbindung img-Tag</h1>
+                        <pre><code data-trim>
+&lt;img src="images/sonnenblumen.svg" alt="Sonnenblumen"&gt;
+                            </code></pre>
+                        <img src="images/sonnenblumen.svg" alt="">
+                    </section>
+                    <section>
+                    <h1>Einbindung object-Tag</h1>
+                        <pre><code data-trim>
+&lt;object data="sonnenblumen.svg" type="image/svg+xml"&gt;&lt;/object&gt;
+                            </code></pre>
+                        <p>Vorteile object-Tag:</p>
+                        <ul>
+                            <li>JavaScript verfügbar (Mouseover)</li>
+                            <li>Links verfügbar</li>
+                        </ul>
+                        <object data="images/sonnenblumen.svg" type="image/svg+xml"></object>
+                    </section>
+                </section>
+                
+                <section>
+                        <h1>Übungen</h1>
+                        <p>Hier geht es zu den <a href="uebungen.html">Übungen</a>.</p>
+                </section>
+
+                
+				<!-- End of slides container. -->
+
+			</div>
+
+		</div>
+
+		<script src="../revealjs-framework/lib/js/head.min.js"></script>
+		<script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				width: 1000,
+
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'fast', // default/fast/slow
+				backgroundTransition: 'none', // default/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
