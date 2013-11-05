@@ -135,12 +135,12 @@ what difficulties they might have"<br>
 				    <li class="fragment">Texte sollen semantisch organisiert werden</li>
 				    <li class="fragment">Texte sollen verständlich sein <strong>(Textalternativen)</strong></li>
 				    <li class="fragment">Erklärung nicht gängiger Begriffe und Fachwörter</li>
-				    <li class="fragment">EKontrast, Schriftgröße, Gestaltung sind zu beachten</li>
+				    <li class="fragment">Kontrast, Schriftgröße, Gestaltung sind zu beachten</li>
 	</ul>
 
 					</section>
       <section>
-					<h1>barrierefreie Inhalte | <strong>Texte Codebeispiele</strong></h1>
+					<h1>barrierefreie Inhalte | <strong>Texte - Codebeispiele</strong></h1>
         <br>
                 
 
@@ -188,6 +188,93 @@ what difficulties they might have"<br>
 	</ul>
 
 					</section>
+    
+    
+    <section>
+					<h1>barrierefreie Inhalte | <strong>Bilder - Codebeispiele</strong></h1>
+                
+
+       <br><h4><p>Alternativtext eines dekorativen Bildes</p></h4>
+         <pre><code data-trim contenteditable>
+
+<img src="images/dekoTrenner.png" width="200px" height="200px" alt=""/>
+
+                    </code></pre>
+ <br><h4><p>Alternativtext eines informativen Bildes mithilfe des alt Tags</p></h4>
+                    <pre><code data-trim contenteditable>
+
+<img src="images/logo.png" width="200px" height="200px" alt="das Logo der Fachhochschule Köln"/>
+
+                    </code></pre>
+        <br><h4><p>Alternativtext eines informativen Bildes durch einen weiterführenden Link</p></h4>
+               <pre><code data-trim contenteditable>
+
+<img src="images/monaLisa.jpg" alt="die Mona Lisa, weitere Informationen im Beschreibungslink"/>
+
+<a href="monaDesc.htm">Beschreibungstext des Bildes</a>
+
+
+                    </code></pre>
+        <br><h4><p>Alternativtext eines informativen Bildes mithilfe von ARIA</p></h4>
+                       <pre><code data-trim contenteditable>
+
+<img src="images/monaLisa.jpg" width="800px" height="600px" alt="..." aria-describedby="info" />
+
+<p id="info">Dieses Bild zeigt die Mona Lisa von Leonardo da Vinci...</p>
+                    </code></pre>
+
+<br>
+
+
+				
+</section>
+    
+     <section>
+					<h1>barrierefreie Inhalte | <strong>Formulare</strong></h1>
+
+					<ul>
+				    <li class="fragment">sollen vertikal aufgebaut und mit ausreichend Platz versehen sein</li>
+				    <li class="fragment">Beschriftungen von Eingabefeldern immer davor</li>
+				    <li class="fragment">Beschriftungen von Check- oder Radioboxen immer dahinter</strong></li>
+				    <li class="fragment">zusammengehörige Elemente gruppieren</li>
+				    <li class="fragment">für Robustheit sorgen (Fehlervermeidung, klare Formvorgaben etc.)</li>
+	</ul>
+
+					</section>
+    
+    <section>
+					<h1>barrierefreie Inhalte | <strong>Formulare - Codebeispiele</strong></h1>
+                
+
+       <br><h4><p>Gruppierung von Formularen</p></h4>
+         <pre><code data-trim contenteditable>
+
+<form>
+ <fieldset>
+  <legend>Persönliche Informationen</legend>
+  Vorname: <input type="text"><br>
+  Nachname: <input type="text"><br>
+  Geburtsdatum: <input type="text"><br>
+ <label><input type="checkbox" name="checkbox" value="value"> Herr</label><br>
+<label><input type="checkbox" name="checkbox" value="value"> Frau</label><br>
+ </fieldset>
+</form>
+
+                    </code></pre>
+        
+               <br><h4><p>Selbstdefinierte Validierung via HTML5</p></h4>
+         <pre><code data-trim contenteditable>
+
+<form>
+<input type="text" pattern="[0-9]{5}" title="Die Postleitzahl muss aus 5 Ziffern bestehen" />
+</form>
+
+                    </code></pre>
+        <br>
+<a href="beispiele.html">Beispiele für Formulare</a>
+        
+</section>
+
 				</section>
 
 
