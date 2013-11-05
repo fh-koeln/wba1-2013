@@ -83,6 +83,7 @@
 					<ul>
 				    <li class="fragment">grundlegendes Verständnis von Barrierefreiheit</li>
 			     <li class="fragment">Erkennen von Problemen</li>
+			     <li class="fragment">Lösungsmöglichkeiten entwickeln</li>
                     
 
 					</ul>
@@ -107,6 +108,7 @@ what difficulties they might have"<br>
 					<h1 style="margin-top: 1.0em; margin-bottom: 0.5em;">Hilfsmittel</h1>
 					<ul>
 				    <li class="fragment">WCAG - Web Content Accessibility Guidelines - <a href="http://www.w3.org/TR/WCAG20/">WCAG 2.0</a></li>
+				    <li class="fragment">Barrierefreiheit - Cheat Sheet - <a href="http://www.einfach-barrierefrei.net/downloads/poster_barrierefreiheit.pdf">a11y Cheat Sheet</a></li>
 
 					</ul>
 				</section>
@@ -276,10 +278,113 @@ what difficulties they might have"<br>
 </section>
 
 				</section>
+<section>
+<section>
+<h1>barrierefreie Navigationskonzepte</h1>
+<br>
+					<ul>
+				    <li class="fragment">Inhalte linearisieren</li>
+				    <li class="fragment">strukturelle Navigationen zur Unterstützung anbieten</li>
+				    <li class="fragment">alternative Benutzungskonzepte anbieten</strong></li>
+				    <li class="fragment">Inhalte der Webseite "anspringbar" gestalten</li>
+	</ul>
+
+					</section>
+					
+<section>
+					<h1>strukturelle Navigation | <strong>mit Überschriften</strong></h1>
+                
+
+       <br><h4><p>Strukturelle Navigation | HTML</p></h4>
+         <pre><code data-trim contenteditable>
+
+<h6 class="unsichtbar">Hauptnavigation</h6>
+<nav>
+<ul>
+<li>Startseite</li>
+<li>Kontakt</li>
+...
+</ul>
+</nav>
+
+                    </code></pre>
+        
+               <br><h4><p>Strukturelle Navigation | CSS</p></h4>
+         <pre><code data-trim contenteditable>
+
+.unsichtbar {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+                    </code></pre>
+        <br>
+        
+</section>
+
+<section>
+					<h1>strukturelle Navigation | <strong>mit ARIA</strong></h1>
+                
+
+       <br><h4><p>Strukturelle Navigation | ARIA-Document-Landmarks</p></h4>
+         <pre><code data-trim contenteditable>
+
+<nav role="navigation">
+<ul>
+<li>Startseite</li>
+<li>Kontakt</li>
+...
+</ul>
+</nav>
+                    </code></pre>
+        
+               <br><h4><p>weitere ARIA Roles</p></h4>
+         <pre><code data-trim contenteditable>
+
+role="article"
+
+role="columnheader"
+
+role="group"
+
+role="heading"
+
+role="img"
+
+role="list"
+
+role="listitem"
+
+role="separator"
+                    </code></pre>
+        <br>
+        
+</section>
+
+			
+            </section>
+
+ <section>
+					<h1>Barrierefreiheit | <strong>Was können wir testen?</strong></h1>
+                    <ul>
+				    <li class="fragment">Code auf Validität - <a href="http://validator.w3.org/">W3C Validator</a></li>
+				    <li class="fragment">grundlegende Aspekte der Barrierefreiheit im Code - <a href="http://achecker.ca/checker/index.php/">Web Accessibility Checker
+</a></li>
+				    <li class="fragment">Navigationskonzepte - <strong>User Tests</strong> | <strong>Tastaturnavigation</strong></li>
+				    <li class="fragment">elementare Funktionalität - <strong>User Tests</strong> | <strong>CSS / JS abschalten</strong></li>
+                    <li class="fragment">Inhalte - <strong>User Tests</strong> | <strong>CSS abschalten</strong></li>
 
 
+					</ul>
+     
+     
+				</section>
 
-			<section>
+
+<section>
 			<h2>Der Fall:</h2>
 			<p>
 			<blockquote>Hallo Herr Noss,
@@ -287,15 +392,16 @@ der Gleichstellungsbeauftragte der Uni hat uns mitgeteilt, dass neue Websites vo
 An-Instituten einem Review unterzogen werden müssen, um die Barrierefreiheit zu
 überprüfen. In unserem Team weiß keiner damit umzugehen. Können Sie uns in der
 Sache unterstützen?
-Viele Grüße</blockquote>
+</blockquote>
               <br>
-                <a href="http://www.medieninformatik.fh-koeln.de/website/general/startseite/startseite_527/de/de_startseite_articl_1.php">Zur Beispielseite</a></li>
+                <a href="http://www.medieninformatik.fh-koeln.de/website/general/startseite/startseite_527/de/de_startseite_articl_1.php">Zur Beispielseite - www.medieninformatik.fh-koeln.de</a></li>
 <br><br> Aufgabenstellung:<br><br>
 	           <ul>
 					
                     <li class="fragment">Analyse der Webseiteninhalte</li>
                     <li class="fragment">Analyse der Webseitenstruktur</li>
-                    <li class="fragment">Was können wir besser machen?</li>           
+                    <li class="fragment">Gibt es Probleme im Bereich der Barrierefreiheit?</li>
+                    <li class="fragment">konkrete Problemlösungen</li>           
 				
 				</ul>
                 
@@ -304,10 +410,7 @@ Viele Grüße</blockquote>
 
 
 
-				<section>
-					<h1>Vielen Dank</h1>
-
-					
+				
 				</section>
 				<!-- End of slides container. -->
 
