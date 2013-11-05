@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Title of presentation -->
+		<title>JS Frameworks</title>
+		<!-- Short description of presentation -->
+		<meta name="description" content="Java Script Frameworks.js functions and features">
+		<!-- Author of presentation -->
+		<meta name="author" content="Mike Jungbluth, Duc Giang Le, Nohad Masri">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- Can be monokai, solarized_dark, solarized_light, sunburst, tomorrow-night-bright, zenburn -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Web-basierte Anwendungen 1</h1>
+					<h2>Java Script Frameworks</h2>
+
+					<p>07. November 2013</p>
+
+					<p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
+					Campus Gummersbach</p>
+
+					<p style="margin-top:10%">Mike Jungbluth<br>
+					Duc Giang Le<br>
+					Nohad Masri</p>
+				</section>
+        
+				<section> <!-- Inhalt -->
+
+					<h2>Gliederung</h2>
+						
+                    <ol>
+							<li class="fragment roll-in">Was versteht man unter JS Frameworks?</li>
+							<li class="fragment roll-in">Vor- und Nachteile</li>
+							<li class="fragment roll-in">Vergleich bekannter JS-Frameworks</li>
+							<li class="fragment roll-in">Übung</li>
+                    </ol>    
+                </section>	
+            <section>
+				<section>
+                        <h2>Was sind JS-Frameworks</h2>
+			            <h4>JS Frameworks</h4>
+                        <ul>
+						<li class="fragment roll-in">Deutsch: "Rahmenstruktur"</li>
+						<li class="fragment roll-in">Programmiergerüst, d.h. kein fertiges Programm</li>
+						<li class="fragment roll-in">Codestrukturen zur Erstellung von Anwendungen</li>
+						<li class="fragment roll-in">Bibliotheken</li>
+						<li class="fragment roll-in">Basisbausteine des Frameworks: abstrakte und konkrete Klassen</li>
+						<li class="fragment roll-in">Ziel: kein direktes Arbeiten mit aufwändigem DOM Scripting</li>
+						<li class="fragment roll-in"><span style="color: green;">Zusammenfassung: Frameworks bieten einfache Methoden und Objekte als eine Abstraktionsschicht über JS an</span></li>
+					    </ul>
+				</section>
+				<section>
+                        <h3>Was sind JS-Frameworks</h3>
+			            <h4>Ereignisgesteuerte Frameworks</h4>
+                        <ul>
+                            <li class="fragment roll-in">Reaktion auf ein bestimmtes Event</li> 
+                            <li class="fragment roll-in">nicht selbstgesteuert,d.h. ein bestimmtes Event wird duch einen Vorgang ausgelöst</li>
+                        </ul>    
+                        <p></p>
+                        <h4>Aktionsgesteuerte Frameworks</h4>
+						<ul>
+                            <li class="fragment roll-in">Reaktion durch Selbststeuerung</li>
+                            <li class="fragment roll-in">Aktionen lösen Methodenaufrufe aus</li>					
+                            <li class="fragment roll-in">Beispiel: Mausklick, Button, Tastaturanschläge </li> 
+						</ul>
+				</section>
+				<section>
+                        <h3>Was sind JS-Frameworks</h3>
+			            <h4>Vorteile</h4>
+                        <ul>
+                            <li class="fragment roll-in">Einfache Bedienung</li>
+						    <li class="fragment roll-in">Helferfunktion</li>
+                            <li class="fragment roll-in">Fortgeschrittener Programmierstil möglich</li>
+							<ul>
+								<li class="fragment roll-in">Beispiel: funktionale und objektorientierte Programmierung</li>
+							</ul>
+                            <li class="fragment roll-in">In den meisten Fällen kostenlos</li>
+                            <li class="fragment roll-in">Code frei verfügbar</li>
+                            <li class="fragment roll-in">einfach einzubinden</li>
+                            <li class="fragment roll-in">Weniger eigene Schreibarbeit</li>
+                            <li class="fragment roll-in">Fertige Widgets und Animationen</li>
+                            <li class="fragment roll-in">Code anpassbar</li>
+                        </ul>    
+				</section>
+				
+				<section>
+                        <h3>Was sind JS-Frameworks</h3>
+			            <h4>Nachteile</h4>
+                        <ul>
+                            <li class="fragment roll-in">Intensive Beschäftigung mit dem Framework</li>
+                            <li class="fragment roll-in">Voraussetzung: Vorkenntnisse in JS</li>
+                            <li class="fragment roll-in">Verbreitete Frameworks: mangelnde Dokumentation und Anleitung</li>
+                            <li class="fragment roll-in">Frameworks haben unterschiedliche Syntax</li>
+                            <li class="fragment roll-in">Inkompatibilitäten bei paralleler Nutzung von JS-Frameworks</li>
+					    </ul>
+				</section>
+        </section>         
+        <section>
+                <section>
+			            <h2>Bekannte JS-Frameworks</h2>
+                        <ul>
+                            <li class="fragment roll-in">jQuery</li>
+                            <li class="fragment roll-in">Mootools</li>
+                            <li class="fragment roll-in">Dojo Toolkit</li>
+                            <li class="fragment roll-in">Yahoo User Interface Library</li>
+                            <li class="fragment roll-in">ExtJS</li>
+					    </ul>
+				</section>
+				<section>
+                        <h3>Bekannte JS-Frameworks</h3>
+                        <h4>jQuery</h4>
+                        <ul>
+                            <li class="fragment roll-in">meist verbreitete JS-Bibliothek</li>
+                            <li class="fragment roll-in">Ständige Weiterentwicklung</li>
+                            <li class="fragment roll-in">Viele Plug-ins und Erweiterungen</li>
+                            <li class="fragment roll-in">Komfortable DOM-Manipulation und -Navigation</li>
+                            <li class="fragment roll-in">Ajax-Funktionalitäten</li>
+                        </ul>
+				</section>
+                <section>
+                        <h3>Bekannte JS-Frameworks</h3>
+                        <h4>Mootools</h4>
+                        <ul>
+                            <li class="fragment roll-in">Hohe Browserkompatibilität</li>
+                            <li class="fragment roll-in">Gute Dokumentation</li>
+                            <li class="fragment roll-in">starke Objektorientierung</li>
+                            <li class="fragment roll-in">Erweiterbar und modular</li>
+                        </ul>
+				</section>
+                <section>
+                        <h3>Bekannte JS-Frameworks</h3>
+                        <h4>Dojo Toolkit</h4>
+                        <ul>
+                            <li class="fragment roll-in">Freie Javascript-Bibliothek</li>
+                            <li class="fragment roll-in">Hauptteil Dojo stellt normale Werkzeuge wie jede JS-Bibliothek zur Verfügung. </li>
+                            <li class="fragment roll-in">2 Teil Dijit enthält vorgefertigte Komponenten um grafische Benutzeroberflächen nach dem Baukastensystem zu erstellen</li>
+                            <li class="fragment roll-in">3 Teil DojoX stellt Komponenten zur Verfügung die allerdings teilweise als experimentell anzusehen sind.</li>
+                        </ul>
+				</section>
+                <section>
+                        <h3>Bekannte JS-Frameworks</h3>
+                        <h4>Yahoo User Interface Library</h4>
+                        <ul>
+                            <li class="fragment roll-in">Wurde von Yahoo-Programmierern weiterentwickelt</li>
+                            <li class="fragment roll-in">Seit Januar 2009 kann auch die Entwicklergemeinschaft an YUI mit Hilfe von GitHub zur Weiterentwicklung beitragen </li>
+                            <li class="fragment roll-in">Im Mittelpunkt steht die Kompatibilität auf allen Browsern</li>
+                            <li class="fragment roll-in">Techniken wie AJAX und Dynamic HTML werden benutzt</li>
+                        </ul>
+				</section>
+                <section>
+                        <h3>Bekannte JS-Frameworks</h3>
+                        <h4>ExtJS</h4>
+                        <ul>
+							<li class="fragment roll-in">Ursprünglich: Sammlung von Funktionserweiterungen für die YUI</li>
+							<li class="fragment roll-in">Mit der Zeit: unabhängigen Bibliothek</li>
+							<li class="fragment roll-in">Clientseitiges JavaScript- bzw. Ajax-Framework</li>
+                            <li class="fragment roll-in">Für komplexe Webanwendungen</li>
+							<li class="fragment roll-in">Umfangreiche Sammlung von Steuerelementen</li>
+                            <li class="fragment roll-in">Hohe Browserkompatibilität</li>
+                        </ul>
+				</section>
+                <section>
+                        <h3>Bekannte JS-Frameworks</h3>
+                        <h4>Mobile</h4>
+                        <ul>
+                                <li class="fragment roll-in">jQuery Mobile</li>
+                                <li class="fragment roll-in">Titanium Mobile</li>
+                                <li class="fragment roll-in">The-M-Project</li>
+                                <li class="fragment roll-in">Dojo Mobile</li>
+                                <li class="fragment roll-in">Sencha Touch</li>
+                        </ul>
+						<p></p>
+						
+						<h4>Warum benötigt man JS-Frameworks für Mobile Anwendungen?</h4>
+						    <ul>
+                                <li class="fragment roll-in">Unterschiedliche Funktionen</li>
+                                <li class="fragment roll-in">Smartphones: Mausklicke und Scrollen wird durch das "Touchen" ersetzt</li>
+                        </ul>
+						
+				</section>
+                <section>
+                        <h3>Bekannte JS-Frameworks</h3>
+                        <h4>Vergleich</h4>
+                                <table>
+                                <tr>
+                                    <th></th>
+                                    <th>jQuery</th>
+                                    <th>Mootools</th>
+                                    <th>Dojo</th>
+                                    <th>YUI</th>
+                                    <th>ExtJS</th>
+                                </tr>
+                                <tr>
+                                    <th>Drag and drop</th>    
+                                    <td>YES</td>
+                                    <td>YES</td>
+                                    <td>YES</td>
+                                    <td>YES</td>
+                                    <td>YES</td>
+                                </tr>    
+                                <tr>
+                                    <th>DOM wrapped</th>
+                                    <td>YES</td>
+                                    <td>NO</td>
+                                    <td>YES</td>
+                                    <td>YES</td>
+                                    <td>YES</td>
+                                </tr>    
+                                <tr>
+                                    <th>Feature detection</th>
+                                    <td>YES</td>
+                                    <td>YES</td>
+                                    <td>YES</td>
+                                    <td>YES</td>
+                                    <td>NO</td>
+                                </tr>
+                                <tr>
+                                    <th>Offline storage</th>
+                                    <td>YES</td>
+                                    <td>YES</td>
+                                    <td>NO</td>
+                                    <td>YES</td>
+                                    <td>YES</td>
+                                </tr>
+                                <tr>
+                                    <th>Mobile/tablet support (touch events)</th>
+                                    <td>with plugins</td>
+                                    <td>YES</td>
+                                    <td>YES</td>
+                                    <td>YES</td>
+                                    <td>YES</td>
+                                </tr>   
+                                
+                                
+                            </table>
+				</section> 
+        </section>                  
+        <section>
+                        <h3>Das wars!</h3>
+                        <h4>Fragen?</h4>
+                        <h4>Vielen Dank für die Aufmerksamkeit!</h4>
+        </section>
+
+         
+            	<!-- End of slides container. -->
+
+			
+
+		</div>
+
+		<script src="../revealjs-framework/lib/js/head.min.js"></script>
+		<script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				width: 1000,
+
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'fast', // default/fast/slow
+				backgroundTransition: 'none', // default/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
