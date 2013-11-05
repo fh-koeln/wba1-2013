@@ -5,9 +5,9 @@
 		<meta charset="utf-8">
 
 		<!-- Title of presentation -->
-		<title>Brackets - Einführung</title>
+		<title>Fallbeispiel - Barrierefreiheit (a11y)</title>
 		<!-- Short description of presentation -->
-		<meta name="description" content="Brackets - Einführung">
+		<meta name="description" content="Fallbeispiel - Barrierefreiheit (a11y)">
 		<!-- Author of presentation -->
 		<meta name="author" content="Martin Baljan">
 
@@ -39,6 +39,8 @@
 				color: #ffffff;
 				background-color: #dd1166;
 			}
+            
+             #authorLeft{padding:0 0 0 700px; font-style:italic}
 		</style>
 	</head>
 
@@ -51,9 +53,9 @@
 
 				<section>
 					<h1>Web-basierte Anwendungen 1</h1>
-					<h2>Brackets - Einführung</h2>
+					<h2>Fallbeispiel - Barrierefreiheit</h2>
 
-					<p>10. Oktober 2013</p>
+					<p>07. November 2013</p>
 
 					<p>
 						Studiengang Medieninformatik an der Fachhochschule Köln<br/>
@@ -66,75 +68,153 @@
 				</section>
 
 				<section>
-					<h1>Aufbau der Lerneinheit <strong>Brackets</strong></h1>
+					<h1>Aufbau der Lerneinheit <strong>Barrierefreiheit</strong></h1>
 					
 					<ul>
-						<li>Was ist Brackets?</li>
-						<li>Was kann Brackets?</li>
-						<li>Gut zu wissen!</li>
-						<li>Wo krieg ich Brackets her?</li>
+				    <li class="fragment">der Begriff Barrierefreiheit + Hilfsmittel</li>
+				    <li class="fragment">barrierefreie Gestaltung von Inhalten</li>
+				    <li class="fragment">barrierefreie Navigationskonzepte</li>
+				    <li class="fragment">barrierefreie Webentwicklung überprüfen</li>
+				    <h5><li class="fragment">gemeinsame Analyse und Bearbeitung des Fallbeispiels</li></h5>
+
 					</ul>
 
 					<h1 style="margin-top: 1.0em; margin-bottom: 0.5em;">Lernziele</h1>
 					<ul>
-						<li>Verständnis der wichtigsten Funktionalitäten</li>
-						<li>Benutzung von Brackets</li>
+				    <li class="fragment">grundlegendes Verständnis von Barrierefreiheit</li>
+			     <li class="fragment">Erkennen von Problemen</li>
+                    
+
 					</ul>
 				</section>
+                
+                <section>
+					<h1>Barrierefreiheit | <strong>Accessibility</strong></h1>
+					
+                    <blockquote>"Being accessible is about making your website, with all of its data and
+functions, available for anyone, no matter how they have to your website or
+what difficulties they might have"<br>
+                     <p id="authorLeft">- Katie Cunningham</p></blockquote>
+                    
+					<ul>
+				    <li class="fragment">Wahrnehmung, Interaktion von und mit allen Elementen einer Webseite </li>
+				    <li class="fragment"><strong>unabhängig</strong> von körperlichen, geistigen oder technischen Eigenschaften</li>
+				    <li class="fragment">ein Ziel - <strong>kein erreichbarer Zustand</strong></li>
+
+
+					</ul>
+
+					<h1 style="margin-top: 1.0em; margin-bottom: 0.5em;">Hilfsmittel</h1>
+					<ul>
+				    <li class="fragment">WCAG - Web Content Accessibility Guidelines - <a href="http://www.w3.org/TR/WCAG20/">WCAG 2.0</a></li>
+
+					</ul>
+				</section>
+                
+                 <section>
+                    <section>
+                        
+					<h1>barrierefreie Inhalte</h1>
+<br>
+					<ul>
+				    <li class="fragment">Textuelle Inhalte (Überschriften, Absätze etc.)</li>
+				    <li class="fragment">Visuelle Inhalte (informative Bilder, dekorative Bilder)</li>
+				    <li class="fragment">Formulare</strong></li>
+				    <li class="fragment">Multimediale Inhalte (Videos, Musik, Flash Applikationen)</strong></li>
+
+
+					</ul>
+
+					</section>
+    
+                                   <section>
+					<h1>barrierefreie Inhalte | <strong>Texte</strong></h1>
+
+					<ul>
+				    <li class="fragment">barrierefreie Anforderungen an Inhalt & Gestaltung</li>
+				    <li class="fragment">Texte sollen semantisch organisiert werden</li>
+				    <li class="fragment">Texte sollen verständlich sein <strong>(Textalternativen)</strong></li>
+				    <li class="fragment">Erklärung nicht gängiger Begriffe und Fachwörter</li>
+				    <li class="fragment">EKontrast, Schriftgröße, Gestaltung sind zu beachten</li>
+	</ul>
+
+					</section>
+      <section>
+					<h1>barrierefreie Inhalte | <strong>Texte Codebeispiele</strong></h1>
+        <br>
+                
+
+                        <h2>Textorganisation</h2>
+                    <pre><code data-trim contenteditable>
+
+<h1>Überschrift</h1>
+<p>Ein Absatz variabler Länge</p>
+
+    <h2>Eine zwischenüberschrift</h2>
+    <p>Ein Absatz variabler Länge</p>
+
+    <ol>
+    <li>Christian Noss</li>
+    <li>Volker Schäfter</li>
+    </ol>
+
+                    </code></pre>
+
+<br>
+                                  <h2>Fachbegriffe & Abkürzungen</h2>
+                    <pre><code data-trim contenteditable>
+
+<h1>Überschrift</h1>
+          <p>Das <abbr title="World Wide Web Consortium">W3C</abbr> steht hinter den WCAG</p>
+                    </code></pre>
+          
+          <p>Das <abbr title="World Wide Web Consortium">W3C</abbr> steht hinter den WCAG</p>
+
+				
+</section>
+
+    
+    <section>
+					<h1>barrierefreie Inhalte | <strong>Bilder</strong></h1>
+
+					<ul>
+				    <li class="fragment">Unterscheidung zwischen informativen & dekorativen Bildern</li>
+				    <li class="fragment">informative Bilder benötigen einen Alternativtext</li>
+				    <li class="fragment">Alternativtext soll Information des Bildes wiedergeben, keine Interpretation</li>
+				    <li class="fragment">umfangreiche Alternativtexte nicht im < alt > Tag wiedergeben
+				    <li class="fragment">dekorative Bilder können per CSS eingebunden werden</li>
+                    
+
+	</ul>
+
+					</section>
+				</section>
+
+
 
 			<section>
-			<h2>Was ist Brackets?</h2>
+			<h2>Der Fall:</h2>
 			<p>
-				<ul>
-					<li class="fragment">quelloffener Editor für Webdesign und Webentwicklung von Adobe</li>
-                    <li class="fragment">geschrieben in HTML, CSS & JAVASCRIPT </li>
-                    <li class="fragment">einfache UI, hilfreiche Komfortfunktionen, Live-Editfunktion der Webinhalte</li>
-                    <li class="fragment">Erweiterbar mit neuen Funktionen</li>
-                    <li class="fragment"><strong>Noch in Entwicklung</strong></li>                   
+			<blockquote>Hallo Herr Noss,
+der Gleichstellungsbeauftragte der Uni hat uns mitgeteilt, dass neue Websites von
+An-Instituten einem Review unterzogen werden müssen, um die Barrierefreiheit zu
+überprüfen. In unserem Team weiß keiner damit umzugehen. Können Sie uns in der
+Sache unterstützen?
+Viele Grüße</blockquote>
+              <br>
+                <a href="http://www.medieninformatik.fh-koeln.de/website/general/startseite/startseite_527/de/de_startseite_articl_1.php">Zur Beispielseite</a></li>
+<br><br> Aufgabenstellung:<br><br>
+	           <ul>
+					
+                    <li class="fragment">Analyse der Webseiteninhalte</li>
+                    <li class="fragment">Analyse der Webseitenstruktur</li>
+                    <li class="fragment">Was können wir besser machen?</li>           
 				
 				</ul>
+                
 			</p>
 		</section>
 
-
-				<section>
-			<h2>Was kann Brackets?</h2>
-			<p>
-				<ul>
-					<blockquote>Brackets kann CSS, HTML & JAVASCRIPT</blockquote>
-                    <li class="fragment">Live-Vorschau im Browser</li>
-                    <li class="fragment">Code-Vervollständigung</li>
-                    <li class="fragment">JSLint integriert</li>           
-				
-				</ul>
-			</p>
-		</section>	
-		
-  <section>
-			<h2>Gut zu wissen!</h2>
-			<p>
-				<ul>
-					
-                    <li class="fragment"><strong>cmd + e</strong> - Quickedit</li>
-                    <li class="fragment"><strong>cmd + d</strong> - Zeile duplizieren</li>
-                    <li class="fragment"><strong>cmd + shift + o</strong>- Quickopen Funktion </li>
-                    <li class="fragment"><strong>cmd + alt + s</strong> - Projekt abspeichern </li>
-					<li class="fragment"><strong>WICHTIG!</strong> - Dateien/Ordner immer über "Open Project" öffnen </li>
-				
-				</ul>
-			</p>
-		</section>	
-		
-			
-  <section>
-			<h2>Wo kriege ich Brackets her?</h2>
-			<p>
-				<ul>
-					
-                    <li class="fragment"><a href="http://download.brackets.io/">Brackets- Download Seite</a></li>				
-				</ul>
-			</p>
-		</section>	
 
 
 				<section>
@@ -162,7 +242,7 @@
 				center: false,
 				width: 1000,
 
-				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transition: 'cube', // default/cube/page/concave/zoom/linear/fade/none
 				transitionSpeed: 'fast', // default/fast/slow
 				backgroundTransition: 'none', // default/linear/none
 
