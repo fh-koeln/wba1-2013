@@ -95,6 +95,16 @@
         {
             "title" : "Medienformate",
             "authors" : ["Kai Dippel", "Christian Grevenstein", "Aysenur Cavusoglu"]
-        }
+        },
+		"2013-11-07-fallbeispiel-a11y/index.html":
+		{
+			"title" : "Barrierefreiheit (a11y)",
+			"authors" : ["Martin Baljan"]
+		},
+		"2013-11-07-web-developer-tools/index.html":
+		{
+			"title" : "Einführung Web Developer Tools",
+			"authors" : ["Martin Baljan", "Dominik Schilling", "Christoph Jerolimov"]
+		}
 	}
 }
