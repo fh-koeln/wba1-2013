@@ -105,6 +105,11 @@
 		{
 			"title" : "Einführung Web Developer Tools",
 			"authors" : ["Martin Baljan", "Dominik Schilling", "Christoph Jerolimov"]
+		},
+		"2013-11-07-JavaScript-Frameworks/index.html":
+		{
+			"title" : "JavaScript Frameworks",
+			"authors" : ["Mike Jungbluth", "Duc Giang Le", "Nohad Masri"]
 		}
 	}
 }
