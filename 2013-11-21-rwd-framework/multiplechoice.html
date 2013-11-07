@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+    <title>Übungsaufgaben</title>
+    <!-- Author of presentation -->
+	<meta name="author" content="Eduard König, Marc Philipp Marcinkowski, Stefania Ciola">
+    
+<!-- Style -->
+    <style type="text/css">
+        body{
+            background-color:black;
+            color:white;
+            font-family: "Myriad Pro", Arial, Helvetica, Tahoma, sans-serif;
+        }
+        
+        ::selection {
+            color: white;
+            background: #77cc00;
+            text-shadow: none; 
+        }
+        
+        h1 {
+            background-color: #dd1166;
+            color: #fff;
+        }
+        
+        h2 {
+            color: #77cc00; 
+        }
+        
+        label{
+            display: inline-block;
+            line-height: 1.5em;
+            margin-right: 2em;
+            width: 2em;
+        }
+        
+        label::after{
+            visibility: hidden;
+            font-size: 1.4em;
+            margin-left: 0.5em;
+        }
+        
+        #loesung:target label::after{
+            visibility: visible;
+        }
+                
+        :checked + label::after{
+            color: red;
+            content: '✘';
+        }
+        
+        [value="true"] + label::after{
+            color: lightgreen;
+            content: '☚';
+        }
+        
+        [value="true"]:checked + label::after{
+            color: lightblue;
+            content: '✔';
+        }
+        
+        a{
+            background: linear-gradient(#f8f8fa);
+            border-radius: 666em;
+            box-shadow: 0.1em 0.1em 0.1em #fff;
+            color: inherit;
+            display: inline-block;
+            padding: 0.5em 3em;
+            text-decoration: none;
+            width: 8em;
+        }
+        
+        #loesung:not(:target) [href="#"],
+        #loesung:target [href="#loesung"]{
+            display: none;
+        }
+    </style>
+    
+<!--Rechtsklick verboten -->
+<script type="text/javascript">
+    function click (e) {
+      if (!e)
+        e = window.event;
+      if ((e.type && e.type == "contextmenu") || (e.button && e.button == 2) || (e.which && e.which == 3)) {
+        if (window.opera)
+          window.alert("Bitte nicht schummeln!!");
+        return false;
+      }
+    }
+    if (document.layers)
+      document.captureEvents(Event.MOUSEDOWN);
+    document.onmousedown = click;
+    document.oncontextmenu = click;
+</script>
+ 
+    <body>
+                
+<!-- Fragen -->  
+    <form id="loesung">
+        <p><h1>Multiple Choice Fragen</h1>
+            Die folgenden Aufgaben können auch mehrere richtige Antworten enthalten!</p><hr>
+        
+        <h2>Wofür steht der Begriff einer „responsiven“ Webseite?</h2>
+        <ol>
+            <li><input type=checkbox name="q0" id="q0a" value="false">Für eine Ansammlung von Feldern<label for="q0a"></label></li>
+            <li><input type=checkbox name="q0" id="q0a" value="false">Für ein festes Design<label for="q0a"></label></li>
+            <li><input type=checkbox name="q0" id="q0a" value="true">Für Anordnung und Darstellung einzelner Elemente<label for="q0a"></label></li>
+        </ol><hr>
+        
+        <h2>Wofür sind RWD Frameworks entwickelt worden?</h2>
+        <ol>
+            <li><input type=checkbox name="q1" id="q1a" value="false">Fernseher<label for="q1a"></label></li>
+            <li><input type=checkbox name="q1" id="q1a" value="true">Smartphones<label for="q1a"></label></li>
+            <li><input type=checkbox name="q1" id="q1a" value="true">Tablets<label for="q1a"></label></li>
+            <li><input type=checkbox name="q1" id="q1a" value="false">Computer<label for="q1a"></label></li>
+        </ol><hr>
+        
+        <h2>Von wem wurde Bootstrap entwickelt?</h2>
+        <ol>
+            <li><input type=checkbox name="q2" id="q2b" value="true">Twitter<label for="q2b"></label></li>
+            <li><input type=checkbox name="q2" id="q2b" value="false">Microsoft<label for="q2b"></label></li>
+            <li><input type=checkbox name="q2" id="q2b" value="false">NASA<label for="q2b"></label></li>
+            <li><input type=checkbox name="q2" id="q2b" value="false">Google<label for="q2b"></label></li>
+        </ol><hr>
+        
+        <h2>Wie viele Spalten besitzt das Grid- bzw. Gitter-System in Bootstrap?</h2>
+        <ol>
+            <li><input type=checkbox name="q3" id="q3c" value="true">12<label for="q3c"></label></li>
+            <li><input type=checkbox name="q3" id="q3c" value="false">8<label for="q3c"></label></li>
+            <li><input type=checkbox name="q3" id="q3c" value="false">5<label for="q3c"></label></li>
+            <li><input type=checkbox name="q3" id="q3c" value="false">keine<label for="q3c"></label></li>
+        </ol><hr>
+        
+        <h2>Welches dieser Frameworks ist kein RWD Framework?</h2>
+        <ol>
+            <li><input type=checkbox name="q4" id="q4d" value="false">Foundation<label for="q4d"></label></li>
+            <li><input type=checkbox name="q4" id="q4d" value="false">Skeleton<label for="q4d"></label></li>
+            <li><input type=checkbox name="q4" id="q4d" value="true">Blueprint<label for="q4d"></label></li>
+            <li><input type=checkbox name="q4" id="q4d" value="false">Base<label for="q4d"></label></li>
+        </ol><hr>
+        
+        <h2>Welche Vorteile bittet ein RWD Framework?</h2>
+        <ol>
+            <li><input type=checkbox name="q5" id="q5e" value="true">Optimale Ausgabe für die einzelnen Geräte<label for="q5e"></label></li>
+            <li><input type=checkbox name="q5" id="q5e" value="true">Die Karusselgröße wandert mit<label for="q5e"></label></li>
+            <li><input type=checkbox name="q5" id="q5e" value="false">Komplexe Gestaltungen schwerer umsetzbar<label for="q5e"></label></li>
+            <li><input type=checkbox name="q5" id="q5e" value="true">Schnellere Mock-Up Prozesse<label for="q5e"></label></li>
+        </ol><hr>
+        
+        <h2>Was sind Media Queries?</h2>
+        <ol>
+            <li><input type=checkbox name="q6" id="q6f" value="false">Mediale Anforderungen<label for="q6f"></label></li>
+            <li><input type=checkbox name="q6" id="q6f" value="true">Eigenschaftsspezifische Cascading Stylesheets<label for="q6f"></label></li>
+            <li><input type=checkbox name="q6" id="q6f" value="false">Stylesheets ohne Bedeutung<label for="q6f"></label></li>
+            <li><input type=checkbox name="q6" id="q6f" value="false">Mediale Anwendungen<label for="q6f"></label></li>
+        </ol><hr>
+        
+        <h2>Welche Darstellung von der Breite bietet das Media Querie in der Zeile 3?</h2>
+<pre><code>|1| @media (min-width: 950px) {... }
+|2| @media (min-width: 450px) and (max-width: 950px) {... } 
+|3| @media (max-width: 450px) {... }</code></pre>
+        <ol>
+            <li><input type=checkbox name="q7" id="q7a" value="false">Breite Browserfenster<label for="q7a"></label></li>
+            <li><input type=checkbox name="q7" id="q7a" value="false">Darstellung auf Netbooks<label for="q7a"></label></li>
+            <li><input type=checkbox name="q7" id="q7a" value="true">Mobile Geräte<label for="q7a"></label></li>
+        </ol><hr>
+        
+        <h2>Was gibt ein RWD Framework vor?</h2>
+        <ol>
+            <li><input type=checkbox name="q8" id="q8a" value="false">Designregeln<label for="q8a"></label></li>
+            <li><input type=checkbox name="q8" id="q8a" value="true">Eine Rahmenstruktur<label for="q8a"></label></li>
+            <li><input type=checkbox name="q8" id="q8a" value="true">Formen, Icons, Typografie<label for="q8a"></label></li>
+            <li><input type=checkbox name="q8" id="q8a" value="true">Regel der Anwendungsarchitektur<label for="q8a"></label></li>
+        </ol><hr>
+<!-- Lösungsbutton 
+        <p>
+            <a href="#loesung">Lösung anzeigen</a>
+        </p> -->
+</form>
+    
+</body>
+</html>
