@@ -48,7 +48,8 @@ Nutzbare Eigenschaften können sein: top/left/right/bottom : %/px ;
 */
 
 .flexibel {
-    position: fixed;
+    /*
+    position:absolute;
     left: 50%;
-
+    */
 }
