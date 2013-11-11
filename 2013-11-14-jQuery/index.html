@@ -119,20 +119,61 @@
 
 					</section>
 				</section>
-
 				<section>
-					<h1>Einbindung von jQuery</h1>
-					<br>
-					<br>
-					<h6>Methode 1:</h6>
-					<p>Im Head<br>
-						<pre><code>&lt;head&gt;
-	&lt;script type="text/javascript" src=""&gt;&lt;/script&gt;
+					<section>
+						<h2>Einbindung von jQuery</h2>
+						<br>
+						<h6>Methode 1:</h6>
+						<p>jQuery wird im Head eingebunden<br>
+							<pre><code>&lt;head&gt;
+	&lt;script type="text/javascript" src="jquery-2.0.3.js"&gt;&lt;/script&gt;
 &lt;/head&gt;</code></pre>
-					</p>
-					<br>
-					<h6>Methode 2:</h6>
-					<p>Nach dem Content</p>
+						</p>
+						<br>
+						<h6>Methode 2:</h6>
+						<p>jQuery wird nach dem Content</p>
+					</section>
+
+					<section>
+						<h1>Document Ready</h1>
+						<br>
+						<p>Funktion ready()</p>
+						<pre><code>$(function() {
+	// Handler for .ready() called.
+});</code></pre>
+					</section>
+					
+					<section>
+						<h1>Beispiel</h1>
+						<pre><code>&lt;!doctype html>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title>ready() Beispiel&lt;/title&gt;
+  &lt;style&gt;
+  p: before {
+    color: red;
+  }
+  &lt;/style&gt;
+  &lt;script src="jquery-2.0.3.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+ 
+  $(function() {
+    $( "p" ).text( "Die DOM ist jetzt geladen und kann nun manipuliert werden." );
+    //Ersetzt den Text im Body, wenn die Seite fertig geladen ist.
+  });
+ 
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+	&lt;p&gt;Noch nicht geladen.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+						<br>
+						<a href="ready_beispiel.html"><strong>ready() Beispiel</strong></a>
+					</section>	
 				</section>
 
 				<section>

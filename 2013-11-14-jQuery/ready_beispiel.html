@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ready() Beispiel</title>
+  <style>
+  p: before {
+    color: red;
+  }
+  </style>
+  <script src="jquery-2.0.3.js"></script>
+  <script>
+ 
+  $(function() {
+    $( "p" ).text( "Die DOM ist jetzt geladen und kann nun manipuliert werden." );
+  });
+ 
+  </script>
+ 
+</head>
+<body>
+ 
+<p>Noch nicht geladen.</p>
+ 
+ 
+</body>
+</html>
