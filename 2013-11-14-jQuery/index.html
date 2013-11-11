@@ -56,6 +56,7 @@
 				<section>
 					<section>
 						<h2>Gliederung</h2>
+						<br>
 						<ul>
 							<li>Was ist jQuery</li>
 							<li>Vor- und Nachteile</li>
@@ -75,6 +76,7 @@
 					<section>
 						<h1>write less, do more</h1>
 						<h2>Was ist jQuery?</h2>
+						<br>
 						<ul>
 							<li>freie JavaScript Bibliothek</li>
 							<li>"Document Object Model" Manipulierung</li>
@@ -136,11 +138,12 @@
 
 					<section>
 						<h1>Document Ready</h1>
-						<br>
+
 						<p>Funktion ready()</p>
 						<pre><code>$(function() {
 	// Handler for .ready() called.
 });</code></pre>
+						<p></p>
 					</section>
 					
 					<section>
@@ -150,19 +153,13 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title>ready() Beispiel&lt;/title&gt;
-  &lt;style&gt;
-  p: before {
-    color: red;
-  }
-  &lt;/style&gt;
+
   &lt;script src="jquery-2.0.3.js"&gt;&lt;/script&gt;
   &lt;script&gt;
- 
   $(function() {
     $( "p" ).text( "Die DOM ist jetzt geladen und kann nun manipuliert werden." );
     //Ersetzt den Text im Body, wenn die Seite fertig geladen ist.
   });
- 
   &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
