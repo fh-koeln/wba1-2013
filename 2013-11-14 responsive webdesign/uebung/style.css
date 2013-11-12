@@ -1,0 +1,86 @@
+body {
+font-family:sans-serif;
+background-color:#e5e3e1;
+}
+
+.line {
+    width:1830px; /* Breite der Photolinie */
+}
+
+
+ul#container{
+	position:absolute; 
+	top:45px; /*von oberem Bildschirmrand: 45px Abstand*/
+	left:0px; /*von linkem Bildschirmrand: 0px Abstand*/
+	height:415px;
+	padding:25px 0;
+	background-color:#ffffff;  
+	list-style:none; /*damit keine Listenpunkte oder ähnliches auftauchen*/
+}
+
+ul#container li.photo{ 
+	float:left; /*Fotos werden immer rechts neben dem anderen angezeigt*/
+	position:relative; 
+	margin-right:25px; /*rechts neben dem Bild 25px Abstand */
+}
+
+ul#container li .photo-description{ 
+	position:absolute; 
+	left:0; /*von linkem Elementrand: 0px Abstand*/
+	bottom:25px;  /*von unterem Elementrand: 25px Abstand*/
+	padding:10px 30px; 
+	background-color:#000; /* schwarze Hintergrundfarbe */
+	color:#fff; /* weiße Textfarbe */
+	font-size:16px; /* Schriftgröße */
+	text-transform:uppercase; /* Großbuchstaben*/
+}
+
+#text {
+    position:relative;
+    top:500px;
+}
+
+
+
+/* 
+
+Was passiert wenn man die Seite verkleinert? Überlegt euch, was sinnvoll wäre zu ändern?
+
+LÖSUNGSVORSCHLAG: Bilder untereinander anordnen.
+Stichworte für die Umsetzung: Media Queries, Breakpoint
+
+Hinweise: Kopiert euch für die MediaQueries den vorhandenen Teil des CSS Codes dort hinein und probiert herum.
+
+TO DO
+1. Probiert aus, wie man die Bilder untereinander anordnen kann.
+2. Wie kann man den Text ausblenden?
+3. Setzt die Bildbeschreibung unter das Bild
+*/
+
+/* LÖSUNG */
+
+@media () {
+    .line {
+    
+    }
+
+    ul#container{
+       
+    }
+    
+    ul#container li.photo{ 
+      
+    }
+
+    ul#container li.photo img{ 
+        
+    }
+    
+    ul#container li .photo-description{ 
+        
+    }
+    
+    #text {
+    
+    }
+}
