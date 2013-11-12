@@ -125,15 +125,21 @@
 					<section>
 						<h2>Einbindung von jQuery</h2>
 						<br>
-						<h6>Methode 1:</h6>
-						<p>jQuery wird im Head eingebunden<br>
+						<p>
 							<pre><code>&lt;head&gt;
 	&lt;script type="text/javascript" src="jquery-2.0.3.js"&gt;&lt;/script&gt;
 &lt;/head&gt;</code></pre>
-						</p>
 						<br>
-						<h6>Methode 2:</h6>
-						<p>jQuery wird nach dem Content</p>
+						jQuery wird im Head eingebunden
+						</p>
+						<ul>
+							<li class="fragment roll-in">blockiert die Seite</li>
+							<ul>
+								<li class="fragment roll-in">Lösung: nach dem Content</li>
+							</ul>
+						</ul>
+						
+
 					</section>
 
 					<section>
@@ -188,7 +194,7 @@
 	                    <p><br>
 	                        <strong>$</strong> := jQuery-Notation<br />
 	                        <strong>selector</strong> := CSS-Selector<br />
-	                        <strong>action</strong> := jQuery-Funktion
+	                        <strong>action()</strong> := jQuery-Funktion
 	                    </p><br>
 	                    <pre><code>$("p").hide() - Blendet alle &lt;p&gt; Elemente aus.
 
