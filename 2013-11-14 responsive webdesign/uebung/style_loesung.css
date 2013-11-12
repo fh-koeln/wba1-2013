@@ -3,7 +3,7 @@ font-family:sans-serif;
 background-color:#e5e3e1;
 }
 
-.line {
+.wrapper {
     width:1830px; /* Breite der Photolinie */
 }
 
@@ -59,8 +59,8 @@ TO DO
 
 /* LÖSUNG */
 
-@media (max-width:500px) {
-    .line {
+@media screen and (max-width:500px) {
+    .wrapper {
     width:100%; /* Breite der Photolinie */
     }
     ul#container{
