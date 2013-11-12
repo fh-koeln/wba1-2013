@@ -102,23 +102,64 @@
                         <img src="images/microsoft-small.jpg" />
                     </section>
                 </section>
-                <section>
-                    <section>
-                        <h2>Responsive Images</h2>
-                        <ul>
-                        <li>Größen (Höhe, Breite) in Prozent angeben</li>
-                        <li>in CSS impelemtiert</li>
-                        <li>Zuordnung eines Stylesheets anhand verschiedener Kriterien möglich</li>
-                        </ul>
-                    </section>
-                </section>
+                
                 <section>
                     <section>
                         <h2>Media Queries</h2>
                         <ul>
-                        <li>Media Queries = Medienabfragen</li>
-                        <li>in CSS impelemtiert</li>
-                        <li>Zuordnung eines Stylesheets anhand verschiedener Kriterien möglich</li>
+                        <li class="fragment">Media Queries = Medienabfragen</li>
+                        <li class="fragment">in CSS impelemtiert</li>
+                        </ul>
+                         
+                    </section>
+                    <section>
+                        <pre><code>@media (max-width:500px) {
+/* INHALT */
+}
+                        </code></pre>
+                        <ul>
+                        <li class="fragment">Breakpoint: max-width</li>
+                        <li class="fragment">als Pixel</li>
+                        <li class="fragment">Inhalt innerhalb der geschweiften Klammern </li>
+                        </ul>
+                        <pre class="fragment"><code>@media (max-width:500px) {    
+    .wrapper {
+        width:100%; 
+    }
+    ul#container{
+        position:relative; 
+        top:10px;
+        left:0px;
+        height:100%;
+        background-color:transparent;
+        list-style:none;
+    }
+}                       </code></pre>
+                    </section>
+                    <section>
+                        <h2>Responsive Images</h2>
+                        <ul>
+                            <li>Bilder sollten sich anpassen</li>
+                            <li>Größen (Höhe, Breite) in Prozent angeben</li>
+                            <li>in CSS impelemtiert</li>
+                        </ul>
+                        <pre><code>    img{ 
+        width: 90%;
+    }
+</code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Übung</h2>
+                        <p><a href="uebung/uebung.zip">*klick*</a></p>
+                        <p>style.css bearbeiten, TODO's stehen in den Kommentaren</p>
+                    </section>
+                    <section>
+                        <h3>Hinweise</h3>
+                        <ul>
+                            <li class="fragment">Breite und Höhenangaben in Prozent machen</li>
+                            <li class="fragment">Vorhandenen CSS Code übernehmen und abändern</li>
                         </ul>
                     </section>
                 </section>
