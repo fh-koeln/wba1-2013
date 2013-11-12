@@ -60,7 +60,7 @@
 							<ul>
 								<li class="fragment">Was ist Responsive Webdesign?
 									<ul>
-										<li class="fragment">Beispiele</li>
+										<li class="fragment">mobile first</li>
 										<li class="fragment">Vorteile / Nachteile</li>
 									</ul>
 								</li>
@@ -69,6 +69,13 @@
 							</ul>
 						</p>
 					</section>
+                </section>
+                <section>
+                <h2>Was ist Responsive Webdesign?</h2>
+                <ul>
+                    <li class="fragment">respondere, lat.: antworten, melden</li>
+                    <li class="fragment">responsive, eng.: reaktionsfähig</li>
+                </ul>
                 </section>
                 <section>
                     <section><img style="margin-top:-40px; float: left;" src="images/cover_daumen_runter.jpg" />
@@ -81,6 +88,29 @@
                     <section>
                     <img src="images/apple-small.jpg" />
                     </section>
+                </section>
+                <section>
+                <h2>mobile first</h2>
+                <ul>
+                    <li class="fragment">man beginnt beim kleinsten Gerät</li>
+                    <li class="fragment">sind meistens minimalistisch</li>
+                    <li class="fragment">Elemente werden hinzugefügt, nicht weggelassen</li>
+                    <li class="fragment">=> Reduktion aufs Wesentliche!</li>
+
+                </ul>
+                </section>
+                <section>
+                <h2>Vorteile</h2>
+                <ul>
+                    <li class="fragment">mobiler Markt wächst</li>
+                    <li class="fragment">Anzahl der Formate steigt</li>
+                </ul>
+                </section>
+                <section>
+                <h2>Nachteile</h2>
+                <ul>
+                    <li class="fragment">mehr Code</li>
+                </ul>
                 </section>
             
                 <section>
@@ -102,15 +132,56 @@
                         <img src="images/microsoft-small.jpg" />
                     </section>
                 </section>
-                
                 <section>
                     <section>
                         <h2>Media Queries</h2>
                         <ul>
-                        <li class="fragment">Media Queries = Medienabfragen</li>
-                        <li class="fragment">in CSS impelemtiert</li>
+                            <li class="fragment">Media Queries = Medienabfragen</li>
+                            <li class="fragment">in CSS3 implementiert</li>
+                            <li class="fragment">verschiedene Medientypen können zugeordnet werden:</li>
+                            <li class="fragment">z.B. all (default), print oder screen</li>
+                        </ul>
+                        <pre class="fragment"><code>@media screen {
+/* INHALT */
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <ul>
+                            <li>Medienmerkmale beschreiben die Anforderungen an den Medientyp</li>
+                            <li class="fragment">width</li>
+                            <pre class="fragment"><code>@media screen and (width: 600px){
+/* INHALT */
+}
+                        </code></pre>
+                            <li class="fragment">height</li>
+                            <pre class="fragment"><code>@media screen and (height: 600px){
+/* INHALT */
+}
+                        </code></pre>
                         </ul>
                          
+                    </section>
+                    
+                    <section>
+                    <ul>
+                        <li>device-width / device-height</li>
+                        <pre class="fragment"><code>@media screen and (device-width: 800px){
+/* INHALT */
+}
+                        </code></pre>
+                        <li class="fragment">jeweils eigenständig oder mit Präfix min- und max-</li>
+                        <pre class="fragment"><code>@media screen and (max-width: 500px){
+/* INHALT */
+}
+                        </code></pre>
+                        <li class="fragment">orientation - kann landscape oder portrait</li>
+                        <pre class="fragment"><code>@media screen and (orientation: landscape){
+/* INHALT */
+}
+                        </code></pre>
+                        </ul>
+                        
                     </section>
                     <section>
                         <pre><code>@media (max-width:500px) {
@@ -118,8 +189,9 @@
 }
                         </code></pre>
                         <ul>
-                        <li class="fragment">Breakpoint: max-width</li>
-                        <li class="fragment">als Pixel</li>
+                        <li class="fragment">Wieviel Platz haben wir im Browserfenster?</li>
+                        <li class="fragment">Breakpoint: max-width als Pixel</li>
+                        <li class="fragment">horizontaler Platz ist am wichtigsten</li>
                         <li class="fragment">Inhalt innerhalb der geschweiften Klammern </li>
                         </ul>
                         <pre class="fragment"><code>@media (max-width:500px) {    
@@ -128,11 +200,8 @@
     }
     ul#container{
         position:relative; 
-        top:10px;
-        left:0px;
         height:100%;
         background-color:transparent;
-        list-style:none;
     }
 }                       </code></pre>
                     </section>
