@@ -1,0 +1,54 @@
+/* 
+Was passiert wenn man die Seite verkleinert? Überlegt euch, was sinnvoll wäre zu ändern?
+
+LÖSUNGSVORSCHLAG: Bilder untereinander anordnen.
+Stichworte für die Umsetzung: Media Queries, Breakpoint
+
+Hinweise: Kopiert euch für die MediaQueries den vorhandenen Teil des CSS Codes dort hinein und probiert herum. 
+Änderungen sieht man nur wenn das Browserfenster verkleinert wird - je nach Angabe des Media Queries
+*/
+
+
+/* Beispiel Media Query */ 
+/*
+Aufgabe 1
+TO DO 1. Setzt einen Breakpoint, sinnvoll für die Darstellung auf einem Smartphone
+TO DO 2. Sprecht das Image Tag an und macht diese Responsive
+TO DO 3. Ändert die Hintergrundfarbe der Bildbeschriftung */
+
+@media screen and (max-width: 320px) { /* screen = da Auflösungsabhängig, Breakpoint: 1024 px */
+    .wrapper {
+        width:100%; /* Breite des Photocontainers, abhängig vom Breakpoint */
+    }
+    
+    ul#container {
+        background-color:transparent;
+    }
+    
+    ul#container li.photo{
+        width:100%;
+    }
+
+    ul#container li.photo img{ 
+        width: 100%;
+    }
+
+    #text {
+        display:none;
+    }
+
+    ul#container li .photo-description{
+    
+    }
+}
+
+/*
+Aufgabe 2
+TO DO 1. Skizziert auf dem Papier eine sinnvolle Darstellung für ein Tablet im Querformat (Hinweise: Mostly fluid, column drop, layout shifter)
+TO DO 2. Setzt einen Breakpoint, sinnvoll für die Darstellung auf einem Tablet im Querformat
+TO DO 3. Versucht euch an der Umsetzung eurer Skizze. Wir helfen gerne.
+*/
+
+@media screen and (max-width: 1024px) {
+    
+}
