@@ -27,7 +27,7 @@ $( function() {
 		// Vorheriges Element holen.
 		var $prevItem = $currentItem.prev( '.gallery-item' );
 
-		// Aktuelles Elemen ausblenden.
+		// Aktuelles Element ausblenden.
 		$currentItem.fadeTo( 250, 0, function() {
 			// Ausgeblendetes Element auf `display:none` setzen und `.current`
 			// Klasse entfernen

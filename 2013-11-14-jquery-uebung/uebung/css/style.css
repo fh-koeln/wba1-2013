@@ -1,4 +1,3 @@
-
 *,
 *:after,
 *:before {
@@ -6,6 +5,7 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
 body,
 html {
 	font-size: 100%;
