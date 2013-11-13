@@ -46,6 +46,42 @@ body {
 	padding: 4em 0;
 }
 
+.slider {
+	position: relative;
+}
+
+.slider-prev,
+.slider-next {
+	position: absolute;
+	top: 50%;
+	margin-top: -32px;
+	display: block;
+	height: 64px;
+	width: 64px;
+	background: transparent url( '../img/slider-navigation.png' ) 0 0 no-repeat;
+	cursor: pointer;
+	opacity: .2;
+	transition: opacity .1s ease-in;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+	opacity: 1;
+}
+
+.slider-prev {
+	left: 4%;
+	background-position: 0 -64px;
+}
+
+.slider-next {
+	right: 4%;
+}
+
 .gallery {
 	margin: 0 auto;
 	width: 70%;
