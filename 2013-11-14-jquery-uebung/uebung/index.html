@@ -10,54 +10,112 @@
 	</head>
 	<body>
 		<header class="header-wrapper">
-			<h1 class="page-title"><span>jQuery Übung</span></h1>
-			<h2 class="page-tagline">Wir bauen uns eine Gallery</h2>
+			<h1 class="page-title"><span>jQuery Gallery</span></h1>
+			<h2 class="page-tagline">Autumn is here and the colours are there to prove it.</h2>
 		</header>
 
 		<section class="page-content">
 
 			<div class="slider">
 
-				<span class="slider-prev">Previous</span>
+				<div class="slider-frame">
+					<span class="slider-prev">Previous</span>
 
-				<ul class="gallery">
-					<li class="gallery-item">
-						<figure>
-							<img class="gallery-image" src="img/bild1.jpg">
-							<figcaption class="gallery-description">Bild 1</figcaption>
-						</figure>
-					</li>
-					<li class="gallery-item current">
-						<figure>
-							<img class="gallery-image" src="img/bild2.jpg">
-							<figcaption class="gallery-description">Bild 2</figcaption>
-						</figure>
-					</li>
-					<li class="gallery-item">
-						<figure>
-							<img class="gallery-image" src="img/bild3.jpg">
-							<figcaption class="gallery-description">Bild 3</figcaption>
-						</figure>
-					</li>
-					<li class="gallery-item">
-						<figure>
-							<img class="gallery-image" src="img/bild4.jpg">
-							<figcaption class="gallery-description">Bild 4</figcaption>
-						</figure>
-					</li>
-					<li class="gallery-item">
-						<figure>
-							<img class="gallery-image" src="img/bild5.jpg">
-							<figcaption class="gallery-description">Bild 5</figcaption>
-						</figure>
-					</li>
-				</ul>
+					<ul class="gallery">
 
-				<span class="slider-next">Next</span>
+						<li class="gallery-item current" data-slide-id="1">
+							<figure>
+								<img class="gallery-image" src="img/bild1.jpg">
+								<figcaption class="gallery-description">
+									Autumn Country Barn Rural Fall Foliage Scene.<br>
+									<span class="source">Quelle: <a href="http://www.flickr.com/photos/forestwander-nature-pictures/6285785720/">flickr.com</a></span>
+								</figcaption>
+							</figure>
+						</li>
+
+						<li class="gallery-item" data-slide-id="2">
+							<figure>
+								<img class="gallery-image" src="img/bild2.jpg">
+								<figcaption class="gallery-description">
+									Autumn in Novosibirsk.<br>
+									<span class="source">Quelle: <a href="http://www.flickr.com/photos/mksystem/5033025900/">flickr.com</a></span>
+								</figcaption>
+							</figure>
+						</li>
+
+						<li class="gallery-item" data-slide-id="3">
+							<figure>
+								<img class="gallery-image" src="img/bild3.jpg">
+								<figcaption class="gallery-description">
+									Autumn color 2007.<br>
+									<span class="source">Quelle: <a href="http://www.flickr.com/photos/hichako/2129985857/">flickr.com</a></span>
+								</figcaption>
+							</figure>
+						</li>
+
+						<li class="gallery-item" data-slide-id="4">
+							<figure>
+								<img class="gallery-image" src="img/bild4.jpg">
+								<figcaption class="gallery-description">
+									Autumn colours in the garden.<br>
+									<span class="source">Quelle: <a href="http://www.flickr.com/photos/jonnyb558/8086212466/">flickr.com</a></span>
+								</figcaption>
+							</figure>
+						</li>
+
+						<li class="gallery-item" data-slide-id="5">
+							<figure>
+								<img class="gallery-image" src="img/bild5.jpg">
+								<figcaption class="gallery-description">
+									Autumn is here and the colours are there to prove it.<br>
+									<span class="source">Quelle: <a href="http://www.flickr.com/photos/cristiano_betta/2975077312/">flickr.com</a></span>
+								</figcaption>
+							</figure>
+						</li>
+
+					</ul>
+
+					<span class="slider-next">Next</span>
+				</div>
+
+				<div class="slider-thumbs">
+					<ul class="gallery-thumbs">
+
+						<li class="gallery-thumb-item current" data-slide-id="1">
+							<figure>
+								<img class="gallery-image" src="img/bild1_thumb.jpg">
+							</figure>
+						</li>
+
+						<li class="gallery-thumb-item" data-slide-id="2">
+							<figure>
+								<img class="gallery-image" src="img/bild2_thumb.jpg">
+							</figure>
+						</li>
+
+						<li class="gallery-thumb-item" data-slide-id="3">
+							<figure>
+								<img class="gallery-image" src="img/bild3_thumb.jpg">
+							</figure>
+						</li>
+
+						<li class="gallery-thumb-item" data-slide-id="4">
+							<figure>
+								<img class="gallery-image" src="img/bild4_thumb.jpg">
+							</figure>
+						</li>
+
+						<li class="gallery-thumb-item" data-slide-id="5">
+							<figure>
+								<img class="gallery-image" src="img/bild5_thumb.jpg">
+							</figure>
+						</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
 
 			</div>
 
-			<div class="clear"></div>
 		</section>
 
 		<footer>
