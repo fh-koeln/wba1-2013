@@ -45,7 +45,7 @@ body {
 	padding: 4em 0;
 }
 
-.slider {
+.slider-frame {
 	position: relative;
 }
 
@@ -100,7 +100,8 @@ body {
 	display: block;
 }
 
-.gallery-item figure {
+.gallery-item figure,
+.gallery-thumb-item figure {
 	margin: 0;
 }
 
@@ -140,12 +141,35 @@ body {
 	opacity: 1;
 }
 
+.gallery-thumbs {
+	margin: 0 auto;
+	width: 70%;
+	padding: 0;
+}
+
+.gallery-thumb-item {
+	list-style: none;
+	padding: 0;
+	position: relative;
+	float: left;
+	width: 20%;
+	opacity: .5;
+	transition: opacity .1s ease-in;
+	cursor: pointer;
+}
+
+.gallery-thumb-item.current,
+.gallery-thumb-item:hover {
+	opacity: .9;
+}
+
 .clear {
 	clear: both;
 }
 
 @media screen and (max-width: 500px) {
-	.gallery {
+	.gallery,
+	.gallery-thumbs {
 		width: 100%;
 	}
 

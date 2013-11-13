@@ -3,13 +3,14 @@ $( function() {
 	/**
 	 * Elemente cachen.
 	 */
-	var	$slider = $( '.slider' ),
+	var	$slider = $( '.slider-frame' ),
 		$slidePrev = $slider.find( '.slider-prev' ),
 		$slideNext = $slider.find( '.slider-next' ),
 		$galleryItems = $slider.find( '.gallery-item' ),
 		galleryItemCount = $galleryItems.length,
 		$currentItem = $slider.find( '.current' ),
-		currentId = $currentItem.data( 'slide-id' );
+		currentId = $currentItem.data( 'slide-id' ),
+		$thumbItems = $( '.gallery-thumb-item' );
 
 	/**
 	 * Klick auf linken Pfeil.
@@ -31,6 +32,10 @@ $( function() {
 			// Ausgeblendetes Element auf `display:none` setzen und `.current`
 			// Klasse entfernen
 			$currentItem.hide().removeClass( 'current' );
+
+			// Thumbnails aktualisieren.
+			$thumbItems.removeClass( 'current' );
+			$thumbItems.siblings( '[data-slide-id="' + currentId + '"]').addClass( 'current' );
 
 			// Vorheriges Element einblenden.
 			$prevItem.fadeTo( 500, 1, function() {
@@ -65,6 +70,10 @@ $( function() {
 			// Ausgeblendetes Element auf `display:none` setzen und `.current`
 			// Klasse entfernen.
 			$currentItem.hide().removeClass( 'current' );
+
+			// Thumbnails aktualisieren.
+			$thumbItems.removeClass( 'current' );
+			$thumbItems.siblings( '[data-slide-id="' + currentId + '"]').addClass( 'current' );
 
 			// Nächstes Element einblenden.
 			$nextItem.fadeTo( 250, 1, function() {
