@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://pop.shpath.net/pop/1.1.002/xdm.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script>
+function listener(e) {
+    var message = e['data'];
+    
+    if (message === 'pop|||get') {
+        var cookie = get_cookie('pop');
+        
+        if (cookie === null) {
+            // first encounter only set pop
+            set_cookie('pop', '|||0', message[3]);
+        } else top.postMessage('pop|||get|||' + cookie, '*');
+    } else if (message.indexOf('pop|||set') === 0) {
+        message = message.split('|||'); // type|||action|||url|||days
+        
+        if (message.length === 4) {
+            // increment cookie count
+            var
+            cookie = get_cookie('pop'),
+            count = 1;
+            
+            if (cookie !== null && (cookie = cookie.split('|||')) && cookie.length === 2) count += parseInt(cookie[1]);
+            set_cookie('pop', message[2] + '|||' + count, message[3]);
+        }
+    }
+}
+
+function set_cookie(name, value, days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        var expires = "; expires="+date.toGMTString();
+    } else var expires = "";
+    
+    document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function get_cookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    
+    for (var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    
+    return null;
+}
+
+if (window.addEventListener) {
+    addEventListener('message', listener, false);
+} else if (window.attachEvent) {
+    attachEvent('onmessage', listener);
+} else {
+    window['onmessage'] = listener;
+}
+</script>
+<style type="text/css"></style></head>
+<body>
+
+</body></html>
