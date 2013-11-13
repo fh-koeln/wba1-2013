@@ -24,6 +24,11 @@
 		<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script type="text/javascript" src="jquery-2.0.3.js">
+			$(function(){
+				//Document Ready
+			});
+		</script>
 		<script>
 			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
@@ -50,7 +55,7 @@
 
 					<p style="margin-top:10%">Esranur Bulut <a href="https://github.com/esranurb">EsranurB</a><br>
 					Manh Linh Bui <a href="https://github.com/mabui">mabui</a><br>
-					Nils Fischer</p>
+					Nils Fischer <a href="https://github.com/o0draven0o">o0draven0o</a></p>
 				</section>
 
 				<section>
@@ -220,23 +225,89 @@ $(".test").hide() - Blendet alle Elemente mit der class="test" aus.
 				<section>
 					<section>
 						<h2>Events</h2>
+						<br>
+						
+						<h4>on()</h4>
+						<pre><code>$("#vorschauOn").on("click", function(){
+	alert("Achtung! Du hast darauf geklickt!");
+});</code></pre>		
+						<br>
+						<p id="vorschauOn">Klick mich!</p>
+
+						<script type="text/javascript">
+							$("#vorschauOn").on("click", function(){
+								alert("Achtung! Du hast darauf geklickt!");
+							});
+						</script>
+						<br>
+						<h4>click()</h4>
+						<pre><code>$("#vorschauClick").click(function(){
+	$("#vorschauClick").text("Oha, der Text hat sich verändert!");
+});</code></pre>
+						<br>
+
+						<p id="vorschauClick">Hallo!</p>
+						<script type="text/javascript">
+							$("#vorschauClick").click(function(){
+								$("#vorschauClick").text("Oha, der Text hat sich verändert!");
+							});
+						</script>
+					</section>
+					
+					<section>
+						<h1>submit()</h1>
+						<br>
+						<pre><code>&lt;form name="formular" action="" method=""&gt;
+	&lt;input name="vorname" type="text"&gt;
+	&lt;input name="nachname" type="text"&gt;
+
+	&lt;input name="enter" type="submit"&gt;
+&lt;/form&gt;</code></pre>
+						<br>
+						<pre><code>$("form").submit(function(){
+	alert("Ihre Daten wurden in unsere Datenbank aufgenommen");
+});</code></pre>
+						<br>
+						
+						<form name="formular" action="" method="">
+							<table>
+								<tr>
+									<td>Vorname:</td>
+									<td><input name="vorname" type="text" size="50"></td>
+								</tr>
+								<tr>
+									<td>Nachname:</td>
+									<td><input name="nachname" type="text" size="50"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><input name="enter" type="submit" value="Absenden"></td>
+								</tr>
+							</table>
+						</form>
+						<script type="text/javascript">
+							$("form").submit(function(){
+								alert("Vielen Dank. Ihre Daten wurden in unsere Datenbank aufgenommen!");
+							});
+						</script>
 
 					</section>
 					
 					<section>
-						<h1>on()</h1>
-					</section>
-					
-					<section>
-						<h1>click()</h1>
-					</section>
-					
-					<section>
-						<h1>slideUp()</h1>
-					</section>
-					
-					<section>
-						<h1>slideDown()</h1>
+						<h1>slideUp() und slideDown()</h1>
+						<br>
+						<pre><code>$("#slideupdown").click(function(){
+	$("#slideupdown").css("color", "#77cc00").slideUp(1000).slideDown(1000);
+});</code></pre>
+						<br>
+						<p id="slideupdown">Guck mal, was passiert.</p>
+						<br>
+						<br>
+						<script type="text/javascript">
+							$("#slideupdown").click(function(){
+								$("#slideupdown").css("color", "#77cc00").slideUp(1000).slideDown(1000);
+							});
+						</script>
 					</section>
 				</section>
 
@@ -244,8 +315,15 @@ $(".test").hide() - Blendet alle Elemente mit der class="test" aus.
 					<section>
 						<h2>Übung</h2>
 
-					<p>Aufgabe 1:<br><a href="uebung/aufgabe.pdf">Lückentext & Multiple-Choice</a></p>
-					<p></p>
+						<br>
+						<p>Aufgabe 1:
+							<br>
+							<a href="uebung/aufgabe.pdf">Lückentext & Multiple-Choice</a>
+						</p>
+						<p>Aufgabe 2:
+							<br>
+							<a href="uebung/aufgabe2/index.html">JS Bildergalerie zu jQuery</a>
+						</p>
 					</section>
 				</section>
 

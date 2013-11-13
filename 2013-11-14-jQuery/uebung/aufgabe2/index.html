@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style type="text/css">
+			@import"libary/css/body.css";
+		</style>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> <!-- jQuery-Bibliothek einbinden -->
+		<script>
+		$(document).ready(function(){
+			/* 1. TODO - ANFANG
+			 *------Schreiben Sie eine Funktion, welche die Bilder VERGRÖSSERT.---------------------*
+			 *------Die Funktion soll in der Lage sein mehrere Bilder d.h. mit verschiedenen IDs zu
+			 *      akzeptieren---------------------------------------------------------------------*/
+			 
+			 //Funktionskopf:
+				$(".galerie").mouseover(function(){
+					
+				
+			  	
+					
+					/*------------------BREITE und HÖHE---------------------------------------------*
+					 *--------Das Bild soll vergrössert werden. Berücksichtigen Sie die Angaben:
+					 *-----------Breite = 250px (width = "250px")
+					 *-----------Höhe = 200px (height = "200px")
+					 *------------------------------------------------------------------------------*/
+					//document.getElementById(e).style.width = "250px";	
+					//document.getElementById(e).style.height = "200px";	
+					
+					$(".galerie").width(200);
+					$(".galerie").height(200);
+					
+						
+					/*------------------------------------------------------------------------------*/
+					
+					/*------------------TRANSPARENZ und HERVORHEBUNG--------------------------------*
+					 *-----Die Transparenz auf 100% setzen und das Bild auf der Z-Achse hervorheben:
+					 *--------Transparenz = 100% (opacity = "1")
+					 *--------Auf der Z-Achse hervorheben (zindex = "1")
+					 *------------------------------------------------------------------------------*/
+					//document.getElementById(e).style.opacity = "1";	
+					//document.getElementById(e).style.zIndex = "1";	
+					
+					$(".galerie").css("z-index",1);
+					$(".galerie").css("opacity", "0.5");
+					
+						
+					/*------------------------------------------------------------------------------*/
+					
+					/*------------------RAHMEN------------------------------------------------------*
+					 *-----Zeichnen Sie eine Rahmen um das Bild:
+					 *--------Der Rahemn soll "5px" dick sein
+					 *--------Die Farbe soll "#00c6ff" sein
+					 *--------Es soll ein normaler Strich sein (Hilfe: solid)
+					 *------------------------------------------------------------------------------*/
+					//document.getElementById(e).style.border = "solid 5px #00c6ff";	
+					
+					$(".galerie").css({"border-color": "#00C6FF", 
+					             "border-width":"5px", 
+					             "border-style":"solid"});
+						
+					/*------------------------------------------------------------------------------*/
+			/* 1. TODO - ENDE */
+			/* Wenn Sie 1. TODO erledigt haben, entfernen Sie die SLASH-Zeichen bei den 5 untenstehen-
+			 * den Befehlen und fügen Sie diese Befehle der Funktion hinzu.---------------------------------*/
+					
+					//document.getElementById(e).style.marginTop = "-55px";	
+					//document.getElementById(e).style.marginBottom = "-55px";
+					//document.getElementById(e).style.marginLeft = "-55px";
+					//document.getElementById(e).style.marginRight = "-55px";
+					//document.getElementById(e).style.position = "relative";
+					
+					$(".galerie").css({ "margin-top" : "-55px", "margin-bottom" : "-55px", "margin-left" : "-55px", "margin-right" : "-55px", "position": "relative" });
+					
+				});
+		
+			/* 2. TODO - ANFANG
+			*------Schreiben Sie eine Funktion, welche die Bilder VERKLEINERT.----------------------*/
+			
+			//Funktionskopf:
+				$(".galerie").mouseout(function(){
+					
+					/*------------------BREITE und HÖHE---------------------------------------------*
+					 *--------Das Bild soll verkleinert werden. Berücksichtigen Sie die Angaben:
+					 *-----------Breite = 150px (width = "150px")
+					 *-----------Höhe = 100px (height = "100px")
+					 *------------------------------------------------------------------------------*/
+					//document.getElementById(e).style.width = "150px";	
+					//document.getElementById(e).style.height = "100px";	
+						
+					$(".galerie").width(150);
+					$(".galerie").height(100);	
+						
+						
+					/*------------------------------------------------------------------------------*/
+					
+					/*------------------TRANSPARENZ und HERVORHEBUNG--------------------------------*
+					 *-----Die Transparenz auf 50% setzen und die Hervorhebung aufheben:
+					 *--------Transparenz = 25% (opacity = "0.25")
+					 *--------Hervorhebung aufheben (zindex = "0")
+					 *------------------------------------------------------------------------------*/
+					//document.getElementById(e).style.opacity = "0.25";	
+					//document.getElementById(e).style.zIndex = "0";	
+					
+					$(".galerie").css("z-index",0.25);
+					$(".galerie").css("opacity", 0);
+					
+						
+					/*------------------------------------------------------------------------------*/
+					
+					/*------------------RAHMEN------------------------------------------------------*
+					 *-----Entfernen Sie den Rahmen um den Bild:
+					 *--------Rahmen entfernen (Hilfe: border = "0px"
+					 *------------------------------------------------------------------------------*/
+					//document.getElementById(e).style.border = "0px";
+					//document.getElementById(e).style.marginTop = "0px";
+					
+					$(".galerie").css( { "border" : "0px", "margin-top" : "0px" } );
+						
+						
+						
+					/*------------------------------------------------------------------------------*/
+			/* 2. TODO - ENDE */
+			/* Wenn Sie 2. TODO erledigt haben, entfernen Sie die SLASH-Zeichen bei den 4 untenstehen-
+			 * den Befehlen und fügen Sie diese Befehle der Funktion hinzu.---------------------------------*/
+					
+					//document.getElementById(e).style.marginBottom = "0px";
+					//document.getElementById(e).style.marginLeft = "0px";
+					//document.getElementById(e).style.marginRight = "0px";
+					//document.getElementById(e).style.position = "static";
+					
+					$(".galerie").css( { "margin-bottom" : "0px", "margin-left" : "0px", "margin-right" : "0px", "position": "static" } );
+				});
+		});
+		</script>
+		<title>JavaScript - BASIC</title>
+	</head>
+	<body>
+		<section>
+        	<img src="images/logo_gl.png" id="logo"><br>
+            <img src="images/Image_006.jpg" class="galerie">
+            <img src="images/Image_008.jpg" class="galerie">
+            <img src="images/Image_012.jpg" class="galerie">
+            <img src="images/Image_015.jpg" class="galerie"><br>
+            <img src="images/Image_016.jpg" class="galerie">
+            <img src="images/Image_017.jpg" class="galerie">
+            <img src="images/Image_041.jpg" class="galerie">
+            <img src="images/Image_046.jpg" class="galerie"><br>
+            <img src="images/Image_050.jpg" class="galerie">
+            <img src="images/Image_052.jpg" class="galerie">
+            <img src="images/Image_054.jpg" class="galerie">
+            <img src="images/Image_059.jpg" class="galerie"><br>
+            <img src="images/Image_061.jpg" class="galerie">
+            <img src="images/Image_068.jpg" class="galerie">
+            <img src="images/Image_070.jpg" class="galerie">
+        </section>       
+    </body>
+</html>
