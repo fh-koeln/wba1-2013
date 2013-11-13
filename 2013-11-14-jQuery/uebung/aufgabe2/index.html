@@ -27,8 +27,8 @@
 					//document.getElementById(e).style.width = "250px";	
 					//document.getElementById(e).style.height = "200px";	
 					
-					$(".galerie").width(200);
-					$(".galerie").height(200);
+					$(this).width(200);
+					$(this).height(200);
 					
 						
 					/*------------------------------------------------------------------------------*/
@@ -41,8 +41,8 @@
 					//document.getElementById(e).style.opacity = "1";	
 					//document.getElementById(e).style.zIndex = "1";	
 					
-					$(".galerie").css("z-index", "1");
-					$(".galerie").css("opacity", "0.5");
+					$(this).css("z-index", "1");
+					$(this).css("opacity", "1");
 					
 						
 					/*------------------------------------------------------------------------------*/
@@ -55,7 +55,7 @@
 					 *------------------------------------------------------------------------------*/
 					//document.getElementById(e).style.border = "solid 5px #00c6ff";	
 					
-					$(".galerie").css({"border-color": "#00C6FF", 
+					$(this).css({"border-color": "#00C6FF", 
 					             "border-width":"5px", 
 					             "border-style":"solid"});
 						
@@ -70,7 +70,7 @@
 					//document.getElementById(e).style.marginRight = "-55px";
 					//document.getElementById(e).style.position = "relative";
 					
-					$(".galerie").css({ "margin-top" : "-55px", "margin-bottom" : "-55px", "margin-left" : "-55px", "margin-right" : "-55px", "position": "relative" });
+					$(this).css({ "margin-top" : "-55px", "margin-bottom" : "-55px", "margin-left" : "-55px", "margin-right" : "-55px", "position": "relative" });
 					
 				});
 		
@@ -88,8 +88,8 @@
 					//document.getElementById(e).style.width = "150px";	
 					//document.getElementById(e).style.height = "100px";	
 						
-					$(".galerie").width(150);
-					$(".galerie").height(100);	
+					$(this).width(150);
+					$(this).height(100);	
 						
 						
 					/*------------------------------------------------------------------------------*/
@@ -102,8 +102,9 @@
 					//document.getElementById(e).style.opacity = "0.25";	
 					//document.getElementById(e).style.zIndex = "0";	
 					
-					$(".galerie").css("z-index", "0.25");
-					$(".galerie").css("opacity", "0");
+					$(this).css("opacity", "0.25");
+					$(this).css("z-index", "0");
+					
 					
 						
 					/*------------------------------------------------------------------------------*/
@@ -115,7 +116,7 @@
 					//document.getElementById(e).style.border = "0px";
 					//document.getElementById(e).style.marginTop = "0px";
 					
-					$(".galerie").css( { "border" : "0px", "margin-top" : "0px" } );
+					$(this).css( { "border" : "0px", "margin-top" : "0px" } );
 						
 						
 						
@@ -129,7 +130,7 @@
 					//document.getElementById(e).style.marginRight = "0px";
 					//document.getElementById(e).style.position = "static";
 					
-					$(".galerie").css( { "margin-bottom" : "0px", "margin-left" : "0px", "margin-right" : "0px", "position": "static" } );
+					$(this).css( { "margin-bottom" : "0px", "margin-left" : "0px", "margin-right" : "0px", "position": "static" } );
 				});
 		});
 		</script>
