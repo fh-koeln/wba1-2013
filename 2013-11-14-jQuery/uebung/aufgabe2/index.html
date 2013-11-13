@@ -14,7 +14,7 @@
 			 *      akzeptieren---------------------------------------------------------------------*/
 			 
 			 //Funktionskopf:
-				$(".galerie").mouseover(function(){
+				$().mouseover(function(){
 					
 				
 			  	
@@ -27,8 +27,8 @@
 					//document.getElementById(e).style.width = "250px";	
 					//document.getElementById(e).style.height = "200px";	
 					
-					$(this).width(200);
-					$(this).height(200);
+					$().width(200);
+					$().height(200);
 					
 						
 					/*------------------------------------------------------------------------------*/
@@ -41,8 +41,8 @@
 					//document.getElementById(e).style.opacity = "1";	
 					//document.getElementById(e).style.zIndex = "1";	
 					
-					$(this).css("z-index", "1");
-					$(this).css("opacity", "1");
+					$().css("z-index", "1");
+					$().css("opacity", "1");
 					
 						
 					/*------------------------------------------------------------------------------*/
@@ -55,7 +55,7 @@
 					 *------------------------------------------------------------------------------*/
 					//document.getElementById(e).style.border = "solid 5px #00c6ff";	
 					
-					$(this).css({"border-color": "#00C6FF", 
+					$().css({"border-color": "#00C6FF", 
 					             "border-width":"5px", 
 					             "border-style":"solid"});
 						
@@ -70,7 +70,7 @@
 					//document.getElementById(e).style.marginRight = "-55px";
 					//document.getElementById(e).style.position = "relative";
 					
-					$(this).css({ "margin-top" : "-55px", "margin-bottom" : "-55px", "margin-left" : "-55px", "margin-right" : "-55px", "position": "relative" });
+					$().css({ "margin-top" : "-55px", "margin-bottom" : "-55px", "margin-left" : "-55px", "margin-right" : "-55px", "position": "relative" });
 					
 				});
 		
@@ -78,7 +78,7 @@
 			*------Schreiben Sie eine Funktion, welche die Bilder VERKLEINERT.----------------------*/
 			
 			//Funktionskopf:
-				$(".galerie").mouseout(function(){
+				$().mouseout(function(){
 					
 					/*------------------BREITE und HÖHE---------------------------------------------*
 					 *--------Das Bild soll verkleinert werden. Berücksichtigen Sie die Angaben:
@@ -88,8 +88,8 @@
 					//document.getElementById(e).style.width = "150px";	
 					//document.getElementById(e).style.height = "100px";	
 						
-					$(this).width(150);
-					$(this).height(100);	
+					$().width(150);
+					$().height(100);	
 						
 						
 					/*------------------------------------------------------------------------------*/
@@ -102,8 +102,8 @@
 					//document.getElementById(e).style.opacity = "0.25";	
 					//document.getElementById(e).style.zIndex = "0";	
 					
-					$(this).css("opacity", "0.25");
-					$(this).css("z-index", "0");
+					$().css("opacity", "0.25");
+					$().css("z-index", "0");
 					
 					
 						
@@ -116,7 +116,7 @@
 					//document.getElementById(e).style.border = "0px";
 					//document.getElementById(e).style.marginTop = "0px";
 					
-					$(this).css( { "border" : "0px", "margin-top" : "0px" } );
+					$().css( { "border" : "0px", "margin-top" : "0px" } );
 						
 						
 						
@@ -130,30 +130,30 @@
 					//document.getElementById(e).style.marginRight = "0px";
 					//document.getElementById(e).style.position = "static";
 					
-					$(this).css( { "margin-bottom" : "0px", "margin-left" : "0px", "margin-right" : "0px", "position": "static" } );
+					$().css( { "margin-bottom" : "0px", "margin-left" : "0px", "margin-right" : "0px", "position": "static" } );
 				});
 		});
 		</script>
-		<title>JavaScript - BASIC</title>
+		<title>JavaScript Bildergalerie zu jQuery Bildergalerie</title>
 	</head>
 	<body>
 		<section>
         	<img src="images/logo_gl.png" id="logo"><br>
-            <img src="images/Image_006.jpg" class="galerie">
-            <img src="images/Image_008.jpg" class="galerie">
-            <img src="images/Image_012.jpg" class="galerie">
-            <img src="images/Image_015.jpg" class="galerie"><br>
-            <img src="images/Image_016.jpg" class="galerie">
-            <img src="images/Image_017.jpg" class="galerie">
-            <img src="images/Image_041.jpg" class="galerie">
-            <img src="images/Image_046.jpg" class="galerie"><br>
-            <img src="images/Image_050.jpg" class="galerie">
-            <img src="images/Image_052.jpg" class="galerie">
-            <img src="images/Image_054.jpg" class="galerie">
-            <img src="images/Image_059.jpg" class="galerie"><br>
-            <img src="images/Image_061.jpg" class="galerie">
-            <img src="images/Image_068.jpg" class="galerie">
-            <img src="images/Image_070.jpg" class="galerie">
+            <img src="images/Image_006.jpg" >
+            <img src="images/Image_008.jpg" >
+            <img src="images/Image_012.jpg" >
+            <img src="images/Image_015.jpg" ><br>
+            <img src="images/Image_016.jpg" >
+            <img src="images/Image_017.jpg" >
+            <img src="images/Image_041.jpg" >
+            <img src="images/Image_046.jpg" ><br>
+            <img src="images/Image_050.jpg" >
+            <img src="images/Image_052.jpg" >
+            <img src="images/Image_054.jpg" >
+            <img src="images/Image_059.jpg" ><br>
+            <img src="images/Image_061.jpg" >
+            <img src="images/Image_068.jpg" >
+            <img src="images/Image_070.jpg" >
         </section>       
     </body>
 </html>
