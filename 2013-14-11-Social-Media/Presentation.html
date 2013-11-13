@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Title of presentation -->
+		<title>Social Media</title>
+		<!-- Short description of presentation -->
+		<meta name="description" content="presentation of WBA1 Social Media">
+		<!-- Author of presentation -->
+		<meta name="author" content="Dustin Baron, Patrizia Schink">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- Can be monokai, solarized_dark, solarized_light, sunburst, tomorrow-night-bright, zenburn -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Web-basierte Anwendungen 1</h1>
+					<h2>Social Media</h2>
+
+					<p>14. November 2013</p>
+
+					<p>Studiengang Medieninformatik an der Fachhochschule K&ouml;ln<br>
+					Campus Gummersbach</p>
+
+					<p style="margin-top:10%">Sven Lin&szligen<br>
+					Patrizia Schink<br>
+					Dustin Baron</p>
+				</section>
+        
+				<section>
+					<section>
+						<h2>Ablauf des Vortrags</h2>   
+                        <ul>    
+                            <li>Social Media</li>
+                            <li>Marketing</li>
+                            <li>OAuth</li>
+                            <li>Social Media Schnittstellen</li>
+                            <li>SDK's und Social Plugins</li>
+                            <li>Social Graph</li>
+                        </ul> 
+					</section>
+                </section> 
+ 
+				<section>
+					<section>
+						<h2>Was ist Social Media eigentlich?</h2>   
+                        <ul>    
+                            <li>Medien &uuml;ber die man kommuniziert</li>
+                            <li>in der Regel werden daf&uuml;r Profile angelegt</li>
+                            <li>erm&ouml;glicht es mit vielen Nutzern aufeinmal zu kommunizieren <br>
+                                (Twitter,Facebook,Google+...)</li>
+                        </ul> 
+					</section>
+                </section>  
+        
+                <section>
+					<section>
+						<h2>Beispiele sozialer Netwerke</h2>   
+                        <ul>    
+                            <li>Facebook</li>
+                            <li>Instagram</li>
+                            <li>Twitter</li>
+                            <li>Google+</li>
+                            <li>Pinterest</li>
+                        </ul> 
+					</section>
+                </section>  
+        
+                <section>
+					<section>
+						<h2>Facebook</h2>    
+                        <ul>    
+                            <li>1,189 Milliarden Nutzer</li>
+                            <li>mehr als 25 Millionen in Deutschland</li>
+                            <li>73% Mobil</li>
+                        </ul> 
+					</section>
+                </section>  
+        
+                <section>
+					<section>
+						<h2>Facebook - Marketing</h2>   
+                        <h3>Werbung</h3> 
+                        <img class="align-left" style="display:blocked;width=50%" src="./images/marketing1.jpg">         
+					</section>
+                </section>  
+ 
+                <section>
+					<section>
+                        <h2>Facebook - Marketing</h2>   
+                        <h3>Applikationen</h3> 
+                        <img class="align-left" style="display:blocked;width=50%" src="./images/marketing2.jpg">         
+					</section>
+                </section>    
+        
+                <section>
+					<section>
+						<h2>Abrechnungsformen von Werbung in sozialen Netzwerken</h2>   
+                        <h3>CPC (Cost per click)</h3>
+                        <img class="align-left" src="./images/marketing3.jpg" style="height:256px;">        
+					</section>
+                </section>   
+        
+                <section>
+					<section>
+						<h2>Abrechnungsformen von Werbung in sozialen Netzwerken</h2> 
+                        <h3>CPM (Cost per mille)</h3>
+                        <img class="align-left" src="./images/marketing4.jpg" style="height:256px;">           
+					</section>
+                </section>                    
+      
+                <section>
+					<section>
+						<h2>Facebook - Eigenarten</h2>   
+                        <h3>Zielgruppenanalyse und Soziale Weiterempfehlung</h3> 
+                        <img class="align-left" style="display:blocked;width=50%" src="./images/marketing5.png">         
+					</section>
+                </section>  
+      
+                <section>
+					<section>
+						<h2>Andere Finanzierungsm&ouml;glichkeiten</h2> 
+                        <h3>Premium-Mitgliedschaften</h3>
+                        <img class="align-left" src="./images/marketing6.jpg" style="height:256px;">           
+                    </section>
+                </section>      
+                   
+				<section>
+					<section>
+						<h2>Was ist OAuth?</h2>
+                        <img class="align-center" src="./images/whatisoauth.png">
+					</section>
+				</section>
+                
+                <section>
+                    <section>
+                        <h2>Wie funktioniert OAuth?</h2>
+                        <img class="align-center" src="./images/howdoesoauthworks.png">
+                    </section>  
+				</section>
+        
+                <section>
+					<section>
+						<h2>Application Programming Interface (API)</h2>
+                        <p>Anwendungsf&auml;lle in Social Media</p>
+                        <ul> 
+                            <li>Access-API's = Zugriff auf Daten und Informationen vom Netzwerk</li>
+                            <li>Plugin-API's = Erstellen von Inhalten f&uuml;r das Netzwerk</li>
+                            <ul>       
+                                <img class="align-left" src="./images/apis-for-marketers.png">    
+                                <img class="align-right" src="./images/os_logo.png">          
+					</section>
+				</section>
+                
+                <section>
+        	       <section>
+                       <h2>Software Development Kits und Social Plugins</h2>
+  					
+                       <p>Einbinden des Software Development Kits:</p>
+                       <pre><code data-trim>
+                            <div id="fb-root"></div>
+                            <script>(function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
+                            fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));</script>
+					   </code></pre>
+                        <p>Einbinden des Plugins:</p>
+					<pre><code data-trim>
+                        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/"></div>
+					</code></pre>
+                    <img class="align-left" src="./images/likebutton.png">     
+                    </section>  
+				</section>
+                        
+                <section>
+        	       <section>
+                        <h2>Social Graph</h2>
+                        <br>
+                        <br>
+                       <img class="fragment" data-fragment-index="1", class="align-center" src="./images/socialgraph_klein.png">
+                        <br> <br>
+                        <p class="fragment" data-fragment-index="2"><strong>“The global mapping of everybody and how they’re related.”</strong> <br> Mark Zuckerberg
+                       </p>
+                    </section>  
+				</section>
+                        
+                <section>
+                    <section>
+					   <br><br><br><br>
+                        <br><br><br>
+					   <h3>Das ist ja alles schön und gut! Aber jetzt zur Übung!</h3>
+
+				    </section>
+                        
+                    <section>
+					
+					   <h2>1. Aufgabe</h2>
+                        <p> Jeder von euch sollte einen Kurzen Steckbrief von sich selber erstellen (auf einem möglichst kleinen Zettel).
+                            Die folgenden Angaben sollten darin enthalten sein:<br>
+                            <ul>    
+                                <li><strong>Name:</strong></li>
+                               <li><strong>Wohnort:</strong></li>
+                                <li><strong>Musik:</strong><br>(mindestens eine der folgenden Bands auswählen) : Linkin Park,  Katy Perry,  Sido,                                        Macklemore </li>
+                                <li><strong>Hobbys:</strong><br>(mindestens eins der folgenden Hobbys auswählen) : Zocken, Biken, Musik machen, Sport </li>
+                            </ul>
+                        <br>Bildet anhand von Facebook-Freundschaften ein großes Netz, indem ihr alle Personen, die miteinander befreundet sind verbindet.                               Die Steckbriefe, bilden dabei die Knoten des Netzes und stellen euch und eure individuellen Informationen dar.<br> 
+                            (Falls jemand nicht in Facebook angemeldet ist, sollte dieser trotzdem ins Netz eingebunden werden.)<br> <br>
+                            Schafft ihr es, alle Personen miteinander (auch über Umwege) zu verknüpfen?
+                        </p>
+				    </section>
+                    
+                    <section>
+					   <h2>2. Aufgabe</h2>
+                        <p> Ihr wisst ja nun wie das Prinzip einer Open Graph Search funktioniert. <br> 
+                            Versucht die Ergebnisse der folgenden Suchen anhand des erstellten Netzes aufzuschreiben<br>
+                            <ul>    
+                                <li>Freunde die im selben Ort wohnen und die gleichen Bands wie ich mögen.</li>
+                                <li>Freunde und deren Freunde, die die selben Hobbys haben</li>
+                           </ul>
+                           <br>Vergleicht die Ergebnisse mit euren Nachbarn.<br> Was fällt euch auf?
+                        </p>
+                         <img class="align-center" src="./images/sozialesnetz.png">    
+				    </section>
+                
+                    <section>
+					   <h2>3. Aufgabe</h2>
+                        <p> Überlegt euch welche Vor- und Nachteile eine solche Suche haben kann. <br> 
+                            Überlegt vorallem wie man daraus Nutzen ziehen kann als:<br>
+                            <ul>    
+                                <li>Private Person</li>
+                                <li>Firma</li>
+                         </ul>
+                        </p>
+				    </section>
+                </section>
+
+				<!-- End of slides container. -->
+
+			</div>
+
+		</div>
+
+		<script src="../revealjs-framework/lib/js/head.min.js"></script>
+		<script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				width: 1000,
+
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'fast', // default/fast/slow
+				backgroundTransition: 'none', // default/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
