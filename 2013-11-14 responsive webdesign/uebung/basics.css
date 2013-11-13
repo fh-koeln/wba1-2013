@@ -1,45 +1,45 @@
 /* Standard CSS - notwendig für die normale Darstellung auf einem Laptop */ 
 /* Änderungen nicht notwendig, Media Query wird anschließend angesprochen */ 
 body {
-font-family:sans-serif;
-background-color:#e5e3e1;
+        font-family:sans-serif;
+        background-color:#e5e3e1;
 }
 
 .wrapper {
-width:1600px; /* Breite der Photolinie */
+        width:1600px; /* Breite der Photolinie */
 }
 
 ul#container{
-position:absolute;
-top:45px; /*von oberem Bildschirmrand: 45px Abstand*/
-left:0px; /*von linkem Bildschirmrand: 0px Abstand*/
-height:415px;
-padding:25px 0;
-background-color:#ffffff;
-list-style:none; /*damit keine Listenpunkte oder ähnliches auftauchen*/
+        position:absolute;
+        top:45px; /*von oberem Bildschirmrand: 45px Abstand*/
+        left:0px; /*von linkem Bildschirmrand: 0px Abstand*/
+        height:415px;
+        padding:25px 0;
+        background-color:#ffffff;
+        list-style:none; /*damit keine Listenpunkte oder ähnliches auftauchen*/
 }
 
 ul#container li.photo{
-float:left; /*Fotos werden immer rechts neben dem anderen angezeigt*/
-position:relative;
-margin-right:25px; /*rechts neben dem Bild 25px Abstand */
+        float:left; /*Fotos werden immer rechts neben dem anderen angezeigt*/
+        position:relative;
+        margin-right:25px; /*rechts neben dem Bild 25px Abstand */
 }
 
 
 
 ul#container li .photo-description{ 
-position:absolute;
-left:0; /*von linkem Elementrand: 0px Abstand*/
-bottom:25px;  /*von unterem Elementrand: 25px Abstand*/
-padding:10px 30px;
-background-color:#000; /* schwarze Hintergrundfarbe */
-color:#fff; /* weiße Textfarbe */
-font-size:16px; /* Schriftgröße */
-text-transform:uppercase; /* Großbuchstaben*/
+        position:absolute;
+        left:0; /*von linkem Elementrand: 0px Abstand*/
+        bottom:25px;  /*von unterem Elementrand: 25px Abstand*/
+        padding:10px 30px;
+        background-color:#000; /* schwarze Hintergrundfarbe */
+        color:#fff; /* weiße Textfarbe */
+        font-size:16px; /* Schriftgröße */
+        text-transform:uppercase; /* Großbuchstaben*/
 }
 
 #text {
-position:relative;
-top:500px;
-width: 300px;
+        position:relative;
+        top:500px;
+        width: 300px;
 }
