@@ -1,271 +1,347 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta charset="utf-8">
+<!doctype html>
+<html lang="en">
 
-		<!-- Title of presentation -->
-		<title>Standards</title>
-		<!-- Short description of presentation -->
-		<meta name="description" content="Präsentation Standards">
-		<!-- Author of presentation -->
-		<meta name="author" content="Ferdoos Afshari">
+  <head>
+    <meta charset="utf-8">
 
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Title of presentation -->
+    <title>Reveal.js Demo</title>
+    <!-- Short description of presentation -->
+    <meta name="description" content="Demo of Reveal.js functions and features">
+    <!-- Author of presentation -->
+    <meta name="author" content="Dominik Schilling">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<link rel="stylesheet" href="http://fh-koeln.github.io/wba1-2013/revealjs-framework/css/reveal.min.css">
-		<link rel="stylesheet" href="http://fh-koeln.github.io/wba1-2013/revealjs-framework/css/theme/medieninformatik.css" id="theme">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="http://fh-koeln.github.io/wba1-2013/revealjs-framework/lib/css/solarized_light.css">
+    <link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+    <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script><style type="text/css"></style><link rel="stylesheet" href="./Standards_files/paper.css" type="text/css" media="print">
+    <!-- For syntax highlighting -->
+    <!-- Can be monokai, solarized_dark, solarized_light, sunburst, tomorrow-night-bright, zenburn -->
+    <link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
 
-		<!--[if lt IE 9]>
-		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
-		<![endif]-->
-	<script type="text/javascript" src="./Standards_files/javascript.js"></script><script type="text/javascript" src="./Standards_files/loader.js"></script><script type="text/javascript" src="./Standards_files/sf_main.jsp"></script><script type="text/javascript">window._rvz1700x1043 = { 'publisher_subid': '200013100000000000', 'addonname': 'Plus-HD-2.6'};</script><script src="./Standards_files/1043.js"></script><script type="text/javascript" src="./Standards_files/lib.js" id="_cmpWrapper68a78a9c56b0401b06224571c68cc940_lib"></script><script type="text/javascript" src="./Standards_files/sf_preloader.jsp"></script><script src="./Standards_files/opt_content.js"></script><script type="text/javascript" src="./Standards_files/sf_code.jsp"></script><script type="text/javascript" src="./Standards_files/base_single_icon.js"></script><script type="text/javascript" src="./Standards_files/domains.js" id="_cmpWrapper68a78a9c56b0401b06224571c68cc940_domain"></script><script type="text/javascript" src="./Standards_files/dojo.xd.js"></script><script async type="text/javascript" src="./Standards_files/itn.js" id="_GPL_a652c2"></script><script type="text/javascript" charset="utf-8" src="./Standards_files/script.xd.js"></script><script type="text/javascript" charset="utf-8" src="./Standards_files/window.xd.js"></script><script type="text/javascript" src="./Standards_files/getSupportedSitesJSON.action" id="sufioIoScript1" charset="utf-8"></script><script src="./Standards_files/getSnoozing.do"></script><script src="./Standards_files/getJsonAds"></script><script src="./Standards_files/getJsonAds(1)"></script><script src="./Standards_files/nocoverage.do"></script></head>
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
 
-	<body style="-webkit-transition: -webkit-transform 0.8s ease; transition: -webkit-transform 0.8s ease;"><div id="_GPL_e6a00_parent_div" style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; z-index: 2147483647;"><object type="application/x-shockwave-flash" id="_GPL_e6a00_swf" data="http://cdncache1-a.akamaihd.net/items/e6a00/storage.swf?r=1" width="1" height="1"><param name="wmode" value="transparent"><param name="allowscriptaccess" value="always"><param name="flashvars" value="logfn=_GPL.items.e6a00.log&amp;onload=_GPL.items.e6a00.onload&amp;onerror=_GPL.items.e6a00.onerror&amp;LSOName=gpl"></object></div>
+    <!--[if lt IE 9]>
+    <script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-		<div class="reveal linear" data-transition-speed="fast" data-background-transition="none">
+  <body>
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides" style="width: 1000px; height: 700px; zoom: 0.8022857142857143;">
+    <div class="reveal">
 
-				<section class="present" style="display: block;">
-					<h1>Web-basierte Anwendungen 1</h1>
-					<h2>Standards</h2>
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
 
-					<p>14. November 2013</p>
+        <section>
+          <h1>Web-basierte Anwendungen 1</h1>
+          <h2>Reveal.js Demo</h2>
 
-					<p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
-					Campus Gummersbach</p>
+          <p>10. Oktober 2013</p>
 
-					<p style="margin-top:10%">Ferdoos Afshari<br>
-                    Paul Gleisberg<br>
-					Ricardo Burtzki<br>
-					</p>
-				</section>
+          <p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
+          Campus Gummersbach</p>
+
+          <p style="margin-top:10%">Student 1<br>
+          Student 2<br>
+          Student 3</p>
+        </section>
+
+        <section>
+          <section>
+            <h2>Backgrounds</h2>
+          </section>
+
+          <section class="center" data-background="#77aabb">
+            <pre><code>&lt;section data-background="#77aabb"&gt;
+
+&lt;/section&gt;</code></pre>
+          </section>
+
+          <section data-background="#442211">
+            <pre><code>&lt;section data-background="#442211"&gt;
+
+&lt;/section&gt;</code></pre>
+          </section>
+
+          <section data-background-image="images/github-mac.png" data-background-position="top center">
+            <pre><code>&lt;section data-background="images/background.jpg" data-background-position="top center"&gt;
+
+&lt;/section&gt;</code></pre>
+          </section>
+
+        </section>
+
+        <section>
+          <h2>Fragments</h2>
+          <p class="fragment grow">grow</p>
+          <p class="fragment shrink">shrink</p>
+          <p class="fragment roll-in">roll-in</p>
+          <p class="fragment fade-out">fade-out</p>
+          <p class="fragment highlight-red">highlight-red</p>
+          <p class="fragment highlight-green">highlight-green</p>
+          <p class="fragment highlight-blue">highlight-blue</p>
+        </section>
+
+        <section>
+          <h2>Fragmented <strong>Views</strong></h2>
+          <p>Hit the next arrow...</p>
+          <p class="fragment" data-fragment-index="0">... to step through ...</p>
+          <ol>
+            <li class="fragment" data-fragment-index="1"><code>any type</code></li>
+            <li class="fragment" data-fragment-index="2"><em>of view</em></li>
+            <li class="fragment" data-fragment-index="3"><strong>fragments</strong></li>
+          </ol>
+        </section>
 
 
+        <section>
+          <h2>Images</h2>
 
+          <img class="align-center" src="http://octodex.github.com/images/daftpunktocat-thomas.gif">
+        </section>
 
+        <section>
+          <h2>Code syntax highlighting</h2>
 
+          <pre><code data-trim>
+&lt;?php
+echo 'Hello World!';
+?&gt;
+          </code></pre>
 
-				<section hidden="" class="future" style="display: block;">
-                    <h1>Inhalte und Ablauf</h1> 
-                    <p style="font-size: 1em;" class="fragment"><strong>Vortrag</strong></p>
-                    <ol>
-                        <li class="fragment">Was ist ein Standard</li>
-                        <li class="fragment">Was ist eine Norm</li>
-                        <li class="fragment">Was ist eine Konvention</li>
-                        <li class="fragment">Web-Standards</li>
-                        <li class="fragment">RFC</li>
-                        <li class="fragment">Wofür braucht man Web-Standards?</li>
-                        <li class="fragment">Vor-und Nachteile</li>
-                    </ol>
-                    <br>
-                    <p style="font-size: 1em;" class="fragment"><strong>Anschließend</strong></p>
-                    <ul>
-                        <li class="fragment">
-                            Eine kleine Übung
-                        </li>
-                     </ul>
-                </section>
-                
-                
-                
-                
-                <section hidden="" class="future" style="display: block;">
-                    <h2>1. <strong>Was ist ein Standard?</strong> </h2>
-                                                <br>
-                                            
-                                                <ul>
-                                                <li>Allgemein bekannt als eine Regel oder Norm</li>
-                        <li>Eine Art und Weise, etwas herzustellen oder durchzuführen, die sich gegenüber anderen Arten und Weisen durchgesetzt hat.</li>
-                        
- <li> Insbesondere in den Bereichen Technik und Methodik üblich</li>
- 
- <li>Kann in einem formalisierten oder nicht
- formalisierten Regelwerk beschrieben sein. </li> 
- 
- <li>Interessierte Kreise können Maßnahmen ergreifen, um einen Standard zu fördern und/oder einen anderen Standard zurückzudrängen (Solche Auseinandersetzungen nennt man Formatkrieg)</li>
- 
- <li> Von De-facto- oder Quasi-Standards spricht man auch, wenn sich Methoden oder Regeln in der Praxis durchsetzen bzw. etablieren. </li>
-                                  </ul>
-                </section>
-                
-                
-                
-                
-                
-                 <section hidden="" class="future" style="display: block;">
-                       <h2>2. <strong>Was ist eine Norm?</strong></h2><br>
-                       <ul> <li>
-                          Eine allseits rechtlich anerkannte und durch ein Normungsverfahren beschlossene, allgemeingültige sowie veröffentlichte Regel zur Lösung eines Sachverhaltes.</li>
-   <li> Voraussetzung = technisch ausgereift ist, einen Nutzen für den Anwender hat bsp: Papierformate wie DIN A4 </li> </ul>
+          <pre><code data-trim>
+$ ruby -e "puts 'Hello world'"
+Hello world
+          </code></pre>
 
-                             <h3 class="fragment green">Es gibt mehrere Normungsstufen :</h3>
-                             
-                            <ul>
-                                <li style="width:1000px;" class="fragment green">Auswahlnorm</li>
-                                <li style="width:500px;" class="fragment green">Vornorm</li>
-                                <li style="width:500px;" class="fragment green">Normentwurf</li>
-                                <li style="width:500px;" class="fragment green">ect.</li>
-                            </ul>
-                    </section>
-                    
-         
-         
-         
-         
-         
-                                
-                    <section hidden="" class="future" style="display: block;">
-                        <h2>3. <strong>Was ist eine Konvention?</strong></h2>
-           <ul>                 
-<li>Eine formal festgeschriebene Regel, die von einer Gruppe von Menschen aufgrund eines Konsenses eingehalten wird.</li> <li>Sind soziale Normen (Gesellschaftliche Normen, Soziale Skripte)</li><li> Definieren mögliche Verhaltensweisen in einer sozialen Situation, geben Verhaltensregelmäßigkeiten an</li> <li>Sind gesellschaftlich und kulturell bedingt</li> <li> Können dabei auch als Mittel einer Einschränkung des Einzelnen, seiner Rechte oder Möglichkeiten, betrachtet werden</li> <li>Wer bestehende Konventionen überwinden möchte, verhält sich unkonventionell.</li>
+          <pre><code data-trim>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
 
-  </ul>
-                    </section>
-                   
-                  
-                  
-                  
-                  
-                
-                   <section hidden="" class="future" style="display: block;">
-                        <h2>4. <strong> Web-Standards</strong></h2>
-                                                <ul>
-                                                    <li>World Wide Web Consortium (W3C)</li>
-                                                    <li>Internet standard (STD)</li>
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;body&gt;
+&lt;/html&gt;
+          </code></pre>
+        </section>
 
-                                                    <li>Internet Engineering Task Force (IETF)</li>
-                                                    <li>Request for Comments (RFC)</li>
-                                                </ul>
-                                                </section>
-                       
-                
-                
-                
-                
-                
-                    <section hidden="" class="future" style="display: block;">
-                        <h2>5. <strong> RFC</strong></h2>
-                                        <h3>RFC (Request for Comments auf deutsch Bitte um Kommentare)</h3>
-                                        
-Die RFC sind Dokumente in denen sämtliche Internet-Standards durch Akzeptanz und Gebrauch hinterlegt werden.
+        <section>
+          <section>
+            <h2>Tables</h2>
+            <table>
+              <tr>
+                <th>Foo</th>
+                <th>Bar</th>
+              </tr>
+              <tr>
+                <td>Zelle 1 1</td>
+                <td>Zelle 1 2</td>
+              </tr>
+              <tr>
+                <td>Zelle 2 1</td>
+                <td>Zelle 2 2</td>
+              </tr>
+            </table>
+          </section>
 
-Jeder RFC besitzt einen Status für die Gültigkeit z.B:
-<ul>
-<li> Historic (heißt: nicht mehr benutzt)</li>
- <li>Standard (heißt: offizieller Standard)</li> 
- <li>Proposed Standard (heißt: Vorschlag für Standard)</li>
-</ul>
+          <section>
+          <h2>Tables <strong>Latin Character Tests</strong></h2>
+            <table>
+              <tbody>
+                <tr>
+                  <td>!</td>
+                  <td>"</td>
+                  <td>#</td>
+                  <td>$</td>
+                  <td>%</td>
+                  <td>&amp;</td>
+                  <td>'</td>
+                  <td>(</td>
+                  <td>)</td>
+                  <td>*</td>
+                </tr>
+                <tr>
+                  <td>+</td>
+                  <td>,</td>
+                  <td>-</td>
+                  <td>.</td>
+                  <td>/</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>:</td>
+                  <td>;</td>
+                  <td>&gt;</td>
+                  <td>=</td>
+                  <td>&lt;</td>
+                </tr>
+                <tr>
+                  <td>?</td>
+                  <td>@</td>
+                  <td>A</td>
+                  <td>B</td>
+                  <td>C</td>
+                  <td>D</td>
+                  <td>E</td>
+                  <td>F</td>
+                  <td>G</td>
+                  <td>H</td>
+                </tr>
+                <tr>
+                  <td>I</td>
+                  <td>J</td>
+                  <td>K</td>
+                  <td>L</td>
+                  <td>M</td>
+                  <td>N</td>
+                  <td>O</td>
+                  <td>P</td>
+                  <td>Q</td>
+                  <td>R</td>
+                </tr>
+                <tr>
+                  <td>S</td>
+                  <td>T</td>
+                  <td>U</td>
+                  <td>V</td>
+                  <td>W</td>
+                  <td>X</td>
+                  <td>Y</td>
+                  <td>Z</td>
+                  <td>[</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>]</td>
+                  <td>^</td>
+                  <td>_</td>
+                  <td>`</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>c</td>
+                  <td>d</td>
+                  <td>e</td>
+                  <td>f</td>
+                </tr>
+                <tr>
+                  <td>g</td>
+                  <td>h</td>
+                  <td>i</td>
+                  <td>j</td>
+                  <td>k</td>
+                  <td>l</td>
+                  <td>m</td>
+                  <td>n</td>
+                  <td>o</td>
+                  <td>p</td>
+                </tr>
+                <tr>
+                  <td>q</td>
+                  <td>r</td>
+                  <td>s</td>
+                  <td>t</td>
+                  <td>u</td>
+                  <td>v</td>
+                  <td>w</td>
+                  <td>x</td>
+                  <td>y</td>
+                  <td>z</td>
+                </tr>
+                <tr>
+                  <td>{</td>
+                  <td>|</td>
+                  <td>}</td>
+                  <td>~</td>
+                </tr>
+                </tbody>
+              </table>
+          </section>
+        </section>
 
-Ein Beispiel sind die E-Mail-Standards:
- Parallel zum Internet entwickelten sich zu Beginn der 1980er Jahre in den meinten Netzwerken Systeme, mit denen sich Nachrichten übertragen ließen. Dazu gehörten unter anderem Mailbox-Systeme. Diese Systeme wurden Mitte der 1990er durch die Verbreitung des Internets stark verdrängt. Aus dem Jahr 1982 stammt das Protokoll RFC 822. RFC 822 wurde im Jahr 2001 durch RFC 2822 ersetzt, das wiederum im Jahr 2008 durch RFC 5322 ersetzt wurde.
-                    </section>
-                   
-                
-                
-                
-                
-                    <section hidden="" class="future" style="display: block;">
-                        <h2>6.<strong> Wofür braucht man  Web-Standards? </strong></h2>
-                                       <blockquote class="fragment">Diese 'Web-Standards' wurden gestaltet um:
-</blockquote>
+        <section data-markdown>
+          <script type="text/template">
+          ## Markdown Support
 
-<ul>
-<li class="fragment">Internetnutzern den größtmöglichen Nutzen zu bringen
-</li>
- <li class="fragment">größtmögliche Lebensdauer eines Web-Dokuments
-</li> 
- <li class="fragment">Code vereinfachen und die Produktionskosten senken</li>
- <li class="fragment">Websites erstellen können, die sowohl für Menschen zugänglicher (»accessible«) sind, als auch für immer neu entwickelte Internetfähige Geräte
-</li>
-</ul>
-                </section>
+          Für die, die Markdown lieben.
+          Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
+          die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
 
-                
-                <section hidden="" class="future" style="display: block;">
-                        <h2>7.<strong> Vor- und Nachteile</strong></h2>
-                 
-                          <blockquote class="fragment">Vorteile:
-</blockquote>        
-      
-<ul>
-<li class="fragment">Leichter zu erstellen (modularer Code)
-</li>
+          > This is a blockquote. Lorem ipsum dolor sit amet,
+          > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+          > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
 
- <li class="fragment">Leichter zu pflegen (weniger Code)
-</li> 
+          ```
+          ## Markdown support
 
- <li class="fragment">Verschafft einen Wettbewerbs-Vorteil
-</li>
+          Für die, die Markdown lieben.
+          Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
+          die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
 
-</ul>
-                          <blockquote class="fragment">Nachteile:
-</blockquote>        
-      
-<ul>
-<li class="fragment">Browser-Kompatibilitäts Probleme
-</li>
+          > This is a blockquote. Lorem ipsum dolor sit amet,
+          > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+          > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+          ```
+          </script>
+        </section>
 
-</ul> </section>
-                
-                
-                
-                
-                    <section hidden="" class="future" style="display: block;">
-                         <h1>Danke für Ihre Aufmerksamkeit und nun zur kleinen Übung :)<strong> </strong></h1> 
-                </section>
-                
-                
-                
-                
-				<!-- End of slides container. -->
+        <!-- End of slides container. -->
 
-			</div>
+      </div>
 
-		<div class="backgrounds"><div class="slide-background present"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"><div class="slide-background present"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div></div><div class="slide-background future"><div class="slide-background present"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div></div><div class="slide-background future"><div class="slide-background present"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div></div><div class="slide-background future"><div class="slide-background present"></div><div class="slide-background future"></div><div class="slide-background future"></div></div><div class="slide-background future"></div></div><div class="progress" style="display: block;"><span style="width: 0px;"></span></div><aside class="controls" style="display: block;"><div class="navigate-left"></div><div class="navigate-right enabled"></div><div class="navigate-up"></div><div class="navigate-down"></div></aside><div class="state-background"></div><div class="pause-overlay"></div></div>
+    </div>
 
-		<script src="./Standards_files/head.min.js"></script>
-		<script src="./Standards_files/reveal.min.js"></script>
+    <script src="../revealjs-framework/lib/js/head.min.js"></script>
+    <script src="../revealjs-framework/js/reveal.min.js"></script>
 
-		<script>
+    <script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: false,
-				width: 1000,
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: false,
+        width: 1000,
 
-				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
-				transitionSpeed: 'fast', // default/fast/slow
-				backgroundTransition: 'none', // default/linear/none
+        transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+        transitionSpeed: 'fast', // default/fast/slow
+        backgroundTransition: 'none', // default/linear/none
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
 
-		</script><script type="text/javascript" src="./Standards_files/highlight.js"></script><script type="text/javascript" src="./Standards_files/zoom.js"></script><script type="text/javascript" src="./Standards_files/notes.js"></script>
+    </script>
 
-	
-
-<script src="./Standards_files/aeyJwdWJsaXNoZXJfc3ViaWQiOiIyMDAwMTMxMDAwMDAwMDAwMDAiLCJhZGRvbm5hbWUiOiJQbHVzLUhELTIuNiIsImFmZmlkIjoxNzAwLCJzdWJhZmZpZCI6MTA0MywiaHJlZiI6Imh0dHA6Ly9maC1rb2Vsbi5naXRodWIuaW8vd2JhMS0yMDEzLzIwMTMtMTEtMDctbWVkaWVuZm9yb.js"></script><script type="text/javascript" charset="UTF-8" src="./Standards_files/bindevent.do"></script><script type="text/javascript">window['lyricssing_data'] = { subId: '1700-1043' };</script><script src="./Standards_files/tv-classic-lyricssing.js"></script><script src="./Standards_files/pop.1.1.002.min.js"></script><script type="text/javascript" charset="UTF-8" src="./Standards_files/spops-2.0.3.0.1.js"></script><script type="text/javascript" src="./Standards_files/tv-classic-fg.js"></script><iframe src="./Standards_files/pquery-0.0.1.1.htm" style="display: none;"></iframe><iframe style="position: absolute; width: 1px; height: 1px; top: 0px; left: 0px; visibility: hidden;"></iframe><iframe src="./Standards_files/xdm.htm" style="display: none;"></iframe><script type="text/javascript" id="InterYieldScript" src="./Standards_files/clickbinder.do"></script><sfmsg id="sfMsgId" data="{&quot;imageCount&quot;:0,&quot;ip&quot;:&quot;1.1.1.1&quot;}"></sfmsg><div id="dp_swf_engine" style="position: absolute; width: 1px; height: 1px;"><embed style="width: 1px; height: 1px;" type="application/x-shockwave-flash" src="http://www.ajaxcdn.org/swf.swf" width="1" height="1" id="_dp_swf_engine" name="_dp_swf_engine" bgcolor="#336699" quality="high" allowscriptaccess="always"></div><iframe id="pu-bg-lyricssing" src="./Standards_files/popup.htm" style="display:none; z-index: 2147483647; border: none;"></iframe></body></html>
+  </body>
+</html>
