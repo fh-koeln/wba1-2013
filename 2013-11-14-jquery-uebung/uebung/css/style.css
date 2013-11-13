@@ -1,0 +1,183 @@
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	font-size: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	color: #89867e;
+	background: #000;
+}
+
+.header-wrapper {
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+	background: #f9f9f9;
+}
+
+.page-title {
+	font-size: 2.6em;
+	line-height: 1.3;
+	font-weight: 300;
+	margin: 0;
+}
+
+.page-tagline {
+	font-size: 1.3em;
+	font-weight: 300;
+	opacity: .5;
+	padding: 0 0 .6em .1em;
+	margin: 0;
+}
+
+.page-content {
+	padding: 4em 0;
+}
+
+.slider-frame {
+	position: relative;
+}
+
+.slider-prev,
+.slider-next {
+	position: absolute;
+	top: 50%;
+	margin-top: -32px;
+	display: block;
+	height: 64px;
+	width: 64px;
+	background: transparent url( '../img/slider-navigation.png' ) 0 0 no-repeat;
+	cursor: pointer;
+	opacity: .2;
+	transition: opacity .1s ease-in;
+	z-index: 2;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+	opacity: 1;
+}
+
+.slider-prev {
+	left: 4%;
+	background-position: 0 -64px;
+}
+
+.slider-next {
+	right: 4%;
+}
+
+.gallery {
+	margin: 0 auto;
+	width: 70%;
+	padding: 0;
+	overflow: hidden;
+	text-align: center;
+}
+
+.gallery-item {
+	list-style: none;
+	padding: 0;
+	position: relative;
+	display: none;
+}
+
+.gallery-item.current {
+	display: block;
+}
+
+.gallery-item figure,
+.gallery-thumb-item figure {
+	margin: 0;
+}
+
+.gallery-image {
+	max-width: 100%;
+	height: auto;
+}
+
+.gallery-description {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: right;
+	padding: .8em;
+	background: rgba( 0, 0, 0, .5 );
+	color: #f9f9f9;
+	opacity: 0;
+	transition: opacity .1s ease-in;
+	font-style: italic;
+	font-family: 'Georgia', serif;
+	font-size: 1.2em;
+}
+
+.gallery-description a {
+	color: #f9f9f9;
+	font-style: normal;
+}
+
+.gallery-description .source {
+	font-style: normal;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-size: .7em;
+}
+
+.gallery-item:hover .gallery-description {
+	opacity: 1;
+}
+
+.gallery-thumbs {
+	margin: 0 auto;
+	width: 70%;
+	padding: 0;
+}
+
+.gallery-thumb-item {
+	list-style: none;
+	padding: 0;
+	position: relative;
+	float: left;
+	width: 20%;
+	opacity: .5;
+	transition: opacity .1s ease-in;
+	cursor: pointer;
+}
+
+.gallery-thumb-item.current,
+.gallery-thumb-item:hover {
+	opacity: .9;
+}
+
+.clear {
+	clear: both;
+}
+
+@media screen and (max-width: 500px) {
+	.gallery,
+	.gallery-thumbs {
+		width: 100%;
+	}
+
+	.slider-prev {
+		left: 0;
+	}
+
+	.slider-next {
+		right: 0;
+	}
+}
