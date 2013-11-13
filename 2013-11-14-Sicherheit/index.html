@@ -4,39 +4,43 @@
 	<head>
 		<meta charset="utf-8">
 
+		<!-- Title of presentation -->
 		<title>WBA1 - Sicherheit im Web</title>
-
+		<!-- Short description of presentation -->
 		<meta name="description" content="Sicherheit im Web">
+		<!-- Author of presentation -->
 		<meta name="author" content="Lana Kloodt">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<link rel="stylesheet" href="../revealjs-template/css/reveal.css">
-		<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
+		<!-- Can be monokai, solarized_dark, solarized_light, sunburst, tomorrow-night-bright, zenburn -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
-			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
 
 		<!--[if lt IE 9]>
-		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 
 	<body>
-
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-                
-                
+
+
 				<section>
 					<h1>WBA1 - Sicherheit im Web</h1>
 					<h2>Medieninformatik</h2>
@@ -48,155 +52,159 @@
 						<span>11092007<a href="http://github.com/KiddKloodt">Lana Kloodt</a></span><br>
 					</p>
 				</section>
-				
-                
-                
+
+
+
 				<section>
-				    <h1>Ablauf</h1>
-				    
-				        <ul>
-				            <li>Vorwort</li>
-                            <li>Gefahren und Angriffstechniken im Web</li>
-                            <li>Eine kurze Einführung in das Thema Verschlüsselung</li>
-                            <li>Passwörter | Speicherung</li>
-                            <li>Passwörter | Problematik</li>
-                            <li>Passwörter | Zukunft</li>     
-				        </ul>    
+						<h1>Ablauf</h1>
+
+								<ul>
+										<li>Vorwort</li>
+														<li>Gefahren und Angriffstechniken im Web</li>
+														<li>Eine kurze Einführung in das Thema Verschlüsselung</li>
+														<li>Passwörter | Speicherung</li>
+														<li>Passwörter | Problematik</li>
+														<li>Passwörter | Zukunft</li>
+								</ul>
 				</section>
-                
-                   
-                
+
+
+
 				<section transition=none#>
-				    <h1>Vorwort</h1>
-                    
-                        <p><i>"Security is a process, not a product -<br>
-                            one that system administrators and corporate executives alike must understand to survive."</i></p>
-                        <p><sub>David Brown, Secret and Lies</sub></p>  
+						<h1>Vorwort</h1>
+
+												<p><i>"Security is a process, not a product -<br>
+														one that system administrators and corporate executives alike must understand to survive."</i></p>
+												<p><sub>David Brown, Secret and Lies</sub></p>
 				</section>
-                
-            
-                <section>
-                    <h1>Gefahren und Angriffstechniken im Web</h1>
-                    <ul>
-                        <li class="fragment">Malware</li>
-                        <li class="fragment">Social engineering</li>
-                        <li class="fragment">Phishing</li>
-                        <li class="fragment">Denial-of-service</li>
-                        <li class="fragment">Man-in-the-middle</li>
-                        <li class="fragment">Spoofing</li>
-                        <li class="fragment">Brute-force-Angriff</li>
-                        <li class="fragment">Code injection</li>
-                    </ul>
-                </section>
 
 
-                
-                <section>
-                    <h1>Eine kurze Einführung in das Thema Verschlüsselung</h1>
-        
-                    <ul>
-                        <li class="fragment">symmetrische Verschlüsselung</li>
-                        <li class="fragment">asymmetrische Verschlüsselung</li>
-                        <li class="fragment"><a href="#" title="Secure socket layer">SSL</a>/<a href="#" title="Transport layer security">TSL</a></li>
-                        <li class="fragment">Zertifikate einer<a href="https://www.verisign.de/ts-sem-page/index.html?sl=2QG6K-0000-01-00"> Certificate Authenticity</a> | Vorsicht: <a href="http://www.startssl.com/?lang=de">Billige Zertifikate</a>!!!</li>
-                            <ul>
-                                <li class="fragment">Domain validated</li>  
-                                <li class="fragment">Organization validation</li>
-                                <li class="fragment">Extended validation</li>
-                            </ul>
-                    </ul>
-                </section>
-                        
+								<section>
+										<h1>Gefahren und Angriffstechniken im Web</h1>
+										<ul>
+												<li class="fragment">Malware</li>
+												<li class="fragment">Social engineering</li>
+												<li class="fragment">Phishing</li>
+												<li class="fragment">Denial-of-service</li>
+												<li class="fragment">Man-in-the-middle</li>
+												<li class="fragment">Spoofing</li>
+												<li class="fragment">Brute-force-Angriff</li>
+												<li class="fragment">Code injection</li>
+										</ul>
+								</section>
 
-                
-                <section>
-                    <h1>Passwörter | Speicherung</h1>
 
-                    <ul>
-                        <li class="fragment">Hashing</li>
-                        <li class="fragment">Salting</li>
-                        <li class="fragment">Speicherung via Browser</li>
-                    </ul>                    
-                </section>
 
-                
-                
-                <section>
-                    <h1>Passwörter | Problematik</h1>
+								<section>
+										<h1>Eine kurze Einführung in das Thema Verschlüsselung</h1>
 
-                    <ul>
-                        <li class="fragment">für fast alles benötigt (Account mit Email und Passwort)</li>
-                        <li class="fragment">das menschliche Gehirn</li>
-                        <li class="fragment">menschliche Faulheit</li>
-                        <li class="fragment"><a href="http://crackstation.net/">Tools</a> zum Passwortknacken im Internet</li>
-                        <li class="fragment"><a href="http://stricture-group.com/files/adobe-top100.txt">Listen</a> mit bereits geknackten Passwörtern im Internet</li>
-                        <li class="fragment"><a href="http://www.heise.de/ct/artikel/Die-Passwortknacker-1779840.html">3D-Grafikkarten</a></li>
-                    </ul>
-                </section>
+										<ul>
+												<li class="fragment">symmetrische Verschlüsselung</li>
+												<li class="fragment">asymmetrische Verschlüsselung</li>
+												<li class="fragment"><a href="#" title="Secure socket layer">SSL</a>/<a href="#" title="Transport layer security">TSL</a></li>
+												<li class="fragment">Zertifikate einer<a href="https://www.verisign.de/ts-sem-page/index.html?sl=2QG6K-0000-01-00"> Certificate Authenticity</a> | Vorsicht: <a href="http://www.startssl.com/?lang=de">Billige Zertifikate</a>!!!</li>
+														<ul>
+																<li class="fragment">Domain validated</li>
+																<li class="fragment">Organization validation</li>
+																<li class="fragment">Extended validation</li>
+														</ul>
+										</ul>
+								</section>
 
-                
-                
-                <section>
-                    <h1>Passwörter | Zukunft</h1>
-                    
-                        <p><i>"Der Account ist mir kein richtiges Passwort wert."</i></p>
-                        <p class="fragment"></p><sub>                   Jürgen Schmidt, Sicherheitsexperte bei Heise</sub></p>
-                        
-                    <ul>
-                        <li class="fragment">1Password</li>
-                        <li class="fragment">OpenID</li>
-                        <li class="fragment">OAuth</li>
-                    </ul>
-                </section>
-            
-            
-                <section>
-                    <h1>Fazit | Die <a href="#" title="National Security Agency">NSA</a> hat eh die Hand drauf?!</h1>
-                    
-                    <ul>
-                        <li><a href="http://t3n.de/news/adobe-hack-noch-viel-schlimmer-506598/">Adobe-Hack</a> schlimmer als befürchtet</li>
-                        <li>Auch "Hacker" sind nicht perfekt geschützt - <a href="http://www.derwesten.de/staedte/bochum/hackerangriff-auf-ruhr-uni-50-000-sollen-passwoerter-aendern-id7602256.html"> Ruhr-Univerität Bochum</a></li>
-                    </ul>
-                </section>
-            
-            
-            
-                <section>
-                    <p>Vielen lieben Dank.</p>
-                </section>
 
-        </div>
-        
-        
-        
-        
 
-		<script src="../revealjs-template/lib/js/head.min.js"></script>
-		<script src="../revealjs-template/js/reveal.min.js"></script>
+								<section>
+										<h1>Passwörter | Speicherung</h1>
 
-		<script>
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
+										<ul>
+												<li class="fragment">Hashing</li>
+												<li class="fragment">Salting</li>
+												<li class="fragment">Speicherung via Browser</li>
+										</ul>
+								</section>
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
-					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
-					{ src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
-					{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
-				]
-			});
 
-		</script>
-	</body>
+								<section>
+										<h1>Passwörter | Problematik</h1>
+
+										<ul>
+												<li class="fragment">für fast alles benötigt (Account mit Email und Passwort)</li>
+												<li class="fragment">das menschliche Gehirn</li>
+												<li class="fragment">menschliche Faulheit</li>
+												<li class="fragment"><a href="http://crackstation.net/">Tools</a> zum Passwortknacken im Internet</li>
+												<li class="fragment"><a href="http://stricture-group.com/files/adobe-top100.txt">Listen</a> mit bereits geknackten Passwörtern im Internet</li>
+												<li class="fragment"><a href="http://www.heise.de/ct/artikel/Die-Passwortknacker-1779840.html">3D-Grafikkarten</a></li>
+										</ul>
+								</section>
+
+
+
+								<section>
+										<h1>Passwörter | Zukunft</h1>
+
+												<p><i>"Der Account ist mir kein richtiges Passwort wert."</i></p>
+												<p class="fragment"></p><sub>                   Jürgen Schmidt, Sicherheitsexperte bei Heise</sub></p>
+
+										<ul>
+												<li class="fragment">1Password</li>
+												<li class="fragment">OpenID</li>
+												<li class="fragment">OAuth</li>
+										</ul>
+								</section>
+
+
+								<section>
+										<h1>Fazit | Die <a href="#" title="National Security Agency">NSA</a> hat eh die Hand drauf?!</h1>
+
+										<ul>
+												<li><a href="http://t3n.de/news/adobe-hack-noch-viel-schlimmer-506598/">Adobe-Hack</a> schlimmer als befürchtet</li>
+												<li>Auch "Hacker" sind nicht perfekt geschützt - <a href="http://www.derwesten.de/staedte/bochum/hackerangriff-auf-ruhr-uni-50-000-sollen-passwoerter-aendern-id7602256.html"> Ruhr-Univerität Bochum</a></li>
+										</ul>
+								</section>
+
+
+
+								<section>
+										<p>Vielen lieben Dank.</p>
+								</section>
+
+        <!-- End of slides container. -->
+
+      </div>
+
+    </div>
+
+    <script src="../revealjs-framework/lib/js/head.min.js"></script>
+    <script src="../revealjs-framework/js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: false,
+        width: 1000,
+
+        transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+        transitionSpeed: 'fast', // default/fast/slow
+        backgroundTransition: 'none', // default/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
 </html>
