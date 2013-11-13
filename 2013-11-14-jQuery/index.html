@@ -215,10 +215,37 @@ $(".test").hide() - Blendet alle Elemente mit der class="test" aus.
 
                     <section>
                     	<h1>JavaScript</h1>
+                    	<br>
+                    	<br>
+                    	<p>JavaScript</p>
+                    	<pre><code>//Eine JavaScript Funktion zur Änderung der Hintergrundfarbe
+function changeBackground(color) {
+	document.body.style.background = color;
+}
+onload="changeBackground('red');"</code></pre>
+						<br><br>
+						
+						<p>jQuery</p>
+                    	<pre><code class="fragment roll-in">//Eine jQuery Funktion zur Änderung der Hintergrundfarbe
+$("body").css("background", "#FFFFFF");</code></pre> 
+
                     </section>
 
                     <section>
                     	<h1>Ajax</h1>
+                    	<br>
+                    	<h4>.load()</h4>
+                    	<pre><code>$(selector).load(URL,data,callback);</code></pre>
+
+                    	<p id="ajaxbeispiel">Sieh was passiert, wenn du den Button klickst!</p>
+                    	<button>Klick mich!</button>
+                    	<script type="text/javascript">	
+	                    	$("button").click(function(){
+	    						$("#ajaxbeispiel").load("text.txt");
+	  							});
+							});
+						</script>
+
                     </section>
 
                     
@@ -324,7 +351,11 @@ $(".test").hide() - Blendet alle Elemente mit der class="test" aus.
 						</p>
 						<p>Aufgabe 2:
 							<br>
-							<a href="uebung/aufgabe2/index.html">JS Bildergalerie zu jQuery</a>
+							<a href="uebung/aufgabe2.7z">JS Bildergalerie zu jQuery</a>
+						</p>
+						<p>Aufgabe 3:
+							<br>
+							<a href="uebung/aufgabe3.7z">Ajax Übung</a>
 						</p>
 					</section>
 				</section>
