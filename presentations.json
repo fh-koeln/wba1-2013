@@ -131,6 +131,11 @@
 			"title" : "Sicherheit im Web",
 			"authors" : ["Lana Kloodt"]
 		},
+		"2013-11-14-standards/index.html":
+		{
+			"title" : "Standards",
+			"authors" : ["Ferdoos Afshari", "Paul Gleisberg", "Ricardo Burtzkit"]
+		},
 		"2013-11-14-jquery-uebung/index.html":
 		{
 			"title" : "jQuery Übung",
