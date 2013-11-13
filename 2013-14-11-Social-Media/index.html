@@ -34,7 +34,6 @@
 	</head>
 
 	<body>
-
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
@@ -42,43 +41,84 @@
 
 				<section>
 					<h1>Web-basierte Anwendungen 1</h1>
-					<h2>Reveal.js Demo</h2>
+					<h2>Social Media</h2>
 
-					<p>10. Oktober 2013</p>
+					<p>14. November 2013</p>
 
-					<p>Studiengang Medieninformatik an der Fachhochschule KÃ¶ln<br>
+					<p>Studiengang Medieninformatik an der Fachhochschule K&ouml;ln<br>
 					Campus Gummersbach</p>
 
-					<p style="margin-top:10%">Student 1<br>
-					Student 2<br>
-					Student 3</p>
+					<p style="margin-top:10%">Sven Lin&szligen<br>
+					Patrizia Schink<br>
+					Dustin Baron</p>
 				</section>
-
+        
 				<section>
 					<section>
-						<h2>Backgrounds</h2>
+						<h2>Ablauf des Vortrags</h2>   
+            <ul>    
+            <li>Was ist Social Media?</li>
+            <li>Beispiele</li>
+            <li>Marketing</li>
+            <li>Beispiele</li>
+            <li>OAuth</li>
+            <li>Social Media Schnittstellen</li>
+            <li>SDK's und Social Plugins</li>
+            <li>Social Graph</li>
+            <li>Like Button</li>
+            </ul> 
 					</section>
-
-					<section class="center" data-background="#77aabb">
-						<pre><code>&lt;section data-background="#77aabb"&gt;
-
-&lt;/section&gt;</code></pre>
+        </section> 
+          
+				<section>
+					<section>
+						<h2>Was ist OAuth?</h2>
+            <img class="align-center" src="./images/whatisoauth.png">
 					</section>
-
-					<section data-background="#442211">
-						<pre><code>&lt;section data-background="#442211"&gt;
-
-&lt;/section&gt;</code></pre>
-					</section>
-
-					<section data-background-image="images/github-mac.png" data-background-position="top center">
-						<pre><code>&lt;section data-background="images/background.jpg" data-background-position="top center"&gt;
-
-&lt;/section&gt;</code></pre>
-					</section>
-
 				</section>
+        <section>
+        	<section>
+        	  <h2>Wie funktioniert OAuth?</h2>
+            <img class="align-center" src="./images/howdoesoauthworks.png">
+          </section>  
+				</section>
+        
+        <section>
+					<section>
+						<h2>Application Programming Interface (API)</h2>
+            <p>Anwendungsfälle in Social Media</p>
+            <ul> 
+            <li>Access-API's = Zugriff auf Daten und Informationen vom Netzwerk</li>
+            <li>Plugin-API's = Erstellen von Inhalten für das Netzwerk</li>
+            <ul>       
+            <img class="align-left" src="./images/apis-for-marketers.png">    
+            <img class="align-right" src="./images/os_logo.png">          
+					</section>
+				</section>
+        <section>
+        	<section>
+        	  <h2>Software Development Kits und Social Plugins</h2>
+  					
+            <p>Einbinden des Software Development Kits:</p>
+            <pre><code data-trim>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+					</code></pre>
+          <p>Einbinden des Plugins:</p>
+					<pre><code data-trim>
+<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/"></div>
+					</code></pre>
 
+
+          </section>  
+				</section>
+        
 				<section>
 					<h2>Fragments</h2>
 					<p class="fragment grow">grow</p>
@@ -108,35 +148,7 @@
 					<img class="align-center" src="http://octodex.github.com/images/daftpunktocat-thomas.gif">
 				</section>
 
-				<section>
-					<h2>Code syntax highlighting</h2>
 
-					<pre><code data-trim>
-&lt;?php
-echo 'Hello World!';
-?&gt;
-					</code></pre>
-
-					<pre><code data-trim>
-$ ruby -e "puts 'Hello world'"
-Hello world
-					</code></pre>
-
-					<pre><code data-trim>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;meta charset=&quot;utf-8&quot;&gt;
-		&lt;title&gt;&lt;/title&gt;
-		&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
-
-		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-	&lt;body&gt;
-&lt;/html&gt;
-					</code></pre>
-				</section>
 
 				<section>
 					<section>
@@ -284,7 +296,7 @@ Hello world
 					<script type="text/template">
 					## Markdown Support
 
-					FÃ¼r die, die Markdown lieben.
+					Für die, die Markdown lieben.
 					Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
 					die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
 
@@ -295,7 +307,7 @@ Hello world
 					```
 					## Markdown support
 
-					FÃ¼r die, die Markdown lieben.
+					Für die, die Markdown lieben.
 					Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
 					die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
 
