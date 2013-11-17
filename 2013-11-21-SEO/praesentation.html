@@ -207,14 +207,53 @@
     		<section>
 			<h1>Google Bombe</h1> 
 			<style>
-
+				
+				#searchbox{;font-family:arial;font-size:20px;width:100px;position:absolute;top: 171px; left: 131px; color:#222222;}	
 				#google_suche_kohl{height:190px;background-image: url(images/kohl_top.png);}
 			
 				#searchcontent {
 					background-image: url(images/kohlkopf_content.png);
- 					height:600px; }
- 					
- 				#searchbox{;font-family:arial;font-size:20px;width:100px;position:absolute;top: 171px; left: 131px; color:#222222;}	
+ 					height:450px; 
+ 					webkit-animation: fadein 5s; /* Safari and Chrome */
+ 	   				-moz-animation: fadein 5s; /* Firefox */
+ 	    				-ms-animation: fadein 5s; /* Internet Explorer */
+ 					-o-animation: fadein 5s; /* Opera */
+ 	        			animation: fadein %s;
+					}
+					
+	 			@keyframes fadein {
+
+    from { opacity: 0; }
+    to   { opacity: 1; }
+    
+    
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}​
+
+/* Opera */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}​
+		
+ 				
  			
 
 			</style>
