@@ -213,18 +213,37 @@
 				#searchcontent {
 					background-image: url(images/kohlkopf_content.png);
  					height:600px; }
+ 					
+ 				#searchbox{;font-family:arial;font-size:20px;background-color: white; width:100px;position:absolute;top: 150px; left: 142px; color:#222222;}	
  			
 
 			</style>
+			
+			<script type="text/javascript">
+		hallo = new Array("K","o","h","l","k","o","p","f");
+		alange = hallo.length;
+ 		aktiv = window.setInterval('schleife()',270);
+		var i = 0;
+		function schleife()
+		{
+ 		mySpan = document.createElement("span");
+ 		myText = document.createTextNode(hallo[i]);
+		 mySpan.appendChild(myText);
+ 		mybereich = document.getElementById("searchbox");
+ 		mybereich.appendChild(mySpan);
+
+ 		i = i + 1;
+ 		if(i==alange)window.clearInterval(aktiv);
+		}
+	</script>
 			
 			
 
 
 			<div id="google_suche_kohl"></div>
-
-			
-			
 			<div id="searchcontent"></div>
+			<div id="searchcontent"></div>
+
 
 
 
