@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Title of presentation -->
+		<title>Reveal.js Demo</title>
+		<!-- Short description of presentation -->
+		<meta name="description" content="Demo of Reveal.js functions and features">
+		<!-- Author of presentation -->
+		<meta name="author" content="Dominik Schilling">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- Can be monokai, solarized_dark, solarized_light, sunburst, tomorrow-night-bright, zenburn -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Web-basierte Anwendungen 1</h1>
+					<h2>Testing</h2>
+
+					<p>21. Oktober 2013</p>
+
+					<p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
+					Campus Gummersbach</p>
+
+					<p style="margin-top:10%">Dieter Derksen<br>
+					Dennis Wilk<br>
+					Jerome Tünte</p>
+				</section>
+
+				<section>
+					<h2>Inhalte</h2>
+					<p>
+					<ol>
+					<li>Warum testen?</li>
+					<li>Was testen?</li>
+					<li>Wie testen?</li>
+					<li>Testen mit Javascript - Unit Testing Frameworks</li>
+					<li>Testen mit HTML - Validator</li>
+					</ol>
+                </p>
+					
+				</section>
+
+				<section>
+					<h3>Warum testen?</h3> 
+					<p>
+					<ul>
+            	        <li>möglichst fehlerfreie und stabillaufende Software</li>
+                        <li>Menschen machen immer Fehler</li>
+                        <li>Fehlerwahrscheinlich steigt mit Größe und Komplexität der Anwendung</li>
+                        <b>Beispiel:</b> NASA-Rakete Mariner 1
+                    </ul>
+					</p>
+				</section>
+
+				<section>
+					<h3>Was testen?</h3>
+					<p>
+					<ul>
+						<li>Quellcode</li>
+						<li>Funktionalität</li>
+						<li>Laufzeitverhalten</li>
+						<li>Sicherheit</li>
+						<li>Bedienbarkeit</li>
+					</ul>
+            </p>
+				</section>
+
+
+				 <section>
+	<section>
+		<h3>Wie testen?</h3>
+		<h4>Wichtige Erkenntnisse</h4>
+		<ul>
+			<li>Testing ist <b>NICHT</b> debugging</li>
+			<li>Tests finden niemals alle Fehler</li>
+			<li>Jede Testart findet eine andere Art von Fehler</li>
+			<li>Ziel: Fehler finden, nicht die Ursache</li>
+		</ul>
+	</section>
+	
+	<section>
+	<h3>Wie testen?</h3>
+	<h4>Testing-Pyramide</h4>
+	<table>
+	<tr>
+		<td>
+			<img src="Images/1.jpg" width="600px" height="360px"/>
+		</td>
+	</tr>
+	</table>
+	</section>
+	<section>
+        <h3>Wie testen?</h3>
+        <h4>White-Box-Test</h4>
+		<p>
+        	<ul><!-- 
+				PAP-Bild
+				-->
+            	<li>Kenntnisse der inneren Programmstruktur bzw. des Quellcodes</li>
+				<li>Testfälle werden anhand der inneren Programmstruktur festgelegt </li>
+				<li>Verschiedene Testmethoden (z.B. Überdeckungstests) </li>
+                <li>Ziel: Quellcode muss gewisse Qualitätskritieren erfüllen (z.B. Zeilenüberdeckung)</li>
+            </ul>
+        </p>
+    </section>
+	<section>
+        <h3>Wie testen?</h3>
+		<h4>Unittest</h4>
+		<p>
+			<img src="Images/2.jpg"/>
+			
+					<br><b>Einzelne</b> Module werden getestet
+				<ol>
+					<li>Ausgangszustand initialisieren</li>
+					<li>die zu testenden Operationen ausführen</li>
+					<li>Ist-Ergebnis mit Spezifikationen vergleichen</li>
+				</ol>
+		</p>
+	</section>
+			<section>
+			<h3>Wie testen?</h3>
+			<h4>Black-Box-Test</h4>
+			<p>
+				<ul>
+					<li>Nur das nach außen Sichtbare Verhalten wird getestet</li>
+					<li>Tester haben keine Kenntnisse der inneren Programmstruktur</li>					
+					<li>Ziel: Übereinstimmung des Softwareverhaltens mit den Spezifikationen</li>
+					<li>Aufwendige Erstellung der Tests</li>
+				</ul>
+			</p>
+		</section>
+		<section>
+			<h3>Wie testen?</h3>
+			<h4>Beispiel Ablauf Zusammenfassung</h4>
+			<table>
+		<tr>
+			<td>
+				<img src="Images/3.jpg"/>
+			</td>
+			<td>
+				<ul>
+					<li>Usability</li><br>
+					<li>Testen durch den Kunden/Auftraggeber</li><br>
+					<li>Komponenten zusammen testen</li><br>
+					<li>Komponenten unabhängig voneinander Testen</li>
+				</ul>
+				</td>
+		</tr>
+		</table>
+		</section>
+	</section>
+
+				<section>
+
+        <section>
+        <h3>Vielen Dank für ihre Aufmerksamkeit!</h3>
+            <h4>Noch Fragen? ;)</h4>
+        </section>
+
+
+	
+</section>
+
+				<!-- End of slides container. -->
+
+			</div>
+
+		</div>
+
+		<script src="../revealjs-framework/lib/js/head.min.js"></script>
+		<script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				width: 1000,
+
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'fast', // default/fast/slow
+				backgroundTransition: 'none', // default/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
