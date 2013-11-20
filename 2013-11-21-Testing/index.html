@@ -1,181 +1,181 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+        <head>
+                <meta charset="utf-8">
 
-		<!-- Title of presentation -->
-		<title>Testing</title>
-		<!-- Short description of presentation -->
-		<meta name="description" content="Demo of Reveal.js functions and features">
-		<!-- Author of presentation -->
-		<meta name="author" content="Dominik Schilling">
+                <!-- Title of presentation -->
+                <title>Testing</title>
+                <!-- Short description of presentation -->
+                <meta name="description" content="Demo of Reveal.js functions and features">
+                <!-- Author of presentation -->
+                <meta name="author" content="Dominik Schilling">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
-		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+                <link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+                <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<!-- Can be monokai, solarized_dark, solarized_light, sunburst, tomorrow-night-bright, zenburn -->
-		<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+                <!-- For syntax highlighting -->
+                <!-- Can be monokai, solarized_dark, solarized_light, sunburst, tomorrow-night-bright, zenburn -->
+                <link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+                <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+                <script>
+                        document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+                </script>
 
-		<!--[if lt IE 9]>
-		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+                <!--[if lt IE 9]>
+                <script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+                <![endif]-->
+        </head>
 
-	<body>
+        <body>
 
-		<div class="reveal">
+                <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+                        <!-- Any section element inside of this container is displayed as a slide -->
+                        <div class="slides">
 
-				<section>
-					<h1>Web-basierte Anwendungen 1</h1>
-					<h2>Testing</h2>
+                                <section>
+                                        <h1>Web-basierte Anwendungen 1</h1>
+                                        <h2>Testing</h2>
 
-					<p>21. Oktober 2013</p>
+                                        <p>21. November 2013</p>
 
-					<p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
-					Campus Gummersbach</p>
+                                        <p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
+                                        Campus Gummersbach</p>
 
-					<p style="margin-top:10%">Dieter Derksen<br>
-					Jerome Tünte<br>
-					Dennis Wilk</p>
-				</section>
+                                        <p style="margin-top:10%">Dieter Derksen<br>
+                                        Jerome Tünte<br>
+                                        Dennis Wilk</p>
+                                </section>
 
-				<section>
-					<h2>Inhalte</h2>
-					<p>
-					<ul>
-					<li>Warum testen?</li>
-					<li>Was testen?</li>
-					<li>Wie testen?</li>
-					<li>Testen mit Javascript - Unit Testing Frameworks</li>
-					<li>Performance</li>
-					<li>Usability</li>
-					</ul>
+                                <section>
+                                        <h2>Inhalte</h2>
+                                        <p>
+                                        <ul>
+                                        <li>Warum testen?</li>
+                                        <li>Was testen?</li>
+                                        <li>Wie testen?</li>
+                                        <li>Testen mit Javascript - Unit Testing Frameworks</li>
+                                        <li>Performance</li>
+                                        <li>Usability</li>
+                                        </ul>
                 </p>
-					
-				</section>
+                                        
+                                </section>
 
-				<section>
-					<h3>Warum testen?</h3> 
-					<p>
-					<ul>
-            	        <li>möglichst fehlerfreie und stabillaufende Software</li>
+                                <section>
+                                        <h3>Warum testen?</h3> 
+                                        <p>
+                                        <ul>
+                            <li>möglichst fehlerfreie und stabillaufende Software</li>
                         <li>Menschen machen immer Fehler</li>
                         <li>Fehlerwahrscheinlich steigt mit Größe und Komplexität der Anwendung</li>
                         <b>Beispiel:</b> NASA-Rakete Mariner 1
                     </ul>
-					</p>
-				</section>
+                                        </p>
+                                </section>
 
-				<section>
-					<h3>Was testen?</h3>
-					<p>
-					<ul>
-						<li>Quellcode</li>
-						<li>Funktionalität</li>
-						<li>Laufzeitverhalten</li>
-						<li>Sicherheit</li>
-						<li>Bedienbarkeit</li>
-					</ul>
+                                <section>
+                                        <h3>Was testen?</h3>
+                                        <p>
+                                        <ul>
+                                                <li>Quellcode</li>
+                                                <li>Funktionalität</li>
+                                                <li>Laufzeitverhalten</li>
+                                                <li>Sicherheit</li>
+                                                <li>Bedienbarkeit</li>
+                                        </ul>
             </p>
-				</section>
+                                </section>
 
 
-				 <section>
-	<section>
-		<h3>Wie testen?</h3>
-		<h4>Wichtige Erkenntnisse</h4>
-		<ul>
-			<li>Testing ist <b>NICHT</b> debugging</li>
-			<li>Tests finden niemals alle Fehler</li>
-			<li>Testmethoden kombinieren</li>
-		</ul>
-	</section>
-	
-	<section>
-	<h3>Wie testen?</h3>
-	<h4>Testing-Pyramide</h4>
-	<table>
-	<tr>
-		<td><div align="center"><img src="https://github.com/fh-koeln/wba1-2013/blob/2013-11-21-Testing/2013-11-21-Testing/images/pyra-black.png" width="600px" height="360px"/></div align=center>
-			
-		</td>
-	</tr>
-	</table>
-	</section>
-	<section>
+                                 <section>
+        <section>
+                <h3>Wie testen?</h3>
+                <h4>Wichtige Erkenntnisse</h4>
+                <ul>
+                        <li>Testing ist <b>NICHT</b> debugging</li>
+                        <li>Tests finden niemals alle Fehler</li>
+                        <li>Testmethoden kombinieren</li>
+                </ul>
+        </section>
+        
+        <section>
+        <h3>Wie testen?</h3>
+        <h4>Testing-Pyramide</h4>
+        <table>
+        <tr>
+                <td><div align="center"><img src="/images/pyra-black.png" width="600px" height="360px"/></div align=center>
+                        
+                </td>
+        </tr>
+        </table>
+        </section>
+        <section>
         <h3>Wie testen?</h3>
         <h4>White-Box-Test</h4>
-		<p>
-        	<ul><!-- 
-				PAP-Bild
-				-->
-            	<li>Kenntnisse der inneren Programmstruktur bzw. des Quellcodes</li>
-				<li>Testfälle werden anhand der inneren Programmstruktur festgelegt</li>
-				<li>Verschiedene Testmethoden (z.B. Überdeckungstests) </li>
+                <p>
+                <ul><!-- 
+                                PAP-Bild
+                                -->
+                    <li>Kenntnisse der inneren Programmstruktur bzw. des Quellcodes</li>
+                                <li>Testfälle werden anhand der inneren Programmstruktur festgelegt</li>
+                                <li>Verschiedene Testmethoden (z.B. Überdeckungstests) </li>
                 <li>Ziel: Quellcode muss gewisse Qualitätskritieren erfüllen (z.B. Zeilenüberdeckung)</li>
             </ul>
         </p>
     </section>
-	<section>
+        <section>
         <h3>Wie testen?</h3>
-		<h4>Unittest</h4>
-		<p>			
-				Es werden <b>Einzelne</b> Module getestet
-				<ol>
-					<li>Ausgangszustand initialisieren</li>
-					<li>die zu testenden Operationen ausführen</li>
-					<li>Ist-Ergebnis mit Spezifikationen vergleichen</li>
-				</ol>
-		</p>
-	</section>
-			<section>
-			<h3>Wie testen?</h3>
-			<h4>Black-Box-Test</h4>
-			<p>
-				<ul>
-					<li>Tester haben keine Kenntnisse der inneren Programmstruktur</li>	
-					<li>Mit Fallbeispielen das Verhalten testen</li>		
-					<li>Aufwendige Erstellung der Tests</li>		
-					<li>Ziel: Übereinstimmung des Softwareverhaltens mit den Spezifikationen</li>
-				</ul>
-			</p>
-		</section>
-		<section>
-			<h3>Wie testen?</h3>
-			<h4>Testing-Pyramide</h4>
-			<table>
-		<tr>
-			<td>
-				<img src="https://github.com/fh-koeln/wba1-2013/blob/2013-11-21-Testing/2013-11-21-Testing/images/pyra-black.png"/>
-			</td>
-			<td>
-				<ul>
-					<br>
-					<li>Testen durch den Kunden/Auftraggeber</li><br>
-					<li>Komponenten zusammen testen</li><br>
-					<li>Komponenten unabhängig voneinander Testen</li>
-				</ul>
-				</td>
-		</tr>
-		</table>
-		</section>
-	</section>
-	 <section>
+                <h4>Unittest</h4>
+                <p>                        
+                                Es werden <b>Einzelne</b> Module getestet
+                                <ol>
+                                        <li>Ausgangszustand initialisieren</li>
+                                        <li>die zu testenden Operationen ausführen</li>
+                                        <li>Ist-Ergebnis mit Spezifikationen vergleichen</li>
+                                </ol>
+                </p>
+        </section>
+                        <section>
+                        <h3>Wie testen?</h3>
+                        <h4>Black-Box-Test</h4>
+                        <p>
+                                <ul>
+                                        <li>Tester haben keine Kenntnisse der inneren Programmstruktur</li>        
+                                        <li>Mit Fallbeispielen das Verhalten testen</li>                
+                                        <li>Aufwendige Erstellung der Tests</li>                
+                                        <li>Ziel: Übereinstimmung des Softwareverhaltens mit den Spezifikationen</li>
+                                </ul>
+                        </p>
+                </section>
+                <section>
+                        <h3>Wie testen?</h3>
+                        <h4>Testing-Pyramide</h4>
+                        <table>
+                <tr>
+                        <td>
+                                <img src="/images/pyra-black.png"/>
+                        </td>
+                        <td>
+                                <ul>
+                                        <br>
+                                        <li>Testen durch den Kunden/Auftraggeber</li><br>
+                                        <li>Komponenten zusammen testen</li><br>
+                                        <li>Komponenten unabhängig voneinander Testen</li>
+                                </ul>
+                                </td>
+                </tr>
+                </table>
+                </section>
+        </section>
+         <section>
             <section>
             <h3>Testen mit Jasmine</h3>
             <h4>Was ist Jasmine?</h4>
@@ -209,12 +209,12 @@
                 <script type="text/template">
             ###Testen mit Jasmine
             ####Wie sieht ein Test aus?
-			
-			    //JavaScript
-				function helloWorld() {
-				return "Hello world!";
-				}
-				
+                        
+                            //JavaScript
+                                function helloWorld() {
+                                return "Hello world!";
+                                }
+                                
                 //Suites beschreiben den Test allgemein
                 describe("Hello world", function() {
                                 
@@ -232,12 +232,12 @@
                 <script type="text/template">
             ###Testen mit Jasmine
             ####Wie sieht ein Test aus?
-			
-			    //JavaScript
-				function addition( a, b){
-				return a + b;
-				}
-				
+                        
+                            //JavaScript
+                                function addition( a, b){
+                                return a + b;
+                                }
+                                
                 //Suite
                 describe("Der Taschenrechner", function() {
                   var a;
@@ -283,7 +283,7 @@
                     <li>Spec-Dateien (Tests) in das spec-Verzeichnis</li>
                     <li>Source- und Spec Dateien in der SpecRunner.html einbinden</li>
                     <li>SpecRunner.html mit Browser Öffnen</li>
-					<li>Oder auf <a href="http://tryjasmine.com/">tryjasmine</a> gehen und ohne Download testen!</li>
+                                        <li>Oder auf <a href="http://tryjasmine.com/">tryjasmine</a> gehen und ohne Download testen!</li>
                 </ul>
             </p>
             </section>
@@ -295,14 +295,14 @@
                 </ul>
                     <li>JavaScript Code = Source Code</li>
                     <li>Geschriebener Jasmine Test = Spec Code</li>
-					<li>describe = Suite beschreibt den Test oder benennt ihn ( sinvolle Namen, kein XYZ)</li>
-					<li>it = Spec beschreibt was der Test macht und dort werden Var die Werte zugewiesen</li>
-					<li>expect = Erwartung wie das Ergebnis aus dem JavaScript Code sein soll</li>
-					<li>Matcher legt die Bedingung fest, ob und was richtig oder falsch ist</li>
+                                        <li>describe = Suite beschreibt den Test oder benennt ihn ( sinvolle Namen, kein XYZ)</li>
+                                        <li>it = Spec beschreibt was der Test macht und dort werden Var die Werte zugewiesen</li>
+                                        <li>expect = Erwartung wie das Ergebnis aus dem JavaScript Code sein soll</li>
+                                        <li>Matcher legt die Bedingung fest, ob und was richtig oder falsch ist</li>
                 </ul>
             </p>
             </section>
-			
+                        
                          
             <section>
             <h3>Testen mit Jasmine</h3>
@@ -314,31 +314,31 @@
                     <li><a href="http://pivotal.github.com/jasmine/">Step by Step Erklarungen zu Jasmine</a></li>
                     <li><a href="https://github.com/pivotal/jasmine/wiki/Matchers">Matchers und Matcher selbst schreiben</a></li>
                     <li><a href="http://tryjasmine.com/">Jasmine Online</a></li>
-					<li><a href="http://evanhahn.com/">Sehr gutes Tutorial zum lernen!</a></li>
+                                        <li><a href="http://evanhahn.com/">Sehr gutes Tutorial zum lernen!</a></li>
 
                 </ul>
             </p>
             </section>
         </section>
-		
-		
-		<section>
-				<section>
-				
-						<h3>Performance-Test</h3>
-					<h4 class="fragment" data-fragment-index="0">Motivation</h4>           
-					<p class="fragment" data-fragment-index="1">Optimierung von ...</p>					
+                
+                
+                <section>
+                                <section>
+                                
+                                                <h3>Performance-Test</h3>
+                                        <h4 class="fragment" data-fragment-index="0">Motivation</h4>           
+                                        <p class="fragment" data-fragment-index="1">Optimierung von ...</p>                                        
                         <ul>
                             <li class="fragment" data-fragment-index="2">Quellcode</li>
                             <li class="fragment" data-fragment-index="3">Ladezeit</li>
                             <li class="fragment" data-fragment-index="4">Performance</li>
                             <li class="fragment" data-fragment-index="5">Suchmaschinen</li>
                         </ul>
-					
-				</section>
+                                        
+                                </section>
                 
-					<section>
-						<h3>Performance-Test</h3>
+                                        <section>
+                                                <h3>Performance-Test</h3>
                     <h4 class="fragment" data-fragment-index="0">Voraussetzung</h4>                        
                         <ul>
                             <li class="fragment" data-fragment-index="1">Es gibt Webseiten mit integrierten Tests</li>
@@ -362,15 +362,15 @@
                         </div>
                         <br>                        
                     <p class="fragment" data-fragment-index="3"><code>Sehr spezielle Unterschiede - Probieren wir es aus!!</code></p>
-					</section>
+                                        </section>
 
-					<section data-background-image="https://github.com/fh-koeln/wba1-2013/blob/2013-11-21-Testing/2013-11-21-Testing/images/vergleich.jpg" data-background-position="center center">
-					</section>
-					
-					<section data-background-image="https://github.com/fh-koeln/wba1-2013/blob/2013-11-21-Testing/2013-11-21-Testing/images/gtmetrix.jpg" data-background-position="center center">
-					</section>
+                                        <section data-background-image="/images/vergleich.jpg" data-background-position="center center">
+                                        </section>
+                                        
+                                        <section data-background-image="/images/gtmetrix.jpg" data-background-position="center center">
+                                        </section>
                     <section>
-						<h3>Performance-Test</h3>
+                                                <h3>Performance-Test</h3>
                         <h4 class="fragment" data-fragment-index="0">Nachteile - Vorteile</h4>                        
                             <ul>
                                 <li class="fragment" data-fragment-index="1">Google bietet umfangreiche Hilfen an</li>
@@ -387,22 +387,22 @@
                         <p class="fragment" data-fragment-index="7"><code>In Kombination erhält man die besten Ergebnisse</code></p>
                     </section>
                 
-				</section>
-				
-		<section>
-					<section>
-						<h3>Validation</h3>
-						<h4 class="fragment" data-fragment-index="0"><em>Nur mit einem perfekten Fundament entsteht ein gutes Haus!</em></h4>                        
+                                </section>
+                                
+                <section>
+                                        <section>
+                                                <h3>Validation</h3>
+                                                <h4 class="fragment" data-fragment-index="0"><em>Nur mit einem perfekten Fundament entsteht ein gutes Haus!</em></h4>                        
                         <ul>
                             <li class="fragment" data-fragment-index="1">wird heute oft vernachlässigt</li>
                             <li class="fragment" data-fragment-index="2">idealerweise noch vor der Programmierung</li>
                             <li class="fragment" data-fragment-index="3">Nur das Erfüllen aller Standards verspricht eine richtige Darstellung in allen Browsern</li>
-                        </ul>					
-					</section>
+                        </ul>                                        
+                                        </section>
                 
-					<section>
-						<h3>Validation</h3>
-                    	<h4 class="fragment" data-fragment-index="0"><strong>Das W3C</strong> - World Wide Web Consortium</h4>                        
+                                        <section>
+                                                <h3>Validation</h3>
+                            <h4 class="fragment" data-fragment-index="0"><strong>Das W3C</strong> - World Wide Web Consortium</h4>                        
                         <ul>
                             <li class="fragment" data-fragment-index="1">1994 gegründet von Tim Berners-Lee (Erfinder von HTML)</li>
                             <li class="fragment" data-fragment-index="2">Stellt einen HTML-Validator zur verfügung</li>
@@ -411,88 +411,88 @@
                         </ul>
                         <br>
                         <br>
-                    	<p class="fragment" data-fragment-index="5"><strong>Vorsicht:</strong> <code>der W3C-Validator ist sehr oberflächlig!</code></p>
-					</section>
+                            <p class="fragment" data-fragment-index="5"><strong>Vorsicht:</strong> <code>der W3C-Validator ist sehr oberflächlig!</code></p>
+                                        </section>
 
-					<section data-background-image="https://github.com/fh-koeln/wba1-2013/blob/2013-11-21-Testing/2013-11-21-Testing/images/val1.jpg" data-background-position="center center">
-					</section>
-					
-					<section data-background-image="https://github.com/fh-koeln/wba1-2013/blob/2013-11-21-Testing/2013-11-21-Testing/images/val2.jpg" data-background-position="center center">
-					</section>                                   
-				</section>
+                                        <section data-background-image="/images/val1.jpg" data-background-position="center center">
+                                        </section>
+                                        
+                                        <section data-background-image="/images/val2.jpg" data-background-position="center center">
+                                        </section>                                   
+                                </section>
 
-		<section>
-				<section>
-						<h3>Usability</h3>
-					<h4 class="fragment" data-fragment-index="0">Ziel des <strong>Usabilitytests</strong>?</h4>
-					<p class="fragment" data-fragment-index="1">Die Benutzerfreundlichkeit auf die Probe stellen</p>
+                <section>
+                                <section>
+                                                <h3>Usability</h3>
+                                        <h4 class="fragment" data-fragment-index="0">Ziel des <strong>Usabilitytests</strong>?</h4>
+                                        <p class="fragment" data-fragment-index="1">Die Benutzerfreundlichkeit auf die Probe stellen</p>
                     <br><br>
                     <h4 class="fragment" data-fragment-index="2">Und wie geht das?</h4>
-					<p class="fragment" data-fragment-index="3">Frag deine Oma!</p>
+                                        <p class="fragment" data-fragment-index="3">Frag deine Oma!</p>
                     <p class="fragment" data-fragment-index="4"><code>...wirklich!</code></p>
-					
+                                        
                             <li class="fragment" data-fragment-index="5">Suche möglichst technikunerfahrene Tester</li>
                             <li class="fragment" data-fragment-index="6">Wähle die Tester aus möglichst verschiedenen Bereichen für Zielgruppenübergreifende Ergebnisse</li>
-						</ol>
+                                                </ol>
                         <br>
                     <p class="fragment" data-fragment-index="7"><strong>Vorsicht:</strong> <code>Tester mit klar definierten Anweisungen liefern bessere Ergebnisse</code></p>
-					</section>
+                                        </section>
 
-				<section>                    
-						<h3>Usability</h3>
+                                <section>                    
+                                                <h3>Usability</h3>
                         <h4 class="fragment" data-fragment-index="0">Asyncron Testen</h4>                        
                         <ul>
                             <li class="fragment" data-fragment-index="1">Task Analysis + Rapid Prototyping</li>
                             <li class="fragment" data-fragment-index="2">Nutzertagebücher</li>
                             <li class="fragment" data-fragment-index="3">Nutzerverhalten digital aufzeichnen</li>
-						</ul>
-					<h4 class="fragment" data-fragment-index="4">Syncron Testen</h4>                        
+                                                </ul>
+                                        <h4 class="fragment" data-fragment-index="4">Syncron Testen</h4>                        
                         <ul>
                             <li class="fragment" data-fragment-index="5">User Beobachten</li>
                             <li class="fragment" data-fragment-index="6">Lautes Denken</li>
-						</ul>
+                                                </ul>
                         <br>                        
                     <p class="fragment" data-fragment-index="7"><code>Die meisten Asyncronen Techniken können Syncron angewendet werden!</code></p>
-				</section>
+                                </section>
                 
                 <section>   
-						<h3>Usability</h3>
-					<h4 class="fragment" data-fragment-index="0">Laufende Optimierungen</h4> 
-                    	<p class="fragment" data-fragment-index="1">Onsite-Befragung</p>             
+                                                <h3>Usability</h3>
+                                        <h4 class="fragment" data-fragment-index="0">Laufende Optimierungen</h4> 
+                            <p class="fragment" data-fragment-index="1">Onsite-Befragung</p>             
                         <ul>
                             <li class="fragment" data-fragment-index="2">User-Umfragen</li>
                             <li class="fragment" data-fragment-index="3">Kritikfelder</li>
-						</ul>
+                                                </ul>
                         <p class="fragment" data-fragment-index="4">Web-Controlling/Logfile-Analyse</p>                  
                         <ul>
                             <li class="fragment" data-fragment-index="5">Welche Seiten haben die meisten Zugriffe</li>
                             <li class="fragment" data-fragment-index="6">Woher kommen die meisten User</li>
-						</ul>
+                                                </ul>
                         <br>                        
                     <p class="fragment" data-fragment-index="7"><code>Diese Technik kann vor allem helfen die Beliebtheit der Seite zu steigern</code></p>
-				</section>
+                                </section>
 <section>
-						<h3>Usability</h3>
-					<h4 class="fragment" data-fragment-index="0">Professionelle Usability Tester</h4>
+                                                <h3>Usability</h3>
+                                        <h4 class="fragment" data-fragment-index="0">Professionelle Usability Tester</h4>
                     <p class="fragment" data-fragment-index="1">Unbezahlte Tester sind Subjektiv</p>                        
                         <ul>
                             <li class="fragment" data-fragment-index="2">User beobachten</li>
                             <li class="fragment" data-fragment-index="3">Lautes denken</li>
-						</ul>
+                                                </ul>
                         <br>
                         
                     <p class="fragment" data-fragment-index="4">Professionelle Agenturen haben bessere Möglichkeiten</p>                        
                         <ul>
                             <li class="fragment" data-fragment-index="5">Zielgruppen Tests</li>
                             <li class="fragment" data-fragment-index="6">Labortests wie beispielsweise das Eye-Traking</li>
-						</ul>               
+                                                </ul>               
                     <p class="fragment" data-fragment-index="7"><em>Bei großen Projekten lohnt sich die in Inanspruchnahme externer Dienste.<br>
                     Diese Dienste sind nicht Teuer im Vergleich zu den Ergebnissen die man erhält.
                     Geschultes Personal führt jenachdem selbstständig die Zielgruppenanalyse durch und Testet mit gut ausgewählten Testern für ein optimales Ergebnis.
                     </em></p>
-				</section>
+                                </section>
 
-				</section>
+                                </section>
 
 
         <section>
@@ -501,44 +501,44 @@
         </section>
 
 
-	
+        
 
-				<!-- End of slides container. -->
+                                <!-- End of slides container. -->
 
-			</div>
+                        </div>
 
-		</div>
+                </div>
 
-		<script src="../revealjs-framework/lib/js/head.min.js"></script>
-		<script src="../revealjs-framework/js/reveal.min.js"></script>
+                <script src="../revealjs-framework/lib/js/head.min.js"></script>
+                <script src="../revealjs-framework/js/reveal.min.js"></script>
 
-		<script>
+                <script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: false,
-				width: 1000,
+                        // Full list of configuration options available here:
+                        // https://github.com/hakimel/reveal.js#configuration
+                        Reveal.initialize({
+                                controls: true,
+                                progress: true,
+                                history: true,
+                                center: false,
+                                width: 1000,
 
-				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
-				transitionSpeed: 'fast', // default/fast/slow
-				backgroundTransition: 'none', // default/linear/none
+                                transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+                                transitionSpeed: 'fast', // default/fast/slow
+                                backgroundTransition: 'none', // default/linear/none
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+                                // Optional libraries used to extend on reveal.js
+                                dependencies: [
+                                        { src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                                        { src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                        { src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                        { src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                                        { src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                                        { src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                                ]
+                        });
 
-		</script>
+                </script>
 
-	</body>
+        </body>
 </html>
