@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Title of presentation -->
+		<title>Reveal.js Demo</title>
+		<!-- Short description of presentation -->
+		<meta name="description" content="Demo of Reveal.js functions and features">
+		<!-- Author of presentation -->
+		<meta name="author" content="Dominik Schilling">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- Can be monokai, solarized_dark, solarized_light, sunburst, tomorrow-night-bright, zenburn -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Web-basierte Anwendungen 1</h1>
+					<h2>Testing</h2>
+
+					<p>21. Oktober 2013</p>
+
+					<p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
+					Campus Gummersbach</p>
+
+					<p style="margin-top:10%">Dieter Derksen<br>
+					Dennis Wilk<br>
+					Jerome Tünte</p>
+				</section>
+
+				<section>
+					<h2>Inhalte</h2>
+					<p>
+					<ol>
+					<li>Warum testen?</li>
+					<li>Was testen?</li>
+					<li>Wie testen?</li>
+					<li>Testen mit Javascript - Unit Testing Frameworks</li>
+					<li>Testen mit HTML - Validator</li>
+					</ol>
+                </p>
+					
+				</section>
+
+				<section>
+					<h3>Warum testen?</h3> 
+					<p>
+					<ul>
+            	        <li>möglichst fehlerfreie und stabillaufende Software</li>
+                        <li>Menschen machen immer Fehler</li>
+                        <li>Fehlerwahrscheinlich steigt mit Größe und Komplexität der Anwendung</li>
+                        <b>Beispiel:</b> NASA-Rakete Mariner 1
+                    </ul>
+					</p>
+				</section>
+
+				<section>
+					<h3>Was testen?</h3>
+					<p>
+					<ul>
+						<li>Quellcode</li>
+						<li>Funktionalität</li>
+						<li>Laufzeitverhalten</li>
+						<li>Sicherheit</li>
+						<li>Bedienbarkeit</li>
+					</ul>
+            </p>
+				</section>
+
+
+				 <section>
+	<section>
+		<h3>Wie testen?</h3>
+		<h4>Wichtige Erkenntnisse</h4>
+		<ul>
+			<li>Testing ist <b>NICHT</b> debugging</li>
+			<li>Tests finden niemals alle Fehler</li>
+			<li>Testmethoden kombinieren</li>
+		</ul>
+	</section>
+	
+	<section>
+	<h3>Wie testen?</h3>
+	<h4>Testing-Pyramide</h4>
+	<table>
+	<tr>
+		<td><div align="center"><img src="Images/pyra-black.png" width="600px" height="360px"/></div align=center>
+			
+		</td>
+	</tr>
+	</table>
+	</section>
+	<section>
+        <h3>Wie testen?</h3>
+        <h4>White-Box-Test</h4>
+		<p>
+        	<ul><!-- 
+				PAP-Bild
+				-->
+            	<li>Kenntnisse der inneren Programmstruktur bzw. des Quellcodes</li>
+				<li>Testfälle werden anhand der inneren Programmstruktur festgelegt</li>
+				<li>Verschiedene Testmethoden (z.B. Überdeckungstests) </li>
+                <li>Ziel: Quellcode muss gewisse Qualitätskritieren erfüllen (z.B. Zeilenüberdeckung)</li>
+            </ul>
+        </p>
+    </section>
+	<section>
+        <h3>Wie testen?</h3>
+		<h4>Unittest</h4>
+		<p>
+			<img src="Images/2.jpg"/>
+			
+					<br><b>Einzelne</b> Module werden getestet
+				<ol>
+					<li>Ausgangszustand initialisieren</li>
+					<li>die zu testenden Operationen ausführen</li>
+					<li>Ist-Ergebnis mit Spezifikationen vergleichen</li>
+				</ol>
+		</p>
+	</section>
+			<section>
+			<h3>Wie testen?</h3>
+			<h4>Black-Box-Test</h4>
+			<p>
+				<ul>
+					<li>Tester haben keine Kenntnisse der inneren Programmstruktur</li>	
+					<li>Mit Fallbeispielen das Verhalten testen</li>		
+					<li>Aufwendige Erstellung der Tests</li>		
+					<li>Ziel: Übereinstimmung des Softwareverhaltens mit den Spezifikationen</li>
+				</ul>
+			</p>
+		</section>
+		<section>
+			<h3>Wie testen?</h3>
+			<h4>Beispiel Ablauf Zusammenfassung</h4>
+			<table>
+		<tr>
+			<td>
+				<img src="Images/pyra-black.png"/>
+			</td>
+			<td>
+				<ul>^^^^
+					<br>
+					<li>Testen durch den Kunden/Auftraggeber</li><br>
+					<li>Komponenten zusammen testen</li><br>
+					<li>Komponenten unabhängig voneinander Testen</li>
+				</ul>
+				</td>
+		</tr>
+		</table>
+		</section>
+	</section>
+	<section>
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Was ist Jasmine?</h4>
+    		<p>
+            	<ul>
+                    <li>Jasmine ist ein Unit-Testing-Framework für JavaScript</li>
+                    <li>Beinhaltet viel aus anderen Tests wie zB. ScrewUnit, JSSpec, JSpec und RSpec</li>
+                    <li> Ziele der Entwickler Pivotal Labs: </li>
+                    <ol>
+                        <li>Es sollte nicht auf bestimmten Browser, Platformen, etc., abgestimmt sein</li>
+                        <li>Es soll Überall funktionieren, wo auch JavaScript läuft (Browsers, Server, Handys, etc.)</li>
+                        <li>Die Syntax ist sprachüblich und einfach zu verstehen und motiviert zum Teste schreiben</li>
+                    </ol> 
+                </ul>
+            </p>
+            </section>
+
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Besonderheiten</h4>
+            <p>
+                <ul>
+                    <li>Jasmine setzt nicht auf bestimmte JavaScript Frameworks.</li>
+                    <li>Es ist ein <a href="http://de.wikipedia.org/wiki/Behavior_Driven_Development">BDD</a> Framework</li>
+                    <li>Es braucht kein DOM</li>
+                </ul>
+            </p>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+            ###Testen mit Jasmine
+            ####Wie sieht ein Test aus?
+			
+			    //JavaScript
+				function helloWorld() {
+				return "Hello world!";
+				}
+				
+				//Jasmine
+                    
+                //Suites beschreiben den Test allgemein
+                describe("Hello world", function() {
+				
+                  //Specs beschreiben was getestet wird
+                  it("sagt hello", function() {
+
+                    //Expectations sind die "Tests", welche dann mit dem Matcher, hier .toEqual(), verglichen werden
+                    expect(helloWorld()).toEqual("Hello World!");
+                  });
+                }); 
+            </script>
+            </section>
+			
+			            <section data-markdown>
+                <script type="text/template">
+            ###Testen mit Jasmine
+            ####Wie sieht ein Test aus?
+			
+			    //JavaScript
+				function addition( a, b){
+				return a + b;
+				}
+				
+				//Jasmine
+                    
+                //Suite
+                describe("Der Taschenrechner", function() {
+                  var a;
+				  var b;
+                  //Spec
+                  it("errechnet eine Addition", function() {
+                    a = 2;
+					b = 3;
+                    //Expectation und Matcher
+                    expect(addition(a,b)).toBe(5);
+                  });
+                }); 
+            </script>
+            </section>
+
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Matcher</h4>
+            <p>
+                <ul>
+                    <li>Jeder Matcher kann mit .not verneint werden</li>
+                    <li>Hier ein paar Beispiele für ein paarMatcher:</li>
+                    <ul>
+                        <li>expect(x).toEqual(y); (Test gibt kein Fehler, falls y == x)</li>
+                        <li>expect(x).toBe(y); (Test gibt kein Fehler, falls y gleiches Objekt wie x)</li>
+                        <li>expect(x).toContain(y); (Test gibt kein Fehler, falls String oder Array x, y beinhaltet)</li>
+                        <li><a href="https://github.com/pivotal/jasmine/wiki/Matchers">weitere</a></li>
+                    </ul>
+                    
+                </ul>
+            </p>
+            </section>
+       
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Einbindung und Benutzung von Jasmine</h4>
+            <p>
+                </ul>
+
+                    <ul>
+                    <li><a href="https://github.com/pivotal/jasmine/downloads">aktuelle Version runterladen</a></li>
+                    <li>Source-Dateien in das scr-Verzeichnis</li>
+                    <li>Spec-Dateien (Tests) in das spec-Verzeichnis</li>
+                    <li>Source- und Spec Dateien in der SpecRunner.html einbinden</li>
+                    <li>SpecRunner.html mit Browser Öffnen</li>
+					<li>Oder auf <a href="http://tryjasmine.com/">tryjasmine</a> gehen und ohne Download testen!</li>
+                </ul>
+            </p>
+            </section>
+
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Merke</h4>
+            <p>
+                </ul>
+                    <li>JavaScript Code = Source Code</li>
+                    <li>Geschriebener Jasmine Test = Spec Code</li>
+					<li>describe = Suite beschreibt den Test oder benennt ihn ( sinvolle Namen, kein XYZ)</li>
+					<li>it = Spec beschreibt was der Test macht und dort werden Var die Werte zugewiesen</li>
+					<li>expect = Erwartung wie das Ergebnis aus dem JavaScript Code sein soll</li>
+					<li>Matcher legt die Bedingung fest, ob und was richtig oder falsch ist</li>
+                </ul>
+            </p>
+            </section>
+			
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Hilfreiche Links</h4>
+            <p>
+                <ul>
+                    <li><a href="https://github.com/pivotal/jasmine/wiki/">Jasmine Wiki auf GitHub</a></li>
+                    <li><a href="https://github.com/pivotal/jasmine/wiki/Background">Hintergründe und Ziele von Jasmine</a></li>
+                    <li><a href="http://pivotal.github.com/jasmine/">Step by Step Erklarungen zu Jasmine</a></li>
+                    <li><a href="https://github.com/pivotal/jasmine/wiki/Matchers">Matchers und Matcher selbst schreiben</a></li>
+                    <li><a href="http://tryjasmine.com/">Jasmine Online</a></li>
+					<li><a href="http://evanhahn.com/">Sehr gutes Tutorial zum lernen!</a></li>
+
+                </ul>
+            </p>
+            </section>
+        </section>
+		<section>
+				<section>
+				
+						<h3>Performance-Test</h3>
+					<h4 class="fragment" data-fragment-index="0">Motivation</h4>           
+					<p class="fragment" data-fragment-index="1">Optimierung von ...</p>					
+                        <ul>
+                            <li class="fragment" data-fragment-index="2">Quellcode</li>
+                            <li class="fragment" data-fragment-index="3">Ladezeit</li>
+                            <li class="fragment" data-fragment-index="4">Performance</li>
+                            <li class="fragment" data-fragment-index="5">Suchmaschinen</li>
+                        </ul>
+					
+				</section>
+                
+					<section>
+						<h3>Performance-Test</h3>
+                    <h4 class="fragment" data-fragment-index="0">Voraussetzung</h4>                        
+                        <ul>
+                            <li class="fragment" data-fragment-index="1">Es gibt Webseiten mit integrierten Tests</li>
+                            <li class="fragment" data-fragment-index="2">Unsere Empfehlung: Firebug-Extension</li>
+                        </ul>
+                        <div class="fragment roll-in">                       
+                            <table>
+                                <tr>
+                                    <th>PageSpeed</th>
+                                    <th>YSlow</th>
+                                </tr>
+                                <tr>
+                                    <td>Google</td>
+                                    <td>Yahoo!</td>
+                                </tr>
+                                <tr>
+                                    <td>2011</td>
+                                    <td>2005</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br>                        
+                    <p class="fragment" data-fragment-index="3"><code>Sehr spezielle Unterschiede - probieren wir es aus!!</code></p>
+					</section>
+
+					<section data-background-image="images/vergleich.jpg" data-background-position="center center">
+					</section>
+					
+					<section data-background-image="images/gtmetrix.jpg" data-background-position="center center">
+					</section>
+                    <section>
+						<h3>Performance-Test</h3>
+                        <h4 class="fragment" data-fragment-index="0">Nachteile - Vorteile</h4>                        
+                            <ul>
+                                <li class="fragment" data-fragment-index="1">Google bittet umfangreiche Hilfen an</li>
+                                <li class="fragment" data-fragment-index="2">YSlow ist viel kritischer</li>
+                                <ol>
+                                    <li class="fragment" data-fragment-index="3">YSlow beachtet beispielsweise auch den Umgang mit Servern</li>
+                                    <li class="fragment" data-fragment-index="4">YSlow macht Low-Priority-Tests</li>
+                                </ol>
+                                <li class="fragment" data-fragment-index="5">PageSpeed ist in vielen Sprachen verfügbar</li>
+                                <li class="fragment" data-fragment-index="6">YSlow ist übersichtlicher</li>
+                            </ul>
+                            <br> 
+                            <br>                        
+                        <p class="fragment" data-fragment-index="7"><code>In Kombination erhält man die besten Ergebnisse</code></p>
+                    </section>
+                
+				</section>
+
+		
+		<section>
+				<section>
+						<h3>Usability</h3>
+					<h4 class="fragment" data-fragment-index="0">Ziel des <strong>Usabilitytests</strong>?</h4>
+					<p class="fragment" data-fragment-index="1">Die Benutzerfreundlichkeit auf die Probe stellen</p>
+                    <br><br>
+                    <h4 class="fragment" data-fragment-index="2">Und wie geht das?</h4>
+					<p class="fragment" data-fragment-index="3">Frag deine Oma!</p>
+                    <p class="fragment" data-fragment-index="4"><code>...wirklich!</code></p>
+					
+                            <li class="fragment" data-fragment-index="5">Suche möglichst technikunerfahrene Tester</li>
+                            <li class="fragment" data-fragment-index="6">Wähle die Tester aus möglichst verschiedenen Bereichen für Zielgruppenübergreifende Ergebnisse</li>
+						</ol>
+                        <br>
+                    <p class="fragment" data-fragment-index="7"><strong>Vorsicht:</strong> <code>Tester mit klar definierten Anweisungen liefern bessere Ergebnisse</code></p>
+					</section>
+
+				<section>                    
+						<h3>Usability</h3>
+                        <h4 class="fragment" data-fragment-index="0">Asyncron Testen</h4>                        
+                        <ul>
+                            <li class="fragment" data-fragment-index="1">Task Analysis + Rapid Prototyping</li>
+                            <li class="fragment" data-fragment-index="2">Nutzertagebücher</li>
+                            <li class="fragment" data-fragment-index="3">Nutzerverhalten digital aufzeichnen</li>
+						</ul>
+					<h4 class="fragment" data-fragment-index="4">Syncron Testen</h4>                        
+                        <ul>
+                            <li class="fragment" data-fragment-index="5">User Beobachten</li>
+                            <li class="fragment" data-fragment-index="6">Lautes Denken</li>
+						</ul>
+                        <br>                        
+                    <p class="fragment" data-fragment-index="7"><code>Die meisten Asyncronen Techniken können Syncron angewendet werden!</code></p>
+				</section>
+                
+                <section>   
+						<h3>Usability</h3>
+					<h4 class="fragment" data-fragment-index="0">Laufende Optimierungen</h4> 
+                    	<p class="fragment" data-fragment-index="1">Onsite-Befragung</p>             
+                        <ul>
+                            <li class="fragment" data-fragment-index="2">User-Umfragen</li>
+                            <li class="fragment" data-fragment-index="3">Kritikfelder</li>
+						</ul>
+                        <p class="fragment" data-fragment-index="4">Web-Controlling/Logfile-Analyse</p>                  
+                        <ul>
+                            <li class="fragment" data-fragment-index="5">Welche Seiten haben die meisten Zugriffe</li>
+                            <li class="fragment" data-fragment-index="6">Woher kommen die meisten User</li>
+						</ul>
+                        <br>                        
+                    <p class="fragment" data-fragment-index="7"><code>Diese Technik kann vor allem helfen die Beliebtheit der Seite zu steigern</code></p>
+				</section>
+<section>
+						<h3>Usability</h3>
+					<h4 class="fragment" data-fragment-index="0">Professionelle Usability Tester</h4>
+                    <p class="fragment" data-fragment-index="1">Unbezahlte Tester sind Subjektiv</p>                        
+                        <ul>
+                            <li class="fragment" data-fragment-index="2">User beobachten</li>
+                            <li class="fragment" data-fragment-index="3">Lautes denken</li>
+						</ul>
+                        <br>
+                        
+                    <p class="fragment" data-fragment-index="4">Professionelle Agenturen haben bessere Möglichkeiten</p>                        
+                        <ul>
+                            <li class="fragment" data-fragment-index="5">Zielgruppen Tests</li>
+                            <li class="fragment" data-fragment-index="6">Labortests wie beispielsweise das Eye-Traking</li>
+						</ul>               
+                    <p class="fragment" data-fragment-index="7"><em>Bei großen Projekten lohnt sich die in Inanspruchnahme externer Dienste.<br>
+                    Diese Dienste sind nicht Teuer im Vergleich zu den Ergebnissen die man erhält.
+                    Geschultes Personal führt jenachdem selbstständig die Zielgruppenanalyse durch und Testet mit gut ausgewählten Testern für ein optimales Ergebnis.
+                    </em></p>
+				</section>
+
+				</section>
+
+
+        <section>
+        <h3>Vielen Dank für ihre Aufmerksamkeit!</h3>
+            <h4>Noch Fragen? ;)</h4>
+        </section>
+
+
+	
+
+				<!-- End of slides container. -->
+
+			</div>
+
+		</div>
+
+		<script src="../revealjs-framework/lib/js/head.min.js"></script>
+		<script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				width: 1000,
+
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'fast', // default/fast/slow
+				backgroundTransition: 'none', // default/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
