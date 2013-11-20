@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 
 		<!-- Title of presentation -->
-		<title>Reveal.js Demo</title>
+		<title>Testing</title>
 		<!-- Short description of presentation -->
 		<meta name="description" content="Demo of Reveal.js functions and features">
 		<!-- Author of presentation -->
@@ -50,20 +50,21 @@
 					Campus Gummersbach</p>
 
 					<p style="margin-top:10%">Dieter Derksen<br>
-					Dennis Wilk<br>
-					Jerome Tünte</p>
+					Jerome Tünte<br>
+					Dennis Wilk</p>
 				</section>
 
 				<section>
 					<h2>Inhalte</h2>
 					<p>
-					<ol>
+					<ul>
 					<li>Warum testen?</li>
 					<li>Was testen?</li>
 					<li>Wie testen?</li>
 					<li>Testen mit Javascript - Unit Testing Frameworks</li>
-					<li>Testen mit HTML - Validator</li>
-					</ol>
+					<li>Performance</li>
+					<li>Usability</li>
+					</ul>
                 </p>
 					
 				</section>
@@ -133,10 +134,8 @@
 	<section>
         <h3>Wie testen?</h3>
 		<h4>Unittest</h4>
-		<p>
-			<img src="Images/2.jpg"/>
-			
-					<br><b>Einzelne</b> Module werden getestet
+		<p>			
+				Es werden <b>Einzelne</b> Module getestet
 				<ol>
 					<li>Ausgangszustand initialisieren</li>
 					<li>die zu testenden Operationen ausführen</li>
@@ -158,14 +157,14 @@
 		</section>
 		<section>
 			<h3>Wie testen?</h3>
-			<h4>Beispiel Ablauf Zusammenfassung</h4>
+			<h4>Testing-Pyramide</h4>
 			<table>
 		<tr>
 			<td>
 				<img src="Images/pyra-black.png"/>
 			</td>
 			<td>
-				<ul>^^^^
+				<ul>
 					<br>
 					<li>Testen durch den Kunden/Auftraggeber</li><br>
 					<li>Komponenten zusammen testen</li><br>
@@ -176,15 +175,15 @@
 		</table>
 		</section>
 	</section>
-	<section>
+	 <section>
             <section>
             <h3>Testen mit Jasmine</h3>
             <h4>Was ist Jasmine?</h4>
-    		<p>
-            	<ul>
+                    <p>
+                    <ul>
                     <li>Jasmine ist ein Unit-Testing-Framework für JavaScript</li>
                     <li>Beinhaltet viel aus anderen Tests wie zB. ScrewUnit, JSSpec, JSpec und RSpec</li>
-                    <li> Ziele der Entwickler Pivotal Labs: </li>
+                    <li>Ziele der Entwickler Pivotal Labs: </li>
                     <ol>
                         <li>Es sollte nicht auf bestimmten Browser, Platformen, etc., abgestimmt sein</li>
                         <li>Es soll Überall funktionieren, wo auch JavaScript läuft (Browsers, Server, Handys, etc.)</li>
@@ -216,11 +215,9 @@
 				return "Hello world!";
 				}
 				
-				//Jasmine
-                    
                 //Suites beschreiben den Test allgemein
                 describe("Hello world", function() {
-				
+                                
                   //Specs beschreiben was getestet wird
                   it("sagt hello", function() {
 
@@ -230,8 +227,8 @@
                 }); 
             </script>
             </section>
-			
-			            <section data-markdown>
+                        
+                                    <section data-markdown>
                 <script type="text/template">
             ###Testen mit Jasmine
             ####Wie sieht ein Test aus?
@@ -241,16 +238,14 @@
 				return a + b;
 				}
 				
-				//Jasmine
-                    
                 //Suite
                 describe("Der Taschenrechner", function() {
                   var a;
-				  var b;
+                                  var b;
                   //Spec
                   it("errechnet eine Addition", function() {
                     a = 2;
-					b = 3;
+                                        b = 3;
                     //Expectation und Matcher
                     expect(addition(a,b)).toBe(5);
                   });
@@ -308,6 +303,7 @@
             </p>
             </section>
 			
+                         
             <section>
             <h3>Testen mit Jasmine</h3>
             <h4>Hilfreiche Links</h4>
@@ -324,6 +320,8 @@
             </p>
             </section>
         </section>
+		
+		
 		<section>
 				<section>
 				
@@ -363,7 +361,7 @@
                             </table>
                         </div>
                         <br>                        
-                    <p class="fragment" data-fragment-index="3"><code>Sehr spezielle Unterschiede - probieren wir es aus!!</code></p>
+                    <p class="fragment" data-fragment-index="3"><code>Sehr spezielle Unterschiede - Probieren wir es aus!!</code></p>
 					</section>
 
 					<section data-background-image="images/vergleich.jpg" data-background-position="center center">
@@ -375,7 +373,7 @@
 						<h3>Performance-Test</h3>
                         <h4 class="fragment" data-fragment-index="0">Nachteile - Vorteile</h4>                        
                             <ul>
-                                <li class="fragment" data-fragment-index="1">Google bittet umfangreiche Hilfen an</li>
+                                <li class="fragment" data-fragment-index="1">Google bietet umfangreiche Hilfen an</li>
                                 <li class="fragment" data-fragment-index="2">YSlow ist viel kritischer</li>
                                 <ol>
                                     <li class="fragment" data-fragment-index="3">YSlow beachtet beispielsweise auch den Umgang mit Servern</li>
@@ -390,8 +388,39 @@
                     </section>
                 
 				</section>
+				
+		<section>
+					<section>
+						<h3>Validation</h3>
+						<h4 class="fragment" data-fragment-index="0"><em>Nur mit einem perfekten Fundament entsteht ein gutes Haus!</em></h4>                        
+                        <ul>
+                            <li class="fragment" data-fragment-index="1">wird heute oft vernachlässigt</li>
+                            <li class="fragment" data-fragment-index="2">idealerweise noch vor der Programmierung</li>
+                            <li class="fragment" data-fragment-index="3">Nur das Erfüllen aller Standards verspricht eine richtige Darstellung in allen Browsern</li>
+                        </ul>					
+					</section>
+                
+					<section>
+						<h3>Validation</h3>
+                    	<h4 class="fragment" data-fragment-index="0"><strong>Das W3C</strong> - World Wide Web Consortium</h4>                        
+                        <ul>
+                            <li class="fragment" data-fragment-index="1">1994 gegründet von Tim Berners-Lee (Erfinder von HTML)</li>
+                            <li class="fragment" data-fragment-index="2">Stellt einen HTML-Validator zur verfügung</li>
+                            <li class="fragment" data-fragment-index="3">Weitere Validatoren wie beispielsweise für CSS werden auch angeboten</li>
+                            <li class="fragment" data-fragment-index="4">W3C ist <strong>der Standard</strong> geworden</li>
+                        </ul>
+                        <br>
+                        <br>
+                    	<p class="fragment" data-fragment-index="5"><strong>Vorsicht:</strong> <code>der W3C-Validator ist sehr oberflächlig!</code></p>
+					</section>
 
-		
+					<section data-background-image="images/val1.jpg" data-background-position="center center">
+					</section>
+					
+					<section data-background-image="images/val2.jpg" data-background-position="center center">
+					</section>                                   
+				</section>
+
 		<section>
 				<section>
 						<h3>Usability</h3>
@@ -468,7 +497,7 @@
 
         <section>
         <h3>Vielen Dank für ihre Aufmerksamkeit!</h3>
-            <h4>Noch Fragen? ;)</h4>
+            <h4>Fragen? ;)</h4>
         </section>
 
 
