@@ -184,7 +184,7 @@
             	<ul>
                     <li>Jasmine ist ein Unit-Testing-Framework für JavaScript</li>
                     <li>Beinhaltet viel aus anderen Tests wie zB. ScrewUnit, JSSpec, JSpec und RSpec</li>
-                    <li> Ziele der Entwickler des Jasmine Tests: </li>
+                    <li> Ziele der Entwickler Pivotal Labs: </li>
                     <ol>
                         <li>Es sollte nicht auf bestimmten Browser, Platformen, etc., abgestimmt sein</li>
                         <li>Es soll Überall funktionieren, wo auch JavaScript läuft (Browsers, Server, Handys, etc.)</li>
@@ -200,7 +200,7 @@
             <p>
                 <ul>
                     <li>Jasmine setzt nicht auf bestimmte JavaScript Frameworks.</li>
-                    <li>Es ist ein <a href="http://behaviour-driven.org/">BDD</a> Framework</li>
+                    <li>Es ist ein <a href="http://de.wikipedia.org/wiki/Behavior_Driven_Development">BDD</a> Framework</li>
                     <li>Es braucht kein DOM</li>
                 </ul>
             </p>
@@ -225,7 +225,7 @@
                   it("sagt hello", function() {
 
                     //Expectations sind die "Tests", welche dann mit dem Matcher, hier .toEqual(), verglichen werden
-                    expect(helloWorld(a,b)).toEqual("Hello World!");
+                    expect(helloWorld()).toEqual("Hello World!");
                   });
                 }); 
             </script>
@@ -295,38 +295,18 @@
 
             <section>
             <h3>Testen mit Jasmine</h3>
-            <h4>Nützliches bei Jasmine</h4>
+            <h4>Merke</h4>
             <p>
                 </ul>
-                    <li>Um den Test-Code möglich effizent schreiben zu können liefert Jasmine die Funktionen beforeEach() und afterEach()</li>
-                    <li>Hiermit ist es möglich Variablen oder Objekt vor bzw. nach jedem Spec neu zu definieren oder auch zu initialsieren</li>
+                    <li>JavaScript Code = Source Code</li>
+                    <li>Geschriebener Jasmine Test = Spec Code</li>
+					<li>describe = Suite beschreibt den Test oder benennt ihn ( sinvolle Namen, kein XYZ)</li>
+					<li>it = Spec beschreibt was der Test macht und dort werden Var die Werte zugewiesen</li>
+					<li>expect = Erwartung wie das Ergebnis aus dem JavaScript Code sein soll</li>
+					<li>Matcher legt die Bedingung fest, ob und was richtig oder falsch ist</li>
                 </ul>
             </p>
             </section>
-
-            <section data-markdown>
-                <script type="text/template">
-            ###Testen mit Jasmine
-            ####Beispiel für afterEach()
-            
-                describe("Testdatei", function() {
-                  var testklasse = new Testklasse();
-                  var z1;
-                  var z2;
-                  var z3;
-                  var z4;
-
-                  afterEach(function() {
-                      z1 = 4;
-                      z2 = 0;
-                      z3 = -2;
-                      z4 = 154;
-                  });
-                  it("XYZ", function(){
-                    expect(testklasse.addition(z1, z2)).toEqual(z1+z2); 
-                  });
-            </script>
-            </section>  
 			
             <section>
             <h3>Testen mit Jasmine</h3>
