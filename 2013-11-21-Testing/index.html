@@ -101,8 +101,7 @@
 		<ul>
 			<li>Testing ist <b>NICHT</b> debugging</li>
 			<li>Tests finden niemals alle Fehler</li>
-			<li>Jede Testart findet eine andere Art von Fehler</li>
-			<li>Ziel: Fehler finden, nicht die Ursache</li>
+			<li>Testmethoden kombinieren</li>
 		</ul>
 	</section>
 	
@@ -111,8 +110,8 @@
 	<h4>Testing-Pyramide</h4>
 	<table>
 	<tr>
-		<td>
-			<img src="Images/1.jpg" width="600px" height="360px"/>
+		<td><div align="center"><img src="Images/pyra-black.png" width="600px" height="360px"/></div align=center>
+			
 		</td>
 	</tr>
 	</table>
@@ -125,7 +124,7 @@
 				PAP-Bild
 				-->
             	<li>Kenntnisse der inneren Programmstruktur bzw. des Quellcodes</li>
-				<li>Testfälle werden anhand der inneren Programmstruktur festgelegt </li>
+				<li>Testfälle werden anhand der inneren Programmstruktur festgelegt</li>
 				<li>Verschiedene Testmethoden (z.B. Überdeckungstests) </li>
                 <li>Ziel: Quellcode muss gewisse Qualitätskritieren erfüllen (z.B. Zeilenüberdeckung)</li>
             </ul>
@@ -150,10 +149,10 @@
 			<h4>Black-Box-Test</h4>
 			<p>
 				<ul>
-					<li>Nur das nach außen Sichtbare Verhalten wird getestet</li>
-					<li>Tester haben keine Kenntnisse der inneren Programmstruktur</li>					
+					<li>Tester haben keine Kenntnisse der inneren Programmstruktur</li>	
+					<li>Mit Fallbeispielen das Verhalten testen</li>		
+					<li>Aufwendige Erstellung der Tests</li>		
 					<li>Ziel: Übereinstimmung des Softwareverhaltens mit den Spezifikationen</li>
-					<li>Aufwendige Erstellung der Tests</li>
 				</ul>
 			</p>
 		</section>
@@ -163,11 +162,11 @@
 			<table>
 		<tr>
 			<td>
-				<img src="Images/3.jpg"/>
+				<img src="Images/pyra-black.png"/>
 			</td>
 			<td>
-				<ul>
-					<li>Usability</li><br>
+				<ul>^^^^
+					<br>
 					<li>Testen durch den Kunden/Auftraggeber</li><br>
 					<li>Komponenten zusammen testen</li><br>
 					<li>Komponenten unabhängig voneinander Testen</li>
@@ -177,8 +176,330 @@
 		</table>
 		</section>
 	</section>
+	<section>
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Was ist Jasmine?</h4>
+    		<p>
+            	<ul>
+                    <li>Jasmine ist ein Unit-Testing-Framework für JavaScript</li>
+                    <li>Beinhaltet viel aus anderen Tests wie zB. ScrewUnit, JSSpec, JSpec und RSpec</li>
+                    <li> Ziele der Entwickler des Jasmine Tests: </li>
+                    <ol>
+                        <li>Es sollte nicht auf bestimmten Browser, Platformen, etc., abestimmt sein</li>
+                        <li>Es soll Überall funktionieren, wo auch JavaScript läuft (Browsers, Server, Handys, etc.)</li>
+                        <li>Die Syntax ist sprachüblich und einfach zu verstehen und motviert zum Test schreiben</li>
+                    </ol> 
+                </ul>
+            </p>
+            </section>
 
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Besonderheiten</h4>
+            <p>
+                <ul>
+                    <li>Jasmine setzt nicht auf bestimmte JavaScript Frameworks.</li>
+                    <li>Es ist ein <a href="http://behaviour-driven.org/">BDD</a> Framework</li>
+                    <li> Es braucht kein DOM</li>
+                </ul>
+            </p>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+            ###Testen mit Jasmin
+            ####Wie sieht ein Test aus?
+			
+			    //JacaScript
+				function helloWorld() {
+				return "Hello world!";
+				};
+				
+				//Jasmine
+                    
+                //Suites beschreiben den Test allgemein
+                describe("Hello world", function() {
+				
+                  //Specs beschreiben was getestet wird
+                  it("sagt hello", function() {
+
+                    //Expectations sind die "Tests", welche dann mit dem Matcher, hier .toBe(), verglichen werden
+                    expect(helloWorld(a,b)).toEqual("Hello World!");
+                  });
+                }); 
+            </script>
+            </section>
+			
+			            <section data-markdown>
+                <script type="text/template">
+            ###Testen mit Jasmin
+            ####Wie sieht ein Test aus?
+			
+			    //JacaScript
+				function addition( a, b){
+				return a + b;
+				};
+				
+				//Jasmine
+                    
+                //Suite
+                describe("Der Taschenrechner", function() {
+                  var a;
+				  var b;
+                  //Spec
+                  it("errechnet eine Addition", function() {
+                    a = 2;
+					b = 3;
+                    //Expectation und Matcher
+                    expect(addition(a,b)).toBe(5);
+                  });
+                }); 
+            </script>
+            </section>
+
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Matcher</h4>
+            <p>
+                <ul>
+                    <li>Jeder Matcher kann mit .not verneint werden</li>
+                    <li>Hier ein paar Beispiele für ein paarMatcher:</li>
+                    <ul>
+                        <li>expect(x).toEqual(y); (Test gibt kein Fehler, falls y == x)</li>
+                        <li>expect(x).toBe(y); (Test gibt kein Fehler, falls y gleiches Objekt wie x)</li>
+                        <li>expect(x).toContain(y); (Test gibt kein Fehler, falls String oder Array x, y beinhaltet)</li>
+                        <li><a href="https://github.com/pivotal/jasmine/wiki/Matchers">weitere</a></li>
+                    </ul>
+                    
+                </ul>
+            </p>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+            ###Testen mit Jasmin
+            ####Ein Beispieltest  
+                /*Beispiel JavaScript*/
+                function addition( a, b ){   
+                    return a + b; 
+                };
+
+                /*Beispiel Jasmine*/
+                describe("addition(a, b)", function(){ 
+                    it("sollte 3", function(){         
+                    expect( addition(1, 2) ).toBe( 3 );     
+                    }); 
+                });
+            </script>
+            </section>        
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Einbindung und Benutzung von Jasmin</h4>
+            <p>
+                </ul>
+
+                    <ul>
+                    <li><a href="https://github.com/pivotal/jasmine/downloads">aktuelle Version runterladen</a></li>
+                    <li>Source-Dateien in das scr-Verzeichnis</li>
+                    <li>Spec-Dateien (Tests) in das spec-Verzeichnis</li>
+                    <li>Source- und Spec Dateien in der SpecRunner.html einbinden</li>
+                    <li>SpecRunner.html mit Browser Öffnen</li>
+                </ul>
+            </p>
+            </section>
+
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Nützliches bei Jasmin</h4>
+            <p>
+                </ul>
+                    <li>Um den Test-Code möglich effizent schreiben zu können liefert Jasmine die Funktionen beforeEach() und afterEach()</li>
+                    <li>Hiermit ist es möglich Variablen oder Objekt vor bzw. nach jedem Spec neu zu definieren oder auch zu initialsieren</li>
+                </ul>
+            </p>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+            ###Testen mit Jasmine
+            ####Beispiel für afterEach() und Tests bei Klassen
+            
+                describe("Testdatei", function() {
+                  var testklasse = new Testklasse();
+                  var z1;
+                  var z2;
+                  var z3;
+                  var z4;
+
+                  afterEach(function() {
+                      z1 = 4;
+                      z2 = 0;
+                      z3 = -2;
+                      z4 = 154;
+                  });
+                  it("XYZ", function(){
+                    expect(testklasse.addition(z1, z2)).toEqual(z1+z2); 
+                  });
+            </script>
+            </section>  
+			
+            <section>
+            <h3>Testen mit Jasmine</h3>
+            <h4>Hilfreiche Links</h4>
+            <p>
+                <ul>
+                    <li><a href="https://github.com/pivotal/jasmine/wiki/">Jasmine Wiki auf GitHub</a></li>
+                    <li><a href="https://github.com/pivotal/jasmine/wiki/Background">Hintergründe und Ziele von Jasmine</a></li>
+                    <li><a href="http://pivotal.github.com/jasmine/">Step by Step Erklarungen zu Jasmine</a></li>
+                    <li><a href="https://github.com/pivotal/jasmine/wiki/Matchers">Matchers und Matcher selbst schreiben</a></li>
+                    <li><a href="http://tryjasmine.com/">Jasmine Online</a></li>
+
+                </ul>
+            </p>
+            </section>
+        </section>
+		<section>
 				<section>
+				
+						<h3>Performance-Test</h3>
+					<h4 class="fragment" data-fragment-index="0">Motivation</h4>           
+					<p class="fragment" data-fragment-index="1">Optimierung von ...</p>					
+                        <ul>
+                            <li class="fragment" data-fragment-index="2">Quellcode</li>
+                            <li class="fragment" data-fragment-index="3">Ladezeit</li>
+                            <li class="fragment" data-fragment-index="4">Performance</li>
+                            <li class="fragment" data-fragment-index="5">Suchmaschinen</li>
+                        </ul>
+					
+				</section>
+                
+					<section>
+						<h3>Performance-Test</h3>
+                    <h4 class="fragment" data-fragment-index="0">Voraussetzung</h4>                        
+                        <ul>
+                            <li class="fragment" data-fragment-index="1">Es gibt Webseiten mit integrierten Tests</li>
+                            <li class="fragment" data-fragment-index="2">Unsere Empfehlung: Firebug-Extension</li>
+                        </ul>
+                        <div class="fragment roll-in">                       
+                            <table>
+                                <tr>
+                                    <th>PageSpeed</th>
+                                    <th>YSlow</th>
+                                </tr>
+                                <tr>
+                                    <td>Google</td>
+                                    <td>Yahoo!</td>
+                                </tr>
+                                <tr>
+                                    <td>2011</td>
+                                    <td>2005</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br>                        
+                    <p class="fragment" data-fragment-index="3"><code>Sehr spezielle Unterschiede - probieren wir es aus!!</code></p>
+					</section>
+
+					<section data-background-image="images/vergleich.jpg" data-background-position="center center">
+					</section>
+					
+					<section data-background-image="images/gtmetrix.jpg" data-background-position="center center">
+					</section>
+                    <section>
+						<h3>Performance-Test</h3>
+                        <h4 class="fragment" data-fragment-index="0">Nachteile - Vorteile</h4>                        
+                            <ul>
+                                <li class="fragment" data-fragment-index="1">Google bittet umfangreiche Hilfen an</li>
+                                <li class="fragment" data-fragment-index="2">YSlow ist viel kritischer</li>
+                                <ol>
+                                    <li class="fragment" data-fragment-index="3">YSlow beachtet beispielsweise auch den Umgang mit Servern</li>
+                                    <li class="fragment" data-fragment-index="4">YSlow macht Low-Priority-Tests</li>
+                                </ol>
+                                <li class="fragment" data-fragment-index="5">PageSpeed ist in vielen Sprachen verfügbar</li>
+                                <li class="fragment" data-fragment-index="6">YSlow ist übersichtlicher</li>
+                            </ul>
+                            <br> 
+                            <br>                        
+                        <p class="fragment" data-fragment-index="7"><code>In Kombination erhält man die besten Ergebnisse</code></p>
+                    </section>
+                
+				</section>
+
+		
+		<section>
+				<section>
+						<h3>Usability</h3>
+					<h4 class="fragment" data-fragment-index="0">Ziel des <strong>Usabilitytests</strong>?</h4>
+					<p class="fragment" data-fragment-index="1">Die Benutzerfreundlichkeit auf die Probe stellen</p>
+                    <br><br>
+                    <h4 class="fragment" data-fragment-index="2">Und wie geht das?</h4>
+					<p class="fragment" data-fragment-index="3">Frag deine Oma!</p>
+                    <p class="fragment" data-fragment-index="4"><code>...wirklich!</code></p>
+					
+                            <li class="fragment" data-fragment-index="5">Suche möglichst technikunerfahrene Tester</li>
+                            <li class="fragment" data-fragment-index="6">Wähle die Tester aus möglichst verschiedenen Bereichen für Zielgruppenübergreifende Ergebnisse</li>
+						</ol>
+                        <br>
+                    <p class="fragment" data-fragment-index="7"><strong>Vorsicht:</strong> <code>Tester mit klar definierten Anweisungen liefern bessere Ergebnisse</code></p>
+					</section>
+
+				<section>                    
+						<h3>Usability</h3>
+                        <h4 class="fragment" data-fragment-index="0">Asyncron Testen</h4>                        
+                        <ul>
+                            <li class="fragment" data-fragment-index="1">Task Analysis + Rapid Prototyping</li>
+                            <li class="fragment" data-fragment-index="2">Nutzertagebücher</li>
+                            <li class="fragment" data-fragment-index="3">Nutzerverhalten digital aufzeichnen</li>
+						</ul>
+					<h4 class="fragment" data-fragment-index="4">Syncron Testen</h4>                        
+                        <ul>
+                            <li class="fragment" data-fragment-index="5">User Beobachten</li>
+                            <li class="fragment" data-fragment-index="6">Lautes Denken</li>
+						</ul>
+                        <br>                        
+                    <p class="fragment" data-fragment-index="7"><code>Die meisten Asyncronen Techniken können Syncron angewendet werden!</code></p>
+				</section>
+                
+                <section>   
+						<h3>Usability</h3>
+					<h4 class="fragment" data-fragment-index="0">Laufende Optimierungen</h4> 
+                    	<p class="fragment" data-fragment-index="1">Onsite-Befragung</p>             
+                        <ul>
+                            <li class="fragment" data-fragment-index="2">User-Umfragen</li>
+                            <li class="fragment" data-fragment-index="3">Kritikfelder</li>
+						</ul>
+                        <p class="fragment" data-fragment-index="4">Web-Controlling/Logfile-Analyse</p>                  
+                        <ul>
+                            <li class="fragment" data-fragment-index="5">Welche Seiten haben die meisten Zugriffe</li>
+                            <li class="fragment" data-fragment-index="6">Woher kommen die meisten User</li>
+						</ul>
+                        <br>                        
+                    <p class="fragment" data-fragment-index="7"><code>Diese Technik kann vor allem helfen die Beliebtheit der Seite zu steigern</code></p>
+				</section>
+<section>
+						<h3>Usability</h3>
+					<h4 class="fragment" data-fragment-index="0">Professionelle Usability Tester</h4>
+                    <p class="fragment" data-fragment-index="1">Unbezahlte Tester sind Subjektiv</p>                        
+                        <ul>
+                            <li class="fragment" data-fragment-index="2">User beobachten</li>
+                            <li class="fragment" data-fragment-index="3">Lautes denken</li>
+						</ul>
+                        <br>
+                        
+                    <p class="fragment" data-fragment-index="4">Professionelle Agenturen haben bessere Möglichkeiten</p>                        
+                        <ul>
+                            <li class="fragment" data-fragment-index="5">Zielgruppen Tests</li>
+                            <li class="fragment" data-fragment-index="6">Labortests wie beispielsweise das Eye-Traking</li>
+						</ul>               
+                    <p class="fragment" data-fragment-index="7"><em>Bei großen Projekten lohnt sich die in Inanspruchnahme externer Dienste.<br>
+                    Diese Dienste sind nicht Teuer im Vergleich zu den Ergebnissen die man erhält.
+                    Geschultes Personal führt jenachdem selbstständig die Zielgruppenanalyse durch und Testet mit gut ausgewählten Testern für ein optimales Ergebnis.
+                    </em></p>
+				</section>
+
+				</section>
+
 
         <section>
         <h3>Vielen Dank für ihre Aufmerksamkeit!</h3>
@@ -187,7 +508,6 @@
 
 
 	
-</section>
 
 				<!-- End of slides container. -->
 
