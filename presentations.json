@@ -140,6 +140,26 @@
 		{
 			"title" : "jQuery Übung",
 			"authors" : ["Christoph Jerolimov", "Dominik Schilling"]
+		},
+		"2013-11-21-SEO/praesentation.html":
+		{
+			"title" : "SEO",
+			"authors" : ["Carolina Singh", "Timon Blask", "Dennis Meyer"]
+		},
+		"2013-11-21-rwd-framework/index.html":
+		{
+			"title" : "Responsive Webdesign Frameworks",
+			"authors" : ["Eduard König", "Marc Philipp Marcinkowski", "Stefania Ciola"]
+		},
+		"2013-11-21-Testing/index.html":
+		{
+			"title" : "Testing",
+			"authors" : ["Dieter Derksen", "Jerome Tünte", "Dennis Wilk"]
+		},
+		"2013-11-21-Gesetze-und-Datenschutz/index.html":
+		{
+			"title" : "Gesetze und Datenschutz",
+			"authors" : ["Johannes Kutsch", "Philipp Köller", "Rafael Marques"]
 		}
 	}
 }
