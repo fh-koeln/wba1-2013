@@ -211,10 +211,10 @@
             ###Testen mit Jasmin
             ####Wie sieht ein Test aus?
 			
-			    //JacaScript
+			    //JavaScript
 				function helloWorld() {
 				return "Hello world!";
-				};
+				}
 				
 				//Jasmine
                     
@@ -224,7 +224,7 @@
                   //Specs beschreiben was getestet wird
                   it("sagt hello", function() {
 
-                    //Expectations sind die "Tests", welche dann mit dem Matcher, hier .toBe(), verglichen werden
+                    //Expectations sind die "Tests", welche dann mit dem Matcher, hier .toEqual(), verglichen werden
                     expect(helloWorld(a,b)).toEqual("Hello World!");
                   });
                 }); 
@@ -275,24 +275,7 @@
                 </ul>
             </p>
             </section>
-
-            <section data-markdown>
-                <script type="text/template">
-            ###Testen mit Jasmin
-            ####Ein Beispieltest  
-                /*Beispiel JavaScript*/
-                function addition( a, b ){   
-                    return a + b; 
-                };
-
-                /*Beispiel Jasmine*/
-                describe("addition(a, b)", function(){ 
-                    it("sollte 3", function(){         
-                    expect( addition(1, 2) ).toBe( 3 );     
-                    }); 
-                });
-            </script>
-            </section>        
+       
             <section>
             <h3>Testen mit Jasmine</h3>
             <h4>Einbindung und Benutzung von Jasmin</h4>
