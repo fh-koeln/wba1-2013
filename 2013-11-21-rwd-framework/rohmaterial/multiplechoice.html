@@ -1,17 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
-<head>
-	<meta charset="utf-8">
+<html>
+  <head>
+  <meta charset="utf-8">
     <title>Übungsaufgaben</title>
-    <!-- Author of presentation -->
+	
+	<!-- Author of presentation -->
 	<meta name="author" content="Eduard König, Marc Philipp Marcinkowski, Stefania Ciola">
-    
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+
+   
 <!-- Style -->
     <style type="text/css">
         body{
             background-color:black;
             color:white;
-            font-family: "Myriad Pro", Arial, Helvetica, Tahoma, sans-serif;
         }
         
         ::selection {
@@ -60,21 +74,15 @@
             color: lightblue;
             content: '✔';
         }
-        
-        a{
-            background: linear-gradient(#f8f8fa);
-            border-radius: 666em;
-            box-shadow: 0.1em 0.1em 0.1em #fff;
-            color: inherit;
-            display: inline-block;
-            padding: 0.5em 3em;
-            text-decoration: none;
-            width: 8em;
+            
+        #loesung:not(:target) [href="#"], #loesung:target [href="#loesung"]{
+            display: none;
         }
         
-        #loesung:not(:target) [href="#"],
-        #loesung:target [href="#loesung"]{
-            display: none;
+        a, a:hover, a:visited {
+            color:white;
+            font-weight:bold;
+            
         }
     </style>
     
@@ -96,7 +104,7 @@
 </script>
  
     <body>
-                
+     <div class="container">           
 <!-- Fragen -->  
     <form id="loesung">
         <p><h1>Multiple Choice Fragen</h1>
@@ -176,8 +184,16 @@
         </ol><hr>
 		
 		<p>
-            <a href="#loesung">Lösung anzeigen</a>
+            <button type="button" class="btn btn-warning">
+             <span class="glyphicon glyphicon-check"></span> <a href="#loesung"> Lösung anzeigen</a> <a href="#"> Lösung verstecken</a>
+            </button>		
         </p> 
     
-</body>
+     </div>   
+        
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
