@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RWD-Frameworks Praxis-Übungen</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="../../assets/js/html5shiv.js"></script>
+		<script src="../../assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<div class="container">
+			<h2>RWD-Frameworks Praxis-Beispiel</h2>
+			<hr>
+			<div class="row">
+				<div>
+					<ul class="nav nav-tabs">
+					  <li><a href="#">Home</a></li>
+					  <li><a href="#">Person</a></li>
+					  <li><a href="#">Lehre</a></li>
+					  <li class="active"><a href="#">Forschung</a></li>
+					  <li><a href="#">Beratung</a></li>
+					  <li><a href="#">Impressum</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Erweitere den Code sodass 3 Spalten entstehen. -->
+
+			<div class="row">
+				<!-- row ist eine Reihe -->
+				<div class="col col-md-3">
+					<!-- col ist eine Spalte -->
+					<h2>Nebenspalte</h2>
+					<p>Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, mich ein paar weitere Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller zu dienen, sondern auf etwas hinzuweisen.
+					</p>
+				</div><!-- col ende -->
+
+			
+				<div class="col col-md-6 col-md-offset-3">
+					<h2>Hauptteil</h2>
+					<p>Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, mich ein paar weitere Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller zu dienen, sondern auf etwas hinzuweisen.
+					</p>
+					<div class="row">
+					<div class="col-md-2">
+					<h2> Verschachtlung </h2>
+							<button type="button" class="btn btn-info">
+					Info
+					
+				</button>
+			
+			
+				<button type="button" class="btn btn-danger">
+					 <span class="glyphicon glyphicon-fire"> </span>
+					 Gefahr
+				
+				</button>
+					</div>
+					</div>
+				
+				<!-- <span class="glyphicon glyphicon-fire"> </span>->
+					
+				</div><!-- col ende-->
+			</div><!-- ende row -->
+
+		
+			<!-- Erstelle 1 neue Reihe, mit 3 Blöcken von der Spaltengröße 3, 4 und 5 = 12 Spalten.
+			Mit den Überschriften Nebenspalte, Hauptspalte 1 und 2. Darunter kommt der Blindtext. -->
+
+			<div class="row">
+				<div class ="col-md-4">
+					<img src="images/loewenzahn.jpg" class="img-responsive">
+				</div>
+
+				<div class ="col-md-2">
+				<img src="images/biene.jpg" class="img-rounded" class="img-responsive">
+				</div>
+
+				<div class ="col-md-2">
+						<img src="images/biene.jpg" class="img-circle" class="img-responsive">
+				</div>
+			</div><!-- ende row -->
+
+
+			<div class="row">
+				 
+                  <div class="form-group">
+                    <label for="InputEmail">E-Mail Adressse</label>
+                    <input type="email" class="form-control" id="InputEmail" placeholder="Enter email">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="InputPassword">Password</label>
+                    <input type="password" class="form-control" id="InputPassword" placeholder="Password">
+                  </div>
+                  
+			</div>
+
+			<div class="row">
+				<!-- Erstelle eine grüne Info-Schaltfläche bzw. ein Button -->
+		
+			</div>
+
+			<hr>
+
+		
+			
+			<hr>
+			<br>
+			<br>
+
+		</div><!-- ende container -->
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
