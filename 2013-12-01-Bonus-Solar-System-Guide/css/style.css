@@ -1,0 +1,736 @@
+* {
+    cursor:none;
+}
+
+html {
+    overflow-y:hidden;
+}
+
+body {
+    font-family:'Cherry Swash', cursive;
+    font-size:1.1em;
+    color:lemonchiffon;
+    line-height:1.5rem;
+    text-shadow:0 0 0.2em #8877FF, 0 0 0.2em #8877FF, 0 0 0.2em #8877FF;
+    background:#040429;
+    height:23000px;
+    margin:0;
+    padding:0;
+    border:0;
+}
+/* ###########################################
+end             #loadScreen
+############################################## */
+#loadScreen {
+    position:fixed;
+    width:100%;
+    height:100%;
+    background: transparent;
+    z-index:99;
+}
+
+#loadScreen > img {
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin:-150px 0px 0px -200px;
+}
+
+.circle {
+    background: transparent;
+    border-radius: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin: -7em 0em 0em -7em;
+    width: 14em;
+    height: 14em;
+    box-shadow: 0px 0px 0px 2000px black;
+    -webkit-box-shadow: 0px 0px 0px 2000px black;
+    overflow: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+.circle h1 {
+    opacity:0;
+    line-height: 5.9em;
+    text-align: center;
+    transition: opacity 0.6s ease-in-out;
+    -webkit-transition: opacity 0.6s ease-in-out;
+}
+
+.circle:before,
+.circle:after {
+    border-radius: 100%;
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;           
+    box-shadow: inset 10.6em 0 0 rgba(160, 50, 100, 0.3),
+        inset 0 10.6em 0 rgba(90, 20, 50, 0.3),
+        inset -10.6em 0 0 rgba(160, 50, 100, 0.3),
+        inset 0 -10.6em 0 rgba(90, 20, 50, 0.3);
+    -webkit-box-shadow: inset 10.6em 0 0 rgba(160, 50, 100, 0.3),
+        inset 0 10.6em 0 rgba(90, 20, 50, 0.3),
+        inset -10.6em 0 0 rgba(160, 50, 100, 0.3),
+        inset 0 -10.6em 0 rgba(90, 20, 50, 0.3);
+    transition: box-shadow 0.75s;
+    -webkit-transition: box-shadow 0.75s;
+}
+
+.circle:after  {
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+
+.circle:hover:before,
+.circle:hover:after  {
+    box-shadow: inset 0.86em 0 0 rgba(255, 0, 0, 0.5),
+        inset 0 0.86em 0 rgba(252, 150, 0, 0.5),
+        inset -0.86em 0 0 rgba(0, 255, 0, 0.5),
+        inset 0 -0.86em 0 rgba(0, 150, 255, 0.5);
+    -webkit-box-shadow: inset 0.86em 0 0 rgba(255, 0, 0, 0.5),
+        inset 0 0.86em 0 rgba(252, 150, 0, 0.5),
+        inset -0.86em 0 0 rgba(0, 255, 0, 0.5),
+        inset 0 -0.86em 0 rgba(0, 150, 255, 0.5);
+}
+
+.circle:hover > h1 {
+    opacity:1;
+}
+/* ###########################################
+end             #loadScreen
+############################################## */
+
+a {
+    color:#9999ff;
+    text-decoration:none;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+}
+
+a:hover {
+    color:#95C11E;
+}
+
+#origin {
+    top:23000px;
+}
+
+#canvasWrapper {
+    position:relative;
+}
+
+#overlay, #nav, #hooter {
+    box-shadow:inset 0px 0px 0px 0px #fff, inset 0px -1px 2px 0px #000, 0 5px 8px rgba(0, 0, 0, .8), 0 0px 0px 1px rgba(0, 0, 0, .3);
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+#overlay {
+    position:fixed;
+    width: 100%;
+    min-width:600px;
+    top:0%;
+    z-index: 89;
+}
+
+/*#test {
+    background-color: white;
+    position: fixed;
+    top:0%;
+    left:50%;
+    margin: 0px 0px 0px -600px;
+    width:1200px;
+    height: 50px;
+}*/
+
+#overlay > img[alt="logo"] {
+    margin-left: 20px;
+}
+
+#muteBtn {
+    width: 44px;
+    height: 44px;
+    margin: 22px 66px 0px 0px;
+    float:right;
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+}
+
+#muteBtn:hover {
+    transform: scale(1.6);
+    -webkit-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+}
+
+/* ###########################################
+start             #nav Navigation
+############################################## */
+#nav {
+    position:fixed;
+    margin: 20px 20px 0px 0px;
+    right: 60px;
+    width: 20px;
+    height: 550px;
+    border-radius: 20px;
+    z-index: 86;
+}
+
+#nav > img {
+    position: relative;  
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    margin: -14px 0px;
+    z-index: 97;
+}
+
+#nav > img:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+}
+
+#nav > img:nth-child(4n+3) {
+    left: 0px;
+}
+
+#nav > img:nth-child(4n+5) {
+    right: 70px;
+}
+
+.navInfo {
+    position:absolute;
+    margin: 6px 0px 0px 0px;
+    visibility: hidden;
+    opacity:0;
+    z-index: 98;
+    transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+}
+
+.navInfo:nth-child(4n + 2) {
+    right: 25px;
+}
+
+.navInfo:nth-child(4n + 4) {
+    left: 25px;
+}
+
+.navInfo.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+#descr li.bg2-10.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+#progress {
+    display: block;
+    position:absolute;
+    bottom:5px;
+    left: 5px;
+    width: 10px;
+    height:10%;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background-color: #f1a165;
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #95C11E),color-stop(1, #596D12));
+    background-image: -webkit-linear-gradient(top, #95C11E, #596D12); 
+    background-image: -moz-linear-gradient(top, #95C11E, #596D12);
+    background-image: -ms-linear-gradient(top, #95C11E, #596D12);
+    background-image: -o-linear-gradient(top, #95C11E, #596D12);
+    -webkit-box-shadow: 
+        inset 0 2px 9px  rgba(255,255,255,0.3),
+        inset 0 -2px 6px rgba(0,0,0,0.4);
+    -moz-box-shadow: 
+        inset 0 2px 9px  rgba(255,255,255,0.3),
+        inset 0 -2px 6px rgba(0,0,0,0.4);
+    transition: height 1s ease-in-out;
+    -webkit-transition: height 1s ease-in-out;
+}
+/* ###########################################
+end             #nav Navigation
+############################################## */
+
+/*
+#stars z-index:0;
+#back z-index: 11;
+#mid z-index: 12;
+#front z-index: 13;
+#forefront z-index: 14;
+#sky z-index: 15;
+
+#nav z-index: 86;
+#origin z-index: 87;
+#story z-index: 88;
+#overlay z-index: 89;
+
+#cursor z-index:99;
+*/
+
+/* ###########################################
+start             #hooter ENDSCREEN
+############################################## */
+
+#hooter{
+    position:absolute;
+    width:100%;
+    min-width: 600px;
+    height:100%;
+    z-index:15;
+    opacity:0;
+    transition:opacity 2s ease-in-out;
+    -webkit-transition:opacity 2s ease-in-out;
+}
+
+#hooter > div {
+    position: absolute;
+    width:calc(100% - 50px);
+    min-width:600px;
+    padding: 120px 25px;
+}
+#hooter:hover{
+    opacity:1;
+}
+/* ###########################################
+end             #hooter ENDSCREEN
+############################################## */
+
+/* ###########################################
+start           STARS 'n MOUSE PIXIES
+############################################## */
+#cursor, #sky, #back, #mid,#front, #forefront ,#descr {
+    pointer-events: none;
+}
+
+#stars {
+    position:fixed;
+    z-index:0;
+    background: #040429; /* for the ancient */
+    background:-moz-linear-gradient(top, #040429, #257eb7);
+    background: -webkit-linear-gradient(top,#040429, #257eb7);
+    background:-o-gradient(linear, left top, left bottom, color-stop(0%,#040429), color-stop(100%,#257eb7));
+}
+
+#sky{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    background:hsl(200,72%,0%) url(../img/sky.png) repeat-x top left;
+    opacity: 1;
+}
+
+#cursor {
+    position:fixed;
+    z-index:100;
+}
+/* ###########################################
+end         STARS 'n MOUSE PIXIES
+############################################## */
+
+/* ###########################################
+start           Parallax CONTENT
+############################################## */
+#back, #mid, #front, #forefront {
+    position: fixed;
+}
+
+#back, #mid, #front, #forefront {
+    top: 0;
+    left:50%;
+    width: 1200px;
+    margin-left: -600px;
+}
+
+#back { z-index: 11; }
+
+#mid { z-index: 12; }
+
+#front { z-index: 13;}
+
+#forefront { z-index: 14;}
+
+#back > img, #mid > img, #front > img, #forefront > img{
+    position: absolute;
+    pointer-events: auto; /* needs lookup */
+}
+
+/* ####################
+start      BG 1
+#######################*/
+.zodiac {
+    visibility: hidden;
+    opacity:0;
+    transition: all 0.2s linear;
+    -webkit-transition: all 1s linear;
+}
+
+.zodiac.active {
+    visibility: visible;
+    opacity:1;
+}
+
+#bg1-1, #bg1-1s {
+    top: 650px;
+    left: 120px;
+}
+
+#bg1-2, #bg1-2s {
+    top: 180px;
+    left: -80px;
+}
+
+#bg1-3, #bg1-3s {
+    top: 1300px;
+    left: -80px;
+}
+
+#bg1-4, #bg1-4s {
+    top: 2020px;
+    left: -120px;
+}
+
+/* ####################
+start      BG 2
+#######################*/
+#bg2-1 {
+    top: 1000px;
+    right: 100px;
+}
+
+#bg2-2 {
+    top: 2000px;
+    right: 100px;
+}
+
+#bg2-3 {
+    top: 3000px;
+    right: 100px;
+}
+
+#bg2-4 {
+    top: 4000px;
+    right: 0px;
+}
+
+#bg2-5 {
+    top: 5000px;
+    right: 50px;
+}
+
+#bg2-6 {
+    top: 6000px;
+    right: 100px;
+}
+
+#bg2-7 {
+    top: 7000px;
+    right: 100px;
+    background: url("../img/moon_half.png");
+}
+
+#bg2-8 {
+    top: 8000px;
+    right: 100px;
+}
+
+#bg2-9 {
+    top: 9000px;
+    right: 100px;
+}
+
+#bg2-10 {
+    top: 10000px;
+    right: 100px;
+}
+
+/* ####################
+start      BG 3
+#######################*/
+#bg3-1 {
+    top: 1500px;
+    left: 250px;
+}
+
+#bg3-2 {
+    top: 4000px;
+    left: 900px;
+}
+/*### SCENE 00 ###*/
+#bg4-1 {
+    top: 16050px;
+    left: 290px;
+    z-index: 1000;
+}
+
+.debris {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    z-index: 15;
+}
+
+#bg4-2 {
+    top:5710px;
+    height: 85px;
+    background-image: url('../img/asteroidB.png');
+}
+
+#bg4-3 {
+    top:5800px;
+    height: 68px;
+    background-image: url('../img/asteroidM.png');
+}
+
+#bg4-4 {
+    top:5780px;
+    height: 40px;
+    background-image: url('../img/asteroidS.png');
+}
+
+#bg4-5 {
+    top:5860px;
+    height: 20px;
+    background-image: url('../img/asteroidVS.png');
+}
+
+#bg4-6 {
+    top:5820px;
+    height: 15px;
+    background-image: url('../img/asteroidVVS.png');
+}
+
+#bg4-7 {
+    top:10480px;
+    left:10px;
+}
+
+#bg4-8 {
+    top:10530px;
+    left:10px;
+}
+
+#bg3-2 {
+    top: 8000px;
+    left:10px;
+}
+
+#bg4-9 {
+    top:18550px;
+    right:200px;
+}
+#bg4-10 {
+    top:18570px;
+    right:200px;
+}
+#bg4-11 {
+    top:18590px;
+    right:120px;
+}
+#bg4-12 {
+    top:15530px;
+    left:100px;
+}
+/*### SCENE 00 ###*/
+
+/*### SCENE 00 ###*/
+
+/* ###########################################
+end             Parallax CONTENT
+############################################## */
+
+/* ###########################################
+start             #origin STARTSCREEN
+############################################## */
+#origin {
+    position:absolute;
+    width: 100%;
+    background-color: black;
+    z-index: 87;
+}
+
+#obg1 {
+    position:absolute;
+    left: 50%;
+    bottom: 0px;
+    margin: 0px 0px 0px calc(0px - 100%/2);
+    width: 100%;
+    z-index:29;
+}
+
+/*#obg6 {
+    position:absolute;
+    top: -1000px;
+    z-index:24;
+    background: url("../img/cloud04.png") repeat-x;
+    width: 100%;
+    height: 246px;
+}*/
+
+/* ###########################################
+end             #origin STARTSCREEN
+############################################## */
+
+/* ###########################################
+start               DESCRIPTIONS
+############################################## */
+#descr {
+    position:fixed;
+    top: 100px;
+    width: 600px;
+    height: 200px;
+    z-index: 88;
+    list-style: none;
+}
+
+ul#descr li {
+    position: absolute;
+    top: -20px;
+    left: 25px;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.01);
+    -webkit-transform: scale(0.01);
+    -ms-transform: scale(0.01);
+    transition: all 0.4s 0.2s ease-out;
+    -webkit-transition: all 0.4s 0.2s ease-out;
+}
+/* ###########################################
+end               DESCRIPTIONS
+############################################## */
+
+/* ###########################################
+start          INTERACTIVE IMAGES
+############################################## */
+.info {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+}
+
+#canvasWrapper img.info:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+}
+
+#origin > .info:hover {
+}
+
+.info#bg2-7:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    background: url("../img/moon_full.png");
+}
+
+#descr li.obg1.active {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+
+#descr li.bg2-1.active {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+
+#descr li.bg2-2.active {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+
+#descr li.bg2-3.active {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+
+#descr li.bg2-4.active {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+
+#descr li.bg2-5.active {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+
+#descr li.bg2-6.active {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+
+#descr li.bg2-7.active {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+
+#descr li.bg2-8.active {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+
+#descr li.bg2-9.active {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+
+#descr li.bg2-10.active {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+/* ###########################################
+end          INTERACTIVE IMAGES
+############################################## */

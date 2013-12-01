@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spaaaaaaaaaaaaaaaaace!!!</title>
+        <meta name="author" content="Kevin Apitz">
+        <meta name="descripion" content="En-cyclopedia, ein Projekt im Rahmen der WBA-Veranstaltung an der FH-Koeln">
+        <meta name="date" content="2013-11-28T09:49:37+01:00">
+        <meta name="keywords" content="HTML, en_cyclopedia, solar, system, stars">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href='http://fonts.googleapis.com/css?family=Cherry+Swash:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <script src="http://code.jquery.com/jquery-git.js"></script>
+        <script src="js/modernizr.custom.37797.js"></script> 
+        <script src="js/Particle.js"></script>
+        <script src="js/starField.js"></script>
+        <script src="js/mousePixies.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/setOrigin.js"></script>
+        <script src="js/buttons.js"></script>
+        <script src="js/screenHandler.js"></script>
+        <script src="js/loader.js"></script>
+    </head>
+    <body>
+        <div id="loadScreen">
+            <div class="circle">
+                <h1>Explore!</h1>
+            </div>
+        </div>
+        <!-- WRAPPER für PARALLAX, PARTICLE, IMG-CONTENT -->
+        <div id="canvasWrapper">
+            <canvas id="stars"></canvas>
+
+            <div id="sky"></div>
+            <div id="back">
+                <img id="bg1-1" class="zodiac" src="img/stier.png" alt="stier">
+                <img id="bg1-1s" class="zodiacSwitch" src="img/stierS.png" alt="stierS">
+                <img id="bg1-2" class="zodiac" src="img/loewe.png" alt="loewe">
+                <img id="bg1-2s" class="zodiacSwitch" src="img/loeweS.png" alt="loeweS">
+                <img id="bg1-3" class="zodiac" src="img/zwilling.png" alt="zwilling">
+                <img id="bg1-3s" class="zodiacSwitch" src="img/zwillingS.png" alt="zwillingS">
+                <img id="bg1-4" class="zodiac" src="img/krebs.png" alt="krebs">
+                <img id="bg1-4s" class="zodiacSwitch" src="img/krebsS.png" alt="krebsS">
+            </div>
+            <div id="mid">
+                <img id="bg2-1" class="info" src="img/pluto.png" alt="pluto">
+                <img id="bg2-2" class="info" src="img/neptun.png" alt="neptun">
+                <img id="bg2-3" class="info" src="img/uranus.png" alt="uranus">
+                <img id="bg2-4" class="info" src="img/saturn.png" alt="saturn">
+                <img id="bg2-5" class="info" src="img/jupiter.png" alt="jupiter">
+                <img id="bg2-6" class="info" src="img/mars.png" alt="mars">
+                <img id="bg2-7" class="info" src="img/moon_half.png" alt="moon_half">
+                <img id="bg2-8" class="info" src="img/earth.png" alt="earth">
+                <img id="bg2-9" class="info" src="img/venus.png" alt="venus">
+                <img id="bg2-10" class="info" src="img/merkur.png" alt="merkur">
+            </div>
+            <div id="front">
+                <img id="bg3-1" src="img/ufo.png" alt="ufo">
+                <img id="bg3-2" src="img/asteroidM.png" alt="clutter">
+            </div>
+            <div id="forefront">
+                <img id="bg4-1" src="img/satellit.png" alt="satellit">
+                <img id="bg4-7" src="img/asteroidS.png" alt="clutter">
+                <img id="bg4-8" src="img/asteroidVS.png" alt="clutter">
+                <img id="bg4-9" src="img/asteroidS.png" alt="clutter">
+                <img id="bg4-10" src="img/asteroidVS.png" alt="clutter">
+                <img id="bg4-11" src="img/asteroidS.png" alt="clutter">
+                <img id="bg4-12" src="img/asteroidVS.png" alt="clutter">
+            </div>
+            <div id="bg4-2" class="debris"></div>
+            <div id="bg4-3" class="debris"></div>
+            <div id="bg4-4" class="debris"></div>
+            <div id="bg4-5" class="debris"></div>
+            <div id="bg4-6" class="debris"></div>
+            <div id="hooter">
+                <div>
+                    Ein Projekt von <a href="mailto:kevinapitz@gmail.com">Kevin Apitz</a>
+                    <br>
+                    in Zusammenarbeit mit:
+                    <ul>
+                        <li>
+                            Eduard Karsten
+                        </li>
+                        <li>
+                            Manh Li Bui
+                        </li>
+                        <li>
+                            Alexander Miske
+                        </li>
+                    </ul>
+                    <br>
+                    im Rahmen der Veranstaltung Webbasierte Anwendungen 2013
+                    <br>
+                    an der FH Köln.
+                    <br><br>
+                    Music - "Frost Waltz" by Kevin MacLeod at <a href="http://incompetech.com">incompetech.com</a>
+                </div>
+            </div>
+            <canvas id="cursor"></canvas>
+        </div>    
+        <!-- STARTSCREEN -->
+        <div id="origin">
+            <img id="obg1" class="info" src="img/sonne02.png" alt="sonne">
+        </div>
+        <!-- BESCHREIBUNG INTERAKTIVER ELEMENTE -->
+        <ul id="descr">
+            <li class="bg2-1">
+                <h2>Pluto</h2>
+                <p>
+                    Pluto ist der kleinste Planet im Sonnensystem. Pluto hat eine sehr ungewöhnliche Umlaufbahn. Einmal alle 248 Jahre hält Pluto sich 20 Jahre 
+                    lang innerhalb der Neptunbahn auf. Während dieser 20 Jahre steht er der Sonne näher als Neptun.
+                    <br><br>
+                    Wenn Pluto den sonnennächsten Teil seiner Bahn durchläuft, bildet er eine Atmosphäre. Das gefrorene Methan- und Stickstoffgas an den Polen 
+                    taut auf, verdampft und bildet zeitweilig die Atmosphäre. Wenn sich Pluto wieder von der Sonne entfernt, gefriert die Atmosphäre wieder und 
+                    fällt auf die Oberfläche zurück.
+                    <br><br>
+                    Pluto hat nur einen bekannten Mond. Dieser Mond heißt Charon. Er ist nur halb so groß wie Pluto. Einige Astronomen nennen Pluto und Charon einen 
+                    Doppelplanet, weil sie sich in ihrer Größe so ähnlich sind. Andere Astronomen glauben nicht einmal, daß Pluto ein richtiger Planet ist. Sie halten 
+                    Pluto für einen Neptunmond, der aus Neptuns Gravitations-Anziehung entkommen ist. 
+                </p>
+            </li>
+            <li class="bg2-2">
+                <h2>Neptun</h2>
+                <p>
+                    Neptun und Uranus sind sich sehr ähnlich. Beide sind Gasplaneten, die wie große blaugrüne Bälle am Himmel aussehen. Neptun hat Winde in 
+                    seiner Atmosphäre, die mit mehr als 2000 km/h wehen! Dieser Planet hat große dunkle Flecken auf seiner Oberfläche, von denen Astronomen 
+                    glauben, daß es sich um Stürme handelt.
+                    <br><br>
+                    Neptun ist von zwei dicken und zwei schmalen Ringen umgeben. Außerdem hat Neptun acht Monde. Vier dieser Monde umkreisen Neptun innerhalb 
+                    seiner Ringe. Einer seiner Monde, Triton, umkreist den Planeten anders herum als die anderen sieben Monde.
+                    <br><br>
+                    Wegen der ungewöhnlich stark elliptischen Form von Plutos Umlaufbahn ist Neptun alle 248 Jahre für einen Zeitraum von 20 Jahre der am weitesten 
+                    von der Sonne entfernte Planet. 
+                </p>
+            </li>
+            <li class="bg2-3">
+                <h2>Uranus</h2>
+                <p>
+                    Uranus seine Achse ist so stark geneigt, daß er sozusagen auf seiner Bahn entlangrollt wenn er rotiert. Darum zeigen seine Pole abwechselnd 
+                    direkt zur Sonne. Die Atmosphäre des Uranus besteht aus Wasserstoff, Helium und Methan.
+                    <br><br>
+                    Die Temperatur in den höheren Atmosphärenschichten ist sehr gering. Kaltes Methangas gibt Uranus seine blau-grüne Farbe. Durch die schnelle 
+                    Rotation von Uranus entstehen in seiner Atmosphäre Winde mit einer Geschwindigkeit von bis zu 600 Kilometern pro Stunde.
+                    <br><br>
+                    Uranus hat elf bekannte Ringe, die dunkle Teilchen von der Größe eines Gesteinsbrockens enthalten. Uranus hat 18 bekannte Monde. Einige davon 
+                    sind weniger als 150 Kilometer groß und schwarz wie Steinkohle. 
+                </p>
+            </li>
+            <li class="bg2-4">
+                <h2>Saturn</h2>
+                <p>
+                    Saturn ist ein sehr großer Gasplanet, der sich sehr schnell um seine eigene Achse dreht. Er rotiert so schnell, daß er dadurch an den Polen 
+                    plattgedrückt und am Äquator ausgebeult wird. In Saturn's Atmosphäre gibt es Winde, die mit einer Geschwindigkeit von über 1800 Kilometer 
+                    pro Stunde wehen. Die weißen Flecken in der Saturnatmosphäre sind vermutlich mächtige Stürme.
+                    <br><br>
+                    Saturn ist von mehr als 1000 Ringen aus Eis und Staub umgeben. Einige der Ringe sind sehr dünn und andere sind sehr breit. Die Größe der 
+                    Partikel in den Ringen schwankt zwischen Kieselsteingröße und der Größe eines Hauses. Wissenschaftler glauben, daß die Teilchen aus den 
+                    Überresten von Monden stammen, die den Planeten einst umkreisten. Wenn Kometen und Meteorite einen Saturnmond zertrümmert hatten, wurden die 
+                    Trümmerstücke durch Saturns Gravitations-Anziehung zu Ringen geformt.
+                    <br><br>
+                    Saturn hat mindestens 18 bekannte Monde. Einige dieser Monde umkreisen den Planeten innerhalb seiner Ringe und erzeugen so Lücken in den Ringen. 
+                </p>
+            </li>
+            <li class="bg2-5">
+                <h2>Jupiter</h2>
+                <p>
+                    Jupiter ist ein Gasplanet, dessen Wolken ihre Farben täglich ändern. Der Planet besteht zum größten Teil aus Wasserstoff- und Heliumgas. 
+                    Jupiter gibt doppelt so viel Wärme ab, wie er selbst von der Sonne bekommt. Für neun Monate im Jahr können wir Jupiter von der Erde aus 
+                    am Nachthimmel sehen. Er steht dann der Erde am nächsten und leuchtet sehr hell. 
+                    <br><br>
+                    Große Gebiete herumwirbelden Gases kann man in Jupiters Atmosphäre finden. Das größte dieser Gebiete wird der "Große Rote Fleck" genannt. 
+                    Wissenschaftler glauben, daß dies ein großer Wirbelsturm ist, der schon seit Jahrhunderten andauert. Große Blitze wurden auch schon in der 
+                    Jupiteratmosphäre gefunden. Bilder von Raumsonden haben dünne Ringe um Jupiter gezeigt.
+                    <br><br>
+                    Jupiter hat 16 bekannte Monde. Einer von ihnen ist Io. Dieser Mond hat aktive Vulkane auf seiner Oberfläche. Nahe bei den Vulkanen kann es sehr 
+                    heiß werden.
+                </p>
+            </li>
+            <li class="bg2-6">
+                <h2>Mars</h2>
+                <p>
+                    Auf dem Mars kann es sehr kalt werden. Auch an den wärmsten Tagen ist es dort immer noch sehr kalt. Daher gibt es auf dem Mars 
+                    Pole wie auf der Erde. Im Marswinter kann man sogar Eiskappen auf den Polen sehen.
+                    <br><br>
+                    Raumsonden sind schon auf dem Mars gelandet. Diese Sonden wurden als Aufklärungsmissionen von den USA geschickt. 
+                    Sie führten Experimente mit dem Staub und der Atmosphäre durch. Der Staub enthielt Ton, der reich an Eisen war. 
+                    Dieses Eisen gibt dem Mars seine rote Farbe.
+                    <br><br>
+                    Mars hat viele Krater, die durch Einschläge von Meteoriten oder Asteroiden entstanden sind. Der Planet besitzt einige der größten 
+                    Vulkane und einige der tiefsten Täler im Sonnensystem. Mars hat zwei Monde Phobos und Deimos, die eine ungewöhnliche Form besitzen. 
+                    Wissenschaftler glauben, daß diese kartoffelförmigen Monde einst Asteroiden waren, die durch die Gravitations-Anziehung von Mars 
+                    eingefangen wurden.
+                </p>
+            </li>
+            <li class="bg2-7">
+                <h2>Mond</h2>
+                <p>
+                    Der Mond ist wie eine Wüste mit Ebenen, Gebirgen und Tälern. Er hat auch viele Krater. Das sind Löcher, die entstanden, als Objekte aus 
+                    dem Weltraum mit hoher Geschwindigkeit auf der Mondoberfläche einschlugen. Es gibt auf dem Mond keine Luft zum Atmen, aber vielleicht gibt 
+                    es dort Wasser zum Trinken. Es wurde Eis auf dem Grund eines sehr tiefen Mondkraters entdeckt. Wissenschaftler glauben, daß das Eis 
+                    ein Überbleibsel von einem Kometen ist, der auf dem Mond aufschlug. 
+                </p>
+            </li>
+            <li class="bg2-8">
+                <h2>Erde</h2>
+                <p>
+                    Die Erde ist der drittnächste Planet zur Sonne. Sie hat hat eine Atmosphäre, die aus vielen verschiedenen Gasen besteht. 
+                    Aber der Hauptteil sind Stickstoff und Sauerstoff. Die Atmosphäre gibt uns Luft zum Atmen. Wir leben auf dem Planeten Erde.
+                    <br><br>
+                    Die Erde umkreist die Sonne. Sie braucht ein Jahr für einen kompletten Umlauf. Außerdem dreht sich die Erde um ihre Achse. 
+                    Eine Umdrehung dauert einen Tag. Die Erdachse steht nicht gerade, sondern ist ein weinig geneigt. Durch diese Neigung entstehen 
+                    die Jahreszeiten. Ohne diese Neigung hätten wir das ganze Jahr hindurch ungefähr die gleichen Temperaturen.
+                </p>
+            </li>
+            <li class="bg2-9">
+                <h2>Venus</h2>
+                <p>
+                    Venus und Erde haben fast die gleiche Größe. Venus ist der erdnächste Planet, aber es gibt dort keine Ozeane oder menschliches Leben 
+                    wie auf der Erde. Auf der Venus wird es tagsüber so heiß, das eine Kanonenkugel aus Blei schmelzen würde. Die Temperatur auf der 
+                    sonnenzugewandten Seite steigt bis auf 484 Grad Celsius. Die Venusoberfläche ist von sehr dicken und schnell rotierenden Wolken 
+                    eingehüllt. Diese Wolken halten die Hitze fest. Das ist der Grund warum es auf der Venus so heiß ist. Diese Wolken reflektieren auch 
+                    Sonnenlicht. Darum erscheint uns die Venus so hell. Es gibt auch Gewitter in diesen Wolken.
+                    <br><br>
+                    Die Oberfläche der Venus hat viele Krater, die durch den Einschlag von Meteoriten und Asteroiden entstanden sind. Auf der Venus gibt es 
+                    auch Vulkane. Der Planet ist ungewöhnlich, denn er rotiert sehr langsam und außerdem noch andersherum als die meisten anderen Planeten im 
+                    Sonnensystem.
+                </p>
+            </li>
+            <li class="bg2-10">
+                <h2>Merkur</h2>
+                <p>
+                    Merkur ist der zweitkleinste Planet in unserem Sonnensystem. Nur der Planet Pluto ist noch kleiner. Merkur ist ungefähr eineinhalb mal so 
+                    groß wie unser Mond. Er steht sehr nahe bei der Sonne.
+                    <br><br>
+                    Merkur umkreist die Sonne schneller als irgend ein anderer Planet. Daher hat er auch seinen Namen. Er wurde nach Merkur benannt, den schnellen 
+                    Götterboten in der antiken römischen Mythologie.
+                    <br><br>
+                    Merkur kann man von der Erde aus nur kurz vor Sonnenaufgang oder kurz nach Sonnenuntergang sehen, aber niemals um Mitternacht, weil Merkur immer 
+                    nahe bei der Sonne steht. Der Merkur hat eine sehr dünne Atmosphäre. Menschen könnten dort nicht leben. Die Merkuroberfläche zeigt viele Krater, die 
+                    durch Einschläge von Meteoriten und Asteroiden entstanden sind.
+                </p>
+            </li>
+            <li class="obg1">
+                <h2>Sonne</h2>
+                <p>
+                    Die Sonne ist unser nächster Stern. Sie ist ein Mitglied unserer Galaxie, der Milchstraße. Die Sonne ist ein gelber Zwergstern, das heißt ein Stern durchschnittlicher
+                    Größe. Vermutlich ist sie mehr als 4 Milliarden Jahre alt. Die Sonne dreht sich langsam um ihre Achse. Außerdem kreist sie um das Zentrum der Milchstraße.
+                    <br><br>
+                    Der Kern oder das Zentrum der Sonne ist sehr heiß. Dort findet ein Prozeß statt, den man "Kernfusion" nennt. Die Kernfusion produziert eine Menge Energie. Ein Teil 
+                    dieser Energie wird als Licht und Wärme in den Weltraum abgestrahlt. Ein kleiner Teil davon erreicht die Erde! Ströme aus Gaspartikel, auch Sonnenwind genannt, 
+                    verlassen ebenfalls die Sonne.
+                    <br><br>
+                    Auf der Sonnenoberfläche gibt es Gebiete, die etwa 1500 Grad kälter als ihre Umgebung sind. Wir nennen diese Gebiete "Sonnenflecken", weil sie im Vergleich zur normalen 
+                    Sonnenoberfläche dunkel aussehen. Sonnenflecken werden durch das aus dem Sonneninneren aufsteigende starke Magnetfeld erzeugt. Die Sonne produziert auch große 
+                    Energieausbrüche, die Flares genannt werden. Diese schießen einen Strom schneller Teilchen von der Sonnenoberfläche in den Weltraum. Treffen diese Teilchen die 
+                    Erdatmosphäre so erzeugen sie ein Leuchten, das wir Polarlicht nennen.
+                </p>
+            </li>
+        </ul>
+        <!--<div id="test"></div>-->
+        <!-- OVERLAY & NAVIGATION -->
+        <div id="overlay">
+            <img src="img/logo_en_cyclopedia.png" alt="logo" height="88" width="434">
+            <img id="muteBtn" onclick="mute();" src="img/soundOn.png" alt="soundOn">
+            <div id="nav">
+                <span id="progress"></span> 
+                <span class="navInfo">The End</span>
+                <img id="hooterBtn" name="#hooter" onclick="goesTo(this, 4000, 98);" src="img/galaxybtn.png" alt="The End">
+                <span class="navInfo">Pluto</span>
+                <img id="plutoBtn" name="#bg2-1" onclick="goesTo(this, 1000, 88);" src="img/plutobtn.png" alt="plutoIMG">
+                <span class="navInfo">Neptun</span>
+                <img id="neptunBtn" name="#bg2-2" onclick="goesTo(this, 1000, 80);" src="img/neptunbtn.png" alt="neptunIMG">
+                <span class="navInfo">Uranus</span>
+                <img id="uranusBtn" name="#bg2-3" onclick="goesTo(this, 1000, 72);" src="img/uranusbtn.png" alt="uranusIMG">
+                <span class="navInfo">Saturn</span>
+                <img id="saturnBtn" name="#bg2-4" onclick="goesTo(this, 1000, 64);" src="img/saturnbtn.png" alt="saturnIMG">
+                <span class="navInfo">Jupiter</span>
+                <img id="jupiterBtn" name="#bg2-5" onclick="goesTo(this, 1000, 56);" src="img/jupiterbtn.png" alt="jupiterIMG">
+                <span class="navInfo">Mars</span>
+                <img id="marsBtn" name="#bg2-6" onclick="goesTo(this, 1000, 48);" src="img/marsbtn.png" alt="marsIMG">
+                <span class="navInfo">Mond</span>
+                <img id="mondBtn" name="#bg2-7" onclick="goesTo(this, 1000, 40);" src="img/moon_fullbtn.png" alt="moonIMG">
+                <span class="navInfo">Erde</span>
+                <img id="earthBtn" name="#bg2-8" onclick="goesTo(this, 1000, 34);" src="img/earthbtn.png" alt="earthIMG">
+                <span class="navInfo">Venus</span>
+                <img id="venusBtn" name="#bg2-9" onclick="goesTo(this, 1000, 26);" src="img/venusbtn.png" alt="venusIMG">
+                <span class="navInfo">Merkur</span>
+                <img id="merkurBtn" name="#bg2-10" onclick="goesTo(this, 1000, 18);" src="img/merkurbtn.png" alt="merkurIMG">
+                <span class="navInfo">Sonne</span>
+                <img id="sun" onclick="setOrigin(1000, 10);" src="img/sonnebtn.png" alt="sonneIMG">
+            </div>
+            <audio id="audioplayer" preload loop autoplay>
+                <source src="music/Frost_Waltz.mp3" type="audio/mp3">
+                <source src="music/Frost_Waltz.ogg" type="audio/ogg">
+            </audio>
+        </div>
+        <script>
+                    $(window).on('load', function() {
+                        $('#audioplayer').prop("volume", 0.3);
+                        $('.circle').click(function() {
+                            $('#loadScreen').fadeOut(1000, 'swing', function() {
+                                $('#loadScreen').remove();
+                            });
+                        });
+                    });
+        </script>
+    </body>
+</html>
