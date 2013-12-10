@@ -41,6 +41,7 @@ ul#columnlist {
 ul#columnlist li{
     position: relative;
     font: 700 26px museo-sans;
+    margin-left:10px;
 }
 
 ul#columnlist li p{
@@ -131,6 +132,8 @@ header .navigation {
   *zoom: 1;
   display: inline-block;
   margin-top: 114px;
+ position: relative;
+    bottom: 0px;
 }
 header .navigation .left, header .navigation .right, header .navigation .center {
   width: 6px;
@@ -144,7 +147,7 @@ header .navigation .right {
   background: url("../images/ribbon-right.png");
 }
 header .navigation .center {
-  width: 330px;
+  width: 311px;
   background: url("../images/ribbon.png");
   font: 700 12px museo-sans;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
@@ -348,21 +351,13 @@ section.sponsors ul.sponsors li img:hover {
 }
 
 @media screen and (max-width: 920px){
-    header {
-        height: 600px;
-    }
     header .content .logo img{
         width: 60%;
     }
     header .content p.tagline {
         font-size: 20pt;
-            }
-    .pfeil {
-        top: -40px;
-        right: 30px;
-        background-color:#fff;
     }
-
+    
     .inhalt {
         width: 100%;
         padding: 0;
@@ -378,8 +373,7 @@ section.sponsors ul.sponsors li img:hover {
     }
 
     .next-dates-box {
-        position: absolute;
-    display:none;
+        display:none;
     }
 
     ul#columnlist {
